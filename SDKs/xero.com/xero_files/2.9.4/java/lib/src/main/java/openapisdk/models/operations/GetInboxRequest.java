@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class GetInboxRequest {
+    public GetInboxHeaders headers;
+    public GetInboxRequest withHeaders(GetInboxHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+    public GetInboxSecurity security;
+    public GetInboxRequest withSecurity(GetInboxSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

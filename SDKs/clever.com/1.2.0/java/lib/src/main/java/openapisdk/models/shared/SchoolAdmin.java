@@ -1,0 +1,64 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class SchoolAdmin {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("credentials")
+    public Credentials credentials;
+    public SchoolAdmin withCredentials(Credentials credentials) {
+        this.credentials = credentials;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("district")
+    public String district;
+    public SchoolAdmin withDistrict(String district) {
+        this.district = district;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("email")
+    public String email;
+    public SchoolAdmin withEmail(String email) {
+        this.email = email;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("id")
+    public String id;
+    public SchoolAdmin withId(String id) {
+        this.id = id;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("name")
+    public Name name;
+    public SchoolAdmin withName(Name name) {
+        this.name = name;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("schools")
+    public String[] schools;
+    public SchoolAdmin withSchools(String[] schools) {
+        this.schools = schools;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("staff_id")
+    public String staffId;
+    public SchoolAdmin withStaffId(String staffId) {
+        this.staffId = staffId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("title")
+    public String title;
+    public SchoolAdmin withTitle(String title) {
+        this.title = title;
+        return this;
+    }
+}

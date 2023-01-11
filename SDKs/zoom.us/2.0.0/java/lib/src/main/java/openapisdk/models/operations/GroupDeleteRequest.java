@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class GroupDeleteRequest {
+    public GroupDeletePathParams pathParams;
+    public GroupDeleteRequest withPathParams(GroupDeletePathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public GroupDeleteSecurity security;
+    public GroupDeleteRequest withSecurity(GroupDeleteSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

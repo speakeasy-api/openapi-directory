@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class GetUsersUserIdTracksRequest {
+    public GetUsersUserIdTracksPathParams pathParams;
+    public GetUsersUserIdTracksRequest withPathParams(GetUsersUserIdTracksPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public GetUsersUserIdTracksQueryParams queryParams;
+    public GetUsersUserIdTracksRequest withQueryParams(GetUsersUserIdTracksQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public GetUsersUserIdTracksSecurity security;
+    public GetUsersUserIdTracksRequest withSecurity(GetUsersUserIdTracksSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

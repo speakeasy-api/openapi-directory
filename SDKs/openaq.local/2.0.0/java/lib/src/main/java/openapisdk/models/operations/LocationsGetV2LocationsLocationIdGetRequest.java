@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class LocationsGetV2LocationsLocationIdGetRequest {
+    public LocationsGetV2LocationsLocationIdGetPathParams pathParams;
+    public LocationsGetV2LocationsLocationIdGetRequest withPathParams(LocationsGetV2LocationsLocationIdGetPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public LocationsGetV2LocationsLocationIdGetQueryParams queryParams;
+    public LocationsGetV2LocationsLocationIdGetRequest withQueryParams(LocationsGetV2LocationsLocationIdGetQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+}

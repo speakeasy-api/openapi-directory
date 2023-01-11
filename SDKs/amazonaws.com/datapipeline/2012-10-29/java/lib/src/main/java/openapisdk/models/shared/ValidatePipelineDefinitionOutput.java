@@ -1,0 +1,32 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * ValidatePipelineDefinitionOutput
+ * Contains the output of ValidatePipelineDefinition.
+**/
+public class ValidatePipelineDefinitionOutput {
+    @JsonProperty("errored")
+    public Boolean errored;
+    public ValidatePipelineDefinitionOutput withErrored(Boolean errored) {
+        this.errored = errored;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("validationErrors")
+    public ValidationError[] validationErrors;
+    public ValidatePipelineDefinitionOutput withValidationErrors(ValidationError[] validationErrors) {
+        this.validationErrors = validationErrors;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("validationWarnings")
+    public ValidationWarning[] validationWarnings;
+    public ValidatePipelineDefinitionOutput withValidationWarnings(ValidationWarning[] validationWarnings) {
+        this.validationWarnings = validationWarnings;
+        return this;
+    }
+}

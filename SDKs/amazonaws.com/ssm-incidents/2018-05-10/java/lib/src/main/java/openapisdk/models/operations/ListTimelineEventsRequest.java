@@ -1,0 +1,22 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class ListTimelineEventsRequest {
+    public ListTimelineEventsQueryParams queryParams;
+    public ListTimelineEventsRequest withQueryParams(ListTimelineEventsQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public ListTimelineEventsHeaders headers;
+    public ListTimelineEventsRequest withHeaders(ListTimelineEventsHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public ListTimelineEventsRequestBody request;
+    public ListTimelineEventsRequest withRequest(ListTimelineEventsRequestBody request) {
+        this.request = request;
+        return this;
+    }
+}

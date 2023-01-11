@@ -1,0 +1,15 @@
+package openapisdk.models.shared;
+
+
+public enum CallAnalyticsJobStatusEnum {
+    QUEUED("QUEUED"),
+    IN_PROGRESS("IN_PROGRESS"),
+    FAILED("FAILED"),
+    COMPLETED("COMPLETED");
+
+    public final String value;
+
+    private CallAnalyticsJobStatusEnum(String value) {
+        this.value = value;
+    }
+}

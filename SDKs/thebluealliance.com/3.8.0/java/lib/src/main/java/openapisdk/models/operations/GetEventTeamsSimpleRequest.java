@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class GetEventTeamsSimpleRequest {
+    public GetEventTeamsSimplePathParams pathParams;
+    public GetEventTeamsSimpleRequest withPathParams(GetEventTeamsSimplePathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public GetEventTeamsSimpleHeaders headers;
+    public GetEventTeamsSimpleRequest withHeaders(GetEventTeamsSimpleHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+    public GetEventTeamsSimpleSecurity security;
+    public GetEventTeamsSimpleRequest withSecurity(GetEventTeamsSimpleSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

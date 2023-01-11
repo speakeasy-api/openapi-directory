@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class BatchProjectsLocationsOperationsDeleteRequest {
+    public BatchProjectsLocationsOperationsDeletePathParams pathParams;
+    public BatchProjectsLocationsOperationsDeleteRequest withPathParams(BatchProjectsLocationsOperationsDeletePathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public BatchProjectsLocationsOperationsDeleteQueryParams queryParams;
+    public BatchProjectsLocationsOperationsDeleteRequest withQueryParams(BatchProjectsLocationsOperationsDeleteQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public BatchProjectsLocationsOperationsDeleteSecurity security;
+    public BatchProjectsLocationsOperationsDeleteRequest withSecurity(BatchProjectsLocationsOperationsDeleteSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

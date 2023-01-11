@@ -1,0 +1,40 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * ListedExecution
+ * Returns properties of the execution that is specified.
+**/
+public class ListedExecution {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ExecutionId")
+    public String executionId;
+    public ListedExecution withExecutionId(String executionId) {
+        this.executionId = executionId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("InitialFileLocation")
+    public FileLocation initialFileLocation;
+    public ListedExecution withInitialFileLocation(FileLocation initialFileLocation) {
+        this.initialFileLocation = initialFileLocation;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ServiceMetadata")
+    public ServiceMetadata serviceMetadata;
+    public ListedExecution withServiceMetadata(ServiceMetadata serviceMetadata) {
+        this.serviceMetadata = serviceMetadata;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Status")
+    public ExecutionStatusEnum status;
+    public ListedExecution withStatus(ExecutionStatusEnum status) {
+        this.status = status;
+        return this;
+    }
+}

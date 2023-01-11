@@ -1,0 +1,33 @@
+package openapisdk.models.operations;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * UpdateBaiduChannelRequestBodyBaiduChannelRequest
+ * Specifies the status and settings of the Baidu (Baidu Cloud Push) channel for an application.
+**/
+public class UpdateBaiduChannelRequestBodyBaiduChannelRequest {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ApiKey")
+    public String apiKey;
+    public UpdateBaiduChannelRequestBodyBaiduChannelRequest withApiKey(String apiKey) {
+        this.apiKey = apiKey;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Enabled")
+    public Boolean enabled;
+    public UpdateBaiduChannelRequestBodyBaiduChannelRequest withEnabled(Boolean enabled) {
+        this.enabled = enabled;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("SecretKey")
+    public String secretKey;
+    public UpdateBaiduChannelRequestBodyBaiduChannelRequest withSecretKey(String secretKey) {
+        this.secretKey = secretKey;
+        return this;
+    }
+}

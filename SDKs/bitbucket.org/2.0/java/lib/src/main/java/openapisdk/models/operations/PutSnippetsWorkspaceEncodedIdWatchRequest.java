@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class PutSnippetsWorkspaceEncodedIdWatchRequest {
+    public PutSnippetsWorkspaceEncodedIdWatchPathParams pathParams;
+    public PutSnippetsWorkspaceEncodedIdWatchRequest withPathParams(PutSnippetsWorkspaceEncodedIdWatchPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public PutSnippetsWorkspaceEncodedIdWatchSecurity security;
+    public PutSnippetsWorkspaceEncodedIdWatchRequest withSecurity(PutSnippetsWorkspaceEncodedIdWatchSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

@@ -1,0 +1,22 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class CreateApiKeyRequest {
+    public CreateApiKeyPathParams pathParams;
+    public CreateApiKeyRequest withPathParams(CreateApiKeyPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public CreateApiKeyHeaders headers;
+    public CreateApiKeyRequest withHeaders(CreateApiKeyHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public CreateApiKeyRequestBody request;
+    public CreateApiKeyRequest withRequest(CreateApiKeyRequestBody request) {
+        this.request = request;
+        return this;
+    }
+}

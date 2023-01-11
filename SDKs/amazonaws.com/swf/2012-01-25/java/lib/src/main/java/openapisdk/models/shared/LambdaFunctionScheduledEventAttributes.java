@@ -1,0 +1,51 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * LambdaFunctionScheduledEventAttributes
+ * Provides the details of the <code>LambdaFunctionScheduled</code> event. It isn't set for other event types.
+**/
+public class LambdaFunctionScheduledEventAttributes {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("control")
+    public String control;
+    public LambdaFunctionScheduledEventAttributes withControl(String control) {
+        this.control = control;
+        return this;
+    }
+    @JsonProperty("decisionTaskCompletedEventId")
+    public Long decisionTaskCompletedEventId;
+    public LambdaFunctionScheduledEventAttributes withDecisionTaskCompletedEventId(Long decisionTaskCompletedEventId) {
+        this.decisionTaskCompletedEventId = decisionTaskCompletedEventId;
+        return this;
+    }
+    @JsonProperty("id")
+    public String id;
+    public LambdaFunctionScheduledEventAttributes withId(String id) {
+        this.id = id;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("input")
+    public String input;
+    public LambdaFunctionScheduledEventAttributes withInput(String input) {
+        this.input = input;
+        return this;
+    }
+    @JsonProperty("name")
+    public String name;
+    public LambdaFunctionScheduledEventAttributes withName(String name) {
+        this.name = name;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("startToCloseTimeout")
+    public String startToCloseTimeout;
+    public LambdaFunctionScheduledEventAttributes withStartToCloseTimeout(String startToCloseTimeout) {
+        this.startToCloseTimeout = startToCloseTimeout;
+        return this;
+    }
+}

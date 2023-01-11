@@ -1,0 +1,16 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+/**
+ * TlsValidationContextAcmTrust
+ * An object that represents a Transport Layer Security (TLS) validation context trust for an Certificate Manager certificate.
+**/
+public class TlsValidationContextAcmTrust {
+    @JsonProperty("certificateAuthorityArns")
+    public String[] certificateAuthorityArns;
+    public TlsValidationContextAcmTrust withCertificateAuthorityArns(String[] certificateAuthorityArns) {
+        this.certificateAuthorityArns = certificateAuthorityArns;
+        return this;
+    }
+}

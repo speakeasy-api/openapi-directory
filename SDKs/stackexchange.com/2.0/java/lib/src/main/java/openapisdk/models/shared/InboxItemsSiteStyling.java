@@ -1,0 +1,21 @@
+package openapisdk.models.shared;
+
+
+
+public class InboxItemsSiteStyling {
+    public String linkColor;
+    public InboxItemsSiteStyling withLinkColor(String linkColor) {
+        this.linkColor = linkColor;
+        return this;
+    }
+    public String tagBackgroundColor;
+    public InboxItemsSiteStyling withTagBackgroundColor(String tagBackgroundColor) {
+        this.tagBackgroundColor = tagBackgroundColor;
+        return this;
+    }
+    public String tagForegroundColor;
+    public InboxItemsSiteStyling withTagForegroundColor(String tagForegroundColor) {
+        this.tagForegroundColor = tagForegroundColor;
+        return this;
+    }
+}

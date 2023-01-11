@@ -1,0 +1,27 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class ApikeysProjectsLocationsKeysUndeleteRequest {
+    public ApikeysProjectsLocationsKeysUndeletePathParams pathParams;
+    public ApikeysProjectsLocationsKeysUndeleteRequest withPathParams(ApikeysProjectsLocationsKeysUndeletePathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public ApikeysProjectsLocationsKeysUndeleteQueryParams queryParams;
+    public ApikeysProjectsLocationsKeysUndeleteRequest withQueryParams(ApikeysProjectsLocationsKeysUndeleteQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public java.util.Map<String, Object> request;
+    public ApikeysProjectsLocationsKeysUndeleteRequest withRequest(java.util.Map<String, Object> request) {
+        this.request = request;
+        return this;
+    }
+    public ApikeysProjectsLocationsKeysUndeleteSecurity security;
+    public ApikeysProjectsLocationsKeysUndeleteRequest withSecurity(ApikeysProjectsLocationsKeysUndeleteSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

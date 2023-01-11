@@ -1,0 +1,29 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class ListLogPatternSetsResponse {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("LogPatternSets")
+    public String[] logPatternSets;
+    public ListLogPatternSetsResponse withLogPatternSets(String[] logPatternSets) {
+        this.logPatternSets = logPatternSets;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("NextToken")
+    public String nextToken;
+    public ListLogPatternSetsResponse withNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ResourceGroupName")
+    public String resourceGroupName;
+    public ListLogPatternSetsResponse withResourceGroupName(String resourceGroupName) {
+        this.resourceGroupName = resourceGroupName;
+        return this;
+    }
+}

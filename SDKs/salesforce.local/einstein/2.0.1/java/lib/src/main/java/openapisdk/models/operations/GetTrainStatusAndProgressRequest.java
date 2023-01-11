@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class GetTrainStatusAndProgressRequest {
+    public GetTrainStatusAndProgressPathParams pathParams;
+    public GetTrainStatusAndProgressRequest withPathParams(GetTrainStatusAndProgressPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public GetTrainStatusAndProgressSecurity security;
+    public GetTrainStatusAndProgressRequest withSecurity(GetTrainStatusAndProgressSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

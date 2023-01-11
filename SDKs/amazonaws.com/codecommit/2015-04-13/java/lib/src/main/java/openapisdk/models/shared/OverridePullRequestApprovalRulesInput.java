@@ -1,0 +1,24 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+public class OverridePullRequestApprovalRulesInput {
+    @JsonProperty("overrideStatus")
+    public OverrideStatusEnum overrideStatus;
+    public OverridePullRequestApprovalRulesInput withOverrideStatus(OverrideStatusEnum overrideStatus) {
+        this.overrideStatus = overrideStatus;
+        return this;
+    }
+    @JsonProperty("pullRequestId")
+    public String pullRequestId;
+    public OverridePullRequestApprovalRulesInput withPullRequestId(String pullRequestId) {
+        this.pullRequestId = pullRequestId;
+        return this;
+    }
+    @JsonProperty("revisionId")
+    public String revisionId;
+    public OverridePullRequestApprovalRulesInput withRevisionId(String revisionId) {
+        this.revisionId = revisionId;
+        return this;
+    }
+}

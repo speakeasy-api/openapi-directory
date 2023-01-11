@@ -1,0 +1,26 @@
+package openapisdk.models.operations;
+
+
+
+public class LocationsDeleteRequest {
+    public LocationsDeletePathParams pathParams;
+    public LocationsDeleteRequest withPathParams(LocationsDeletePathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public LocationsDeleteQueryParams queryParams;
+    public LocationsDeleteRequest withQueryParams(LocationsDeleteQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public LocationsDeleteHeaders headers;
+    public LocationsDeleteRequest withHeaders(LocationsDeleteHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+    public LocationsDeleteSecurity security;
+    public LocationsDeleteRequest withSecurity(LocationsDeleteSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

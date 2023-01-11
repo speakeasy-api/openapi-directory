@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class GetMonitoringSubscription20200531Request {
+    public GetMonitoringSubscription20200531PathParams pathParams;
+    public GetMonitoringSubscription20200531Request withPathParams(GetMonitoringSubscription20200531PathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public GetMonitoringSubscription20200531Headers headers;
+    public GetMonitoringSubscription20200531Request withHeaders(GetMonitoringSubscription20200531Headers headers) {
+        this.headers = headers;
+        return this;
+    }
+}

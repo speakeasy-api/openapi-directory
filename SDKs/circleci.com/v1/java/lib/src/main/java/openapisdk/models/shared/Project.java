@@ -1,0 +1,302 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class Project {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("aws")
+    public Aws aws;
+    public Project withAws(Aws aws) {
+        this.aws = aws;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("branches")
+    public java.util.Map<String, Object> branches;
+    public Project withBranches(java.util.Map<String, Object> branches) {
+        this.branches = branches;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("campfire_notify_prefs")
+    public String campfireNotifyPrefs;
+    public Project withCampfireNotifyPrefs(String campfireNotifyPrefs) {
+        this.campfireNotifyPrefs = campfireNotifyPrefs;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("campfire_room")
+    public String campfireRoom;
+    public Project withCampfireRoom(String campfireRoom) {
+        this.campfireRoom = campfireRoom;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("campfire_subdomain")
+    public String campfireSubdomain;
+    public Project withCampfireSubdomain(String campfireSubdomain) {
+        this.campfireSubdomain = campfireSubdomain;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("campfire_token")
+    public String campfireToken;
+    public Project withCampfireToken(String campfireToken) {
+        this.campfireToken = campfireToken;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("compile")
+    public String compile;
+    public Project withCompile(String compile) {
+        this.compile = compile;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("default_branch")
+    public String defaultBranch;
+    public Project withDefaultBranch(String defaultBranch) {
+        this.defaultBranch = defaultBranch;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("dependencies")
+    public String dependencies;
+    public Project withDependencies(String dependencies) {
+        this.dependencies = dependencies;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("extra")
+    public String extra;
+    public Project withExtra(String extra) {
+        this.extra = extra;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("feature_flags")
+    public ProjectFeatureFlags featureFlags;
+    public Project withFeatureFlags(ProjectFeatureFlags featureFlags) {
+        this.featureFlags = featureFlags;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("flowdock_api_token")
+    public String flowdockApiToken;
+    public Project withFlowdockApiToken(String flowdockApiToken) {
+        this.flowdockApiToken = flowdockApiToken;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("followed")
+    public Boolean followed;
+    public Project withFollowed(Boolean followed) {
+        this.followed = followed;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("has_usable_key")
+    public Boolean hasUsableKey;
+    public Project withHasUsableKey(Boolean hasUsableKey) {
+        this.hasUsableKey = hasUsableKey;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("heroku_deploy_user")
+    public String herokuDeployUser;
+    public Project withHerokuDeployUser(String herokuDeployUser) {
+        this.herokuDeployUser = herokuDeployUser;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("hipchat_api_token")
+    public String hipchatApiToken;
+    public Project withHipchatApiToken(String hipchatApiToken) {
+        this.hipchatApiToken = hipchatApiToken;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("hipchat_notify")
+    public String hipchatNotify;
+    public Project withHipchatNotify(String hipchatNotify) {
+        this.hipchatNotify = hipchatNotify;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("hipchat_notify_prefs")
+    public String hipchatNotifyPrefs;
+    public Project withHipchatNotifyPrefs(String hipchatNotifyPrefs) {
+        this.hipchatNotifyPrefs = hipchatNotifyPrefs;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("hipchat_room")
+    public String hipchatRoom;
+    public Project withHipchatRoom(String hipchatRoom) {
+        this.hipchatRoom = hipchatRoom;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("irc_channel")
+    public String ircChannel;
+    public Project withIrcChannel(String ircChannel) {
+        this.ircChannel = ircChannel;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("irc_keyword")
+    public String ircKeyword;
+    public Project withIrcKeyword(String ircKeyword) {
+        this.ircKeyword = ircKeyword;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("irc_notify_prefs")
+    public String ircNotifyPrefs;
+    public Project withIrcNotifyPrefs(String ircNotifyPrefs) {
+        this.ircNotifyPrefs = ircNotifyPrefs;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("irc_password")
+    public String ircPassword;
+    public Project withIrcPassword(String ircPassword) {
+        this.ircPassword = ircPassword;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("irc_server")
+    public String ircServer;
+    public Project withIrcServer(String ircServer) {
+        this.ircServer = ircServer;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("irc_username")
+    public String ircUsername;
+    public Project withIrcUsername(String ircUsername) {
+        this.ircUsername = ircUsername;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("language")
+    public String language;
+    public Project withLanguage(String language) {
+        this.language = language;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("oss")
+    public Boolean oss;
+    public Project withOss(Boolean oss) {
+        this.oss = oss;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("parallel")
+    public Long parallel;
+    public Project withParallel(Long parallel) {
+        this.parallel = parallel;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("reponame")
+    public String reponame;
+    public Project withReponame(String reponame) {
+        this.reponame = reponame;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("scopes")
+    public ScopeEnum[] scopes;
+    public Project withScopes(ScopeEnum[] scopes) {
+        this.scopes = scopes;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("setup")
+    public String setup;
+    public Project withSetup(String setup) {
+        this.setup = setup;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("slack_api_token")
+    public String slackApiToken;
+    public Project withSlackApiToken(String slackApiToken) {
+        this.slackApiToken = slackApiToken;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("slack_channel")
+    public String slackChannel;
+    public Project withSlackChannel(String slackChannel) {
+        this.slackChannel = slackChannel;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("slack_channel_override")
+    public String slackChannelOverride;
+    public Project withSlackChannelOverride(String slackChannelOverride) {
+        this.slackChannelOverride = slackChannelOverride;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("slack_notify_prefs")
+    public String slackNotifyPrefs;
+    public Project withSlackNotifyPrefs(String slackNotifyPrefs) {
+        this.slackNotifyPrefs = slackNotifyPrefs;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("slack_subdomain")
+    public String slackSubdomain;
+    public Project withSlackSubdomain(String slackSubdomain) {
+        this.slackSubdomain = slackSubdomain;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("slack_webhook_url")
+    public String slackWebhookUrl;
+    public Project withSlackWebhookUrl(String slackWebhookUrl) {
+        this.slackWebhookUrl = slackWebhookUrl;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ssh_keys")
+    public String[] sshKeys;
+    public Project withSshKeys(String[] sshKeys) {
+        this.sshKeys = sshKeys;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("test")
+    public String test;
+    public Project withTest(String test) {
+        this.test = test;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("username")
+    public String username;
+    public Project withUsername(String username) {
+        this.username = username;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("vcs_type")
+    public String vcsType;
+    public Project withVcsType(String vcsType) {
+        this.vcsType = vcsType;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("vcs_url")
+    public String vcsUrl;
+    public Project withVcsUrl(String vcsUrl) {
+        this.vcsUrl = vcsUrl;
+        return this;
+    }
+}

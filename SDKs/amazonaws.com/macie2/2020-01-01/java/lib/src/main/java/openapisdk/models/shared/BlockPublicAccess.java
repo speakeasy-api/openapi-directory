@@ -1,0 +1,40 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * BlockPublicAccess
+ * Provides information about the block public access settings for an S3 bucket. These settings can apply to a bucket at the account level or bucket level. For detailed information about each setting, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/access-control-block-public-access.html">Blocking public access to your Amazon S3 storage</a> in the <i>Amazon Simple Storage Service User Guide</i>.
+**/
+public class BlockPublicAccess {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("blockPublicAcls")
+    public Boolean blockPublicAcls;
+    public BlockPublicAccess withBlockPublicAcls(Boolean blockPublicAcls) {
+        this.blockPublicAcls = blockPublicAcls;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("blockPublicPolicy")
+    public Boolean blockPublicPolicy;
+    public BlockPublicAccess withBlockPublicPolicy(Boolean blockPublicPolicy) {
+        this.blockPublicPolicy = blockPublicPolicy;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ignorePublicAcls")
+    public Boolean ignorePublicAcls;
+    public BlockPublicAccess withIgnorePublicAcls(Boolean ignorePublicAcls) {
+        this.ignorePublicAcls = ignorePublicAcls;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("restrictPublicBuckets")
+    public Boolean restrictPublicBuckets;
+    public BlockPublicAccess withRestrictPublicBuckets(Boolean restrictPublicBuckets) {
+        this.restrictPublicBuckets = restrictPublicBuckets;
+        return this;
+    }
+}

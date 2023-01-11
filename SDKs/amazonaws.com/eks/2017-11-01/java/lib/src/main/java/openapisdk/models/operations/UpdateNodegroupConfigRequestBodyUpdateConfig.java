@@ -1,0 +1,26 @@
+package openapisdk.models.operations;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * UpdateNodegroupConfigRequestBodyUpdateConfig
+ * The node group update configuration.
+**/
+public class UpdateNodegroupConfigRequestBodyUpdateConfig {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("maxUnavailable")
+    public Long maxUnavailable;
+    public UpdateNodegroupConfigRequestBodyUpdateConfig withMaxUnavailable(Long maxUnavailable) {
+        this.maxUnavailable = maxUnavailable;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("maxUnavailablePercentage")
+    public Long maxUnavailablePercentage;
+    public UpdateNodegroupConfigRequestBodyUpdateConfig withMaxUnavailablePercentage(Long maxUnavailablePercentage) {
+        this.maxUnavailablePercentage = maxUnavailablePercentage;
+        return this;
+    }
+}

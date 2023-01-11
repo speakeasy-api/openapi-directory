@@ -1,0 +1,17 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class CollectionsLinkedNodesRelationshipsDeleteRequest {
+    public CollectionsLinkedNodesRelationshipsDeletePathParams pathParams;
+    public CollectionsLinkedNodesRelationshipsDeleteRequest withPathParams(CollectionsLinkedNodesRelationshipsDeletePathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public java.util.Map<String, Object> request;
+    public CollectionsLinkedNodesRelationshipsDeleteRequest withRequest(java.util.Map<String, Object> request) {
+        this.request = request;
+        return this;
+    }
+}

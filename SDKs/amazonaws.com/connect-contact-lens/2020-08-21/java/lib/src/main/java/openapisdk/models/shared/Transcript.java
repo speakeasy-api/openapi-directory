@@ -1,0 +1,61 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * Transcript
+ * A list of messages in the session.
+**/
+public class Transcript {
+    @JsonProperty("BeginOffsetMillis")
+    public Long beginOffsetMillis;
+    public Transcript withBeginOffsetMillis(Long beginOffsetMillis) {
+        this.beginOffsetMillis = beginOffsetMillis;
+        return this;
+    }
+    @JsonProperty("Content")
+    public String content;
+    public Transcript withContent(String content) {
+        this.content = content;
+        return this;
+    }
+    @JsonProperty("EndOffsetMillis")
+    public Long endOffsetMillis;
+    public Transcript withEndOffsetMillis(Long endOffsetMillis) {
+        this.endOffsetMillis = endOffsetMillis;
+        return this;
+    }
+    @JsonProperty("Id")
+    public String id;
+    public Transcript withId(String id) {
+        this.id = id;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("IssuesDetected")
+    public IssueDetected[] issuesDetected;
+    public Transcript withIssuesDetected(IssueDetected[] issuesDetected) {
+        this.issuesDetected = issuesDetected;
+        return this;
+    }
+    @JsonProperty("ParticipantId")
+    public String participantId;
+    public Transcript withParticipantId(String participantId) {
+        this.participantId = participantId;
+        return this;
+    }
+    @JsonProperty("ParticipantRole")
+    public String participantRole;
+    public Transcript withParticipantRole(String participantRole) {
+        this.participantRole = participantRole;
+        return this;
+    }
+    @JsonProperty("Sentiment")
+    public SentimentValueEnum sentiment;
+    public Transcript withSentiment(SentimentValueEnum sentiment) {
+        this.sentiment = sentiment;
+        return this;
+    }
+}

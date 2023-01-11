@@ -1,0 +1,40 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * BucketCountByEffectivePermission
+ * Provides information about the number of S3 buckets that are publicly accessible based on a combination of permissions settings for each bucket.
+**/
+public class BucketCountByEffectivePermission {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("publiclyAccessible")
+    public Long publiclyAccessible;
+    public BucketCountByEffectivePermission withPubliclyAccessible(Long publiclyAccessible) {
+        this.publiclyAccessible = publiclyAccessible;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("publiclyReadable")
+    public Long publiclyReadable;
+    public BucketCountByEffectivePermission withPubliclyReadable(Long publiclyReadable) {
+        this.publiclyReadable = publiclyReadable;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("publiclyWritable")
+    public Long publiclyWritable;
+    public BucketCountByEffectivePermission withPubliclyWritable(Long publiclyWritable) {
+        this.publiclyWritable = publiclyWritable;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("unknown")
+    public Long unknown;
+    public BucketCountByEffectivePermission withUnknown(Long unknown) {
+        this.unknown = unknown;
+        return this;
+    }
+}

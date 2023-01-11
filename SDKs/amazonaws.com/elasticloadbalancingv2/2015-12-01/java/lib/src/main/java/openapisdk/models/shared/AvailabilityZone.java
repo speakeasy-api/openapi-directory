@@ -1,0 +1,30 @@
+package openapisdk.models.shared;
+
+
+
+/**
+ * AvailabilityZone
+ * Information about an Availability Zone.
+**/
+public class AvailabilityZone {
+    public LoadBalancerAddress[] loadBalancerAddresses;
+    public AvailabilityZone withLoadBalancerAddresses(LoadBalancerAddress[] loadBalancerAddresses) {
+        this.loadBalancerAddresses = loadBalancerAddresses;
+        return this;
+    }
+    public String outpostId;
+    public AvailabilityZone withOutpostId(String outpostId) {
+        this.outpostId = outpostId;
+        return this;
+    }
+    public String subnetId;
+    public AvailabilityZone withSubnetId(String subnetId) {
+        this.subnetId = subnetId;
+        return this;
+    }
+    public String zoneName;
+    public AvailabilityZone withZoneName(String zoneName) {
+        this.zoneName = zoneName;
+        return this;
+    }
+}

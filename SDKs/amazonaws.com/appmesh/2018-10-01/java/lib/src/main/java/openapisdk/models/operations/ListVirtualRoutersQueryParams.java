@@ -1,0 +1,18 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class ListVirtualRoutersQueryParams {
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public ListVirtualRoutersQueryParams withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=nextToken")
+    public String nextToken;
+    public ListVirtualRoutersQueryParams withNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+}

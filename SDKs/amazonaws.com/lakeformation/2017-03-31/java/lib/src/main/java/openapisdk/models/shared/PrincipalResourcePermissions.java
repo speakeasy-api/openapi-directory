@@ -1,0 +1,47 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * PrincipalResourcePermissions
+ * The permissions granted or revoked on a resource.
+**/
+public class PrincipalResourcePermissions {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("AdditionalDetails")
+    public DetailsMap additionalDetails;
+    public PrincipalResourcePermissions withAdditionalDetails(DetailsMap additionalDetails) {
+        this.additionalDetails = additionalDetails;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Permissions")
+    public PermissionEnum[] permissions;
+    public PrincipalResourcePermissions withPermissions(PermissionEnum[] permissions) {
+        this.permissions = permissions;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("PermissionsWithGrantOption")
+    public PermissionEnum[] permissionsWithGrantOption;
+    public PrincipalResourcePermissions withPermissionsWithGrantOption(PermissionEnum[] permissionsWithGrantOption) {
+        this.permissionsWithGrantOption = permissionsWithGrantOption;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Principal")
+    public DataLakePrincipal principal;
+    public PrincipalResourcePermissions withPrincipal(DataLakePrincipal principal) {
+        this.principal = principal;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Resource")
+    public Resource resource;
+    public PrincipalResourcePermissions withResource(Resource resource) {
+        this.resource = resource;
+        return this;
+    }
+}

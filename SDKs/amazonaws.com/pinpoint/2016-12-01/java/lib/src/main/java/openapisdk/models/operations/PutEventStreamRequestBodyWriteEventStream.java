@@ -1,0 +1,26 @@
+package openapisdk.models.operations;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * PutEventStreamRequestBodyWriteEventStream
+ * Specifies the Amazon Resource Name (ARN) of an event stream to publish events to and the AWS Identity and Access Management (IAM) role to use when publishing those events.
+**/
+public class PutEventStreamRequestBodyWriteEventStream {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("DestinationStreamArn")
+    public String destinationStreamArn;
+    public PutEventStreamRequestBodyWriteEventStream withDestinationStreamArn(String destinationStreamArn) {
+        this.destinationStreamArn = destinationStreamArn;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("RoleArn")
+    public String roleArn;
+    public PutEventStreamRequestBodyWriteEventStream withRoleArn(String roleArn) {
+        this.roleArn = roleArn;
+        return this;
+    }
+}

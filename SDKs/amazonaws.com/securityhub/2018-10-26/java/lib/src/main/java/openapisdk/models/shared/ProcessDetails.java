@@ -1,0 +1,54 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * ProcessDetails
+ * The details of process-related information about a finding.
+**/
+public class ProcessDetails {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("LaunchedAt")
+    public String launchedAt;
+    public ProcessDetails withLaunchedAt(String launchedAt) {
+        this.launchedAt = launchedAt;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Name")
+    public String name;
+    public ProcessDetails withName(String name) {
+        this.name = name;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ParentPid")
+    public Long parentPid;
+    public ProcessDetails withParentPid(Long parentPid) {
+        this.parentPid = parentPid;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Path")
+    public String path;
+    public ProcessDetails withPath(String path) {
+        this.path = path;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Pid")
+    public Long pid;
+    public ProcessDetails withPid(Long pid) {
+        this.pid = pid;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("TerminatedAt")
+    public String terminatedAt;
+    public ProcessDetails withTerminatedAt(String terminatedAt) {
+        this.terminatedAt = terminatedAt;
+        return this;
+    }
+}

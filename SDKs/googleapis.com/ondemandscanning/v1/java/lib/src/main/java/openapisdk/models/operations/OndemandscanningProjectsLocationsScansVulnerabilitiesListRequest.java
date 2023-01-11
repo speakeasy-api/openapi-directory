@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class OndemandscanningProjectsLocationsScansVulnerabilitiesListRequest {
+    public OndemandscanningProjectsLocationsScansVulnerabilitiesListPathParams pathParams;
+    public OndemandscanningProjectsLocationsScansVulnerabilitiesListRequest withPathParams(OndemandscanningProjectsLocationsScansVulnerabilitiesListPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public OndemandscanningProjectsLocationsScansVulnerabilitiesListQueryParams queryParams;
+    public OndemandscanningProjectsLocationsScansVulnerabilitiesListRequest withQueryParams(OndemandscanningProjectsLocationsScansVulnerabilitiesListQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public OndemandscanningProjectsLocationsScansVulnerabilitiesListSecurity security;
+    public OndemandscanningProjectsLocationsScansVulnerabilitiesListRequest withSecurity(OndemandscanningProjectsLocationsScansVulnerabilitiesListSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

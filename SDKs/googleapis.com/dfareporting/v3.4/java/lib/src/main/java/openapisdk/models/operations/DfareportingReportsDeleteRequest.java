@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class DfareportingReportsDeleteRequest {
+    public DfareportingReportsDeletePathParams pathParams;
+    public DfareportingReportsDeleteRequest withPathParams(DfareportingReportsDeletePathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public DfareportingReportsDeleteQueryParams queryParams;
+    public DfareportingReportsDeleteRequest withQueryParams(DfareportingReportsDeleteQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public DfareportingReportsDeleteSecurity security;
+    public DfareportingReportsDeleteRequest withSecurity(DfareportingReportsDeleteSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

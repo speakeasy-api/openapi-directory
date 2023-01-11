@@ -1,0 +1,18 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class MirrorTimelineDeleteSecurity {
+    @SpeakeasyMetadata("security:option=true")
+    public MirrorTimelineDeleteSecurityOption1 option1;
+    public MirrorTimelineDeleteSecurity withOption1(MirrorTimelineDeleteSecurityOption1 option1) {
+        this.option1 = option1;
+        return this;
+    }
+    @SpeakeasyMetadata("security:option=true")
+    public MirrorTimelineDeleteSecurityOption2 option2;
+    public MirrorTimelineDeleteSecurity withOption2(MirrorTimelineDeleteSecurityOption2 option2) {
+        this.option2 = option2;
+        return this;
+    }
+}

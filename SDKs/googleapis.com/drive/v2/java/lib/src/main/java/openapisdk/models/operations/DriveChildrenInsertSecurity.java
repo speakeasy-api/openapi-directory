@@ -1,0 +1,24 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class DriveChildrenInsertSecurity {
+    @SpeakeasyMetadata("security:option=true")
+    public DriveChildrenInsertSecurityOption1 option1;
+    public DriveChildrenInsertSecurity withOption1(DriveChildrenInsertSecurityOption1 option1) {
+        this.option1 = option1;
+        return this;
+    }
+    @SpeakeasyMetadata("security:option=true")
+    public DriveChildrenInsertSecurityOption2 option2;
+    public DriveChildrenInsertSecurity withOption2(DriveChildrenInsertSecurityOption2 option2) {
+        this.option2 = option2;
+        return this;
+    }
+    @SpeakeasyMetadata("security:option=true")
+    public DriveChildrenInsertSecurityOption3 option3;
+    public DriveChildrenInsertSecurity withOption3(DriveChildrenInsertSecurityOption3 option3) {
+        this.option3 = option3;
+        return this;
+    }
+}

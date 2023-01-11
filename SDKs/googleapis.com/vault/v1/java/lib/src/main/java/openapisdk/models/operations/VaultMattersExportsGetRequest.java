@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class VaultMattersExportsGetRequest {
+    public VaultMattersExportsGetPathParams pathParams;
+    public VaultMattersExportsGetRequest withPathParams(VaultMattersExportsGetPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public VaultMattersExportsGetQueryParams queryParams;
+    public VaultMattersExportsGetRequest withQueryParams(VaultMattersExportsGetQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public VaultMattersExportsGetSecurity security;
+    public VaultMattersExportsGetRequest withSecurity(VaultMattersExportsGetSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

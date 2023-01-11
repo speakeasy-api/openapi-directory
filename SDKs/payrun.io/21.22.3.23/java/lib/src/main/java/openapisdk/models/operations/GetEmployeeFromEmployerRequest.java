@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class GetEmployeeFromEmployerRequest {
+    public GetEmployeeFromEmployerPathParams pathParams;
+    public GetEmployeeFromEmployerRequest withPathParams(GetEmployeeFromEmployerPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public GetEmployeeFromEmployerHeaders headers;
+    public GetEmployeeFromEmployerRequest withHeaders(GetEmployeeFromEmployerHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+}

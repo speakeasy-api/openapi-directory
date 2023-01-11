@@ -1,0 +1,22 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class UpdateApnsVoipChannelRequest {
+    public UpdateApnsVoipChannelPathParams pathParams;
+    public UpdateApnsVoipChannelRequest withPathParams(UpdateApnsVoipChannelPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public UpdateApnsVoipChannelHeaders headers;
+    public UpdateApnsVoipChannelRequest withHeaders(UpdateApnsVoipChannelHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public UpdateApnsVoipChannelRequestBody request;
+    public UpdateApnsVoipChannelRequest withRequest(UpdateApnsVoipChannelRequestBody request) {
+        this.request = request;
+        return this;
+    }
+}

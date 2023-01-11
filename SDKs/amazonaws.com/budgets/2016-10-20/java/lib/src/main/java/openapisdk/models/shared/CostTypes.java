@@ -1,0 +1,89 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * CostTypes
+ * <p>The types of cost that are included in a <code>COST</code> budget, such as tax and subscriptions.</p> <p> <code>USAGE</code>, <code>RI_UTILIZATION</code>, <code>RI_COVERAGE</code>, <code>SAVINGS_PLANS_UTILIZATION</code>, and <code>SAVINGS_PLANS_COVERAGE</code> budgets do not have <code>CostTypes</code>.</p>
+**/
+public class CostTypes {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("IncludeCredit")
+    public Boolean includeCredit;
+    public CostTypes withIncludeCredit(Boolean includeCredit) {
+        this.includeCredit = includeCredit;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("IncludeDiscount")
+    public Boolean includeDiscount;
+    public CostTypes withIncludeDiscount(Boolean includeDiscount) {
+        this.includeDiscount = includeDiscount;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("IncludeOtherSubscription")
+    public Boolean includeOtherSubscription;
+    public CostTypes withIncludeOtherSubscription(Boolean includeOtherSubscription) {
+        this.includeOtherSubscription = includeOtherSubscription;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("IncludeRecurring")
+    public Boolean includeRecurring;
+    public CostTypes withIncludeRecurring(Boolean includeRecurring) {
+        this.includeRecurring = includeRecurring;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("IncludeRefund")
+    public Boolean includeRefund;
+    public CostTypes withIncludeRefund(Boolean includeRefund) {
+        this.includeRefund = includeRefund;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("IncludeSubscription")
+    public Boolean includeSubscription;
+    public CostTypes withIncludeSubscription(Boolean includeSubscription) {
+        this.includeSubscription = includeSubscription;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("IncludeSupport")
+    public Boolean includeSupport;
+    public CostTypes withIncludeSupport(Boolean includeSupport) {
+        this.includeSupport = includeSupport;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("IncludeTax")
+    public Boolean includeTax;
+    public CostTypes withIncludeTax(Boolean includeTax) {
+        this.includeTax = includeTax;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("IncludeUpfront")
+    public Boolean includeUpfront;
+    public CostTypes withIncludeUpfront(Boolean includeUpfront) {
+        this.includeUpfront = includeUpfront;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("UseAmortized")
+    public Boolean useAmortized;
+    public CostTypes withUseAmortized(Boolean useAmortized) {
+        this.useAmortized = useAmortized;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("UseBlended")
+    public Boolean useBlended;
+    public CostTypes withUseBlended(Boolean useBlended) {
+        this.useBlended = useBlended;
+        return this;
+    }
+}

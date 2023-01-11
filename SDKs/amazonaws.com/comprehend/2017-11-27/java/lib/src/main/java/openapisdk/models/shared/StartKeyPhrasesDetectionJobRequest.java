@@ -1,0 +1,67 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class StartKeyPhrasesDetectionJobRequest {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ClientRequestToken")
+    public String clientRequestToken;
+    public StartKeyPhrasesDetectionJobRequest withClientRequestToken(String clientRequestToken) {
+        this.clientRequestToken = clientRequestToken;
+        return this;
+    }
+    @JsonProperty("DataAccessRoleArn")
+    public String dataAccessRoleArn;
+    public StartKeyPhrasesDetectionJobRequest withDataAccessRoleArn(String dataAccessRoleArn) {
+        this.dataAccessRoleArn = dataAccessRoleArn;
+        return this;
+    }
+    @JsonProperty("InputDataConfig")
+    public InputDataConfig inputDataConfig;
+    public StartKeyPhrasesDetectionJobRequest withInputDataConfig(InputDataConfig inputDataConfig) {
+        this.inputDataConfig = inputDataConfig;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("JobName")
+    public String jobName;
+    public StartKeyPhrasesDetectionJobRequest withJobName(String jobName) {
+        this.jobName = jobName;
+        return this;
+    }
+    @JsonProperty("LanguageCode")
+    public LanguageCodeEnum languageCode;
+    public StartKeyPhrasesDetectionJobRequest withLanguageCode(LanguageCodeEnum languageCode) {
+        this.languageCode = languageCode;
+        return this;
+    }
+    @JsonProperty("OutputDataConfig")
+    public OutputDataConfig outputDataConfig;
+    public StartKeyPhrasesDetectionJobRequest withOutputDataConfig(OutputDataConfig outputDataConfig) {
+        this.outputDataConfig = outputDataConfig;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Tags")
+    public Tag[] tags;
+    public StartKeyPhrasesDetectionJobRequest withTags(Tag[] tags) {
+        this.tags = tags;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("VolumeKmsKeyId")
+    public String volumeKmsKeyId;
+    public StartKeyPhrasesDetectionJobRequest withVolumeKmsKeyId(String volumeKmsKeyId) {
+        this.volumeKmsKeyId = volumeKmsKeyId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("VpcConfig")
+    public VpcConfig vpcConfig;
+    public StartKeyPhrasesDetectionJobRequest withVpcConfig(VpcConfig vpcConfig) {
+        this.vpcConfig = vpcConfig;
+        return this;
+    }
+}

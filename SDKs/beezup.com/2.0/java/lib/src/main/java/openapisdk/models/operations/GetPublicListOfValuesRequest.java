@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class GetPublicListOfValuesRequest {
+    public GetPublicListOfValuesPathParams pathParams;
+    public GetPublicListOfValuesRequest withPathParams(GetPublicListOfValuesPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public GetPublicListOfValuesHeaders headers;
+    public GetPublicListOfValuesRequest withHeaders(GetPublicListOfValuesHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+}

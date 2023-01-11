@@ -1,0 +1,40 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class ImportSourceCredentialsInput {
+    @JsonProperty("authType")
+    public AuthTypeEnum authType;
+    public ImportSourceCredentialsInput withAuthType(AuthTypeEnum authType) {
+        this.authType = authType;
+        return this;
+    }
+    @JsonProperty("serverType")
+    public ServerTypeEnum serverType;
+    public ImportSourceCredentialsInput withServerType(ServerTypeEnum serverType) {
+        this.serverType = serverType;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("shouldOverwrite")
+    public Boolean shouldOverwrite;
+    public ImportSourceCredentialsInput withShouldOverwrite(Boolean shouldOverwrite) {
+        this.shouldOverwrite = shouldOverwrite;
+        return this;
+    }
+    @JsonProperty("token")
+    public String token;
+    public ImportSourceCredentialsInput withToken(String token) {
+        this.token = token;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("username")
+    public String username;
+    public ImportSourceCredentialsInput withUsername(String username) {
+        this.username = username;
+        return this;
+    }
+}

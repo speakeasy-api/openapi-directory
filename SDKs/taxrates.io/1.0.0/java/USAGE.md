@@ -1,0 +1,36 @@
+<!-- Start SDK Example Usage -->
+```java
+package hello.world;
+
+import openapisdk.SDK;
+import openapisdk.models.shared.Security;
+
+public class Application {
+    public static void main(String[] args) {
+        try {
+            SDK.Builder builder = SDK.builder();
+
+            SDK sdk = builder.build();
+
+            TaxRatesByCountryCodeRequest req = new TaxRatesByCountryCodeRequest() {{
+                queryParams = new TaxRatesByCountryCodeQueryParams() {{
+                    countryCode = "doloremque";
+                    date = "quae";
+                    domain = "nisi";
+                    filter = "recusandae";
+                    productCodes = "qui";
+                    province = "minus";
+                    zip = "et";
+                }};
+            }};
+
+            TaxRatesByCountryCodeResponse res = sdk.v1Tax.taxRatesByCountryCode(req);
+
+            if (res.taxRatesByCountryCode200ApplicationJSONObject.isPresent()) {
+                // handle response
+            }
+        } catch (Exception e) {
+            // handle exception
+        }
+```
+<!-- End SDK Example Usage -->

@@ -1,0 +1,34 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class DetectEntitiesResponse {
+    @JsonProperty("Entities")
+    public Entity[] entities;
+    public DetectEntitiesResponse withEntities(Entity[] entities) {
+        this.entities = entities;
+        return this;
+    }
+    @JsonProperty("ModelVersion")
+    public String modelVersion;
+    public DetectEntitiesResponse withModelVersion(String modelVersion) {
+        this.modelVersion = modelVersion;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("PaginationToken")
+    public String paginationToken;
+    public DetectEntitiesResponse withPaginationToken(String paginationToken) {
+        this.paginationToken = paginationToken;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("UnmappedAttributes")
+    public UnmappedAttribute[] unmappedAttributes;
+    public DetectEntitiesResponse withUnmappedAttributes(UnmappedAttribute[] unmappedAttributes) {
+        this.unmappedAttributes = unmappedAttributes;
+        return this;
+    }
+}

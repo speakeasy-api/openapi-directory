@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class GetAccountsRequest {
+    public GetAccountsHeaders headers;
+    public GetAccountsRequest withHeaders(GetAccountsHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+    public GetAccountsSecurity security;
+    public GetAccountsRequest withSecurity(GetAccountsSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

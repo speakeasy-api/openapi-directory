@@ -1,0 +1,33 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * ComplianceByResource
+ * Indicates whether an Amazon Web Services resource that is evaluated according to one or more Config rules is compliant. A resource is compliant if it complies with all of the rules that evaluate it. A resource is noncompliant if it does not comply with one or more of these rules.
+**/
+public class ComplianceByResource {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Compliance")
+    public Compliance compliance;
+    public ComplianceByResource withCompliance(Compliance compliance) {
+        this.compliance = compliance;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ResourceId")
+    public String resourceId;
+    public ComplianceByResource withResourceId(String resourceId) {
+        this.resourceId = resourceId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ResourceType")
+    public String resourceType;
+    public ComplianceByResource withResourceType(String resourceType) {
+        this.resourceType = resourceType;
+        return this;
+    }
+}

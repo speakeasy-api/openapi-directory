@@ -1,0 +1,40 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * File
+ * Returns information about a file in a repository.
+**/
+public class File {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("absolutePath")
+    public String absolutePath;
+    public File withAbsolutePath(String absolutePath) {
+        this.absolutePath = absolutePath;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("blobId")
+    public String blobId;
+    public File withBlobId(String blobId) {
+        this.blobId = blobId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("fileMode")
+    public FileModeTypeEnumEnum fileMode;
+    public File withFileMode(FileModeTypeEnumEnum fileMode) {
+        this.fileMode = fileMode;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("relativePath")
+    public String relativePath;
+    public File withRelativePath(String relativePath) {
+        this.relativePath = relativePath;
+        return this;
+    }
+}

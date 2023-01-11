@@ -1,0 +1,22 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class PostWorkspacesWorkspaceProjectsRequest {
+    public PostWorkspacesWorkspaceProjectsPathParams pathParams;
+    public PostWorkspacesWorkspaceProjectsRequest withPathParams(PostWorkspacesWorkspaceProjectsPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public java.util.Map<String, Object> request;
+    public PostWorkspacesWorkspaceProjectsRequest withRequest(java.util.Map<String, Object> request) {
+        this.request = request;
+        return this;
+    }
+    public PostWorkspacesWorkspaceProjectsSecurity security;
+    public PostWorkspacesWorkspaceProjectsRequest withSecurity(PostWorkspacesWorkspaceProjectsSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

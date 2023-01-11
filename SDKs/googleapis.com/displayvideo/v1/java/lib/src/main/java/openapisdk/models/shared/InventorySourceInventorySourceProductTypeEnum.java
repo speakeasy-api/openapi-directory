@@ -1,0 +1,21 @@
+package openapisdk.models.shared;
+
+
+public enum InventorySourceInventorySourceProductTypeEnum {
+    INVENTORY_SOURCE_PRODUCT_TYPE_UNSPECIFIED("INVENTORY_SOURCE_PRODUCT_TYPE_UNSPECIFIED"),
+    PREFERRED_DEAL("PREFERRED_DEAL"),
+    PRIVATE_AUCTION("PRIVATE_AUCTION"),
+    PROGRAMMATIC_GUARANTEED("PROGRAMMATIC_GUARANTEED"),
+    TAG_GUARANTEED("TAG_GUARANTEED"),
+    YOUTUBE_RESERVE("YOUTUBE_RESERVE"),
+    INSTANT_RESERVE("INSTANT_RESERVE"),
+    GUARANTEED_PACKAGE("GUARANTEED_PACKAGE"),
+    PROGRAMMATIC_TV("PROGRAMMATIC_TV"),
+    AUCTION_PACKAGE("AUCTION_PACKAGE");
+
+    public final String value;
+
+    private InventorySourceInventorySourceProductTypeEnum(String value) {
+        this.value = value;
+    }
+}

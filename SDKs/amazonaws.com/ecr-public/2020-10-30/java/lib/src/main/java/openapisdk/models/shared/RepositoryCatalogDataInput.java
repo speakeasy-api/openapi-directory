@@ -1,0 +1,54 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * RepositoryCatalogDataInput
+ * An object containing the catalog data for a repository. This data is publicly visible in the Amazon ECR Public Gallery.
+**/
+public class RepositoryCatalogDataInput {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("aboutText")
+    public String aboutText;
+    public RepositoryCatalogDataInput withAboutText(String aboutText) {
+        this.aboutText = aboutText;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("architectures")
+    public String[] architectures;
+    public RepositoryCatalogDataInput withArchitectures(String[] architectures) {
+        this.architectures = architectures;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("description")
+    public String description;
+    public RepositoryCatalogDataInput withDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("logoImageBlob")
+    public String logoImageBlob;
+    public RepositoryCatalogDataInput withLogoImageBlob(String logoImageBlob) {
+        this.logoImageBlob = logoImageBlob;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("operatingSystems")
+    public String[] operatingSystems;
+    public RepositoryCatalogDataInput withOperatingSystems(String[] operatingSystems) {
+        this.operatingSystems = operatingSystems;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("usageText")
+    public String usageText;
+    public RepositoryCatalogDataInput withUsageText(String usageText) {
+        this.usageText = usageText;
+        return this;
+    }
+}

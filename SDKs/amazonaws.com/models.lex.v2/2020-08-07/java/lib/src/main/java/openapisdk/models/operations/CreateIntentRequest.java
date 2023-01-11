@@ -1,0 +1,22 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class CreateIntentRequest {
+    public CreateIntentPathParams pathParams;
+    public CreateIntentRequest withPathParams(CreateIntentPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public CreateIntentHeaders headers;
+    public CreateIntentRequest withHeaders(CreateIntentHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public CreateIntentRequestBody request;
+    public CreateIntentRequest withRequest(CreateIntentRequestBody request) {
+        this.request = request;
+        return this;
+    }
+}

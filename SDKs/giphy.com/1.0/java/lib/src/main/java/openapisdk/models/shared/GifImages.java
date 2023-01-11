@@ -1,0 +1,152 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * GifImages
+ * An object containing data for various available formats and sizes of this GIF.
+**/
+public class GifImages {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("downsized")
+    public Image downsized;
+    public GifImages withDownsized(Image downsized) {
+        this.downsized = downsized;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("downsized_large")
+    public Image downsizedLarge;
+    public GifImages withDownsizedLarge(Image downsizedLarge) {
+        this.downsizedLarge = downsizedLarge;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("downsized_medium")
+    public Image downsizedMedium;
+    public GifImages withDownsizedMedium(Image downsizedMedium) {
+        this.downsizedMedium = downsizedMedium;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("downsized_small")
+    public Image downsizedSmall;
+    public GifImages withDownsizedSmall(Image downsizedSmall) {
+        this.downsizedSmall = downsizedSmall;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("downsized_still")
+    public Image downsizedStill;
+    public GifImages withDownsizedStill(Image downsizedStill) {
+        this.downsizedStill = downsizedStill;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("fixed_height")
+    public Image fixedHeight;
+    public GifImages withFixedHeight(Image fixedHeight) {
+        this.fixedHeight = fixedHeight;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("fixed_height_downsampled")
+    public Image fixedHeightDownsampled;
+    public GifImages withFixedHeightDownsampled(Image fixedHeightDownsampled) {
+        this.fixedHeightDownsampled = fixedHeightDownsampled;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("fixed_height_small")
+    public Image fixedHeightSmall;
+    public GifImages withFixedHeightSmall(Image fixedHeightSmall) {
+        this.fixedHeightSmall = fixedHeightSmall;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("fixed_height_small_still")
+    public Image fixedHeightSmallStill;
+    public GifImages withFixedHeightSmallStill(Image fixedHeightSmallStill) {
+        this.fixedHeightSmallStill = fixedHeightSmallStill;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("fixed_height_still")
+    public Image fixedHeightStill;
+    public GifImages withFixedHeightStill(Image fixedHeightStill) {
+        this.fixedHeightStill = fixedHeightStill;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("fixed_width")
+    public Image fixedWidth;
+    public GifImages withFixedWidth(Image fixedWidth) {
+        this.fixedWidth = fixedWidth;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("fixed_width_downsampled")
+    public Image fixedWidthDownsampled;
+    public GifImages withFixedWidthDownsampled(Image fixedWidthDownsampled) {
+        this.fixedWidthDownsampled = fixedWidthDownsampled;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("fixed_width_small")
+    public Image fixedWidthSmall;
+    public GifImages withFixedWidthSmall(Image fixedWidthSmall) {
+        this.fixedWidthSmall = fixedWidthSmall;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("fixed_width_small_still")
+    public Image fixedWidthSmallStill;
+    public GifImages withFixedWidthSmallStill(Image fixedWidthSmallStill) {
+        this.fixedWidthSmallStill = fixedWidthSmallStill;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("fixed_width_still")
+    public Image fixedWidthStill;
+    public GifImages withFixedWidthStill(Image fixedWidthStill) {
+        this.fixedWidthStill = fixedWidthStill;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("looping")
+    public Image looping;
+    public GifImages withLooping(Image looping) {
+        this.looping = looping;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("original")
+    public Image original;
+    public GifImages withOriginal(Image original) {
+        this.original = original;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("original_still")
+    public Image originalStill;
+    public GifImages withOriginalStill(Image originalStill) {
+        this.originalStill = originalStill;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("preview")
+    public Image preview;
+    public GifImages withPreview(Image preview) {
+        this.preview = preview;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("preview_gif")
+    public Image previewGif;
+    public GifImages withPreviewGif(Image previewGif) {
+        this.previewGif = previewGif;
+        return this;
+    }
+}

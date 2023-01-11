@@ -1,0 +1,162 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class GameWeather {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("awayConference")
+    public String awayConference;
+    public GameWeather withAwayConference(String awayConference) {
+        this.awayConference = awayConference;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("awayTeam")
+    public String awayTeam;
+    public GameWeather withAwayTeam(String awayTeam) {
+        this.awayTeam = awayTeam;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("dewPoint")
+    public Double dewPoint;
+    public GameWeather withDewPoint(Double dewPoint) {
+        this.dewPoint = dewPoint;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("homeConference")
+    public String homeConference;
+    public GameWeather withHomeConference(String homeConference) {
+        this.homeConference = homeConference;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("homeTeam")
+    public String homeTeam;
+    public GameWeather withHomeTeam(String homeTeam) {
+        this.homeTeam = homeTeam;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("humidity")
+    public Double humidity;
+    public GameWeather withHumidity(Double humidity) {
+        this.humidity = humidity;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("id")
+    public Long id;
+    public GameWeather withId(Long id) {
+        this.id = id;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("isStartTimeTBD")
+    public Boolean isStartTimeTBD;
+    public GameWeather withIsStartTimeTbd(Boolean isStartTimeTBD) {
+        this.isStartTimeTBD = isStartTimeTBD;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("precipitation")
+    public Double precipitation;
+    public GameWeather withPrecipitation(Double precipitation) {
+        this.precipitation = precipitation;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("pressure")
+    public Double pressure;
+    public GameWeather withPressure(Double pressure) {
+        this.pressure = pressure;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("season")
+    public Long season;
+    public GameWeather withSeason(Long season) {
+        this.season = season;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("seasonType")
+    public String seasonType;
+    public GameWeather withSeasonType(String seasonType) {
+        this.seasonType = seasonType;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("snowfall")
+    public Double snowfall;
+    public GameWeather withSnowfall(Double snowfall) {
+        this.snowfall = snowfall;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("startTime")
+    public String startTime;
+    public GameWeather withStartTime(String startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("temperature")
+    public Double temperature;
+    public GameWeather withTemperature(Double temperature) {
+        this.temperature = temperature;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("venue")
+    public String venue;
+    public GameWeather withVenue(String venue) {
+        this.venue = venue;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("venueId")
+    public Long venueId;
+    public GameWeather withVenueId(Long venueId) {
+        this.venueId = venueId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("weatherCondition")
+    public String weatherCondition;
+    public GameWeather withWeatherCondition(String weatherCondition) {
+        this.weatherCondition = weatherCondition;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("weatherConditionCode")
+    public Long weatherConditionCode;
+    public GameWeather withWeatherConditionCode(Long weatherConditionCode) {
+        this.weatherConditionCode = weatherConditionCode;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("week")
+    public Long week;
+    public GameWeather withWeek(Long week) {
+        this.week = week;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("windDirection")
+    public Double windDirection;
+    public GameWeather withWindDirection(Double windDirection) {
+        this.windDirection = windDirection;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("windSpeed")
+    public Double windSpeed;
+    public GameWeather withWindSpeed(Double windSpeed) {
+        this.windSpeed = windSpeed;
+        return this;
+    }
+}

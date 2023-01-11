@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class GetWorkloadRequest {
+    public GetWorkloadPathParams pathParams;
+    public GetWorkloadRequest withPathParams(GetWorkloadPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public GetWorkloadHeaders headers;
+    public GetWorkloadRequest withHeaders(GetWorkloadHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+}

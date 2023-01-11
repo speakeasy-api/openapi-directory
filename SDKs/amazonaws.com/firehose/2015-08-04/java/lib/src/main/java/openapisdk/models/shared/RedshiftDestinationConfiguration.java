@@ -1,0 +1,83 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * RedshiftDestinationConfiguration
+ * Describes the configuration of a destination in Amazon Redshift.
+**/
+public class RedshiftDestinationConfiguration {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("CloudWatchLoggingOptions")
+    public CloudWatchLoggingOptions cloudWatchLoggingOptions;
+    public RedshiftDestinationConfiguration withCloudWatchLoggingOptions(CloudWatchLoggingOptions cloudWatchLoggingOptions) {
+        this.cloudWatchLoggingOptions = cloudWatchLoggingOptions;
+        return this;
+    }
+    @JsonProperty("ClusterJDBCURL")
+    public String clusterJDBCURL;
+    public RedshiftDestinationConfiguration withClusterJdbcurl(String clusterJDBCURL) {
+        this.clusterJDBCURL = clusterJDBCURL;
+        return this;
+    }
+    @JsonProperty("CopyCommand")
+    public CopyCommand copyCommand;
+    public RedshiftDestinationConfiguration withCopyCommand(CopyCommand copyCommand) {
+        this.copyCommand = copyCommand;
+        return this;
+    }
+    @JsonProperty("Password")
+    public String password;
+    public RedshiftDestinationConfiguration withPassword(String password) {
+        this.password = password;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ProcessingConfiguration")
+    public ProcessingConfiguration processingConfiguration;
+    public RedshiftDestinationConfiguration withProcessingConfiguration(ProcessingConfiguration processingConfiguration) {
+        this.processingConfiguration = processingConfiguration;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("RetryOptions")
+    public RedshiftRetryOptions retryOptions;
+    public RedshiftDestinationConfiguration withRetryOptions(RedshiftRetryOptions retryOptions) {
+        this.retryOptions = retryOptions;
+        return this;
+    }
+    @JsonProperty("RoleARN")
+    public String roleARN;
+    public RedshiftDestinationConfiguration withRoleArn(String roleARN) {
+        this.roleARN = roleARN;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("S3BackupConfiguration")
+    public S3DestinationConfiguration s3BackupConfiguration;
+    public RedshiftDestinationConfiguration withS3BackupConfiguration(S3DestinationConfiguration s3BackupConfiguration) {
+        this.s3BackupConfiguration = s3BackupConfiguration;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("S3BackupMode")
+    public RedshiftS3BackupModeEnum s3BackupMode;
+    public RedshiftDestinationConfiguration withS3BackupMode(RedshiftS3BackupModeEnum s3BackupMode) {
+        this.s3BackupMode = s3BackupMode;
+        return this;
+    }
+    @JsonProperty("S3Configuration")
+    public S3DestinationConfiguration s3Configuration;
+    public RedshiftDestinationConfiguration withS3Configuration(S3DestinationConfiguration s3Configuration) {
+        this.s3Configuration = s3Configuration;
+        return this;
+    }
+    @JsonProperty("Username")
+    public String username;
+    public RedshiftDestinationConfiguration withUsername(String username) {
+        this.username = username;
+        return this;
+    }
+}

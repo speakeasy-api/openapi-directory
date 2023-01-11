@@ -1,0 +1,22 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class CreateIntegrationRequest {
+    public CreateIntegrationPathParams pathParams;
+    public CreateIntegrationRequest withPathParams(CreateIntegrationPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public CreateIntegrationHeaders headers;
+    public CreateIntegrationRequest withHeaders(CreateIntegrationHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public CreateIntegrationRequestBody request;
+    public CreateIntegrationRequest withRequest(CreateIntegrationRequestBody request) {
+        this.request = request;
+        return this;
+    }
+}

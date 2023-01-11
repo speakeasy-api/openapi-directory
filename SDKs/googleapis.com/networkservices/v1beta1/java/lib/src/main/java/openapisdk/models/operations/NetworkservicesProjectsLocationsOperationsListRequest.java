@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class NetworkservicesProjectsLocationsOperationsListRequest {
+    public NetworkservicesProjectsLocationsOperationsListPathParams pathParams;
+    public NetworkservicesProjectsLocationsOperationsListRequest withPathParams(NetworkservicesProjectsLocationsOperationsListPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public NetworkservicesProjectsLocationsOperationsListQueryParams queryParams;
+    public NetworkservicesProjectsLocationsOperationsListRequest withQueryParams(NetworkservicesProjectsLocationsOperationsListQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public NetworkservicesProjectsLocationsOperationsListSecurity security;
+    public NetworkservicesProjectsLocationsOperationsListRequest withSecurity(NetworkservicesProjectsLocationsOperationsListSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

@@ -1,0 +1,22 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+/**
+ * SetVariableAction
+ * Information about the variable and its new value.
+**/
+public class SetVariableAction {
+    @JsonProperty("value")
+    public String value;
+    public SetVariableAction withValue(String value) {
+        this.value = value;
+        return this;
+    }
+    @JsonProperty("variableName")
+    public String variableName;
+    public SetVariableAction withVariableName(String variableName) {
+        this.variableName = variableName;
+        return this;
+    }
+}

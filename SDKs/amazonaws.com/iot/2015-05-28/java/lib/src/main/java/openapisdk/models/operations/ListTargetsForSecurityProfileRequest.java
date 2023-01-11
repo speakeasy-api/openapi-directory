@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class ListTargetsForSecurityProfileRequest {
+    public ListTargetsForSecurityProfilePathParams pathParams;
+    public ListTargetsForSecurityProfileRequest withPathParams(ListTargetsForSecurityProfilePathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public ListTargetsForSecurityProfileQueryParams queryParams;
+    public ListTargetsForSecurityProfileRequest withQueryParams(ListTargetsForSecurityProfileQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public ListTargetsForSecurityProfileHeaders headers;
+    public ListTargetsForSecurityProfileRequest withHeaders(ListTargetsForSecurityProfileHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+}

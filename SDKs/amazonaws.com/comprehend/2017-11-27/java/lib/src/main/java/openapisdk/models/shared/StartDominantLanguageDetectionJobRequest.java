@@ -1,0 +1,61 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class StartDominantLanguageDetectionJobRequest {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ClientRequestToken")
+    public String clientRequestToken;
+    public StartDominantLanguageDetectionJobRequest withClientRequestToken(String clientRequestToken) {
+        this.clientRequestToken = clientRequestToken;
+        return this;
+    }
+    @JsonProperty("DataAccessRoleArn")
+    public String dataAccessRoleArn;
+    public StartDominantLanguageDetectionJobRequest withDataAccessRoleArn(String dataAccessRoleArn) {
+        this.dataAccessRoleArn = dataAccessRoleArn;
+        return this;
+    }
+    @JsonProperty("InputDataConfig")
+    public InputDataConfig inputDataConfig;
+    public StartDominantLanguageDetectionJobRequest withInputDataConfig(InputDataConfig inputDataConfig) {
+        this.inputDataConfig = inputDataConfig;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("JobName")
+    public String jobName;
+    public StartDominantLanguageDetectionJobRequest withJobName(String jobName) {
+        this.jobName = jobName;
+        return this;
+    }
+    @JsonProperty("OutputDataConfig")
+    public OutputDataConfig outputDataConfig;
+    public StartDominantLanguageDetectionJobRequest withOutputDataConfig(OutputDataConfig outputDataConfig) {
+        this.outputDataConfig = outputDataConfig;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Tags")
+    public Tag[] tags;
+    public StartDominantLanguageDetectionJobRequest withTags(Tag[] tags) {
+        this.tags = tags;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("VolumeKmsKeyId")
+    public String volumeKmsKeyId;
+    public StartDominantLanguageDetectionJobRequest withVolumeKmsKeyId(String volumeKmsKeyId) {
+        this.volumeKmsKeyId = volumeKmsKeyId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("VpcConfig")
+    public VpcConfig vpcConfig;
+    public StartDominantLanguageDetectionJobRequest withVpcConfig(VpcConfig vpcConfig) {
+        this.vpcConfig = vpcConfig;
+        return this;
+    }
+}

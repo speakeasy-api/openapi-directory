@@ -1,0 +1,47 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * Capacity
+ * The physical capacity of the Amazon Web Services Snow Family device. 
+**/
+public class Capacity {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("available")
+    public Long available;
+    public Capacity withAvailable(Long available) {
+        this.available = available;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("name")
+    public String name;
+    public Capacity withName(String name) {
+        this.name = name;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("total")
+    public Long total;
+    public Capacity withTotal(Long total) {
+        this.total = total;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("unit")
+    public String unit;
+    public Capacity withUnit(String unit) {
+        this.unit = unit;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("used")
+    public Long used;
+    public Capacity withUsed(Long used) {
+        this.used = used;
+        return this;
+    }
+}

@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class TaskCategoriesUpdateRequest {
+    public TaskCategoriesUpdatePathParams pathParams;
+    public TaskCategoriesUpdateRequest withPathParams(TaskCategoriesUpdatePathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public TaskCategoriesUpdateQueryParams queryParams;
+    public TaskCategoriesUpdateRequest withQueryParams(TaskCategoriesUpdateQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public TaskCategoriesUpdateSecurity security;
+    public TaskCategoriesUpdateRequest withSecurity(TaskCategoriesUpdateSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

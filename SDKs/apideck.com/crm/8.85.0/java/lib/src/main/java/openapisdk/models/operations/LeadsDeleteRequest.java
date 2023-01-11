@@ -1,0 +1,26 @@
+package openapisdk.models.operations;
+
+
+
+public class LeadsDeleteRequest {
+    public LeadsDeletePathParams pathParams;
+    public LeadsDeleteRequest withPathParams(LeadsDeletePathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public LeadsDeleteQueryParams queryParams;
+    public LeadsDeleteRequest withQueryParams(LeadsDeleteQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public LeadsDeleteHeaders headers;
+    public LeadsDeleteRequest withHeaders(LeadsDeleteHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+    public LeadsDeleteSecurity security;
+    public LeadsDeleteRequest withSecurity(LeadsDeleteSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

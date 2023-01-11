@@ -1,0 +1,54 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * Connection
+ * <p>A resource that is used to connect third-party source providers with services like AWS CodePipeline.</p> <p>Note: A connection created through CloudFormation, the CLI, or the SDK is in `PENDING` status by default. You can make its status `AVAILABLE` by updating the connection in the console.</p>
+**/
+public class Connection {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ConnectionArn")
+    public String connectionArn;
+    public Connection withConnectionArn(String connectionArn) {
+        this.connectionArn = connectionArn;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ConnectionName")
+    public String connectionName;
+    public Connection withConnectionName(String connectionName) {
+        this.connectionName = connectionName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ConnectionStatus")
+    public ConnectionStatusEnum connectionStatus;
+    public Connection withConnectionStatus(ConnectionStatusEnum connectionStatus) {
+        this.connectionStatus = connectionStatus;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("HostArn")
+    public String hostArn;
+    public Connection withHostArn(String hostArn) {
+        this.hostArn = hostArn;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("OwnerAccountId")
+    public String ownerAccountId;
+    public Connection withOwnerAccountId(String ownerAccountId) {
+        this.ownerAccountId = ownerAccountId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ProviderType")
+    public ProviderTypeEnum providerType;
+    public Connection withProviderType(ProviderTypeEnum providerType) {
+        this.providerType = providerType;
+        return this;
+    }
+}

@@ -1,0 +1,22 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+/**
+ * Delegate
+ * The name of the attribute, which is one of the values defined in the UserAttribute enumeration.
+**/
+public class Delegate {
+    @JsonProperty("Id")
+    public String id;
+    public Delegate withId(String id) {
+        this.id = id;
+        return this;
+    }
+    @JsonProperty("Type")
+    public MemberTypeEnum type;
+    public Delegate withType(MemberTypeEnum type) {
+        this.type = type;
+        return this;
+    }
+}

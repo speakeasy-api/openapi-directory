@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class DeleteUserRequest {
+    public DeleteUserPathParams pathParams;
+    public DeleteUserRequest withPathParams(DeleteUserPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public DeleteUserHeaders headers;
+    public DeleteUserRequest withHeaders(DeleteUserHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+}

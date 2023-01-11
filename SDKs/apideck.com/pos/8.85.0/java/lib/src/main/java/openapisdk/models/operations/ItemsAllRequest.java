@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class ItemsAllRequest {
+    public ItemsAllQueryParams queryParams;
+    public ItemsAllRequest withQueryParams(ItemsAllQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public ItemsAllHeaders headers;
+    public ItemsAllRequest withHeaders(ItemsAllHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+    public ItemsAllSecurity security;
+    public ItemsAllRequest withSecurity(ItemsAllSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

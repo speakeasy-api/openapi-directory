@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class ProductsApiDeleteProduct2Request {
+    public ProductsApiDeleteProduct2PathParams pathParams;
+    public ProductsApiDeleteProduct2Request withPathParams(ProductsApiDeleteProduct2PathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public ProductsApiDeleteProduct2Headers headers;
+    public ProductsApiDeleteProduct2Request withHeaders(ProductsApiDeleteProduct2Headers headers) {
+        this.headers = headers;
+        return this;
+    }
+}

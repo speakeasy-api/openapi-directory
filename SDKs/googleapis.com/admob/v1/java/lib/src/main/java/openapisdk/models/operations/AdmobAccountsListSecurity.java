@@ -1,0 +1,18 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class AdmobAccountsListSecurity {
+    @SpeakeasyMetadata("security:option=true")
+    public AdmobAccountsListSecurityOption1 option1;
+    public AdmobAccountsListSecurity withOption1(AdmobAccountsListSecurityOption1 option1) {
+        this.option1 = option1;
+        return this;
+    }
+    @SpeakeasyMetadata("security:option=true")
+    public AdmobAccountsListSecurityOption2 option2;
+    public AdmobAccountsListSecurity withOption2(AdmobAccountsListSecurityOption2 option2) {
+        this.option2 = option2;
+        return this;
+    }
+}

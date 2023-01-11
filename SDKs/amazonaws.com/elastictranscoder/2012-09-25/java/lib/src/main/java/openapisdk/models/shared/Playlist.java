@@ -1,0 +1,61 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * Playlist
+ *  Use Only for Fragmented MP4 or MPEG-TS Outputs. If you specify a preset for which the value of Container is <code>fmp4</code> (Fragmented MP4) or <code>ts</code> (MPEG-TS), Playlists contains information about the master playlists that you want Elastic Transcoder to create. We recommend that you create only one master playlist per output format. The maximum number of master playlists in a job is 30. 
+**/
+public class Playlist {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Format")
+    public String format;
+    public Playlist withFormat(String format) {
+        this.format = format;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("HlsContentProtection")
+    public HlsContentProtection hlsContentProtection;
+    public Playlist withHlsContentProtection(HlsContentProtection hlsContentProtection) {
+        this.hlsContentProtection = hlsContentProtection;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Name")
+    public String name;
+    public Playlist withName(String name) {
+        this.name = name;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("OutputKeys")
+    public String[] outputKeys;
+    public Playlist withOutputKeys(String[] outputKeys) {
+        this.outputKeys = outputKeys;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("PlayReadyDrm")
+    public PlayReadyDrm playReadyDrm;
+    public Playlist withPlayReadyDrm(PlayReadyDrm playReadyDrm) {
+        this.playReadyDrm = playReadyDrm;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Status")
+    public String status;
+    public Playlist withStatus(String status) {
+        this.status = status;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("StatusDetail")
+    public String statusDetail;
+    public Playlist withStatusDetail(String statusDetail) {
+        this.statusDetail = statusDetail;
+        return this;
+    }
+}

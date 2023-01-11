@@ -1,0 +1,80 @@
+package openapisdk.models.shared;
+
+import java.time.OffsetDateTime;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import openapisdk.utils.DateTimeSerializer;
+import openapisdk.utils.DateTimeDeserializer;
+
+public class DescribeImportResponse {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonSerialize(contentUsing = DateTimeSerializer.class)
+    @JsonDeserialize(contentUsing = DateTimeDeserializer.class)
+    @JsonProperty("creationDateTime")
+    public OffsetDateTime creationDateTime;
+    public DescribeImportResponse withCreationDateTime(OffsetDateTime creationDateTime) {
+        this.creationDateTime = creationDateTime;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("failureReasons")
+    public String[] failureReasons;
+    public DescribeImportResponse withFailureReasons(String[] failureReasons) {
+        this.failureReasons = failureReasons;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("importId")
+    public String importId;
+    public DescribeImportResponse withImportId(String importId) {
+        this.importId = importId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("importStatus")
+    public ImportStatusEnum importStatus;
+    public DescribeImportResponse withImportStatus(ImportStatusEnum importStatus) {
+        this.importStatus = importStatus;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("importedResourceId")
+    public String importedResourceId;
+    public DescribeImportResponse withImportedResourceId(String importedResourceId) {
+        this.importedResourceId = importedResourceId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("importedResourceName")
+    public String importedResourceName;
+    public DescribeImportResponse withImportedResourceName(String importedResourceName) {
+        this.importedResourceName = importedResourceName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonSerialize(contentUsing = DateTimeSerializer.class)
+    @JsonDeserialize(contentUsing = DateTimeDeserializer.class)
+    @JsonProperty("lastUpdatedDateTime")
+    public OffsetDateTime lastUpdatedDateTime;
+    public DescribeImportResponse withLastUpdatedDateTime(OffsetDateTime lastUpdatedDateTime) {
+        this.lastUpdatedDateTime = lastUpdatedDateTime;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("mergeStrategy")
+    public MergeStrategyEnum mergeStrategy;
+    public DescribeImportResponse withMergeStrategy(MergeStrategyEnum mergeStrategy) {
+        this.mergeStrategy = mergeStrategy;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("resourceSpecification")
+    public ImportResourceSpecification resourceSpecification;
+    public DescribeImportResponse withResourceSpecification(ImportResourceSpecification resourceSpecification) {
+        this.resourceSpecification = resourceSpecification;
+        return this;
+    }
+}

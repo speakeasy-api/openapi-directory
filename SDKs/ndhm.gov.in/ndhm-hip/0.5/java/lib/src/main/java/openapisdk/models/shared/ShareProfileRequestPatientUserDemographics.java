@@ -1,0 +1,66 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class ShareProfileRequestPatientUserDemographics {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("address")
+    public PatientAddress address;
+    public ShareProfileRequestPatientUserDemographics withAddress(PatientAddress address) {
+        this.address = address;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("dayOfBirth")
+    public Long dayOfBirth;
+    public ShareProfileRequestPatientUserDemographics withDayOfBirth(Long dayOfBirth) {
+        this.dayOfBirth = dayOfBirth;
+        return this;
+    }
+    @JsonProperty("gender")
+    public PatientGenderEnum gender;
+    public ShareProfileRequestPatientUserDemographics withGender(PatientGenderEnum gender) {
+        this.gender = gender;
+        return this;
+    }
+    @JsonProperty("healthId")
+    public String healthId;
+    public ShareProfileRequestPatientUserDemographics withHealthId(String healthId) {
+        this.healthId = healthId;
+        return this;
+    }
+    @JsonProperty("healthIdNumber")
+    public String healthIdNumber;
+    public ShareProfileRequestPatientUserDemographics withHealthIdNumber(String healthIdNumber) {
+        this.healthIdNumber = healthIdNumber;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("identifiers")
+    public Identifier[] identifiers;
+    public ShareProfileRequestPatientUserDemographics withIdentifiers(Identifier[] identifiers) {
+        this.identifiers = identifiers;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("monthOfBirth")
+    public Long monthOfBirth;
+    public ShareProfileRequestPatientUserDemographics withMonthOfBirth(Long monthOfBirth) {
+        this.monthOfBirth = monthOfBirth;
+        return this;
+    }
+    @JsonProperty("name")
+    public String name;
+    public ShareProfileRequestPatientUserDemographics withName(String name) {
+        this.name = name;
+        return this;
+    }
+    @JsonProperty("yearOfBirth")
+    public Long yearOfBirth;
+    public ShareProfileRequestPatientUserDemographics withYearOfBirth(Long yearOfBirth) {
+        this.yearOfBirth = yearOfBirth;
+        return this;
+    }
+}

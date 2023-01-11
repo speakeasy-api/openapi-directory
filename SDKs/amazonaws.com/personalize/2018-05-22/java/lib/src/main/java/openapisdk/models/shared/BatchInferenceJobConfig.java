@@ -1,0 +1,19 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * BatchInferenceJobConfig
+ * The configuration details of a batch inference job.
+**/
+public class BatchInferenceJobConfig {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("itemExplorationConfig")
+    public java.util.Map<String, String> itemExplorationConfig;
+    public BatchInferenceJobConfig withItemExplorationConfig(java.util.Map<String, String> itemExplorationConfig) {
+        this.itemExplorationConfig = itemExplorationConfig;
+        return this;
+    }
+}

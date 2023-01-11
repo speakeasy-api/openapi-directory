@@ -1,0 +1,54 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * ThreatIntelIndicator
+ * Details about the threat intelligence related to a finding.
+**/
+public class ThreatIntelIndicator {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Category")
+    public ThreatIntelIndicatorCategoryEnum category;
+    public ThreatIntelIndicator withCategory(ThreatIntelIndicatorCategoryEnum category) {
+        this.category = category;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("LastObservedAt")
+    public String lastObservedAt;
+    public ThreatIntelIndicator withLastObservedAt(String lastObservedAt) {
+        this.lastObservedAt = lastObservedAt;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Source")
+    public String source;
+    public ThreatIntelIndicator withSource(String source) {
+        this.source = source;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("SourceUrl")
+    public String sourceUrl;
+    public ThreatIntelIndicator withSourceUrl(String sourceUrl) {
+        this.sourceUrl = sourceUrl;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Type")
+    public ThreatIntelIndicatorTypeEnum type;
+    public ThreatIntelIndicator withType(ThreatIntelIndicatorTypeEnum type) {
+        this.type = type;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Value")
+    public String value;
+    public ThreatIntelIndicator withValue(String value) {
+        this.value = value;
+        return this;
+    }
+}

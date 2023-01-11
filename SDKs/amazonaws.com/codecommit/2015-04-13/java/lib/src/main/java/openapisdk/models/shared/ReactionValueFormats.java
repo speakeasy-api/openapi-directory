@@ -1,0 +1,33 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * ReactionValueFormats
+ * Information about the values for reactions to a comment. AWS CodeCommit supports a limited set of reactions.
+**/
+public class ReactionValueFormats {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("emoji")
+    public String emoji;
+    public ReactionValueFormats withEmoji(String emoji) {
+        this.emoji = emoji;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("shortCode")
+    public String shortCode;
+    public ReactionValueFormats withShortCode(String shortCode) {
+        this.shortCode = shortCode;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("unicode")
+    public String unicode;
+    public ReactionValueFormats withUnicode(String unicode) {
+        this.unicode = unicode;
+        return this;
+    }
+}

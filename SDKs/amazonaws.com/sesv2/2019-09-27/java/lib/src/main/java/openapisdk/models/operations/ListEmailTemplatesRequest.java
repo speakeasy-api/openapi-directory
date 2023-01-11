@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class ListEmailTemplatesRequest {
+    public ListEmailTemplatesQueryParams queryParams;
+    public ListEmailTemplatesRequest withQueryParams(ListEmailTemplatesQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public ListEmailTemplatesHeaders headers;
+    public ListEmailTemplatesRequest withHeaders(ListEmailTemplatesHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+}

@@ -1,0 +1,36 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class DescribeConnectionAliasesRequest {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("AliasIds")
+    public String[] aliasIds;
+    public DescribeConnectionAliasesRequest withAliasIds(String[] aliasIds) {
+        this.aliasIds = aliasIds;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Limit")
+    public Long limit;
+    public DescribeConnectionAliasesRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("NextToken")
+    public String nextToken;
+    public DescribeConnectionAliasesRequest withNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ResourceId")
+    public String resourceId;
+    public DescribeConnectionAliasesRequest withResourceId(String resourceId) {
+        this.resourceId = resourceId;
+        return this;
+    }
+}

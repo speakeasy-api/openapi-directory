@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class ListLayerVersionsRequest {
+    public ListLayerVersionsPathParams pathParams;
+    public ListLayerVersionsRequest withPathParams(ListLayerVersionsPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public ListLayerVersionsQueryParams queryParams;
+    public ListLayerVersionsRequest withQueryParams(ListLayerVersionsQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public ListLayerVersionsHeaders headers;
+    public ListLayerVersionsRequest withHeaders(ListLayerVersionsHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+}

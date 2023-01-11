@@ -1,0 +1,34 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class AdminListGroupsForUserRequest {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Limit")
+    public Long limit;
+    public AdminListGroupsForUserRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("NextToken")
+    public String nextToken;
+    public AdminListGroupsForUserRequest withNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    @JsonProperty("UserPoolId")
+    public String userPoolId;
+    public AdminListGroupsForUserRequest withUserPoolId(String userPoolId) {
+        this.userPoolId = userPoolId;
+        return this;
+    }
+    @JsonProperty("Username")
+    public String username;
+    public AdminListGroupsForUserRequest withUsername(String username) {
+        this.username = username;
+        return this;
+    }
+}

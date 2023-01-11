@@ -1,0 +1,97 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * ExportJobResponse
+ * Provides information about the status and settings of a job that exports endpoint definitions to a file. The file can be added directly to an Amazon Simple Storage Service (Amazon S3) bucket by using the Amazon Pinpoint API or downloaded directly to a computer by using the Amazon Pinpoint console.
+**/
+public class ExportJobResponse {
+    @JsonProperty("ApplicationId")
+    public String applicationId;
+    public ExportJobResponse withApplicationId(String applicationId) {
+        this.applicationId = applicationId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("CompletedPieces")
+    public Long completedPieces;
+    public ExportJobResponse withCompletedPieces(Long completedPieces) {
+        this.completedPieces = completedPieces;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("CompletionDate")
+    public String completionDate;
+    public ExportJobResponse withCompletionDate(String completionDate) {
+        this.completionDate = completionDate;
+        return this;
+    }
+    @JsonProperty("CreationDate")
+    public String creationDate;
+    public ExportJobResponse withCreationDate(String creationDate) {
+        this.creationDate = creationDate;
+        return this;
+    }
+    @JsonProperty("Definition")
+    public ExportJobResource definition;
+    public ExportJobResponse withDefinition(ExportJobResource definition) {
+        this.definition = definition;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("FailedPieces")
+    public Long failedPieces;
+    public ExportJobResponse withFailedPieces(Long failedPieces) {
+        this.failedPieces = failedPieces;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Failures")
+    public String[] failures;
+    public ExportJobResponse withFailures(String[] failures) {
+        this.failures = failures;
+        return this;
+    }
+    @JsonProperty("Id")
+    public String id;
+    public ExportJobResponse withId(String id) {
+        this.id = id;
+        return this;
+    }
+    @JsonProperty("JobStatus")
+    public JobStatusEnum jobStatus;
+    public ExportJobResponse withJobStatus(JobStatusEnum jobStatus) {
+        this.jobStatus = jobStatus;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("TotalFailures")
+    public Long totalFailures;
+    public ExportJobResponse withTotalFailures(Long totalFailures) {
+        this.totalFailures = totalFailures;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("TotalPieces")
+    public Long totalPieces;
+    public ExportJobResponse withTotalPieces(Long totalPieces) {
+        this.totalPieces = totalPieces;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("TotalProcessed")
+    public Long totalProcessed;
+    public ExportJobResponse withTotalProcessed(Long totalProcessed) {
+        this.totalProcessed = totalProcessed;
+        return this;
+    }
+    @JsonProperty("Type")
+    public String type;
+    public ExportJobResponse withType(String type) {
+        this.type = type;
+        return this;
+    }
+}

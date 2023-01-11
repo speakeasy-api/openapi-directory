@@ -1,0 +1,54 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * ActivityTypeConfiguration
+ * Configuration settings registered with the activity type.
+**/
+public class ActivityTypeConfiguration {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("defaultTaskHeartbeatTimeout")
+    public String defaultTaskHeartbeatTimeout;
+    public ActivityTypeConfiguration withDefaultTaskHeartbeatTimeout(String defaultTaskHeartbeatTimeout) {
+        this.defaultTaskHeartbeatTimeout = defaultTaskHeartbeatTimeout;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("defaultTaskList")
+    public TaskList defaultTaskList;
+    public ActivityTypeConfiguration withDefaultTaskList(TaskList defaultTaskList) {
+        this.defaultTaskList = defaultTaskList;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("defaultTaskPriority")
+    public String defaultTaskPriority;
+    public ActivityTypeConfiguration withDefaultTaskPriority(String defaultTaskPriority) {
+        this.defaultTaskPriority = defaultTaskPriority;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("defaultTaskScheduleToCloseTimeout")
+    public String defaultTaskScheduleToCloseTimeout;
+    public ActivityTypeConfiguration withDefaultTaskScheduleToCloseTimeout(String defaultTaskScheduleToCloseTimeout) {
+        this.defaultTaskScheduleToCloseTimeout = defaultTaskScheduleToCloseTimeout;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("defaultTaskScheduleToStartTimeout")
+    public String defaultTaskScheduleToStartTimeout;
+    public ActivityTypeConfiguration withDefaultTaskScheduleToStartTimeout(String defaultTaskScheduleToStartTimeout) {
+        this.defaultTaskScheduleToStartTimeout = defaultTaskScheduleToStartTimeout;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("defaultTaskStartToCloseTimeout")
+    public String defaultTaskStartToCloseTimeout;
+    public ActivityTypeConfiguration withDefaultTaskStartToCloseTimeout(String defaultTaskStartToCloseTimeout) {
+        this.defaultTaskStartToCloseTimeout = defaultTaskStartToCloseTimeout;
+        return this;
+    }
+}

@@ -1,0 +1,12 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class GetFunctionConcurrencyPathParams {
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=FunctionName")
+    public String functionName;
+    public GetFunctionConcurrencyPathParams withFunctionName(String functionName) {
+        this.functionName = functionName;
+        return this;
+    }
+}

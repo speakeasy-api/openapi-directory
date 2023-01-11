@@ -1,0 +1,62 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class UpdateUserRequest {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("HomeDirectory")
+    public String homeDirectory;
+    public UpdateUserRequest withHomeDirectory(String homeDirectory) {
+        this.homeDirectory = homeDirectory;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("HomeDirectoryMappings")
+    public HomeDirectoryMapEntry[] homeDirectoryMappings;
+    public UpdateUserRequest withHomeDirectoryMappings(HomeDirectoryMapEntry[] homeDirectoryMappings) {
+        this.homeDirectoryMappings = homeDirectoryMappings;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("HomeDirectoryType")
+    public HomeDirectoryTypeEnum homeDirectoryType;
+    public UpdateUserRequest withHomeDirectoryType(HomeDirectoryTypeEnum homeDirectoryType) {
+        this.homeDirectoryType = homeDirectoryType;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Policy")
+    public String policy;
+    public UpdateUserRequest withPolicy(String policy) {
+        this.policy = policy;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("PosixProfile")
+    public PosixProfile posixProfile;
+    public UpdateUserRequest withPosixProfile(PosixProfile posixProfile) {
+        this.posixProfile = posixProfile;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Role")
+    public String role;
+    public UpdateUserRequest withRole(String role) {
+        this.role = role;
+        return this;
+    }
+    @JsonProperty("ServerId")
+    public String serverId;
+    public UpdateUserRequest withServerId(String serverId) {
+        this.serverId = serverId;
+        return this;
+    }
+    @JsonProperty("UserName")
+    public String userName;
+    public UpdateUserRequest withUserName(String userName) {
+        this.userName = userName;
+        return this;
+    }
+}

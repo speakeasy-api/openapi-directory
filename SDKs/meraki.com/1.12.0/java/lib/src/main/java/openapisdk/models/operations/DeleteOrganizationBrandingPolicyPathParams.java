@@ -1,0 +1,18 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class DeleteOrganizationBrandingPolicyPathParams {
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=brandingPolicyId")
+    public String brandingPolicyId;
+    public DeleteOrganizationBrandingPolicyPathParams withBrandingPolicyId(String brandingPolicyId) {
+        this.brandingPolicyId = brandingPolicyId;
+        return this;
+    }
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=organizationId")
+    public String organizationId;
+    public DeleteOrganizationBrandingPolicyPathParams withOrganizationId(String organizationId) {
+        this.organizationId = organizationId;
+        return this;
+    }
+}

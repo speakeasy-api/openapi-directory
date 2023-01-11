@@ -1,0 +1,27 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class DisplayvideoPartnersBulkEditPartnerAssignedTargetingOptionsRequest {
+    public DisplayvideoPartnersBulkEditPartnerAssignedTargetingOptionsPathParams pathParams;
+    public DisplayvideoPartnersBulkEditPartnerAssignedTargetingOptionsRequest withPathParams(DisplayvideoPartnersBulkEditPartnerAssignedTargetingOptionsPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public DisplayvideoPartnersBulkEditPartnerAssignedTargetingOptionsQueryParams queryParams;
+    public DisplayvideoPartnersBulkEditPartnerAssignedTargetingOptionsRequest withQueryParams(DisplayvideoPartnersBulkEditPartnerAssignedTargetingOptionsQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public openapisdk.models.shared.BulkEditPartnerAssignedTargetingOptionsRequestInput request;
+    public DisplayvideoPartnersBulkEditPartnerAssignedTargetingOptionsRequest withRequest(openapisdk.models.shared.BulkEditPartnerAssignedTargetingOptionsRequestInput request) {
+        this.request = request;
+        return this;
+    }
+    public DisplayvideoPartnersBulkEditPartnerAssignedTargetingOptionsSecurity security;
+    public DisplayvideoPartnersBulkEditPartnerAssignedTargetingOptionsRequest withSecurity(DisplayvideoPartnersBulkEditPartnerAssignedTargetingOptionsSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

@@ -1,0 +1,40 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * MergeMetadata
+ * Returns information about a merge or potential merge between a source reference and a destination reference in a pull request.
+**/
+public class MergeMetadata {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("isMerged")
+    public Boolean isMerged;
+    public MergeMetadata withIsMerged(Boolean isMerged) {
+        this.isMerged = isMerged;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("mergeCommitId")
+    public String mergeCommitId;
+    public MergeMetadata withMergeCommitId(String mergeCommitId) {
+        this.mergeCommitId = mergeCommitId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("mergeOption")
+    public MergeOptionTypeEnumEnum mergeOption;
+    public MergeMetadata withMergeOption(MergeOptionTypeEnumEnum mergeOption) {
+        this.mergeOption = mergeOption;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("mergedBy")
+    public String mergedBy;
+    public MergeMetadata withMergedBy(String mergedBy) {
+        this.mergedBy = mergedBy;
+        return this;
+    }
+}

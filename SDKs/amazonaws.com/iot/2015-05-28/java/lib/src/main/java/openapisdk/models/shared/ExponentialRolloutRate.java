@@ -1,0 +1,28 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+/**
+ * ExponentialRolloutRate
+ * Allows you to create an exponential rate of rollout for a job.
+**/
+public class ExponentialRolloutRate {
+    @JsonProperty("baseRatePerMinute")
+    public Long baseRatePerMinute;
+    public ExponentialRolloutRate withBaseRatePerMinute(Long baseRatePerMinute) {
+        this.baseRatePerMinute = baseRatePerMinute;
+        return this;
+    }
+    @JsonProperty("incrementFactor")
+    public Double incrementFactor;
+    public ExponentialRolloutRate withIncrementFactor(Double incrementFactor) {
+        this.incrementFactor = incrementFactor;
+        return this;
+    }
+    @JsonProperty("rateIncreaseCriteria")
+    public RateIncreaseCriteria rateIncreaseCriteria;
+    public ExponentialRolloutRate withRateIncreaseCriteria(RateIncreaseCriteria rateIncreaseCriteria) {
+        this.rateIncreaseCriteria = rateIncreaseCriteria;
+        return this;
+    }
+}

@@ -1,0 +1,22 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class UpdateFieldLevelEncryptionConfig20180618Request {
+    public UpdateFieldLevelEncryptionConfig20180618PathParams pathParams;
+    public UpdateFieldLevelEncryptionConfig20180618Request withPathParams(UpdateFieldLevelEncryptionConfig20180618PathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public UpdateFieldLevelEncryptionConfig20180618Headers headers;
+    public UpdateFieldLevelEncryptionConfig20180618Request withHeaders(UpdateFieldLevelEncryptionConfig20180618Headers headers) {
+        this.headers = headers;
+        return this;
+    }
+    @SpeakeasyMetadata("request:mediaType=text/xml")
+    public byte[] request;
+    public UpdateFieldLevelEncryptionConfig20180618Request withRequest(byte[] request) {
+        this.request = request;
+        return this;
+    }
+}

@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class RecommenderProjectsLocationsInsightTypesInsightsListRequest {
+    public RecommenderProjectsLocationsInsightTypesInsightsListPathParams pathParams;
+    public RecommenderProjectsLocationsInsightTypesInsightsListRequest withPathParams(RecommenderProjectsLocationsInsightTypesInsightsListPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public RecommenderProjectsLocationsInsightTypesInsightsListQueryParams queryParams;
+    public RecommenderProjectsLocationsInsightTypesInsightsListRequest withQueryParams(RecommenderProjectsLocationsInsightTypesInsightsListQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public RecommenderProjectsLocationsInsightTypesInsightsListSecurity security;
+    public RecommenderProjectsLocationsInsightTypesInsightsListRequest withSecurity(RecommenderProjectsLocationsInsightTypesInsightsListSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

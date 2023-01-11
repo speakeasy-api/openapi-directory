@@ -1,0 +1,15 @@
+package openapisdk.models.shared;
+
+
+
+/**
+ * GetCloudFrontOriginAccessIdentityResult
+ * The returned result of the corresponding request.
+**/
+public class GetCloudFrontOriginAccessIdentityResult {
+    public CloudFrontOriginAccessIdentity cloudFrontOriginAccessIdentity;
+    public GetCloudFrontOriginAccessIdentityResult withCloudFrontOriginAccessIdentity(CloudFrontOriginAccessIdentity cloudFrontOriginAccessIdentity) {
+        this.cloudFrontOriginAccessIdentity = cloudFrontOriginAccessIdentity;
+        return this;
+    }
+}

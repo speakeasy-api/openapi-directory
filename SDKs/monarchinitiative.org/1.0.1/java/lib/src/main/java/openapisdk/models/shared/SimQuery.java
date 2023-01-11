@@ -1,0 +1,43 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class SimQuery {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ids")
+    public Node[] ids;
+    public SimQuery withIds(Node[] ids) {
+        this.ids = ids;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("negated_ids")
+    public Node[] negatedIds;
+    public SimQuery withNegatedIds(Node[] negatedIds) {
+        this.negatedIds = negatedIds;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("reference")
+    public TypedNode reference;
+    public SimQuery withReference(TypedNode reference) {
+        this.reference = reference;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("target_ids")
+    public Node[][] targetIds;
+    public SimQuery withTargetIds(Node[][] targetIds) {
+        this.targetIds = targetIds;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("unresolved_ids")
+    public String[] unresolvedIds;
+    public SimQuery withUnresolvedIds(String[] unresolvedIds) {
+        this.unresolvedIds = unresolvedIds;
+        return this;
+    }
+}

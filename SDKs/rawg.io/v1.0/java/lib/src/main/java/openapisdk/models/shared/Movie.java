@@ -1,0 +1,36 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class Movie {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("data")
+    public java.util.Map<String, Object> data;
+    public Movie withData(java.util.Map<String, Object> data) {
+        this.data = data;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("id")
+    public Long id;
+    public Movie withId(Long id) {
+        this.id = id;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("name")
+    public String name;
+    public Movie withName(String name) {
+        this.name = name;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("preview")
+    public String preview;
+    public Movie withPreview(String preview) {
+        this.preview = preview;
+        return this;
+    }
+}

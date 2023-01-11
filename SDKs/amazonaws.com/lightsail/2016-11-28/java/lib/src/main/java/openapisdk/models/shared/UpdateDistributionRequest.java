@@ -1,0 +1,49 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class UpdateDistributionRequest {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("cacheBehaviorSettings")
+    public CacheSettings cacheBehaviorSettings;
+    public UpdateDistributionRequest withCacheBehaviorSettings(CacheSettings cacheBehaviorSettings) {
+        this.cacheBehaviorSettings = cacheBehaviorSettings;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("cacheBehaviors")
+    public CacheBehaviorPerPath[] cacheBehaviors;
+    public UpdateDistributionRequest withCacheBehaviors(CacheBehaviorPerPath[] cacheBehaviors) {
+        this.cacheBehaviors = cacheBehaviors;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("defaultCacheBehavior")
+    public CacheBehavior defaultCacheBehavior;
+    public UpdateDistributionRequest withDefaultCacheBehavior(CacheBehavior defaultCacheBehavior) {
+        this.defaultCacheBehavior = defaultCacheBehavior;
+        return this;
+    }
+    @JsonProperty("distributionName")
+    public String distributionName;
+    public UpdateDistributionRequest withDistributionName(String distributionName) {
+        this.distributionName = distributionName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("isEnabled")
+    public Boolean isEnabled;
+    public UpdateDistributionRequest withIsEnabled(Boolean isEnabled) {
+        this.isEnabled = isEnabled;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("origin")
+    public InputOrigin origin;
+    public UpdateDistributionRequest withOrigin(InputOrigin origin) {
+        this.origin = origin;
+        return this;
+    }
+}

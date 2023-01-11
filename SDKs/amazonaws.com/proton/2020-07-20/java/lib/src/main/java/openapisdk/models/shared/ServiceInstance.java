@@ -1,0 +1,103 @@
+package openapisdk.models.shared;
+
+import java.time.OffsetDateTime;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import openapisdk.utils.DateTimeSerializer;
+import openapisdk.utils.DateTimeDeserializer;
+
+/**
+ * ServiceInstance
+ * The service instance detail data.
+**/
+public class ServiceInstance {
+    @JsonProperty("arn")
+    public String arn;
+    public ServiceInstance withArn(String arn) {
+        this.arn = arn;
+        return this;
+    }
+    @JsonSerialize(using = DateTimeSerializer.class)
+    @JsonDeserialize(using = DateTimeDeserializer.class)
+    @JsonProperty("createdAt")
+    public OffsetDateTime createdAt;
+    public ServiceInstance withCreatedAt(OffsetDateTime createdAt) {
+        this.createdAt = createdAt;
+        return this;
+    }
+    @JsonProperty("deploymentStatus")
+    public DeploymentStatusEnum deploymentStatus;
+    public ServiceInstance withDeploymentStatus(DeploymentStatusEnum deploymentStatus) {
+        this.deploymentStatus = deploymentStatus;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("deploymentStatusMessage")
+    public String deploymentStatusMessage;
+    public ServiceInstance withDeploymentStatusMessage(String deploymentStatusMessage) {
+        this.deploymentStatusMessage = deploymentStatusMessage;
+        return this;
+    }
+    @JsonProperty("environmentName")
+    public String environmentName;
+    public ServiceInstance withEnvironmentName(String environmentName) {
+        this.environmentName = environmentName;
+        return this;
+    }
+    @JsonSerialize(using = DateTimeSerializer.class)
+    @JsonDeserialize(using = DateTimeDeserializer.class)
+    @JsonProperty("lastDeploymentAttemptedAt")
+    public OffsetDateTime lastDeploymentAttemptedAt;
+    public ServiceInstance withLastDeploymentAttemptedAt(OffsetDateTime lastDeploymentAttemptedAt) {
+        this.lastDeploymentAttemptedAt = lastDeploymentAttemptedAt;
+        return this;
+    }
+    @JsonSerialize(using = DateTimeSerializer.class)
+    @JsonDeserialize(using = DateTimeDeserializer.class)
+    @JsonProperty("lastDeploymentSucceededAt")
+    public OffsetDateTime lastDeploymentSucceededAt;
+    public ServiceInstance withLastDeploymentSucceededAt(OffsetDateTime lastDeploymentSucceededAt) {
+        this.lastDeploymentSucceededAt = lastDeploymentSucceededAt;
+        return this;
+    }
+    @JsonProperty("name")
+    public String name;
+    public ServiceInstance withName(String name) {
+        this.name = name;
+        return this;
+    }
+    @JsonProperty("serviceName")
+    public String serviceName;
+    public ServiceInstance withServiceName(String serviceName) {
+        this.serviceName = serviceName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("spec")
+    public String spec;
+    public ServiceInstance withSpec(String spec) {
+        this.spec = spec;
+        return this;
+    }
+    @JsonProperty("templateMajorVersion")
+    public String templateMajorVersion;
+    public ServiceInstance withTemplateMajorVersion(String templateMajorVersion) {
+        this.templateMajorVersion = templateMajorVersion;
+        return this;
+    }
+    @JsonProperty("templateMinorVersion")
+    public String templateMinorVersion;
+    public ServiceInstance withTemplateMinorVersion(String templateMinorVersion) {
+        this.templateMinorVersion = templateMinorVersion;
+        return this;
+    }
+    @JsonProperty("templateName")
+    public String templateName;
+    public ServiceInstance withTemplateName(String templateName) {
+        this.templateName = templateName;
+        return this;
+    }
+}

@@ -1,0 +1,33 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * EnvironmentLifecycle
+ * Information about the current creation or deletion lifecycle state of an Cloud9 development environment.
+**/
+public class EnvironmentLifecycle {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("failureResource")
+    public String failureResource;
+    public EnvironmentLifecycle withFailureResource(String failureResource) {
+        this.failureResource = failureResource;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("reason")
+    public String reason;
+    public EnvironmentLifecycle withReason(String reason) {
+        this.reason = reason;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("status")
+    public EnvironmentLifecycleStatusEnum status;
+    public EnvironmentLifecycle withStatus(EnvironmentLifecycleStatusEnum status) {
+        this.status = status;
+        return this;
+    }
+}

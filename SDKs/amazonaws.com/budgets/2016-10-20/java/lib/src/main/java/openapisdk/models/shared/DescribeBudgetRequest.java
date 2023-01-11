@@ -1,0 +1,22 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+/**
+ * DescribeBudgetRequest
+ *  Request of DescribeBudget 
+**/
+public class DescribeBudgetRequest {
+    @JsonProperty("AccountId")
+    public String accountId;
+    public DescribeBudgetRequest withAccountId(String accountId) {
+        this.accountId = accountId;
+        return this;
+    }
+    @JsonProperty("BudgetName")
+    public String budgetName;
+    public DescribeBudgetRequest withBudgetName(String budgetName) {
+        this.budgetName = budgetName;
+        return this;
+    }
+}

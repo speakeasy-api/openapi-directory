@@ -1,0 +1,33 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * TriggerConfig
+ * Information about notification triggers for the deployment group.
+**/
+public class TriggerConfig {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("triggerEvents")
+    public TriggerEventTypeEnum[] triggerEvents;
+    public TriggerConfig withTriggerEvents(TriggerEventTypeEnum[] triggerEvents) {
+        this.triggerEvents = triggerEvents;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("triggerName")
+    public String triggerName;
+    public TriggerConfig withTriggerName(String triggerName) {
+        this.triggerName = triggerName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("triggerTargetArn")
+    public String triggerTargetArn;
+    public TriggerConfig withTriggerTargetArn(String triggerTargetArn) {
+        this.triggerTargetArn = triggerTargetArn;
+        return this;
+    }
+}

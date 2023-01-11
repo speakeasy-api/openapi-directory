@@ -1,0 +1,29 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class UpdateTeamMemberResult {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("projectRole")
+    public String projectRole;
+    public UpdateTeamMemberResult withProjectRole(String projectRole) {
+        this.projectRole = projectRole;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("remoteAccessAllowed")
+    public Boolean remoteAccessAllowed;
+    public UpdateTeamMemberResult withRemoteAccessAllowed(Boolean remoteAccessAllowed) {
+        this.remoteAccessAllowed = remoteAccessAllowed;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("userArn")
+    public String userArn;
+    public UpdateTeamMemberResult withUserArn(String userArn) {
+        this.userArn = userArn;
+        return this;
+    }
+}

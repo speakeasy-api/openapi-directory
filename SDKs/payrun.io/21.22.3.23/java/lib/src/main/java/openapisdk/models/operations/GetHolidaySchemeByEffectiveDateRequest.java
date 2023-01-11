@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class GetHolidaySchemeByEffectiveDateRequest {
+    public GetHolidaySchemeByEffectiveDatePathParams pathParams;
+    public GetHolidaySchemeByEffectiveDateRequest withPathParams(GetHolidaySchemeByEffectiveDatePathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public GetHolidaySchemeByEffectiveDateHeaders headers;
+    public GetHolidaySchemeByEffectiveDateRequest withHeaders(GetHolidaySchemeByEffectiveDateHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+}

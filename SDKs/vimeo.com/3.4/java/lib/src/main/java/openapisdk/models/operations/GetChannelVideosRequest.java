@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class GetChannelVideosRequest {
+    public GetChannelVideosPathParams pathParams;
+    public GetChannelVideosRequest withPathParams(GetChannelVideosPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public GetChannelVideosQueryParams queryParams;
+    public GetChannelVideosRequest withQueryParams(GetChannelVideosQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+}

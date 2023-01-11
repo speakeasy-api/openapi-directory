@@ -1,0 +1,73 @@
+package openapisdk.models.shared;
+
+import java.time.OffsetDateTime;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import openapisdk.utils.DateTimeSerializer;
+import openapisdk.utils.DateTimeDeserializer;
+
+/**
+ * EnvironmentTemplateSummary
+ * The environment template data.
+**/
+public class EnvironmentTemplateSummary {
+    @JsonProperty("arn")
+    public String arn;
+    public EnvironmentTemplateSummary withArn(String arn) {
+        this.arn = arn;
+        return this;
+    }
+    @JsonSerialize(using = DateTimeSerializer.class)
+    @JsonDeserialize(using = DateTimeDeserializer.class)
+    @JsonProperty("createdAt")
+    public OffsetDateTime createdAt;
+    public EnvironmentTemplateSummary withCreatedAt(OffsetDateTime createdAt) {
+        this.createdAt = createdAt;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("description")
+    public String description;
+    public EnvironmentTemplateSummary withDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("displayName")
+    public String displayName;
+    public EnvironmentTemplateSummary withDisplayName(String displayName) {
+        this.displayName = displayName;
+        return this;
+    }
+    @JsonSerialize(using = DateTimeSerializer.class)
+    @JsonDeserialize(using = DateTimeDeserializer.class)
+    @JsonProperty("lastModifiedAt")
+    public OffsetDateTime lastModifiedAt;
+    public EnvironmentTemplateSummary withLastModifiedAt(OffsetDateTime lastModifiedAt) {
+        this.lastModifiedAt = lastModifiedAt;
+        return this;
+    }
+    @JsonProperty("name")
+    public String name;
+    public EnvironmentTemplateSummary withName(String name) {
+        this.name = name;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("provisioning")
+    public ProvisioningEnum provisioning;
+    public EnvironmentTemplateSummary withProvisioning(ProvisioningEnum provisioning) {
+        this.provisioning = provisioning;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("recommendedVersion")
+    public String recommendedVersion;
+    public EnvironmentTemplateSummary withRecommendedVersion(String recommendedVersion) {
+        this.recommendedVersion = recommendedVersion;
+        return this;
+    }
+}

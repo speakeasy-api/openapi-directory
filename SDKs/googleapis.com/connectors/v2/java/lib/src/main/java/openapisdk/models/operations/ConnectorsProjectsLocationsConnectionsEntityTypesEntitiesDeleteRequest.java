@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class ConnectorsProjectsLocationsConnectionsEntityTypesEntitiesDeleteRequest {
+    public ConnectorsProjectsLocationsConnectionsEntityTypesEntitiesDeletePathParams pathParams;
+    public ConnectorsProjectsLocationsConnectionsEntityTypesEntitiesDeleteRequest withPathParams(ConnectorsProjectsLocationsConnectionsEntityTypesEntitiesDeletePathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public ConnectorsProjectsLocationsConnectionsEntityTypesEntitiesDeleteQueryParams queryParams;
+    public ConnectorsProjectsLocationsConnectionsEntityTypesEntitiesDeleteRequest withQueryParams(ConnectorsProjectsLocationsConnectionsEntityTypesEntitiesDeleteQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public ConnectorsProjectsLocationsConnectionsEntityTypesEntitiesDeleteSecurity security;
+    public ConnectorsProjectsLocationsConnectionsEntityTypesEntitiesDeleteRequest withSecurity(ConnectorsProjectsLocationsConnectionsEntityTypesEntitiesDeleteSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

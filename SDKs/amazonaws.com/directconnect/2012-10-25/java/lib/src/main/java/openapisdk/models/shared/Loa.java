@@ -1,0 +1,26 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * Loa
+ * Information about a Letter of Authorization - Connecting Facility Assignment (LOA-CFA) for a connection.
+**/
+public class Loa {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("loaContent")
+    public String loaContent;
+    public Loa withLoaContent(String loaContent) {
+        this.loaContent = loaContent;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("loaContentType")
+    public LoaContentTypeEnum loaContentType;
+    public Loa withLoaContentType(LoaContentTypeEnum loaContentType) {
+        this.loaContentType = loaContentType;
+        return this;
+    }
+}

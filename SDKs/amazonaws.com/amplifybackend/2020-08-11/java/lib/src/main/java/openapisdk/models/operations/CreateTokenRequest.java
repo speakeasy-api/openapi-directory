@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class CreateTokenRequest {
+    public CreateTokenPathParams pathParams;
+    public CreateTokenRequest withPathParams(CreateTokenPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public CreateTokenHeaders headers;
+    public CreateTokenRequest withHeaders(CreateTokenHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+}

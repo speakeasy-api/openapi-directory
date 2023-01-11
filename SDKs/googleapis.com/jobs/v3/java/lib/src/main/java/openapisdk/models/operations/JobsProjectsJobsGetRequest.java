@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class JobsProjectsJobsGetRequest {
+    public JobsProjectsJobsGetPathParams pathParams;
+    public JobsProjectsJobsGetRequest withPathParams(JobsProjectsJobsGetPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public JobsProjectsJobsGetQueryParams queryParams;
+    public JobsProjectsJobsGetRequest withQueryParams(JobsProjectsJobsGetQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public JobsProjectsJobsGetSecurity security;
+    public JobsProjectsJobsGetRequest withSecurity(JobsProjectsJobsGetSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

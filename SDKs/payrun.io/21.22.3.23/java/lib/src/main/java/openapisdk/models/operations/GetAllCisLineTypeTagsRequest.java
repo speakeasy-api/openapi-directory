@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class GetAllCisLineTypeTagsRequest {
+    public GetAllCisLineTypeTagsPathParams pathParams;
+    public GetAllCisLineTypeTagsRequest withPathParams(GetAllCisLineTypeTagsPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public GetAllCisLineTypeTagsHeaders headers;
+    public GetAllCisLineTypeTagsRequest withHeaders(GetAllCisLineTypeTagsHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+}

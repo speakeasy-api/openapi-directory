@@ -1,0 +1,33 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * RunConfiguration
+ * Describes the starting parameters for an Kinesis Data Analytics application.
+**/
+public class RunConfiguration {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ApplicationRestoreConfiguration")
+    public ApplicationRestoreConfiguration applicationRestoreConfiguration;
+    public RunConfiguration withApplicationRestoreConfiguration(ApplicationRestoreConfiguration applicationRestoreConfiguration) {
+        this.applicationRestoreConfiguration = applicationRestoreConfiguration;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("FlinkRunConfiguration")
+    public FlinkRunConfiguration flinkRunConfiguration;
+    public RunConfiguration withFlinkRunConfiguration(FlinkRunConfiguration flinkRunConfiguration) {
+        this.flinkRunConfiguration = flinkRunConfiguration;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("SqlRunConfigurations")
+    public SqlRunConfiguration[] sqlRunConfigurations;
+    public RunConfiguration withSqlRunConfigurations(SqlRunConfiguration[] sqlRunConfigurations) {
+        this.sqlRunConfigurations = sqlRunConfigurations;
+        return this;
+    }
+}

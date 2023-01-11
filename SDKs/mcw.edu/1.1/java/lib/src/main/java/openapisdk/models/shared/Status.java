@@ -1,0 +1,41 @@
+package openapisdk.models.shared;
+
+import java.time.OffsetDateTime;
+
+public class Status {
+    public Boolean cryopreservedEmbryo;
+    public Status withCryopreservedEmbryo(Boolean cryopreservedEmbryo) {
+        this.cryopreservedEmbryo = cryopreservedEmbryo;
+        return this;
+    }
+    public Boolean cryopreservedSperm;
+    public Status withCryopreservedSperm(Boolean cryopreservedSperm) {
+        this.cryopreservedSperm = cryopreservedSperm;
+        return this;
+    }
+    public Boolean cryorecovery;
+    public Status withCryorecovery(Boolean cryorecovery) {
+        this.cryorecovery = cryorecovery;
+        return this;
+    }
+    public Integer key;
+    public Status withKey(Integer key) {
+        this.key = key;
+        return this;
+    }
+    public Boolean liveAnimals;
+    public Status withLiveAnimals(Boolean liveAnimals) {
+        this.liveAnimals = liveAnimals;
+        return this;
+    }
+    public OffsetDateTime statusDate;
+    public Status withStatusDate(OffsetDateTime statusDate) {
+        this.statusDate = statusDate;
+        return this;
+    }
+    public Integer strainRgdId;
+    public Status withStrainRgdId(Integer strainRgdId) {
+        this.strainRgdId = strainRgdId;
+        return this;
+    }
+}

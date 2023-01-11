@@ -1,0 +1,22 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class OrderInvoiceDesignSettings {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("footerContentHtml")
+    public String footerContentHtml;
+    public OrderInvoiceDesignSettings withFooterContentHtml(String footerContentHtml) {
+        this.footerContentHtml = footerContentHtml;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("headerContentHtml")
+    public String headerContentHtml;
+    public OrderInvoiceDesignSettings withHeaderContentHtml(String headerContentHtml) {
+        this.headerContentHtml = headerContentHtml;
+        return this;
+    }
+}

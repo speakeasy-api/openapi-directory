@@ -1,0 +1,40 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * ResourceRequirements
+ * optional resource requirements to run workers (blank for unbounded allocations)
+**/
+public class ResourceRequirements {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("cpu_limit")
+    public String cpuLimit;
+    public ResourceRequirements withCpuLimit(String cpuLimit) {
+        this.cpuLimit = cpuLimit;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("cpu_request")
+    public String cpuRequest;
+    public ResourceRequirements withCpuRequest(String cpuRequest) {
+        this.cpuRequest = cpuRequest;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("memory_limit")
+    public String memoryLimit;
+    public ResourceRequirements withMemoryLimit(String memoryLimit) {
+        this.memoryLimit = memoryLimit;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("memory_request")
+    public String memoryRequest;
+    public ResourceRequirements withMemoryRequest(String memoryRequest) {
+        this.memoryRequest = memoryRequest;
+        return this;
+    }
+}

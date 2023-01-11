@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class GetTagsTagsWikisRequest {
+    public GetTagsTagsWikisPathParams pathParams;
+    public GetTagsTagsWikisRequest withPathParams(GetTagsTagsWikisPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public GetTagsTagsWikisQueryParams queryParams;
+    public GetTagsTagsWikisRequest withQueryParams(GetTagsTagsWikisQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+}

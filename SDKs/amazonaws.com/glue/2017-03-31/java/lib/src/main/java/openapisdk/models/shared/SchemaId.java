@@ -1,0 +1,33 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * SchemaId
+ * The unique ID of the schema in the Glue schema registry.
+**/
+public class SchemaId {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("RegistryName")
+    public String registryName;
+    public SchemaId withRegistryName(String registryName) {
+        this.registryName = registryName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("SchemaArn")
+    public String schemaArn;
+    public SchemaId withSchemaArn(String schemaArn) {
+        this.schemaArn = schemaArn;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("SchemaName")
+    public String schemaName;
+    public SchemaId withSchemaName(String schemaName) {
+        this.schemaName = schemaName;
+        return this;
+    }
+}

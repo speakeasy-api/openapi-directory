@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class ListSystemAdvisoriesRequest {
+    public ListSystemAdvisoriesPathParams pathParams;
+    public ListSystemAdvisoriesRequest withPathParams(ListSystemAdvisoriesPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public ListSystemAdvisoriesQueryParams queryParams;
+    public ListSystemAdvisoriesRequest withQueryParams(ListSystemAdvisoriesQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public ListSystemAdvisoriesSecurity security;
+    public ListSystemAdvisoriesRequest withSecurity(ListSystemAdvisoriesSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

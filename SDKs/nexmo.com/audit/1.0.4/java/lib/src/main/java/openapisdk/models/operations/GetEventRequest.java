@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class GetEventRequest {
+    public GetEventPathParams pathParams;
+    public GetEventRequest withPathParams(GetEventPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public GetEventSecurity security;
+    public GetEventRequest withSecurity(GetEventSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

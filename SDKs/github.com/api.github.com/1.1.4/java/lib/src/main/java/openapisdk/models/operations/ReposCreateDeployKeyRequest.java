@@ -1,0 +1,17 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class ReposCreateDeployKeyRequest {
+    public ReposCreateDeployKeyPathParams pathParams;
+    public ReposCreateDeployKeyRequest withPathParams(ReposCreateDeployKeyPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public ReposCreateDeployKeyRequestBody request;
+    public ReposCreateDeployKeyRequest withRequest(ReposCreateDeployKeyRequestBody request) {
+        this.request = request;
+        return this;
+    }
+}

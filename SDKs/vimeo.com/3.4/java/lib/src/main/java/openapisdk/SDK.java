@@ -1,0 +1,698 @@
+
+
+package openapisdk;
+
+import openapisdk.utils.HTTPClient;
+import openapisdk.utils.SpeakeasyHTTPClient;
+
+
+
+public class SDK {
+	public static final String[] SERVERS = {
+		"https://api.vimeo.com",
+	};
+  	
+  	public ApiInformation apiInformation;
+  	public AlbumsAlbumVideos albumsAlbumVideos;
+  	public AlbumsCustomAlbumLogos albumsCustomAlbumLogos;
+  	public AlbumsCustomAlbumThumbnails albumsCustomAlbumThumbnails;
+  	public AlbumsEssentials albumsEssentials;
+  	public AuthenticationExtrasEssentials authenticationExtrasEssentials;
+  	public CategoriesChannels categoriesChannels;
+  	public CategoriesEssentials categoriesEssentials;
+  	public CategoriesGroups categoriesGroups;
+  	public CategoriesSubscriptions categoriesSubscriptions;
+  	public CategoriesVideos categoriesVideos;
+  	public ChannelsCategories channelsCategories;
+  	public ChannelsEssentials channelsEssentials;
+  	public ChannelsModerators channelsModerators;
+  	public ChannelsPrivateChannelMembers channelsPrivateChannelMembers;
+  	public ChannelsSubscriptionsAndSubscribers channelsSubscriptionsAndSubscribers;
+  	public ChannelsTags channelsTags;
+  	public ChannelsVideos channelsVideos;
+  	public EmbedPresetsCustomLogos embedPresetsCustomLogos;
+  	public EmbedPresetsEssentials embedPresetsEssentials;
+  	public EmbedPresetsVideos embedPresetsVideos;
+  	public GroupsEssentials groupsEssentials;
+  	public GroupsSubscription groupsSubscription;
+  	public GroupsUsers groupsUsers;
+  	public GroupsVideos groupsVideos;
+  	public LikesEssentials likesEssentials;
+  	public OnDemandBackgrounds onDemandBackgrounds;
+  	public OnDemandEssentials onDemandEssentials;
+  	public OnDemandGenres onDemandGenres;
+  	public OnDemandPosters onDemandPosters;
+  	public OnDemandPromotions onDemandPromotions;
+  	public OnDemandPurchasesAndRentals onDemandPurchasesAndRentals;
+  	public OnDemandRegions onDemandRegions;
+  	public OnDemandSeasons onDemandSeasons;
+  	public OnDemandVideos onDemandVideos;
+  	public PortfoliosEssentials portfoliosEssentials;
+  	public PortfoliosVideos portfoliosVideos;
+  	public ProjectsEssentials projectsEssentials;
+  	public ProjectsVideos projectsVideos;
+  	public TagsEssentials tagsEssentials;
+  	public UsersEssentials usersEssentials;
+  	public UsersFeed usersFeed;
+  	public UsersFollows usersFollows;
+  	public UsersInternal usersInternal;
+  	public UsersPictures usersPictures;
+  	public UsersWatchHistory usersWatchHistory;
+  	public VideosComments videosComments;
+  	public VideosContentRatings videosContentRatings;
+  	public VideosCreativeCommons videosCreativeCommons;
+  	public VideosCredits videosCredits;
+  	public VideosEmbedPrivacy videosEmbedPrivacy;
+  	public VideosEssentials videosEssentials;
+  	public VideosLanguages videosLanguages;
+  	public VideosRecommendations videosRecommendations;
+  	public VideosTags videosTags;
+  	public VideosTextTracks videosTextTracks;
+  	public VideosThumbnails videosThumbnails;
+  	public VideosUpload videosUpload;
+  	public VideosVersions videosVersions;
+  	public VideosViewingPrivacy videosViewingPrivacy;
+  	public WatchLaterQueueEssentials watchLaterQueueEssentials;	
+
+	private HTTPClient _defaultClient;
+	private HTTPClient _securityClient;
+	private openapisdk.models.shared.Security _security;
+	private String _serverUrl;
+	private String _language = "java";
+	private String _sdkVersion = "0.0.1";
+	private String _genVersion = "internal";
+
+	public static class Builder {
+		private HTTPClient client;
+		private openapisdk.models.shared.Security security;
+		private String serverUrl;
+		private java.util.Map<String, String> params = new java.util.HashMap<String, String>();
+
+		private Builder() {
+		}
+
+		public Builder setClient(HTTPClient client) {
+			this.client = client;
+			return this;
+		}
+		
+		public Builder setSecurity(openapisdk.models.shared.Security security) {
+			this.security = security;
+			return this;
+		}
+		
+		public Builder setServerURL(String serverUrl) {
+			this.serverUrl = serverUrl;
+			return this;
+		}
+		
+		public Builder setServerURL(String serverUrl, java.util.Map<String, String> params) {
+			this.serverUrl = serverUrl;
+			this.params = params;
+			return this;
+		}
+		
+		public SDK build() throws Exception {
+			return new SDK(this.client, this.security, this.serverUrl, this.params);
+		}
+	}
+
+	public static Builder builder() {
+		return new Builder();
+	}
+
+	private SDK(HTTPClient client, openapisdk.models.shared.Security security, String serverUrl, java.util.Map<String, String> params) throws Exception {
+		this._defaultClient = client;
+		
+		if (this._defaultClient == null) {
+			this._defaultClient = new SpeakeasyHTTPClient();
+		}
+		
+		if (security != null) {
+			this._security = security;
+			this._securityClient = openapisdk.utils.Utils.configureSecurityClient(this._defaultClient, this._security);
+		}
+		
+		if (this._securityClient == null) {
+			this._securityClient = this._defaultClient;
+		}
+
+		if (serverUrl != null && !serverUrl.isBlank()) {
+			this._serverUrl = openapisdk.utils.Utils.replaceParameters(serverUrl, params);
+		}
+		
+		if (this._serverUrl == null) {
+			this._serverUrl = SERVERS[0];
+		}
+		
+		this.apiInformation = new ApiInformation(
+			this._defaultClient,
+			this._securityClient,
+			this._serverUrl,
+			this._language,
+			this._sdkVersion,
+			this._genVersion
+		);
+		
+		this.albumsAlbumVideos = new AlbumsAlbumVideos(
+			this._defaultClient,
+			this._securityClient,
+			this._serverUrl,
+			this._language,
+			this._sdkVersion,
+			this._genVersion
+		);
+		
+		this.albumsCustomAlbumLogos = new AlbumsCustomAlbumLogos(
+			this._defaultClient,
+			this._securityClient,
+			this._serverUrl,
+			this._language,
+			this._sdkVersion,
+			this._genVersion
+		);
+		
+		this.albumsCustomAlbumThumbnails = new AlbumsCustomAlbumThumbnails(
+			this._defaultClient,
+			this._securityClient,
+			this._serverUrl,
+			this._language,
+			this._sdkVersion,
+			this._genVersion
+		);
+		
+		this.albumsEssentials = new AlbumsEssentials(
+			this._defaultClient,
+			this._securityClient,
+			this._serverUrl,
+			this._language,
+			this._sdkVersion,
+			this._genVersion
+		);
+		
+		this.authenticationExtrasEssentials = new AuthenticationExtrasEssentials(
+			this._defaultClient,
+			this._securityClient,
+			this._serverUrl,
+			this._language,
+			this._sdkVersion,
+			this._genVersion
+		);
+		
+		this.categoriesChannels = new CategoriesChannels(
+			this._defaultClient,
+			this._securityClient,
+			this._serverUrl,
+			this._language,
+			this._sdkVersion,
+			this._genVersion
+		);
+		
+		this.categoriesEssentials = new CategoriesEssentials(
+			this._defaultClient,
+			this._securityClient,
+			this._serverUrl,
+			this._language,
+			this._sdkVersion,
+			this._genVersion
+		);
+		
+		this.categoriesGroups = new CategoriesGroups(
+			this._defaultClient,
+			this._securityClient,
+			this._serverUrl,
+			this._language,
+			this._sdkVersion,
+			this._genVersion
+		);
+		
+		this.categoriesSubscriptions = new CategoriesSubscriptions(
+			this._defaultClient,
+			this._securityClient,
+			this._serverUrl,
+			this._language,
+			this._sdkVersion,
+			this._genVersion
+		);
+		
+		this.categoriesVideos = new CategoriesVideos(
+			this._defaultClient,
+			this._securityClient,
+			this._serverUrl,
+			this._language,
+			this._sdkVersion,
+			this._genVersion
+		);
+		
+		this.channelsCategories = new ChannelsCategories(
+			this._defaultClient,
+			this._securityClient,
+			this._serverUrl,
+			this._language,
+			this._sdkVersion,
+			this._genVersion
+		);
+		
+		this.channelsEssentials = new ChannelsEssentials(
+			this._defaultClient,
+			this._securityClient,
+			this._serverUrl,
+			this._language,
+			this._sdkVersion,
+			this._genVersion
+		);
+		
+		this.channelsModerators = new ChannelsModerators(
+			this._defaultClient,
+			this._securityClient,
+			this._serverUrl,
+			this._language,
+			this._sdkVersion,
+			this._genVersion
+		);
+		
+		this.channelsPrivateChannelMembers = new ChannelsPrivateChannelMembers(
+			this._defaultClient,
+			this._securityClient,
+			this._serverUrl,
+			this._language,
+			this._sdkVersion,
+			this._genVersion
+		);
+		
+		this.channelsSubscriptionsAndSubscribers = new ChannelsSubscriptionsAndSubscribers(
+			this._defaultClient,
+			this._securityClient,
+			this._serverUrl,
+			this._language,
+			this._sdkVersion,
+			this._genVersion
+		);
+		
+		this.channelsTags = new ChannelsTags(
+			this._defaultClient,
+			this._securityClient,
+			this._serverUrl,
+			this._language,
+			this._sdkVersion,
+			this._genVersion
+		);
+		
+		this.channelsVideos = new ChannelsVideos(
+			this._defaultClient,
+			this._securityClient,
+			this._serverUrl,
+			this._language,
+			this._sdkVersion,
+			this._genVersion
+		);
+		
+		this.embedPresetsCustomLogos = new EmbedPresetsCustomLogos(
+			this._defaultClient,
+			this._securityClient,
+			this._serverUrl,
+			this._language,
+			this._sdkVersion,
+			this._genVersion
+		);
+		
+		this.embedPresetsEssentials = new EmbedPresetsEssentials(
+			this._defaultClient,
+			this._securityClient,
+			this._serverUrl,
+			this._language,
+			this._sdkVersion,
+			this._genVersion
+		);
+		
+		this.embedPresetsVideos = new EmbedPresetsVideos(
+			this._defaultClient,
+			this._securityClient,
+			this._serverUrl,
+			this._language,
+			this._sdkVersion,
+			this._genVersion
+		);
+		
+		this.groupsEssentials = new GroupsEssentials(
+			this._defaultClient,
+			this._securityClient,
+			this._serverUrl,
+			this._language,
+			this._sdkVersion,
+			this._genVersion
+		);
+		
+		this.groupsSubscription = new GroupsSubscription(
+			this._defaultClient,
+			this._securityClient,
+			this._serverUrl,
+			this._language,
+			this._sdkVersion,
+			this._genVersion
+		);
+		
+		this.groupsUsers = new GroupsUsers(
+			this._defaultClient,
+			this._securityClient,
+			this._serverUrl,
+			this._language,
+			this._sdkVersion,
+			this._genVersion
+		);
+		
+		this.groupsVideos = new GroupsVideos(
+			this._defaultClient,
+			this._securityClient,
+			this._serverUrl,
+			this._language,
+			this._sdkVersion,
+			this._genVersion
+		);
+		
+		this.likesEssentials = new LikesEssentials(
+			this._defaultClient,
+			this._securityClient,
+			this._serverUrl,
+			this._language,
+			this._sdkVersion,
+			this._genVersion
+		);
+		
+		this.onDemandBackgrounds = new OnDemandBackgrounds(
+			this._defaultClient,
+			this._securityClient,
+			this._serverUrl,
+			this._language,
+			this._sdkVersion,
+			this._genVersion
+		);
+		
+		this.onDemandEssentials = new OnDemandEssentials(
+			this._defaultClient,
+			this._securityClient,
+			this._serverUrl,
+			this._language,
+			this._sdkVersion,
+			this._genVersion
+		);
+		
+		this.onDemandGenres = new OnDemandGenres(
+			this._defaultClient,
+			this._securityClient,
+			this._serverUrl,
+			this._language,
+			this._sdkVersion,
+			this._genVersion
+		);
+		
+		this.onDemandPosters = new OnDemandPosters(
+			this._defaultClient,
+			this._securityClient,
+			this._serverUrl,
+			this._language,
+			this._sdkVersion,
+			this._genVersion
+		);
+		
+		this.onDemandPromotions = new OnDemandPromotions(
+			this._defaultClient,
+			this._securityClient,
+			this._serverUrl,
+			this._language,
+			this._sdkVersion,
+			this._genVersion
+		);
+		
+		this.onDemandPurchasesAndRentals = new OnDemandPurchasesAndRentals(
+			this._defaultClient,
+			this._securityClient,
+			this._serverUrl,
+			this._language,
+			this._sdkVersion,
+			this._genVersion
+		);
+		
+		this.onDemandRegions = new OnDemandRegions(
+			this._defaultClient,
+			this._securityClient,
+			this._serverUrl,
+			this._language,
+			this._sdkVersion,
+			this._genVersion
+		);
+		
+		this.onDemandSeasons = new OnDemandSeasons(
+			this._defaultClient,
+			this._securityClient,
+			this._serverUrl,
+			this._language,
+			this._sdkVersion,
+			this._genVersion
+		);
+		
+		this.onDemandVideos = new OnDemandVideos(
+			this._defaultClient,
+			this._securityClient,
+			this._serverUrl,
+			this._language,
+			this._sdkVersion,
+			this._genVersion
+		);
+		
+		this.portfoliosEssentials = new PortfoliosEssentials(
+			this._defaultClient,
+			this._securityClient,
+			this._serverUrl,
+			this._language,
+			this._sdkVersion,
+			this._genVersion
+		);
+		
+		this.portfoliosVideos = new PortfoliosVideos(
+			this._defaultClient,
+			this._securityClient,
+			this._serverUrl,
+			this._language,
+			this._sdkVersion,
+			this._genVersion
+		);
+		
+		this.projectsEssentials = new ProjectsEssentials(
+			this._defaultClient,
+			this._securityClient,
+			this._serverUrl,
+			this._language,
+			this._sdkVersion,
+			this._genVersion
+		);
+		
+		this.projectsVideos = new ProjectsVideos(
+			this._defaultClient,
+			this._securityClient,
+			this._serverUrl,
+			this._language,
+			this._sdkVersion,
+			this._genVersion
+		);
+		
+		this.tagsEssentials = new TagsEssentials(
+			this._defaultClient,
+			this._securityClient,
+			this._serverUrl,
+			this._language,
+			this._sdkVersion,
+			this._genVersion
+		);
+		
+		this.usersEssentials = new UsersEssentials(
+			this._defaultClient,
+			this._securityClient,
+			this._serverUrl,
+			this._language,
+			this._sdkVersion,
+			this._genVersion
+		);
+		
+		this.usersFeed = new UsersFeed(
+			this._defaultClient,
+			this._securityClient,
+			this._serverUrl,
+			this._language,
+			this._sdkVersion,
+			this._genVersion
+		);
+		
+		this.usersFollows = new UsersFollows(
+			this._defaultClient,
+			this._securityClient,
+			this._serverUrl,
+			this._language,
+			this._sdkVersion,
+			this._genVersion
+		);
+		
+		this.usersInternal = new UsersInternal(
+			this._defaultClient,
+			this._securityClient,
+			this._serverUrl,
+			this._language,
+			this._sdkVersion,
+			this._genVersion
+		);
+		
+		this.usersPictures = new UsersPictures(
+			this._defaultClient,
+			this._securityClient,
+			this._serverUrl,
+			this._language,
+			this._sdkVersion,
+			this._genVersion
+		);
+		
+		this.usersWatchHistory = new UsersWatchHistory(
+			this._defaultClient,
+			this._securityClient,
+			this._serverUrl,
+			this._language,
+			this._sdkVersion,
+			this._genVersion
+		);
+		
+		this.videosComments = new VideosComments(
+			this._defaultClient,
+			this._securityClient,
+			this._serverUrl,
+			this._language,
+			this._sdkVersion,
+			this._genVersion
+		);
+		
+		this.videosContentRatings = new VideosContentRatings(
+			this._defaultClient,
+			this._securityClient,
+			this._serverUrl,
+			this._language,
+			this._sdkVersion,
+			this._genVersion
+		);
+		
+		this.videosCreativeCommons = new VideosCreativeCommons(
+			this._defaultClient,
+			this._securityClient,
+			this._serverUrl,
+			this._language,
+			this._sdkVersion,
+			this._genVersion
+		);
+		
+		this.videosCredits = new VideosCredits(
+			this._defaultClient,
+			this._securityClient,
+			this._serverUrl,
+			this._language,
+			this._sdkVersion,
+			this._genVersion
+		);
+		
+		this.videosEmbedPrivacy = new VideosEmbedPrivacy(
+			this._defaultClient,
+			this._securityClient,
+			this._serverUrl,
+			this._language,
+			this._sdkVersion,
+			this._genVersion
+		);
+		
+		this.videosEssentials = new VideosEssentials(
+			this._defaultClient,
+			this._securityClient,
+			this._serverUrl,
+			this._language,
+			this._sdkVersion,
+			this._genVersion
+		);
+		
+		this.videosLanguages = new VideosLanguages(
+			this._defaultClient,
+			this._securityClient,
+			this._serverUrl,
+			this._language,
+			this._sdkVersion,
+			this._genVersion
+		);
+		
+		this.videosRecommendations = new VideosRecommendations(
+			this._defaultClient,
+			this._securityClient,
+			this._serverUrl,
+			this._language,
+			this._sdkVersion,
+			this._genVersion
+		);
+		
+		this.videosTags = new VideosTags(
+			this._defaultClient,
+			this._securityClient,
+			this._serverUrl,
+			this._language,
+			this._sdkVersion,
+			this._genVersion
+		);
+		
+		this.videosTextTracks = new VideosTextTracks(
+			this._defaultClient,
+			this._securityClient,
+			this._serverUrl,
+			this._language,
+			this._sdkVersion,
+			this._genVersion
+		);
+		
+		this.videosThumbnails = new VideosThumbnails(
+			this._defaultClient,
+			this._securityClient,
+			this._serverUrl,
+			this._language,
+			this._sdkVersion,
+			this._genVersion
+		);
+		
+		this.videosUpload = new VideosUpload(
+			this._defaultClient,
+			this._securityClient,
+			this._serverUrl,
+			this._language,
+			this._sdkVersion,
+			this._genVersion
+		);
+		
+		this.videosVersions = new VideosVersions(
+			this._defaultClient,
+			this._securityClient,
+			this._serverUrl,
+			this._language,
+			this._sdkVersion,
+			this._genVersion
+		);
+		
+		this.videosViewingPrivacy = new VideosViewingPrivacy(
+			this._defaultClient,
+			this._securityClient,
+			this._serverUrl,
+			this._language,
+			this._sdkVersion,
+			this._genVersion
+		);
+		
+		this.watchLaterQueueEssentials = new WatchLaterQueueEssentials(
+			this._defaultClient,
+			this._securityClient,
+			this._serverUrl,
+			this._language,
+			this._sdkVersion,
+			this._genVersion
+		);
+	}
+	
+}

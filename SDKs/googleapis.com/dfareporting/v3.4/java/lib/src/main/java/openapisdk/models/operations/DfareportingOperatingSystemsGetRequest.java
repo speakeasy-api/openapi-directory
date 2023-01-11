@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class DfareportingOperatingSystemsGetRequest {
+    public DfareportingOperatingSystemsGetPathParams pathParams;
+    public DfareportingOperatingSystemsGetRequest withPathParams(DfareportingOperatingSystemsGetPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public DfareportingOperatingSystemsGetQueryParams queryParams;
+    public DfareportingOperatingSystemsGetRequest withQueryParams(DfareportingOperatingSystemsGetQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public DfareportingOperatingSystemsGetSecurity security;
+    public DfareportingOperatingSystemsGetRequest withSecurity(DfareportingOperatingSystemsGetSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

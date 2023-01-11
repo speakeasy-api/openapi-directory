@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class GetTeamMediaByYearRequest {
+    public GetTeamMediaByYearPathParams pathParams;
+    public GetTeamMediaByYearRequest withPathParams(GetTeamMediaByYearPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public GetTeamMediaByYearHeaders headers;
+    public GetTeamMediaByYearRequest withHeaders(GetTeamMediaByYearHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+    public GetTeamMediaByYearSecurity security;
+    public GetTeamMediaByYearRequest withSecurity(GetTeamMediaByYearSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

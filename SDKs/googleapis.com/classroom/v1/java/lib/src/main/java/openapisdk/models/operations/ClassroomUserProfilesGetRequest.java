@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class ClassroomUserProfilesGetRequest {
+    public ClassroomUserProfilesGetPathParams pathParams;
+    public ClassroomUserProfilesGetRequest withPathParams(ClassroomUserProfilesGetPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public ClassroomUserProfilesGetQueryParams queryParams;
+    public ClassroomUserProfilesGetRequest withQueryParams(ClassroomUserProfilesGetQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public ClassroomUserProfilesGetSecurity security;
+    public ClassroomUserProfilesGetRequest withSecurity(ClassroomUserProfilesGetSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

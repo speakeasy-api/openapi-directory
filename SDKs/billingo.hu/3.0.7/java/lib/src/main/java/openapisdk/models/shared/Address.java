@@ -1,0 +1,30 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+public class Address {
+    @JsonProperty("address")
+    public String address;
+    public Address withAddress(String address) {
+        this.address = address;
+        return this;
+    }
+    @JsonProperty("city")
+    public String city;
+    public Address withCity(String city) {
+        this.city = city;
+        return this;
+    }
+    @JsonProperty("country_code")
+    public CountryEnum countryCode;
+    public Address withCountryCode(CountryEnum countryCode) {
+        this.countryCode = countryCode;
+        return this;
+    }
+    @JsonProperty("post_code")
+    public String postCode;
+    public Address withPostCode(String postCode) {
+        this.postCode = postCode;
+        return this;
+    }
+}

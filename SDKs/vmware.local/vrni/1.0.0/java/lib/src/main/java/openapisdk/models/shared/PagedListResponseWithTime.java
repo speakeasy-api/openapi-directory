@@ -1,0 +1,43 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class PagedListResponseWithTime {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("cursor")
+    public String cursor;
+    public PagedListResponseWithTime withCursor(String cursor) {
+        this.cursor = cursor;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("end_time")
+    public Long endTime;
+    public PagedListResponseWithTime withEndTime(Long endTime) {
+        this.endTime = endTime;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("results")
+    public EntityIdWithTime[] results;
+    public PagedListResponseWithTime withResults(EntityIdWithTime[] results) {
+        this.results = results;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("start_time")
+    public Long startTime;
+    public PagedListResponseWithTime withStartTime(Long startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("total_count")
+    public Long totalCount;
+    public PagedListResponseWithTime withTotalCount(Long totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+}

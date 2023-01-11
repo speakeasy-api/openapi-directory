@@ -1,0 +1,120 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class ConsumerConnection {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("auth_type")
+    public AuthTypeEnum authType;
+    public ConsumerConnection withAuthType(AuthTypeEnum authType) {
+        this.authType = authType;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("consumer_id")
+    public String consumerId;
+    public ConsumerConnection withConsumerId(String consumerId) {
+        this.consumerId = consumerId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("created_at")
+    public String createdAt;
+    public ConsumerConnection withCreatedAt(String createdAt) {
+        this.createdAt = createdAt;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("enabled")
+    public Boolean enabled;
+    public ConsumerConnection withEnabled(Boolean enabled) {
+        this.enabled = enabled;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("icon")
+    public String icon;
+    public ConsumerConnection withIcon(String icon) {
+        this.icon = icon;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("id")
+    public String id;
+    public ConsumerConnection withId(String id) {
+        this.id = id;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("logo")
+    public String logo;
+    public ConsumerConnection withLogo(String logo) {
+        this.logo = logo;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("metadata")
+    public java.util.Map<String, Object> metadata;
+    public ConsumerConnection withMetadata(java.util.Map<String, Object> metadata) {
+        this.metadata = metadata;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("name")
+    public String name;
+    public ConsumerConnection withName(String name) {
+        this.name = name;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("service_id")
+    public String serviceId;
+    public ConsumerConnection withServiceId(String serviceId) {
+        this.serviceId = serviceId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("settings")
+    public java.util.Map<String, Object> settings;
+    public ConsumerConnection withSettings(java.util.Map<String, Object> settings) {
+        this.settings = settings;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("state")
+    public ConsumerConnectionStateEnum state;
+    public ConsumerConnection withState(ConsumerConnectionStateEnum state) {
+        this.state = state;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("tag_line")
+    public String tagLine;
+    public ConsumerConnection withTagLine(String tagLine) {
+        this.tagLine = tagLine;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("unified_api")
+    public String unifiedApi;
+    public ConsumerConnection withUnifiedApi(String unifiedApi) {
+        this.unifiedApi = unifiedApi;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("updated_at")
+    public String updatedAt;
+    public ConsumerConnection withUpdatedAt(String updatedAt) {
+        this.updatedAt = updatedAt;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("website")
+    public String website;
+    public ConsumerConnection withWebsite(String website) {
+        this.website = website;
+        return this;
+    }
+}

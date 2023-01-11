@@ -1,0 +1,35 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class ListDomainsInput {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("maximumPageSize")
+    public Long maximumPageSize;
+    public ListDomainsInput withMaximumPageSize(Long maximumPageSize) {
+        this.maximumPageSize = maximumPageSize;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("nextPageToken")
+    public String nextPageToken;
+    public ListDomainsInput withNextPageToken(String nextPageToken) {
+        this.nextPageToken = nextPageToken;
+        return this;
+    }
+    @JsonProperty("registrationStatus")
+    public RegistrationStatusEnum registrationStatus;
+    public ListDomainsInput withRegistrationStatus(RegistrationStatusEnum registrationStatus) {
+        this.registrationStatus = registrationStatus;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("reverseOrder")
+    public Boolean reverseOrder;
+    public ListDomainsInput withReverseOrder(Boolean reverseOrder) {
+        this.reverseOrder = reverseOrder;
+        return this;
+    }
+}

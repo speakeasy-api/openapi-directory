@@ -1,0 +1,22 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+/**
+ * DimensionNameValue
+ * A dimension name and value.
+**/
+public class DimensionNameValue {
+    @JsonProperty("DimensionName")
+    public String dimensionName;
+    public DimensionNameValue withDimensionName(String dimensionName) {
+        this.dimensionName = dimensionName;
+        return this;
+    }
+    @JsonProperty("DimensionValue")
+    public String dimensionValue;
+    public DimensionNameValue withDimensionValue(String dimensionValue) {
+        this.dimensionValue = dimensionValue;
+        return this;
+    }
+}

@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class CreateWebLoginTokenRequest {
+    public CreateWebLoginTokenPathParams pathParams;
+    public CreateWebLoginTokenRequest withPathParams(CreateWebLoginTokenPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public CreateWebLoginTokenHeaders headers;
+    public CreateWebLoginTokenRequest withHeaders(CreateWebLoginTokenHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+}

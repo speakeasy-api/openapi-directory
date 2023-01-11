@@ -1,0 +1,71 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class UserVendor {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("can_work_manual_files")
+    public Boolean canWorkManualFiles;
+    public UserVendor withCanWorkManualFiles(Boolean canWorkManualFiles) {
+        this.canWorkManualFiles = canWorkManualFiles;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("is_frozen")
+    public Boolean isFrozen;
+    public UserVendor withIsFrozen(Boolean isFrozen) {
+        this.isFrozen = isFrozen;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("is_proofreader")
+    public Boolean isProofreader;
+    public UserVendor withIsProofreader(Boolean isProofreader) {
+        this.isProofreader = isProofreader;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("language_pairs")
+    public LanguagePair[] languagePairs;
+    public UserVendor withLanguagePairs(LanguagePair[] languagePairs) {
+        this.languagePairs = languagePairs;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("native_language")
+    public String nativeLanguage;
+    public UserVendor withNativeLanguage(String nativeLanguage) {
+        this.nativeLanguage = nativeLanguage;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("paypal_email")
+    public String paypalEmail;
+    public UserVendor withPaypalEmail(String paypalEmail) {
+        this.paypalEmail = paypalEmail;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("require_1099")
+    public Boolean require1099;
+    public UserVendor withRequire1099(Boolean require1099) {
+        this.require1099 = require1099;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("tags")
+    public String[] tags;
+    public UserVendor withTags(String[] tags) {
+        this.tags = tags;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("tms_user_name")
+    public String tmsUserName;
+    public UserVendor withTmsUserName(String tmsUserName) {
+        this.tmsUserName = tmsUserName;
+        return this;
+    }
+}

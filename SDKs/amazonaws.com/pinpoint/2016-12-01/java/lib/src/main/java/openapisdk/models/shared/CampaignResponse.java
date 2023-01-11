@@ -1,0 +1,180 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * CampaignResponse
+ * Provides information about the status, configuration, and other settings for a campaign.
+**/
+public class CampaignResponse {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("AdditionalTreatments")
+    public TreatmentResource[] additionalTreatments;
+    public CampaignResponse withAdditionalTreatments(TreatmentResource[] additionalTreatments) {
+        this.additionalTreatments = additionalTreatments;
+        return this;
+    }
+    @JsonProperty("ApplicationId")
+    public String applicationId;
+    public CampaignResponse withApplicationId(String applicationId) {
+        this.applicationId = applicationId;
+        return this;
+    }
+    @JsonProperty("Arn")
+    public String arn;
+    public CampaignResponse withArn(String arn) {
+        this.arn = arn;
+        return this;
+    }
+    @JsonProperty("CreationDate")
+    public String creationDate;
+    public CampaignResponse withCreationDate(String creationDate) {
+        this.creationDate = creationDate;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("CustomDeliveryConfiguration")
+    public CustomDeliveryConfiguration customDeliveryConfiguration;
+    public CampaignResponse withCustomDeliveryConfiguration(CustomDeliveryConfiguration customDeliveryConfiguration) {
+        this.customDeliveryConfiguration = customDeliveryConfiguration;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("DefaultState")
+    public CampaignState defaultState;
+    public CampaignResponse withDefaultState(CampaignState defaultState) {
+        this.defaultState = defaultState;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Description")
+    public String description;
+    public CampaignResponse withDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("HoldoutPercent")
+    public Long holdoutPercent;
+    public CampaignResponse withHoldoutPercent(Long holdoutPercent) {
+        this.holdoutPercent = holdoutPercent;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Hook")
+    public CampaignHook hook;
+    public CampaignResponse withHook(CampaignHook hook) {
+        this.hook = hook;
+        return this;
+    }
+    @JsonProperty("Id")
+    public String id;
+    public CampaignResponse withId(String id) {
+        this.id = id;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("IsPaused")
+    public Boolean isPaused;
+    public CampaignResponse withIsPaused(Boolean isPaused) {
+        this.isPaused = isPaused;
+        return this;
+    }
+    @JsonProperty("LastModifiedDate")
+    public String lastModifiedDate;
+    public CampaignResponse withLastModifiedDate(String lastModifiedDate) {
+        this.lastModifiedDate = lastModifiedDate;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Limits")
+    public CampaignLimits limits;
+    public CampaignResponse withLimits(CampaignLimits limits) {
+        this.limits = limits;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("MessageConfiguration")
+    public MessageConfiguration messageConfiguration;
+    public CampaignResponse withMessageConfiguration(MessageConfiguration messageConfiguration) {
+        this.messageConfiguration = messageConfiguration;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Name")
+    public String name;
+    public CampaignResponse withName(String name) {
+        this.name = name;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Priority")
+    public Long priority;
+    public CampaignResponse withPriority(Long priority) {
+        this.priority = priority;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Schedule")
+    public Schedule schedule;
+    public CampaignResponse withSchedule(Schedule schedule) {
+        this.schedule = schedule;
+        return this;
+    }
+    @JsonProperty("SegmentId")
+    public String segmentId;
+    public CampaignResponse withSegmentId(String segmentId) {
+        this.segmentId = segmentId;
+        return this;
+    }
+    @JsonProperty("SegmentVersion")
+    public Long segmentVersion;
+    public CampaignResponse withSegmentVersion(Long segmentVersion) {
+        this.segmentVersion = segmentVersion;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("State")
+    public CampaignState state;
+    public CampaignResponse withState(CampaignState state) {
+        this.state = state;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("TemplateConfiguration")
+    public TemplateConfiguration templateConfiguration;
+    public CampaignResponse withTemplateConfiguration(TemplateConfiguration templateConfiguration) {
+        this.templateConfiguration = templateConfiguration;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("TreatmentDescription")
+    public String treatmentDescription;
+    public CampaignResponse withTreatmentDescription(String treatmentDescription) {
+        this.treatmentDescription = treatmentDescription;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("TreatmentName")
+    public String treatmentName;
+    public CampaignResponse withTreatmentName(String treatmentName) {
+        this.treatmentName = treatmentName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Version")
+    public Long version;
+    public CampaignResponse withVersion(Long version) {
+        this.version = version;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("tags")
+    public java.util.Map<String, String> tags;
+    public CampaignResponse withTags(java.util.Map<String, String> tags) {
+        this.tags = tags;
+        return this;
+    }
+}

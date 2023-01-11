@@ -1,0 +1,64 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * ActionTypeDeclaration
+ * The parameters for the action type definition that are provided when the action type is created or updated.
+**/
+public class ActionTypeDeclaration {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("description")
+    public String description;
+    public ActionTypeDeclaration withDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    @JsonProperty("executor")
+    public ActionTypeExecutor executor;
+    public ActionTypeDeclaration withExecutor(ActionTypeExecutor executor) {
+        this.executor = executor;
+        return this;
+    }
+    @JsonProperty("id")
+    public ActionTypeIdentifier id;
+    public ActionTypeDeclaration withId(ActionTypeIdentifier id) {
+        this.id = id;
+        return this;
+    }
+    @JsonProperty("inputArtifactDetails")
+    public ActionTypeArtifactDetails inputArtifactDetails;
+    public ActionTypeDeclaration withInputArtifactDetails(ActionTypeArtifactDetails inputArtifactDetails) {
+        this.inputArtifactDetails = inputArtifactDetails;
+        return this;
+    }
+    @JsonProperty("outputArtifactDetails")
+    public ActionTypeArtifactDetails outputArtifactDetails;
+    public ActionTypeDeclaration withOutputArtifactDetails(ActionTypeArtifactDetails outputArtifactDetails) {
+        this.outputArtifactDetails = outputArtifactDetails;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("permissions")
+    public ActionTypePermissions permissions;
+    public ActionTypeDeclaration withPermissions(ActionTypePermissions permissions) {
+        this.permissions = permissions;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("properties")
+    public Object properties;
+    public ActionTypeDeclaration withProperties(Object properties) {
+        this.properties = properties;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("urls")
+    public ActionTypeUrls urls;
+    public ActionTypeDeclaration withUrls(ActionTypeUrls urls) {
+        this.urls = urls;
+        return this;
+    }
+}

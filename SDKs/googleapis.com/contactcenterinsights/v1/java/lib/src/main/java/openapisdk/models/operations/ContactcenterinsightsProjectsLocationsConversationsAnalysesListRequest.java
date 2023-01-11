@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class ContactcenterinsightsProjectsLocationsConversationsAnalysesListRequest {
+    public ContactcenterinsightsProjectsLocationsConversationsAnalysesListPathParams pathParams;
+    public ContactcenterinsightsProjectsLocationsConversationsAnalysesListRequest withPathParams(ContactcenterinsightsProjectsLocationsConversationsAnalysesListPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public ContactcenterinsightsProjectsLocationsConversationsAnalysesListQueryParams queryParams;
+    public ContactcenterinsightsProjectsLocationsConversationsAnalysesListRequest withQueryParams(ContactcenterinsightsProjectsLocationsConversationsAnalysesListQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public ContactcenterinsightsProjectsLocationsConversationsAnalysesListSecurity security;
+    public ContactcenterinsightsProjectsLocationsConversationsAnalysesListRequest withSecurity(ContactcenterinsightsProjectsLocationsConversationsAnalysesListSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

@@ -1,0 +1,64 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class GetRandomPasswordRequest {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ExcludeCharacters")
+    public String excludeCharacters;
+    public GetRandomPasswordRequest withExcludeCharacters(String excludeCharacters) {
+        this.excludeCharacters = excludeCharacters;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ExcludeLowercase")
+    public Boolean excludeLowercase;
+    public GetRandomPasswordRequest withExcludeLowercase(Boolean excludeLowercase) {
+        this.excludeLowercase = excludeLowercase;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ExcludeNumbers")
+    public Boolean excludeNumbers;
+    public GetRandomPasswordRequest withExcludeNumbers(Boolean excludeNumbers) {
+        this.excludeNumbers = excludeNumbers;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ExcludePunctuation")
+    public Boolean excludePunctuation;
+    public GetRandomPasswordRequest withExcludePunctuation(Boolean excludePunctuation) {
+        this.excludePunctuation = excludePunctuation;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ExcludeUppercase")
+    public Boolean excludeUppercase;
+    public GetRandomPasswordRequest withExcludeUppercase(Boolean excludeUppercase) {
+        this.excludeUppercase = excludeUppercase;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("IncludeSpace")
+    public Boolean includeSpace;
+    public GetRandomPasswordRequest withIncludeSpace(Boolean includeSpace) {
+        this.includeSpace = includeSpace;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("PasswordLength")
+    public Long passwordLength;
+    public GetRandomPasswordRequest withPasswordLength(Long passwordLength) {
+        this.passwordLength = passwordLength;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("RequireEachIncludedType")
+    public Boolean requireEachIncludedType;
+    public GetRandomPasswordRequest withRequireEachIncludedType(Boolean requireEachIncludedType) {
+        this.requireEachIncludedType = requireEachIncludedType;
+        return this;
+    }
+}

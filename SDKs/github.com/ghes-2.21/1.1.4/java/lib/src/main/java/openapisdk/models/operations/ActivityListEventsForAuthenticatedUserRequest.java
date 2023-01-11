@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class ActivityListEventsForAuthenticatedUserRequest {
+    public ActivityListEventsForAuthenticatedUserPathParams pathParams;
+    public ActivityListEventsForAuthenticatedUserRequest withPathParams(ActivityListEventsForAuthenticatedUserPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public ActivityListEventsForAuthenticatedUserQueryParams queryParams;
+    public ActivityListEventsForAuthenticatedUserRequest withQueryParams(ActivityListEventsForAuthenticatedUserQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+}

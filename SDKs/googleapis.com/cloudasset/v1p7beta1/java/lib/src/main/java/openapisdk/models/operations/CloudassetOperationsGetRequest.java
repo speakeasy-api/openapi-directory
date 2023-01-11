@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class CloudassetOperationsGetRequest {
+    public CloudassetOperationsGetPathParams pathParams;
+    public CloudassetOperationsGetRequest withPathParams(CloudassetOperationsGetPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public CloudassetOperationsGetQueryParams queryParams;
+    public CloudassetOperationsGetRequest withQueryParams(CloudassetOperationsGetQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public CloudassetOperationsGetSecurity security;
+    public CloudassetOperationsGetRequest withSecurity(CloudassetOperationsGetSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

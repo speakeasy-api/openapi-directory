@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class AlertcenterAlertsGetRequest {
+    public AlertcenterAlertsGetPathParams pathParams;
+    public AlertcenterAlertsGetRequest withPathParams(AlertcenterAlertsGetPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public AlertcenterAlertsGetQueryParams queryParams;
+    public AlertcenterAlertsGetRequest withQueryParams(AlertcenterAlertsGetQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public AlertcenterAlertsGetSecurity security;
+    public AlertcenterAlertsGetRequest withSecurity(AlertcenterAlertsGetSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

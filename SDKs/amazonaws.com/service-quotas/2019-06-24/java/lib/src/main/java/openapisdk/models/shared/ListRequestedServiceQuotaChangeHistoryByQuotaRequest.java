@@ -1,0 +1,41 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class ListRequestedServiceQuotaChangeHistoryByQuotaRequest {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("MaxResults")
+    public Long maxResults;
+    public ListRequestedServiceQuotaChangeHistoryByQuotaRequest withMaxResults(Long maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("NextToken")
+    public String nextToken;
+    public ListRequestedServiceQuotaChangeHistoryByQuotaRequest withNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    @JsonProperty("QuotaCode")
+    public String quotaCode;
+    public ListRequestedServiceQuotaChangeHistoryByQuotaRequest withQuotaCode(String quotaCode) {
+        this.quotaCode = quotaCode;
+        return this;
+    }
+    @JsonProperty("ServiceCode")
+    public String serviceCode;
+    public ListRequestedServiceQuotaChangeHistoryByQuotaRequest withServiceCode(String serviceCode) {
+        this.serviceCode = serviceCode;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Status")
+    public RequestStatusEnum status;
+    public ListRequestedServiceQuotaChangeHistoryByQuotaRequest withStatus(RequestStatusEnum status) {
+        this.status = status;
+        return this;
+    }
+}

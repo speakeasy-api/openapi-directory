@@ -1,0 +1,27 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class DfareportingAdvertiserGroupsInsertRequest {
+    public DfareportingAdvertiserGroupsInsertPathParams pathParams;
+    public DfareportingAdvertiserGroupsInsertRequest withPathParams(DfareportingAdvertiserGroupsInsertPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public DfareportingAdvertiserGroupsInsertQueryParams queryParams;
+    public DfareportingAdvertiserGroupsInsertRequest withQueryParams(DfareportingAdvertiserGroupsInsertQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public openapisdk.models.shared.AdvertiserGroup request;
+    public DfareportingAdvertiserGroupsInsertRequest withRequest(openapisdk.models.shared.AdvertiserGroup request) {
+        this.request = request;
+        return this;
+    }
+    public DfareportingAdvertiserGroupsInsertSecurity security;
+    public DfareportingAdvertiserGroupsInsertRequest withSecurity(DfareportingAdvertiserGroupsInsertSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

@@ -1,0 +1,15 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class NotificationRelationshipsOwnerUser {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("data")
+    public NotificationRelationshipsOwnerUserData data;
+    public NotificationRelationshipsOwnerUser withData(NotificationRelationshipsOwnerUserData data) {
+        this.data = data;
+        return this;
+    }
+}

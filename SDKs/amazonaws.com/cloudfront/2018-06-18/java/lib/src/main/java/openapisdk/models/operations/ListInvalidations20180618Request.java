@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class ListInvalidations20180618Request {
+    public ListInvalidations20180618PathParams pathParams;
+    public ListInvalidations20180618Request withPathParams(ListInvalidations20180618PathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public ListInvalidations20180618QueryParams queryParams;
+    public ListInvalidations20180618Request withQueryParams(ListInvalidations20180618QueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public ListInvalidations20180618Headers headers;
+    public ListInvalidations20180618Request withHeaders(ListInvalidations20180618Headers headers) {
+        this.headers = headers;
+        return this;
+    }
+}

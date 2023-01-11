@@ -1,0 +1,56 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * DecisionTask
+ * A structure that represents a decision task. Decision tasks are sent to deciders in order for them to make decisions.
+**/
+public class DecisionTask {
+    @JsonProperty("events")
+    public HistoryEvent[] events;
+    public DecisionTask withEvents(HistoryEvent[] events) {
+        this.events = events;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("nextPageToken")
+    public String nextPageToken;
+    public DecisionTask withNextPageToken(String nextPageToken) {
+        this.nextPageToken = nextPageToken;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("previousStartedEventId")
+    public Long previousStartedEventId;
+    public DecisionTask withPreviousStartedEventId(Long previousStartedEventId) {
+        this.previousStartedEventId = previousStartedEventId;
+        return this;
+    }
+    @JsonProperty("startedEventId")
+    public Long startedEventId;
+    public DecisionTask withStartedEventId(Long startedEventId) {
+        this.startedEventId = startedEventId;
+        return this;
+    }
+    @JsonProperty("taskToken")
+    public String taskToken;
+    public DecisionTask withTaskToken(String taskToken) {
+        this.taskToken = taskToken;
+        return this;
+    }
+    @JsonProperty("workflowExecution")
+    public WorkflowExecution workflowExecution;
+    public DecisionTask withWorkflowExecution(WorkflowExecution workflowExecution) {
+        this.workflowExecution = workflowExecution;
+        return this;
+    }
+    @JsonProperty("workflowType")
+    public WorkflowType workflowType;
+    public DecisionTask withWorkflowType(WorkflowType workflowType) {
+        this.workflowType = workflowType;
+        return this;
+    }
+}

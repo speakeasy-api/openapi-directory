@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class ToolresultsProjectsHistoriesExecutionsEnvironmentsGetRequest {
+    public ToolresultsProjectsHistoriesExecutionsEnvironmentsGetPathParams pathParams;
+    public ToolresultsProjectsHistoriesExecutionsEnvironmentsGetRequest withPathParams(ToolresultsProjectsHistoriesExecutionsEnvironmentsGetPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public ToolresultsProjectsHistoriesExecutionsEnvironmentsGetQueryParams queryParams;
+    public ToolresultsProjectsHistoriesExecutionsEnvironmentsGetRequest withQueryParams(ToolresultsProjectsHistoriesExecutionsEnvironmentsGetQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public ToolresultsProjectsHistoriesExecutionsEnvironmentsGetSecurity security;
+    public ToolresultsProjectsHistoriesExecutionsEnvironmentsGetRequest withSecurity(ToolresultsProjectsHistoriesExecutionsEnvironmentsGetSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

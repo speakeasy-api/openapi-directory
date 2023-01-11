@@ -1,0 +1,30 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class PatientCommunicationsListQueryParams {
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
+    public String cursor;
+    public PatientCommunicationsListQueryParams withCursor(String cursor) {
+        this.cursor = cursor;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=doctor")
+    public Long doctor;
+    public PatientCommunicationsListQueryParams withDoctor(Long doctor) {
+        this.doctor = doctor;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_size")
+    public Long pageSize;
+    public PatientCommunicationsListQueryParams withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=patient")
+    public Long patient;
+    public PatientCommunicationsListQueryParams withPatient(Long patient) {
+        this.patient = patient;
+        return this;
+    }
+}

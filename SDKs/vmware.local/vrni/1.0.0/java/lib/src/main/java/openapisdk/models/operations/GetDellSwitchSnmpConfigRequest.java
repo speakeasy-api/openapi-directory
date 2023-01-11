@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class GetDellSwitchSnmpConfigRequest {
+    public GetDellSwitchSnmpConfigPathParams pathParams;
+    public GetDellSwitchSnmpConfigRequest withPathParams(GetDellSwitchSnmpConfigPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public GetDellSwitchSnmpConfigSecurity security;
+    public GetDellSwitchSnmpConfigRequest withSecurity(GetDellSwitchSnmpConfigSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

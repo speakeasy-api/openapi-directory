@@ -1,0 +1,35 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class UpdateAcceleratorRequest {
+    @JsonProperty("AcceleratorArn")
+    public String acceleratorArn;
+    public UpdateAcceleratorRequest withAcceleratorArn(String acceleratorArn) {
+        this.acceleratorArn = acceleratorArn;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Enabled")
+    public Boolean enabled;
+    public UpdateAcceleratorRequest withEnabled(Boolean enabled) {
+        this.enabled = enabled;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("IpAddressType")
+    public IpAddressTypeEnum ipAddressType;
+    public UpdateAcceleratorRequest withIpAddressType(IpAddressTypeEnum ipAddressType) {
+        this.ipAddressType = ipAddressType;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Name")
+    public String name;
+    public UpdateAcceleratorRequest withName(String name) {
+        this.name = name;
+        return this;
+    }
+}

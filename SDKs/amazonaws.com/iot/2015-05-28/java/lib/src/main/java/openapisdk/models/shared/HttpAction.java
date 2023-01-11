@@ -1,0 +1,39 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * HttpAction
+ * Send data to an HTTPS endpoint.
+**/
+public class HttpAction {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("auth")
+    public HttpAuthorization auth;
+    public HttpAction withAuth(HttpAuthorization auth) {
+        this.auth = auth;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("confirmationUrl")
+    public String confirmationUrl;
+    public HttpAction withConfirmationUrl(String confirmationUrl) {
+        this.confirmationUrl = confirmationUrl;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("headers")
+    public HttpActionHeader[] headers;
+    public HttpAction withHeaders(HttpActionHeader[] headers) {
+        this.headers = headers;
+        return this;
+    }
+    @JsonProperty("url")
+    public String url;
+    public HttpAction withUrl(String url) {
+        this.url = url;
+        return this;
+    }
+}

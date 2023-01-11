@@ -1,0 +1,30 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+public class GetActionTypeInput {
+    @JsonProperty("category")
+    public ActionCategoryEnum category;
+    public GetActionTypeInput withCategory(ActionCategoryEnum category) {
+        this.category = category;
+        return this;
+    }
+    @JsonProperty("owner")
+    public String owner;
+    public GetActionTypeInput withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    @JsonProperty("provider")
+    public String provider;
+    public GetActionTypeInput withProvider(String provider) {
+        this.provider = provider;
+        return this;
+    }
+    @JsonProperty("version")
+    public String version;
+    public GetActionTypeInput withVersion(String version) {
+        this.version = version;
+        return this;
+    }
+}

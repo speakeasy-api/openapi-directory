@@ -1,0 +1,91 @@
+package openapisdk.models.shared;
+
+import java.time.OffsetDateTime;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import openapisdk.utils.DateTimeSerializer;
+import openapisdk.utils.DateTimeDeserializer;
+
+public class PersonSingle {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("description")
+    public String description;
+    public PersonSingle withDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("games_count")
+    public Long gamesCount;
+    public PersonSingle withGamesCount(Long gamesCount) {
+        this.gamesCount = gamesCount;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("id")
+    public Long id;
+    public PersonSingle withId(Long id) {
+        this.id = id;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("image")
+    public String image;
+    public PersonSingle withImage(String image) {
+        this.image = image;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("image_background")
+    public String imageBackground;
+    public PersonSingle withImageBackground(String imageBackground) {
+        this.imageBackground = imageBackground;
+        return this;
+    }
+    @JsonProperty("name")
+    public String name;
+    public PersonSingle withName(String name) {
+        this.name = name;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("rating")
+    public String rating;
+    public PersonSingle withRating(String rating) {
+        this.rating = rating;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("rating_top")
+    public Long ratingTop;
+    public PersonSingle withRatingTop(Long ratingTop) {
+        this.ratingTop = ratingTop;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("reviews_count")
+    public Long reviewsCount;
+    public PersonSingle withReviewsCount(Long reviewsCount) {
+        this.reviewsCount = reviewsCount;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("slug")
+    public String slug;
+    public PersonSingle withSlug(String slug) {
+        this.slug = slug;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonSerialize(contentUsing = DateTimeSerializer.class)
+    @JsonDeserialize(contentUsing = DateTimeDeserializer.class)
+    @JsonProperty("updated")
+    public OffsetDateTime updated;
+    public PersonSingle withUpdated(OffsetDateTime updated) {
+        this.updated = updated;
+        return this;
+    }
+}

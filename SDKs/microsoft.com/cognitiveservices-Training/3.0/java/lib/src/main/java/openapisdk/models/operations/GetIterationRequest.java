@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class GetIterationRequest {
+    public GetIterationPathParams pathParams;
+    public GetIterationRequest withPathParams(GetIterationPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public GetIterationHeaders headers;
+    public GetIterationRequest withHeaders(GetIterationHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+}

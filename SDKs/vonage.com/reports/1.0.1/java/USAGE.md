@@ -1,0 +1,48 @@
+<!-- Start SDK Example Usage -->
+```java
+package hello.world;
+
+import openapisdk.SDK;
+import openapisdk.models.shared.Security;
+
+public class Application {
+    public static void main(String[] args) {
+        try {
+            SDK.Builder builder = SDK.builder();
+
+            SDK sdk = builder.build();
+
+            GetCallLogsRequest req = new GetCallLogsRequest() {{
+                security = new GetCallLogsSecurity() {{
+                    bearerAuth = new SchemeBearerAuth() {{
+                        authorization = "Bearer YOUR_BEARER_TOKEN_HERE";
+                    }};
+                }};
+                pathParams = new GetCallLogsPathParams() {{
+                    accountId = "minus";
+                }};
+                queryParams = new GetCallLogsQueryParams() {{
+                    destinationUser = "sequi";
+                    direction = "Inbound";
+                    endGte = "quidem";
+                    endLte = "iure";
+                    from = "consequatur";
+                    page = 48.200001;
+                    pageSize = 6.100000;
+                    sourceUser = "eligendi";
+                    startGte = "veniam";
+                    startLte = "dolorem";
+                    to = "similique";
+                }};
+            }};
+
+            GetCallLogsResponse res = sdk.getCallLogs(req);
+
+            if (res.callLogsHalResponse.isPresent()) {
+                // handle response
+            }
+        } catch (Exception e) {
+            // handle exception
+        }
+```
+<!-- End SDK Example Usage -->

@@ -1,0 +1,22 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class UpdateEndpointsBatchRequest {
+    public UpdateEndpointsBatchPathParams pathParams;
+    public UpdateEndpointsBatchRequest withPathParams(UpdateEndpointsBatchPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public UpdateEndpointsBatchHeaders headers;
+    public UpdateEndpointsBatchRequest withHeaders(UpdateEndpointsBatchHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public UpdateEndpointsBatchRequestBody request;
+    public UpdateEndpointsBatchRequest withRequest(UpdateEndpointsBatchRequestBody request) {
+        this.request = request;
+        return this;
+    }
+}

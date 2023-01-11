@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class DeleteFieldLevelEncryptionProfile20180618Request {
+    public DeleteFieldLevelEncryptionProfile20180618PathParams pathParams;
+    public DeleteFieldLevelEncryptionProfile20180618Request withPathParams(DeleteFieldLevelEncryptionProfile20180618PathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public DeleteFieldLevelEncryptionProfile20180618Headers headers;
+    public DeleteFieldLevelEncryptionProfile20180618Request withHeaders(DeleteFieldLevelEncryptionProfile20180618Headers headers) {
+        this.headers = headers;
+        return this;
+    }
+}

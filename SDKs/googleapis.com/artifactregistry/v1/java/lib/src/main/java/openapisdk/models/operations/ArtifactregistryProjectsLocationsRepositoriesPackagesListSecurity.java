@@ -1,0 +1,18 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class ArtifactregistryProjectsLocationsRepositoriesPackagesListSecurity {
+    @SpeakeasyMetadata("security:option=true")
+    public ArtifactregistryProjectsLocationsRepositoriesPackagesListSecurityOption1 option1;
+    public ArtifactregistryProjectsLocationsRepositoriesPackagesListSecurity withOption1(ArtifactregistryProjectsLocationsRepositoriesPackagesListSecurityOption1 option1) {
+        this.option1 = option1;
+        return this;
+    }
+    @SpeakeasyMetadata("security:option=true")
+    public ArtifactregistryProjectsLocationsRepositoriesPackagesListSecurityOption2 option2;
+    public ArtifactregistryProjectsLocationsRepositoriesPackagesListSecurity withOption2(ArtifactregistryProjectsLocationsRepositoriesPackagesListSecurityOption2 option2) {
+        this.option2 = option2;
+        return this;
+    }
+}

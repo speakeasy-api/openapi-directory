@@ -1,0 +1,43 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class Place {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("address")
+    public PlaceAddress address;
+    public Place withAddress(PlaceAddress address) {
+        this.address = address;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("displayName")
+    public String displayName;
+    public Place withDisplayName(String displayName) {
+        this.displayName = displayName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("id")
+    public String id;
+    public Place withId(String id) {
+        this.id = id;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("kind")
+    public String kind;
+    public Place withKind(String kind) {
+        this.kind = kind;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("position")
+    public PlacePosition position;
+    public Place withPosition(PlacePosition position) {
+        this.position = position;
+        return this;
+    }
+}

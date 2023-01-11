@@ -1,0 +1,18 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+public class ProxyActiongenerateRequest {
+    @JsonProperty("objects")
+    public java.util.Map<String, Object>[] objects;
+    public ProxyActiongenerateRequest withObjects(java.util.Map<String, Object>[] objects) {
+        this.objects = objects;
+        return this;
+    }
+    @JsonProperty("type")
+    public ProxyActiongenerateRequestTypeEnum type;
+    public ProxyActiongenerateRequest withType(ProxyActiongenerateRequestTypeEnum type) {
+        this.type = type;
+        return this;
+    }
+}

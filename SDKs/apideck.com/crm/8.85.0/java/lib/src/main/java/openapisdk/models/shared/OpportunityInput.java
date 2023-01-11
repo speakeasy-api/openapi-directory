@@ -1,0 +1,203 @@
+package openapisdk.models.shared;
+
+import java.time.OffsetDateTime;
+import java.time.LocalDate;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import openapisdk.utils.DateTimeSerializer;
+import openapisdk.utils.DateTimeDeserializer;
+
+public class OpportunityInput {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("close_date")
+    public LocalDate closeDate;
+    public OpportunityInput withCloseDate(LocalDate closeDate) {
+        this.closeDate = closeDate;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("company_id")
+    public String companyId;
+    public OpportunityInput withCompanyId(String companyId) {
+        this.companyId = companyId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("company_name")
+    public String companyName;
+    public OpportunityInput withCompanyName(String companyName) {
+        this.companyName = companyName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("contact_id")
+    public String contactId;
+    public OpportunityInput withContactId(String contactId) {
+        this.contactId = contactId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("currency")
+    public CurrencyEnum currency;
+    public OpportunityInput withCurrency(CurrencyEnum currency) {
+        this.currency = currency;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("custom_fields")
+    public CustomField[] customFields;
+    public OpportunityInput withCustomFields(CustomField[] customFields) {
+        this.customFields = customFields;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("description")
+    public String description;
+    public OpportunityInput withDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("lead_id")
+    public String leadId;
+    public OpportunityInput withLeadId(String leadId) {
+        this.leadId = leadId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("lead_source")
+    public String leadSource;
+    public OpportunityInput withLeadSource(String leadSource) {
+        this.leadSource = leadSource;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("loss_reason")
+    public String lossReason;
+    public OpportunityInput withLossReason(String lossReason) {
+        this.lossReason = lossReason;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("loss_reason_id")
+    public String lossReasonId;
+    public OpportunityInput withLossReasonId(String lossReasonId) {
+        this.lossReasonId = lossReasonId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("monetary_amount")
+    public Double monetaryAmount;
+    public OpportunityInput withMonetaryAmount(Double monetaryAmount) {
+        this.monetaryAmount = monetaryAmount;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("owner_id")
+    public String ownerId;
+    public OpportunityInput withOwnerId(String ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("pipeline_id")
+    public String pipelineId;
+    public OpportunityInput withPipelineId(String pipelineId) {
+        this.pipelineId = pipelineId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("pipeline_stage_id")
+    public String pipelineStageId;
+    public OpportunityInput withPipelineStageId(String pipelineStageId) {
+        this.pipelineStageId = pipelineStageId;
+        return this;
+    }
+    @JsonProperty("primary_contact_id")
+    public String primaryContactId;
+    public OpportunityInput withPrimaryContactId(String primaryContactId) {
+        this.primaryContactId = primaryContactId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("priority")
+    public String priority;
+    public OpportunityInput withPriority(String priority) {
+        this.priority = priority;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("source_id")
+    public String sourceId;
+    public OpportunityInput withSourceId(String sourceId) {
+        this.sourceId = sourceId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonSerialize(contentUsing = DateTimeSerializer.class)
+    @JsonDeserialize(contentUsing = DateTimeDeserializer.class)
+    @JsonProperty("stage_last_changed_at")
+    public OffsetDateTime stageLastChangedAt;
+    public OpportunityInput withStageLastChangedAt(OffsetDateTime stageLastChangedAt) {
+        this.stageLastChangedAt = stageLastChangedAt;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("status")
+    public String status;
+    public OpportunityInput withStatus(String status) {
+        this.status = status;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("status_id")
+    public String statusId;
+    public OpportunityInput withStatusId(String statusId) {
+        this.statusId = statusId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("tags")
+    public String[] tags;
+    public OpportunityInput withTags(String[] tags) {
+        this.tags = tags;
+        return this;
+    }
+    @JsonProperty("title")
+    public String title;
+    public OpportunityInput withTitle(String title) {
+        this.title = title;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("type")
+    public String type;
+    public OpportunityInput withType(String type) {
+        this.type = type;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("win_probability")
+    public Double winProbability;
+    public OpportunityInput withWinProbability(Double winProbability) {
+        this.winProbability = winProbability;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("won_reason")
+    public String wonReason;
+    public OpportunityInput withWonReason(String wonReason) {
+        this.wonReason = wonReason;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("won_reason_id")
+    public String wonReasonId;
+    public OpportunityInput withWonReasonId(String wonReasonId) {
+        this.wonReasonId = wonReasonId;
+        return this;
+    }
+}

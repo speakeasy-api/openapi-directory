@@ -1,0 +1,33 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * DataSource
+ * Information about a data source.
+**/
+public class DataSource {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("name")
+    public String name;
+    public DataSource withName(String name) {
+        this.name = name;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("s3Bucket")
+    public String s3Bucket;
+    public DataSource withS3Bucket(String s3Bucket) {
+        this.s3Bucket = s3Bucket;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("s3Keys")
+    public S3KeyOutput[] s3Keys;
+    public DataSource withS3Keys(S3KeyOutput[] s3Keys) {
+        this.s3Keys = s3Keys;
+        return this;
+    }
+}

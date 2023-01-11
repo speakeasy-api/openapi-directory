@@ -1,0 +1,18 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class BloggerCommentsListSecurity {
+    @SpeakeasyMetadata("security:option=true")
+    public BloggerCommentsListSecurityOption1 option1;
+    public BloggerCommentsListSecurity withOption1(BloggerCommentsListSecurityOption1 option1) {
+        this.option1 = option1;
+        return this;
+    }
+    @SpeakeasyMetadata("security:option=true")
+    public BloggerCommentsListSecurityOption2 option2;
+    public BloggerCommentsListSecurity withOption2(BloggerCommentsListSecurityOption2 option2) {
+        this.option2 = option2;
+        return this;
+    }
+}

@@ -1,0 +1,26 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * BatchRestrictions
+ * Specifies restrictions for the batch build.
+**/
+public class BatchRestrictions {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("computeTypesAllowed")
+    public String[] computeTypesAllowed;
+    public BatchRestrictions withComputeTypesAllowed(String[] computeTypesAllowed) {
+        this.computeTypesAllowed = computeTypesAllowed;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("maximumBuildsAllowed")
+    public Long maximumBuildsAllowed;
+    public BatchRestrictions withMaximumBuildsAllowed(Long maximumBuildsAllowed) {
+        this.maximumBuildsAllowed = maximumBuildsAllowed;
+        return this;
+    }
+}

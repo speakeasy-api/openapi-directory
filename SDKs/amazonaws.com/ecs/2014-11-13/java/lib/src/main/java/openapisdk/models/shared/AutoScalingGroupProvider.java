@@ -1,0 +1,32 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * AutoScalingGroupProvider
+ * The details of the Auto Scaling group for the capacity provider.
+**/
+public class AutoScalingGroupProvider {
+    @JsonProperty("autoScalingGroupArn")
+    public String autoScalingGroupArn;
+    public AutoScalingGroupProvider withAutoScalingGroupArn(String autoScalingGroupArn) {
+        this.autoScalingGroupArn = autoScalingGroupArn;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("managedScaling")
+    public ManagedScaling managedScaling;
+    public AutoScalingGroupProvider withManagedScaling(ManagedScaling managedScaling) {
+        this.managedScaling = managedScaling;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("managedTerminationProtection")
+    public ManagedTerminationProtectionEnum managedTerminationProtection;
+    public AutoScalingGroupProvider withManagedTerminationProtection(ManagedTerminationProtectionEnum managedTerminationProtection) {
+        this.managedTerminationProtection = managedTerminationProtection;
+        return this;
+    }
+}

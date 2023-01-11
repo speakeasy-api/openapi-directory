@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class AllergiesPartialUpdateRequest {
+    public AllergiesPartialUpdatePathParams pathParams;
+    public AllergiesPartialUpdateRequest withPathParams(AllergiesPartialUpdatePathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public AllergiesPartialUpdateQueryParams queryParams;
+    public AllergiesPartialUpdateRequest withQueryParams(AllergiesPartialUpdateQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public AllergiesPartialUpdateSecurity security;
+    public AllergiesPartialUpdateRequest withSecurity(AllergiesPartialUpdateSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

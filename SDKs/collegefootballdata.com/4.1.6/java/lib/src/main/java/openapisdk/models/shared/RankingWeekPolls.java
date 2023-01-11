@@ -1,0 +1,22 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class RankingWeekPolls {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("poll")
+    public String poll;
+    public RankingWeekPolls withPoll(String poll) {
+        this.poll = poll;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ranks")
+    public RankingWeekPollsRanks[] ranks;
+    public RankingWeekPolls withRanks(RankingWeekPollsRanks[] ranks) {
+        this.ranks = ranks;
+        return this;
+    }
+}

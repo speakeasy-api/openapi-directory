@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class MirrorTimelineDeleteRequest {
+    public MirrorTimelineDeletePathParams pathParams;
+    public MirrorTimelineDeleteRequest withPathParams(MirrorTimelineDeletePathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public MirrorTimelineDeleteQueryParams queryParams;
+    public MirrorTimelineDeleteRequest withQueryParams(MirrorTimelineDeleteQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public MirrorTimelineDeleteSecurity security;
+    public MirrorTimelineDeleteRequest withSecurity(MirrorTimelineDeleteSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

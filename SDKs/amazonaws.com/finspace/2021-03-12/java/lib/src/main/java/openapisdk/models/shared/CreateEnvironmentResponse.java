@@ -1,0 +1,29 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class CreateEnvironmentResponse {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("environmentArn")
+    public String environmentArn;
+    public CreateEnvironmentResponse withEnvironmentArn(String environmentArn) {
+        this.environmentArn = environmentArn;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("environmentId")
+    public String environmentId;
+    public CreateEnvironmentResponse withEnvironmentId(String environmentId) {
+        this.environmentId = environmentId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("environmentUrl")
+    public String environmentUrl;
+    public CreateEnvironmentResponse withEnvironmentUrl(String environmentUrl) {
+        this.environmentUrl = environmentUrl;
+        return this;
+    }
+}

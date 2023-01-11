@@ -1,0 +1,24 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class TaskStatusesListQueryParams {
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
+    public String cursor;
+    public TaskStatusesListQueryParams withCursor(String cursor) {
+        this.cursor = cursor;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_size")
+    public Long pageSize;
+    public TaskStatusesListQueryParams withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=since")
+    public String since;
+    public TaskStatusesListQueryParams withSince(String since) {
+        this.since = since;
+        return this;
+    }
+}

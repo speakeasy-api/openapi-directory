@@ -1,0 +1,26 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * Container
+ * A container encapsulates the runtime environment for an application.
+**/
+public class Container {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("imageUris")
+    public String[] imageUris;
+    public Container withImageUris(String[] imageUris) {
+        this.imageUris = imageUris;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("region")
+    public String region;
+    public Container withRegion(String region) {
+        this.region = region;
+        return this;
+    }
+}

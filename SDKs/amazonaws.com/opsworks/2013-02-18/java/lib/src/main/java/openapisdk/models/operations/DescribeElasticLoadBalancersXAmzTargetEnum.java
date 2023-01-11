@@ -1,0 +1,12 @@
+package openapisdk.models.operations;
+
+
+public enum DescribeElasticLoadBalancersXAmzTargetEnum {
+    OPS_WORKS20130218_DESCRIBE_ELASTIC_LOAD_BALANCERS("OpsWorks_20130218.DescribeElasticLoadBalancers");
+
+    public final String value;
+
+    private DescribeElasticLoadBalancersXAmzTargetEnum(String value) {
+        this.value = value;
+    }
+}

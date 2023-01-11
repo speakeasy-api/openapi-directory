@@ -1,0 +1,27 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class DfareportingEventTagsPatchRequest {
+    public DfareportingEventTagsPatchPathParams pathParams;
+    public DfareportingEventTagsPatchRequest withPathParams(DfareportingEventTagsPatchPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public DfareportingEventTagsPatchQueryParams queryParams;
+    public DfareportingEventTagsPatchRequest withQueryParams(DfareportingEventTagsPatchQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public openapisdk.models.shared.EventTag request;
+    public DfareportingEventTagsPatchRequest withRequest(openapisdk.models.shared.EventTag request) {
+        this.request = request;
+        return this;
+    }
+    public DfareportingEventTagsPatchSecurity security;
+    public DfareportingEventTagsPatchRequest withSecurity(DfareportingEventTagsPatchSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

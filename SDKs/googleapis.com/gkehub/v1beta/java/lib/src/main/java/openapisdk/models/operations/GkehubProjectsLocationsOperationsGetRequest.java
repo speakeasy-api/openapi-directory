@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class GkehubProjectsLocationsOperationsGetRequest {
+    public GkehubProjectsLocationsOperationsGetPathParams pathParams;
+    public GkehubProjectsLocationsOperationsGetRequest withPathParams(GkehubProjectsLocationsOperationsGetPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public GkehubProjectsLocationsOperationsGetQueryParams queryParams;
+    public GkehubProjectsLocationsOperationsGetRequest withQueryParams(GkehubProjectsLocationsOperationsGetQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public GkehubProjectsLocationsOperationsGetSecurity security;
+    public GkehubProjectsLocationsOperationsGetRequest withSecurity(GkehubProjectsLocationsOperationsGetSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

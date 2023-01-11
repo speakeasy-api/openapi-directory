@@ -1,0 +1,34 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+/**
+ * NotificationSpecification
+ * The NotificationSpecification data structure describes a HIT event notification for a HIT type.
+**/
+public class NotificationSpecification {
+    @JsonProperty("Destination")
+    public String destination;
+    public NotificationSpecification withDestination(String destination) {
+        this.destination = destination;
+        return this;
+    }
+    @JsonProperty("EventTypes")
+    public EventTypeEnum[] eventTypes;
+    public NotificationSpecification withEventTypes(EventTypeEnum[] eventTypes) {
+        this.eventTypes = eventTypes;
+        return this;
+    }
+    @JsonProperty("Transport")
+    public NotificationTransportEnum transport;
+    public NotificationSpecification withTransport(NotificationTransportEnum transport) {
+        this.transport = transport;
+        return this;
+    }
+    @JsonProperty("Version")
+    public String version;
+    public NotificationSpecification withVersion(String version) {
+        this.version = version;
+        return this;
+    }
+}

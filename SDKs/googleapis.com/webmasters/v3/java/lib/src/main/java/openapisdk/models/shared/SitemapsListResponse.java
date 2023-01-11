@@ -1,0 +1,19 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * SitemapsListResponse
+ * List of sitemaps.
+**/
+public class SitemapsListResponse {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("sitemap")
+    public WmxSitemap[] sitemap;
+    public SitemapsListResponse withSitemap(WmxSitemap[] sitemap) {
+        this.sitemap = sitemap;
+        return this;
+    }
+}

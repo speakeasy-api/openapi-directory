@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class GetPotHoldingsRequest {
+    public GetPotHoldingsPathParams pathParams;
+    public GetPotHoldingsRequest withPathParams(GetPotHoldingsPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public GetPotHoldingsHeaders headers;
+    public GetPotHoldingsRequest withHeaders(GetPotHoldingsHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+    public GetPotHoldingsSecurity security;
+    public GetPotHoldingsRequest withSecurity(GetPotHoldingsSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

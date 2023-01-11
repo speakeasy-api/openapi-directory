@@ -1,0 +1,42 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+public class CreateAccountAssignmentRequest {
+    @JsonProperty("InstanceArn")
+    public String instanceArn;
+    public CreateAccountAssignmentRequest withInstanceArn(String instanceArn) {
+        this.instanceArn = instanceArn;
+        return this;
+    }
+    @JsonProperty("PermissionSetArn")
+    public String permissionSetArn;
+    public CreateAccountAssignmentRequest withPermissionSetArn(String permissionSetArn) {
+        this.permissionSetArn = permissionSetArn;
+        return this;
+    }
+    @JsonProperty("PrincipalId")
+    public String principalId;
+    public CreateAccountAssignmentRequest withPrincipalId(String principalId) {
+        this.principalId = principalId;
+        return this;
+    }
+    @JsonProperty("PrincipalType")
+    public PrincipalTypeEnum principalType;
+    public CreateAccountAssignmentRequest withPrincipalType(PrincipalTypeEnum principalType) {
+        this.principalType = principalType;
+        return this;
+    }
+    @JsonProperty("TargetId")
+    public String targetId;
+    public CreateAccountAssignmentRequest withTargetId(String targetId) {
+        this.targetId = targetId;
+        return this;
+    }
+    @JsonProperty("TargetType")
+    public TargetTypeEnum targetType;
+    public CreateAccountAssignmentRequest withTargetType(TargetTypeEnum targetType) {
+        this.targetType = targetType;
+        return this;
+    }
+}

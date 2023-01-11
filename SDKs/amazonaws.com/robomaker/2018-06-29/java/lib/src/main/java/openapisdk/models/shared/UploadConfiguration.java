@@ -1,0 +1,28 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+/**
+ * UploadConfiguration
+ * Provides upload configuration information. Files are uploaded from the simulation job to a location you specify. 
+**/
+public class UploadConfiguration {
+    @JsonProperty("name")
+    public String name;
+    public UploadConfiguration withName(String name) {
+        this.name = name;
+        return this;
+    }
+    @JsonProperty("path")
+    public String path;
+    public UploadConfiguration withPath(String path) {
+        this.path = path;
+        return this;
+    }
+    @JsonProperty("uploadBehavior")
+    public UploadBehaviorEnum uploadBehavior;
+    public UploadConfiguration withUploadBehavior(UploadBehaviorEnum uploadBehavior) {
+        this.uploadBehavior = uploadBehavior;
+        return this;
+    }
+}

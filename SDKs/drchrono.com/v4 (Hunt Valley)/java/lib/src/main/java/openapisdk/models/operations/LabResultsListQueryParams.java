@@ -1,0 +1,30 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class LabResultsListQueryParams {
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
+    public String cursor;
+    public LabResultsListQueryParams withCursor(String cursor) {
+        this.cursor = cursor;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=doctor")
+    public Long doctor;
+    public LabResultsListQueryParams withDoctor(Long doctor) {
+        this.doctor = doctor;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order")
+    public Long order;
+    public LabResultsListQueryParams withOrder(Long order) {
+        this.order = order;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_size")
+    public Long pageSize;
+    public LabResultsListQueryParams withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+}

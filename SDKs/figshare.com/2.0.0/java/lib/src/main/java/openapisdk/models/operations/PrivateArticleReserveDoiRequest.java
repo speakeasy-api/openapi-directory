@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class PrivateArticleReserveDoiRequest {
+    public PrivateArticleReserveDoiPathParams pathParams;
+    public PrivateArticleReserveDoiRequest withPathParams(PrivateArticleReserveDoiPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public PrivateArticleReserveDoiSecurity security;
+    public PrivateArticleReserveDoiRequest withSecurity(PrivateArticleReserveDoiSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class TaskStatusesCreateRequest {
+    public TaskStatusesCreateQueryParams queryParams;
+    public TaskStatusesCreateRequest withQueryParams(TaskStatusesCreateQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public TaskStatusesCreateSecurity security;
+    public TaskStatusesCreateRequest withSecurity(TaskStatusesCreateSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

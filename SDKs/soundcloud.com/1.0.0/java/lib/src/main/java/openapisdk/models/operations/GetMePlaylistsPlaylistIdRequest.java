@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class GetMePlaylistsPlaylistIdRequest {
+    public GetMePlaylistsPlaylistIdPathParams pathParams;
+    public GetMePlaylistsPlaylistIdRequest withPathParams(GetMePlaylistsPlaylistIdPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public GetMePlaylistsPlaylistIdSecurity security;
+    public GetMePlaylistsPlaylistIdRequest withSecurity(GetMePlaylistsPlaylistIdSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

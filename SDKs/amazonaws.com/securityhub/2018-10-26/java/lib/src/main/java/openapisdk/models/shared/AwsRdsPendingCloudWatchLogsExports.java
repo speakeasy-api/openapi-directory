@@ -1,0 +1,26 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * AwsRdsPendingCloudWatchLogsExports
+ * Identifies the log types to enable and disable.
+**/
+public class AwsRdsPendingCloudWatchLogsExports {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("LogTypesToDisable")
+    public String[] logTypesToDisable;
+    public AwsRdsPendingCloudWatchLogsExports withLogTypesToDisable(String[] logTypesToDisable) {
+        this.logTypesToDisable = logTypesToDisable;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("LogTypesToEnable")
+    public String[] logTypesToEnable;
+    public AwsRdsPendingCloudWatchLogsExports withLogTypesToEnable(String[] logTypesToEnable) {
+        this.logTypesToEnable = logTypesToEnable;
+        return this;
+    }
+}

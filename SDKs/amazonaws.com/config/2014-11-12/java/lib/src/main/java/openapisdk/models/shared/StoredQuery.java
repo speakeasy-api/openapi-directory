@@ -1,0 +1,46 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * StoredQuery
+ * Provides the details of a stored query.
+**/
+public class StoredQuery {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Description")
+    public String description;
+    public StoredQuery withDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Expression")
+    public String expression;
+    public StoredQuery withExpression(String expression) {
+        this.expression = expression;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("QueryArn")
+    public String queryArn;
+    public StoredQuery withQueryArn(String queryArn) {
+        this.queryArn = queryArn;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("QueryId")
+    public String queryId;
+    public StoredQuery withQueryId(String queryId) {
+        this.queryId = queryId;
+        return this;
+    }
+    @JsonProperty("QueryName")
+    public String queryName;
+    public StoredQuery withQueryName(String queryName) {
+        this.queryName = queryName;
+        return this;
+    }
+}

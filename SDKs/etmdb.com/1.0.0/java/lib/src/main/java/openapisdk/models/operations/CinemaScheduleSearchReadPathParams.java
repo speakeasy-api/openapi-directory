@@ -1,0 +1,12 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class CinemaScheduleSearchReadPathParams {
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=movie_title")
+    public String movieTitle;
+    public CinemaScheduleSearchReadPathParams withMovieTitle(String movieTitle) {
+        this.movieTitle = movieTitle;
+        return this;
+    }
+}

@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class SqlInstancesStopReplicaRequest {
+    public SqlInstancesStopReplicaPathParams pathParams;
+    public SqlInstancesStopReplicaRequest withPathParams(SqlInstancesStopReplicaPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public SqlInstancesStopReplicaQueryParams queryParams;
+    public SqlInstancesStopReplicaRequest withQueryParams(SqlInstancesStopReplicaQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public SqlInstancesStopReplicaSecurity security;
+    public SqlInstancesStopReplicaRequest withSecurity(SqlInstancesStopReplicaSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

@@ -1,0 +1,61 @@
+package openapisdk.models.shared;
+
+import java.time.OffsetDateTime;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import openapisdk.utils.DateTimeSerializer;
+import openapisdk.utils.DateTimeDeserializer;
+
+/**
+ * Snapshot
+ * Describes a directory snapshot.
+**/
+public class Snapshot {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("DirectoryId")
+    public String directoryId;
+    public Snapshot withDirectoryId(String directoryId) {
+        this.directoryId = directoryId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Name")
+    public String name;
+    public Snapshot withName(String name) {
+        this.name = name;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("SnapshotId")
+    public String snapshotId;
+    public Snapshot withSnapshotId(String snapshotId) {
+        this.snapshotId = snapshotId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonSerialize(contentUsing = DateTimeSerializer.class)
+    @JsonDeserialize(contentUsing = DateTimeDeserializer.class)
+    @JsonProperty("StartTime")
+    public OffsetDateTime startTime;
+    public Snapshot withStartTime(OffsetDateTime startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Status")
+    public SnapshotStatusEnum status;
+    public Snapshot withStatus(SnapshotStatusEnum status) {
+        this.status = status;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Type")
+    public SnapshotTypeEnum type;
+    public Snapshot withType(SnapshotTypeEnum type) {
+        this.type = type;
+        return this;
+    }
+}

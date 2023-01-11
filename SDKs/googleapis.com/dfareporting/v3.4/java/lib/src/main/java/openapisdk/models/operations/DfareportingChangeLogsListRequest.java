@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class DfareportingChangeLogsListRequest {
+    public DfareportingChangeLogsListPathParams pathParams;
+    public DfareportingChangeLogsListRequest withPathParams(DfareportingChangeLogsListPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public DfareportingChangeLogsListQueryParams queryParams;
+    public DfareportingChangeLogsListRequest withQueryParams(DfareportingChangeLogsListQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public DfareportingChangeLogsListSecurity security;
+    public DfareportingChangeLogsListRequest withSecurity(DfareportingChangeLogsListSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

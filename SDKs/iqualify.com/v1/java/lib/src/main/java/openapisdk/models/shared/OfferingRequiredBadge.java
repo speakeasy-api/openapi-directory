@@ -1,0 +1,36 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class OfferingRequiredBadge {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("badgeExpiry")
+    public BadgeExpiry badgeExpiry;
+    public OfferingRequiredBadge withBadgeExpiry(BadgeExpiry badgeExpiry) {
+        this.badgeExpiry = badgeExpiry;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("description")
+    public String description;
+    public OfferingRequiredBadge withDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("requiresApproval")
+    public Boolean requiresApproval;
+    public OfferingRequiredBadge withRequiresApproval(Boolean requiresApproval) {
+        this.requiresApproval = requiresApproval;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("title")
+    public String title;
+    public OfferingRequiredBadge withTitle(String title) {
+        this.title = title;
+        return this;
+    }
+}

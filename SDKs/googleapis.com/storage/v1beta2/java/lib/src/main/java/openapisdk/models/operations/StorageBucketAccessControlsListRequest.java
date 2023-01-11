@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class StorageBucketAccessControlsListRequest {
+    public StorageBucketAccessControlsListPathParams pathParams;
+    public StorageBucketAccessControlsListRequest withPathParams(StorageBucketAccessControlsListPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public StorageBucketAccessControlsListQueryParams queryParams;
+    public StorageBucketAccessControlsListRequest withQueryParams(StorageBucketAccessControlsListQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public StorageBucketAccessControlsListSecurity security;
+    public StorageBucketAccessControlsListRequest withSecurity(StorageBucketAccessControlsListSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

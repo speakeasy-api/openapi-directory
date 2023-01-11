@@ -1,0 +1,48 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+public class SendToken {
+    @JsonProperty("amount")
+    public Integer amount;
+    public SendToken withAmount(Integer amount) {
+        this.amount = amount;
+        return this;
+    }
+    @JsonProperty("contractaddress")
+    public String contractaddress;
+    public SendToken withContractaddress(String contractaddress) {
+        this.contractaddress = contractaddress;
+        return this;
+    }
+    @JsonProperty("from")
+    public String from;
+    public SendToken withFrom(String from) {
+        this.from = from;
+        return this;
+    }
+    @JsonProperty("identifier")
+    public String identifier;
+    public SendToken withIdentifier(String identifier) {
+        this.identifier = identifier;
+        return this;
+    }
+    @JsonProperty("ok")
+    public Boolean ok;
+    public SendToken withOk(Boolean ok) {
+        this.ok = ok;
+        return this;
+    }
+    @JsonProperty("to")
+    public String to;
+    public SendToken withTo(String to) {
+        this.to = to;
+        return this;
+    }
+    @JsonProperty("txid")
+    public String txid;
+    public SendToken withTxid(String txid) {
+        this.txid = txid;
+        return this;
+    }
+}

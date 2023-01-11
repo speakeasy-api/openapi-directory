@@ -1,0 +1,54 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+public class Example111 {
+    @JsonProperty("bond_date")
+    public Double bondDate;
+    public Example111 withBondDate(Double bondDate) {
+        this.bondDate = bondDate;
+        return this;
+    }
+    @JsonProperty("device_class")
+    public Integer deviceClass;
+    public Example111 withDeviceClass(Integer deviceClass) {
+        this.deviceClass = deviceClass;
+        return this;
+    }
+    @JsonProperty("device_type")
+    public Integer deviceType;
+    public Example111 withDeviceType(Integer deviceType) {
+        this.deviceType = deviceType;
+        return this;
+    }
+    @JsonProperty("last_connect_date")
+    public Double lastConnectDate;
+    public Example111 withLastConnectDate(Double lastConnectDate) {
+        this.lastConnectDate = lastConnectDate;
+        return this;
+    }
+    @JsonProperty("mac_address")
+    public String macAddress;
+    public Example111 withMacAddress(String macAddress) {
+        this.macAddress = macAddress;
+        return this;
+    }
+    @JsonProperty("name")
+    public String name;
+    public Example111 withName(String name) {
+        this.name = name;
+        return this;
+    }
+    @JsonProperty("rssi")
+    public Integer rssi;
+    public Example111 withRssi(Integer rssi) {
+        this.rssi = rssi;
+        return this;
+    }
+    @JsonProperty("service_uuids")
+    public String[] serviceUuids;
+    public Example111 withServiceUuids(String[] serviceUuids) {
+        this.serviceUuids = serviceUuids;
+        return this;
+    }
+}

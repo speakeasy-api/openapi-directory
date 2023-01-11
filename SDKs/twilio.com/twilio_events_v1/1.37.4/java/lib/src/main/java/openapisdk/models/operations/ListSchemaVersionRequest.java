@@ -1,0 +1,26 @@
+package openapisdk.models.operations;
+
+
+
+public class ListSchemaVersionRequest {
+    public String serverURL;
+    public ListSchemaVersionRequest withServerUrl(String serverURL) {
+        this.serverURL = serverURL;
+        return this;
+    }
+    public ListSchemaVersionPathParams pathParams;
+    public ListSchemaVersionRequest withPathParams(ListSchemaVersionPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public ListSchemaVersionQueryParams queryParams;
+    public ListSchemaVersionRequest withQueryParams(ListSchemaVersionQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public ListSchemaVersionSecurity security;
+    public ListSchemaVersionRequest withSecurity(ListSchemaVersionSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

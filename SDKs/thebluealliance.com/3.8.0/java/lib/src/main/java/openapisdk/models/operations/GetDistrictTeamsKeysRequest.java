@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class GetDistrictTeamsKeysRequest {
+    public GetDistrictTeamsKeysPathParams pathParams;
+    public GetDistrictTeamsKeysRequest withPathParams(GetDistrictTeamsKeysPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public GetDistrictTeamsKeysHeaders headers;
+    public GetDistrictTeamsKeysRequest withHeaders(GetDistrictTeamsKeysHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+    public GetDistrictTeamsKeysSecurity security;
+    public GetDistrictTeamsKeysRequest withSecurity(GetDistrictTeamsKeysSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

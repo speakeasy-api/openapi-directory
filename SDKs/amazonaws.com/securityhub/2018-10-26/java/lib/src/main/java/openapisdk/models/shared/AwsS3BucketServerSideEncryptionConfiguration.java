@@ -1,0 +1,19 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * AwsS3BucketServerSideEncryptionConfiguration
+ * The encryption configuration for the S3 bucket.
+**/
+public class AwsS3BucketServerSideEncryptionConfiguration {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Rules")
+    public AwsS3BucketServerSideEncryptionRule[] rules;
+    public AwsS3BucketServerSideEncryptionConfiguration withRules(AwsS3BucketServerSideEncryptionRule[] rules) {
+        this.rules = rules;
+        return this;
+    }
+}

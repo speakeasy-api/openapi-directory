@@ -1,0 +1,29 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class ImportProjectChoices {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("human_name")
+    public String humanName;
+    public ImportProjectChoices withHumanName(String humanName) {
+        this.humanName = humanName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("tfvc_project")
+    public String tfvcProject;
+    public ImportProjectChoices withTfvcProject(String tfvcProject) {
+        this.tfvcProject = tfvcProject;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("vcs")
+    public String vcs;
+    public ImportProjectChoices withVcs(String vcs) {
+        this.vcs = vcs;
+        return this;
+    }
+}

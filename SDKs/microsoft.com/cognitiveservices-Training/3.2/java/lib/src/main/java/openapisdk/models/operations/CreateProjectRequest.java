@@ -1,0 +1,11 @@
+package openapisdk.models.operations;
+
+
+
+public class CreateProjectRequest {
+    public CreateProjectQueryParams queryParams;
+    public CreateProjectRequest withQueryParams(CreateProjectQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+}

@@ -1,0 +1,30 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class YoutubeSearchListSecurity {
+    @SpeakeasyMetadata("security:option=true")
+    public YoutubeSearchListSecurityOption1 option1;
+    public YoutubeSearchListSecurity withOption1(YoutubeSearchListSecurityOption1 option1) {
+        this.option1 = option1;
+        return this;
+    }
+    @SpeakeasyMetadata("security:option=true")
+    public YoutubeSearchListSecurityOption2 option2;
+    public YoutubeSearchListSecurity withOption2(YoutubeSearchListSecurityOption2 option2) {
+        this.option2 = option2;
+        return this;
+    }
+    @SpeakeasyMetadata("security:option=true")
+    public YoutubeSearchListSecurityOption3 option3;
+    public YoutubeSearchListSecurity withOption3(YoutubeSearchListSecurityOption3 option3) {
+        this.option3 = option3;
+        return this;
+    }
+    @SpeakeasyMetadata("security:option=true")
+    public YoutubeSearchListSecurityOption4 option4;
+    public YoutubeSearchListSecurity withOption4(YoutubeSearchListSecurityOption4 option4) {
+        this.option4 = option4;
+        return this;
+    }
+}

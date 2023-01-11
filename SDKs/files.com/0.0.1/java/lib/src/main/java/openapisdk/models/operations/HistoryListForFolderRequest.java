@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class HistoryListForFolderRequest {
+    public HistoryListForFolderPathParams pathParams;
+    public HistoryListForFolderRequest withPathParams(HistoryListForFolderPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public HistoryListForFolderQueryParams queryParams;
+    public HistoryListForFolderRequest withQueryParams(HistoryListForFolderQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+}

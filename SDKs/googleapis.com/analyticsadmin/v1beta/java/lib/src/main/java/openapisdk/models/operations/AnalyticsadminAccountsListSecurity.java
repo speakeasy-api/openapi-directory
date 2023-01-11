@@ -1,0 +1,18 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class AnalyticsadminAccountsListSecurity {
+    @SpeakeasyMetadata("security:option=true")
+    public AnalyticsadminAccountsListSecurityOption1 option1;
+    public AnalyticsadminAccountsListSecurity withOption1(AnalyticsadminAccountsListSecurityOption1 option1) {
+        this.option1 = option1;
+        return this;
+    }
+    @SpeakeasyMetadata("security:option=true")
+    public AnalyticsadminAccountsListSecurityOption2 option2;
+    public AnalyticsadminAccountsListSecurity withOption2(AnalyticsadminAccountsListSecurityOption2 option2) {
+        this.option2 = option2;
+        return this;
+    }
+}

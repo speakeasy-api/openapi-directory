@@ -1,0 +1,26 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * Selector
+ * A comparision that is used to determine whether a query should return this object.
+**/
+public class Selector {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("fieldName")
+    public String fieldName;
+    public Selector withFieldName(String fieldName) {
+        this.fieldName = fieldName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("operator")
+    public Operator operator;
+    public Selector withOperator(Operator operator) {
+        this.operator = operator;
+        return this;
+    }
+}

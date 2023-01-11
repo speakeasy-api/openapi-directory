@@ -1,0 +1,119 @@
+package openapisdk.models.shared;
+
+import java.time.OffsetDateTime;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import openapisdk.utils.DateTimeSerializer;
+import openapisdk.utils.DateTimeDeserializer;
+
+/**
+ * RequestedServiceQuotaChange
+ * Information about a quota increase request.
+**/
+public class RequestedServiceQuotaChange {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("CaseId")
+    public String caseId;
+    public RequestedServiceQuotaChange withCaseId(String caseId) {
+        this.caseId = caseId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonSerialize(contentUsing = DateTimeSerializer.class)
+    @JsonDeserialize(contentUsing = DateTimeDeserializer.class)
+    @JsonProperty("Created")
+    public OffsetDateTime created;
+    public RequestedServiceQuotaChange withCreated(OffsetDateTime created) {
+        this.created = created;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("DesiredValue")
+    public Double desiredValue;
+    public RequestedServiceQuotaChange withDesiredValue(Double desiredValue) {
+        this.desiredValue = desiredValue;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("GlobalQuota")
+    public Boolean globalQuota;
+    public RequestedServiceQuotaChange withGlobalQuota(Boolean globalQuota) {
+        this.globalQuota = globalQuota;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Id")
+    public String id;
+    public RequestedServiceQuotaChange withId(String id) {
+        this.id = id;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonSerialize(contentUsing = DateTimeSerializer.class)
+    @JsonDeserialize(contentUsing = DateTimeDeserializer.class)
+    @JsonProperty("LastUpdated")
+    public OffsetDateTime lastUpdated;
+    public RequestedServiceQuotaChange withLastUpdated(OffsetDateTime lastUpdated) {
+        this.lastUpdated = lastUpdated;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("QuotaArn")
+    public String quotaArn;
+    public RequestedServiceQuotaChange withQuotaArn(String quotaArn) {
+        this.quotaArn = quotaArn;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("QuotaCode")
+    public String quotaCode;
+    public RequestedServiceQuotaChange withQuotaCode(String quotaCode) {
+        this.quotaCode = quotaCode;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("QuotaName")
+    public String quotaName;
+    public RequestedServiceQuotaChange withQuotaName(String quotaName) {
+        this.quotaName = quotaName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Requester")
+    public String requester;
+    public RequestedServiceQuotaChange withRequester(String requester) {
+        this.requester = requester;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ServiceCode")
+    public String serviceCode;
+    public RequestedServiceQuotaChange withServiceCode(String serviceCode) {
+        this.serviceCode = serviceCode;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ServiceName")
+    public String serviceName;
+    public RequestedServiceQuotaChange withServiceName(String serviceName) {
+        this.serviceName = serviceName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Status")
+    public RequestStatusEnum status;
+    public RequestedServiceQuotaChange withStatus(RequestStatusEnum status) {
+        this.status = status;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Unit")
+    public String unit;
+    public RequestedServiceQuotaChange withUnit(String unit) {
+        this.unit = unit;
+        return this;
+    }
+}

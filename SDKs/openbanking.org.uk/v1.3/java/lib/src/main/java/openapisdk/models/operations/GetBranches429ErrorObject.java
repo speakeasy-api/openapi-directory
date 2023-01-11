@@ -1,0 +1,24 @@
+package openapisdk.models.operations;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+public class GetBranches429ErrorObject {
+    @JsonProperty("description")
+    public GetBranches429ErrorObjectDescriptionEnum description;
+    public GetBranches429ErrorObject withDescription(GetBranches429ErrorObjectDescriptionEnum description) {
+        this.description = description;
+        return this;
+    }
+    @JsonProperty("status")
+    public GetBranches429ErrorObjectStatusEnum status;
+    public GetBranches429ErrorObject withStatus(GetBranches429ErrorObjectStatusEnum status) {
+        this.status = status;
+        return this;
+    }
+    @JsonProperty("title")
+    public GetBranches429ErrorObjectTitleEnum title;
+    public GetBranches429ErrorObject withTitle(GetBranches429ErrorObjectTitleEnum title) {
+        this.title = title;
+        return this;
+    }
+}

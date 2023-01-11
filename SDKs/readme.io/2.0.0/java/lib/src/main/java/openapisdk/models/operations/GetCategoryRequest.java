@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class GetCategoryRequest {
+    public GetCategoryPathParams pathParams;
+    public GetCategoryRequest withPathParams(GetCategoryPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public GetCategoryHeaders headers;
+    public GetCategoryRequest withHeaders(GetCategoryHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+    public GetCategorySecurity security;
+    public GetCategoryRequest withSecurity(GetCategorySecurity security) {
+        this.security = security;
+        return this;
+    }
+}

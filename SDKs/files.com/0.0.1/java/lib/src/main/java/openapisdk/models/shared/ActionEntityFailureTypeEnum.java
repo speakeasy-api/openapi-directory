@@ -1,0 +1,33 @@
+package openapisdk.models.shared;
+
+
+public enum ActionEntityFailureTypeEnum {
+    EXPIRED_TRIAL("expired_trial"),
+    ACCOUNT_OVERDUE("account_overdue"),
+    LOCKED_OUT("locked_out"),
+    IP_MISMATCH("ip_mismatch"),
+    PASSWORD_MISMATCH("password_mismatch"),
+    SITE_MISMATCH("site_mismatch"),
+    USERNAME_NOT_FOUND("username_not_found"),
+    NONE("none"),
+    NO_FTP_PERMISSION("no_ftp_permission"),
+    NO_WEB_PERMISSION("no_web_permission"),
+    NO_DIRECTORY("no_directory"),
+    ERRNO_ENOENT("errno_enoent"),
+    NO_SFTP_PERMISSION("no_sftp_permission"),
+    NO_DAV_PERMISSION("no_dav_permission"),
+    NO_RESTAPI_PERMISSION("no_restapi_permission"),
+    KEY_MISMATCH("key_mismatch"),
+    REGION_MISMATCH("region_mismatch"),
+    EXPIRED_ACCESS("expired_access"),
+    DESKTOP_IP_MISMATCH("desktop_ip_mismatch"),
+    DESKTOP_API_KEY_NOT_USED_QUICKLY_ENOUGH("desktop_api_key_not_used_quickly_enough"),
+    DISABLED("disabled"),
+    COUNTRY_MISMATCH("country_mismatch");
+
+    public final String value;
+
+    private ActionEntityFailureTypeEnum(String value) {
+        this.value = value;
+    }
+}

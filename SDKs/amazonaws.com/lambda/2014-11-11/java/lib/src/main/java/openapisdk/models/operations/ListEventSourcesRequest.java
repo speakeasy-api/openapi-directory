@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class ListEventSourcesRequest {
+    public ListEventSourcesQueryParams queryParams;
+    public ListEventSourcesRequest withQueryParams(ListEventSourcesQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public ListEventSourcesHeaders headers;
+    public ListEventSourcesRequest withHeaders(ListEventSourcesHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+}

@@ -1,0 +1,22 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+/**
+ * SystemTemplateFilter
+ * An object that filters a system search.
+**/
+public class SystemTemplateFilter {
+    @JsonProperty("name")
+    public SystemTemplateFilterNameEnum name;
+    public SystemTemplateFilter withName(SystemTemplateFilterNameEnum name) {
+        this.name = name;
+        return this;
+    }
+    @JsonProperty("value")
+    public String[] value;
+    public SystemTemplateFilter withValue(String[] value) {
+        this.value = value;
+        return this;
+    }
+}

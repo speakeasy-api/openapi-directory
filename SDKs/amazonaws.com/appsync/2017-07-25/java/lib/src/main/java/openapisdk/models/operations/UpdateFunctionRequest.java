@@ -1,0 +1,22 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class UpdateFunctionRequest {
+    public UpdateFunctionPathParams pathParams;
+    public UpdateFunctionRequest withPathParams(UpdateFunctionPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public UpdateFunctionHeaders headers;
+    public UpdateFunctionRequest withHeaders(UpdateFunctionHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public UpdateFunctionRequestBody request;
+    public UpdateFunctionRequest withRequest(UpdateFunctionRequestBody request) {
+        this.request = request;
+        return this;
+    }
+}

@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class FlushApiCacheRequest {
+    public FlushApiCachePathParams pathParams;
+    public FlushApiCacheRequest withPathParams(FlushApiCachePathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public FlushApiCacheHeaders headers;
+    public FlushApiCacheRequest withHeaders(FlushApiCacheHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+}

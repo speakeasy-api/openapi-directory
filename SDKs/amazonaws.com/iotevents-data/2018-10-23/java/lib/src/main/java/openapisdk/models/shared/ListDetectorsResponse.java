@@ -1,0 +1,22 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class ListDetectorsResponse {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("detectorSummaries")
+    public DetectorSummary[] detectorSummaries;
+    public ListDetectorsResponse withDetectorSummaries(DetectorSummary[] detectorSummaries) {
+        this.detectorSummaries = detectorSummaries;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("nextToken")
+    public String nextToken;
+    public ListDetectorsResponse withNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+}

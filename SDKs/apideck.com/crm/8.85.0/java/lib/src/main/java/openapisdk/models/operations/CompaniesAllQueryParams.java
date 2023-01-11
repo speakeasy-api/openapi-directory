@@ -1,0 +1,36 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class CompaniesAllQueryParams {
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
+    public String cursor;
+    public CompaniesAllQueryParams withCursor(String cursor) {
+        this.cursor = cursor;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=deepObject,explode=true,name=filter")
+    public openapisdk.models.shared.CompaniesFilter filter;
+    public CompaniesAllQueryParams withFilter(openapisdk.models.shared.CompaniesFilter filter) {
+        this.filter = filter;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public CompaniesAllQueryParams withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=raw")
+    public Boolean raw;
+    public CompaniesAllQueryParams withRaw(Boolean raw) {
+        this.raw = raw;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=deepObject,explode=true,name=sort")
+    public openapisdk.models.shared.CompaniesSort sort;
+    public CompaniesAllQueryParams withSort(openapisdk.models.shared.CompaniesSort sort) {
+        this.sort = sort;
+        return this;
+    }
+}

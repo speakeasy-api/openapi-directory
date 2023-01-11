@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class RecommendationengineProjectsLocationsCatalogsEventStoresPredictionApiKeyRegistrationsDeleteRequest {
+    public RecommendationengineProjectsLocationsCatalogsEventStoresPredictionApiKeyRegistrationsDeletePathParams pathParams;
+    public RecommendationengineProjectsLocationsCatalogsEventStoresPredictionApiKeyRegistrationsDeleteRequest withPathParams(RecommendationengineProjectsLocationsCatalogsEventStoresPredictionApiKeyRegistrationsDeletePathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public RecommendationengineProjectsLocationsCatalogsEventStoresPredictionApiKeyRegistrationsDeleteQueryParams queryParams;
+    public RecommendationengineProjectsLocationsCatalogsEventStoresPredictionApiKeyRegistrationsDeleteRequest withQueryParams(RecommendationengineProjectsLocationsCatalogsEventStoresPredictionApiKeyRegistrationsDeleteQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public RecommendationengineProjectsLocationsCatalogsEventStoresPredictionApiKeyRegistrationsDeleteSecurity security;
+    public RecommendationengineProjectsLocationsCatalogsEventStoresPredictionApiKeyRegistrationsDeleteRequest withSecurity(RecommendationengineProjectsLocationsCatalogsEventStoresPredictionApiKeyRegistrationsDeleteSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

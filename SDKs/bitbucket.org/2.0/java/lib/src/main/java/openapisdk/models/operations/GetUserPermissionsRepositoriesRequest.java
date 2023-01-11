@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class GetUserPermissionsRepositoriesRequest {
+    public GetUserPermissionsRepositoriesQueryParams queryParams;
+    public GetUserPermissionsRepositoriesRequest withQueryParams(GetUserPermissionsRepositoriesQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public GetUserPermissionsRepositoriesSecurity security;
+    public GetUserPermissionsRepositoriesRequest withSecurity(GetUserPermissionsRepositoriesSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

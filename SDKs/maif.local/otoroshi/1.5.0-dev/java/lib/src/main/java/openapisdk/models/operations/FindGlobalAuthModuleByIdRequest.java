@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class FindGlobalAuthModuleByIdRequest {
+    public FindGlobalAuthModuleByIdPathParams pathParams;
+    public FindGlobalAuthModuleByIdRequest withPathParams(FindGlobalAuthModuleByIdPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public FindGlobalAuthModuleByIdSecurity security;
+    public FindGlobalAuthModuleByIdRequest withSecurity(FindGlobalAuthModuleByIdSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

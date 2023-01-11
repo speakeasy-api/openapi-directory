@@ -1,0 +1,26 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * WaitActivity
+ * Specifies the settings for a wait activity in a journey. This type of activity waits for a certain amount of time or until a specific date and time before moving participants to the next activity in a journey.
+**/
+public class WaitActivity {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("NextActivity")
+    public String nextActivity;
+    public WaitActivity withNextActivity(String nextActivity) {
+        this.nextActivity = nextActivity;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("WaitTime")
+    public WaitTime waitTime;
+    public WaitActivity withWaitTime(WaitTime waitTime) {
+        this.waitTime = waitTime;
+        return this;
+    }
+}

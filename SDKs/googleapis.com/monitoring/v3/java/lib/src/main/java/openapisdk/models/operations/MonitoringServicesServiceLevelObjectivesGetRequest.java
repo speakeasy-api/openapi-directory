@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class MonitoringServicesServiceLevelObjectivesGetRequest {
+    public MonitoringServicesServiceLevelObjectivesGetPathParams pathParams;
+    public MonitoringServicesServiceLevelObjectivesGetRequest withPathParams(MonitoringServicesServiceLevelObjectivesGetPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public MonitoringServicesServiceLevelObjectivesGetQueryParams queryParams;
+    public MonitoringServicesServiceLevelObjectivesGetRequest withQueryParams(MonitoringServicesServiceLevelObjectivesGetQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public MonitoringServicesServiceLevelObjectivesGetSecurity security;
+    public MonitoringServicesServiceLevelObjectivesGetRequest withSecurity(MonitoringServicesServiceLevelObjectivesGetSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

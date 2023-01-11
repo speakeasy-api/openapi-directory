@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class BloggerPageViewsGetRequest {
+    public BloggerPageViewsGetPathParams pathParams;
+    public BloggerPageViewsGetRequest withPathParams(BloggerPageViewsGetPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public BloggerPageViewsGetQueryParams queryParams;
+    public BloggerPageViewsGetRequest withQueryParams(BloggerPageViewsGetQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public BloggerPageViewsGetSecurity security;
+    public BloggerPageViewsGetRequest withSecurity(BloggerPageViewsGetSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

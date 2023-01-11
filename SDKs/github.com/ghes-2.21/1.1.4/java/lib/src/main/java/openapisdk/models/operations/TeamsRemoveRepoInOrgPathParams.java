@@ -1,0 +1,30 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class TeamsRemoveRepoInOrgPathParams {
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org")
+    public String org;
+    public TeamsRemoveRepoInOrgPathParams withOrg(String org) {
+        this.org = org;
+        return this;
+    }
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public TeamsRemoveRepoInOrgPathParams withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public TeamsRemoveRepoInOrgPathParams withRepo(String repo) {
+        this.repo = repo;
+        return this;
+    }
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=team_slug")
+    public String teamSlug;
+    public TeamsRemoveRepoInOrgPathParams withTeamSlug(String teamSlug) {
+        this.teamSlug = teamSlug;
+        return this;
+    }
+}

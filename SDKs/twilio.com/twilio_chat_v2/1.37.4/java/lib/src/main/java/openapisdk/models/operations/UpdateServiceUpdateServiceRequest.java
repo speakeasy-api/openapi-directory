@@ -1,0 +1,192 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class UpdateServiceUpdateServiceRequest {
+    @SpeakeasyMetadata("form:name=ConsumptionReportInterval")
+    public Long consumptionReportInterval;
+    public UpdateServiceUpdateServiceRequest withConsumptionReportInterval(Long consumptionReportInterval) {
+        this.consumptionReportInterval = consumptionReportInterval;
+        return this;
+    }
+    @SpeakeasyMetadata("form:name=DefaultChannelCreatorRoleSid")
+    public String defaultChannelCreatorRoleSid;
+    public UpdateServiceUpdateServiceRequest withDefaultChannelCreatorRoleSid(String defaultChannelCreatorRoleSid) {
+        this.defaultChannelCreatorRoleSid = defaultChannelCreatorRoleSid;
+        return this;
+    }
+    @SpeakeasyMetadata("form:name=DefaultChannelRoleSid")
+    public String defaultChannelRoleSid;
+    public UpdateServiceUpdateServiceRequest withDefaultChannelRoleSid(String defaultChannelRoleSid) {
+        this.defaultChannelRoleSid = defaultChannelRoleSid;
+        return this;
+    }
+    @SpeakeasyMetadata("form:name=DefaultServiceRoleSid")
+    public String defaultServiceRoleSid;
+    public UpdateServiceUpdateServiceRequest withDefaultServiceRoleSid(String defaultServiceRoleSid) {
+        this.defaultServiceRoleSid = defaultServiceRoleSid;
+        return this;
+    }
+    @SpeakeasyMetadata("form:name=FriendlyName")
+    public String friendlyName;
+    public UpdateServiceUpdateServiceRequest withFriendlyName(String friendlyName) {
+        this.friendlyName = friendlyName;
+        return this;
+    }
+    @SpeakeasyMetadata("form:name=Limits.ChannelMembers")
+    public Long limitsChannelMembers;
+    public UpdateServiceUpdateServiceRequest withLimitsChannelMembers(Long limitsChannelMembers) {
+        this.limitsChannelMembers = limitsChannelMembers;
+        return this;
+    }
+    @SpeakeasyMetadata("form:name=Limits.UserChannels")
+    public Long limitsUserChannels;
+    public UpdateServiceUpdateServiceRequest withLimitsUserChannels(Long limitsUserChannels) {
+        this.limitsUserChannels = limitsUserChannels;
+        return this;
+    }
+    @SpeakeasyMetadata("form:name=Media.CompatibilityMessage")
+    public String mediaCompatibilityMessage;
+    public UpdateServiceUpdateServiceRequest withMediaCompatibilityMessage(String mediaCompatibilityMessage) {
+        this.mediaCompatibilityMessage = mediaCompatibilityMessage;
+        return this;
+    }
+    @SpeakeasyMetadata("form:name=Notifications.AddedToChannel.Enabled")
+    public Boolean notificationsAddedToChannelEnabled;
+    public UpdateServiceUpdateServiceRequest withNotificationsAddedToChannelEnabled(Boolean notificationsAddedToChannelEnabled) {
+        this.notificationsAddedToChannelEnabled = notificationsAddedToChannelEnabled;
+        return this;
+    }
+    @SpeakeasyMetadata("form:name=Notifications.AddedToChannel.Sound")
+    public String notificationsAddedToChannelSound;
+    public UpdateServiceUpdateServiceRequest withNotificationsAddedToChannelSound(String notificationsAddedToChannelSound) {
+        this.notificationsAddedToChannelSound = notificationsAddedToChannelSound;
+        return this;
+    }
+    @SpeakeasyMetadata("form:name=Notifications.AddedToChannel.Template")
+    public String notificationsAddedToChannelTemplate;
+    public UpdateServiceUpdateServiceRequest withNotificationsAddedToChannelTemplate(String notificationsAddedToChannelTemplate) {
+        this.notificationsAddedToChannelTemplate = notificationsAddedToChannelTemplate;
+        return this;
+    }
+    @SpeakeasyMetadata("form:name=Notifications.InvitedToChannel.Enabled")
+    public Boolean notificationsInvitedToChannelEnabled;
+    public UpdateServiceUpdateServiceRequest withNotificationsInvitedToChannelEnabled(Boolean notificationsInvitedToChannelEnabled) {
+        this.notificationsInvitedToChannelEnabled = notificationsInvitedToChannelEnabled;
+        return this;
+    }
+    @SpeakeasyMetadata("form:name=Notifications.InvitedToChannel.Sound")
+    public String notificationsInvitedToChannelSound;
+    public UpdateServiceUpdateServiceRequest withNotificationsInvitedToChannelSound(String notificationsInvitedToChannelSound) {
+        this.notificationsInvitedToChannelSound = notificationsInvitedToChannelSound;
+        return this;
+    }
+    @SpeakeasyMetadata("form:name=Notifications.InvitedToChannel.Template")
+    public String notificationsInvitedToChannelTemplate;
+    public UpdateServiceUpdateServiceRequest withNotificationsInvitedToChannelTemplate(String notificationsInvitedToChannelTemplate) {
+        this.notificationsInvitedToChannelTemplate = notificationsInvitedToChannelTemplate;
+        return this;
+    }
+    @SpeakeasyMetadata("form:name=Notifications.LogEnabled")
+    public Boolean notificationsLogEnabled;
+    public UpdateServiceUpdateServiceRequest withNotificationsLogEnabled(Boolean notificationsLogEnabled) {
+        this.notificationsLogEnabled = notificationsLogEnabled;
+        return this;
+    }
+    @SpeakeasyMetadata("form:name=Notifications.NewMessage.BadgeCountEnabled")
+    public Boolean notificationsNewMessageBadgeCountEnabled;
+    public UpdateServiceUpdateServiceRequest withNotificationsNewMessageBadgeCountEnabled(Boolean notificationsNewMessageBadgeCountEnabled) {
+        this.notificationsNewMessageBadgeCountEnabled = notificationsNewMessageBadgeCountEnabled;
+        return this;
+    }
+    @SpeakeasyMetadata("form:name=Notifications.NewMessage.Enabled")
+    public Boolean notificationsNewMessageEnabled;
+    public UpdateServiceUpdateServiceRequest withNotificationsNewMessageEnabled(Boolean notificationsNewMessageEnabled) {
+        this.notificationsNewMessageEnabled = notificationsNewMessageEnabled;
+        return this;
+    }
+    @SpeakeasyMetadata("form:name=Notifications.NewMessage.Sound")
+    public String notificationsNewMessageSound;
+    public UpdateServiceUpdateServiceRequest withNotificationsNewMessageSound(String notificationsNewMessageSound) {
+        this.notificationsNewMessageSound = notificationsNewMessageSound;
+        return this;
+    }
+    @SpeakeasyMetadata("form:name=Notifications.NewMessage.Template")
+    public String notificationsNewMessageTemplate;
+    public UpdateServiceUpdateServiceRequest withNotificationsNewMessageTemplate(String notificationsNewMessageTemplate) {
+        this.notificationsNewMessageTemplate = notificationsNewMessageTemplate;
+        return this;
+    }
+    @SpeakeasyMetadata("form:name=Notifications.RemovedFromChannel.Enabled")
+    public Boolean notificationsRemovedFromChannelEnabled;
+    public UpdateServiceUpdateServiceRequest withNotificationsRemovedFromChannelEnabled(Boolean notificationsRemovedFromChannelEnabled) {
+        this.notificationsRemovedFromChannelEnabled = notificationsRemovedFromChannelEnabled;
+        return this;
+    }
+    @SpeakeasyMetadata("form:name=Notifications.RemovedFromChannel.Sound")
+    public String notificationsRemovedFromChannelSound;
+    public UpdateServiceUpdateServiceRequest withNotificationsRemovedFromChannelSound(String notificationsRemovedFromChannelSound) {
+        this.notificationsRemovedFromChannelSound = notificationsRemovedFromChannelSound;
+        return this;
+    }
+    @SpeakeasyMetadata("form:name=Notifications.RemovedFromChannel.Template")
+    public String notificationsRemovedFromChannelTemplate;
+    public UpdateServiceUpdateServiceRequest withNotificationsRemovedFromChannelTemplate(String notificationsRemovedFromChannelTemplate) {
+        this.notificationsRemovedFromChannelTemplate = notificationsRemovedFromChannelTemplate;
+        return this;
+    }
+    @SpeakeasyMetadata("form:name=PostWebhookRetryCount")
+    public Long postWebhookRetryCount;
+    public UpdateServiceUpdateServiceRequest withPostWebhookRetryCount(Long postWebhookRetryCount) {
+        this.postWebhookRetryCount = postWebhookRetryCount;
+        return this;
+    }
+    @SpeakeasyMetadata("form:name=PostWebhookUrl")
+    public String postWebhookUrl;
+    public UpdateServiceUpdateServiceRequest withPostWebhookUrl(String postWebhookUrl) {
+        this.postWebhookUrl = postWebhookUrl;
+        return this;
+    }
+    @SpeakeasyMetadata("form:name=PreWebhookRetryCount")
+    public Long preWebhookRetryCount;
+    public UpdateServiceUpdateServiceRequest withPreWebhookRetryCount(Long preWebhookRetryCount) {
+        this.preWebhookRetryCount = preWebhookRetryCount;
+        return this;
+    }
+    @SpeakeasyMetadata("form:name=PreWebhookUrl")
+    public String preWebhookUrl;
+    public UpdateServiceUpdateServiceRequest withPreWebhookUrl(String preWebhookUrl) {
+        this.preWebhookUrl = preWebhookUrl;
+        return this;
+    }
+    @SpeakeasyMetadata("form:name=ReachabilityEnabled")
+    public Boolean reachabilityEnabled;
+    public UpdateServiceUpdateServiceRequest withReachabilityEnabled(Boolean reachabilityEnabled) {
+        this.reachabilityEnabled = reachabilityEnabled;
+        return this;
+    }
+    @SpeakeasyMetadata("form:name=ReadStatusEnabled")
+    public Boolean readStatusEnabled;
+    public UpdateServiceUpdateServiceRequest withReadStatusEnabled(Boolean readStatusEnabled) {
+        this.readStatusEnabled = readStatusEnabled;
+        return this;
+    }
+    @SpeakeasyMetadata("form:name=TypingIndicatorTimeout")
+    public Long typingIndicatorTimeout;
+    public UpdateServiceUpdateServiceRequest withTypingIndicatorTimeout(Long typingIndicatorTimeout) {
+        this.typingIndicatorTimeout = typingIndicatorTimeout;
+        return this;
+    }
+    @SpeakeasyMetadata("form:name=WebhookFilters")
+    public String[] webhookFilters;
+    public UpdateServiceUpdateServiceRequest withWebhookFilters(String[] webhookFilters) {
+        this.webhookFilters = webhookFilters;
+        return this;
+    }
+    @SpeakeasyMetadata("form:name=WebhookMethod")
+    public UpdateServiceUpdateServiceRequestWebhookMethodEnum webhookMethod;
+    public UpdateServiceUpdateServiceRequest withWebhookMethod(UpdateServiceUpdateServiceRequestWebhookMethodEnum webhookMethod) {
+        this.webhookMethod = webhookMethod;
+        return this;
+    }
+}

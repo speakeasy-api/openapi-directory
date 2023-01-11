@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class AndroidpublisherMonetizationSubscriptionsDeleteRequest {
+    public AndroidpublisherMonetizationSubscriptionsDeletePathParams pathParams;
+    public AndroidpublisherMonetizationSubscriptionsDeleteRequest withPathParams(AndroidpublisherMonetizationSubscriptionsDeletePathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public AndroidpublisherMonetizationSubscriptionsDeleteQueryParams queryParams;
+    public AndroidpublisherMonetizationSubscriptionsDeleteRequest withQueryParams(AndroidpublisherMonetizationSubscriptionsDeleteQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public AndroidpublisherMonetizationSubscriptionsDeleteSecurity security;
+    public AndroidpublisherMonetizationSubscriptionsDeleteRequest withSecurity(AndroidpublisherMonetizationSubscriptionsDeleteSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

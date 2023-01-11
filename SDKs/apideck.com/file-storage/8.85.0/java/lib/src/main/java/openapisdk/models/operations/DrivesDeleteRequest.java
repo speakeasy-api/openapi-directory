@@ -1,0 +1,26 @@
+package openapisdk.models.operations;
+
+
+
+public class DrivesDeleteRequest {
+    public DrivesDeletePathParams pathParams;
+    public DrivesDeleteRequest withPathParams(DrivesDeletePathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public DrivesDeleteQueryParams queryParams;
+    public DrivesDeleteRequest withQueryParams(DrivesDeleteQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public DrivesDeleteHeaders headers;
+    public DrivesDeleteRequest withHeaders(DrivesDeleteHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+    public DrivesDeleteSecurity security;
+    public DrivesDeleteRequest withSecurity(DrivesDeleteSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

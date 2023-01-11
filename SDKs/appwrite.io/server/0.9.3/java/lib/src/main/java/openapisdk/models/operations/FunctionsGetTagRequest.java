@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class FunctionsGetTagRequest {
+    public FunctionsGetTagPathParams pathParams;
+    public FunctionsGetTagRequest withPathParams(FunctionsGetTagPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public FunctionsGetTagSecurity security;
+    public FunctionsGetTagRequest withSecurity(FunctionsGetTagSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class GetTracksTrackIdStreamsRequest {
+    public GetTracksTrackIdStreamsPathParams pathParams;
+    public GetTracksTrackIdStreamsRequest withPathParams(GetTracksTrackIdStreamsPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public GetTracksTrackIdStreamsQueryParams queryParams;
+    public GetTracksTrackIdStreamsRequest withQueryParams(GetTracksTrackIdStreamsQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public GetTracksTrackIdStreamsSecurity security;
+    public GetTracksTrackIdStreamsRequest withSecurity(GetTracksTrackIdStreamsSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

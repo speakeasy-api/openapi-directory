@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class CloudiotProjectsLocationsRegistriesDevicesConfigVersionsListRequest {
+    public CloudiotProjectsLocationsRegistriesDevicesConfigVersionsListPathParams pathParams;
+    public CloudiotProjectsLocationsRegistriesDevicesConfigVersionsListRequest withPathParams(CloudiotProjectsLocationsRegistriesDevicesConfigVersionsListPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public CloudiotProjectsLocationsRegistriesDevicesConfigVersionsListQueryParams queryParams;
+    public CloudiotProjectsLocationsRegistriesDevicesConfigVersionsListRequest withQueryParams(CloudiotProjectsLocationsRegistriesDevicesConfigVersionsListQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public CloudiotProjectsLocationsRegistriesDevicesConfigVersionsListSecurity security;
+    public CloudiotProjectsLocationsRegistriesDevicesConfigVersionsListRequest withSecurity(CloudiotProjectsLocationsRegistriesDevicesConfigVersionsListSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

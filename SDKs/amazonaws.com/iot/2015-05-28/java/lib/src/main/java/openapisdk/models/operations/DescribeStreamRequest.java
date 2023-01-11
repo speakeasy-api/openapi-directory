@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class DescribeStreamRequest {
+    public DescribeStreamPathParams pathParams;
+    public DescribeStreamRequest withPathParams(DescribeStreamPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public DescribeStreamHeaders headers;
+    public DescribeStreamRequest withHeaders(DescribeStreamHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+}

@@ -1,0 +1,86 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * NewPrivateVirtualInterface
+ * Information about a private virtual interface.
+**/
+public class NewPrivateVirtualInterface {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("addressFamily")
+    public AddressFamilyEnum addressFamily;
+    public NewPrivateVirtualInterface withAddressFamily(AddressFamilyEnum addressFamily) {
+        this.addressFamily = addressFamily;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("amazonAddress")
+    public String amazonAddress;
+    public NewPrivateVirtualInterface withAmazonAddress(String amazonAddress) {
+        this.amazonAddress = amazonAddress;
+        return this;
+    }
+    @JsonProperty("asn")
+    public Long asn;
+    public NewPrivateVirtualInterface withAsn(Long asn) {
+        this.asn = asn;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("authKey")
+    public String authKey;
+    public NewPrivateVirtualInterface withAuthKey(String authKey) {
+        this.authKey = authKey;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("customerAddress")
+    public String customerAddress;
+    public NewPrivateVirtualInterface withCustomerAddress(String customerAddress) {
+        this.customerAddress = customerAddress;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("directConnectGatewayId")
+    public String directConnectGatewayId;
+    public NewPrivateVirtualInterface withDirectConnectGatewayId(String directConnectGatewayId) {
+        this.directConnectGatewayId = directConnectGatewayId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("mtu")
+    public Long mtu;
+    public NewPrivateVirtualInterface withMtu(Long mtu) {
+        this.mtu = mtu;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("tags")
+    public Tag[] tags;
+    public NewPrivateVirtualInterface withTags(Tag[] tags) {
+        this.tags = tags;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("virtualGatewayId")
+    public String virtualGatewayId;
+    public NewPrivateVirtualInterface withVirtualGatewayId(String virtualGatewayId) {
+        this.virtualGatewayId = virtualGatewayId;
+        return this;
+    }
+    @JsonProperty("virtualInterfaceName")
+    public String virtualInterfaceName;
+    public NewPrivateVirtualInterface withVirtualInterfaceName(String virtualInterfaceName) {
+        this.virtualInterfaceName = virtualInterfaceName;
+        return this;
+    }
+    @JsonProperty("vlan")
+    public Long vlan;
+    public NewPrivateVirtualInterface withVlan(Long vlan) {
+        this.vlan = vlan;
+        return this;
+    }
+}

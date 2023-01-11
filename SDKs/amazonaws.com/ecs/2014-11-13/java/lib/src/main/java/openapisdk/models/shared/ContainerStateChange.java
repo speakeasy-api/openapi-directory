@@ -1,0 +1,61 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * ContainerStateChange
+ * An object representing a change in state for a container.
+**/
+public class ContainerStateChange {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("containerName")
+    public String containerName;
+    public ContainerStateChange withContainerName(String containerName) {
+        this.containerName = containerName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("exitCode")
+    public Long exitCode;
+    public ContainerStateChange withExitCode(Long exitCode) {
+        this.exitCode = exitCode;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("imageDigest")
+    public String imageDigest;
+    public ContainerStateChange withImageDigest(String imageDigest) {
+        this.imageDigest = imageDigest;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("networkBindings")
+    public NetworkBinding[] networkBindings;
+    public ContainerStateChange withNetworkBindings(NetworkBinding[] networkBindings) {
+        this.networkBindings = networkBindings;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("reason")
+    public String reason;
+    public ContainerStateChange withReason(String reason) {
+        this.reason = reason;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("runtimeId")
+    public String runtimeId;
+    public ContainerStateChange withRuntimeId(String runtimeId) {
+        this.runtimeId = runtimeId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("status")
+    public String status;
+    public ContainerStateChange withStatus(String status) {
+        this.status = status;
+        return this;
+    }
+}

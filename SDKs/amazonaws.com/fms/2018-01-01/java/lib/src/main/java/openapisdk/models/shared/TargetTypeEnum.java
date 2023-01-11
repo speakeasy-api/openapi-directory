@@ -1,0 +1,21 @@
+package openapisdk.models.shared;
+
+
+public enum TargetTypeEnum {
+    GATEWAY("GATEWAY"),
+    CARRIER_GATEWAY("CARRIER_GATEWAY"),
+    INSTANCE("INSTANCE"),
+    LOCAL_GATEWAY("LOCAL_GATEWAY"),
+    NAT_GATEWAY("NAT_GATEWAY"),
+    NETWORK_INTERFACE("NETWORK_INTERFACE"),
+    VPC_ENDPOINT("VPC_ENDPOINT"),
+    VPC_PEERING_CONNECTION("VPC_PEERING_CONNECTION"),
+    EGRESS_ONLY_INTERNET_GATEWAY("EGRESS_ONLY_INTERNET_GATEWAY"),
+    TRANSIT_GATEWAY("TRANSIT_GATEWAY");
+
+    public final String value;
+
+    private TargetTypeEnum(String value) {
+        this.value = value;
+    }
+}

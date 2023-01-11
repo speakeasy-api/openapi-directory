@@ -1,0 +1,22 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class AddProfileKeyRequest {
+    public AddProfileKeyPathParams pathParams;
+    public AddProfileKeyRequest withPathParams(AddProfileKeyPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public AddProfileKeyHeaders headers;
+    public AddProfileKeyRequest withHeaders(AddProfileKeyHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public AddProfileKeyRequestBody request;
+    public AddProfileKeyRequest withRequest(AddProfileKeyRequestBody request) {
+        this.request = request;
+        return this;
+    }
+}

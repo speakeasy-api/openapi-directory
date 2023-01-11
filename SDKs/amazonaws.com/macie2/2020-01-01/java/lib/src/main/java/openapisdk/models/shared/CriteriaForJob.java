@@ -1,0 +1,26 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * CriteriaForJob
+ * Specifies a property- or tag-based condition that defines criteria for including or excluding S3 buckets from a classification job.
+**/
+public class CriteriaForJob {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("simpleCriterion")
+    public SimpleCriterionForJob simpleCriterion;
+    public CriteriaForJob withSimpleCriterion(SimpleCriterionForJob simpleCriterion) {
+        this.simpleCriterion = simpleCriterion;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("tagCriterion")
+    public TagCriterionForJob tagCriterion;
+    public CriteriaForJob withTagCriterion(TagCriterionForJob tagCriterion) {
+        this.tagCriterion = tagCriterion;
+        return this;
+    }
+}

@@ -1,0 +1,40 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * AwsCloudFrontDistributionLogging
+ * A complex type that controls whether access logs are written for the distribution.
+**/
+public class AwsCloudFrontDistributionLogging {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Bucket")
+    public String bucket;
+    public AwsCloudFrontDistributionLogging withBucket(String bucket) {
+        this.bucket = bucket;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Enabled")
+    public Boolean enabled;
+    public AwsCloudFrontDistributionLogging withEnabled(Boolean enabled) {
+        this.enabled = enabled;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("IncludeCookies")
+    public Boolean includeCookies;
+    public AwsCloudFrontDistributionLogging withIncludeCookies(Boolean includeCookies) {
+        this.includeCookies = includeCookies;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Prefix")
+    public String prefix;
+    public AwsCloudFrontDistributionLogging withPrefix(String prefix) {
+        this.prefix = prefix;
+        return this;
+    }
+}

@@ -1,0 +1,18 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class DeleteSipCredentialListPathParams {
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=AccountSid")
+    public String accountSid;
+    public DeleteSipCredentialListPathParams withAccountSid(String accountSid) {
+        this.accountSid = accountSid;
+        return this;
+    }
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public DeleteSipCredentialListPathParams withSid(String sid) {
+        this.sid = sid;
+        return this;
+    }
+}

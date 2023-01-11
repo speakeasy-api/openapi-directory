@@ -1,0 +1,75 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * GameSessionQueue
+ * <p>Configuration for a game session placement mechanism that processes requests for new game sessions. A queue can be used on its own or as part of a matchmaking solution.</p> <p> <b>Related actions</b> </p> <p> <a>CreateGameSessionQueue</a> | <a>DescribeGameSessionQueues</a> | <a>UpdateGameSessionQueue</a> </p>
+**/
+public class GameSessionQueue {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("CustomEventData")
+    public String customEventData;
+    public GameSessionQueue withCustomEventData(String customEventData) {
+        this.customEventData = customEventData;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Destinations")
+    public GameSessionQueueDestination[] destinations;
+    public GameSessionQueue withDestinations(GameSessionQueueDestination[] destinations) {
+        this.destinations = destinations;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("FilterConfiguration")
+    public FilterConfiguration filterConfiguration;
+    public GameSessionQueue withFilterConfiguration(FilterConfiguration filterConfiguration) {
+        this.filterConfiguration = filterConfiguration;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("GameSessionQueueArn")
+    public String gameSessionQueueArn;
+    public GameSessionQueue withGameSessionQueueArn(String gameSessionQueueArn) {
+        this.gameSessionQueueArn = gameSessionQueueArn;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Name")
+    public String name;
+    public GameSessionQueue withName(String name) {
+        this.name = name;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("NotificationTarget")
+    public String notificationTarget;
+    public GameSessionQueue withNotificationTarget(String notificationTarget) {
+        this.notificationTarget = notificationTarget;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("PlayerLatencyPolicies")
+    public PlayerLatencyPolicy[] playerLatencyPolicies;
+    public GameSessionQueue withPlayerLatencyPolicies(PlayerLatencyPolicy[] playerLatencyPolicies) {
+        this.playerLatencyPolicies = playerLatencyPolicies;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("PriorityConfiguration")
+    public PriorityConfiguration priorityConfiguration;
+    public GameSessionQueue withPriorityConfiguration(PriorityConfiguration priorityConfiguration) {
+        this.priorityConfiguration = priorityConfiguration;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("TimeoutInSeconds")
+    public Long timeoutInSeconds;
+    public GameSessionQueue withTimeoutInSeconds(Long timeoutInSeconds) {
+        this.timeoutInSeconds = timeoutInSeconds;
+        return this;
+    }
+}

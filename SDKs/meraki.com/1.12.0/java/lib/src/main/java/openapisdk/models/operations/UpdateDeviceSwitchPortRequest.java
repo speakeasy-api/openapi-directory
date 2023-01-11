@@ -1,0 +1,17 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class UpdateDeviceSwitchPortRequest {
+    public UpdateDeviceSwitchPortPathParams pathParams;
+    public UpdateDeviceSwitchPortRequest withPathParams(UpdateDeviceSwitchPortPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public UpdateDeviceSwitchPortRequestBody request;
+    public UpdateDeviceSwitchPortRequest withRequest(UpdateDeviceSwitchPortRequestBody request) {
+        this.request = request;
+        return this;
+    }
+}

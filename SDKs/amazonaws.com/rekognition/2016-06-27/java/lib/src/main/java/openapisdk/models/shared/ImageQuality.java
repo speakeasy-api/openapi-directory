@@ -1,0 +1,26 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * ImageQuality
+ * Identifies face image brightness and sharpness. 
+**/
+public class ImageQuality {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Brightness")
+    public Float brightness;
+    public ImageQuality withBrightness(Float brightness) {
+        this.brightness = brightness;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Sharpness")
+    public Float sharpness;
+    public ImageQuality withSharpness(Float sharpness) {
+        this.sharpness = sharpness;
+        return this;
+    }
+}

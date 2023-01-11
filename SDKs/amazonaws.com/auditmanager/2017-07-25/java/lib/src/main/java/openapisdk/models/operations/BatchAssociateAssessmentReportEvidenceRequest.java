@@ -1,0 +1,22 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class BatchAssociateAssessmentReportEvidenceRequest {
+    public BatchAssociateAssessmentReportEvidencePathParams pathParams;
+    public BatchAssociateAssessmentReportEvidenceRequest withPathParams(BatchAssociateAssessmentReportEvidencePathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public BatchAssociateAssessmentReportEvidenceHeaders headers;
+    public BatchAssociateAssessmentReportEvidenceRequest withHeaders(BatchAssociateAssessmentReportEvidenceHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public BatchAssociateAssessmentReportEvidenceRequestBody request;
+    public BatchAssociateAssessmentReportEvidenceRequest withRequest(BatchAssociateAssessmentReportEvidenceRequestBody request) {
+        this.request = request;
+        return this;
+    }
+}

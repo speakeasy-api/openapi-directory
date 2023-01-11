@@ -1,0 +1,82 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class StartWorkflowExecutionInput {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("childPolicy")
+    public ChildPolicyEnum childPolicy;
+    public StartWorkflowExecutionInput withChildPolicy(ChildPolicyEnum childPolicy) {
+        this.childPolicy = childPolicy;
+        return this;
+    }
+    @JsonProperty("domain")
+    public String domain;
+    public StartWorkflowExecutionInput withDomain(String domain) {
+        this.domain = domain;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("executionStartToCloseTimeout")
+    public String executionStartToCloseTimeout;
+    public StartWorkflowExecutionInput withExecutionStartToCloseTimeout(String executionStartToCloseTimeout) {
+        this.executionStartToCloseTimeout = executionStartToCloseTimeout;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("input")
+    public String input;
+    public StartWorkflowExecutionInput withInput(String input) {
+        this.input = input;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("lambdaRole")
+    public String lambdaRole;
+    public StartWorkflowExecutionInput withLambdaRole(String lambdaRole) {
+        this.lambdaRole = lambdaRole;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("tagList")
+    public String[] tagList;
+    public StartWorkflowExecutionInput withTagList(String[] tagList) {
+        this.tagList = tagList;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("taskList")
+    public TaskList taskList;
+    public StartWorkflowExecutionInput withTaskList(TaskList taskList) {
+        this.taskList = taskList;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("taskPriority")
+    public String taskPriority;
+    public StartWorkflowExecutionInput withTaskPriority(String taskPriority) {
+        this.taskPriority = taskPriority;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("taskStartToCloseTimeout")
+    public String taskStartToCloseTimeout;
+    public StartWorkflowExecutionInput withTaskStartToCloseTimeout(String taskStartToCloseTimeout) {
+        this.taskStartToCloseTimeout = taskStartToCloseTimeout;
+        return this;
+    }
+    @JsonProperty("workflowId")
+    public String workflowId;
+    public StartWorkflowExecutionInput withWorkflowId(String workflowId) {
+        this.workflowId = workflowId;
+        return this;
+    }
+    @JsonProperty("workflowType")
+    public WorkflowType workflowType;
+    public StartWorkflowExecutionInput withWorkflowType(WorkflowType workflowType) {
+        this.workflowType = workflowType;
+        return this;
+    }
+}

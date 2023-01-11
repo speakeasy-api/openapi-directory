@@ -1,0 +1,19 @@
+package openapisdk.models.operations;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * RemoveAttributesRequestBodyUpdateAttributesRequest
+ * Specifies one or more attributes to remove from all the endpoints that are associated with an application.
+**/
+public class RemoveAttributesRequestBodyUpdateAttributesRequest {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Blacklist")
+    public String[] blacklist;
+    public RemoveAttributesRequestBodyUpdateAttributesRequest withBlacklist(String[] blacklist) {
+        this.blacklist = blacklist;
+        return this;
+    }
+}

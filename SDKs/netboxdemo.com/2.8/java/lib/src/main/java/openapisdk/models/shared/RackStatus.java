@@ -1,0 +1,18 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+public class RackStatus {
+    @JsonProperty("label")
+    public RackStatusLabelEnum label;
+    public RackStatus withLabel(RackStatusLabelEnum label) {
+        this.label = label;
+        return this;
+    }
+    @JsonProperty("value")
+    public RackStatusValueEnum value;
+    public RackStatus withValue(RackStatusValueEnum value) {
+        this.value = value;
+        return this;
+    }
+}

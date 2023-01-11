@@ -1,0 +1,22 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+/**
+ * ExternalWorkflowExecutionCancelRequestedEventAttributes
+ * Provides the details of the <code>ExternalWorkflowExecutionCancelRequested</code> event.
+**/
+public class ExternalWorkflowExecutionCancelRequestedEventAttributes {
+    @JsonProperty("initiatedEventId")
+    public Long initiatedEventId;
+    public ExternalWorkflowExecutionCancelRequestedEventAttributes withInitiatedEventId(Long initiatedEventId) {
+        this.initiatedEventId = initiatedEventId;
+        return this;
+    }
+    @JsonProperty("workflowExecution")
+    public WorkflowExecution workflowExecution;
+    public ExternalWorkflowExecutionCancelRequestedEventAttributes withWorkflowExecution(WorkflowExecution workflowExecution) {
+        this.workflowExecution = workflowExecution;
+        return this;
+    }
+}

@@ -1,0 +1,264 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * S3Settings
+ * Settings for exporting data to Amazon S3. 
+**/
+public class S3Settings {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("AddColumnName")
+    public Boolean addColumnName;
+    public S3Settings withAddColumnName(Boolean addColumnName) {
+        this.addColumnName = addColumnName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("BucketFolder")
+    public String bucketFolder;
+    public S3Settings withBucketFolder(String bucketFolder) {
+        this.bucketFolder = bucketFolder;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("BucketName")
+    public String bucketName;
+    public S3Settings withBucketName(String bucketName) {
+        this.bucketName = bucketName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("CannedAclForObjects")
+    public CannedAclForObjectsValueEnum cannedAclForObjects;
+    public S3Settings withCannedAclForObjects(CannedAclForObjectsValueEnum cannedAclForObjects) {
+        this.cannedAclForObjects = cannedAclForObjects;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("CdcInsertsAndUpdates")
+    public Boolean cdcInsertsAndUpdates;
+    public S3Settings withCdcInsertsAndUpdates(Boolean cdcInsertsAndUpdates) {
+        this.cdcInsertsAndUpdates = cdcInsertsAndUpdates;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("CdcInsertsOnly")
+    public Boolean cdcInsertsOnly;
+    public S3Settings withCdcInsertsOnly(Boolean cdcInsertsOnly) {
+        this.cdcInsertsOnly = cdcInsertsOnly;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("CdcMaxBatchInterval")
+    public Long cdcMaxBatchInterval;
+    public S3Settings withCdcMaxBatchInterval(Long cdcMaxBatchInterval) {
+        this.cdcMaxBatchInterval = cdcMaxBatchInterval;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("CdcMinFileSize")
+    public Long cdcMinFileSize;
+    public S3Settings withCdcMinFileSize(Long cdcMinFileSize) {
+        this.cdcMinFileSize = cdcMinFileSize;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("CdcPath")
+    public String cdcPath;
+    public S3Settings withCdcPath(String cdcPath) {
+        this.cdcPath = cdcPath;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("CompressionType")
+    public CompressionTypeValueEnum compressionType;
+    public S3Settings withCompressionType(CompressionTypeValueEnum compressionType) {
+        this.compressionType = compressionType;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("CsvDelimiter")
+    public String csvDelimiter;
+    public S3Settings withCsvDelimiter(String csvDelimiter) {
+        this.csvDelimiter = csvDelimiter;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("CsvNoSupValue")
+    public String csvNoSupValue;
+    public S3Settings withCsvNoSupValue(String csvNoSupValue) {
+        this.csvNoSupValue = csvNoSupValue;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("CsvNullValue")
+    public String csvNullValue;
+    public S3Settings withCsvNullValue(String csvNullValue) {
+        this.csvNullValue = csvNullValue;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("CsvRowDelimiter")
+    public String csvRowDelimiter;
+    public S3Settings withCsvRowDelimiter(String csvRowDelimiter) {
+        this.csvRowDelimiter = csvRowDelimiter;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("DataFormat")
+    public DataFormatValueEnum dataFormat;
+    public S3Settings withDataFormat(DataFormatValueEnum dataFormat) {
+        this.dataFormat = dataFormat;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("DataPageSize")
+    public Long dataPageSize;
+    public S3Settings withDataPageSize(Long dataPageSize) {
+        this.dataPageSize = dataPageSize;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("DatePartitionDelimiter")
+    public DatePartitionDelimiterValueEnum datePartitionDelimiter;
+    public S3Settings withDatePartitionDelimiter(DatePartitionDelimiterValueEnum datePartitionDelimiter) {
+        this.datePartitionDelimiter = datePartitionDelimiter;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("DatePartitionEnabled")
+    public Boolean datePartitionEnabled;
+    public S3Settings withDatePartitionEnabled(Boolean datePartitionEnabled) {
+        this.datePartitionEnabled = datePartitionEnabled;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("DatePartitionSequence")
+    public DatePartitionSequenceValueEnum datePartitionSequence;
+    public S3Settings withDatePartitionSequence(DatePartitionSequenceValueEnum datePartitionSequence) {
+        this.datePartitionSequence = datePartitionSequence;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("DictPageSizeLimit")
+    public Long dictPageSizeLimit;
+    public S3Settings withDictPageSizeLimit(Long dictPageSizeLimit) {
+        this.dictPageSizeLimit = dictPageSizeLimit;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("EnableStatistics")
+    public Boolean enableStatistics;
+    public S3Settings withEnableStatistics(Boolean enableStatistics) {
+        this.enableStatistics = enableStatistics;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("EncodingType")
+    public EncodingTypeValueEnum encodingType;
+    public S3Settings withEncodingType(EncodingTypeValueEnum encodingType) {
+        this.encodingType = encodingType;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("EncryptionMode")
+    public EncryptionModeValueEnum encryptionMode;
+    public S3Settings withEncryptionMode(EncryptionModeValueEnum encryptionMode) {
+        this.encryptionMode = encryptionMode;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ExternalTableDefinition")
+    public String externalTableDefinition;
+    public S3Settings withExternalTableDefinition(String externalTableDefinition) {
+        this.externalTableDefinition = externalTableDefinition;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("IgnoreHeaderRows")
+    public Long ignoreHeaderRows;
+    public S3Settings withIgnoreHeaderRows(Long ignoreHeaderRows) {
+        this.ignoreHeaderRows = ignoreHeaderRows;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("IncludeOpForFullLoad")
+    public Boolean includeOpForFullLoad;
+    public S3Settings withIncludeOpForFullLoad(Boolean includeOpForFullLoad) {
+        this.includeOpForFullLoad = includeOpForFullLoad;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("MaxFileSize")
+    public Long maxFileSize;
+    public S3Settings withMaxFileSize(Long maxFileSize) {
+        this.maxFileSize = maxFileSize;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ParquetTimestampInMillisecond")
+    public Boolean parquetTimestampInMillisecond;
+    public S3Settings withParquetTimestampInMillisecond(Boolean parquetTimestampInMillisecond) {
+        this.parquetTimestampInMillisecond = parquetTimestampInMillisecond;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ParquetVersion")
+    public ParquetVersionValueEnum parquetVersion;
+    public S3Settings withParquetVersion(ParquetVersionValueEnum parquetVersion) {
+        this.parquetVersion = parquetVersion;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("PreserveTransactions")
+    public Boolean preserveTransactions;
+    public S3Settings withPreserveTransactions(Boolean preserveTransactions) {
+        this.preserveTransactions = preserveTransactions;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Rfc4180")
+    public Boolean rfc4180;
+    public S3Settings withRfc4180(Boolean rfc4180) {
+        this.rfc4180 = rfc4180;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("RowGroupLength")
+    public Long rowGroupLength;
+    public S3Settings withRowGroupLength(Long rowGroupLength) {
+        this.rowGroupLength = rowGroupLength;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ServerSideEncryptionKmsKeyId")
+    public String serverSideEncryptionKmsKeyId;
+    public S3Settings withServerSideEncryptionKmsKeyId(String serverSideEncryptionKmsKeyId) {
+        this.serverSideEncryptionKmsKeyId = serverSideEncryptionKmsKeyId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ServiceAccessRoleArn")
+    public String serviceAccessRoleArn;
+    public S3Settings withServiceAccessRoleArn(String serviceAccessRoleArn) {
+        this.serviceAccessRoleArn = serviceAccessRoleArn;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("TimestampColumnName")
+    public String timestampColumnName;
+    public S3Settings withTimestampColumnName(String timestampColumnName) {
+        this.timestampColumnName = timestampColumnName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("UseCsvNoSupValue")
+    public Boolean useCsvNoSupValue;
+    public S3Settings withUseCsvNoSupValue(Boolean useCsvNoSupValue) {
+        this.useCsvNoSupValue = useCsvNoSupValue;
+        return this;
+    }
+}

@@ -1,0 +1,20 @@
+package openapisdk.models.shared;
+
+
+
+/**
+ * Limit
+ * Information about an Elastic Load Balancing resource limit for your AWS account.
+**/
+public class Limit {
+    public String max;
+    public Limit withMax(String max) {
+        this.max = max;
+        return this;
+    }
+    public String name;
+    public Limit withName(String name) {
+        this.name = name;
+        return this;
+    }
+}

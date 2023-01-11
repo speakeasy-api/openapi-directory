@@ -1,0 +1,22 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class CreateStreamingSessionStreamRequest {
+    public CreateStreamingSessionStreamPathParams pathParams;
+    public CreateStreamingSessionStreamRequest withPathParams(CreateStreamingSessionStreamPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public CreateStreamingSessionStreamHeaders headers;
+    public CreateStreamingSessionStreamRequest withHeaders(CreateStreamingSessionStreamHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public CreateStreamingSessionStreamRequestBody request;
+    public CreateStreamingSessionStreamRequest withRequest(CreateStreamingSessionStreamRequestBody request) {
+        this.request = request;
+        return this;
+    }
+}

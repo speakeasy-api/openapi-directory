@@ -1,0 +1,27 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class GetJobRunRequest {
+    @JsonProperty("JobName")
+    public String jobName;
+    public GetJobRunRequest withJobName(String jobName) {
+        this.jobName = jobName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("PredecessorsIncluded")
+    public Boolean predecessorsIncluded;
+    public GetJobRunRequest withPredecessorsIncluded(Boolean predecessorsIncluded) {
+        this.predecessorsIncluded = predecessorsIncluded;
+        return this;
+    }
+    @JsonProperty("RunId")
+    public String runId;
+    public GetJobRunRequest withRunId(String runId) {
+        this.runId = runId;
+        return this;
+    }
+}

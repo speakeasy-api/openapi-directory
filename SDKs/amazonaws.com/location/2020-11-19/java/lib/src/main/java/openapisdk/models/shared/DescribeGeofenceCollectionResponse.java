@@ -1,0 +1,74 @@
+package openapisdk.models.shared;
+
+import java.time.OffsetDateTime;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import openapisdk.utils.DateTimeSerializer;
+import openapisdk.utils.DateTimeDeserializer;
+
+public class DescribeGeofenceCollectionResponse {
+    @JsonProperty("CollectionArn")
+    public String collectionArn;
+    public DescribeGeofenceCollectionResponse withCollectionArn(String collectionArn) {
+        this.collectionArn = collectionArn;
+        return this;
+    }
+    @JsonProperty("CollectionName")
+    public String collectionName;
+    public DescribeGeofenceCollectionResponse withCollectionName(String collectionName) {
+        this.collectionName = collectionName;
+        return this;
+    }
+    @JsonSerialize(using = DateTimeSerializer.class)
+    @JsonDeserialize(using = DateTimeDeserializer.class)
+    @JsonProperty("CreateTime")
+    public OffsetDateTime createTime;
+    public DescribeGeofenceCollectionResponse withCreateTime(OffsetDateTime createTime) {
+        this.createTime = createTime;
+        return this;
+    }
+    @JsonProperty("Description")
+    public String description;
+    public DescribeGeofenceCollectionResponse withDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("KmsKeyId")
+    public String kmsKeyId;
+    public DescribeGeofenceCollectionResponse withKmsKeyId(String kmsKeyId) {
+        this.kmsKeyId = kmsKeyId;
+        return this;
+    }
+    @JsonProperty("PricingPlan")
+    public PricingPlanEnum pricingPlan;
+    public DescribeGeofenceCollectionResponse withPricingPlan(PricingPlanEnum pricingPlan) {
+        this.pricingPlan = pricingPlan;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("PricingPlanDataSource")
+    public String pricingPlanDataSource;
+    public DescribeGeofenceCollectionResponse withPricingPlanDataSource(String pricingPlanDataSource) {
+        this.pricingPlanDataSource = pricingPlanDataSource;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Tags")
+    public java.util.Map<String, String> tags;
+    public DescribeGeofenceCollectionResponse withTags(java.util.Map<String, String> tags) {
+        this.tags = tags;
+        return this;
+    }
+    @JsonSerialize(using = DateTimeSerializer.class)
+    @JsonDeserialize(using = DateTimeDeserializer.class)
+    @JsonProperty("UpdateTime")
+    public OffsetDateTime updateTime;
+    public DescribeGeofenceCollectionResponse withUpdateTime(OffsetDateTime updateTime) {
+        this.updateTime = updateTime;
+        return this;
+    }
+}

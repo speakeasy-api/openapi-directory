@@ -1,0 +1,30 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class FirebasehostingSitesDomainsListSecurity {
+    @SpeakeasyMetadata("security:option=true")
+    public FirebasehostingSitesDomainsListSecurityOption1 option1;
+    public FirebasehostingSitesDomainsListSecurity withOption1(FirebasehostingSitesDomainsListSecurityOption1 option1) {
+        this.option1 = option1;
+        return this;
+    }
+    @SpeakeasyMetadata("security:option=true")
+    public FirebasehostingSitesDomainsListSecurityOption2 option2;
+    public FirebasehostingSitesDomainsListSecurity withOption2(FirebasehostingSitesDomainsListSecurityOption2 option2) {
+        this.option2 = option2;
+        return this;
+    }
+    @SpeakeasyMetadata("security:option=true")
+    public FirebasehostingSitesDomainsListSecurityOption3 option3;
+    public FirebasehostingSitesDomainsListSecurity withOption3(FirebasehostingSitesDomainsListSecurityOption3 option3) {
+        this.option3 = option3;
+        return this;
+    }
+    @SpeakeasyMetadata("security:option=true")
+    public FirebasehostingSitesDomainsListSecurityOption4 option4;
+    public FirebasehostingSitesDomainsListSecurity withOption4(FirebasehostingSitesDomainsListSecurityOption4 option4) {
+        this.option4 = option4;
+        return this;
+    }
+}

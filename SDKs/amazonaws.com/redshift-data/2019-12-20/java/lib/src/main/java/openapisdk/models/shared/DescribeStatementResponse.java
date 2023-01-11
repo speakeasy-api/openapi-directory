@@ -1,0 +1,142 @@
+package openapisdk.models.shared;
+
+import java.time.OffsetDateTime;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import openapisdk.utils.DateTimeSerializer;
+import openapisdk.utils.DateTimeDeserializer;
+
+public class DescribeStatementResponse {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ClusterIdentifier")
+    public String clusterIdentifier;
+    public DescribeStatementResponse withClusterIdentifier(String clusterIdentifier) {
+        this.clusterIdentifier = clusterIdentifier;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonSerialize(contentUsing = DateTimeSerializer.class)
+    @JsonDeserialize(contentUsing = DateTimeDeserializer.class)
+    @JsonProperty("CreatedAt")
+    public OffsetDateTime createdAt;
+    public DescribeStatementResponse withCreatedAt(OffsetDateTime createdAt) {
+        this.createdAt = createdAt;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Database")
+    public String database;
+    public DescribeStatementResponse withDatabase(String database) {
+        this.database = database;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("DbUser")
+    public String dbUser;
+    public DescribeStatementResponse withDbUser(String dbUser) {
+        this.dbUser = dbUser;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Duration")
+    public Long duration;
+    public DescribeStatementResponse withDuration(Long duration) {
+        this.duration = duration;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Error")
+    public String error;
+    public DescribeStatementResponse withError(String error) {
+        this.error = error;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("HasResultSet")
+    public Boolean hasResultSet;
+    public DescribeStatementResponse withHasResultSet(Boolean hasResultSet) {
+        this.hasResultSet = hasResultSet;
+        return this;
+    }
+    @JsonProperty("Id")
+    public String id;
+    public DescribeStatementResponse withId(String id) {
+        this.id = id;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("QueryParameters")
+    public SqlParameter[] queryParameters;
+    public DescribeStatementResponse withQueryParameters(SqlParameter[] queryParameters) {
+        this.queryParameters = queryParameters;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("QueryString")
+    public String queryString;
+    public DescribeStatementResponse withQueryString(String queryString) {
+        this.queryString = queryString;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("RedshiftPid")
+    public Long redshiftPid;
+    public DescribeStatementResponse withRedshiftPid(Long redshiftPid) {
+        this.redshiftPid = redshiftPid;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("RedshiftQueryId")
+    public Long redshiftQueryId;
+    public DescribeStatementResponse withRedshiftQueryId(Long redshiftQueryId) {
+        this.redshiftQueryId = redshiftQueryId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ResultRows")
+    public Long resultRows;
+    public DescribeStatementResponse withResultRows(Long resultRows) {
+        this.resultRows = resultRows;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ResultSize")
+    public Long resultSize;
+    public DescribeStatementResponse withResultSize(Long resultSize) {
+        this.resultSize = resultSize;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("SecretArn")
+    public String secretArn;
+    public DescribeStatementResponse withSecretArn(String secretArn) {
+        this.secretArn = secretArn;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Status")
+    public StatusStringEnum status;
+    public DescribeStatementResponse withStatus(StatusStringEnum status) {
+        this.status = status;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("SubStatements")
+    public SubStatementData[] subStatements;
+    public DescribeStatementResponse withSubStatements(SubStatementData[] subStatements) {
+        this.subStatements = subStatements;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonSerialize(contentUsing = DateTimeSerializer.class)
+    @JsonDeserialize(contentUsing = DateTimeDeserializer.class)
+    @JsonProperty("UpdatedAt")
+    public OffsetDateTime updatedAt;
+    public DescribeStatementResponse withUpdatedAt(OffsetDateTime updatedAt) {
+        this.updatedAt = updatedAt;
+        return this;
+    }
+}

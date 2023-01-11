@@ -1,0 +1,89 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * CloudWatchLogsLogStream
+ * Describes the Amazon CloudWatch logs configuration for a layer. For detailed information about members of this data type, see the <a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/AgentReference.html">CloudWatch Logs Agent Reference</a>.
+**/
+public class CloudWatchLogsLogStream {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("BatchCount")
+    public Long batchCount;
+    public CloudWatchLogsLogStream withBatchCount(Long batchCount) {
+        this.batchCount = batchCount;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("BatchSize")
+    public Long batchSize;
+    public CloudWatchLogsLogStream withBatchSize(Long batchSize) {
+        this.batchSize = batchSize;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("BufferDuration")
+    public Long bufferDuration;
+    public CloudWatchLogsLogStream withBufferDuration(Long bufferDuration) {
+        this.bufferDuration = bufferDuration;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("DatetimeFormat")
+    public String datetimeFormat;
+    public CloudWatchLogsLogStream withDatetimeFormat(String datetimeFormat) {
+        this.datetimeFormat = datetimeFormat;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Encoding")
+    public CloudWatchLogsEncodingEnum encoding;
+    public CloudWatchLogsLogStream withEncoding(CloudWatchLogsEncodingEnum encoding) {
+        this.encoding = encoding;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("File")
+    public String file;
+    public CloudWatchLogsLogStream withFile(String file) {
+        this.file = file;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("FileFingerprintLines")
+    public String fileFingerprintLines;
+    public CloudWatchLogsLogStream withFileFingerprintLines(String fileFingerprintLines) {
+        this.fileFingerprintLines = fileFingerprintLines;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("InitialPosition")
+    public CloudWatchLogsInitialPositionEnum initialPosition;
+    public CloudWatchLogsLogStream withInitialPosition(CloudWatchLogsInitialPositionEnum initialPosition) {
+        this.initialPosition = initialPosition;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("LogGroupName")
+    public String logGroupName;
+    public CloudWatchLogsLogStream withLogGroupName(String logGroupName) {
+        this.logGroupName = logGroupName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("MultiLineStartPattern")
+    public String multiLineStartPattern;
+    public CloudWatchLogsLogStream withMultiLineStartPattern(String multiLineStartPattern) {
+        this.multiLineStartPattern = multiLineStartPattern;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("TimeZone")
+    public CloudWatchLogsTimeZoneEnum timeZone;
+    public CloudWatchLogsLogStream withTimeZone(CloudWatchLogsTimeZoneEnum timeZone) {
+        this.timeZone = timeZone;
+        return this;
+    }
+}

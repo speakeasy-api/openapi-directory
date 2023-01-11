@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class GetCommitteeCommitteeIdCandidatesHistoryCycleRequest {
+    public GetCommitteeCommitteeIdCandidatesHistoryCyclePathParams pathParams;
+    public GetCommitteeCommitteeIdCandidatesHistoryCycleRequest withPathParams(GetCommitteeCommitteeIdCandidatesHistoryCyclePathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public GetCommitteeCommitteeIdCandidatesHistoryCycleQueryParams queryParams;
+    public GetCommitteeCommitteeIdCandidatesHistoryCycleRequest withQueryParams(GetCommitteeCommitteeIdCandidatesHistoryCycleQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+}

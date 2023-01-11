@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class DfareportingAccountActiveAdSummariesGetRequest {
+    public DfareportingAccountActiveAdSummariesGetPathParams pathParams;
+    public DfareportingAccountActiveAdSummariesGetRequest withPathParams(DfareportingAccountActiveAdSummariesGetPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public DfareportingAccountActiveAdSummariesGetQueryParams queryParams;
+    public DfareportingAccountActiveAdSummariesGetRequest withQueryParams(DfareportingAccountActiveAdSummariesGetQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public DfareportingAccountActiveAdSummariesGetSecurity security;
+    public DfareportingAccountActiveAdSummariesGetRequest withSecurity(DfareportingAccountActiveAdSummariesGetSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

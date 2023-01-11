@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class PostNodeRwRequest {
+    public PostNodeRwPathParams pathParams;
+    public PostNodeRwRequest withPathParams(PostNodeRwPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public PostNodeRwQueryParams queryParams;
+    public PostNodeRwRequest withQueryParams(PostNodeRwQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+}

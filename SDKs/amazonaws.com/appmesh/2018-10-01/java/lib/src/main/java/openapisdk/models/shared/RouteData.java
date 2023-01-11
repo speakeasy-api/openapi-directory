@@ -1,0 +1,51 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * RouteData
+ * An object representing a route returned by a describe operation.
+**/
+public class RouteData {
+    @JsonProperty("meshName")
+    public String meshName;
+    public RouteData withMeshName(String meshName) {
+        this.meshName = meshName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("metadata")
+    public ResourceMetadata metadata;
+    public RouteData withMetadata(ResourceMetadata metadata) {
+        this.metadata = metadata;
+        return this;
+    }
+    @JsonProperty("routeName")
+    public String routeName;
+    public RouteData withRouteName(String routeName) {
+        this.routeName = routeName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("spec")
+    public RouteSpec spec;
+    public RouteData withSpec(RouteSpec spec) {
+        this.spec = spec;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("status")
+    public RouteStatus status;
+    public RouteData withStatus(RouteStatus status) {
+        this.status = status;
+        return this;
+    }
+    @JsonProperty("virtualRouterName")
+    public String virtualRouterName;
+    public RouteData withVirtualRouterName(String virtualRouterName) {
+        this.virtualRouterName = virtualRouterName;
+        return this;
+    }
+}

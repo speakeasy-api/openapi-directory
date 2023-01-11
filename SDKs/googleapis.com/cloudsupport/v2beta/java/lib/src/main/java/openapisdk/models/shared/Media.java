@@ -1,0 +1,222 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * Media
+ * # gdata.* are outside protos with mising documentation
+**/
+public class Media {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("algorithm")
+    public String algorithm;
+    public Media withAlgorithm(String algorithm) {
+        this.algorithm = algorithm;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("bigstoreObjectRef")
+    public String bigstoreObjectRef;
+    public Media withBigstoreObjectRef(String bigstoreObjectRef) {
+        this.bigstoreObjectRef = bigstoreObjectRef;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("blobRef")
+    public String blobRef;
+    public Media withBlobRef(String blobRef) {
+        this.blobRef = blobRef;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("blobstore2Info")
+    public Blobstore2Info blobstore2Info;
+    public Media withBlobstore2Info(Blobstore2Info blobstore2Info) {
+        this.blobstore2Info = blobstore2Info;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("compositeMedia")
+    public CompositeMedia[] compositeMedia;
+    public Media withCompositeMedia(CompositeMedia[] compositeMedia) {
+        this.compositeMedia = compositeMedia;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("contentType")
+    public String contentType;
+    public Media withContentType(String contentType) {
+        this.contentType = contentType;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("contentTypeInfo")
+    public ContentTypeInfo contentTypeInfo;
+    public Media withContentTypeInfo(ContentTypeInfo contentTypeInfo) {
+        this.contentTypeInfo = contentTypeInfo;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("cosmoBinaryReference")
+    public String cosmoBinaryReference;
+    public Media withCosmoBinaryReference(String cosmoBinaryReference) {
+        this.cosmoBinaryReference = cosmoBinaryReference;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("crc32cHash")
+    public Long crc32cHash;
+    public Media withCrc32cHash(Long crc32cHash) {
+        this.crc32cHash = crc32cHash;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("diffChecksumsResponse")
+    public DiffChecksumsResponse diffChecksumsResponse;
+    public Media withDiffChecksumsResponse(DiffChecksumsResponse diffChecksumsResponse) {
+        this.diffChecksumsResponse = diffChecksumsResponse;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("diffDownloadResponse")
+    public DiffDownloadResponse diffDownloadResponse;
+    public Media withDiffDownloadResponse(DiffDownloadResponse diffDownloadResponse) {
+        this.diffDownloadResponse = diffDownloadResponse;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("diffUploadRequest")
+    public DiffUploadRequest diffUploadRequest;
+    public Media withDiffUploadRequest(DiffUploadRequest diffUploadRequest) {
+        this.diffUploadRequest = diffUploadRequest;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("diffUploadResponse")
+    public DiffUploadResponse diffUploadResponse;
+    public Media withDiffUploadResponse(DiffUploadResponse diffUploadResponse) {
+        this.diffUploadResponse = diffUploadResponse;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("diffVersionResponse")
+    public DiffVersionResponse diffVersionResponse;
+    public Media withDiffVersionResponse(DiffVersionResponse diffVersionResponse) {
+        this.diffVersionResponse = diffVersionResponse;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("downloadParameters")
+    public DownloadParameters downloadParameters;
+    public Media withDownloadParameters(DownloadParameters downloadParameters) {
+        this.downloadParameters = downloadParameters;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("filename")
+    public String filename;
+    public Media withFilename(String filename) {
+        this.filename = filename;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("hash")
+    public String hash;
+    public Media withHash(String hash) {
+        this.hash = hash;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("hashVerified")
+    public Boolean hashVerified;
+    public Media withHashVerified(Boolean hashVerified) {
+        this.hashVerified = hashVerified;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("inline")
+    public String inline;
+    public Media withInline(String inline) {
+        this.inline = inline;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("isPotentialRetry")
+    public Boolean isPotentialRetry;
+    public Media withIsPotentialRetry(Boolean isPotentialRetry) {
+        this.isPotentialRetry = isPotentialRetry;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("length")
+    public String length;
+    public Media withLength(String length) {
+        this.length = length;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("md5Hash")
+    public String md5Hash;
+    public Media withMd5Hash(String md5Hash) {
+        this.md5Hash = md5Hash;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("mediaId")
+    public String mediaId;
+    public Media withMediaId(String mediaId) {
+        this.mediaId = mediaId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("objectId")
+    public ObjectId objectId;
+    public Media withObjectId(ObjectId objectId) {
+        this.objectId = objectId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("path")
+    public String path;
+    public Media withPath(String path) {
+        this.path = path;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("referenceType")
+    public MediaReferenceTypeEnum referenceType;
+    public Media withReferenceType(MediaReferenceTypeEnum referenceType) {
+        this.referenceType = referenceType;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("sha1Hash")
+    public String sha1Hash;
+    public Media withSha1Hash(String sha1Hash) {
+        this.sha1Hash = sha1Hash;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("sha256Hash")
+    public String sha256Hash;
+    public Media withSha256Hash(String sha256Hash) {
+        this.sha256Hash = sha256Hash;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("timestamp")
+    public String timestamp;
+    public Media withTimestamp(String timestamp) {
+        this.timestamp = timestamp;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("token")
+    public String token;
+    public Media withToken(String token) {
+        this.token = token;
+        return this;
+    }
+}

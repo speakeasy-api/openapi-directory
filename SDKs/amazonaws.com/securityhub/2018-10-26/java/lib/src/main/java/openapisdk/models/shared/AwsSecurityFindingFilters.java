@@ -1,0 +1,670 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * AwsSecurityFindingFilters
+ * <p>A collection of attributes that are applied to all active Security Hub-aggregated findings and that result in a subset of findings that are included in this insight.</p> <p>You can filter by up to 10 finding attributes. For each attribute, you can provide up to 20 filter values.</p>
+**/
+public class AwsSecurityFindingFilters {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("AwsAccountId")
+    public StringFilter[] awsAccountId;
+    public AwsSecurityFindingFilters withAwsAccountId(StringFilter[] awsAccountId) {
+        this.awsAccountId = awsAccountId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("CompanyName")
+    public StringFilter[] companyName;
+    public AwsSecurityFindingFilters withCompanyName(StringFilter[] companyName) {
+        this.companyName = companyName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ComplianceStatus")
+    public StringFilter[] complianceStatus;
+    public AwsSecurityFindingFilters withComplianceStatus(StringFilter[] complianceStatus) {
+        this.complianceStatus = complianceStatus;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Confidence")
+    public NumberFilter[] confidence;
+    public AwsSecurityFindingFilters withConfidence(NumberFilter[] confidence) {
+        this.confidence = confidence;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("CreatedAt")
+    public DateFilter[] createdAt;
+    public AwsSecurityFindingFilters withCreatedAt(DateFilter[] createdAt) {
+        this.createdAt = createdAt;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Criticality")
+    public NumberFilter[] criticality;
+    public AwsSecurityFindingFilters withCriticality(NumberFilter[] criticality) {
+        this.criticality = criticality;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Description")
+    public StringFilter[] description;
+    public AwsSecurityFindingFilters withDescription(StringFilter[] description) {
+        this.description = description;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("FindingProviderFieldsConfidence")
+    public NumberFilter[] findingProviderFieldsConfidence;
+    public AwsSecurityFindingFilters withFindingProviderFieldsConfidence(NumberFilter[] findingProviderFieldsConfidence) {
+        this.findingProviderFieldsConfidence = findingProviderFieldsConfidence;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("FindingProviderFieldsCriticality")
+    public NumberFilter[] findingProviderFieldsCriticality;
+    public AwsSecurityFindingFilters withFindingProviderFieldsCriticality(NumberFilter[] findingProviderFieldsCriticality) {
+        this.findingProviderFieldsCriticality = findingProviderFieldsCriticality;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("FindingProviderFieldsRelatedFindingsId")
+    public StringFilter[] findingProviderFieldsRelatedFindingsId;
+    public AwsSecurityFindingFilters withFindingProviderFieldsRelatedFindingsId(StringFilter[] findingProviderFieldsRelatedFindingsId) {
+        this.findingProviderFieldsRelatedFindingsId = findingProviderFieldsRelatedFindingsId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("FindingProviderFieldsRelatedFindingsProductArn")
+    public StringFilter[] findingProviderFieldsRelatedFindingsProductArn;
+    public AwsSecurityFindingFilters withFindingProviderFieldsRelatedFindingsProductArn(StringFilter[] findingProviderFieldsRelatedFindingsProductArn) {
+        this.findingProviderFieldsRelatedFindingsProductArn = findingProviderFieldsRelatedFindingsProductArn;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("FindingProviderFieldsSeverityLabel")
+    public StringFilter[] findingProviderFieldsSeverityLabel;
+    public AwsSecurityFindingFilters withFindingProviderFieldsSeverityLabel(StringFilter[] findingProviderFieldsSeverityLabel) {
+        this.findingProviderFieldsSeverityLabel = findingProviderFieldsSeverityLabel;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("FindingProviderFieldsSeverityOriginal")
+    public StringFilter[] findingProviderFieldsSeverityOriginal;
+    public AwsSecurityFindingFilters withFindingProviderFieldsSeverityOriginal(StringFilter[] findingProviderFieldsSeverityOriginal) {
+        this.findingProviderFieldsSeverityOriginal = findingProviderFieldsSeverityOriginal;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("FindingProviderFieldsTypes")
+    public StringFilter[] findingProviderFieldsTypes;
+    public AwsSecurityFindingFilters withFindingProviderFieldsTypes(StringFilter[] findingProviderFieldsTypes) {
+        this.findingProviderFieldsTypes = findingProviderFieldsTypes;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("FirstObservedAt")
+    public DateFilter[] firstObservedAt;
+    public AwsSecurityFindingFilters withFirstObservedAt(DateFilter[] firstObservedAt) {
+        this.firstObservedAt = firstObservedAt;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("GeneratorId")
+    public StringFilter[] generatorId;
+    public AwsSecurityFindingFilters withGeneratorId(StringFilter[] generatorId) {
+        this.generatorId = generatorId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Id")
+    public StringFilter[] id;
+    public AwsSecurityFindingFilters withId(StringFilter[] id) {
+        this.id = id;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Keyword")
+    public java.util.Map<String, Object> keyword;
+    public AwsSecurityFindingFilters withKeyword(java.util.Map<String, Object> keyword) {
+        this.keyword = keyword;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("LastObservedAt")
+    public DateFilter[] lastObservedAt;
+    public AwsSecurityFindingFilters withLastObservedAt(DateFilter[] lastObservedAt) {
+        this.lastObservedAt = lastObservedAt;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("MalwareName")
+    public StringFilter[] malwareName;
+    public AwsSecurityFindingFilters withMalwareName(StringFilter[] malwareName) {
+        this.malwareName = malwareName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("MalwarePath")
+    public StringFilter[] malwarePath;
+    public AwsSecurityFindingFilters withMalwarePath(StringFilter[] malwarePath) {
+        this.malwarePath = malwarePath;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("MalwareState")
+    public StringFilter[] malwareState;
+    public AwsSecurityFindingFilters withMalwareState(StringFilter[] malwareState) {
+        this.malwareState = malwareState;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("MalwareType")
+    public StringFilter[] malwareType;
+    public AwsSecurityFindingFilters withMalwareType(StringFilter[] malwareType) {
+        this.malwareType = malwareType;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("NetworkDestinationDomain")
+    public StringFilter[] networkDestinationDomain;
+    public AwsSecurityFindingFilters withNetworkDestinationDomain(StringFilter[] networkDestinationDomain) {
+        this.networkDestinationDomain = networkDestinationDomain;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("NetworkDestinationIpV4")
+    public IpFilter[] networkDestinationIpV4;
+    public AwsSecurityFindingFilters withNetworkDestinationIpV4(IpFilter[] networkDestinationIpV4) {
+        this.networkDestinationIpV4 = networkDestinationIpV4;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("NetworkDestinationIpV6")
+    public IpFilter[] networkDestinationIpV6;
+    public AwsSecurityFindingFilters withNetworkDestinationIpV6(IpFilter[] networkDestinationIpV6) {
+        this.networkDestinationIpV6 = networkDestinationIpV6;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("NetworkDestinationPort")
+    public NumberFilter[] networkDestinationPort;
+    public AwsSecurityFindingFilters withNetworkDestinationPort(NumberFilter[] networkDestinationPort) {
+        this.networkDestinationPort = networkDestinationPort;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("NetworkDirection")
+    public StringFilter[] networkDirection;
+    public AwsSecurityFindingFilters withNetworkDirection(StringFilter[] networkDirection) {
+        this.networkDirection = networkDirection;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("NetworkProtocol")
+    public StringFilter[] networkProtocol;
+    public AwsSecurityFindingFilters withNetworkProtocol(StringFilter[] networkProtocol) {
+        this.networkProtocol = networkProtocol;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("NetworkSourceDomain")
+    public StringFilter[] networkSourceDomain;
+    public AwsSecurityFindingFilters withNetworkSourceDomain(StringFilter[] networkSourceDomain) {
+        this.networkSourceDomain = networkSourceDomain;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("NetworkSourceIpV4")
+    public IpFilter[] networkSourceIpV4;
+    public AwsSecurityFindingFilters withNetworkSourceIpV4(IpFilter[] networkSourceIpV4) {
+        this.networkSourceIpV4 = networkSourceIpV4;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("NetworkSourceIpV6")
+    public IpFilter[] networkSourceIpV6;
+    public AwsSecurityFindingFilters withNetworkSourceIpV6(IpFilter[] networkSourceIpV6) {
+        this.networkSourceIpV6 = networkSourceIpV6;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("NetworkSourceMac")
+    public StringFilter[] networkSourceMac;
+    public AwsSecurityFindingFilters withNetworkSourceMac(StringFilter[] networkSourceMac) {
+        this.networkSourceMac = networkSourceMac;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("NetworkSourcePort")
+    public NumberFilter[] networkSourcePort;
+    public AwsSecurityFindingFilters withNetworkSourcePort(NumberFilter[] networkSourcePort) {
+        this.networkSourcePort = networkSourcePort;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("NoteText")
+    public StringFilter[] noteText;
+    public AwsSecurityFindingFilters withNoteText(StringFilter[] noteText) {
+        this.noteText = noteText;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("NoteUpdatedAt")
+    public DateFilter[] noteUpdatedAt;
+    public AwsSecurityFindingFilters withNoteUpdatedAt(DateFilter[] noteUpdatedAt) {
+        this.noteUpdatedAt = noteUpdatedAt;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("NoteUpdatedBy")
+    public StringFilter[] noteUpdatedBy;
+    public AwsSecurityFindingFilters withNoteUpdatedBy(StringFilter[] noteUpdatedBy) {
+        this.noteUpdatedBy = noteUpdatedBy;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ProcessLaunchedAt")
+    public DateFilter[] processLaunchedAt;
+    public AwsSecurityFindingFilters withProcessLaunchedAt(DateFilter[] processLaunchedAt) {
+        this.processLaunchedAt = processLaunchedAt;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ProcessName")
+    public StringFilter[] processName;
+    public AwsSecurityFindingFilters withProcessName(StringFilter[] processName) {
+        this.processName = processName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ProcessParentPid")
+    public NumberFilter[] processParentPid;
+    public AwsSecurityFindingFilters withProcessParentPid(NumberFilter[] processParentPid) {
+        this.processParentPid = processParentPid;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ProcessPath")
+    public StringFilter[] processPath;
+    public AwsSecurityFindingFilters withProcessPath(StringFilter[] processPath) {
+        this.processPath = processPath;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ProcessPid")
+    public NumberFilter[] processPid;
+    public AwsSecurityFindingFilters withProcessPid(NumberFilter[] processPid) {
+        this.processPid = processPid;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ProcessTerminatedAt")
+    public DateFilter[] processTerminatedAt;
+    public AwsSecurityFindingFilters withProcessTerminatedAt(DateFilter[] processTerminatedAt) {
+        this.processTerminatedAt = processTerminatedAt;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ProductArn")
+    public StringFilter[] productArn;
+    public AwsSecurityFindingFilters withProductArn(StringFilter[] productArn) {
+        this.productArn = productArn;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ProductFields")
+    public MapFilter[] productFields;
+    public AwsSecurityFindingFilters withProductFields(MapFilter[] productFields) {
+        this.productFields = productFields;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ProductName")
+    public StringFilter[] productName;
+    public AwsSecurityFindingFilters withProductName(StringFilter[] productName) {
+        this.productName = productName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("RecommendationText")
+    public StringFilter[] recommendationText;
+    public AwsSecurityFindingFilters withRecommendationText(StringFilter[] recommendationText) {
+        this.recommendationText = recommendationText;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("RecordState")
+    public StringFilter[] recordState;
+    public AwsSecurityFindingFilters withRecordState(StringFilter[] recordState) {
+        this.recordState = recordState;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Region")
+    public StringFilter[] region;
+    public AwsSecurityFindingFilters withRegion(StringFilter[] region) {
+        this.region = region;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("RelatedFindingsId")
+    public StringFilter[] relatedFindingsId;
+    public AwsSecurityFindingFilters withRelatedFindingsId(StringFilter[] relatedFindingsId) {
+        this.relatedFindingsId = relatedFindingsId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("RelatedFindingsProductArn")
+    public StringFilter[] relatedFindingsProductArn;
+    public AwsSecurityFindingFilters withRelatedFindingsProductArn(StringFilter[] relatedFindingsProductArn) {
+        this.relatedFindingsProductArn = relatedFindingsProductArn;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ResourceAwsEc2InstanceIamInstanceProfileArn")
+    public StringFilter[] resourceAwsEc2InstanceIamInstanceProfileArn;
+    public AwsSecurityFindingFilters withResourceAwsEc2InstanceIamInstanceProfileArn(StringFilter[] resourceAwsEc2InstanceIamInstanceProfileArn) {
+        this.resourceAwsEc2InstanceIamInstanceProfileArn = resourceAwsEc2InstanceIamInstanceProfileArn;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ResourceAwsEc2InstanceImageId")
+    public StringFilter[] resourceAwsEc2InstanceImageId;
+    public AwsSecurityFindingFilters withResourceAwsEc2InstanceImageId(StringFilter[] resourceAwsEc2InstanceImageId) {
+        this.resourceAwsEc2InstanceImageId = resourceAwsEc2InstanceImageId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ResourceAwsEc2InstanceIpV4Addresses")
+    public IpFilter[] resourceAwsEc2InstanceIpV4Addresses;
+    public AwsSecurityFindingFilters withResourceAwsEc2InstanceIpV4Addresses(IpFilter[] resourceAwsEc2InstanceIpV4Addresses) {
+        this.resourceAwsEc2InstanceIpV4Addresses = resourceAwsEc2InstanceIpV4Addresses;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ResourceAwsEc2InstanceIpV6Addresses")
+    public IpFilter[] resourceAwsEc2InstanceIpV6Addresses;
+    public AwsSecurityFindingFilters withResourceAwsEc2InstanceIpV6Addresses(IpFilter[] resourceAwsEc2InstanceIpV6Addresses) {
+        this.resourceAwsEc2InstanceIpV6Addresses = resourceAwsEc2InstanceIpV6Addresses;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ResourceAwsEc2InstanceKeyName")
+    public StringFilter[] resourceAwsEc2InstanceKeyName;
+    public AwsSecurityFindingFilters withResourceAwsEc2InstanceKeyName(StringFilter[] resourceAwsEc2InstanceKeyName) {
+        this.resourceAwsEc2InstanceKeyName = resourceAwsEc2InstanceKeyName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ResourceAwsEc2InstanceLaunchedAt")
+    public DateFilter[] resourceAwsEc2InstanceLaunchedAt;
+    public AwsSecurityFindingFilters withResourceAwsEc2InstanceLaunchedAt(DateFilter[] resourceAwsEc2InstanceLaunchedAt) {
+        this.resourceAwsEc2InstanceLaunchedAt = resourceAwsEc2InstanceLaunchedAt;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ResourceAwsEc2InstanceSubnetId")
+    public StringFilter[] resourceAwsEc2InstanceSubnetId;
+    public AwsSecurityFindingFilters withResourceAwsEc2InstanceSubnetId(StringFilter[] resourceAwsEc2InstanceSubnetId) {
+        this.resourceAwsEc2InstanceSubnetId = resourceAwsEc2InstanceSubnetId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ResourceAwsEc2InstanceType")
+    public StringFilter[] resourceAwsEc2InstanceType;
+    public AwsSecurityFindingFilters withResourceAwsEc2InstanceType(StringFilter[] resourceAwsEc2InstanceType) {
+        this.resourceAwsEc2InstanceType = resourceAwsEc2InstanceType;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ResourceAwsEc2InstanceVpcId")
+    public StringFilter[] resourceAwsEc2InstanceVpcId;
+    public AwsSecurityFindingFilters withResourceAwsEc2InstanceVpcId(StringFilter[] resourceAwsEc2InstanceVpcId) {
+        this.resourceAwsEc2InstanceVpcId = resourceAwsEc2InstanceVpcId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ResourceAwsIamAccessKeyCreatedAt")
+    public DateFilter[] resourceAwsIamAccessKeyCreatedAt;
+    public AwsSecurityFindingFilters withResourceAwsIamAccessKeyCreatedAt(DateFilter[] resourceAwsIamAccessKeyCreatedAt) {
+        this.resourceAwsIamAccessKeyCreatedAt = resourceAwsIamAccessKeyCreatedAt;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ResourceAwsIamAccessKeyPrincipalName")
+    public StringFilter[] resourceAwsIamAccessKeyPrincipalName;
+    public AwsSecurityFindingFilters withResourceAwsIamAccessKeyPrincipalName(StringFilter[] resourceAwsIamAccessKeyPrincipalName) {
+        this.resourceAwsIamAccessKeyPrincipalName = resourceAwsIamAccessKeyPrincipalName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ResourceAwsIamAccessKeyStatus")
+    public StringFilter[] resourceAwsIamAccessKeyStatus;
+    public AwsSecurityFindingFilters withResourceAwsIamAccessKeyStatus(StringFilter[] resourceAwsIamAccessKeyStatus) {
+        this.resourceAwsIamAccessKeyStatus = resourceAwsIamAccessKeyStatus;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ResourceAwsIamAccessKeyUserName")
+    public java.util.Map<String, Object> resourceAwsIamAccessKeyUserName;
+    public AwsSecurityFindingFilters withResourceAwsIamAccessKeyUserName(java.util.Map<String, Object> resourceAwsIamAccessKeyUserName) {
+        this.resourceAwsIamAccessKeyUserName = resourceAwsIamAccessKeyUserName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ResourceAwsIamUserUserName")
+    public StringFilter[] resourceAwsIamUserUserName;
+    public AwsSecurityFindingFilters withResourceAwsIamUserUserName(StringFilter[] resourceAwsIamUserUserName) {
+        this.resourceAwsIamUserUserName = resourceAwsIamUserUserName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ResourceAwsS3BucketOwnerId")
+    public StringFilter[] resourceAwsS3BucketOwnerId;
+    public AwsSecurityFindingFilters withResourceAwsS3BucketOwnerId(StringFilter[] resourceAwsS3BucketOwnerId) {
+        this.resourceAwsS3BucketOwnerId = resourceAwsS3BucketOwnerId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ResourceAwsS3BucketOwnerName")
+    public StringFilter[] resourceAwsS3BucketOwnerName;
+    public AwsSecurityFindingFilters withResourceAwsS3BucketOwnerName(StringFilter[] resourceAwsS3BucketOwnerName) {
+        this.resourceAwsS3BucketOwnerName = resourceAwsS3BucketOwnerName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ResourceContainerImageId")
+    public StringFilter[] resourceContainerImageId;
+    public AwsSecurityFindingFilters withResourceContainerImageId(StringFilter[] resourceContainerImageId) {
+        this.resourceContainerImageId = resourceContainerImageId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ResourceContainerImageName")
+    public StringFilter[] resourceContainerImageName;
+    public AwsSecurityFindingFilters withResourceContainerImageName(StringFilter[] resourceContainerImageName) {
+        this.resourceContainerImageName = resourceContainerImageName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ResourceContainerLaunchedAt")
+    public DateFilter[] resourceContainerLaunchedAt;
+    public AwsSecurityFindingFilters withResourceContainerLaunchedAt(DateFilter[] resourceContainerLaunchedAt) {
+        this.resourceContainerLaunchedAt = resourceContainerLaunchedAt;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ResourceContainerName")
+    public StringFilter[] resourceContainerName;
+    public AwsSecurityFindingFilters withResourceContainerName(StringFilter[] resourceContainerName) {
+        this.resourceContainerName = resourceContainerName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ResourceDetailsOther")
+    public MapFilter[] resourceDetailsOther;
+    public AwsSecurityFindingFilters withResourceDetailsOther(MapFilter[] resourceDetailsOther) {
+        this.resourceDetailsOther = resourceDetailsOther;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ResourceId")
+    public StringFilter[] resourceId;
+    public AwsSecurityFindingFilters withResourceId(StringFilter[] resourceId) {
+        this.resourceId = resourceId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ResourcePartition")
+    public StringFilter[] resourcePartition;
+    public AwsSecurityFindingFilters withResourcePartition(StringFilter[] resourcePartition) {
+        this.resourcePartition = resourcePartition;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ResourceRegion")
+    public StringFilter[] resourceRegion;
+    public AwsSecurityFindingFilters withResourceRegion(StringFilter[] resourceRegion) {
+        this.resourceRegion = resourceRegion;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ResourceTags")
+    public MapFilter[] resourceTags;
+    public AwsSecurityFindingFilters withResourceTags(MapFilter[] resourceTags) {
+        this.resourceTags = resourceTags;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ResourceType")
+    public StringFilter[] resourceType;
+    public AwsSecurityFindingFilters withResourceType(StringFilter[] resourceType) {
+        this.resourceType = resourceType;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("SeverityLabel")
+    public StringFilter[] severityLabel;
+    public AwsSecurityFindingFilters withSeverityLabel(StringFilter[] severityLabel) {
+        this.severityLabel = severityLabel;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("SeverityNormalized")
+    public java.util.Map<String, Object> severityNormalized;
+    public AwsSecurityFindingFilters withSeverityNormalized(java.util.Map<String, Object> severityNormalized) {
+        this.severityNormalized = severityNormalized;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("SeverityProduct")
+    public java.util.Map<String, Object> severityProduct;
+    public AwsSecurityFindingFilters withSeverityProduct(java.util.Map<String, Object> severityProduct) {
+        this.severityProduct = severityProduct;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("SourceUrl")
+    public StringFilter[] sourceUrl;
+    public AwsSecurityFindingFilters withSourceUrl(StringFilter[] sourceUrl) {
+        this.sourceUrl = sourceUrl;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ThreatIntelIndicatorCategory")
+    public StringFilter[] threatIntelIndicatorCategory;
+    public AwsSecurityFindingFilters withThreatIntelIndicatorCategory(StringFilter[] threatIntelIndicatorCategory) {
+        this.threatIntelIndicatorCategory = threatIntelIndicatorCategory;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ThreatIntelIndicatorLastObservedAt")
+    public DateFilter[] threatIntelIndicatorLastObservedAt;
+    public AwsSecurityFindingFilters withThreatIntelIndicatorLastObservedAt(DateFilter[] threatIntelIndicatorLastObservedAt) {
+        this.threatIntelIndicatorLastObservedAt = threatIntelIndicatorLastObservedAt;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ThreatIntelIndicatorSource")
+    public StringFilter[] threatIntelIndicatorSource;
+    public AwsSecurityFindingFilters withThreatIntelIndicatorSource(StringFilter[] threatIntelIndicatorSource) {
+        this.threatIntelIndicatorSource = threatIntelIndicatorSource;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ThreatIntelIndicatorSourceUrl")
+    public StringFilter[] threatIntelIndicatorSourceUrl;
+    public AwsSecurityFindingFilters withThreatIntelIndicatorSourceUrl(StringFilter[] threatIntelIndicatorSourceUrl) {
+        this.threatIntelIndicatorSourceUrl = threatIntelIndicatorSourceUrl;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ThreatIntelIndicatorType")
+    public StringFilter[] threatIntelIndicatorType;
+    public AwsSecurityFindingFilters withThreatIntelIndicatorType(StringFilter[] threatIntelIndicatorType) {
+        this.threatIntelIndicatorType = threatIntelIndicatorType;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ThreatIntelIndicatorValue")
+    public StringFilter[] threatIntelIndicatorValue;
+    public AwsSecurityFindingFilters withThreatIntelIndicatorValue(StringFilter[] threatIntelIndicatorValue) {
+        this.threatIntelIndicatorValue = threatIntelIndicatorValue;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Title")
+    public StringFilter[] title;
+    public AwsSecurityFindingFilters withTitle(StringFilter[] title) {
+        this.title = title;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Type")
+    public StringFilter[] type;
+    public AwsSecurityFindingFilters withType(StringFilter[] type) {
+        this.type = type;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("UpdatedAt")
+    public DateFilter[] updatedAt;
+    public AwsSecurityFindingFilters withUpdatedAt(DateFilter[] updatedAt) {
+        this.updatedAt = updatedAt;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("UserDefinedFields")
+    public MapFilter[] userDefinedFields;
+    public AwsSecurityFindingFilters withUserDefinedFields(MapFilter[] userDefinedFields) {
+        this.userDefinedFields = userDefinedFields;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("VerificationState")
+    public StringFilter[] verificationState;
+    public AwsSecurityFindingFilters withVerificationState(StringFilter[] verificationState) {
+        this.verificationState = verificationState;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("WorkflowState")
+    public StringFilter[] workflowState;
+    public AwsSecurityFindingFilters withWorkflowState(StringFilter[] workflowState) {
+        this.workflowState = workflowState;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("WorkflowStatus")
+    public StringFilter[] workflowStatus;
+    public AwsSecurityFindingFilters withWorkflowStatus(StringFilter[] workflowStatus) {
+        this.workflowStatus = workflowStatus;
+        return this;
+    }
+}

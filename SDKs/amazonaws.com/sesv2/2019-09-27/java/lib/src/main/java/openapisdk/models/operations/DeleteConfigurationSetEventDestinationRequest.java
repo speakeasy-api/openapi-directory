@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class DeleteConfigurationSetEventDestinationRequest {
+    public DeleteConfigurationSetEventDestinationPathParams pathParams;
+    public DeleteConfigurationSetEventDestinationRequest withPathParams(DeleteConfigurationSetEventDestinationPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public DeleteConfigurationSetEventDestinationHeaders headers;
+    public DeleteConfigurationSetEventDestinationRequest withHeaders(DeleteConfigurationSetEventDestinationHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+}

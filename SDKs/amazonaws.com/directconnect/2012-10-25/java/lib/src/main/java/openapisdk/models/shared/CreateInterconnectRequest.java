@@ -1,0 +1,47 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class CreateInterconnectRequest {
+    @JsonProperty("bandwidth")
+    public String bandwidth;
+    public CreateInterconnectRequest withBandwidth(String bandwidth) {
+        this.bandwidth = bandwidth;
+        return this;
+    }
+    @JsonProperty("interconnectName")
+    public String interconnectName;
+    public CreateInterconnectRequest withInterconnectName(String interconnectName) {
+        this.interconnectName = interconnectName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("lagId")
+    public String lagId;
+    public CreateInterconnectRequest withLagId(String lagId) {
+        this.lagId = lagId;
+        return this;
+    }
+    @JsonProperty("location")
+    public String location;
+    public CreateInterconnectRequest withLocation(String location) {
+        this.location = location;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("providerName")
+    public String providerName;
+    public CreateInterconnectRequest withProviderName(String providerName) {
+        this.providerName = providerName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("tags")
+    public Tag[] tags;
+    public CreateInterconnectRequest withTags(Tag[] tags) {
+        this.tags = tags;
+        return this;
+    }
+}

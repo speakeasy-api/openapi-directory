@@ -1,0 +1,92 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class CustomerSupportCustomerInput {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("addresses")
+    public Address[] addresses;
+    public CustomerSupportCustomerInput withAddresses(Address[] addresses) {
+        this.addresses = addresses;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("bank_accounts")
+    public BankAccount bankAccounts;
+    public CustomerSupportCustomerInput withBankAccounts(BankAccount bankAccounts) {
+        this.bankAccounts = bankAccounts;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("company_name")
+    public String companyName;
+    public CustomerSupportCustomerInput withCompanyName(String companyName) {
+        this.companyName = companyName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("currency")
+    public CurrencyEnum currency;
+    public CustomerSupportCustomerInput withCurrency(CurrencyEnum currency) {
+        this.currency = currency;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("emails")
+    public Email[] emails;
+    public CustomerSupportCustomerInput withEmails(Email[] emails) {
+        this.emails = emails;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("first_name")
+    public String firstName;
+    public CustomerSupportCustomerInput withFirstName(String firstName) {
+        this.firstName = firstName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("individual")
+    public Boolean individual;
+    public CustomerSupportCustomerInput withIndividual(Boolean individual) {
+        this.individual = individual;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("last_name")
+    public String lastName;
+    public CustomerSupportCustomerInput withLastName(String lastName) {
+        this.lastName = lastName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("notes")
+    public String notes;
+    public CustomerSupportCustomerInput withNotes(String notes) {
+        this.notes = notes;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("phone_numbers")
+    public PhoneNumber[] phoneNumbers;
+    public CustomerSupportCustomerInput withPhoneNumbers(PhoneNumber[] phoneNumbers) {
+        this.phoneNumbers = phoneNumbers;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("status")
+    public CustomerSupportCustomerStatusEnum status;
+    public CustomerSupportCustomerInput withStatus(CustomerSupportCustomerStatusEnum status) {
+        this.status = status;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("tax_number")
+    public String taxNumber;
+    public CustomerSupportCustomerInput withTaxNumber(String taxNumber) {
+        this.taxNumber = taxNumber;
+        return this;
+    }
+}

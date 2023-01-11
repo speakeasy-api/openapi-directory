@@ -1,0 +1,22 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class BatchUpdateDevicePositionRequest {
+    public BatchUpdateDevicePositionPathParams pathParams;
+    public BatchUpdateDevicePositionRequest withPathParams(BatchUpdateDevicePositionPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public BatchUpdateDevicePositionHeaders headers;
+    public BatchUpdateDevicePositionRequest withHeaders(BatchUpdateDevicePositionHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public BatchUpdateDevicePositionRequestBody request;
+    public BatchUpdateDevicePositionRequest withRequest(BatchUpdateDevicePositionRequestBody request) {
+        this.request = request;
+        return this;
+    }
+}

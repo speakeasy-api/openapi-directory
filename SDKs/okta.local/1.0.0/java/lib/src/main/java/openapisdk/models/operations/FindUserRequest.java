@@ -1,0 +1,17 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class FindUserRequest {
+    public FindUserQueryParams queryParams;
+    public FindUserRequest withQueryParams(FindUserQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    @SpeakeasyMetadata("request:mediaType=application/octet-stream")
+    public byte[] request;
+    public FindUserRequest withRequest(byte[] request) {
+        this.request = request;
+        return this;
+    }
+}

@@ -1,0 +1,26 @@
+package openapisdk.models.operations;
+
+
+
+public class ConsumerRequestCountsAllRequest {
+    public ConsumerRequestCountsAllPathParams pathParams;
+    public ConsumerRequestCountsAllRequest withPathParams(ConsumerRequestCountsAllPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public ConsumerRequestCountsAllQueryParams queryParams;
+    public ConsumerRequestCountsAllRequest withQueryParams(ConsumerRequestCountsAllQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public ConsumerRequestCountsAllHeaders headers;
+    public ConsumerRequestCountsAllRequest withHeaders(ConsumerRequestCountsAllHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+    public ConsumerRequestCountsAllSecurity security;
+    public ConsumerRequestCountsAllRequest withSecurity(ConsumerRequestCountsAllSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

@@ -1,0 +1,17 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class AcceptAdministratorInvitationRequest {
+    public AcceptAdministratorInvitationHeaders headers;
+    public AcceptAdministratorInvitationRequest withHeaders(AcceptAdministratorInvitationHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public AcceptAdministratorInvitationRequestBody request;
+    public AcceptAdministratorInvitationRequest withRequest(AcceptAdministratorInvitationRequestBody request) {
+        this.request = request;
+        return this;
+    }
+}

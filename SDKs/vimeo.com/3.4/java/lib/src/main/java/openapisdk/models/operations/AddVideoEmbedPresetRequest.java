@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class AddVideoEmbedPresetRequest {
+    public AddVideoEmbedPresetPathParams pathParams;
+    public AddVideoEmbedPresetRequest withPathParams(AddVideoEmbedPresetPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public AddVideoEmbedPresetSecurity security;
+    public AddVideoEmbedPresetRequest withSecurity(AddVideoEmbedPresetSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

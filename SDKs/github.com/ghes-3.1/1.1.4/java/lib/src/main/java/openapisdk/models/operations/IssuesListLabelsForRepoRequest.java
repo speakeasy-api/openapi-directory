@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class IssuesListLabelsForRepoRequest {
+    public IssuesListLabelsForRepoPathParams pathParams;
+    public IssuesListLabelsForRepoRequest withPathParams(IssuesListLabelsForRepoPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public IssuesListLabelsForRepoQueryParams queryParams;
+    public IssuesListLabelsForRepoRequest withQueryParams(IssuesListLabelsForRepoQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+}

@@ -1,0 +1,26 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * Bucket
+ * A container for facet information. 
+**/
+public class Bucket {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("count")
+    public Long count;
+    public Bucket withCount(Long count) {
+        this.count = count;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("value")
+    public String value;
+    public Bucket withValue(String value) {
+        this.value = value;
+        return this;
+    }
+}

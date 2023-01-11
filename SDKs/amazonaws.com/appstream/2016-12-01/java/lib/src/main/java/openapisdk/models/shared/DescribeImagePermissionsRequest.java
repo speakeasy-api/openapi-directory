@@ -1,0 +1,35 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class DescribeImagePermissionsRequest {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("MaxResults")
+    public Long maxResults;
+    public DescribeImagePermissionsRequest withMaxResults(Long maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    @JsonProperty("Name")
+    public String name;
+    public DescribeImagePermissionsRequest withName(String name) {
+        this.name = name;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("NextToken")
+    public String nextToken;
+    public DescribeImagePermissionsRequest withNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("SharedAwsAccountIds")
+    public String[] sharedAwsAccountIds;
+    public DescribeImagePermissionsRequest withSharedAwsAccountIds(String[] sharedAwsAccountIds) {
+        this.sharedAwsAccountIds = sharedAwsAccountIds;
+        return this;
+    }
+}

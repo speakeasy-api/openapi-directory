@@ -1,0 +1,26 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * ListSuppressedDestinationsResponse
+ * A list of suppressed email addresses.
+**/
+public class ListSuppressedDestinationsResponse {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("NextToken")
+    public String nextToken;
+    public ListSuppressedDestinationsResponse withNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("SuppressedDestinationSummaries")
+    public SuppressedDestinationSummary[] suppressedDestinationSummaries;
+    public ListSuppressedDestinationsResponse withSuppressedDestinationSummaries(SuppressedDestinationSummary[] suppressedDestinationSummaries) {
+        this.suppressedDestinationSummaries = suppressedDestinationSummaries;
+        return this;
+    }
+}

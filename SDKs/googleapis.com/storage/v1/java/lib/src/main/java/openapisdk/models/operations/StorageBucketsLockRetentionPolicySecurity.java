@@ -1,0 +1,24 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class StorageBucketsLockRetentionPolicySecurity {
+    @SpeakeasyMetadata("security:option=true")
+    public StorageBucketsLockRetentionPolicySecurityOption1 option1;
+    public StorageBucketsLockRetentionPolicySecurity withOption1(StorageBucketsLockRetentionPolicySecurityOption1 option1) {
+        this.option1 = option1;
+        return this;
+    }
+    @SpeakeasyMetadata("security:option=true")
+    public StorageBucketsLockRetentionPolicySecurityOption2 option2;
+    public StorageBucketsLockRetentionPolicySecurity withOption2(StorageBucketsLockRetentionPolicySecurityOption2 option2) {
+        this.option2 = option2;
+        return this;
+    }
+    @SpeakeasyMetadata("security:option=true")
+    public StorageBucketsLockRetentionPolicySecurityOption3 option3;
+    public StorageBucketsLockRetentionPolicySecurity withOption3(StorageBucketsLockRetentionPolicySecurityOption3 option3) {
+        this.option3 = option3;
+        return this;
+    }
+}

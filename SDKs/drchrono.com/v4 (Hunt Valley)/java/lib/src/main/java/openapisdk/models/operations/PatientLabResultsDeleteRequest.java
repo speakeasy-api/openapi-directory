@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class PatientLabResultsDeleteRequest {
+    public PatientLabResultsDeletePathParams pathParams;
+    public PatientLabResultsDeleteRequest withPathParams(PatientLabResultsDeletePathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public PatientLabResultsDeleteQueryParams queryParams;
+    public PatientLabResultsDeleteRequest withQueryParams(PatientLabResultsDeleteQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public PatientLabResultsDeleteSecurity security;
+    public PatientLabResultsDeleteRequest withSecurity(PatientLabResultsDeleteSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

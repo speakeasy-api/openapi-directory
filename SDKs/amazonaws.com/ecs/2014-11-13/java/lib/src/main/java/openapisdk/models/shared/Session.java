@@ -1,0 +1,33 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * Session
+ * The details of the execute command session.
+**/
+public class Session {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("sessionId")
+    public String sessionId;
+    public Session withSessionId(String sessionId) {
+        this.sessionId = sessionId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("streamUrl")
+    public String streamUrl;
+    public Session withStreamUrl(String streamUrl) {
+        this.streamUrl = streamUrl;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("tokenValue")
+    public String tokenValue;
+    public Session withTokenValue(String tokenValue) {
+        this.tokenValue = tokenValue;
+        return this;
+    }
+}

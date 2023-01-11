@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class MirrorTimelineAttachmentsGetRequest {
+    public MirrorTimelineAttachmentsGetPathParams pathParams;
+    public MirrorTimelineAttachmentsGetRequest withPathParams(MirrorTimelineAttachmentsGetPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public MirrorTimelineAttachmentsGetQueryParams queryParams;
+    public MirrorTimelineAttachmentsGetRequest withQueryParams(MirrorTimelineAttachmentsGetQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public MirrorTimelineAttachmentsGetSecurity security;
+    public MirrorTimelineAttachmentsGetRequest withSecurity(MirrorTimelineAttachmentsGetSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

@@ -1,0 +1,22 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class UpdateDynamicThingGroupRequest {
+    public UpdateDynamicThingGroupPathParams pathParams;
+    public UpdateDynamicThingGroupRequest withPathParams(UpdateDynamicThingGroupPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public UpdateDynamicThingGroupHeaders headers;
+    public UpdateDynamicThingGroupRequest withHeaders(UpdateDynamicThingGroupHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public UpdateDynamicThingGroupRequestBody request;
+    public UpdateDynamicThingGroupRequest withRequest(UpdateDynamicThingGroupRequestBody request) {
+        this.request = request;
+        return this;
+    }
+}

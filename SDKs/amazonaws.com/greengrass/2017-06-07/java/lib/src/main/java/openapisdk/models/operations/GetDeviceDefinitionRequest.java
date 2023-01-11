@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class GetDeviceDefinitionRequest {
+    public GetDeviceDefinitionPathParams pathParams;
+    public GetDeviceDefinitionRequest withPathParams(GetDeviceDefinitionPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public GetDeviceDefinitionHeaders headers;
+    public GetDeviceDefinitionRequest withHeaders(GetDeviceDefinitionHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+}

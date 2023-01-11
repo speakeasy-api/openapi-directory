@@ -1,0 +1,40 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * IpOrganizationDetails
+ * Provides information about an internet provider.
+**/
+public class IpOrganizationDetails {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Asn")
+    public Long asn;
+    public IpOrganizationDetails withAsn(Long asn) {
+        this.asn = asn;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("AsnOrg")
+    public String asnOrg;
+    public IpOrganizationDetails withAsnOrg(String asnOrg) {
+        this.asnOrg = asnOrg;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Isp")
+    public String isp;
+    public IpOrganizationDetails withIsp(String isp) {
+        this.isp = isp;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Org")
+    public String org;
+    public IpOrganizationDetails withOrg(String org) {
+        this.org = org;
+        return this;
+    }
+}

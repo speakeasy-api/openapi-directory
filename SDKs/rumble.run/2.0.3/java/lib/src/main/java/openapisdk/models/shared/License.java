@@ -1,0 +1,161 @@
+package openapisdk.models.shared;
+
+
+
+public class License {
+    public Long activatedAt;
+    public License withActivatedAt(Long activatedAt) {
+        this.activatedAt = activatedAt;
+        return this;
+    }
+    public String addressCity;
+    public License withAddressCity(String addressCity) {
+        this.addressCity = addressCity;
+        return this;
+    }
+    public String addressCountry;
+    public License withAddressCountry(String addressCountry) {
+        this.addressCountry = addressCountry;
+        return this;
+    }
+    public String addressPostal;
+    public License withAddressPostal(String addressPostal) {
+        this.addressPostal = addressPostal;
+        return this;
+    }
+    public String addressRegion;
+    public License withAddressRegion(String addressRegion) {
+        this.addressRegion = addressRegion;
+        return this;
+    }
+    public String addressStreet;
+    public License withAddressStreet(String addressStreet) {
+        this.addressStreet = addressStreet;
+        return this;
+    }
+    public Long createdAt;
+    public License withCreatedAt(Long createdAt) {
+        this.createdAt = createdAt;
+        return this;
+    }
+    public String id;
+    public License withId(String id) {
+        this.id = id;
+        return this;
+    }
+    public Long licenseExpiration;
+    public License withLicenseExpiration(Long licenseExpiration) {
+        this.licenseExpiration = licenseExpiration;
+        return this;
+    }
+    public Long licenseLiveAssetCount;
+    public License withLicenseLiveAssetCount(Long licenseLiveAssetCount) {
+        this.licenseLiveAssetCount = licenseLiveAssetCount;
+        return this;
+    }
+    public Long licenseMaxAssets;
+    public License withLicenseMaxAssets(Long licenseMaxAssets) {
+        this.licenseMaxAssets = licenseMaxAssets;
+        return this;
+    }
+    public Long licenseProjectAssetCount;
+    public License withLicenseProjectAssetCount(Long licenseProjectAssetCount) {
+        this.licenseProjectAssetCount = licenseProjectAssetCount;
+        return this;
+    }
+    public String licenseType;
+    public License withLicenseType(String licenseType) {
+        this.licenseType = licenseType;
+        return this;
+    }
+    public String name;
+    public License withName(String name) {
+        this.name = name;
+        return this;
+    }
+    public String partner;
+    public License withPartner(String partner) {
+        this.partner = partner;
+        return this;
+    }
+    public String phone;
+    public License withPhone(String phone) {
+        this.phone = phone;
+        return this;
+    }
+    public java.util.Map<String, Object> settings;
+    public License withSettings(java.util.Map<String, Object> settings) {
+        this.settings = settings;
+        return this;
+    }
+    public String ssoDefaultRole;
+    public License withSsoDefaultRole(String ssoDefaultRole) {
+        this.ssoDefaultRole = ssoDefaultRole;
+        return this;
+    }
+    public String ssoDomain;
+    public License withSsoDomain(String ssoDomain) {
+        this.ssoDomain = ssoDomain;
+        return this;
+    }
+    public String ssoLoginIssuerUrl;
+    public License withSsoLoginIssuerUrl(String ssoLoginIssuerUrl) {
+        this.ssoLoginIssuerUrl = ssoLoginIssuerUrl;
+        return this;
+    }
+    public String ssoLoginLoginUrl;
+    public License withSsoLoginLoginUrl(String ssoLoginLoginUrl) {
+        this.ssoLoginLoginUrl = ssoLoginLoginUrl;
+        return this;
+    }
+    public String ssoLoginLogoutUrl;
+    public License withSsoLoginLogoutUrl(String ssoLoginLogoutUrl) {
+        this.ssoLoginLogoutUrl = ssoLoginLogoutUrl;
+        return this;
+    }
+    public String ssoLoginMessage;
+    public License withSsoLoginMessage(String ssoLoginMessage) {
+        this.ssoLoginMessage = ssoLoginMessage;
+        return this;
+    }
+    public String ssoMode;
+    public License withSsoMode(String ssoMode) {
+        this.ssoMode = ssoMode;
+        return this;
+    }
+    public String ssoType;
+    public License withSsoType(String ssoType) {
+        this.ssoType = ssoType;
+        return this;
+    }
+    public Long subscriptionCancelAt;
+    public License withSubscriptionCancelAt(Long subscriptionCancelAt) {
+        this.subscriptionCancelAt = subscriptionCancelAt;
+        return this;
+    }
+    public Long subscriptionCanceledAt;
+    public License withSubscriptionCanceledAt(Long subscriptionCanceledAt) {
+        this.subscriptionCanceledAt = subscriptionCanceledAt;
+        return this;
+    }
+    public Long subscriptionPeriodEnd;
+    public License withSubscriptionPeriodEnd(Long subscriptionPeriodEnd) {
+        this.subscriptionPeriodEnd = subscriptionPeriodEnd;
+        return this;
+    }
+    public Long subscriptionPeriodStart;
+    public License withSubscriptionPeriodStart(Long subscriptionPeriodStart) {
+        this.subscriptionPeriodStart = subscriptionPeriodStart;
+        return this;
+    }
+    public Long updatedAt;
+    public License withUpdatedAt(Long updatedAt) {
+        this.updatedAt = updatedAt;
+        return this;
+    }
+    public Boolean viaReseller;
+    public License withViaReseller(Boolean viaReseller) {
+        this.viaReseller = viaReseller;
+        return this;
+    }
+}

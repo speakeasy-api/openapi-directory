@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class DeleteSuiteDefinitionRequest {
+    public DeleteSuiteDefinitionPathParams pathParams;
+    public DeleteSuiteDefinitionRequest withPathParams(DeleteSuiteDefinitionPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public DeleteSuiteDefinitionHeaders headers;
+    public DeleteSuiteDefinitionRequest withHeaders(DeleteSuiteDefinitionHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+}

@@ -1,0 +1,29 @@
+package openapisdk.models.operations;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class CreateResourceDefinitionRequestBody {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("InitialVersion")
+    public CreateResourceDefinitionRequestBodyInitialVersion initialVersion;
+    public CreateResourceDefinitionRequestBody withInitialVersion(CreateResourceDefinitionRequestBodyInitialVersion initialVersion) {
+        this.initialVersion = initialVersion;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Name")
+    public String name;
+    public CreateResourceDefinitionRequestBody withName(String name) {
+        this.name = name;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("tags")
+    public java.util.Map<String, String> tags;
+    public CreateResourceDefinitionRequestBody withTags(java.util.Map<String, String> tags) {
+        this.tags = tags;
+        return this;
+    }
+}

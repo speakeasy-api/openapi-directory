@@ -1,0 +1,16 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+/**
+ * CloudWatchDestination
+ * An object that defines an Amazon CloudWatch destination for email events. You can use Amazon CloudWatch to monitor and gain insights on your email sending metrics.
+**/
+public class CloudWatchDestination {
+    @JsonProperty("DimensionConfigurations")
+    public CloudWatchDimensionConfiguration[] dimensionConfigurations;
+    public CloudWatchDestination withDimensionConfigurations(CloudWatchDimensionConfiguration[] dimensionConfigurations) {
+        this.dimensionConfigurations = dimensionConfigurations;
+        return this;
+    }
+}

@@ -1,0 +1,18 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+public class AddCustomRoutingEndpointsRequest {
+    @JsonProperty("EndpointConfigurations")
+    public CustomRoutingEndpointConfiguration[] endpointConfigurations;
+    public AddCustomRoutingEndpointsRequest withEndpointConfigurations(CustomRoutingEndpointConfiguration[] endpointConfigurations) {
+        this.endpointConfigurations = endpointConfigurations;
+        return this;
+    }
+    @JsonProperty("EndpointGroupArn")
+    public String endpointGroupArn;
+    public AddCustomRoutingEndpointsRequest withEndpointGroupArn(String endpointGroupArn) {
+        this.endpointGroupArn = endpointGroupArn;
+        return this;
+    }
+}

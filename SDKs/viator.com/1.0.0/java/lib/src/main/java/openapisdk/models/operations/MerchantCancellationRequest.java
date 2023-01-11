@@ -1,0 +1,17 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class MerchantCancellationRequest {
+    public MerchantCancellationHeaders headers;
+    public MerchantCancellationRequest withHeaders(MerchantCancellationHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public MerchantCancellationRequestBody request;
+    public MerchantCancellationRequest withRequest(MerchantCancellationRequestBody request) {
+        this.request = request;
+        return this;
+    }
+}

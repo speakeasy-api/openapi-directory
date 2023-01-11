@@ -1,0 +1,75 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * TaskExecutionResultDetail
+ * Describes the detailed result of a <code>TaskExecution</code> operation. This result includes the time in milliseconds spent in each phase, the status of the task execution, and the errors encountered.
+**/
+public class TaskExecutionResultDetail {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ErrorCode")
+    public String errorCode;
+    public TaskExecutionResultDetail withErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ErrorDetail")
+    public String errorDetail;
+    public TaskExecutionResultDetail withErrorDetail(String errorDetail) {
+        this.errorDetail = errorDetail;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("PrepareDuration")
+    public Long prepareDuration;
+    public TaskExecutionResultDetail withPrepareDuration(Long prepareDuration) {
+        this.prepareDuration = prepareDuration;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("PrepareStatus")
+    public PhaseStatusEnum prepareStatus;
+    public TaskExecutionResultDetail withPrepareStatus(PhaseStatusEnum prepareStatus) {
+        this.prepareStatus = prepareStatus;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("TotalDuration")
+    public Long totalDuration;
+    public TaskExecutionResultDetail withTotalDuration(Long totalDuration) {
+        this.totalDuration = totalDuration;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("TransferDuration")
+    public Long transferDuration;
+    public TaskExecutionResultDetail withTransferDuration(Long transferDuration) {
+        this.transferDuration = transferDuration;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("TransferStatus")
+    public PhaseStatusEnum transferStatus;
+    public TaskExecutionResultDetail withTransferStatus(PhaseStatusEnum transferStatus) {
+        this.transferStatus = transferStatus;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("VerifyDuration")
+    public Long verifyDuration;
+    public TaskExecutionResultDetail withVerifyDuration(Long verifyDuration) {
+        this.verifyDuration = verifyDuration;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("VerifyStatus")
+    public PhaseStatusEnum verifyStatus;
+    public TaskExecutionResultDetail withVerifyStatus(PhaseStatusEnum verifyStatus) {
+        this.verifyStatus = verifyStatus;
+        return this;
+    }
+}

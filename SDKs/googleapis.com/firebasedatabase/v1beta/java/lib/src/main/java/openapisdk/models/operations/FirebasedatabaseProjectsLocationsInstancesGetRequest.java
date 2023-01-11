@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class FirebasedatabaseProjectsLocationsInstancesGetRequest {
+    public FirebasedatabaseProjectsLocationsInstancesGetPathParams pathParams;
+    public FirebasedatabaseProjectsLocationsInstancesGetRequest withPathParams(FirebasedatabaseProjectsLocationsInstancesGetPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public FirebasedatabaseProjectsLocationsInstancesGetQueryParams queryParams;
+    public FirebasedatabaseProjectsLocationsInstancesGetRequest withQueryParams(FirebasedatabaseProjectsLocationsInstancesGetQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public FirebasedatabaseProjectsLocationsInstancesGetSecurity security;
+    public FirebasedatabaseProjectsLocationsInstancesGetRequest withSecurity(FirebasedatabaseProjectsLocationsInstancesGetSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

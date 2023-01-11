@@ -1,0 +1,22 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+/**
+ * StageExecution
+ * Represents information about the run of a stage.
+**/
+public class StageExecution {
+    @JsonProperty("pipelineExecutionId")
+    public String pipelineExecutionId;
+    public StageExecution withPipelineExecutionId(String pipelineExecutionId) {
+        this.pipelineExecutionId = pipelineExecutionId;
+        return this;
+    }
+    @JsonProperty("status")
+    public StageExecutionStatusEnum status;
+    public StageExecution withStatus(StageExecutionStatusEnum status) {
+        this.status = status;
+        return this;
+    }
+}

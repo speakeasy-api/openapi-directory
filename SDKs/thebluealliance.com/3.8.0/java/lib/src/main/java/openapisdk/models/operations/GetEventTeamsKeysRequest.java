@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class GetEventTeamsKeysRequest {
+    public GetEventTeamsKeysPathParams pathParams;
+    public GetEventTeamsKeysRequest withPathParams(GetEventTeamsKeysPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public GetEventTeamsKeysHeaders headers;
+    public GetEventTeamsKeysRequest withHeaders(GetEventTeamsKeysHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+    public GetEventTeamsKeysSecurity security;
+    public GetEventTeamsKeysRequest withSecurity(GetEventTeamsKeysSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

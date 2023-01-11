@@ -1,0 +1,54 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * AwsEc2SecurityGroupDetails
+ * Details about an EC2 security group.
+**/
+public class AwsEc2SecurityGroupDetails {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("GroupId")
+    public String groupId;
+    public AwsEc2SecurityGroupDetails withGroupId(String groupId) {
+        this.groupId = groupId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("GroupName")
+    public String groupName;
+    public AwsEc2SecurityGroupDetails withGroupName(String groupName) {
+        this.groupName = groupName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("IpPermissions")
+    public AwsEc2SecurityGroupIpPermission[] ipPermissions;
+    public AwsEc2SecurityGroupDetails withIpPermissions(AwsEc2SecurityGroupIpPermission[] ipPermissions) {
+        this.ipPermissions = ipPermissions;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("IpPermissionsEgress")
+    public AwsEc2SecurityGroupIpPermission[] ipPermissionsEgress;
+    public AwsEc2SecurityGroupDetails withIpPermissionsEgress(AwsEc2SecurityGroupIpPermission[] ipPermissionsEgress) {
+        this.ipPermissionsEgress = ipPermissionsEgress;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("OwnerId")
+    public String ownerId;
+    public AwsEc2SecurityGroupDetails withOwnerId(String ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("VpcId")
+    public String vpcId;
+    public AwsEc2SecurityGroupDetails withVpcId(String vpcId) {
+        this.vpcId = vpcId;
+        return this;
+    }
+}

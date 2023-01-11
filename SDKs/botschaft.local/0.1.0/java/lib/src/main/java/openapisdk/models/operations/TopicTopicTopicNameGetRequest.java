@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class TopicTopicTopicNameGetRequest {
+    public TopicTopicTopicNameGetPathParams pathParams;
+    public TopicTopicTopicNameGetRequest withPathParams(TopicTopicTopicNameGetPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public TopicTopicTopicNameGetQueryParams queryParams;
+    public TopicTopicTopicNameGetRequest withQueryParams(TopicTopicTopicNameGetQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public TopicTopicTopicNameGetHeaders headers;
+    public TopicTopicTopicNameGetRequest withHeaders(TopicTopicTopicNameGetHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+}

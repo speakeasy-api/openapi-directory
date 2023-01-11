@@ -1,0 +1,26 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * FailureInfo
+ * An object that contains the failure details about an import job.
+**/
+public class FailureInfo {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ErrorMessage")
+    public String errorMessage;
+    public FailureInfo withErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("FailedRecordsS3Url")
+    public String failedRecordsS3Url;
+    public FailureInfo withFailedRecordsS3Url(String failedRecordsS3Url) {
+        this.failedRecordsS3Url = failedRecordsS3Url;
+        return this;
+    }
+}

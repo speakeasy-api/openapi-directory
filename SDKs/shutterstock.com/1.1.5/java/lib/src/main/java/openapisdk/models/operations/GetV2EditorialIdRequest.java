@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class GetV2EditorialIdRequest {
+    public GetV2EditorialIdPathParams pathParams;
+    public GetV2EditorialIdRequest withPathParams(GetV2EditorialIdPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public GetV2EditorialIdQueryParams queryParams;
+    public GetV2EditorialIdRequest withQueryParams(GetV2EditorialIdQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public GetV2EditorialIdSecurity security;
+    public GetV2EditorialIdRequest withSecurity(GetV2EditorialIdSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

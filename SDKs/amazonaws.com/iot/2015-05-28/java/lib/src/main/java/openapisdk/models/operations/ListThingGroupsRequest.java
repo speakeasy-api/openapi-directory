@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class ListThingGroupsRequest {
+    public ListThingGroupsQueryParams queryParams;
+    public ListThingGroupsRequest withQueryParams(ListThingGroupsQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public ListThingGroupsHeaders headers;
+    public ListThingGroupsRequest withHeaders(ListThingGroupsHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+}

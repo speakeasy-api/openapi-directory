@@ -1,0 +1,24 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class CloudprofilerProjectsProfilesCreateSecurity {
+    @SpeakeasyMetadata("security:option=true")
+    public CloudprofilerProjectsProfilesCreateSecurityOption1 option1;
+    public CloudprofilerProjectsProfilesCreateSecurity withOption1(CloudprofilerProjectsProfilesCreateSecurityOption1 option1) {
+        this.option1 = option1;
+        return this;
+    }
+    @SpeakeasyMetadata("security:option=true")
+    public CloudprofilerProjectsProfilesCreateSecurityOption2 option2;
+    public CloudprofilerProjectsProfilesCreateSecurity withOption2(CloudprofilerProjectsProfilesCreateSecurityOption2 option2) {
+        this.option2 = option2;
+        return this;
+    }
+    @SpeakeasyMetadata("security:option=true")
+    public CloudprofilerProjectsProfilesCreateSecurityOption3 option3;
+    public CloudprofilerProjectsProfilesCreateSecurity withOption3(CloudprofilerProjectsProfilesCreateSecurityOption3 option3) {
+        this.option3 = option3;
+        return this;
+    }
+}

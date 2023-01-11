@@ -1,0 +1,16 @@
+package openapisdk.models.shared;
+
+
+public enum UrlMapRedirectHttpResponseCodeEnum {
+    REDIRECT_HTTP_RESPONSE_CODE_UNSPECIFIED("REDIRECT_HTTP_RESPONSE_CODE_UNSPECIFIED"),
+    REDIRECT_HTTP_RESPONSE_CODE301("REDIRECT_HTTP_RESPONSE_CODE_301"),
+    REDIRECT_HTTP_RESPONSE_CODE302("REDIRECT_HTTP_RESPONSE_CODE_302"),
+    REDIRECT_HTTP_RESPONSE_CODE303("REDIRECT_HTTP_RESPONSE_CODE_303"),
+    REDIRECT_HTTP_RESPONSE_CODE307("REDIRECT_HTTP_RESPONSE_CODE_307");
+
+    public final String value;
+
+    private UrlMapRedirectHttpResponseCodeEnum(String value) {
+        this.value = value;
+    }
+}

@@ -1,0 +1,40 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * ParameterGroup
+ * Represents the output of a CreateParameterGroup operation. A parameter group represents a combination of specific values for the parameters that are passed to the engine software during startup.
+**/
+public class ParameterGroup {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ARN")
+    public String arn;
+    public ParameterGroup withArn(String arn) {
+        this.arn = arn;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Description")
+    public String description;
+    public ParameterGroup withDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Family")
+    public String family;
+    public ParameterGroup withFamily(String family) {
+        this.family = family;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Name")
+    public String name;
+    public ParameterGroup withName(String name) {
+        this.name = name;
+        return this;
+    }
+}

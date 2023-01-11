@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class GetDeviceCameraAnalyticsOverviewRequest {
+    public GetDeviceCameraAnalyticsOverviewPathParams pathParams;
+    public GetDeviceCameraAnalyticsOverviewRequest withPathParams(GetDeviceCameraAnalyticsOverviewPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public GetDeviceCameraAnalyticsOverviewQueryParams queryParams;
+    public GetDeviceCameraAnalyticsOverviewRequest withQueryParams(GetDeviceCameraAnalyticsOverviewQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+}

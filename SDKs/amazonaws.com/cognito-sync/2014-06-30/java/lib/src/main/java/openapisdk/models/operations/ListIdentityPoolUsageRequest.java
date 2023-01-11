@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class ListIdentityPoolUsageRequest {
+    public ListIdentityPoolUsageQueryParams queryParams;
+    public ListIdentityPoolUsageRequest withQueryParams(ListIdentityPoolUsageQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public ListIdentityPoolUsageHeaders headers;
+    public ListIdentityPoolUsageRequest withHeaders(ListIdentityPoolUsageHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+}

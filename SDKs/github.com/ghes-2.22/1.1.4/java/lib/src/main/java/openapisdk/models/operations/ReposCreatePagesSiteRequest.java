@@ -1,0 +1,17 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class ReposCreatePagesSiteRequest {
+    public ReposCreatePagesSitePathParams pathParams;
+    public ReposCreatePagesSiteRequest withPathParams(ReposCreatePagesSitePathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public ReposCreatePagesSiteRequestBody request;
+    public ReposCreatePagesSiteRequest withRequest(ReposCreatePagesSiteRequestBody request) {
+        this.request = request;
+        return this;
+    }
+}

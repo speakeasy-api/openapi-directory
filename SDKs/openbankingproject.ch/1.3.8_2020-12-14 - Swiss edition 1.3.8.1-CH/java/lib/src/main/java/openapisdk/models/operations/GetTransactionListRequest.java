@@ -1,0 +1,26 @@
+package openapisdk.models.operations;
+
+
+
+public class GetTransactionListRequest {
+    public GetTransactionListPathParams pathParams;
+    public GetTransactionListRequest withPathParams(GetTransactionListPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public GetTransactionListQueryParams queryParams;
+    public GetTransactionListRequest withQueryParams(GetTransactionListQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public GetTransactionListHeaders headers;
+    public GetTransactionListRequest withHeaders(GetTransactionListHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+    public GetTransactionListSecurity security;
+    public GetTransactionListRequest withSecurity(GetTransactionListSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

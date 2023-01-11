@@ -1,0 +1,27 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class UpdatePaymentPsuDataRequest {
+    public UpdatePaymentPsuDataPathParams pathParams;
+    public UpdatePaymentPsuDataRequest withPathParams(UpdatePaymentPsuDataPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public UpdatePaymentPsuDataHeaders headers;
+    public UpdatePaymentPsuDataRequest withHeaders(UpdatePaymentPsuDataHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public Object request;
+    public UpdatePaymentPsuDataRequest withRequest(Object request) {
+        this.request = request;
+        return this;
+    }
+    public UpdatePaymentPsuDataSecurity security;
+    public UpdatePaymentPsuDataRequest withSecurity(UpdatePaymentPsuDataSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

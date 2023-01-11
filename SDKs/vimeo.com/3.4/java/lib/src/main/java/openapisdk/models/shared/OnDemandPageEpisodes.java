@@ -1,0 +1,22 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+/**
+ * OnDemandPageEpisodes
+ * Information about this On Demand page's episodes, if the page is for a series.
+**/
+public class OnDemandPageEpisodes {
+    @JsonProperty("buy")
+    public OnDemandPageEpisodesBuy buy;
+    public OnDemandPageEpisodes withBuy(OnDemandPageEpisodesBuy buy) {
+        this.buy = buy;
+        return this;
+    }
+    @JsonProperty("rent")
+    public OnDemandPageEpisodesRent rent;
+    public OnDemandPageEpisodes withRent(OnDemandPageEpisodesRent rent) {
+        this.rent = rent;
+        return this;
+    }
+}

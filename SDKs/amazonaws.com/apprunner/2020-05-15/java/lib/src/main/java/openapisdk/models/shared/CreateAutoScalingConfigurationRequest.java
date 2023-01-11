@@ -1,0 +1,42 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class CreateAutoScalingConfigurationRequest {
+    @JsonProperty("AutoScalingConfigurationName")
+    public String autoScalingConfigurationName;
+    public CreateAutoScalingConfigurationRequest withAutoScalingConfigurationName(String autoScalingConfigurationName) {
+        this.autoScalingConfigurationName = autoScalingConfigurationName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("MaxConcurrency")
+    public Long maxConcurrency;
+    public CreateAutoScalingConfigurationRequest withMaxConcurrency(Long maxConcurrency) {
+        this.maxConcurrency = maxConcurrency;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("MaxSize")
+    public Long maxSize;
+    public CreateAutoScalingConfigurationRequest withMaxSize(Long maxSize) {
+        this.maxSize = maxSize;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("MinSize")
+    public Long minSize;
+    public CreateAutoScalingConfigurationRequest withMinSize(Long minSize) {
+        this.minSize = minSize;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Tags")
+    public Tag[] tags;
+    public CreateAutoScalingConfigurationRequest withTags(Tag[] tags) {
+        this.tags = tags;
+        return this;
+    }
+}

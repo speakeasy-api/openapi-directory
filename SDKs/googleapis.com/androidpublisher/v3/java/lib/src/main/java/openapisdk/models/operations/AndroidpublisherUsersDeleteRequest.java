@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class AndroidpublisherUsersDeleteRequest {
+    public AndroidpublisherUsersDeletePathParams pathParams;
+    public AndroidpublisherUsersDeleteRequest withPathParams(AndroidpublisherUsersDeletePathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public AndroidpublisherUsersDeleteQueryParams queryParams;
+    public AndroidpublisherUsersDeleteRequest withQueryParams(AndroidpublisherUsersDeleteQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public AndroidpublisherUsersDeleteSecurity security;
+    public AndroidpublisherUsersDeleteRequest withSecurity(AndroidpublisherUsersDeleteSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

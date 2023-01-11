@@ -1,0 +1,68 @@
+package openapisdk.models.operations;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * AssociateIdentityProviderConfigRequestBodyOidc
+ * An object representing an OpenID Connect (OIDC) configuration. Before associating an OIDC identity provider to your cluster, review the considerations in <a href="https://docs.aws.amazon.com/eks/latest/userguide/authenticate-oidc-identity-provider.html">Authenticating users for your cluster from an OpenID Connect identity provider</a> in the <i>Amazon EKS User Guide</i>.
+**/
+public class AssociateIdentityProviderConfigRequestBodyOidc {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("clientId")
+    public String clientId;
+    public AssociateIdentityProviderConfigRequestBodyOidc withClientId(String clientId) {
+        this.clientId = clientId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("groupsClaim")
+    public String groupsClaim;
+    public AssociateIdentityProviderConfigRequestBodyOidc withGroupsClaim(String groupsClaim) {
+        this.groupsClaim = groupsClaim;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("groupsPrefix")
+    public String groupsPrefix;
+    public AssociateIdentityProviderConfigRequestBodyOidc withGroupsPrefix(String groupsPrefix) {
+        this.groupsPrefix = groupsPrefix;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("identityProviderConfigName")
+    public String identityProviderConfigName;
+    public AssociateIdentityProviderConfigRequestBodyOidc withIdentityProviderConfigName(String identityProviderConfigName) {
+        this.identityProviderConfigName = identityProviderConfigName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("issuerUrl")
+    public String issuerUrl;
+    public AssociateIdentityProviderConfigRequestBodyOidc withIssuerUrl(String issuerUrl) {
+        this.issuerUrl = issuerUrl;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("requiredClaims")
+    public java.util.Map<String, String> requiredClaims;
+    public AssociateIdentityProviderConfigRequestBodyOidc withRequiredClaims(java.util.Map<String, String> requiredClaims) {
+        this.requiredClaims = requiredClaims;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("usernameClaim")
+    public String usernameClaim;
+    public AssociateIdentityProviderConfigRequestBodyOidc withUsernameClaim(String usernameClaim) {
+        this.usernameClaim = usernameClaim;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("usernamePrefix")
+    public String usernamePrefix;
+    public AssociateIdentityProviderConfigRequestBodyOidc withUsernamePrefix(String usernamePrefix) {
+        this.usernamePrefix = usernamePrefix;
+        return this;
+    }
+}

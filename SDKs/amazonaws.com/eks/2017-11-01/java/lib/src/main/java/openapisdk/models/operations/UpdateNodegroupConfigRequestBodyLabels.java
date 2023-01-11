@@ -1,0 +1,26 @@
+package openapisdk.models.operations;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * UpdateNodegroupConfigRequestBodyLabels
+ * An object representing a Kubernetes label change for a managed node group.
+**/
+public class UpdateNodegroupConfigRequestBodyLabels {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("addOrUpdateLabels")
+    public java.util.Map<String, String> addOrUpdateLabels;
+    public UpdateNodegroupConfigRequestBodyLabels withAddOrUpdateLabels(java.util.Map<String, String> addOrUpdateLabels) {
+        this.addOrUpdateLabels = addOrUpdateLabels;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("removeLabels")
+    public String[] removeLabels;
+    public UpdateNodegroupConfigRequestBodyLabels withRemoveLabels(String[] removeLabels) {
+        this.removeLabels = removeLabels;
+        return this;
+    }
+}

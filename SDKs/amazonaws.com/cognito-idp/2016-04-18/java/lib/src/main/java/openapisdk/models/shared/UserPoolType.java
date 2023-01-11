@@ -1,0 +1,238 @@
+package openapisdk.models.shared;
+
+import java.time.OffsetDateTime;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import openapisdk.utils.DateTimeSerializer;
+import openapisdk.utils.DateTimeDeserializer;
+
+/**
+ * UserPoolType
+ * A container for information about the user pool.
+**/
+public class UserPoolType {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("AccountRecoverySetting")
+    public AccountRecoverySettingType accountRecoverySetting;
+    public UserPoolType withAccountRecoverySetting(AccountRecoverySettingType accountRecoverySetting) {
+        this.accountRecoverySetting = accountRecoverySetting;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("AdminCreateUserConfig")
+    public AdminCreateUserConfigType adminCreateUserConfig;
+    public UserPoolType withAdminCreateUserConfig(AdminCreateUserConfigType adminCreateUserConfig) {
+        this.adminCreateUserConfig = adminCreateUserConfig;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("AliasAttributes")
+    public AliasAttributeTypeEnum[] aliasAttributes;
+    public UserPoolType withAliasAttributes(AliasAttributeTypeEnum[] aliasAttributes) {
+        this.aliasAttributes = aliasAttributes;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Arn")
+    public String arn;
+    public UserPoolType withArn(String arn) {
+        this.arn = arn;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("AutoVerifiedAttributes")
+    public VerifiedAttributeTypeEnum[] autoVerifiedAttributes;
+    public UserPoolType withAutoVerifiedAttributes(VerifiedAttributeTypeEnum[] autoVerifiedAttributes) {
+        this.autoVerifiedAttributes = autoVerifiedAttributes;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonSerialize(contentUsing = DateTimeSerializer.class)
+    @JsonDeserialize(contentUsing = DateTimeDeserializer.class)
+    @JsonProperty("CreationDate")
+    public OffsetDateTime creationDate;
+    public UserPoolType withCreationDate(OffsetDateTime creationDate) {
+        this.creationDate = creationDate;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("CustomDomain")
+    public String customDomain;
+    public UserPoolType withCustomDomain(String customDomain) {
+        this.customDomain = customDomain;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("DeviceConfiguration")
+    public DeviceConfigurationType deviceConfiguration;
+    public UserPoolType withDeviceConfiguration(DeviceConfigurationType deviceConfiguration) {
+        this.deviceConfiguration = deviceConfiguration;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Domain")
+    public String domain;
+    public UserPoolType withDomain(String domain) {
+        this.domain = domain;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("EmailConfiguration")
+    public EmailConfigurationType emailConfiguration;
+    public UserPoolType withEmailConfiguration(EmailConfigurationType emailConfiguration) {
+        this.emailConfiguration = emailConfiguration;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("EmailConfigurationFailure")
+    public String emailConfigurationFailure;
+    public UserPoolType withEmailConfigurationFailure(String emailConfigurationFailure) {
+        this.emailConfigurationFailure = emailConfigurationFailure;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("EmailVerificationMessage")
+    public String emailVerificationMessage;
+    public UserPoolType withEmailVerificationMessage(String emailVerificationMessage) {
+        this.emailVerificationMessage = emailVerificationMessage;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("EmailVerificationSubject")
+    public String emailVerificationSubject;
+    public UserPoolType withEmailVerificationSubject(String emailVerificationSubject) {
+        this.emailVerificationSubject = emailVerificationSubject;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("EstimatedNumberOfUsers")
+    public Long estimatedNumberOfUsers;
+    public UserPoolType withEstimatedNumberOfUsers(Long estimatedNumberOfUsers) {
+        this.estimatedNumberOfUsers = estimatedNumberOfUsers;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Id")
+    public String id;
+    public UserPoolType withId(String id) {
+        this.id = id;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("LambdaConfig")
+    public LambdaConfigType lambdaConfig;
+    public UserPoolType withLambdaConfig(LambdaConfigType lambdaConfig) {
+        this.lambdaConfig = lambdaConfig;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonSerialize(contentUsing = DateTimeSerializer.class)
+    @JsonDeserialize(contentUsing = DateTimeDeserializer.class)
+    @JsonProperty("LastModifiedDate")
+    public OffsetDateTime lastModifiedDate;
+    public UserPoolType withLastModifiedDate(OffsetDateTime lastModifiedDate) {
+        this.lastModifiedDate = lastModifiedDate;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("MfaConfiguration")
+    public UserPoolMfaTypeEnum mfaConfiguration;
+    public UserPoolType withMfaConfiguration(UserPoolMfaTypeEnum mfaConfiguration) {
+        this.mfaConfiguration = mfaConfiguration;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Name")
+    public String name;
+    public UserPoolType withName(String name) {
+        this.name = name;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Policies")
+    public UserPoolPolicyType policies;
+    public UserPoolType withPolicies(UserPoolPolicyType policies) {
+        this.policies = policies;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("SchemaAttributes")
+    public SchemaAttributeType[] schemaAttributes;
+    public UserPoolType withSchemaAttributes(SchemaAttributeType[] schemaAttributes) {
+        this.schemaAttributes = schemaAttributes;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("SmsAuthenticationMessage")
+    public String smsAuthenticationMessage;
+    public UserPoolType withSmsAuthenticationMessage(String smsAuthenticationMessage) {
+        this.smsAuthenticationMessage = smsAuthenticationMessage;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("SmsConfiguration")
+    public SmsConfigurationType smsConfiguration;
+    public UserPoolType withSmsConfiguration(SmsConfigurationType smsConfiguration) {
+        this.smsConfiguration = smsConfiguration;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("SmsConfigurationFailure")
+    public String smsConfigurationFailure;
+    public UserPoolType withSmsConfigurationFailure(String smsConfigurationFailure) {
+        this.smsConfigurationFailure = smsConfigurationFailure;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("SmsVerificationMessage")
+    public String smsVerificationMessage;
+    public UserPoolType withSmsVerificationMessage(String smsVerificationMessage) {
+        this.smsVerificationMessage = smsVerificationMessage;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Status")
+    public StatusTypeEnum status;
+    public UserPoolType withStatus(StatusTypeEnum status) {
+        this.status = status;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("UserPoolAddOns")
+    public UserPoolAddOnsType userPoolAddOns;
+    public UserPoolType withUserPoolAddOns(UserPoolAddOnsType userPoolAddOns) {
+        this.userPoolAddOns = userPoolAddOns;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("UserPoolTags")
+    public java.util.Map<String, String> userPoolTags;
+    public UserPoolType withUserPoolTags(java.util.Map<String, String> userPoolTags) {
+        this.userPoolTags = userPoolTags;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("UsernameAttributes")
+    public UsernameAttributeTypeEnum[] usernameAttributes;
+    public UserPoolType withUsernameAttributes(UsernameAttributeTypeEnum[] usernameAttributes) {
+        this.usernameAttributes = usernameAttributes;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("UsernameConfiguration")
+    public UsernameConfigurationType usernameConfiguration;
+    public UserPoolType withUsernameConfiguration(UsernameConfigurationType usernameConfiguration) {
+        this.usernameConfiguration = usernameConfiguration;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("VerificationMessageTemplate")
+    public VerificationMessageTemplateType verificationMessageTemplate;
+    public UserPoolType withVerificationMessageTemplate(VerificationMessageTemplateType verificationMessageTemplate) {
+        this.verificationMessageTemplate = verificationMessageTemplate;
+        return this;
+    }
+}

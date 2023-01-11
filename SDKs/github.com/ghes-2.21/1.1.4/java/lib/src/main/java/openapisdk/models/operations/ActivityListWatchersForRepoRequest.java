@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class ActivityListWatchersForRepoRequest {
+    public ActivityListWatchersForRepoPathParams pathParams;
+    public ActivityListWatchersForRepoRequest withPathParams(ActivityListWatchersForRepoPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public ActivityListWatchersForRepoQueryParams queryParams;
+    public ActivityListWatchersForRepoRequest withQueryParams(ActivityListWatchersForRepoQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+}

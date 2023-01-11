@@ -1,0 +1,26 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * BatchDetectKeyPhrasesItemResult
+ * The result of calling the operation. The operation returns one object for each document that is successfully processed by the operation.
+**/
+public class BatchDetectKeyPhrasesItemResult {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Index")
+    public Long index;
+    public BatchDetectKeyPhrasesItemResult withIndex(Long index) {
+        this.index = index;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("KeyPhrases")
+    public KeyPhrase[] keyPhrases;
+    public BatchDetectKeyPhrasesItemResult withKeyPhrases(KeyPhrase[] keyPhrases) {
+        this.keyPhrases = keyPhrases;
+        return this;
+    }
+}

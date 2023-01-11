@@ -1,0 +1,22 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class UsersUpdateStatusRequest {
+    public UsersUpdateStatusPathParams pathParams;
+    public UsersUpdateStatusRequest withPathParams(UsersUpdateStatusPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public UsersUpdateStatusRequestBody request;
+    public UsersUpdateStatusRequest withRequest(UsersUpdateStatusRequestBody request) {
+        this.request = request;
+        return this;
+    }
+    public UsersUpdateStatusSecurity security;
+    public UsersUpdateStatusRequest withSecurity(UsersUpdateStatusSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

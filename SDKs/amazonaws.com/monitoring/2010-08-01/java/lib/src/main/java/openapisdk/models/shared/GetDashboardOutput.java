@@ -1,0 +1,21 @@
+package openapisdk.models.shared;
+
+
+
+public class GetDashboardOutput {
+    public String dashboardArn;
+    public GetDashboardOutput withDashboardArn(String dashboardArn) {
+        this.dashboardArn = dashboardArn;
+        return this;
+    }
+    public String dashboardBody;
+    public GetDashboardOutput withDashboardBody(String dashboardBody) {
+        this.dashboardBody = dashboardBody;
+        return this;
+    }
+    public String dashboardName;
+    public GetDashboardOutput withDashboardName(String dashboardName) {
+        this.dashboardName = dashboardName;
+        return this;
+    }
+}

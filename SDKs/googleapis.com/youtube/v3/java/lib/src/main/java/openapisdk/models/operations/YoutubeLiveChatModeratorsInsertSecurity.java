@@ -1,0 +1,18 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class YoutubeLiveChatModeratorsInsertSecurity {
+    @SpeakeasyMetadata("security:option=true")
+    public YoutubeLiveChatModeratorsInsertSecurityOption1 option1;
+    public YoutubeLiveChatModeratorsInsertSecurity withOption1(YoutubeLiveChatModeratorsInsertSecurityOption1 option1) {
+        this.option1 = option1;
+        return this;
+    }
+    @SpeakeasyMetadata("security:option=true")
+    public YoutubeLiveChatModeratorsInsertSecurityOption2 option2;
+    public YoutubeLiveChatModeratorsInsertSecurity withOption2(YoutubeLiveChatModeratorsInsertSecurityOption2 option2) {
+        this.option2 = option2;
+        return this;
+    }
+}

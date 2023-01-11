@@ -1,0 +1,26 @@
+package openapisdk.models.operations;
+
+
+
+public class OrderTypesDeleteRequest {
+    public OrderTypesDeletePathParams pathParams;
+    public OrderTypesDeleteRequest withPathParams(OrderTypesDeletePathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public OrderTypesDeleteQueryParams queryParams;
+    public OrderTypesDeleteRequest withQueryParams(OrderTypesDeleteQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public OrderTypesDeleteHeaders headers;
+    public OrderTypesDeleteRequest withHeaders(OrderTypesDeleteHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+    public OrderTypesDeleteSecurity security;
+    public OrderTypesDeleteRequest withSecurity(OrderTypesDeleteSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

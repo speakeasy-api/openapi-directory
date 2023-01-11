@@ -1,0 +1,17 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class UpdateNetworkFloorPlanRequest {
+    public UpdateNetworkFloorPlanPathParams pathParams;
+    public UpdateNetworkFloorPlanRequest withPathParams(UpdateNetworkFloorPlanPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public UpdateNetworkFloorPlanRequestBody request;
+    public UpdateNetworkFloorPlanRequest withRequest(UpdateNetworkFloorPlanRequestBody request) {
+        this.request = request;
+        return this;
+    }
+}

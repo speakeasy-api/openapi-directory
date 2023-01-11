@@ -1,0 +1,22 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+/**
+ * TableToReload
+ * Provides the name of the schema and table to be reloaded.
+**/
+public class TableToReload {
+    @JsonProperty("SchemaName")
+    public String schemaName;
+    public TableToReload withSchemaName(String schemaName) {
+        this.schemaName = schemaName;
+        return this;
+    }
+    @JsonProperty("TableName")
+    public String tableName;
+    public TableToReload withTableName(String tableName) {
+        this.tableName = tableName;
+        return this;
+    }
+}

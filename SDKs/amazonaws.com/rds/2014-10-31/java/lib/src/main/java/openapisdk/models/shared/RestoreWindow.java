@@ -1,0 +1,20 @@
+package openapisdk.models.shared;
+
+import java.time.OffsetDateTime;
+
+/**
+ * RestoreWindow
+ * Earliest and latest time an instance can be restored to:
+**/
+public class RestoreWindow {
+    public OffsetDateTime earliestTime;
+    public RestoreWindow withEarliestTime(OffsetDateTime earliestTime) {
+        this.earliestTime = earliestTime;
+        return this;
+    }
+    public OffsetDateTime latestTime;
+    public RestoreWindow withLatestTime(OffsetDateTime latestTime) {
+        this.latestTime = latestTime;
+        return this;
+    }
+}

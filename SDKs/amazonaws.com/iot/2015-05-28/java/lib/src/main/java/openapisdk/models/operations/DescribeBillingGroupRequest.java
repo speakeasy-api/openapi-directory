@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class DescribeBillingGroupRequest {
+    public DescribeBillingGroupPathParams pathParams;
+    public DescribeBillingGroupRequest withPathParams(DescribeBillingGroupPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public DescribeBillingGroupHeaders headers;
+    public DescribeBillingGroupRequest withHeaders(DescribeBillingGroupHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+}

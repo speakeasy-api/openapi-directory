@@ -1,0 +1,18 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class RuntimeconfigProjectsConfigsListSecurity {
+    @SpeakeasyMetadata("security:option=true")
+    public RuntimeconfigProjectsConfigsListSecurityOption1 option1;
+    public RuntimeconfigProjectsConfigsListSecurity withOption1(RuntimeconfigProjectsConfigsListSecurityOption1 option1) {
+        this.option1 = option1;
+        return this;
+    }
+    @SpeakeasyMetadata("security:option=true")
+    public RuntimeconfigProjectsConfigsListSecurityOption2 option2;
+    public RuntimeconfigProjectsConfigsListSecurity withOption2(RuntimeconfigProjectsConfigsListSecurityOption2 option2) {
+        this.option2 = option2;
+        return this;
+    }
+}

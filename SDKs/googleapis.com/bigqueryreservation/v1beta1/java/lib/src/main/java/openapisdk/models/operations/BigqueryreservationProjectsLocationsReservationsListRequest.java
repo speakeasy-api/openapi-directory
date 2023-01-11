@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class BigqueryreservationProjectsLocationsReservationsListRequest {
+    public BigqueryreservationProjectsLocationsReservationsListPathParams pathParams;
+    public BigqueryreservationProjectsLocationsReservationsListRequest withPathParams(BigqueryreservationProjectsLocationsReservationsListPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public BigqueryreservationProjectsLocationsReservationsListQueryParams queryParams;
+    public BigqueryreservationProjectsLocationsReservationsListRequest withQueryParams(BigqueryreservationProjectsLocationsReservationsListQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public BigqueryreservationProjectsLocationsReservationsListSecurity security;
+    public BigqueryreservationProjectsLocationsReservationsListRequest withSecurity(BigqueryreservationProjectsLocationsReservationsListSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

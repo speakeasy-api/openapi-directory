@@ -1,0 +1,17 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class TerminateTargetInstancesRequest {
+    public TerminateTargetInstancesHeaders headers;
+    public TerminateTargetInstancesRequest withHeaders(TerminateTargetInstancesHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public TerminateTargetInstancesRequestBody request;
+    public TerminateTargetInstancesRequest withRequest(TerminateTargetInstancesRequestBody request) {
+        this.request = request;
+        return this;
+    }
+}

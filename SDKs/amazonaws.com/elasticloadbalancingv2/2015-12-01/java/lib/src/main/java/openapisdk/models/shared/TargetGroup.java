@@ -1,0 +1,95 @@
+package openapisdk.models.shared;
+
+
+
+/**
+ * TargetGroup
+ * Information about a target group.
+**/
+public class TargetGroup {
+    public Boolean healthCheckEnabled;
+    public TargetGroup withHealthCheckEnabled(Boolean healthCheckEnabled) {
+        this.healthCheckEnabled = healthCheckEnabled;
+        return this;
+    }
+    public Long healthCheckIntervalSeconds;
+    public TargetGroup withHealthCheckIntervalSeconds(Long healthCheckIntervalSeconds) {
+        this.healthCheckIntervalSeconds = healthCheckIntervalSeconds;
+        return this;
+    }
+    public String healthCheckPath;
+    public TargetGroup withHealthCheckPath(String healthCheckPath) {
+        this.healthCheckPath = healthCheckPath;
+        return this;
+    }
+    public String healthCheckPort;
+    public TargetGroup withHealthCheckPort(String healthCheckPort) {
+        this.healthCheckPort = healthCheckPort;
+        return this;
+    }
+    public ProtocolEnumEnum healthCheckProtocol;
+    public TargetGroup withHealthCheckProtocol(ProtocolEnumEnum healthCheckProtocol) {
+        this.healthCheckProtocol = healthCheckProtocol;
+        return this;
+    }
+    public Long healthCheckTimeoutSeconds;
+    public TargetGroup withHealthCheckTimeoutSeconds(Long healthCheckTimeoutSeconds) {
+        this.healthCheckTimeoutSeconds = healthCheckTimeoutSeconds;
+        return this;
+    }
+    public Long healthyThresholdCount;
+    public TargetGroup withHealthyThresholdCount(Long healthyThresholdCount) {
+        this.healthyThresholdCount = healthyThresholdCount;
+        return this;
+    }
+    public String[] loadBalancerArns;
+    public TargetGroup withLoadBalancerArns(String[] loadBalancerArns) {
+        this.loadBalancerArns = loadBalancerArns;
+        return this;
+    }
+    public Matcher matcher;
+    public TargetGroup withMatcher(Matcher matcher) {
+        this.matcher = matcher;
+        return this;
+    }
+    public Long port;
+    public TargetGroup withPort(Long port) {
+        this.port = port;
+        return this;
+    }
+    public ProtocolEnumEnum protocol;
+    public TargetGroup withProtocol(ProtocolEnumEnum protocol) {
+        this.protocol = protocol;
+        return this;
+    }
+    public String protocolVersion;
+    public TargetGroup withProtocolVersion(String protocolVersion) {
+        this.protocolVersion = protocolVersion;
+        return this;
+    }
+    public String targetGroupArn;
+    public TargetGroup withTargetGroupArn(String targetGroupArn) {
+        this.targetGroupArn = targetGroupArn;
+        return this;
+    }
+    public String targetGroupName;
+    public TargetGroup withTargetGroupName(String targetGroupName) {
+        this.targetGroupName = targetGroupName;
+        return this;
+    }
+    public TargetTypeEnumEnum targetType;
+    public TargetGroup withTargetType(TargetTypeEnumEnum targetType) {
+        this.targetType = targetType;
+        return this;
+    }
+    public Long unhealthyThresholdCount;
+    public TargetGroup withUnhealthyThresholdCount(Long unhealthyThresholdCount) {
+        this.unhealthyThresholdCount = unhealthyThresholdCount;
+        return this;
+    }
+    public String vpcId;
+    public TargetGroup withVpcId(String vpcId) {
+        this.vpcId = vpcId;
+        return this;
+    }
+}

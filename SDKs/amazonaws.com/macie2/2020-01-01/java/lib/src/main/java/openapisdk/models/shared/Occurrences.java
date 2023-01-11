@@ -1,0 +1,47 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * Occurrences
+ * Specifies the location of 1-15 occurrences of sensitive data that was detected by a managed data identifier or a custom data identifier and produced a sensitive data finding.
+**/
+public class Occurrences {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("cells")
+    public Cell[] cells;
+    public Occurrences withCells(Cell[] cells) {
+        this.cells = cells;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("lineRanges")
+    public Range[] lineRanges;
+    public Occurrences withLineRanges(Range[] lineRanges) {
+        this.lineRanges = lineRanges;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("offsetRanges")
+    public Range[] offsetRanges;
+    public Occurrences withOffsetRanges(Range[] offsetRanges) {
+        this.offsetRanges = offsetRanges;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("pages")
+    public Page[] pages;
+    public Occurrences withPages(Page[] pages) {
+        this.pages = pages;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("records")
+    public Record[] records;
+    public Occurrences withRecords(Record[] records) {
+        this.records = records;
+        return this;
+    }
+}

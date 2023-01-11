@@ -1,0 +1,22 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class UpdateEndpointRequest {
+    public UpdateEndpointPathParams pathParams;
+    public UpdateEndpointRequest withPathParams(UpdateEndpointPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public UpdateEndpointHeaders headers;
+    public UpdateEndpointRequest withHeaders(UpdateEndpointHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public UpdateEndpointRequestBody request;
+    public UpdateEndpointRequest withRequest(UpdateEndpointRequestBody request) {
+        this.request = request;
+        return this;
+    }
+}

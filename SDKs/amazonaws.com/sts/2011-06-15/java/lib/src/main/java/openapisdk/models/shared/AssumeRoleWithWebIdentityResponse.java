@@ -1,0 +1,45 @@
+package openapisdk.models.shared;
+
+
+
+/**
+ * AssumeRoleWithWebIdentityResponse
+ * Contains the response to a successful <a>AssumeRoleWithWebIdentity</a> request, including temporary Amazon Web Services credentials that can be used to make Amazon Web Services requests. 
+**/
+public class AssumeRoleWithWebIdentityResponse {
+    public AssumedRoleUser assumedRoleUser;
+    public AssumeRoleWithWebIdentityResponse withAssumedRoleUser(AssumedRoleUser assumedRoleUser) {
+        this.assumedRoleUser = assumedRoleUser;
+        return this;
+    }
+    public String audience;
+    public AssumeRoleWithWebIdentityResponse withAudience(String audience) {
+        this.audience = audience;
+        return this;
+    }
+    public Credentials credentials;
+    public AssumeRoleWithWebIdentityResponse withCredentials(Credentials credentials) {
+        this.credentials = credentials;
+        return this;
+    }
+    public Long packedPolicySize;
+    public AssumeRoleWithWebIdentityResponse withPackedPolicySize(Long packedPolicySize) {
+        this.packedPolicySize = packedPolicySize;
+        return this;
+    }
+    public String provider;
+    public AssumeRoleWithWebIdentityResponse withProvider(String provider) {
+        this.provider = provider;
+        return this;
+    }
+    public String sourceIdentity;
+    public AssumeRoleWithWebIdentityResponse withSourceIdentity(String sourceIdentity) {
+        this.sourceIdentity = sourceIdentity;
+        return this;
+    }
+    public String subjectFromWebIdentityToken;
+    public AssumeRoleWithWebIdentityResponse withSubjectFromWebIdentityToken(String subjectFromWebIdentityToken) {
+        this.subjectFromWebIdentityToken = subjectFromWebIdentityToken;
+        return this;
+    }
+}

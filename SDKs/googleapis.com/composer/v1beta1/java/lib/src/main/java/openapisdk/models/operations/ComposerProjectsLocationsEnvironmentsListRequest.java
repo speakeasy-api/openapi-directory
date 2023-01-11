@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class ComposerProjectsLocationsEnvironmentsListRequest {
+    public ComposerProjectsLocationsEnvironmentsListPathParams pathParams;
+    public ComposerProjectsLocationsEnvironmentsListRequest withPathParams(ComposerProjectsLocationsEnvironmentsListPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public ComposerProjectsLocationsEnvironmentsListQueryParams queryParams;
+    public ComposerProjectsLocationsEnvironmentsListRequest withQueryParams(ComposerProjectsLocationsEnvironmentsListQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public ComposerProjectsLocationsEnvironmentsListSecurity security;
+    public ComposerProjectsLocationsEnvironmentsListRequest withSecurity(ComposerProjectsLocationsEnvironmentsListSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

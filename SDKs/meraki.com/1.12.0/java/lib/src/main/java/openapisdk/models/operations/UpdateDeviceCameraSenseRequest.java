@@ -1,0 +1,17 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class UpdateDeviceCameraSenseRequest {
+    public UpdateDeviceCameraSensePathParams pathParams;
+    public UpdateDeviceCameraSenseRequest withPathParams(UpdateDeviceCameraSensePathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public UpdateDeviceCameraSenseRequestBody request;
+    public UpdateDeviceCameraSenseRequest withRequest(UpdateDeviceCameraSenseRequestBody request) {
+        this.request = request;
+        return this;
+    }
+}

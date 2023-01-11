@@ -1,0 +1,30 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+public class GetImportationReportResponseProductMetrics {
+    @JsonProperty("activeCount")
+    public Long activeCount;
+    public GetImportationReportResponseProductMetrics withActiveCount(Long activeCount) {
+        this.activeCount = activeCount;
+        return this;
+    }
+    @JsonProperty("detectedCount")
+    public Long detectedCount;
+    public GetImportationReportResponseProductMetrics withDetectedCount(Long detectedCount) {
+        this.detectedCount = detectedCount;
+        return this;
+    }
+    @JsonProperty("duplicatedCount")
+    public Long duplicatedCount;
+    public GetImportationReportResponseProductMetrics withDuplicatedCount(Long duplicatedCount) {
+        this.duplicatedCount = duplicatedCount;
+        return this;
+    }
+    @JsonProperty("failedCount")
+    public Long failedCount;
+    public GetImportationReportResponseProductMetrics withFailedCount(Long failedCount) {
+        this.failedCount = failedCount;
+        return this;
+    }
+}

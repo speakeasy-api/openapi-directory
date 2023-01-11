@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class DeleteThingRequest {
+    public DeleteThingPathParams pathParams;
+    public DeleteThingRequest withPathParams(DeleteThingPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public DeleteThingQueryParams queryParams;
+    public DeleteThingRequest withQueryParams(DeleteThingQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public DeleteThingHeaders headers;
+    public DeleteThingRequest withHeaders(DeleteThingHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+}

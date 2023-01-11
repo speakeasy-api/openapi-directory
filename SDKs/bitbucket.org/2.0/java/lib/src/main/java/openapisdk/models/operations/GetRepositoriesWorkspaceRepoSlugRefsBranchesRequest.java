@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class GetRepositoriesWorkspaceRepoSlugRefsBranchesRequest {
+    public GetRepositoriesWorkspaceRepoSlugRefsBranchesPathParams pathParams;
+    public GetRepositoriesWorkspaceRepoSlugRefsBranchesRequest withPathParams(GetRepositoriesWorkspaceRepoSlugRefsBranchesPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public GetRepositoriesWorkspaceRepoSlugRefsBranchesQueryParams queryParams;
+    public GetRepositoriesWorkspaceRepoSlugRefsBranchesRequest withQueryParams(GetRepositoriesWorkspaceRepoSlugRefsBranchesQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public GetRepositoriesWorkspaceRepoSlugRefsBranchesSecurity security;
+    public GetRepositoriesWorkspaceRepoSlugRefsBranchesRequest withSecurity(GetRepositoriesWorkspaceRepoSlugRefsBranchesSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

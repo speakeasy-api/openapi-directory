@@ -1,0 +1,26 @@
+package openapisdk.models.operations;
+
+
+
+public class PipelinesDeleteRequest {
+    public PipelinesDeletePathParams pathParams;
+    public PipelinesDeleteRequest withPathParams(PipelinesDeletePathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public PipelinesDeleteQueryParams queryParams;
+    public PipelinesDeleteRequest withQueryParams(PipelinesDeleteQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public PipelinesDeleteHeaders headers;
+    public PipelinesDeleteRequest withHeaders(PipelinesDeleteHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+    public PipelinesDeleteSecurity security;
+    public PipelinesDeleteRequest withSecurity(PipelinesDeleteSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

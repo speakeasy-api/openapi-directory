@@ -1,0 +1,26 @@
+package openapisdk.models.operations;
+
+
+
+public class UpdateRepositoryPipelineVariableResponse {
+    public String contentType;
+    public UpdateRepositoryPipelineVariableResponse withContentType(String contentType) {
+        this.contentType = contentType;
+        return this;
+    }
+    public Long statusCode;
+    public UpdateRepositoryPipelineVariableResponse withStatusCode(Long statusCode) {
+        this.statusCode = statusCode;
+        return this;
+    }
+    public java.util.Map<String, Object> error;
+    public UpdateRepositoryPipelineVariableResponse withError(java.util.Map<String, Object> error) {
+        this.error = error;
+        return this;
+    }
+    public java.util.Map<String, Object> pipelineVariable;
+    public UpdateRepositoryPipelineVariableResponse withPipelineVariable(java.util.Map<String, Object> pipelineVariable) {
+        this.pipelineVariable = pipelineVariable;
+        return this;
+    }
+}

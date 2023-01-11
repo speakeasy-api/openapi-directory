@@ -1,0 +1,51 @@
+<!-- Start SDK Example Usage -->
+```java
+package hello.world;
+
+import openapisdk.SDK;
+import openapisdk.models.shared.Security;
+
+public class Application {
+    public static void main(String[] args) {
+        try {
+            SDK.Builder builder = SDK.builder();
+
+            SDK sdk = builder.build();
+
+            ApikeysKeysLookupKeyRequest req = new ApikeysKeysLookupKeyRequest() {{
+                security = new ApikeysKeysLookupKeySecurity() {{
+                    option1 = new ApikeysKeysLookupKeySecurityOption1() {{
+                        oauth2 = new SchemeOauth2() {{
+                            authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
+                        }};
+                        oauth2c = new SchemeOauth2c() {{
+                            authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
+                        }};
+                    }};
+                }};
+                queryParams = new ApikeysKeysLookupKeyQueryParams() {{
+                    dollarXgafv = "1";
+                    accessToken = "doloribus";
+                    alt = "proto";
+                    callback = "ut";
+                    fields = "praesentium";
+                    key = "minus";
+                    keyString = "accusantium";
+                    oauthToken = "reiciendis";
+                    prettyPrint = true;
+                    quotaUser = "id";
+                    uploadType = "non";
+                    uploadProtocol = "temporibus";
+                }};
+            }};
+
+            ApikeysKeysLookupKeyResponse res = sdk.keys.apikeysKeysLookupKey(req);
+
+            if (res.v2LookupKeyResponse.isPresent()) {
+                // handle response
+            }
+        } catch (Exception e) {
+            // handle exception
+        }
+```
+<!-- End SDK Example Usage -->

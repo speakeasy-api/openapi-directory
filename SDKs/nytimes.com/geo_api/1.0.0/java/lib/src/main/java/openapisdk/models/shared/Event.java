@@ -1,0 +1,141 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class Event {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("city")
+    public String city;
+    public Event withCity(String city) {
+        this.city = city;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("critic_name")
+    public String criticName;
+    public Event withCriticName(String criticName) {
+        this.criticName = criticName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("event_detail_url")
+    public String eventDetailUrl;
+    public Event withEventDetailUrl(String eventDetailUrl) {
+        this.eventDetailUrl = eventDetailUrl;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("event_id")
+    public Long eventId;
+    public Event withEventId(Long eventId) {
+        this.eventId = eventId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("event_name")
+    public String eventName;
+    public Event withEventName(String eventName) {
+        this.eventName = eventName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("event_schedule_id")
+    public Long eventScheduleId;
+    public Event withEventScheduleId(Long eventScheduleId) {
+        this.eventScheduleId = eventScheduleId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("festival")
+    public Boolean festival;
+    public Event withFestival(Boolean festival) {
+        this.festival = festival;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("film_rating")
+    public Boolean filmRating;
+    public Event withFilmRating(Boolean filmRating) {
+        this.filmRating = filmRating;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("free")
+    public Boolean free;
+    public Event withFree(Boolean free) {
+        this.free = free;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("kid_friendly")
+    public Boolean kidFriendly;
+    public Event withKidFriendly(Boolean kidFriendly) {
+        this.kidFriendly = kidFriendly;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("last_chance")
+    public Boolean lastChance;
+    public Event withLastChance(Boolean lastChance) {
+        this.lastChance = lastChance;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("last_modified")
+    public String lastModified;
+    public Event withLastModified(String lastModified) {
+        this.lastModified = lastModified;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("long_running_show")
+    public Boolean longRunningShow;
+    public Event withLongRunningShow(Boolean longRunningShow) {
+        this.longRunningShow = longRunningShow;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("previews_and_openings")
+    public Boolean previewsAndOpenings;
+    public Event withPreviewsAndOpenings(Boolean previewsAndOpenings) {
+        this.previewsAndOpenings = previewsAndOpenings;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("recur_days")
+    public String[] recurDays;
+    public Event withRecurDays(String[] recurDays) {
+        this.recurDays = recurDays;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("recurring_start_date")
+    public String recurringStartDate;
+    public Event withRecurringStartDate(String recurringStartDate) {
+        this.recurringStartDate = recurringStartDate;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("state")
+    public String state;
+    public Event withState(String state) {
+        this.state = state;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("times_pick")
+    public Boolean timesPick;
+    public Event withTimesPick(Boolean timesPick) {
+        this.timesPick = timesPick;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("web_description")
+    public String webDescription;
+    public Event withWebDescription(String webDescription) {
+        this.webDescription = webDescription;
+        return this;
+    }
+}

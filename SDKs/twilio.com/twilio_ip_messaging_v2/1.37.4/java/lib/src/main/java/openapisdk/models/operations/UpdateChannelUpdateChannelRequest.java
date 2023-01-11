@@ -1,0 +1,43 @@
+package openapisdk.models.operations;
+
+import java.time.OffsetDateTime;
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class UpdateChannelUpdateChannelRequest {
+    @SpeakeasyMetadata("form:name=Attributes")
+    public String attributes;
+    public UpdateChannelUpdateChannelRequest withAttributes(String attributes) {
+        this.attributes = attributes;
+        return this;
+    }
+    @SpeakeasyMetadata("form:name=CreatedBy")
+    public String createdBy;
+    public UpdateChannelUpdateChannelRequest withCreatedBy(String createdBy) {
+        this.createdBy = createdBy;
+        return this;
+    }
+    @SpeakeasyMetadata("form:name=DateCreated")
+    public OffsetDateTime dateCreated;
+    public UpdateChannelUpdateChannelRequest withDateCreated(OffsetDateTime dateCreated) {
+        this.dateCreated = dateCreated;
+        return this;
+    }
+    @SpeakeasyMetadata("form:name=DateUpdated")
+    public OffsetDateTime dateUpdated;
+    public UpdateChannelUpdateChannelRequest withDateUpdated(OffsetDateTime dateUpdated) {
+        this.dateUpdated = dateUpdated;
+        return this;
+    }
+    @SpeakeasyMetadata("form:name=FriendlyName")
+    public String friendlyName;
+    public UpdateChannelUpdateChannelRequest withFriendlyName(String friendlyName) {
+        this.friendlyName = friendlyName;
+        return this;
+    }
+    @SpeakeasyMetadata("form:name=UniqueName")
+    public String uniqueName;
+    public UpdateChannelUpdateChannelRequest withUniqueName(String uniqueName) {
+        this.uniqueName = uniqueName;
+        return this;
+    }
+}

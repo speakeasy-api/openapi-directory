@@ -1,0 +1,69 @@
+package openapisdk.models.shared;
+
+import java.time.OffsetDateTime;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import openapisdk.utils.DateTimeSerializer;
+import openapisdk.utils.DateTimeDeserializer;
+
+/**
+ * UserMarketplacePurchase
+ * User Marketplace Purchase
+**/
+public class UserMarketplacePurchase {
+    @JsonProperty("account")
+    public MarketplaceAccount account;
+    public UserMarketplacePurchase withAccount(MarketplaceAccount account) {
+        this.account = account;
+        return this;
+    }
+    @JsonProperty("billing_cycle")
+    public String billingCycle;
+    public UserMarketplacePurchase withBillingCycle(String billingCycle) {
+        this.billingCycle = billingCycle;
+        return this;
+    }
+    @JsonSerialize(using = DateTimeSerializer.class)
+    @JsonDeserialize(using = DateTimeDeserializer.class)
+    @JsonProperty("free_trial_ends_on")
+    public OffsetDateTime freeTrialEndsOn;
+    public UserMarketplacePurchase withFreeTrialEndsOn(OffsetDateTime freeTrialEndsOn) {
+        this.freeTrialEndsOn = freeTrialEndsOn;
+        return this;
+    }
+    @JsonSerialize(using = DateTimeSerializer.class)
+    @JsonDeserialize(using = DateTimeDeserializer.class)
+    @JsonProperty("next_billing_date")
+    public OffsetDateTime nextBillingDate;
+    public UserMarketplacePurchase withNextBillingDate(OffsetDateTime nextBillingDate) {
+        this.nextBillingDate = nextBillingDate;
+        return this;
+    }
+    @JsonProperty("on_free_trial")
+    public Boolean onFreeTrial;
+    public UserMarketplacePurchase withOnFreeTrial(Boolean onFreeTrial) {
+        this.onFreeTrial = onFreeTrial;
+        return this;
+    }
+    @JsonProperty("plan")
+    public MarketplaceListingPlan plan;
+    public UserMarketplacePurchase withPlan(MarketplaceListingPlan plan) {
+        this.plan = plan;
+        return this;
+    }
+    @JsonProperty("unit_count")
+    public Long unitCount;
+    public UserMarketplacePurchase withUnitCount(Long unitCount) {
+        this.unitCount = unitCount;
+        return this;
+    }
+    @JsonSerialize(using = DateTimeSerializer.class)
+    @JsonDeserialize(using = DateTimeDeserializer.class)
+    @JsonProperty("updated_at")
+    public OffsetDateTime updatedAt;
+    public UserMarketplacePurchase withUpdatedAt(OffsetDateTime updatedAt) {
+        this.updatedAt = updatedAt;
+        return this;
+    }
+}

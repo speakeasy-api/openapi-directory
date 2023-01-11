@@ -1,0 +1,19 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * I18n
+ * Message containing the i18n data for the LHR - Version 1.
+**/
+public class I18n {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("rendererFormattedStrings")
+    public RendererFormattedStrings rendererFormattedStrings;
+    public I18n withRendererFormattedStrings(RendererFormattedStrings rendererFormattedStrings) {
+        this.rendererFormattedStrings = rendererFormattedStrings;
+        return this;
+    }
+}

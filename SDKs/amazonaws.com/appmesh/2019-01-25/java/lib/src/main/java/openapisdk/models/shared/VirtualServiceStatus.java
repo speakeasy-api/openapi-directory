@@ -1,0 +1,16 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+/**
+ * VirtualServiceStatus
+ * An object that represents the status of a virtual service.
+**/
+public class VirtualServiceStatus {
+    @JsonProperty("status")
+    public VirtualServiceStatusCodeEnum status;
+    public VirtualServiceStatus withStatus(VirtualServiceStatusCodeEnum status) {
+        this.status = status;
+        return this;
+    }
+}

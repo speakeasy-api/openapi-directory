@@ -1,0 +1,28 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+/**
+ * BooleanColumnStatisticsData
+ * Defines column statistics supported for Boolean data columns.
+**/
+public class BooleanColumnStatisticsData {
+    @JsonProperty("NumberOfFalses")
+    public Long numberOfFalses;
+    public BooleanColumnStatisticsData withNumberOfFalses(Long numberOfFalses) {
+        this.numberOfFalses = numberOfFalses;
+        return this;
+    }
+    @JsonProperty("NumberOfNulls")
+    public Long numberOfNulls;
+    public BooleanColumnStatisticsData withNumberOfNulls(Long numberOfNulls) {
+        this.numberOfNulls = numberOfNulls;
+        return this;
+    }
+    @JsonProperty("NumberOfTrues")
+    public Long numberOfTrues;
+    public BooleanColumnStatisticsData withNumberOfTrues(Long numberOfTrues) {
+        this.numberOfTrues = numberOfTrues;
+        return this;
+    }
+}

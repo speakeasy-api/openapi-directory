@@ -1,0 +1,18 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+public class DeleteUserRequest {
+    @JsonProperty("AuthenticationType")
+    public AuthenticationTypeEnum authenticationType;
+    public DeleteUserRequest withAuthenticationType(AuthenticationTypeEnum authenticationType) {
+        this.authenticationType = authenticationType;
+        return this;
+    }
+    @JsonProperty("UserName")
+    public String userName;
+    public DeleteUserRequest withUserName(String userName) {
+        this.userName = userName;
+        return this;
+    }
+}

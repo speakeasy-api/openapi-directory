@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class GetStyleGuideRequest {
+    public GetStyleGuidePathParams pathParams;
+    public GetStyleGuideRequest withPathParams(GetStyleGuidePathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public GetStyleGuideQueryParams queryParams;
+    public GetStyleGuideRequest withQueryParams(GetStyleGuideQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+}

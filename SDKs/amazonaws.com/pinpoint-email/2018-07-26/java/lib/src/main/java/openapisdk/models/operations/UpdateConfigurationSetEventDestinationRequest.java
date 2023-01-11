@@ -1,0 +1,22 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class UpdateConfigurationSetEventDestinationRequest {
+    public UpdateConfigurationSetEventDestinationPathParams pathParams;
+    public UpdateConfigurationSetEventDestinationRequest withPathParams(UpdateConfigurationSetEventDestinationPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public UpdateConfigurationSetEventDestinationHeaders headers;
+    public UpdateConfigurationSetEventDestinationRequest withHeaders(UpdateConfigurationSetEventDestinationHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public UpdateConfigurationSetEventDestinationRequestBody request;
+    public UpdateConfigurationSetEventDestinationRequest withRequest(UpdateConfigurationSetEventDestinationRequestBody request) {
+        this.request = request;
+        return this;
+    }
+}

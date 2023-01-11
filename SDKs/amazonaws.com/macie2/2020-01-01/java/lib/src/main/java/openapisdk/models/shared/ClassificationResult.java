@@ -1,0 +1,54 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * ClassificationResult
+ * Provides the details of a sensitive data finding, including the types, number of occurrences, and locations of the sensitive data that was detected.
+**/
+public class ClassificationResult {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("additionalOccurrences")
+    public Boolean additionalOccurrences;
+    public ClassificationResult withAdditionalOccurrences(Boolean additionalOccurrences) {
+        this.additionalOccurrences = additionalOccurrences;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("customDataIdentifiers")
+    public CustomDataIdentifiers customDataIdentifiers;
+    public ClassificationResult withCustomDataIdentifiers(CustomDataIdentifiers customDataIdentifiers) {
+        this.customDataIdentifiers = customDataIdentifiers;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("mimeType")
+    public String mimeType;
+    public ClassificationResult withMimeType(String mimeType) {
+        this.mimeType = mimeType;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("sensitiveData")
+    public SensitiveDataItem[] sensitiveData;
+    public ClassificationResult withSensitiveData(SensitiveDataItem[] sensitiveData) {
+        this.sensitiveData = sensitiveData;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("sizeClassified")
+    public Long sizeClassified;
+    public ClassificationResult withSizeClassified(Long sizeClassified) {
+        this.sizeClassified = sizeClassified;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("status")
+    public ClassificationResultStatus status;
+    public ClassificationResult withStatus(ClassificationResultStatus status) {
+        this.status = status;
+        return this;
+    }
+}

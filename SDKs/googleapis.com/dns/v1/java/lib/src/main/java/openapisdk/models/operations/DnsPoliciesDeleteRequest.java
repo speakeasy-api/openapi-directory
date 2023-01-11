@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class DnsPoliciesDeleteRequest {
+    public DnsPoliciesDeletePathParams pathParams;
+    public DnsPoliciesDeleteRequest withPathParams(DnsPoliciesDeletePathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public DnsPoliciesDeleteQueryParams queryParams;
+    public DnsPoliciesDeleteRequest withQueryParams(DnsPoliciesDeleteQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public DnsPoliciesDeleteSecurity security;
+    public DnsPoliciesDeleteRequest withSecurity(DnsPoliciesDeleteSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

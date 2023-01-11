@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class CustomAppointmentFieldsCreateRequest {
+    public CustomAppointmentFieldsCreateQueryParams queryParams;
+    public CustomAppointmentFieldsCreateRequest withQueryParams(CustomAppointmentFieldsCreateQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public CustomAppointmentFieldsCreateSecurity security;
+    public CustomAppointmentFieldsCreateRequest withSecurity(CustomAppointmentFieldsCreateSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

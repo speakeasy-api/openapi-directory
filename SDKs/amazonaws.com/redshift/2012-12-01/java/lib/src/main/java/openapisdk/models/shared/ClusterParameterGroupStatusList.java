@@ -1,0 +1,25 @@
+package openapisdk.models.shared;
+
+
+
+/**
+ * ClusterParameterGroupStatusList
+ * Describes the status of a parameter group.
+**/
+public class ClusterParameterGroupStatusList {
+    public ClusterParameterStatus[] clusterParameterStatusList;
+    public ClusterParameterGroupStatusList withClusterParameterStatusList(ClusterParameterStatus[] clusterParameterStatusList) {
+        this.clusterParameterStatusList = clusterParameterStatusList;
+        return this;
+    }
+    public String parameterApplyStatus;
+    public ClusterParameterGroupStatusList withParameterApplyStatus(String parameterApplyStatus) {
+        this.parameterApplyStatus = parameterApplyStatus;
+        return this;
+    }
+    public String parameterGroupName;
+    public ClusterParameterGroupStatusList withParameterGroupName(String parameterGroupName) {
+        this.parameterGroupName = parameterGroupName;
+        return this;
+    }
+}

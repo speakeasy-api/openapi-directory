@@ -1,0 +1,17 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class PostLoadBalancersIdActionsUpdateServiceRequest {
+    public PostLoadBalancersIdActionsUpdateServicePathParams pathParams;
+    public PostLoadBalancersIdActionsUpdateServiceRequest withPathParams(PostLoadBalancersIdActionsUpdateServicePathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public PostLoadBalancersIdActionsUpdateServiceLoadBalancerService request;
+    public PostLoadBalancersIdActionsUpdateServiceRequest withRequest(PostLoadBalancersIdActionsUpdateServiceLoadBalancerService request) {
+        this.request = request;
+        return this;
+    }
+}

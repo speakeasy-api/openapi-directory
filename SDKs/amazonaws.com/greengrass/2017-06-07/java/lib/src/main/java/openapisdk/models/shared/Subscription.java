@@ -1,0 +1,34 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+/**
+ * Subscription
+ * Information about a subscription.
+**/
+public class Subscription {
+    @JsonProperty("Id")
+    public String id;
+    public Subscription withId(String id) {
+        this.id = id;
+        return this;
+    }
+    @JsonProperty("Source")
+    public String source;
+    public Subscription withSource(String source) {
+        this.source = source;
+        return this;
+    }
+    @JsonProperty("Subject")
+    public String subject;
+    public Subscription withSubject(String subject) {
+        this.subject = subject;
+        return this;
+    }
+    @JsonProperty("Target")
+    public String target;
+    public Subscription withTarget(String target) {
+        this.target = target;
+        return this;
+    }
+}

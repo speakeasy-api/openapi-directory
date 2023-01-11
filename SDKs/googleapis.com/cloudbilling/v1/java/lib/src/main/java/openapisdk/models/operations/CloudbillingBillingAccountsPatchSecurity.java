@@ -1,0 +1,18 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class CloudbillingBillingAccountsPatchSecurity {
+    @SpeakeasyMetadata("security:option=true")
+    public CloudbillingBillingAccountsPatchSecurityOption1 option1;
+    public CloudbillingBillingAccountsPatchSecurity withOption1(CloudbillingBillingAccountsPatchSecurityOption1 option1) {
+        this.option1 = option1;
+        return this;
+    }
+    @SpeakeasyMetadata("security:option=true")
+    public CloudbillingBillingAccountsPatchSecurityOption2 option2;
+    public CloudbillingBillingAccountsPatchSecurity withOption2(CloudbillingBillingAccountsPatchSecurityOption2 option2) {
+        this.option2 = option2;
+        return this;
+    }
+}

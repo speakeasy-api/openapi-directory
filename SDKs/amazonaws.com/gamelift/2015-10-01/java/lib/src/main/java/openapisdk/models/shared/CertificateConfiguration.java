@@ -1,0 +1,16 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+/**
+ * CertificateConfiguration
+ * <p>Determines whether a TLS/SSL certificate is generated for a fleet. This feature must be enabled when creating the fleet. All instances in a fleet share the same certificate. The certificate can be retrieved by calling the <a href="https://docs.aws.amazon.com/gamelift/latest/developerguide/reference-serversdk.html">GameLift Server SDK</a> operation <code>GetInstanceCertificate</code>. </p> <p>A fleet's certificate configuration is part of <a>FleetAttributes</a>.</p>
+**/
+public class CertificateConfiguration {
+    @JsonProperty("CertificateType")
+    public CertificateTypeEnum certificateType;
+    public CertificateConfiguration withCertificateType(CertificateTypeEnum certificateType) {
+        this.certificateType = certificateType;
+        return this;
+    }
+}

@@ -1,0 +1,22 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class UpdateSlotRequest {
+    public UpdateSlotPathParams pathParams;
+    public UpdateSlotRequest withPathParams(UpdateSlotPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public UpdateSlotHeaders headers;
+    public UpdateSlotRequest withHeaders(UpdateSlotHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public UpdateSlotRequestBody request;
+    public UpdateSlotRequest withRequest(UpdateSlotRequestBody request) {
+        this.request = request;
+        return this;
+    }
+}

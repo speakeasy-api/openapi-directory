@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class MetastoreProjectsLocationsOperationsListRequest {
+    public MetastoreProjectsLocationsOperationsListPathParams pathParams;
+    public MetastoreProjectsLocationsOperationsListRequest withPathParams(MetastoreProjectsLocationsOperationsListPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public MetastoreProjectsLocationsOperationsListQueryParams queryParams;
+    public MetastoreProjectsLocationsOperationsListRequest withQueryParams(MetastoreProjectsLocationsOperationsListQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public MetastoreProjectsLocationsOperationsListSecurity security;
+    public MetastoreProjectsLocationsOperationsListRequest withSecurity(MetastoreProjectsLocationsOperationsListSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

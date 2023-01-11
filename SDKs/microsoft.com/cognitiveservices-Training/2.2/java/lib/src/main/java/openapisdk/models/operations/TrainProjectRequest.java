@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class TrainProjectRequest {
+    public TrainProjectPathParams pathParams;
+    public TrainProjectRequest withPathParams(TrainProjectPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public TrainProjectHeaders headers;
+    public TrainProjectRequest withHeaders(TrainProjectHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+}

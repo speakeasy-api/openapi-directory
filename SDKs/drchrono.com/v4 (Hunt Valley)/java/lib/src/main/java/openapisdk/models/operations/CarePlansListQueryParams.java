@@ -1,0 +1,36 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class CarePlansListQueryParams {
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
+    public String cursor;
+    public CarePlansListQueryParams withCursor(String cursor) {
+        this.cursor = cursor;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=doctor")
+    public Long doctor;
+    public CarePlansListQueryParams withDoctor(Long doctor) {
+        this.doctor = doctor;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_size")
+    public Long pageSize;
+    public CarePlansListQueryParams withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=patient")
+    public Long patient;
+    public CarePlansListQueryParams withPatient(Long patient) {
+        this.patient = patient;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=plan_type")
+    public Long planType;
+    public CarePlansListQueryParams withPlanType(Long planType) {
+        this.planType = planType;
+        return this;
+    }
+}

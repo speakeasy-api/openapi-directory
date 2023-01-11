@@ -1,0 +1,22 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class ActionAmendInvoiceData {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Invoice")
+    public Invoice invoice;
+    public ActionAmendInvoiceData withInvoice(Invoice invoice) {
+        this.invoice = invoice;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("InvoiceItem")
+    public ActionAmendInvoiceItem[] invoiceItem;
+    public ActionAmendInvoiceData withInvoiceItem(ActionAmendInvoiceItem[] invoiceItem) {
+        this.invoiceItem = invoiceItem;
+        return this;
+    }
+}

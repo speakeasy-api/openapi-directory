@@ -1,0 +1,159 @@
+package openapisdk.models.shared;
+
+import java.time.OffsetDateTime;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import openapisdk.utils.DateTimeSerializer;
+import openapisdk.utils.DateTimeDeserializer;
+
+/**
+ * TraceSummary
+ * Metadata generated from the segment documents in a trace.
+**/
+public class TraceSummary {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Annotations")
+    public java.util.Map<String, ValueWithServiceIds[]> annotations;
+    public TraceSummary withAnnotations(java.util.Map<String, ValueWithServiceIds[]> annotations) {
+        this.annotations = annotations;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("AvailabilityZones")
+    public AvailabilityZoneDetail[] availabilityZones;
+    public TraceSummary withAvailabilityZones(AvailabilityZoneDetail[] availabilityZones) {
+        this.availabilityZones = availabilityZones;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Duration")
+    public Double duration;
+    public TraceSummary withDuration(Double duration) {
+        this.duration = duration;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("EntryPoint")
+    public ServiceId entryPoint;
+    public TraceSummary withEntryPoint(ServiceId entryPoint) {
+        this.entryPoint = entryPoint;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ErrorRootCauses")
+    public ErrorRootCause[] errorRootCauses;
+    public TraceSummary withErrorRootCauses(ErrorRootCause[] errorRootCauses) {
+        this.errorRootCauses = errorRootCauses;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("FaultRootCauses")
+    public FaultRootCause[] faultRootCauses;
+    public TraceSummary withFaultRootCauses(FaultRootCause[] faultRootCauses) {
+        this.faultRootCauses = faultRootCauses;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("HasError")
+    public Boolean hasError;
+    public TraceSummary withHasError(Boolean hasError) {
+        this.hasError = hasError;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("HasFault")
+    public Boolean hasFault;
+    public TraceSummary withHasFault(Boolean hasFault) {
+        this.hasFault = hasFault;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("HasThrottle")
+    public Boolean hasThrottle;
+    public TraceSummary withHasThrottle(Boolean hasThrottle) {
+        this.hasThrottle = hasThrottle;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Http")
+    public Http http;
+    public TraceSummary withHttp(Http http) {
+        this.http = http;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Id")
+    public String id;
+    public TraceSummary withId(String id) {
+        this.id = id;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("InstanceIds")
+    public InstanceIdDetail[] instanceIds;
+    public TraceSummary withInstanceIds(InstanceIdDetail[] instanceIds) {
+        this.instanceIds = instanceIds;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("IsPartial")
+    public Boolean isPartial;
+    public TraceSummary withIsPartial(Boolean isPartial) {
+        this.isPartial = isPartial;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonSerialize(contentUsing = DateTimeSerializer.class)
+    @JsonDeserialize(contentUsing = DateTimeDeserializer.class)
+    @JsonProperty("MatchedEventTime")
+    public OffsetDateTime matchedEventTime;
+    public TraceSummary withMatchedEventTime(OffsetDateTime matchedEventTime) {
+        this.matchedEventTime = matchedEventTime;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ResourceARNs")
+    public ResourceArnDetail[] resourceARNs;
+    public TraceSummary withResourceArNs(ResourceArnDetail[] resourceARNs) {
+        this.resourceARNs = resourceARNs;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ResponseTime")
+    public Double responseTime;
+    public TraceSummary withResponseTime(Double responseTime) {
+        this.responseTime = responseTime;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ResponseTimeRootCauses")
+    public ResponseTimeRootCause[] responseTimeRootCauses;
+    public TraceSummary withResponseTimeRootCauses(ResponseTimeRootCause[] responseTimeRootCauses) {
+        this.responseTimeRootCauses = responseTimeRootCauses;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Revision")
+    public Long revision;
+    public TraceSummary withRevision(Long revision) {
+        this.revision = revision;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ServiceIds")
+    public ServiceId[] serviceIds;
+    public TraceSummary withServiceIds(ServiceId[] serviceIds) {
+        this.serviceIds = serviceIds;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Users")
+    public TraceUser[] users;
+    public TraceSummary withUsers(TraceUser[] users) {
+        this.users = users;
+        return this;
+    }
+}

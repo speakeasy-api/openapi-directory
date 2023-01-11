@@ -1,0 +1,42 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class SearchEntitiesRequest {
+    @JsonProperty("entityTypes")
+    public EntityTypeEnum[] entityTypes;
+    public SearchEntitiesRequest withEntityTypes(EntityTypeEnum[] entityTypes) {
+        this.entityTypes = entityTypes;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("filters")
+    public EntityFilter[] filters;
+    public SearchEntitiesRequest withFilters(EntityFilter[] filters) {
+        this.filters = filters;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("maxResults")
+    public Long maxResults;
+    public SearchEntitiesRequest withMaxResults(Long maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("namespaceVersion")
+    public Long namespaceVersion;
+    public SearchEntitiesRequest withNamespaceVersion(Long namespaceVersion) {
+        this.namespaceVersion = namespaceVersion;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("nextToken")
+    public String nextToken;
+    public SearchEntitiesRequest withNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+}

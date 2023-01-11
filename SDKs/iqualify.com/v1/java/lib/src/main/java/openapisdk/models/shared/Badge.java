@@ -1,0 +1,50 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class Badge {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("badgeExpiry")
+    public BadgeExpiry badgeExpiry;
+    public Badge withBadgeExpiry(BadgeExpiry badgeExpiry) {
+        this.badgeExpiry = badgeExpiry;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("badgeUrl")
+    public String badgeUrl;
+    public Badge withBadgeUrl(String badgeUrl) {
+        this.badgeUrl = badgeUrl;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("criterias")
+    public Criteria criterias;
+    public Badge withCriterias(Criteria criterias) {
+        this.criterias = criterias;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("description")
+    public String description;
+    public Badge withDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("openBadge")
+    public OpenBadgeClass openBadge;
+    public Badge withOpenBadge(OpenBadgeClass openBadge) {
+        this.openBadge = openBadge;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("title")
+    public String title;
+    public Badge withTitle(String title) {
+        this.title = title;
+        return this;
+    }
+}

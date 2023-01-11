@@ -1,0 +1,57 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class OrderDiscounts {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("amount")
+    public Long amount;
+    public OrderDiscounts withAmount(Long amount) {
+        this.amount = amount;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("currency")
+    public CurrencyEnum currency;
+    public OrderDiscounts withCurrency(CurrencyEnum currency) {
+        this.currency = currency;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("id")
+    public String id;
+    public OrderDiscounts withId(String id) {
+        this.id = id;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("name")
+    public String name;
+    public OrderDiscounts withName(String name) {
+        this.name = name;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("product_id")
+    public String productId;
+    public OrderDiscounts withProductId(String productId) {
+        this.productId = productId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("scope")
+    public OrderDiscountsScopeEnum scope;
+    public OrderDiscounts withScope(OrderDiscountsScopeEnum scope) {
+        this.scope = scope;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("type")
+    public OrderDiscountsTypeEnum type;
+    public OrderDiscounts withType(OrderDiscountsTypeEnum type) {
+        this.type = type;
+        return this;
+    }
+}

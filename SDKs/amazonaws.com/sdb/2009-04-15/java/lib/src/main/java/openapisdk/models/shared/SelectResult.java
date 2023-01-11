@@ -1,0 +1,16 @@
+package openapisdk.models.shared;
+
+
+
+public class SelectResult {
+    public ItemList[] items;
+    public SelectResult withItems(ItemList[] items) {
+        this.items = items;
+        return this;
+    }
+    public String nextToken;
+    public SelectResult withNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+}

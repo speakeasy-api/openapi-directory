@@ -1,0 +1,22 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class RejectCertificateTransferRequest {
+    public RejectCertificateTransferPathParams pathParams;
+    public RejectCertificateTransferRequest withPathParams(RejectCertificateTransferPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public RejectCertificateTransferHeaders headers;
+    public RejectCertificateTransferRequest withHeaders(RejectCertificateTransferHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public RejectCertificateTransferRequestBody request;
+    public RejectCertificateTransferRequest withRequest(RejectCertificateTransferRequestBody request) {
+        this.request = request;
+        return this;
+    }
+}

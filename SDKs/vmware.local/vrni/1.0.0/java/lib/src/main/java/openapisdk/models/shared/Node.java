@@ -1,0 +1,50 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class Node {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("entity_type")
+    public NodeTypeEnum entityType;
+    public Node withEntityType(NodeTypeEnum entityType) {
+        this.entityType = entityType;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("id")
+    public String id;
+    public Node withId(String id) {
+        this.id = id;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ip_address")
+    public String ipAddress;
+    public Node withIpAddress(String ipAddress) {
+        this.ipAddress = ipAddress;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("name")
+    public String name;
+    public Node withName(String name) {
+        this.name = name;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("node_id")
+    public String nodeId;
+    public Node withNodeId(String nodeId) {
+        this.nodeId = nodeId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("node_type")
+    public NodeNodeTypeEnum nodeType;
+    public Node withNodeType(NodeNodeTypeEnum nodeType) {
+        this.nodeType = nodeType;
+        return this;
+    }
+}

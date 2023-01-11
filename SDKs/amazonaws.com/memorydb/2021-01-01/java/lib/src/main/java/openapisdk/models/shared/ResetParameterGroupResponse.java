@@ -1,0 +1,15 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class ResetParameterGroupResponse {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ParameterGroup")
+    public ParameterGroup parameterGroup;
+    public ResetParameterGroupResponse withParameterGroup(ParameterGroup parameterGroup) {
+        this.parameterGroup = parameterGroup;
+        return this;
+    }
+}

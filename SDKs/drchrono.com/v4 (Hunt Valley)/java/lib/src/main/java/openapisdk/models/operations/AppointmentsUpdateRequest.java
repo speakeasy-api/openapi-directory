@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class AppointmentsUpdateRequest {
+    public AppointmentsUpdatePathParams pathParams;
+    public AppointmentsUpdateRequest withPathParams(AppointmentsUpdatePathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public AppointmentsUpdateQueryParams queryParams;
+    public AppointmentsUpdateRequest withQueryParams(AppointmentsUpdateQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public AppointmentsUpdateSecurity security;
+    public AppointmentsUpdateRequest withSecurity(AppointmentsUpdateSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

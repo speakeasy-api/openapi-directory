@@ -1,0 +1,33 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * ImageFailure
+ * An object representing an Amazon ECR image failure.
+**/
+public class ImageFailure {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("failureCode")
+    public ImageFailureCodeEnum failureCode;
+    public ImageFailure withFailureCode(ImageFailureCodeEnum failureCode) {
+        this.failureCode = failureCode;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("failureReason")
+    public String failureReason;
+    public ImageFailure withFailureReason(String failureReason) {
+        this.failureReason = failureReason;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("imageId")
+    public ImageIdentifier imageId;
+    public ImageFailure withImageId(ImageIdentifier imageId) {
+        this.imageId = imageId;
+        return this;
+    }
+}

@@ -1,0 +1,37 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * MathActivity
+ * An activity that computes an arithmetic expression using the message's attributes.
+**/
+public class MathActivity {
+    @JsonProperty("attribute")
+    public String attribute;
+    public MathActivity withAttribute(String attribute) {
+        this.attribute = attribute;
+        return this;
+    }
+    @JsonProperty("math")
+    public String math;
+    public MathActivity withMath(String math) {
+        this.math = math;
+        return this;
+    }
+    @JsonProperty("name")
+    public String name;
+    public MathActivity withName(String name) {
+        this.name = name;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("next")
+    public String next;
+    public MathActivity withNext(String next) {
+        this.next = next;
+        return this;
+    }
+}

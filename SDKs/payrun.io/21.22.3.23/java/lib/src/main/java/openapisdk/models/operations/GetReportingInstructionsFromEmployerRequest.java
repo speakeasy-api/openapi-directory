@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class GetReportingInstructionsFromEmployerRequest {
+    public GetReportingInstructionsFromEmployerPathParams pathParams;
+    public GetReportingInstructionsFromEmployerRequest withPathParams(GetReportingInstructionsFromEmployerPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public GetReportingInstructionsFromEmployerHeaders headers;
+    public GetReportingInstructionsFromEmployerRequest withHeaders(GetReportingInstructionsFromEmployerHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+}

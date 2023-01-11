@@ -1,0 +1,54 @@
+package openapisdk.models.shared;
+
+import java.time.OffsetDateTime;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import openapisdk.utils.DateTimeSerializer;
+import openapisdk.utils.DateTimeDeserializer;
+
+/**
+ * LifecyclePolicyPreviewResult
+ * The result of the lifecycle policy preview.
+**/
+public class LifecyclePolicyPreviewResult {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("action")
+    public LifecyclePolicyRuleAction action;
+    public LifecyclePolicyPreviewResult withAction(LifecyclePolicyRuleAction action) {
+        this.action = action;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("appliedRulePriority")
+    public Long appliedRulePriority;
+    public LifecyclePolicyPreviewResult withAppliedRulePriority(Long appliedRulePriority) {
+        this.appliedRulePriority = appliedRulePriority;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("imageDigest")
+    public String imageDigest;
+    public LifecyclePolicyPreviewResult withImageDigest(String imageDigest) {
+        this.imageDigest = imageDigest;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonSerialize(contentUsing = DateTimeSerializer.class)
+    @JsonDeserialize(contentUsing = DateTimeDeserializer.class)
+    @JsonProperty("imagePushedAt")
+    public OffsetDateTime imagePushedAt;
+    public LifecyclePolicyPreviewResult withImagePushedAt(OffsetDateTime imagePushedAt) {
+        this.imagePushedAt = imagePushedAt;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("imageTags")
+    public String[] imageTags;
+    public LifecyclePolicyPreviewResult withImageTags(String[] imageTags) {
+        this.imageTags = imageTags;
+        return this;
+    }
+}

@@ -1,0 +1,29 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class ListInsightsResponse {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("NextToken")
+    public String nextToken;
+    public ListInsightsResponse withNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ProactiveInsights")
+    public ProactiveInsightSummary[] proactiveInsights;
+    public ListInsightsResponse withProactiveInsights(ProactiveInsightSummary[] proactiveInsights) {
+        this.proactiveInsights = proactiveInsights;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ReactiveInsights")
+    public ReactiveInsightSummary[] reactiveInsights;
+    public ListInsightsResponse withReactiveInsights(ReactiveInsightSummary[] reactiveInsights) {
+        this.reactiveInsights = reactiveInsights;
+        return this;
+    }
+}

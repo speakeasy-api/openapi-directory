@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class DeleteBotVersionRequest {
+    public DeleteBotVersionPathParams pathParams;
+    public DeleteBotVersionRequest withPathParams(DeleteBotVersionPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public DeleteBotVersionQueryParams queryParams;
+    public DeleteBotVersionRequest withQueryParams(DeleteBotVersionQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public DeleteBotVersionHeaders headers;
+    public DeleteBotVersionRequest withHeaders(DeleteBotVersionHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+}

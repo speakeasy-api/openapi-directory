@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class GetAudioRequest {
+    public GetAudioPathParams pathParams;
+    public GetAudioRequest withPathParams(GetAudioPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public GetAudioQueryParams queryParams;
+    public GetAudioRequest withQueryParams(GetAudioQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+}

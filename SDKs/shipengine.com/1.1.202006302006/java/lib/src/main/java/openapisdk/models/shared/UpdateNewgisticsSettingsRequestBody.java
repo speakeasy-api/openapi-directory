@@ -1,0 +1,26 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * UpdateNewgisticsSettingsRequestBody
+ * A newgistics account settings request body
+**/
+public class UpdateNewgisticsSettingsRequestBody {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("include_barcode_with_order_number")
+    public Boolean includeBarcodeWithOrderNumber;
+    public UpdateNewgisticsSettingsRequestBody withIncludeBarcodeWithOrderNumber(Boolean includeBarcodeWithOrderNumber) {
+        this.includeBarcodeWithOrderNumber = includeBarcodeWithOrderNumber;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("receive_email_on_manifest_processing")
+    public Boolean receiveEmailOnManifestProcessing;
+    public UpdateNewgisticsSettingsRequestBody withReceiveEmailOnManifestProcessing(Boolean receiveEmailOnManifestProcessing) {
+        this.receiveEmailOnManifestProcessing = receiveEmailOnManifestProcessing;
+        return this;
+    }
+}

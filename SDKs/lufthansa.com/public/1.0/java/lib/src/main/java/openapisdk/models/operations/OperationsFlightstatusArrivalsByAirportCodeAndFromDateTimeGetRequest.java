@@ -1,0 +1,26 @@
+package openapisdk.models.operations;
+
+
+
+public class OperationsFlightstatusArrivalsByAirportCodeAndFromDateTimeGetRequest {
+    public OperationsFlightstatusArrivalsByAirportCodeAndFromDateTimeGetPathParams pathParams;
+    public OperationsFlightstatusArrivalsByAirportCodeAndFromDateTimeGetRequest withPathParams(OperationsFlightstatusArrivalsByAirportCodeAndFromDateTimeGetPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public OperationsFlightstatusArrivalsByAirportCodeAndFromDateTimeGetQueryParams queryParams;
+    public OperationsFlightstatusArrivalsByAirportCodeAndFromDateTimeGetRequest withQueryParams(OperationsFlightstatusArrivalsByAirportCodeAndFromDateTimeGetQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public OperationsFlightstatusArrivalsByAirportCodeAndFromDateTimeGetHeaders headers;
+    public OperationsFlightstatusArrivalsByAirportCodeAndFromDateTimeGetRequest withHeaders(OperationsFlightstatusArrivalsByAirportCodeAndFromDateTimeGetHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+    public OperationsFlightstatusArrivalsByAirportCodeAndFromDateTimeGetSecurity security;
+    public OperationsFlightstatusArrivalsByAirportCodeAndFromDateTimeGetRequest withSecurity(OperationsFlightstatusArrivalsByAirportCodeAndFromDateTimeGetSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

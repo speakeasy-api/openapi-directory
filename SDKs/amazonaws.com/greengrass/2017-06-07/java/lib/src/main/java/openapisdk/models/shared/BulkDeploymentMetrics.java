@@ -1,0 +1,33 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * BulkDeploymentMetrics
+ * Relevant metrics on input records processed during bulk deployment.
+**/
+public class BulkDeploymentMetrics {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("InvalidInputRecords")
+    public Long invalidInputRecords;
+    public BulkDeploymentMetrics withInvalidInputRecords(Long invalidInputRecords) {
+        this.invalidInputRecords = invalidInputRecords;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("RecordsProcessed")
+    public Long recordsProcessed;
+    public BulkDeploymentMetrics withRecordsProcessed(Long recordsProcessed) {
+        this.recordsProcessed = recordsProcessed;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("RetryAttempts")
+    public Long retryAttempts;
+    public BulkDeploymentMetrics withRetryAttempts(Long retryAttempts) {
+        this.retryAttempts = retryAttempts;
+        return this;
+    }
+}

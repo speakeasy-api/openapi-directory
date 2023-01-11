@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class OriginRequest {
+    public OriginPathParams pathParams;
+    public OriginRequest withPathParams(OriginPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public OriginSecurity security;
+    public OriginRequest withSecurity(OriginSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

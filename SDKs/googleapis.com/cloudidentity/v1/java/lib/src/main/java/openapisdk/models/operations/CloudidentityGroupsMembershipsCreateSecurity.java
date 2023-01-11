@@ -1,0 +1,18 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class CloudidentityGroupsMembershipsCreateSecurity {
+    @SpeakeasyMetadata("security:option=true")
+    public CloudidentityGroupsMembershipsCreateSecurityOption1 option1;
+    public CloudidentityGroupsMembershipsCreateSecurity withOption1(CloudidentityGroupsMembershipsCreateSecurityOption1 option1) {
+        this.option1 = option1;
+        return this;
+    }
+    @SpeakeasyMetadata("security:option=true")
+    public CloudidentityGroupsMembershipsCreateSecurityOption2 option2;
+    public CloudidentityGroupsMembershipsCreateSecurity withOption2(CloudidentityGroupsMembershipsCreateSecurityOption2 option2) {
+        this.option2 = option2;
+        return this;
+    }
+}

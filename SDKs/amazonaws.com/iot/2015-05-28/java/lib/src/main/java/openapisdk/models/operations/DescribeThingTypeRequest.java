@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class DescribeThingTypeRequest {
+    public DescribeThingTypePathParams pathParams;
+    public DescribeThingTypeRequest withPathParams(DescribeThingTypePathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public DescribeThingTypeHeaders headers;
+    public DescribeThingTypeRequest withHeaders(DescribeThingTypeHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+}

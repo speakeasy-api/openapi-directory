@@ -1,0 +1,22 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class StartAuditMitigationActionsTaskRequest {
+    public StartAuditMitigationActionsTaskPathParams pathParams;
+    public StartAuditMitigationActionsTaskRequest withPathParams(StartAuditMitigationActionsTaskPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public StartAuditMitigationActionsTaskHeaders headers;
+    public StartAuditMitigationActionsTaskRequest withHeaders(StartAuditMitigationActionsTaskHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public StartAuditMitigationActionsTaskRequestBody request;
+    public StartAuditMitigationActionsTaskRequest withRequest(StartAuditMitigationActionsTaskRequestBody request) {
+        this.request = request;
+        return this;
+    }
+}

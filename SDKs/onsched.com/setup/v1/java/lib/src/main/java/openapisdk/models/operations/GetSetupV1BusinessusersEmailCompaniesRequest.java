@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class GetSetupV1BusinessusersEmailCompaniesRequest {
+    public GetSetupV1BusinessusersEmailCompaniesPathParams pathParams;
+    public GetSetupV1BusinessusersEmailCompaniesRequest withPathParams(GetSetupV1BusinessusersEmailCompaniesPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public GetSetupV1BusinessusersEmailCompaniesQueryParams queryParams;
+    public GetSetupV1BusinessusersEmailCompaniesRequest withQueryParams(GetSetupV1BusinessusersEmailCompaniesQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+}

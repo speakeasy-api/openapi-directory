@@ -1,0 +1,20 @@
+package openapisdk.models.shared;
+
+
+
+/**
+ * CookieNames
+ * A complex type that specifies whether you want CloudFront to forward cookies to the origin and, if so, which ones. For more information about forwarding cookies to the origin, see <a href="https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/header-caching.html"> Caching Content Based on Request Headers</a> in the <i>Amazon CloudFront Developer Guide</i>.
+**/
+public class CookieNames {
+    public java.util.Map<String, Object>[] items;
+    public CookieNames withItems(java.util.Map<String, Object>[] items) {
+        this.items = items;
+        return this;
+    }
+    public Long quantity;
+    public CookieNames withQuantity(Long quantity) {
+        this.quantity = quantity;
+        return this;
+    }
+}

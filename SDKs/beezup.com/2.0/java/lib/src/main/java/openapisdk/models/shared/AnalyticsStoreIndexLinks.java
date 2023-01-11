@@ -1,0 +1,115 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class AnalyticsStoreIndexLinks {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("optimise")
+    public LinksOptimiseLink optimise;
+    public AnalyticsStoreIndexLinks withOptimise(LinksOptimiseLink optimise) {
+        this.optimise = optimise;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("optimiseAll")
+    public LinksOptimiseAllLink optimiseAll;
+    public AnalyticsStoreIndexLinks withOptimiseAll(LinksOptimiseAllLink optimiseAll) {
+        this.optimiseAll = optimiseAll;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("optimiseByCategory")
+    public LinksOptimiseByCategoryLink optimiseByCategory;
+    public AnalyticsStoreIndexLinks withOptimiseByCategory(LinksOptimiseByCategoryLink optimiseByCategory) {
+        this.optimiseByCategory = optimiseByCategory;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("optimiseByChannel")
+    public LinksOptimiseByChannelLink optimiseByChannel;
+    public AnalyticsStoreIndexLinks withOptimiseByChannel(LinksOptimiseByChannelLink optimiseByChannel) {
+        this.optimiseByChannel = optimiseByChannel;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("optimiseByProduct")
+    public LinksOptimiseByProductLink optimiseByProduct;
+    public AnalyticsStoreIndexLinks withOptimiseByProduct(LinksOptimiseByProductLink optimiseByProduct) {
+        this.optimiseByProduct = optimiseByProduct;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("reportByCategory")
+    public LinksGetStoreReportByCategoryLink reportByCategory;
+    public AnalyticsStoreIndexLinks withReportByCategory(LinksGetStoreReportByCategoryLink reportByCategory) {
+        this.reportByCategory = reportByCategory;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("reportByChannel")
+    public LinksGetStoreReportByChannelLink reportByChannel;
+    public AnalyticsStoreIndexLinks withReportByChannel(LinksGetStoreReportByChannelLink reportByChannel) {
+        this.reportByChannel = reportByChannel;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("reportByDay")
+    public LinksGetStoreReportByDayLink reportByDay;
+    public AnalyticsStoreIndexLinks withReportByDay(LinksGetStoreReportByDayLink reportByDay) {
+        this.reportByDay = reportByDay;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("reportByProduct")
+    public LinksGetStoreReportByProductLink reportByProduct;
+    public AnalyticsStoreIndexLinks withReportByProduct(LinksGetStoreReportByProductLink reportByProduct) {
+        this.reportByProduct = reportByProduct;
+        return this;
+    }
+    @JsonProperty("reportFilters")
+    public LinksGetReportFiltersLink reportFilters;
+    public AnalyticsStoreIndexLinks withReportFilters(LinksGetReportFiltersLink reportFilters) {
+        this.reportFilters = reportFilters;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("rules")
+    public LinksGetRulesLink rules;
+    public AnalyticsStoreIndexLinks withRules(LinksGetRulesLink rules) {
+        this.rules = rules;
+        return this;
+    }
+    @JsonProperty("self")
+    public LinksAnalyticsIndexLink self;
+    public AnalyticsStoreIndexLinks withSelf(LinksAnalyticsIndexLink self) {
+        this.self = self;
+        return this;
+    }
+    @JsonProperty("trackedClicks")
+    public LinksGetStoreTrackedClicksLink trackedClicks;
+    public AnalyticsStoreIndexLinks withTrackedClicks(LinksGetStoreTrackedClicksLink trackedClicks) {
+        this.trackedClicks = trackedClicks;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("trackedExternalOrders")
+    public LinksGetStoreTrackedExternalOrdersLink trackedExternalOrders;
+    public AnalyticsStoreIndexLinks withTrackedExternalOrders(LinksGetStoreTrackedExternalOrdersLink trackedExternalOrders) {
+        this.trackedExternalOrders = trackedExternalOrders;
+        return this;
+    }
+    @JsonProperty("trackedOrders")
+    public LinksGetStoreTrackedOrdersLink trackedOrders;
+    public AnalyticsStoreIndexLinks withTrackedOrders(LinksGetStoreTrackedOrdersLink trackedOrders) {
+        this.trackedOrders = trackedOrders;
+        return this;
+    }
+    @JsonProperty("trackingStatus")
+    public LinksGetStoreTrackingStatusLink trackingStatus;
+    public AnalyticsStoreIndexLinks withTrackingStatus(LinksGetStoreTrackingStatusLink trackingStatus) {
+        this.trackingStatus = trackingStatus;
+        return this;
+    }
+}

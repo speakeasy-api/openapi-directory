@@ -1,0 +1,12 @@
+package openapisdk.models.operations;
+
+
+public enum GetAtms429ErrorObjectDescriptionEnum {
+    YOU_HAVE_REQUESTED_THIS_RESOURCE_TOO_OFTEN_SLOW_DOWN("You have requested this resource too often. Slow down.");
+
+    public final String value;
+
+    private GetAtms429ErrorObjectDescriptionEnum(String value) {
+        this.value = value;
+    }
+}

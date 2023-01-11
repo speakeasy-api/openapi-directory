@@ -1,0 +1,16 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+/**
+ * StartJobResult
+ *  The result structure for the run job request. 
+**/
+public class StartJobResult {
+    @JsonProperty("jobSummary")
+    public JobSummary jobSummary;
+    public StartJobResult withJobSummary(JobSummary jobSummary) {
+        this.jobSummary = jobSummary;
+        return this;
+    }
+}

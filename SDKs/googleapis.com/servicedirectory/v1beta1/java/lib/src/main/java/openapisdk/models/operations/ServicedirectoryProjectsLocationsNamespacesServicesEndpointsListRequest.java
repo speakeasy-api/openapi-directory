@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class ServicedirectoryProjectsLocationsNamespacesServicesEndpointsListRequest {
+    public ServicedirectoryProjectsLocationsNamespacesServicesEndpointsListPathParams pathParams;
+    public ServicedirectoryProjectsLocationsNamespacesServicesEndpointsListRequest withPathParams(ServicedirectoryProjectsLocationsNamespacesServicesEndpointsListPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public ServicedirectoryProjectsLocationsNamespacesServicesEndpointsListQueryParams queryParams;
+    public ServicedirectoryProjectsLocationsNamespacesServicesEndpointsListRequest withQueryParams(ServicedirectoryProjectsLocationsNamespacesServicesEndpointsListQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public ServicedirectoryProjectsLocationsNamespacesServicesEndpointsListSecurity security;
+    public ServicedirectoryProjectsLocationsNamespacesServicesEndpointsListRequest withSecurity(ServicedirectoryProjectsLocationsNamespacesServicesEndpointsListSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

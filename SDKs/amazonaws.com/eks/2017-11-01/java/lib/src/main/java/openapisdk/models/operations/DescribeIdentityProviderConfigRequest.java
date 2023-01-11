@@ -1,0 +1,22 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class DescribeIdentityProviderConfigRequest {
+    public DescribeIdentityProviderConfigPathParams pathParams;
+    public DescribeIdentityProviderConfigRequest withPathParams(DescribeIdentityProviderConfigPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public DescribeIdentityProviderConfigHeaders headers;
+    public DescribeIdentityProviderConfigRequest withHeaders(DescribeIdentityProviderConfigHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public DescribeIdentityProviderConfigRequestBody request;
+    public DescribeIdentityProviderConfigRequest withRequest(DescribeIdentityProviderConfigRequestBody request) {
+        this.request = request;
+        return this;
+    }
+}

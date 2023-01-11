@@ -1,0 +1,18 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+public class RackOuterUnit {
+    @JsonProperty("label")
+    public RackOuterUnitLabelEnum label;
+    public RackOuterUnit withLabel(RackOuterUnitLabelEnum label) {
+        this.label = label;
+        return this;
+    }
+    @JsonProperty("value")
+    public RackOuterUnitValueEnum value;
+    public RackOuterUnit withValue(RackOuterUnitValueEnum value) {
+        this.value = value;
+        return this;
+    }
+}

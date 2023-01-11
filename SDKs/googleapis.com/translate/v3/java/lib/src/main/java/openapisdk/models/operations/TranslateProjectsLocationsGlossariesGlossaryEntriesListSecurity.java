@@ -1,0 +1,18 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class TranslateProjectsLocationsGlossariesGlossaryEntriesListSecurity {
+    @SpeakeasyMetadata("security:option=true")
+    public TranslateProjectsLocationsGlossariesGlossaryEntriesListSecurityOption1 option1;
+    public TranslateProjectsLocationsGlossariesGlossaryEntriesListSecurity withOption1(TranslateProjectsLocationsGlossariesGlossaryEntriesListSecurityOption1 option1) {
+        this.option1 = option1;
+        return this;
+    }
+    @SpeakeasyMetadata("security:option=true")
+    public TranslateProjectsLocationsGlossariesGlossaryEntriesListSecurityOption2 option2;
+    public TranslateProjectsLocationsGlossariesGlossaryEntriesListSecurity withOption2(TranslateProjectsLocationsGlossariesGlossaryEntriesListSecurityOption2 option2) {
+        this.option2 = option2;
+        return this;
+    }
+}

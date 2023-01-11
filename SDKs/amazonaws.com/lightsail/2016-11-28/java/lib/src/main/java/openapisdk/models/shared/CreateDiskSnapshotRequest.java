@@ -1,0 +1,35 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class CreateDiskSnapshotRequest {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("diskName")
+    public String diskName;
+    public CreateDiskSnapshotRequest withDiskName(String diskName) {
+        this.diskName = diskName;
+        return this;
+    }
+    @JsonProperty("diskSnapshotName")
+    public String diskSnapshotName;
+    public CreateDiskSnapshotRequest withDiskSnapshotName(String diskSnapshotName) {
+        this.diskSnapshotName = diskSnapshotName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("instanceName")
+    public String instanceName;
+    public CreateDiskSnapshotRequest withInstanceName(String instanceName) {
+        this.instanceName = instanceName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("tags")
+    public Tag[] tags;
+    public CreateDiskSnapshotRequest withTags(Tag[] tags) {
+        this.tags = tags;
+        return this;
+    }
+}

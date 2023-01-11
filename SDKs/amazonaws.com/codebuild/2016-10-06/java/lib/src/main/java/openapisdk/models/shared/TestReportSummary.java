@@ -1,0 +1,28 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+/**
+ * TestReportSummary
+ *  Information about a test report. 
+**/
+public class TestReportSummary {
+    @JsonProperty("durationInNanoSeconds")
+    public Long durationInNanoSeconds;
+    public TestReportSummary withDurationInNanoSeconds(Long durationInNanoSeconds) {
+        this.durationInNanoSeconds = durationInNanoSeconds;
+        return this;
+    }
+    @JsonProperty("statusCounts")
+    public java.util.Map<String, Long> statusCounts;
+    public TestReportSummary withStatusCounts(java.util.Map<String, Long> statusCounts) {
+        this.statusCounts = statusCounts;
+        return this;
+    }
+    @JsonProperty("total")
+    public Long total;
+    public TestReportSummary withTotal(Long total) {
+        this.total = total;
+        return this;
+    }
+}

@@ -1,0 +1,42 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class GenerateDataKeyRequest {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("EncryptionContext")
+    public java.util.Map<String, String> encryptionContext;
+    public GenerateDataKeyRequest withEncryptionContext(java.util.Map<String, String> encryptionContext) {
+        this.encryptionContext = encryptionContext;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("GrantTokens")
+    public String[] grantTokens;
+    public GenerateDataKeyRequest withGrantTokens(String[] grantTokens) {
+        this.grantTokens = grantTokens;
+        return this;
+    }
+    @JsonProperty("KeyId")
+    public String keyId;
+    public GenerateDataKeyRequest withKeyId(String keyId) {
+        this.keyId = keyId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("KeySpec")
+    public DataKeySpecEnum keySpec;
+    public GenerateDataKeyRequest withKeySpec(DataKeySpecEnum keySpec) {
+        this.keySpec = keySpec;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("NumberOfBytes")
+    public Long numberOfBytes;
+    public GenerateDataKeyRequest withNumberOfBytes(Long numberOfBytes) {
+        this.numberOfBytes = numberOfBytes;
+        return this;
+    }
+}

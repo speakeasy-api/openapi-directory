@@ -1,0 +1,92 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class CustomerInputModel {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("address")
+    public AddressInputModel address;
+    public CustomerInputModel withAddress(AddressInputModel address) {
+        this.address = address;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("contact")
+    public ContactInputModel contact;
+    public CustomerInputModel withContact(ContactInputModel contact) {
+        this.contact = contact;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("customFields")
+    public CustomFieldInputModel customFields;
+    public CustomerInputModel withCustomFields(CustomFieldInputModel customFields) {
+        this.customFields = customFields;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("email")
+    public String email;
+    public CustomerInputModel withEmail(String email) {
+        this.email = email;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("firstname")
+    public String firstname;
+    public CustomerInputModel withFirstname(String firstname) {
+        this.firstname = firstname;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("lastname")
+    public String lastname;
+    public CustomerInputModel withLastname(String lastname) {
+        this.lastname = lastname;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("locationId")
+    public String locationId;
+    public CustomerInputModel withLocationId(String locationId) {
+        this.locationId = locationId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("name")
+    public String name;
+    public CustomerInputModel withName(String name) {
+        this.name = name;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("notificationType")
+    public String notificationType;
+    public CustomerInputModel withNotificationType(String notificationType) {
+        this.notificationType = notificationType;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("sendLeadNotification")
+    public Boolean sendLeadNotification;
+    public CustomerInputModel withSendLeadNotification(Boolean sendLeadNotification) {
+        this.sendLeadNotification = sendLeadNotification;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("stripeCustomerId")
+    public String stripeCustomerId;
+    public CustomerInputModel withStripeCustomerId(String stripeCustomerId) {
+        this.stripeCustomerId = stripeCustomerId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("type")
+    public Integer type;
+    public CustomerInputModel withType(Integer type) {
+        this.type = type;
+        return this;
+    }
+}

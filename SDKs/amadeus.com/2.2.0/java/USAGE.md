@@ -1,0 +1,43 @@
+<!-- Start SDK Example Usage -->
+```java
+package hello.world;
+
+import openapisdk.SDK;
+import openapisdk.models.shared.Security;
+
+public class Application {
+    public static void main(String[] args) {
+        try {
+            SDK.Builder builder = SDK.builder();
+
+            SDK sdk = builder.build();
+
+            GetFlightOffersRequest req = new GetFlightOffersRequest() {{
+                queryParams = new GetFlightOffersQueryParams() {{
+                    adults = 4814861198247358488;
+                    children = 4975249678507640420;
+                    currencyCode = "expedita";
+                    departureDate = "1989-07-02";
+                    destinationLocationCode = "qui";
+                    excludedAirlineCodes = "modi";
+                    includedAirlineCodes = "nihil";
+                    infants = 1011676084465510524;
+                    max = 8764227983217623240;
+                    maxPrice = 4745905187492708501;
+                    nonStop = false;
+                    originLocationCode = "sit";
+                    returnDate = "2001-11-04";
+                    travelClass = "BUSINESS";
+                }};
+            }};
+
+            GetFlightOffersResponse res = sdk.shopping.getFlightOffers(req);
+
+            if (res.success.isPresent()) {
+                // handle response
+            }
+        } catch (Exception e) {
+            // handle exception
+        }
+```
+<!-- End SDK Example Usage -->

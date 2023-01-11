@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class SecretmanagerProjectsSecretsDeleteRequest {
+    public SecretmanagerProjectsSecretsDeletePathParams pathParams;
+    public SecretmanagerProjectsSecretsDeleteRequest withPathParams(SecretmanagerProjectsSecretsDeletePathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public SecretmanagerProjectsSecretsDeleteQueryParams queryParams;
+    public SecretmanagerProjectsSecretsDeleteRequest withQueryParams(SecretmanagerProjectsSecretsDeleteQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public SecretmanagerProjectsSecretsDeleteSecurity security;
+    public SecretmanagerProjectsSecretsDeleteRequest withSecurity(SecretmanagerProjectsSecretsDeleteSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

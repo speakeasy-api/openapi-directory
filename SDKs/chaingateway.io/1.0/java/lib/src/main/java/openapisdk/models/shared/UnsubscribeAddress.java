@@ -1,0 +1,36 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+public class UnsubscribeAddress {
+    @JsonProperty("contractaddress")
+    public String contractaddress;
+    public UnsubscribeAddress withContractaddress(String contractaddress) {
+        this.contractaddress = contractaddress;
+        return this;
+    }
+    @JsonProperty("deleted")
+    public Boolean deleted;
+    public UnsubscribeAddress withDeleted(Boolean deleted) {
+        this.deleted = deleted;
+        return this;
+    }
+    @JsonProperty("ethereumaddress")
+    public String ethereumaddress;
+    public UnsubscribeAddress withEthereumaddress(String ethereumaddress) {
+        this.ethereumaddress = ethereumaddress;
+        return this;
+    }
+    @JsonProperty("ok")
+    public Boolean ok;
+    public UnsubscribeAddress withOk(Boolean ok) {
+        this.ok = ok;
+        return this;
+    }
+    @JsonProperty("url")
+    public String url;
+    public UnsubscribeAddress withUrl(String url) {
+        this.url = url;
+        return this;
+    }
+}

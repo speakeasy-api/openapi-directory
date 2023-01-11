@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class CloudidentityCustomersUserinvitationsListRequest {
+    public CloudidentityCustomersUserinvitationsListPathParams pathParams;
+    public CloudidentityCustomersUserinvitationsListRequest withPathParams(CloudidentityCustomersUserinvitationsListPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public CloudidentityCustomersUserinvitationsListQueryParams queryParams;
+    public CloudidentityCustomersUserinvitationsListRequest withQueryParams(CloudidentityCustomersUserinvitationsListQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+}

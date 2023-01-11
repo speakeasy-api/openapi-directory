@@ -1,0 +1,27 @@
+package openapisdk.models.shared;
+
+
+public enum ServicesBenefitsEnum {
+    APPLYING_FOR_BENEFITS("ApplyingForBenefits"),
+    BURIAL_CLAIM_ASSISTANCE("BurialClaimAssistance"),
+    DISABILITY_CLAIM_ASSISTANCE("DisabilityClaimAssistance"),
+    E_BENEFITS_REGISTRATION_ASSISTANCE("eBenefitsRegistrationAssistance"),
+    EDUCATION_AND_CAREER_COUNSELING("EducationAndCareerCounseling"),
+    EDUCATION_CLAIM_ASSISTANCE("EducationClaimAssistance"),
+    FAMILY_MEMBER_CLAIM_ASSISTANCE("FamilyMemberClaimAssistance"),
+    HOMELESS_ASSISTANCE("HomelessAssistance"),
+    INSURANCE_CLAIM_ASSISTANCE_AND_FINANCIAL_COUNSELING("InsuranceClaimAssistanceAndFinancialCounseling"),
+    INTEGRATED_DISABILITY_EVALUATION_SYSTEM_ASSISTANCE("IntegratedDisabilityEvaluationSystemAssistance"),
+    PENSIONS("Pensions"),
+    PRE_DISCHARGE_CLAIM_ASSISTANCE("PreDischargeClaimAssistance"),
+    TRANSITION_ASSISTANCE("TransitionAssistance"),
+    UPDATING_DIRECT_DEPOSIT_INFORMATION("UpdatingDirectDepositInformation"),
+    VA_HOME_LOAN_ASSISTANCE("VAHomeLoanAssistance"),
+    VOCATIONAL_REHABILITATION_AND_EMPLOYMENT_ASSISTANCE("VocationalRehabilitationAndEmploymentAssistance");
+
+    public final String value;
+
+    private ServicesBenefitsEnum(String value) {
+        this.value = value;
+    }
+}

@@ -1,0 +1,113 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * PushNotificationTemplateResponse
+ * Provides information about the content and settings for a message template that can be used in messages that are sent through a push notification channel.
+**/
+public class PushNotificationTemplateResponse {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ADM")
+    public AndroidPushNotificationTemplate adm;
+    public PushNotificationTemplateResponse withAdm(AndroidPushNotificationTemplate adm) {
+        this.adm = adm;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("APNS")
+    public ApnsPushNotificationTemplate apns;
+    public PushNotificationTemplateResponse withApns(ApnsPushNotificationTemplate apns) {
+        this.apns = apns;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Arn")
+    public String arn;
+    public PushNotificationTemplateResponse withArn(String arn) {
+        this.arn = arn;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Baidu")
+    public AndroidPushNotificationTemplate baidu;
+    public PushNotificationTemplateResponse withBaidu(AndroidPushNotificationTemplate baidu) {
+        this.baidu = baidu;
+        return this;
+    }
+    @JsonProperty("CreationDate")
+    public String creationDate;
+    public PushNotificationTemplateResponse withCreationDate(String creationDate) {
+        this.creationDate = creationDate;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Default")
+    public DefaultPushNotificationTemplate default_;
+    public PushNotificationTemplateResponse withDefault(DefaultPushNotificationTemplate default_) {
+        this.default_ = default_;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("DefaultSubstitutions")
+    public String defaultSubstitutions;
+    public PushNotificationTemplateResponse withDefaultSubstitutions(String defaultSubstitutions) {
+        this.defaultSubstitutions = defaultSubstitutions;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("GCM")
+    public AndroidPushNotificationTemplate gcm;
+    public PushNotificationTemplateResponse withGcm(AndroidPushNotificationTemplate gcm) {
+        this.gcm = gcm;
+        return this;
+    }
+    @JsonProperty("LastModifiedDate")
+    public String lastModifiedDate;
+    public PushNotificationTemplateResponse withLastModifiedDate(String lastModifiedDate) {
+        this.lastModifiedDate = lastModifiedDate;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("RecommenderId")
+    public String recommenderId;
+    public PushNotificationTemplateResponse withRecommenderId(String recommenderId) {
+        this.recommenderId = recommenderId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("TemplateDescription")
+    public String templateDescription;
+    public PushNotificationTemplateResponse withTemplateDescription(String templateDescription) {
+        this.templateDescription = templateDescription;
+        return this;
+    }
+    @JsonProperty("TemplateName")
+    public String templateName;
+    public PushNotificationTemplateResponse withTemplateName(String templateName) {
+        this.templateName = templateName;
+        return this;
+    }
+    @JsonProperty("TemplateType")
+    public TemplateTypeEnum templateType;
+    public PushNotificationTemplateResponse withTemplateType(TemplateTypeEnum templateType) {
+        this.templateType = templateType;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Version")
+    public String version;
+    public PushNotificationTemplateResponse withVersion(String version) {
+        this.version = version;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("tags")
+    public java.util.Map<String, String> tags;
+    public PushNotificationTemplateResponse withTags(java.util.Map<String, String> tags) {
+        this.tags = tags;
+        return this;
+    }
+}

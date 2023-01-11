@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class DfareportingBillingProfilesListRequest {
+    public DfareportingBillingProfilesListPathParams pathParams;
+    public DfareportingBillingProfilesListRequest withPathParams(DfareportingBillingProfilesListPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public DfareportingBillingProfilesListQueryParams queryParams;
+    public DfareportingBillingProfilesListRequest withQueryParams(DfareportingBillingProfilesListQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public DfareportingBillingProfilesListSecurity security;
+    public DfareportingBillingProfilesListRequest withSecurity(DfareportingBillingProfilesListSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

@@ -1,0 +1,29 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class DeleteSchemaResponse {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("SchemaArn")
+    public String schemaArn;
+    public DeleteSchemaResponse withSchemaArn(String schemaArn) {
+        this.schemaArn = schemaArn;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("SchemaName")
+    public String schemaName;
+    public DeleteSchemaResponse withSchemaName(String schemaName) {
+        this.schemaName = schemaName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Status")
+    public SchemaStatusEnum status;
+    public DeleteSchemaResponse withStatus(SchemaStatusEnum status) {
+        this.status = status;
+        return this;
+    }
+}

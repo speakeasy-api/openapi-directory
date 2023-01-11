@@ -1,0 +1,28 @@
+package openapisdk.models.operations;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class PostAdminMappingsFindByMetadataRequestBodyXPathMatch {
+    @JsonProperty("matchesXpath")
+    public String matchesXpath;
+    public PostAdminMappingsFindByMetadataRequestBodyXPathMatch withMatchesXpath(String matchesXpath) {
+        this.matchesXpath = matchesXpath;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("namespaces")
+    public java.util.Map<String, Object> namespaces;
+    public PostAdminMappingsFindByMetadataRequestBodyXPathMatch withNamespaces(java.util.Map<String, Object> namespaces) {
+        this.namespaces = namespaces;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("valuePattern")
+    public java.util.Map<String, Object> valuePattern;
+    public PostAdminMappingsFindByMetadataRequestBodyXPathMatch withValuePattern(java.util.Map<String, Object> valuePattern) {
+        this.valuePattern = valuePattern;
+        return this;
+    }
+}

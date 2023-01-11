@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class YoutubeLiveChatBansDeleteRequest {
+    public YoutubeLiveChatBansDeleteQueryParams queryParams;
+    public YoutubeLiveChatBansDeleteRequest withQueryParams(YoutubeLiveChatBansDeleteQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public YoutubeLiveChatBansDeleteSecurity security;
+    public YoutubeLiveChatBansDeleteRequest withSecurity(YoutubeLiveChatBansDeleteSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

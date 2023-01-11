@@ -1,0 +1,68 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * InAppMessageCampaign
+ * Targeted in-app message campaign.
+**/
+public class InAppMessageCampaign {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("CampaignId")
+    public String campaignId;
+    public InAppMessageCampaign withCampaignId(String campaignId) {
+        this.campaignId = campaignId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("DailyCap")
+    public Long dailyCap;
+    public InAppMessageCampaign withDailyCap(Long dailyCap) {
+        this.dailyCap = dailyCap;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("InAppMessage")
+    public InAppMessage inAppMessage;
+    public InAppMessageCampaign withInAppMessage(InAppMessage inAppMessage) {
+        this.inAppMessage = inAppMessage;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Priority")
+    public Long priority;
+    public InAppMessageCampaign withPriority(Long priority) {
+        this.priority = priority;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Schedule")
+    public InAppCampaignSchedule schedule;
+    public InAppMessageCampaign withSchedule(InAppCampaignSchedule schedule) {
+        this.schedule = schedule;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("SessionCap")
+    public Long sessionCap;
+    public InAppMessageCampaign withSessionCap(Long sessionCap) {
+        this.sessionCap = sessionCap;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("TotalCap")
+    public Long totalCap;
+    public InAppMessageCampaign withTotalCap(Long totalCap) {
+        this.totalCap = totalCap;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("TreatmentId")
+    public String treatmentId;
+    public InAppMessageCampaign withTreatmentId(String treatmentId) {
+        this.treatmentId = treatmentId;
+        return this;
+    }
+}

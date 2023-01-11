@@ -1,0 +1,44 @@
+<!-- Start SDK Example Usage -->
+```java
+package hello.world;
+
+import openapisdk.SDK;
+import openapisdk.models.shared.Security;
+
+public class Application {
+    public static void main(String[] args) {
+        try {
+            SDK.Builder builder = SDK.builder();
+
+            SDK sdk = builder.build();
+
+            AlimwRequest req = new AlimwRequest() {{
+                security = new AlimwSecurity() {{
+                    apiKey = new SchemeApiKey() {{
+                        apiKey = "YOUR_API_KEY_HERE";
+                    }};
+                    clientId = new SchemeClientId() {{
+                        apiKey = "YOUR_API_KEY_HERE";
+                    }};
+                }};
+                request = new AlimwRequestBody() {{
+                    certificateParameters = new AlimwRequestBodyCertificateParameters() {{
+                        refNo = "maxime";
+                        tokenNo = "rerum";
+                    }};
+                    consentArtifact = "quisquam";
+                    format = "pdf";
+                    txnId = "nemo";
+                }};
+            }};
+
+            AlimwResponse res = sdk.apIs.alimw(req);
+
+            if (res.statusCode == 200) {
+                // handle response
+            }
+        } catch (Exception e) {
+            // handle exception
+        }
+```
+<!-- End SDK Example Usage -->

@@ -1,0 +1,22 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+/**
+ * TimestreamDimension
+ * Metadata attributes of the time series that are written in each measure record.
+**/
+public class TimestreamDimension {
+    @JsonProperty("name")
+    public String name;
+    public TimestreamDimension withName(String name) {
+        this.name = name;
+        return this;
+    }
+    @JsonProperty("value")
+    public String value;
+    public TimestreamDimension withValue(String value) {
+        this.value = value;
+        return this;
+    }
+}

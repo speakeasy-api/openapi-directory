@@ -1,0 +1,56 @@
+package openapisdk.models.shared;
+
+
+
+public class Sslp {
+    public Integer expectedSize;
+    public Sslp withExpectedSize(Integer expectedSize) {
+        this.expectedSize = expectedSize;
+        return this;
+    }
+    public String forwardSeq;
+    public Sslp withForwardSeq(String forwardSeq) {
+        this.forwardSeq = forwardSeq;
+        return this;
+    }
+    public Integer key;
+    public Sslp withKey(Integer key) {
+        this.key = key;
+        return this;
+    }
+    public String name;
+    public Sslp withName(String name) {
+        this.name = name;
+        return this;
+    }
+    public String notes;
+    public Sslp withNotes(String notes) {
+        this.notes = notes;
+        return this;
+    }
+    public String reverseSeq;
+    public Sslp withReverseSeq(String reverseSeq) {
+        this.reverseSeq = reverseSeq;
+        return this;
+    }
+    public Integer rgdId;
+    public Sslp withRgdId(Integer rgdId) {
+        this.rgdId = rgdId;
+        return this;
+    }
+    public Integer speciesTypeKey;
+    public Sslp withSpeciesTypeKey(Integer speciesTypeKey) {
+        this.speciesTypeKey = speciesTypeKey;
+        return this;
+    }
+    public String sslpType;
+    public Sslp withSslpType(String sslpType) {
+        this.sslpType = sslpType;
+        return this;
+    }
+    public String templateSeq;
+    public Sslp withTemplateSeq(String templateSeq) {
+        this.templateSeq = templateSeq;
+        return this;
+    }
+}

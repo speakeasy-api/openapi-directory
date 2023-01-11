@@ -1,0 +1,33 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * VirtualNodeRef
+ * An object representing a virtual node returned by a list operation.
+**/
+public class VirtualNodeRef {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("arn")
+    public String arn;
+    public VirtualNodeRef withArn(String arn) {
+        this.arn = arn;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("meshName")
+    public String meshName;
+    public VirtualNodeRef withMeshName(String meshName) {
+        this.meshName = meshName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("virtualNodeName")
+    public String virtualNodeName;
+    public VirtualNodeRef withVirtualNodeName(String virtualNodeName) {
+        this.virtualNodeName = virtualNodeName;
+        return this;
+    }
+}

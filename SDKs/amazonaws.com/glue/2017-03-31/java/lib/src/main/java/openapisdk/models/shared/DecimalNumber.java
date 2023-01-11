@@ -1,0 +1,22 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+/**
+ * DecimalNumber
+ * Contains a numeric value in decimal format.
+**/
+public class DecimalNumber {
+    @JsonProperty("Scale")
+    public Long scale;
+    public DecimalNumber withScale(Long scale) {
+        this.scale = scale;
+        return this;
+    }
+    @JsonProperty("UnscaledValue")
+    public String unscaledValue;
+    public DecimalNumber withUnscaledValue(String unscaledValue) {
+        this.unscaledValue = unscaledValue;
+        return this;
+    }
+}

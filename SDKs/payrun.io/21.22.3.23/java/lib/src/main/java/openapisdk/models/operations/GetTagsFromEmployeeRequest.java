@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class GetTagsFromEmployeeRequest {
+    public GetTagsFromEmployeePathParams pathParams;
+    public GetTagsFromEmployeeRequest withPathParams(GetTagsFromEmployeePathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public GetTagsFromEmployeeHeaders headers;
+    public GetTagsFromEmployeeRequest withHeaders(GetTagsFromEmployeeHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+}

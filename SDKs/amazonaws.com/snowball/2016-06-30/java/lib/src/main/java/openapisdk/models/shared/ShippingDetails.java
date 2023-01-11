@@ -1,0 +1,33 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * ShippingDetails
+ * A job's shipping information, including inbound and outbound tracking numbers and shipping speed options.
+**/
+public class ShippingDetails {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("InboundShipment")
+    public Shipment inboundShipment;
+    public ShippingDetails withInboundShipment(Shipment inboundShipment) {
+        this.inboundShipment = inboundShipment;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("OutboundShipment")
+    public Shipment outboundShipment;
+    public ShippingDetails withOutboundShipment(Shipment outboundShipment) {
+        this.outboundShipment = outboundShipment;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ShippingOption")
+    public ShippingOptionEnum shippingOption;
+    public ShippingDetails withShippingOption(ShippingOptionEnum shippingOption) {
+        this.shippingOption = shippingOption;
+        return this;
+    }
+}

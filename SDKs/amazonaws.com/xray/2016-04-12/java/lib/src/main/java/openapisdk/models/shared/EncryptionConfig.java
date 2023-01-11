@@ -1,0 +1,33 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * EncryptionConfig
+ * A configuration document that specifies encryption configuration settings.
+**/
+public class EncryptionConfig {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("KeyId")
+    public String keyId;
+    public EncryptionConfig withKeyId(String keyId) {
+        this.keyId = keyId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Status")
+    public EncryptionStatusEnum status;
+    public EncryptionConfig withStatus(EncryptionStatusEnum status) {
+        this.status = status;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Type")
+    public EncryptionTypeEnum type;
+    public EncryptionConfig withType(EncryptionTypeEnum type) {
+        this.type = type;
+        return this;
+    }
+}

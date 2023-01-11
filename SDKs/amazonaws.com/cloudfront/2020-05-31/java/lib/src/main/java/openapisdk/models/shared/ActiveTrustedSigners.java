@@ -1,0 +1,25 @@
+package openapisdk.models.shared;
+
+
+
+/**
+ * ActiveTrustedSigners
+ * A list of accounts and the active CloudFront key pairs in each account that CloudFront can use to verify the signatures of signed URLs and signed cookies.
+**/
+public class ActiveTrustedSigners {
+    public Boolean enabled;
+    public ActiveTrustedSigners withEnabled(Boolean enabled) {
+        this.enabled = enabled;
+        return this;
+    }
+    public SignerList[] items;
+    public ActiveTrustedSigners withItems(SignerList[] items) {
+        this.items = items;
+        return this;
+    }
+    public Long quantity;
+    public ActiveTrustedSigners withQuantity(Long quantity) {
+        this.quantity = quantity;
+        return this;
+    }
+}

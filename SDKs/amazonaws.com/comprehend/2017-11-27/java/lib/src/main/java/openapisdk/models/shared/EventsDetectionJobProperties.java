@@ -1,0 +1,105 @@
+package openapisdk.models.shared;
+
+import java.time.OffsetDateTime;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import openapisdk.utils.DateTimeSerializer;
+import openapisdk.utils.DateTimeDeserializer;
+
+/**
+ * EventsDetectionJobProperties
+ * Provides information about an events detection job.
+**/
+public class EventsDetectionJobProperties {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("DataAccessRoleArn")
+    public String dataAccessRoleArn;
+    public EventsDetectionJobProperties withDataAccessRoleArn(String dataAccessRoleArn) {
+        this.dataAccessRoleArn = dataAccessRoleArn;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonSerialize(contentUsing = DateTimeSerializer.class)
+    @JsonDeserialize(contentUsing = DateTimeDeserializer.class)
+    @JsonProperty("EndTime")
+    public OffsetDateTime endTime;
+    public EventsDetectionJobProperties withEndTime(OffsetDateTime endTime) {
+        this.endTime = endTime;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("InputDataConfig")
+    public InputDataConfig inputDataConfig;
+    public EventsDetectionJobProperties withInputDataConfig(InputDataConfig inputDataConfig) {
+        this.inputDataConfig = inputDataConfig;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("JobArn")
+    public String jobArn;
+    public EventsDetectionJobProperties withJobArn(String jobArn) {
+        this.jobArn = jobArn;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("JobId")
+    public String jobId;
+    public EventsDetectionJobProperties withJobId(String jobId) {
+        this.jobId = jobId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("JobName")
+    public String jobName;
+    public EventsDetectionJobProperties withJobName(String jobName) {
+        this.jobName = jobName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("JobStatus")
+    public JobStatusEnum jobStatus;
+    public EventsDetectionJobProperties withJobStatus(JobStatusEnum jobStatus) {
+        this.jobStatus = jobStatus;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("LanguageCode")
+    public LanguageCodeEnum languageCode;
+    public EventsDetectionJobProperties withLanguageCode(LanguageCodeEnum languageCode) {
+        this.languageCode = languageCode;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Message")
+    public String message;
+    public EventsDetectionJobProperties withMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("OutputDataConfig")
+    public OutputDataConfig outputDataConfig;
+    public EventsDetectionJobProperties withOutputDataConfig(OutputDataConfig outputDataConfig) {
+        this.outputDataConfig = outputDataConfig;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonSerialize(contentUsing = DateTimeSerializer.class)
+    @JsonDeserialize(contentUsing = DateTimeDeserializer.class)
+    @JsonProperty("SubmitTime")
+    public OffsetDateTime submitTime;
+    public EventsDetectionJobProperties withSubmitTime(OffsetDateTime submitTime) {
+        this.submitTime = submitTime;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("TargetEventTypes")
+    public String[] targetEventTypes;
+    public EventsDetectionJobProperties withTargetEventTypes(String[] targetEventTypes) {
+        this.targetEventTypes = targetEventTypes;
+        return this;
+    }
+}

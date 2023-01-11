@@ -1,0 +1,33 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * EvaluationResult
+ * Describes the compliance status for the account. An account is considered noncompliant if it includes resources that are not protected by the specified policy or that don't comply with the policy.
+**/
+public class EvaluationResult {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ComplianceStatus")
+    public PolicyComplianceStatusTypeEnum complianceStatus;
+    public EvaluationResult withComplianceStatus(PolicyComplianceStatusTypeEnum complianceStatus) {
+        this.complianceStatus = complianceStatus;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("EvaluationLimitExceeded")
+    public Boolean evaluationLimitExceeded;
+    public EvaluationResult withEvaluationLimitExceeded(Boolean evaluationLimitExceeded) {
+        this.evaluationLimitExceeded = evaluationLimitExceeded;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ViolatorCount")
+    public Long violatorCount;
+    public EvaluationResult withViolatorCount(Long violatorCount) {
+        this.violatorCount = violatorCount;
+        return this;
+    }
+}

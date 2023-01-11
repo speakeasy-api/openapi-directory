@@ -1,0 +1,12 @@
+package openapisdk.models.operations;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+public class PostAssetsCorrelationMatrixRequestBody1 {
+    @JsonProperty("assets")
+    public PostAssetsCorrelationMatrixRequestBody1Assets[] assets;
+    public PostAssetsCorrelationMatrixRequestBody1 withAssets(PostAssetsCorrelationMatrixRequestBody1Assets[] assets) {
+        this.assets = assets;
+        return this;
+    }
+}

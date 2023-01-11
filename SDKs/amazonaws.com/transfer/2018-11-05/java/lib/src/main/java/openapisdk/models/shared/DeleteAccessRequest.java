@@ -1,0 +1,18 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+public class DeleteAccessRequest {
+    @JsonProperty("ExternalId")
+    public String externalId;
+    public DeleteAccessRequest withExternalId(String externalId) {
+        this.externalId = externalId;
+        return this;
+    }
+    @JsonProperty("ServerId")
+    public String serverId;
+    public DeleteAccessRequest withServerId(String serverId) {
+        this.serverId = serverId;
+        return this;
+    }
+}

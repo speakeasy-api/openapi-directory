@@ -1,0 +1,56 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class ExportEc2InstanceRecommendationsRequest {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("accountIds")
+    public String[] accountIds;
+    public ExportEc2InstanceRecommendationsRequest withAccountIds(String[] accountIds) {
+        this.accountIds = accountIds;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("fieldsToExport")
+    public ExportableInstanceFieldEnum[] fieldsToExport;
+    public ExportEc2InstanceRecommendationsRequest withFieldsToExport(ExportableInstanceFieldEnum[] fieldsToExport) {
+        this.fieldsToExport = fieldsToExport;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("fileFormat")
+    public FileFormatEnum fileFormat;
+    public ExportEc2InstanceRecommendationsRequest withFileFormat(FileFormatEnum fileFormat) {
+        this.fileFormat = fileFormat;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("filters")
+    public Filter[] filters;
+    public ExportEc2InstanceRecommendationsRequest withFilters(Filter[] filters) {
+        this.filters = filters;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("includeMemberAccounts")
+    public Boolean includeMemberAccounts;
+    public ExportEc2InstanceRecommendationsRequest withIncludeMemberAccounts(Boolean includeMemberAccounts) {
+        this.includeMemberAccounts = includeMemberAccounts;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("recommendationPreferences")
+    public RecommendationPreferences recommendationPreferences;
+    public ExportEc2InstanceRecommendationsRequest withRecommendationPreferences(RecommendationPreferences recommendationPreferences) {
+        this.recommendationPreferences = recommendationPreferences;
+        return this;
+    }
+    @JsonProperty("s3DestinationConfig")
+    public S3DestinationConfig s3DestinationConfig;
+    public ExportEc2InstanceRecommendationsRequest withS3DestinationConfig(S3DestinationConfig s3DestinationConfig) {
+        this.s3DestinationConfig = s3DestinationConfig;
+        return this;
+    }
+}

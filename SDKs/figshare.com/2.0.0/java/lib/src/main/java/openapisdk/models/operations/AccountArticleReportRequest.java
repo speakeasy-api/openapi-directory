@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class AccountArticleReportRequest {
+    public AccountArticleReportQueryParams queryParams;
+    public AccountArticleReportRequest withQueryParams(AccountArticleReportQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public AccountArticleReportSecurity security;
+    public AccountArticleReportRequest withSecurity(AccountArticleReportSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

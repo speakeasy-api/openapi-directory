@@ -1,0 +1,22 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+/**
+ * RuleDefinition
+ * The inspection criteria and action for a single stateless rule. AWS Network Firewall inspects each packet for the specified matching criteria. When a packet matches the criteria, Network Firewall performs the rule's actions on the packet.
+**/
+public class RuleDefinition {
+    @JsonProperty("Actions")
+    public String[] actions;
+    public RuleDefinition withActions(String[] actions) {
+        this.actions = actions;
+        return this;
+    }
+    @JsonProperty("MatchAttributes")
+    public MatchAttributes matchAttributes;
+    public RuleDefinition withMatchAttributes(MatchAttributes matchAttributes) {
+        this.matchAttributes = matchAttributes;
+        return this;
+    }
+}

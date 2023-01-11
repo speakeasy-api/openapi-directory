@@ -1,0 +1,71 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class GetConsumersResponseData {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("aggregated_request_count")
+    public Double aggregatedRequestCount;
+    public GetConsumersResponseData withAggregatedRequestCount(Double aggregatedRequestCount) {
+        this.aggregatedRequestCount = aggregatedRequestCount;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("application_id")
+    public String applicationId;
+    public GetConsumersResponseData withApplicationId(String applicationId) {
+        this.applicationId = applicationId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("consumer_id")
+    public String consumerId;
+    public GetConsumersResponseData withConsumerId(String consumerId) {
+        this.consumerId = consumerId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("created")
+    public String created;
+    public GetConsumersResponseData withCreated(String created) {
+        this.created = created;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("metadata")
+    public ConsumerMetadata metadata;
+    public GetConsumersResponseData withMetadata(ConsumerMetadata metadata) {
+        this.metadata = metadata;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("modified")
+    public String modified;
+    public GetConsumersResponseData withModified(String modified) {
+        this.modified = modified;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("request_count_updated")
+    public String requestCountUpdated;
+    public GetConsumersResponseData withRequestCountUpdated(String requestCountUpdated) {
+        this.requestCountUpdated = requestCountUpdated;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("request_counts")
+    public RequestCountAllocation requestCounts;
+    public GetConsumersResponseData withRequestCounts(RequestCountAllocation requestCounts) {
+        this.requestCounts = requestCounts;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("services")
+    public String[] services;
+    public GetConsumersResponseData withServices(String[] services) {
+        this.services = services;
+        return this;
+    }
+}

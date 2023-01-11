@@ -1,0 +1,18 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class PostMarketingV3MarketingEventsEventsExternalEventIdSubscriberStateEmailUpsertDoEmailUpsertByIdPathParams {
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=externalEventId")
+    public String externalEventId;
+    public PostMarketingV3MarketingEventsEventsExternalEventIdSubscriberStateEmailUpsertDoEmailUpsertByIdPathParams withExternalEventId(String externalEventId) {
+        this.externalEventId = externalEventId;
+        return this;
+    }
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=subscriberState")
+    public String subscriberState;
+    public PostMarketingV3MarketingEventsEventsExternalEventIdSubscriberStateEmailUpsertDoEmailUpsertByIdPathParams withSubscriberState(String subscriberState) {
+        this.subscriberState = subscriberState;
+        return this;
+    }
+}

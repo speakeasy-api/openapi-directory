@@ -1,0 +1,26 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * SoftwareTokenMfaSettingsType
+ * The type used for enabling software token MFA at the user level. If an MFA type is enabled for a user, the user will be prompted for MFA during all sign in attempts, unless device tracking is turned on and the device has been trusted. If you would like MFA to be applied selectively based on the assessed risk level of sign in attempts, disable MFA for users and turn on Adaptive Authentication for the user pool.
+**/
+public class SoftwareTokenMfaSettingsType {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Enabled")
+    public Boolean enabled;
+    public SoftwareTokenMfaSettingsType withEnabled(Boolean enabled) {
+        this.enabled = enabled;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("PreferredMfa")
+    public Boolean preferredMfa;
+    public SoftwareTokenMfaSettingsType withPreferredMfa(Boolean preferredMfa) {
+        this.preferredMfa = preferredMfa;
+        return this;
+    }
+}

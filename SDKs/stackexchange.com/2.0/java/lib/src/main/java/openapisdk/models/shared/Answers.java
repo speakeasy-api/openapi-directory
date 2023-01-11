@@ -1,0 +1,141 @@
+package openapisdk.models.shared;
+
+
+
+public class Answers {
+    public Boolean accepted;
+    public Answers withAccepted(Boolean accepted) {
+        this.accepted = accepted;
+        return this;
+    }
+    public Long answerId;
+    public Answers withAnswerId(Long answerId) {
+        this.answerId = answerId;
+        return this;
+    }
+    public Long awardedBountyAmount;
+    public Answers withAwardedBountyAmount(Long awardedBountyAmount) {
+        this.awardedBountyAmount = awardedBountyAmount;
+        return this;
+    }
+    public Object[] awardedBountyUsers;
+    public Answers withAwardedBountyUsers(Object[] awardedBountyUsers) {
+        this.awardedBountyUsers = awardedBountyUsers;
+        return this;
+    }
+    public String body;
+    public Answers withBody(String body) {
+        this.body = body;
+        return this;
+    }
+    public String bodyMarkdown;
+    public Answers withBodyMarkdown(String bodyMarkdown) {
+        this.bodyMarkdown = bodyMarkdown;
+        return this;
+    }
+    public Boolean canFlag;
+    public Answers withCanFlag(Boolean canFlag) {
+        this.canFlag = canFlag;
+        return this;
+    }
+    public Long commentCount;
+    public Answers withCommentCount(Long commentCount) {
+        this.commentCount = commentCount;
+        return this;
+    }
+    public Object[] comments;
+    public Answers withComments(Object[] comments) {
+        this.comments = comments;
+        return this;
+    }
+    public Long communityOwnedDate;
+    public Answers withCommunityOwnedDate(Long communityOwnedDate) {
+        this.communityOwnedDate = communityOwnedDate;
+        return this;
+    }
+    public Long creationDate;
+    public Answers withCreationDate(Long creationDate) {
+        this.creationDate = creationDate;
+        return this;
+    }
+    public Long downVoteCount;
+    public Answers withDownVoteCount(Long downVoteCount) {
+        this.downVoteCount = downVoteCount;
+        return this;
+    }
+    public Boolean downvoted;
+    public Answers withDownvoted(Boolean downvoted) {
+        this.downvoted = downvoted;
+        return this;
+    }
+    public Boolean isAccepted;
+    public Answers withIsAccepted(Boolean isAccepted) {
+        this.isAccepted = isAccepted;
+        return this;
+    }
+    public Long lastActivityDate;
+    public Answers withLastActivityDate(Long lastActivityDate) {
+        this.lastActivityDate = lastActivityDate;
+        return this;
+    }
+    public Long lastEditDate;
+    public Answers withLastEditDate(Long lastEditDate) {
+        this.lastEditDate = lastEditDate;
+        return this;
+    }
+    public AnswersLastEditor lastEditor;
+    public Answers withLastEditor(AnswersLastEditor lastEditor) {
+        this.lastEditor = lastEditor;
+        return this;
+    }
+    public String link;
+    public Answers withLink(String link) {
+        this.link = link;
+        return this;
+    }
+    public Long lockedDate;
+    public Answers withLockedDate(Long lockedDate) {
+        this.lockedDate = lockedDate;
+        return this;
+    }
+    public AnswersOwner owner;
+    public Answers withOwner(AnswersOwner owner) {
+        this.owner = owner;
+        return this;
+    }
+    public Long questionId;
+    public Answers withQuestionId(Long questionId) {
+        this.questionId = questionId;
+        return this;
+    }
+    public Long score;
+    public Answers withScore(Long score) {
+        this.score = score;
+        return this;
+    }
+    public String shareLink;
+    public Answers withShareLink(String shareLink) {
+        this.shareLink = shareLink;
+        return this;
+    }
+    public Object[] tags;
+    public Answers withTags(Object[] tags) {
+        this.tags = tags;
+        return this;
+    }
+    public String title;
+    public Answers withTitle(String title) {
+        this.title = title;
+        return this;
+    }
+    public Long upVoteCount;
+    public Answers withUpVoteCount(Long upVoteCount) {
+        this.upVoteCount = upVoteCount;
+        return this;
+    }
+    public Boolean upvoted;
+    public Answers withUpvoted(Boolean upvoted) {
+        this.upvoted = upvoted;
+        return this;
+    }
+}

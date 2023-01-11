@@ -1,0 +1,18 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class VisionProjectsLocationsImagesAsyncBatchAnnotateSecurity {
+    @SpeakeasyMetadata("security:option=true")
+    public VisionProjectsLocationsImagesAsyncBatchAnnotateSecurityOption1 option1;
+    public VisionProjectsLocationsImagesAsyncBatchAnnotateSecurity withOption1(VisionProjectsLocationsImagesAsyncBatchAnnotateSecurityOption1 option1) {
+        this.option1 = option1;
+        return this;
+    }
+    @SpeakeasyMetadata("security:option=true")
+    public VisionProjectsLocationsImagesAsyncBatchAnnotateSecurityOption2 option2;
+    public VisionProjectsLocationsImagesAsyncBatchAnnotateSecurity withOption2(VisionProjectsLocationsImagesAsyncBatchAnnotateSecurityOption2 option2) {
+        this.option2 = option2;
+        return this;
+    }
+}

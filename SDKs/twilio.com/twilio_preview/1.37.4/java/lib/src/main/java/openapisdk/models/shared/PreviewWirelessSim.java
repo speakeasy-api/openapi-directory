@@ -1,0 +1,171 @@
+package openapisdk.models.shared;
+
+import java.time.OffsetDateTime;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import openapisdk.utils.DateTimeSerializer;
+import openapisdk.utils.DateTimeDeserializer;
+
+public class PreviewWirelessSim {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("account_sid")
+    public String accountSid;
+    public PreviewWirelessSim withAccountSid(String accountSid) {
+        this.accountSid = accountSid;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("commands_callback_method")
+    public String commandsCallbackMethod;
+    public PreviewWirelessSim withCommandsCallbackMethod(String commandsCallbackMethod) {
+        this.commandsCallbackMethod = commandsCallbackMethod;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("commands_callback_url")
+    public String commandsCallbackUrl;
+    public PreviewWirelessSim withCommandsCallbackUrl(String commandsCallbackUrl) {
+        this.commandsCallbackUrl = commandsCallbackUrl;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonSerialize(contentUsing = DateTimeSerializer.class)
+    @JsonDeserialize(contentUsing = DateTimeDeserializer.class)
+    @JsonProperty("date_created")
+    public OffsetDateTime dateCreated;
+    public PreviewWirelessSim withDateCreated(OffsetDateTime dateCreated) {
+        this.dateCreated = dateCreated;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonSerialize(contentUsing = DateTimeSerializer.class)
+    @JsonDeserialize(contentUsing = DateTimeDeserializer.class)
+    @JsonProperty("date_updated")
+    public OffsetDateTime dateUpdated;
+    public PreviewWirelessSim withDateUpdated(OffsetDateTime dateUpdated) {
+        this.dateUpdated = dateUpdated;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("e_id")
+    public String eId;
+    public PreviewWirelessSim withEId(String eId) {
+        this.eId = eId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("friendly_name")
+    public String friendlyName;
+    public PreviewWirelessSim withFriendlyName(String friendlyName) {
+        this.friendlyName = friendlyName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("iccid")
+    public String iccid;
+    public PreviewWirelessSim withIccid(String iccid) {
+        this.iccid = iccid;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("links")
+    public java.util.Map<String, Object> links;
+    public PreviewWirelessSim withLinks(java.util.Map<String, Object> links) {
+        this.links = links;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("rate_plan_sid")
+    public String ratePlanSid;
+    public PreviewWirelessSim withRatePlanSid(String ratePlanSid) {
+        this.ratePlanSid = ratePlanSid;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("sid")
+    public String sid;
+    public PreviewWirelessSim withSid(String sid) {
+        this.sid = sid;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("sms_fallback_method")
+    public PreviewWirelessSimSmsFallbackMethodEnum smsFallbackMethod;
+    public PreviewWirelessSim withSmsFallbackMethod(PreviewWirelessSimSmsFallbackMethodEnum smsFallbackMethod) {
+        this.smsFallbackMethod = smsFallbackMethod;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("sms_fallback_url")
+    public String smsFallbackUrl;
+    public PreviewWirelessSim withSmsFallbackUrl(String smsFallbackUrl) {
+        this.smsFallbackUrl = smsFallbackUrl;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("sms_method")
+    public PreviewWirelessSimSmsMethodEnum smsMethod;
+    public PreviewWirelessSim withSmsMethod(PreviewWirelessSimSmsMethodEnum smsMethod) {
+        this.smsMethod = smsMethod;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("sms_url")
+    public String smsUrl;
+    public PreviewWirelessSim withSmsUrl(String smsUrl) {
+        this.smsUrl = smsUrl;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("status")
+    public String status;
+    public PreviewWirelessSim withStatus(String status) {
+        this.status = status;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("unique_name")
+    public String uniqueName;
+    public PreviewWirelessSim withUniqueName(String uniqueName) {
+        this.uniqueName = uniqueName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("url")
+    public String url;
+    public PreviewWirelessSim withUrl(String url) {
+        this.url = url;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("voice_fallback_method")
+    public PreviewWirelessSimVoiceFallbackMethodEnum voiceFallbackMethod;
+    public PreviewWirelessSim withVoiceFallbackMethod(PreviewWirelessSimVoiceFallbackMethodEnum voiceFallbackMethod) {
+        this.voiceFallbackMethod = voiceFallbackMethod;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("voice_fallback_url")
+    public String voiceFallbackUrl;
+    public PreviewWirelessSim withVoiceFallbackUrl(String voiceFallbackUrl) {
+        this.voiceFallbackUrl = voiceFallbackUrl;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("voice_method")
+    public PreviewWirelessSimVoiceMethodEnum voiceMethod;
+    public PreviewWirelessSim withVoiceMethod(PreviewWirelessSimVoiceMethodEnum voiceMethod) {
+        this.voiceMethod = voiceMethod;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("voice_url")
+    public String voiceUrl;
+    public PreviewWirelessSim withVoiceUrl(String voiceUrl) {
+        this.voiceUrl = voiceUrl;
+        return this;
+    }
+}

@@ -1,0 +1,59 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * RobotApplicationConfig
+ * Application configuration information for a robot.
+**/
+public class RobotApplicationConfig {
+    @JsonProperty("application")
+    public String application;
+    public RobotApplicationConfig withApplication(String application) {
+        this.application = application;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("applicationVersion")
+    public String applicationVersion;
+    public RobotApplicationConfig withApplicationVersion(String applicationVersion) {
+        this.applicationVersion = applicationVersion;
+        return this;
+    }
+    @JsonProperty("launchConfig")
+    public LaunchConfig launchConfig;
+    public RobotApplicationConfig withLaunchConfig(LaunchConfig launchConfig) {
+        this.launchConfig = launchConfig;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("tools")
+    public Tool[] tools;
+    public RobotApplicationConfig withTools(Tool[] tools) {
+        this.tools = tools;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("uploadConfigurations")
+    public UploadConfiguration[] uploadConfigurations;
+    public RobotApplicationConfig withUploadConfigurations(UploadConfiguration[] uploadConfigurations) {
+        this.uploadConfigurations = uploadConfigurations;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("useDefaultTools")
+    public Boolean useDefaultTools;
+    public RobotApplicationConfig withUseDefaultTools(Boolean useDefaultTools) {
+        this.useDefaultTools = useDefaultTools;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("useDefaultUploadConfigurations")
+    public Boolean useDefaultUploadConfigurations;
+    public RobotApplicationConfig withUseDefaultUploadConfigurations(Boolean useDefaultUploadConfigurations) {
+        this.useDefaultUploadConfigurations = useDefaultUploadConfigurations;
+        return this;
+    }
+}

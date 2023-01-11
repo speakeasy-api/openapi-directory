@@ -1,0 +1,27 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class ContactcenterinsightsProjectsLocationsPhraseMatchersCreateRequest {
+    public ContactcenterinsightsProjectsLocationsPhraseMatchersCreatePathParams pathParams;
+    public ContactcenterinsightsProjectsLocationsPhraseMatchersCreateRequest withPathParams(ContactcenterinsightsProjectsLocationsPhraseMatchersCreatePathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public ContactcenterinsightsProjectsLocationsPhraseMatchersCreateQueryParams queryParams;
+    public ContactcenterinsightsProjectsLocationsPhraseMatchersCreateRequest withQueryParams(ContactcenterinsightsProjectsLocationsPhraseMatchersCreateQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public openapisdk.models.shared.GoogleCloudContactcenterinsightsV1PhraseMatcherInput request;
+    public ContactcenterinsightsProjectsLocationsPhraseMatchersCreateRequest withRequest(openapisdk.models.shared.GoogleCloudContactcenterinsightsV1PhraseMatcherInput request) {
+        this.request = request;
+        return this;
+    }
+    public ContactcenterinsightsProjectsLocationsPhraseMatchersCreateSecurity security;
+    public ContactcenterinsightsProjectsLocationsPhraseMatchersCreateRequest withSecurity(ContactcenterinsightsProjectsLocationsPhraseMatchersCreateSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

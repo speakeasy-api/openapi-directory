@@ -1,0 +1,66 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class IpamVrfsListQueryParams {
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=enforce_unique")
+    public String enforceUnique;
+    public IpamVrfsListQueryParams withEnforceUnique(String enforceUnique) {
+        this.enforceUnique = enforceUnique;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id__in")
+    public String idIn;
+    public IpamVrfsListQueryParams withIdIn(String idIn) {
+        this.idIn = idIn;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public IpamVrfsListQueryParams withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
+    public String name;
+    public IpamVrfsListQueryParams withName(String name) {
+        this.name = name;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Long offset;
+    public IpamVrfsListQueryParams withOffset(Long offset) {
+        this.offset = offset;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=q")
+    public String q;
+    public IpamVrfsListQueryParams withQ(String q) {
+        this.q = q;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=rd")
+    public String rd;
+    public IpamVrfsListQueryParams withRd(String rd) {
+        this.rd = rd;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tag")
+    public String tag;
+    public IpamVrfsListQueryParams withTag(String tag) {
+        this.tag = tag;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tenant")
+    public String tenant;
+    public IpamVrfsListQueryParams withTenant(String tenant) {
+        this.tenant = tenant;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tenant_id")
+    public String tenantId;
+    public IpamVrfsListQueryParams withTenantId(String tenantId) {
+        this.tenantId = tenantId;
+        return this;
+    }
+}

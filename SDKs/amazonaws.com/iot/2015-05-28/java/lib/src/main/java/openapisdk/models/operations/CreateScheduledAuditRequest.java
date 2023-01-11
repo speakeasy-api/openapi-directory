@@ -1,0 +1,22 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class CreateScheduledAuditRequest {
+    public CreateScheduledAuditPathParams pathParams;
+    public CreateScheduledAuditRequest withPathParams(CreateScheduledAuditPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public CreateScheduledAuditHeaders headers;
+    public CreateScheduledAuditRequest withHeaders(CreateScheduledAuditHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public CreateScheduledAuditRequestBody request;
+    public CreateScheduledAuditRequest withRequest(CreateScheduledAuditRequestBody request) {
+        this.request = request;
+        return this;
+    }
+}

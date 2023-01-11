@@ -1,0 +1,70 @@
+package openapisdk.models.shared;
+
+
+
+/**
+ * PlatformSummary
+ * Summary information about a platform version.
+**/
+public class PlatformSummary {
+    public String operatingSystemName;
+    public PlatformSummary withOperatingSystemName(String operatingSystemName) {
+        this.operatingSystemName = operatingSystemName;
+        return this;
+    }
+    public String operatingSystemVersion;
+    public PlatformSummary withOperatingSystemVersion(String operatingSystemVersion) {
+        this.operatingSystemVersion = operatingSystemVersion;
+        return this;
+    }
+    public String platformArn;
+    public PlatformSummary withPlatformArn(String platformArn) {
+        this.platformArn = platformArn;
+        return this;
+    }
+    public String platformBranchLifecycleState;
+    public PlatformSummary withPlatformBranchLifecycleState(String platformBranchLifecycleState) {
+        this.platformBranchLifecycleState = platformBranchLifecycleState;
+        return this;
+    }
+    public String platformBranchName;
+    public PlatformSummary withPlatformBranchName(String platformBranchName) {
+        this.platformBranchName = platformBranchName;
+        return this;
+    }
+    public String platformCategory;
+    public PlatformSummary withPlatformCategory(String platformCategory) {
+        this.platformCategory = platformCategory;
+        return this;
+    }
+    public String platformLifecycleState;
+    public PlatformSummary withPlatformLifecycleState(String platformLifecycleState) {
+        this.platformLifecycleState = platformLifecycleState;
+        return this;
+    }
+    public String platformOwner;
+    public PlatformSummary withPlatformOwner(String platformOwner) {
+        this.platformOwner = platformOwner;
+        return this;
+    }
+    public PlatformStatusEnum platformStatus;
+    public PlatformSummary withPlatformStatus(PlatformStatusEnum platformStatus) {
+        this.platformStatus = platformStatus;
+        return this;
+    }
+    public String platformVersion;
+    public PlatformSummary withPlatformVersion(String platformVersion) {
+        this.platformVersion = platformVersion;
+        return this;
+    }
+    public String[] supportedAddonList;
+    public PlatformSummary withSupportedAddonList(String[] supportedAddonList) {
+        this.supportedAddonList = supportedAddonList;
+        return this;
+    }
+    public String[] supportedTierList;
+    public PlatformSummary withSupportedTierList(String[] supportedTierList) {
+        this.supportedTierList = supportedTierList;
+        return this;
+    }
+}

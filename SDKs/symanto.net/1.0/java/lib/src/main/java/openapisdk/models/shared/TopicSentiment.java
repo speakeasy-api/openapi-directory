@@ -1,0 +1,29 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class TopicSentiment {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("sentence")
+    public String sentence;
+    public TopicSentiment withSentence(String sentence) {
+        this.sentence = sentence;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("sentiment")
+    public Sentiment sentiment;
+    public TopicSentiment withSentiment(Sentiment sentiment) {
+        this.sentiment = sentiment;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("topic")
+    public Topic topic;
+    public TopicSentiment withTopic(Topic topic) {
+        this.topic = topic;
+        return this;
+    }
+}

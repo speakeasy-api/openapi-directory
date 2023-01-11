@@ -1,0 +1,405 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class Service {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("addresses")
+    public String[] addresses;
+    public Service withAddresses(String[] addresses) {
+        this.addresses = addresses;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("addresses_extra")
+    public String[] addressesExtra;
+    public Service withAddressesExtra(String[] addressesExtra) {
+        this.addressesExtra = addressesExtra;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("agent_name")
+    public String agentName;
+    public Service withAgentName(String agentName) {
+        this.agentName = agentName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("alive")
+    public Boolean alive;
+    public Service withAlive(Boolean alive) {
+        this.alive = alive;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("attributes")
+    public java.util.Map<String, String> attributes;
+    public Service withAttributes(java.util.Map<String, String> attributes) {
+        this.attributes = attributes;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("comments")
+    public String comments;
+    public Service withComments(String comments) {
+        this.comments = comments;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("created_at")
+    public Long createdAt;
+    public Service withCreatedAt(Long createdAt) {
+        this.createdAt = createdAt;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("credentials")
+    public java.util.Map<String, String> credentials;
+    public Service withCredentials(java.util.Map<String, String> credentials) {
+        this.credentials = credentials;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("detected_by")
+    public String detectedBy;
+    public Service withDetectedBy(String detectedBy) {
+        this.detectedBy = detectedBy;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("domains")
+    public String[] domains;
+    public Service withDomains(String[] domains) {
+        this.domains = domains;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("first_seen")
+    public Long firstSeen;
+    public Service withFirstSeen(Long firstSeen) {
+        this.firstSeen = firstSeen;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("hw")
+    public String hw;
+    public Service withHw(String hw) {
+        this.hw = hw;
+        return this;
+    }
+    @JsonProperty("id")
+    public String id;
+    public Service withId(String id) {
+        this.id = id;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("last_agent_id")
+    public String lastAgentId;
+    public Service withLastAgentId(String lastAgentId) {
+        this.lastAgentId = lastAgentId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("last_seen")
+    public Long lastSeen;
+    public Service withLastSeen(Long lastSeen) {
+        this.lastSeen = lastSeen;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("last_task_id")
+    public String lastTaskId;
+    public Service withLastTaskId(String lastTaskId) {
+        this.lastTaskId = lastTaskId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("lowest_rtt")
+    public Long lowestRtt;
+    public Service withLowestRtt(Long lowestRtt) {
+        this.lowestRtt = lowestRtt;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("lowest_ttl")
+    public Long lowestTtl;
+    public Service withLowestTtl(Long lowestTtl) {
+        this.lowestTtl = lowestTtl;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("mac_vendors")
+    public String[] macVendors;
+    public Service withMacVendors(String[] macVendors) {
+        this.macVendors = macVendors;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("macs")
+    public String[] macs;
+    public Service withMacs(String[] macs) {
+        this.macs = macs;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("names")
+    public String[] names;
+    public Service withNames(String[] names) {
+        this.names = names;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("newest_mac")
+    public String newestMac;
+    public Service withNewestMac(String newestMac) {
+        this.newestMac = newestMac;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("newest_mac_age")
+    public Long newestMacAge;
+    public Service withNewestMacAge(Long newestMacAge) {
+        this.newestMacAge = newestMacAge;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("newest_mac_vendor")
+    public String newestMacVendor;
+    public Service withNewestMacVendor(String newestMacVendor) {
+        this.newestMacVendor = newestMacVendor;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("org_name")
+    public String orgName;
+    public Service withOrgName(String orgName) {
+        this.orgName = orgName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("organization_id")
+    public String organizationId;
+    public Service withOrganizationId(String organizationId) {
+        this.organizationId = organizationId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("os")
+    public String os;
+    public Service withOs(String os) {
+        this.os = os;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("os_version")
+    public String osVersion;
+    public Service withOsVersion(String osVersion) {
+        this.osVersion = osVersion;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("rtts")
+    public java.util.Map<String, Object> rtts;
+    public Service withRtts(java.util.Map<String, Object> rtts) {
+        this.rtts = rtts;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("service_address")
+    public String serviceAddress;
+    public Service withServiceAddress(String serviceAddress) {
+        this.serviceAddress = serviceAddress;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("service_asset_id")
+    public String serviceAssetId;
+    public Service withServiceAssetId(String serviceAssetId) {
+        this.serviceAssetId = serviceAssetId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("service_count")
+    public Long serviceCount;
+    public Service withServiceCount(Long serviceCount) {
+        this.serviceCount = serviceCount;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("service_count_arp")
+    public Long serviceCountArp;
+    public Service withServiceCountArp(Long serviceCountArp) {
+        this.serviceCountArp = serviceCountArp;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("service_count_icmp")
+    public Long serviceCountIcmp;
+    public Service withServiceCountIcmp(Long serviceCountIcmp) {
+        this.serviceCountIcmp = serviceCountIcmp;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("service_count_tcp")
+    public Long serviceCountTcp;
+    public Service withServiceCountTcp(Long serviceCountTcp) {
+        this.serviceCountTcp = serviceCountTcp;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("service_count_udp")
+    public Long serviceCountUdp;
+    public Service withServiceCountUdp(Long serviceCountUdp) {
+        this.serviceCountUdp = serviceCountUdp;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("service_created_at")
+    public Long serviceCreatedAt;
+    public Service withServiceCreatedAt(Long serviceCreatedAt) {
+        this.serviceCreatedAt = serviceCreatedAt;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("service_data")
+    public java.util.Map<String, String> serviceData;
+    public Service withServiceData(java.util.Map<String, String> serviceData) {
+        this.serviceData = serviceData;
+        return this;
+    }
+    @JsonProperty("service_id")
+    public String serviceId;
+    public Service withServiceId(String serviceId) {
+        this.serviceId = serviceId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("service_link")
+    public String serviceLink;
+    public Service withServiceLink(String serviceLink) {
+        this.serviceLink = serviceLink;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("service_port")
+    public String servicePort;
+    public Service withServicePort(String servicePort) {
+        this.servicePort = servicePort;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("service_ports_products")
+    public String[] servicePortsProducts;
+    public Service withServicePortsProducts(String[] servicePortsProducts) {
+        this.servicePortsProducts = servicePortsProducts;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("service_ports_protocols")
+    public String[] servicePortsProtocols;
+    public Service withServicePortsProtocols(String[] servicePortsProtocols) {
+        this.servicePortsProtocols = servicePortsProtocols;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("service_ports_tcp")
+    public String[] servicePortsTcp;
+    public Service withServicePortsTcp(String[] servicePortsTcp) {
+        this.servicePortsTcp = servicePortsTcp;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("service_ports_udp")
+    public String[] servicePortsUdp;
+    public Service withServicePortsUdp(String[] servicePortsUdp) {
+        this.servicePortsUdp = servicePortsUdp;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("service_protocol")
+    public String serviceProtocol;
+    public Service withServiceProtocol(String serviceProtocol) {
+        this.serviceProtocol = serviceProtocol;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("service_screenshot_link")
+    public String serviceScreenshotLink;
+    public Service withServiceScreenshotLink(String serviceScreenshotLink) {
+        this.serviceScreenshotLink = serviceScreenshotLink;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("service_summary")
+    public String serviceSummary;
+    public Service withServiceSummary(String serviceSummary) {
+        this.serviceSummary = serviceSummary;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("service_transport")
+    public String serviceTransport;
+    public Service withServiceTransport(String serviceTransport) {
+        this.serviceTransport = serviceTransport;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("service_updated_at")
+    public Long serviceUpdatedAt;
+    public Service withServiceUpdatedAt(Long serviceUpdatedAt) {
+        this.serviceUpdatedAt = serviceUpdatedAt;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("service_vhost")
+    public String serviceVhost;
+    public Service withServiceVhost(String serviceVhost) {
+        this.serviceVhost = serviceVhost;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("services")
+    public java.util.Map<String, java.util.Map<String, String>> services;
+    public Service withServices(java.util.Map<String, java.util.Map<String, String>> services) {
+        this.services = services;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("site_id")
+    public String siteId;
+    public Service withSiteId(String siteId) {
+        this.siteId = siteId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("site_name")
+    public String siteName;
+    public Service withSiteName(String siteName) {
+        this.siteName = siteName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("tags")
+    public java.util.Map<String, String> tags;
+    public Service withTags(java.util.Map<String, String> tags) {
+        this.tags = tags;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("type")
+    public String type;
+    public Service withType(String type) {
+        this.type = type;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("updated_at")
+    public Long updatedAt;
+    public Service withUpdatedAt(Long updatedAt) {
+        this.updatedAt = updatedAt;
+        return this;
+    }
+}

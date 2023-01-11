@@ -1,0 +1,28 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class ListCustomRoutingListenersRequest {
+    @JsonProperty("AcceleratorArn")
+    public String acceleratorArn;
+    public ListCustomRoutingListenersRequest withAcceleratorArn(String acceleratorArn) {
+        this.acceleratorArn = acceleratorArn;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("MaxResults")
+    public Long maxResults;
+    public ListCustomRoutingListenersRequest withMaxResults(Long maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("NextToken")
+    public String nextToken;
+    public ListCustomRoutingListenersRequest withNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+}

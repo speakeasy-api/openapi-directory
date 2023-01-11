@@ -1,0 +1,34 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class NestedTenant {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("id")
+    public Long id;
+    public NestedTenant withId(Long id) {
+        this.id = id;
+        return this;
+    }
+    @JsonProperty("name")
+    public String name;
+    public NestedTenant withName(String name) {
+        this.name = name;
+        return this;
+    }
+    @JsonProperty("slug")
+    public String slug;
+    public NestedTenant withSlug(String slug) {
+        this.slug = slug;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("url")
+    public String url;
+    public NestedTenant withUrl(String url) {
+        this.url = url;
+        return this;
+    }
+}

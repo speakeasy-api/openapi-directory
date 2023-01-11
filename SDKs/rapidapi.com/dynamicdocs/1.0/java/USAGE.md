@@ -1,0 +1,53 @@
+<!-- Start SDK Example Usage -->
+```java
+package hello.world;
+
+import openapisdk.SDK;
+import openapisdk.models.shared.Security;
+
+public class Application {
+    public static void main(String[] args) {
+        try {
+            SDK.Builder builder = SDK.builder();
+
+            builder.setSecurity(
+                new Security() {{
+                    advSecurityToken = new SchemeAdvSecurityToken() {{
+                        apiKey = "YOUR_API_KEY_HERE";
+                    }};
+                }}
+            );
+
+            SDK sdk = builder.build();
+
+            CompileRequest req = new CompileRequest() {{
+                pathParams = new CompilePathParams() {{
+                    templateToken = "odio";
+                }};
+                queryParams = new CompileQueryParams() {{
+                    docFileName = "dolore";
+                    docUrlExpiresIn = 4035568504096476779;
+                    latexCompiler = "lualatex";
+                    latexRuns = 2914295034816259174;
+                    mainFileName = "totam";
+                }};
+                headers = new CompileHeaders() {{
+                    contentType = "commodi";
+                }};
+                request = new java.util.HashMap<String, Object>() {{
+                    put("est", "aut");
+                    put("odit", "non");
+                    put("voluptas", "omnis");
+                }};
+            }};
+
+            CompileResponse res = sdk.pdfGeneration.compile(req);
+
+            if (res.compile200ApplicationJSONObject.isPresent()) {
+                // handle response
+            }
+        } catch (Exception e) {
+            // handle exception
+        }
+```
+<!-- End SDK Example Usage -->

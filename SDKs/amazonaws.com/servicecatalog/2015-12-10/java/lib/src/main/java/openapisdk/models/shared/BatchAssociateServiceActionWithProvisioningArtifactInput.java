@@ -1,0 +1,21 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class BatchAssociateServiceActionWithProvisioningArtifactInput {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("AcceptLanguage")
+    public String acceptLanguage;
+    public BatchAssociateServiceActionWithProvisioningArtifactInput withAcceptLanguage(String acceptLanguage) {
+        this.acceptLanguage = acceptLanguage;
+        return this;
+    }
+    @JsonProperty("ServiceActionAssociations")
+    public ServiceActionAssociation[] serviceActionAssociations;
+    public BatchAssociateServiceActionWithProvisioningArtifactInput withServiceActionAssociations(ServiceActionAssociation[] serviceActionAssociations) {
+        this.serviceActionAssociations = serviceActionAssociations;
+        return this;
+    }
+}

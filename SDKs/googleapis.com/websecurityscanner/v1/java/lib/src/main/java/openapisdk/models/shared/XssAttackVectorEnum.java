@@ -1,0 +1,27 @@
+package openapisdk.models.shared;
+
+
+public enum XssAttackVectorEnum {
+    ATTACK_VECTOR_UNSPECIFIED("ATTACK_VECTOR_UNSPECIFIED"),
+    LOCAL_STORAGE("LOCAL_STORAGE"),
+    SESSION_STORAGE("SESSION_STORAGE"),
+    WINDOW_NAME("WINDOW_NAME"),
+    REFERRER("REFERRER"),
+    FORM_INPUT("FORM_INPUT"),
+    COOKIE("COOKIE"),
+    POST_MESSAGE("POST_MESSAGE"),
+    GET_PARAMETERS("GET_PARAMETERS"),
+    URL_FRAGMENT("URL_FRAGMENT"),
+    HTML_COMMENT("HTML_COMMENT"),
+    POST_PARAMETERS("POST_PARAMETERS"),
+    PROTOCOL("PROTOCOL"),
+    STORED_XSS("STORED_XSS"),
+    SAME_ORIGIN("SAME_ORIGIN"),
+    USER_CONTROLLABLE_URL("USER_CONTROLLABLE_URL");
+
+    public final String value;
+
+    private XssAttackVectorEnum(String value) {
+        this.value = value;
+    }
+}

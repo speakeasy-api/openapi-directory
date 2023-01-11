@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class GetReportDefinitionRequest {
+    public GetReportDefinitionPathParams pathParams;
+    public GetReportDefinitionRequest withPathParams(GetReportDefinitionPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public GetReportDefinitionHeaders headers;
+    public GetReportDefinitionRequest withHeaders(GetReportDefinitionHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+}

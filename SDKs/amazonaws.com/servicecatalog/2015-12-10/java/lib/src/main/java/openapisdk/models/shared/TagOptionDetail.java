@@ -1,0 +1,47 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * TagOptionDetail
+ * Information about a TagOption.
+**/
+public class TagOptionDetail {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Active")
+    public Boolean active;
+    public TagOptionDetail withActive(Boolean active) {
+        this.active = active;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Id")
+    public String id;
+    public TagOptionDetail withId(String id) {
+        this.id = id;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Key")
+    public String key;
+    public TagOptionDetail withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Owner")
+    public String owner;
+    public TagOptionDetail withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Value")
+    public String value;
+    public TagOptionDetail withValue(String value) {
+        this.value = value;
+        return this;
+    }
+}

@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class GetPayeesInvitationStatusV4Request {
+    public GetPayeesInvitationStatusV4PathParams pathParams;
+    public GetPayeesInvitationStatusV4Request withPathParams(GetPayeesInvitationStatusV4PathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public GetPayeesInvitationStatusV4QueryParams queryParams;
+    public GetPayeesInvitationStatusV4Request withQueryParams(GetPayeesInvitationStatusV4QueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+}

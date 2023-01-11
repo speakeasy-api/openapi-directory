@@ -1,0 +1,54 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * DeliveryChannel
+ * The channel through which Config delivers notifications and updated configuration states.
+**/
+public class DeliveryChannel {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("configSnapshotDeliveryProperties")
+    public ConfigSnapshotDeliveryProperties configSnapshotDeliveryProperties;
+    public DeliveryChannel withConfigSnapshotDeliveryProperties(ConfigSnapshotDeliveryProperties configSnapshotDeliveryProperties) {
+        this.configSnapshotDeliveryProperties = configSnapshotDeliveryProperties;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("name")
+    public String name;
+    public DeliveryChannel withName(String name) {
+        this.name = name;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("s3BucketName")
+    public String s3BucketName;
+    public DeliveryChannel withS3BucketName(String s3BucketName) {
+        this.s3BucketName = s3BucketName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("s3KeyPrefix")
+    public String s3KeyPrefix;
+    public DeliveryChannel withS3KeyPrefix(String s3KeyPrefix) {
+        this.s3KeyPrefix = s3KeyPrefix;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("s3KmsKeyArn")
+    public String s3KmsKeyArn;
+    public DeliveryChannel withS3KmsKeyArn(String s3KmsKeyArn) {
+        this.s3KmsKeyArn = s3KmsKeyArn;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("snsTopicARN")
+    public String snsTopicARN;
+    public DeliveryChannel withSnsTopicArn(String snsTopicARN) {
+        this.snsTopicARN = snsTopicARN;
+        return this;
+    }
+}

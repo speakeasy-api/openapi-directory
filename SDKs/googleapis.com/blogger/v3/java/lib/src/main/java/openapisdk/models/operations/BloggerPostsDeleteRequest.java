@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class BloggerPostsDeleteRequest {
+    public BloggerPostsDeletePathParams pathParams;
+    public BloggerPostsDeleteRequest withPathParams(BloggerPostsDeletePathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public BloggerPostsDeleteQueryParams queryParams;
+    public BloggerPostsDeleteRequest withQueryParams(BloggerPostsDeleteQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public BloggerPostsDeleteSecurity security;
+    public BloggerPostsDeleteRequest withSecurity(BloggerPostsDeleteSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

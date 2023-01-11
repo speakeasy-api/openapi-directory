@@ -1,0 +1,88 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+/**
+ * License
+ * License
+**/
+public class License {
+    @JsonProperty("body")
+    public String body;
+    public License withBody(String body) {
+        this.body = body;
+        return this;
+    }
+    @JsonProperty("conditions")
+    public String[] conditions;
+    public License withConditions(String[] conditions) {
+        this.conditions = conditions;
+        return this;
+    }
+    @JsonProperty("description")
+    public String description;
+    public License withDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    @JsonProperty("featured")
+    public Boolean featured;
+    public License withFeatured(Boolean featured) {
+        this.featured = featured;
+        return this;
+    }
+    @JsonProperty("html_url")
+    public String htmlUrl;
+    public License withHtmlUrl(String htmlUrl) {
+        this.htmlUrl = htmlUrl;
+        return this;
+    }
+    @JsonProperty("implementation")
+    public String implementation;
+    public License withImplementation(String implementation) {
+        this.implementation = implementation;
+        return this;
+    }
+    @JsonProperty("key")
+    public String key;
+    public License withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    @JsonProperty("limitations")
+    public String[] limitations;
+    public License withLimitations(String[] limitations) {
+        this.limitations = limitations;
+        return this;
+    }
+    @JsonProperty("name")
+    public String name;
+    public License withName(String name) {
+        this.name = name;
+        return this;
+    }
+    @JsonProperty("node_id")
+    public String nodeId;
+    public License withNodeId(String nodeId) {
+        this.nodeId = nodeId;
+        return this;
+    }
+    @JsonProperty("permissions")
+    public String[] permissions;
+    public License withPermissions(String[] permissions) {
+        this.permissions = permissions;
+        return this;
+    }
+    @JsonProperty("spdx_id")
+    public String spdxId;
+    public License withSpdxId(String spdxId) {
+        this.spdxId = spdxId;
+        return this;
+    }
+    @JsonProperty("url")
+    public String url;
+    public License withUrl(String url) {
+        this.url = url;
+        return this;
+    }
+}

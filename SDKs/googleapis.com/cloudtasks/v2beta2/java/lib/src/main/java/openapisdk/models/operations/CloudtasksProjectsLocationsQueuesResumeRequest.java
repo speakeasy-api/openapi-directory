@@ -1,0 +1,27 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class CloudtasksProjectsLocationsQueuesResumeRequest {
+    public CloudtasksProjectsLocationsQueuesResumePathParams pathParams;
+    public CloudtasksProjectsLocationsQueuesResumeRequest withPathParams(CloudtasksProjectsLocationsQueuesResumePathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public CloudtasksProjectsLocationsQueuesResumeQueryParams queryParams;
+    public CloudtasksProjectsLocationsQueuesResumeRequest withQueryParams(CloudtasksProjectsLocationsQueuesResumeQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public java.util.Map<String, Object> request;
+    public CloudtasksProjectsLocationsQueuesResumeRequest withRequest(java.util.Map<String, Object> request) {
+        this.request = request;
+        return this;
+    }
+    public CloudtasksProjectsLocationsQueuesResumeSecurity security;
+    public CloudtasksProjectsLocationsQueuesResumeRequest withSecurity(CloudtasksProjectsLocationsQueuesResumeSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class GetEventInsightsRequest {
+    public GetEventInsightsPathParams pathParams;
+    public GetEventInsightsRequest withPathParams(GetEventInsightsPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public GetEventInsightsHeaders headers;
+    public GetEventInsightsRequest withHeaders(GetEventInsightsHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+    public GetEventInsightsSecurity security;
+    public GetEventInsightsRequest withSecurity(GetEventInsightsSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

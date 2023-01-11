@@ -1,0 +1,96 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * GoogleAppsDriveLabelsV2betaDeltaUpdateLabelResponseResponse
+ * A single response from an update.
+**/
+public class GoogleAppsDriveLabelsV2betaDeltaUpdateLabelResponseResponse {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("createField")
+    public GoogleAppsDriveLabelsV2betaDeltaUpdateLabelResponseCreateFieldResponse createField;
+    public GoogleAppsDriveLabelsV2betaDeltaUpdateLabelResponseResponse withCreateField(GoogleAppsDriveLabelsV2betaDeltaUpdateLabelResponseCreateFieldResponse createField) {
+        this.createField = createField;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("createSelectionChoice")
+    public GoogleAppsDriveLabelsV2betaDeltaUpdateLabelResponseCreateSelectionChoiceResponse createSelectionChoice;
+    public GoogleAppsDriveLabelsV2betaDeltaUpdateLabelResponseResponse withCreateSelectionChoice(GoogleAppsDriveLabelsV2betaDeltaUpdateLabelResponseCreateSelectionChoiceResponse createSelectionChoice) {
+        this.createSelectionChoice = createSelectionChoice;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("deleteField")
+    public java.util.Map<String, Object> deleteField;
+    public GoogleAppsDriveLabelsV2betaDeltaUpdateLabelResponseResponse withDeleteField(java.util.Map<String, Object> deleteField) {
+        this.deleteField = deleteField;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("deleteSelectionChoice")
+    public java.util.Map<String, Object> deleteSelectionChoice;
+    public GoogleAppsDriveLabelsV2betaDeltaUpdateLabelResponseResponse withDeleteSelectionChoice(java.util.Map<String, Object> deleteSelectionChoice) {
+        this.deleteSelectionChoice = deleteSelectionChoice;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("disableField")
+    public java.util.Map<String, Object> disableField;
+    public GoogleAppsDriveLabelsV2betaDeltaUpdateLabelResponseResponse withDisableField(java.util.Map<String, Object> disableField) {
+        this.disableField = disableField;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("disableSelectionChoice")
+    public java.util.Map<String, Object> disableSelectionChoice;
+    public GoogleAppsDriveLabelsV2betaDeltaUpdateLabelResponseResponse withDisableSelectionChoice(java.util.Map<String, Object> disableSelectionChoice) {
+        this.disableSelectionChoice = disableSelectionChoice;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("enableField")
+    public java.util.Map<String, Object> enableField;
+    public GoogleAppsDriveLabelsV2betaDeltaUpdateLabelResponseResponse withEnableField(java.util.Map<String, Object> enableField) {
+        this.enableField = enableField;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("enableSelectionChoice")
+    public java.util.Map<String, Object> enableSelectionChoice;
+    public GoogleAppsDriveLabelsV2betaDeltaUpdateLabelResponseResponse withEnableSelectionChoice(java.util.Map<String, Object> enableSelectionChoice) {
+        this.enableSelectionChoice = enableSelectionChoice;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("updateField")
+    public GoogleAppsDriveLabelsV2betaDeltaUpdateLabelResponseUpdateFieldPropertiesResponse updateField;
+    public GoogleAppsDriveLabelsV2betaDeltaUpdateLabelResponseResponse withUpdateField(GoogleAppsDriveLabelsV2betaDeltaUpdateLabelResponseUpdateFieldPropertiesResponse updateField) {
+        this.updateField = updateField;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("updateFieldType")
+    public java.util.Map<String, Object> updateFieldType;
+    public GoogleAppsDriveLabelsV2betaDeltaUpdateLabelResponseResponse withUpdateFieldType(java.util.Map<String, Object> updateFieldType) {
+        this.updateFieldType = updateFieldType;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("updateLabel")
+    public java.util.Map<String, Object> updateLabel;
+    public GoogleAppsDriveLabelsV2betaDeltaUpdateLabelResponseResponse withUpdateLabel(java.util.Map<String, Object> updateLabel) {
+        this.updateLabel = updateLabel;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("updateSelectionChoiceProperties")
+    public GoogleAppsDriveLabelsV2betaDeltaUpdateLabelResponseUpdateSelectionChoicePropertiesResponse updateSelectionChoiceProperties;
+    public GoogleAppsDriveLabelsV2betaDeltaUpdateLabelResponseResponse withUpdateSelectionChoiceProperties(GoogleAppsDriveLabelsV2betaDeltaUpdateLabelResponseUpdateSelectionChoicePropertiesResponse updateSelectionChoiceProperties) {
+        this.updateSelectionChoiceProperties = updateSelectionChoiceProperties;
+        return this;
+    }
+}

@@ -1,0 +1,22 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class ConfigureAgentRequest {
+    public ConfigureAgentPathParams pathParams;
+    public ConfigureAgentRequest withPathParams(ConfigureAgentPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public ConfigureAgentHeaders headers;
+    public ConfigureAgentRequest withHeaders(ConfigureAgentHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public ConfigureAgentRequestBody request;
+    public ConfigureAgentRequest withRequest(ConfigureAgentRequestBody request) {
+        this.request = request;
+        return this;
+    }
+}

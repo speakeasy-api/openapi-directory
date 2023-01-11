@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class PhoneUserCallLogsRequest {
+    public PhoneUserCallLogsPathParams pathParams;
+    public PhoneUserCallLogsRequest withPathParams(PhoneUserCallLogsPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public PhoneUserCallLogsQueryParams queryParams;
+    public PhoneUserCallLogsRequest withQueryParams(PhoneUserCallLogsQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public PhoneUserCallLogsSecurity security;
+    public PhoneUserCallLogsRequest withSecurity(PhoneUserCallLogsSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

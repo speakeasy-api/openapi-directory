@@ -1,0 +1,37 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * PatientAuthConfirmResponseAuth
+ * depending on the purpose of auth, as specified in /auth/init, the response may include the following 
+ *   1. LINK - only returns **accessToken**
+ *   2. KYC - only returns **patient**
+ *   3. KYC_AND_LINK - returns both **accessToken** and **patient**
+ * 
+**/
+public class PatientAuthConfirmResponseAuth {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("accessToken")
+    public String accessToken;
+    public PatientAuthConfirmResponseAuth withAccessToken(String accessToken) {
+        this.accessToken = accessToken;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("patient")
+    public PatientDemographicResponse patient;
+    public PatientAuthConfirmResponseAuth withPatient(PatientDemographicResponse patient) {
+        this.patient = patient;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("validity")
+    public AccessTokenValidity validity;
+    public PatientAuthConfirmResponseAuth withValidity(AccessTokenValidity validity) {
+        this.validity = validity;
+        return this;
+    }
+}

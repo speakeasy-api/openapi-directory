@@ -1,0 +1,57 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class ServiceOptionsUpdateModel {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("consumerPadding")
+    public Boolean consumerPadding;
+    public ServiceOptionsUpdateModel withConsumerPadding(Boolean consumerPadding) {
+        this.consumerPadding = consumerPadding;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("defaultService")
+    public Boolean defaultService;
+    public ServiceOptionsUpdateModel withDefaultService(Boolean defaultService) {
+        this.defaultService = defaultService;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("durationInterval")
+    public Integer durationInterval;
+    public ServiceOptionsUpdateModel withDurationInterval(Integer durationInterval) {
+        this.durationInterval = durationInterval;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("durationMax")
+    public Integer durationMax;
+    public ServiceOptionsUpdateModel withDurationMax(Integer durationMax) {
+        this.durationMax = durationMax;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("durationMin")
+    public Integer durationMin;
+    public ServiceOptionsUpdateModel withDurationMin(Integer durationMin) {
+        this.durationMin = durationMin;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("durationSelect")
+    public Boolean durationSelect;
+    public ServiceOptionsUpdateModel withDurationSelect(Boolean durationSelect) {
+        this.durationSelect = durationSelect;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("padding")
+    public Integer padding;
+    public ServiceOptionsUpdateModel withPadding(Integer padding) {
+        this.padding = padding;
+        return this;
+    }
+}

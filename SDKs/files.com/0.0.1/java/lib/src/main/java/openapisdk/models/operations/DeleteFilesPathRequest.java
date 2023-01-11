@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class DeleteFilesPathRequest {
+    public DeleteFilesPathPathParams pathParams;
+    public DeleteFilesPathRequest withPathParams(DeleteFilesPathPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public DeleteFilesPathQueryParams queryParams;
+    public DeleteFilesPathRequest withQueryParams(DeleteFilesPathQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+}

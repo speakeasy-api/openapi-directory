@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class GetAccountIdRequest {
+    public GetAccountIdPathParams pathParams;
+    public GetAccountIdRequest withPathParams(GetAccountIdPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public GetAccountIdSecurity security;
+    public GetAccountIdRequest withSecurity(GetAccountIdSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

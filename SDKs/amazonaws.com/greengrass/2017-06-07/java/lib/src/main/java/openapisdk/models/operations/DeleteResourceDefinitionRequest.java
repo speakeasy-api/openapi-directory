@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class DeleteResourceDefinitionRequest {
+    public DeleteResourceDefinitionPathParams pathParams;
+    public DeleteResourceDefinitionRequest withPathParams(DeleteResourceDefinitionPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public DeleteResourceDefinitionHeaders headers;
+    public DeleteResourceDefinitionRequest withHeaders(DeleteResourceDefinitionHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+}

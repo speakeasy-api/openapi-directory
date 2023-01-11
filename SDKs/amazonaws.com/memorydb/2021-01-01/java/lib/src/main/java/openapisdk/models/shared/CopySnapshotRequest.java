@@ -1,0 +1,41 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class CopySnapshotRequest {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("KmsKeyId")
+    public String kmsKeyId;
+    public CopySnapshotRequest withKmsKeyId(String kmsKeyId) {
+        this.kmsKeyId = kmsKeyId;
+        return this;
+    }
+    @JsonProperty("SourceSnapshotName")
+    public String sourceSnapshotName;
+    public CopySnapshotRequest withSourceSnapshotName(String sourceSnapshotName) {
+        this.sourceSnapshotName = sourceSnapshotName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Tags")
+    public Tag[] tags;
+    public CopySnapshotRequest withTags(Tag[] tags) {
+        this.tags = tags;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("TargetBucket")
+    public String targetBucket;
+    public CopySnapshotRequest withTargetBucket(String targetBucket) {
+        this.targetBucket = targetBucket;
+        return this;
+    }
+    @JsonProperty("TargetSnapshotName")
+    public String targetSnapshotName;
+    public CopySnapshotRequest withTargetSnapshotName(String targetSnapshotName) {
+        this.targetSnapshotName = targetSnapshotName;
+        return this;
+    }
+}

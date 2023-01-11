@@ -1,0 +1,60 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class ProductInput {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("comment")
+    public String comment;
+    public ProductInput withComment(String comment) {
+        this.comment = comment;
+        return this;
+    }
+    @JsonProperty("currency")
+    public CurrencyEnum currency;
+    public ProductInput withCurrency(CurrencyEnum currency) {
+        this.currency = currency;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("general_ledger_number")
+    public String generalLedgerNumber;
+    public ProductInput withGeneralLedgerNumber(String generalLedgerNumber) {
+        this.generalLedgerNumber = generalLedgerNumber;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("general_ledger_taxcode")
+    public String generalLedgerTaxcode;
+    public ProductInput withGeneralLedgerTaxcode(String generalLedgerTaxcode) {
+        this.generalLedgerTaxcode = generalLedgerTaxcode;
+        return this;
+    }
+    @JsonProperty("name")
+    public String name;
+    public ProductInput withName(String name) {
+        this.name = name;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("net_unit_price")
+    public Float netUnitPrice;
+    public ProductInput withNetUnitPrice(Float netUnitPrice) {
+        this.netUnitPrice = netUnitPrice;
+        return this;
+    }
+    @JsonProperty("unit")
+    public String unit;
+    public ProductInput withUnit(String unit) {
+        this.unit = unit;
+        return this;
+    }
+    @JsonProperty("vat")
+    public VatEnum vat;
+    public ProductInput withVat(VatEnum vat) {
+        this.vat = vat;
+        return this;
+    }
+}

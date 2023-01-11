@@ -1,0 +1,61 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * QueryExecutionStatistics
+ * The amount of data scanned during the query execution and the amount of time that it took to execute, and the type of statement that was run.
+**/
+public class QueryExecutionStatistics {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("DataManifestLocation")
+    public String dataManifestLocation;
+    public QueryExecutionStatistics withDataManifestLocation(String dataManifestLocation) {
+        this.dataManifestLocation = dataManifestLocation;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("DataScannedInBytes")
+    public Long dataScannedInBytes;
+    public QueryExecutionStatistics withDataScannedInBytes(Long dataScannedInBytes) {
+        this.dataScannedInBytes = dataScannedInBytes;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("EngineExecutionTimeInMillis")
+    public Long engineExecutionTimeInMillis;
+    public QueryExecutionStatistics withEngineExecutionTimeInMillis(Long engineExecutionTimeInMillis) {
+        this.engineExecutionTimeInMillis = engineExecutionTimeInMillis;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("QueryPlanningTimeInMillis")
+    public Long queryPlanningTimeInMillis;
+    public QueryExecutionStatistics withQueryPlanningTimeInMillis(Long queryPlanningTimeInMillis) {
+        this.queryPlanningTimeInMillis = queryPlanningTimeInMillis;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("QueryQueueTimeInMillis")
+    public Long queryQueueTimeInMillis;
+    public QueryExecutionStatistics withQueryQueueTimeInMillis(Long queryQueueTimeInMillis) {
+        this.queryQueueTimeInMillis = queryQueueTimeInMillis;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ServiceProcessingTimeInMillis")
+    public Long serviceProcessingTimeInMillis;
+    public QueryExecutionStatistics withServiceProcessingTimeInMillis(Long serviceProcessingTimeInMillis) {
+        this.serviceProcessingTimeInMillis = serviceProcessingTimeInMillis;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("TotalExecutionTimeInMillis")
+    public Long totalExecutionTimeInMillis;
+    public QueryExecutionStatistics withTotalExecutionTimeInMillis(Long totalExecutionTimeInMillis) {
+        this.totalExecutionTimeInMillis = totalExecutionTimeInMillis;
+        return this;
+    }
+}

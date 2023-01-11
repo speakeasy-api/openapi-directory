@@ -1,0 +1,20 @@
+package openapisdk.models.shared;
+
+
+
+/**
+ * MetricDimension
+ * Describes the dimension of a metric.
+**/
+public class MetricDimension {
+    public String name;
+    public MetricDimension withName(String name) {
+        this.name = name;
+        return this;
+    }
+    public String value;
+    public MetricDimension withValue(String value) {
+        this.value = value;
+        return this;
+    }
+}

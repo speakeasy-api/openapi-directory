@@ -1,0 +1,198 @@
+package openapisdk.models.shared;
+
+import java.time.LocalDate;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class Electioneering {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("amendment_indicator")
+    public String amendmentIndicator;
+    public Electioneering withAmendmentIndicator(String amendmentIndicator) {
+        this.amendmentIndicator = amendmentIndicator;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("beginning_image_number")
+    public String beginningImageNumber;
+    public Electioneering withBeginningImageNumber(String beginningImageNumber) {
+        this.beginningImageNumber = beginningImageNumber;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("calculated_candidate_share")
+    public Double calculatedCandidateShare;
+    public Electioneering withCalculatedCandidateShare(Double calculatedCandidateShare) {
+        this.calculatedCandidateShare = calculatedCandidateShare;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("candidate_district")
+    public String candidateDistrict;
+    public Electioneering withCandidateDistrict(String candidateDistrict) {
+        this.candidateDistrict = candidateDistrict;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("candidate_id")
+    public String candidateId;
+    public Electioneering withCandidateId(String candidateId) {
+        this.candidateId = candidateId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("candidate_name")
+    public String candidateName;
+    public Electioneering withCandidateName(String candidateName) {
+        this.candidateName = candidateName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("candidate_office")
+    public String candidateOffice;
+    public Electioneering withCandidateOffice(String candidateOffice) {
+        this.candidateOffice = candidateOffice;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("candidate_state")
+    public String candidateState;
+    public Electioneering withCandidateState(String candidateState) {
+        this.candidateState = candidateState;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("committee_id")
+    public String committeeId;
+    public Electioneering withCommitteeId(String committeeId) {
+        this.committeeId = committeeId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("committee_name")
+    public String committeeName;
+    public Electioneering withCommitteeName(String committeeName) {
+        this.committeeName = committeeName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("communication_date")
+    public LocalDate communicationDate;
+    public Electioneering withCommunicationDate(LocalDate communicationDate) {
+        this.communicationDate = communicationDate;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("disbursement_amount")
+    public Double disbursementAmount;
+    public Electioneering withDisbursementAmount(Double disbursementAmount) {
+        this.disbursementAmount = disbursementAmount;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("disbursement_date")
+    public LocalDate disbursementDate;
+    public Electioneering withDisbursementDate(LocalDate disbursementDate) {
+        this.disbursementDate = disbursementDate;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("election_type")
+    public String electionType;
+    public Electioneering withElectionType(String electionType) {
+        this.electionType = electionType;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("file_number")
+    public Integer fileNumber;
+    public Electioneering withFileNumber(Integer fileNumber) {
+        this.fileNumber = fileNumber;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("link_id")
+    public Integer linkId;
+    public Electioneering withLinkId(Integer linkId) {
+        this.linkId = linkId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("number_of_candidates")
+    public Double numberOfCandidates;
+    public Electioneering withNumberOfCandidates(Double numberOfCandidates) {
+        this.numberOfCandidates = numberOfCandidates;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("payee_name")
+    public String payeeName;
+    public Electioneering withPayeeName(String payeeName) {
+        this.payeeName = payeeName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("payee_state")
+    public String payeeState;
+    public Electioneering withPayeeState(String payeeState) {
+        this.payeeState = payeeState;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("pdf_url")
+    public String pdfUrl;
+    public Electioneering withPdfUrl(String pdfUrl) {
+        this.pdfUrl = pdfUrl;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("public_distribution_date")
+    public LocalDate publicDistributionDate;
+    public Electioneering withPublicDistributionDate(LocalDate publicDistributionDate) {
+        this.publicDistributionDate = publicDistributionDate;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("purpose_description")
+    public String purposeDescription;
+    public Electioneering withPurposeDescription(String purposeDescription) {
+        this.purposeDescription = purposeDescription;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("receipt_date")
+    public LocalDate receiptDate;
+    public Electioneering withReceiptDate(LocalDate receiptDate) {
+        this.receiptDate = receiptDate;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("report_year")
+    public Integer reportYear;
+    public Electioneering withReportYear(Integer reportYear) {
+        this.reportYear = reportYear;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("sb_image_num")
+    public String sbImageNum;
+    public Electioneering withSbImageNum(String sbImageNum) {
+        this.sbImageNum = sbImageNum;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("sb_link_id")
+    public String sbLinkId;
+    public Electioneering withSbLinkId(String sbLinkId) {
+        this.sbLinkId = sbLinkId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("sub_id")
+    public Integer subId;
+    public Electioneering withSubId(Integer subId) {
+        this.subId = subId;
+        return this;
+    }
+}

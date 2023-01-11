@@ -1,0 +1,19 @@
+package openapisdk.models.operations;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * UpdateApplication200ApplicationJsonPrivacy
+ * Application privacy config
+**/
+public class UpdateApplication200ApplicationJsonPrivacy {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("improve_ai")
+    public Boolean improveAi;
+    public UpdateApplication200ApplicationJsonPrivacy withImproveAi(Boolean improveAi) {
+        this.improveAi = improveAi;
+        return this;
+    }
+}

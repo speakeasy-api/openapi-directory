@@ -1,0 +1,24 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class SheetsSpreadsheetsGetByDataFilterSecurity {
+    @SpeakeasyMetadata("security:option=true")
+    public SheetsSpreadsheetsGetByDataFilterSecurityOption1 option1;
+    public SheetsSpreadsheetsGetByDataFilterSecurity withOption1(SheetsSpreadsheetsGetByDataFilterSecurityOption1 option1) {
+        this.option1 = option1;
+        return this;
+    }
+    @SpeakeasyMetadata("security:option=true")
+    public SheetsSpreadsheetsGetByDataFilterSecurityOption2 option2;
+    public SheetsSpreadsheetsGetByDataFilterSecurity withOption2(SheetsSpreadsheetsGetByDataFilterSecurityOption2 option2) {
+        this.option2 = option2;
+        return this;
+    }
+    @SpeakeasyMetadata("security:option=true")
+    public SheetsSpreadsheetsGetByDataFilterSecurityOption3 option3;
+    public SheetsSpreadsheetsGetByDataFilterSecurity withOption3(SheetsSpreadsheetsGetByDataFilterSecurityOption3 option3) {
+        this.option3 = option3;
+        return this;
+    }
+}

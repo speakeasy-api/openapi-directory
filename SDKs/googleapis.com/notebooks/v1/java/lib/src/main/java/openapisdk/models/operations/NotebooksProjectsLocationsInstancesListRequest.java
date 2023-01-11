@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class NotebooksProjectsLocationsInstancesListRequest {
+    public NotebooksProjectsLocationsInstancesListPathParams pathParams;
+    public NotebooksProjectsLocationsInstancesListRequest withPathParams(NotebooksProjectsLocationsInstancesListPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public NotebooksProjectsLocationsInstancesListQueryParams queryParams;
+    public NotebooksProjectsLocationsInstancesListRequest withQueryParams(NotebooksProjectsLocationsInstancesListQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public NotebooksProjectsLocationsInstancesListSecurity security;
+    public NotebooksProjectsLocationsInstancesListRequest withSecurity(NotebooksProjectsLocationsInstancesListSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

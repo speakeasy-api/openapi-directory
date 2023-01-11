@@ -1,0 +1,36 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class ConfigSnmPv3 {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("context_engine_id")
+    public String contextEngineId;
+    public ConfigSnmPv3 withContextEngineId(String contextEngineId) {
+        this.contextEngineId = contextEngineId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("engine_id")
+    public String engineId;
+    public ConfigSnmPv3 withEngineId(String engineId) {
+        this.engineId = engineId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("usm_db")
+    public String usmDb;
+    public ConfigSnmPv3 withUsmDb(String usmDb) {
+        this.usmDb = usmDb;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("vacm_db")
+    public String vacmDb;
+    public ConfigSnmPv3 withVacmDb(String vacmDb) {
+        this.vacmDb = vacmDb;
+        return this;
+    }
+}

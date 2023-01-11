@@ -1,0 +1,22 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class EditVodRequest {
+    public EditVodPathParams pathParams;
+    public EditVodRequest withPathParams(EditVodPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    @SpeakeasyMetadata("request:mediaType=application/vnd.vimeo.ondemand.page+json")
+    public EditVodRequestBody request;
+    public EditVodRequest withRequest(EditVodRequestBody request) {
+        this.request = request;
+        return this;
+    }
+    public EditVodSecurity security;
+    public EditVodRequest withSecurity(EditVodSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

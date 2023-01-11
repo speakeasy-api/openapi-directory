@@ -1,0 +1,43 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class ProfileCommerceAddress {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("city")
+    public String city;
+    public ProfileCommerceAddress withCity(String city) {
+        this.city = city;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("country")
+    public String country;
+    public ProfileCommerceAddress withCountry(String country) {
+        this.country = country;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("postalCode")
+    public String postalCode;
+    public ProfileCommerceAddress withPostalCode(String postalCode) {
+        this.postalCode = postalCode;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("region")
+    public String region;
+    public ProfileCommerceAddress withRegion(String region) {
+        this.region = region;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("street")
+    public String[] street;
+    public ProfileCommerceAddress withStreet(String[] street) {
+        this.street = street;
+        return this;
+    }
+}

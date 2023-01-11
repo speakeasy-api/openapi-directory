@@ -1,0 +1,26 @@
+package openapisdk.models.operations;
+
+
+
+public class PaymentsOneRequest {
+    public PaymentsOnePathParams pathParams;
+    public PaymentsOneRequest withPathParams(PaymentsOnePathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public PaymentsOneQueryParams queryParams;
+    public PaymentsOneRequest withQueryParams(PaymentsOneQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public PaymentsOneHeaders headers;
+    public PaymentsOneRequest withHeaders(PaymentsOneHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+    public PaymentsOneSecurity security;
+    public PaymentsOneRequest withSecurity(PaymentsOneSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

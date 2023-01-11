@@ -1,0 +1,44 @@
+package openapisdk.models.shared;
+
+import java.time.LocalDate;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class SubscribeRequestSubscribeOptionsExternalPaymentOptions {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Amount")
+    public Double amount;
+    public SubscribeRequestSubscribeOptionsExternalPaymentOptions withAmount(Double amount) {
+        this.amount = amount;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("EffectiveDate")
+    public LocalDate effectiveDate;
+    public SubscribeRequestSubscribeOptionsExternalPaymentOptions withEffectiveDate(LocalDate effectiveDate) {
+        this.effectiveDate = effectiveDate;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("GatewayOrderId")
+    public String gatewayOrderId;
+    public SubscribeRequestSubscribeOptionsExternalPaymentOptions withGatewayOrderId(String gatewayOrderId) {
+        this.gatewayOrderId = gatewayOrderId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("PaymentMethodId")
+    public String paymentMethodId;
+    public SubscribeRequestSubscribeOptionsExternalPaymentOptions withPaymentMethodId(String paymentMethodId) {
+        this.paymentMethodId = paymentMethodId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ReferenceId")
+    public String referenceId;
+    public SubscribeRequestSubscribeOptionsExternalPaymentOptions withReferenceId(String referenceId) {
+        this.referenceId = referenceId;
+        return this;
+    }
+}

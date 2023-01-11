@@ -1,0 +1,48 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class CreateUpdatedImageRequest {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("dryRun")
+    public Boolean dryRun;
+    public CreateUpdatedImageRequest withDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    @JsonProperty("existingImageName")
+    public String existingImageName;
+    public CreateUpdatedImageRequest withExistingImageName(String existingImageName) {
+        this.existingImageName = existingImageName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("newImageDescription")
+    public String newImageDescription;
+    public CreateUpdatedImageRequest withNewImageDescription(String newImageDescription) {
+        this.newImageDescription = newImageDescription;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("newImageDisplayName")
+    public String newImageDisplayName;
+    public CreateUpdatedImageRequest withNewImageDisplayName(String newImageDisplayName) {
+        this.newImageDisplayName = newImageDisplayName;
+        return this;
+    }
+    @JsonProperty("newImageName")
+    public String newImageName;
+    public CreateUpdatedImageRequest withNewImageName(String newImageName) {
+        this.newImageName = newImageName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("newImageTags")
+    public java.util.Map<String, String> newImageTags;
+    public CreateUpdatedImageRequest withNewImageTags(java.util.Map<String, String> newImageTags) {
+        this.newImageTags = newImageTags;
+        return this;
+    }
+}

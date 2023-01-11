@@ -1,0 +1,18 @@
+package openapisdk.models.shared;
+
+
+public enum ImageFailureCodeEnum {
+    INVALID_IMAGE_DIGEST("InvalidImageDigest"),
+    INVALID_IMAGE_TAG("InvalidImageTag"),
+    IMAGE_TAG_DOES_NOT_MATCH_DIGEST("ImageTagDoesNotMatchDigest"),
+    IMAGE_NOT_FOUND("ImageNotFound"),
+    MISSING_DIGEST_AND_TAG("MissingDigestAndTag"),
+    IMAGE_REFERENCED_BY_MANIFEST_LIST("ImageReferencedByManifestList"),
+    KMS_ERROR("KmsError");
+
+    public final String value;
+
+    private ImageFailureCodeEnum(String value) {
+        this.value = value;
+    }
+}

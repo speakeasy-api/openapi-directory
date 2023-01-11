@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class DeletePublicKey20180618Request {
+    public DeletePublicKey20180618PathParams pathParams;
+    public DeletePublicKey20180618Request withPathParams(DeletePublicKey20180618PathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public DeletePublicKey20180618Headers headers;
+    public DeletePublicKey20180618Request withHeaders(DeletePublicKey20180618Headers headers) {
+        this.headers = headers;
+        return this;
+    }
+}

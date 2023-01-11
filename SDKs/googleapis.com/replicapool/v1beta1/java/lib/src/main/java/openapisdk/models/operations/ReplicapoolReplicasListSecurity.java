@@ -1,0 +1,42 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class ReplicapoolReplicasListSecurity {
+    @SpeakeasyMetadata("security:option=true")
+    public ReplicapoolReplicasListSecurityOption1 option1;
+    public ReplicapoolReplicasListSecurity withOption1(ReplicapoolReplicasListSecurityOption1 option1) {
+        this.option1 = option1;
+        return this;
+    }
+    @SpeakeasyMetadata("security:option=true")
+    public ReplicapoolReplicasListSecurityOption2 option2;
+    public ReplicapoolReplicasListSecurity withOption2(ReplicapoolReplicasListSecurityOption2 option2) {
+        this.option2 = option2;
+        return this;
+    }
+    @SpeakeasyMetadata("security:option=true")
+    public ReplicapoolReplicasListSecurityOption3 option3;
+    public ReplicapoolReplicasListSecurity withOption3(ReplicapoolReplicasListSecurityOption3 option3) {
+        this.option3 = option3;
+        return this;
+    }
+    @SpeakeasyMetadata("security:option=true")
+    public ReplicapoolReplicasListSecurityOption4 option4;
+    public ReplicapoolReplicasListSecurity withOption4(ReplicapoolReplicasListSecurityOption4 option4) {
+        this.option4 = option4;
+        return this;
+    }
+    @SpeakeasyMetadata("security:option=true")
+    public ReplicapoolReplicasListSecurityOption5 option5;
+    public ReplicapoolReplicasListSecurity withOption5(ReplicapoolReplicasListSecurityOption5 option5) {
+        this.option5 = option5;
+        return this;
+    }
+    @SpeakeasyMetadata("security:option=true")
+    public ReplicapoolReplicasListSecurityOption6 option6;
+    public ReplicapoolReplicasListSecurity withOption6(ReplicapoolReplicasListSecurityOption6 option6) {
+        this.option6 = option6;
+        return this;
+    }
+}

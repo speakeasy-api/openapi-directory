@@ -1,0 +1,54 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * ScimError
+ * Scim Error
+**/
+public class ScimError {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("detail")
+    public String detail;
+    public ScimError withDetail(String detail) {
+        this.detail = detail;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("documentation_url")
+    public String documentationUrl;
+    public ScimError withDocumentationUrl(String documentationUrl) {
+        this.documentationUrl = documentationUrl;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("message")
+    public String message;
+    public ScimError withMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("schemas")
+    public String[] schemas;
+    public ScimError withSchemas(String[] schemas) {
+        this.schemas = schemas;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("scimType")
+    public String scimType;
+    public ScimError withScimType(String scimType) {
+        this.scimType = scimType;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("status")
+    public Long status;
+    public ScimError withStatus(Long status) {
+        this.status = status;
+        return this;
+    }
+}

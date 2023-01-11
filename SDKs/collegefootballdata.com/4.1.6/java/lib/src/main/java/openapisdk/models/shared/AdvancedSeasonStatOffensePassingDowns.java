@@ -1,0 +1,36 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class AdvancedSeasonStatOffensePassingDowns {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("explosiveness")
+    public Double explosiveness;
+    public AdvancedSeasonStatOffensePassingDowns withExplosiveness(Double explosiveness) {
+        this.explosiveness = explosiveness;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ppa")
+    public Double ppa;
+    public AdvancedSeasonStatOffensePassingDowns withPpa(Double ppa) {
+        this.ppa = ppa;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("rate")
+    public Double rate;
+    public AdvancedSeasonStatOffensePassingDowns withRate(Double rate) {
+        this.rate = rate;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("successRate")
+    public Double successRate;
+    public AdvancedSeasonStatOffensePassingDowns withSuccessRate(Double successRate) {
+        this.successRate = successRate;
+        return this;
+    }
+}

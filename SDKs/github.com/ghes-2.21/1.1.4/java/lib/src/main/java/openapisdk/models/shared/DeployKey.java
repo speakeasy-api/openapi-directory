@@ -1,0 +1,52 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+/**
+ * DeployKey
+ * An SSH key granting access to a single repository.
+**/
+public class DeployKey {
+    @JsonProperty("created_at")
+    public String createdAt;
+    public DeployKey withCreatedAt(String createdAt) {
+        this.createdAt = createdAt;
+        return this;
+    }
+    @JsonProperty("id")
+    public Long id;
+    public DeployKey withId(Long id) {
+        this.id = id;
+        return this;
+    }
+    @JsonProperty("key")
+    public String key;
+    public DeployKey withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    @JsonProperty("read_only")
+    public Boolean readOnly;
+    public DeployKey withReadOnly(Boolean readOnly) {
+        this.readOnly = readOnly;
+        return this;
+    }
+    @JsonProperty("title")
+    public String title;
+    public DeployKey withTitle(String title) {
+        this.title = title;
+        return this;
+    }
+    @JsonProperty("url")
+    public String url;
+    public DeployKey withUrl(String url) {
+        this.url = url;
+        return this;
+    }
+    @JsonProperty("verified")
+    public Boolean verified;
+    public DeployKey withVerified(Boolean verified) {
+        this.verified = verified;
+        return this;
+    }
+}

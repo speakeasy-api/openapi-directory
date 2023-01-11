@@ -1,0 +1,33 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * ExecutionStepResult
+ * Specifies the following details for the step: error (if any), outputs (if any), and the step type.
+**/
+public class ExecutionStepResult {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Error")
+    public ExecutionError error;
+    public ExecutionStepResult withError(ExecutionError error) {
+        this.error = error;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Outputs")
+    public String outputs;
+    public ExecutionStepResult withOutputs(String outputs) {
+        this.outputs = outputs;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("StepType")
+    public WorkflowStepTypeEnum stepType;
+    public ExecutionStepResult withStepType(WorkflowStepTypeEnum stepType) {
+        this.stepType = stepType;
+        return this;
+    }
+}

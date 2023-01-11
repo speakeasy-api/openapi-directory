@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class GetExportXlsRegistrierkassenRegistrierkasseUuidBelegeRequest {
+    public GetExportXlsRegistrierkassenRegistrierkasseUuidBelegePathParams pathParams;
+    public GetExportXlsRegistrierkassenRegistrierkasseUuidBelegeRequest withPathParams(GetExportXlsRegistrierkassenRegistrierkasseUuidBelegePathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public GetExportXlsRegistrierkassenRegistrierkasseUuidBelegeQueryParams queryParams;
+    public GetExportXlsRegistrierkassenRegistrierkasseUuidBelegeRequest withQueryParams(GetExportXlsRegistrierkassenRegistrierkasseUuidBelegeQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+}

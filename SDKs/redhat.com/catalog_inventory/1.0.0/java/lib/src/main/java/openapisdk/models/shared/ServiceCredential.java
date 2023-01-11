@@ -1,0 +1,123 @@
+package openapisdk.models.shared;
+
+import java.time.OffsetDateTime;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import openapisdk.utils.DateTimeSerializer;
+import openapisdk.utils.DateTimeDeserializer;
+
+public class ServiceCredential {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonSerialize(contentUsing = DateTimeSerializer.class)
+    @JsonDeserialize(contentUsing = DateTimeDeserializer.class)
+    @JsonProperty("archived_at")
+    public OffsetDateTime archivedAt;
+    public ServiceCredential withArchivedAt(OffsetDateTime archivedAt) {
+        this.archivedAt = archivedAt;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonSerialize(contentUsing = DateTimeSerializer.class)
+    @JsonDeserialize(contentUsing = DateTimeDeserializer.class)
+    @JsonProperty("created_at")
+    public OffsetDateTime createdAt;
+    public ServiceCredential withCreatedAt(OffsetDateTime createdAt) {
+        this.createdAt = createdAt;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("description")
+    public String description;
+    public ServiceCredential withDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("id")
+    public String id;
+    public ServiceCredential withId(String id) {
+        this.id = id;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonSerialize(contentUsing = DateTimeSerializer.class)
+    @JsonDeserialize(contentUsing = DateTimeDeserializer.class)
+    @JsonProperty("last_seen_at")
+    public OffsetDateTime lastSeenAt;
+    public ServiceCredential withLastSeenAt(OffsetDateTime lastSeenAt) {
+        this.lastSeenAt = lastSeenAt;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("name")
+    public String name;
+    public ServiceCredential withName(String name) {
+        this.name = name;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("refresh_state_part_id")
+    public String refreshStatePartId;
+    public ServiceCredential withRefreshStatePartId(String refreshStatePartId) {
+        this.refreshStatePartId = refreshStatePartId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("service_credential_type_id")
+    public String serviceCredentialTypeId;
+    public ServiceCredential withServiceCredentialTypeId(String serviceCredentialTypeId) {
+        this.serviceCredentialTypeId = serviceCredentialTypeId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonSerialize(contentUsing = DateTimeSerializer.class)
+    @JsonDeserialize(contentUsing = DateTimeDeserializer.class)
+    @JsonProperty("source_created_at")
+    public OffsetDateTime sourceCreatedAt;
+    public ServiceCredential withSourceCreatedAt(OffsetDateTime sourceCreatedAt) {
+        this.sourceCreatedAt = sourceCreatedAt;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("source_id")
+    public String sourceId;
+    public ServiceCredential withSourceId(String sourceId) {
+        this.sourceId = sourceId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("source_ref")
+    public String sourceRef;
+    public ServiceCredential withSourceRef(String sourceRef) {
+        this.sourceRef = sourceRef;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonSerialize(contentUsing = DateTimeSerializer.class)
+    @JsonDeserialize(contentUsing = DateTimeDeserializer.class)
+    @JsonProperty("source_updated_at")
+    public OffsetDateTime sourceUpdatedAt;
+    public ServiceCredential withSourceUpdatedAt(OffsetDateTime sourceUpdatedAt) {
+        this.sourceUpdatedAt = sourceUpdatedAt;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("type_name")
+    public String typeName;
+    public ServiceCredential withTypeName(String typeName) {
+        this.typeName = typeName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonSerialize(contentUsing = DateTimeSerializer.class)
+    @JsonDeserialize(contentUsing = DateTimeDeserializer.class)
+    @JsonProperty("updated_at")
+    public OffsetDateTime updatedAt;
+    public ServiceCredential withUpdatedAt(OffsetDateTime updatedAt) {
+        this.updatedAt = updatedAt;
+        return this;
+    }
+}

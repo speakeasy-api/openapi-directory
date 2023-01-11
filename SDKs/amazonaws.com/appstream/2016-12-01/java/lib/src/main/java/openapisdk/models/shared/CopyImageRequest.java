@@ -1,0 +1,33 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class CopyImageRequest {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("DestinationImageDescription")
+    public String destinationImageDescription;
+    public CopyImageRequest withDestinationImageDescription(String destinationImageDescription) {
+        this.destinationImageDescription = destinationImageDescription;
+        return this;
+    }
+    @JsonProperty("DestinationImageName")
+    public String destinationImageName;
+    public CopyImageRequest withDestinationImageName(String destinationImageName) {
+        this.destinationImageName = destinationImageName;
+        return this;
+    }
+    @JsonProperty("DestinationRegion")
+    public String destinationRegion;
+    public CopyImageRequest withDestinationRegion(String destinationRegion) {
+        this.destinationRegion = destinationRegion;
+        return this;
+    }
+    @JsonProperty("SourceImageName")
+    public String sourceImageName;
+    public CopyImageRequest withSourceImageName(String sourceImageName) {
+        this.sourceImageName = sourceImageName;
+        return this;
+    }
+}

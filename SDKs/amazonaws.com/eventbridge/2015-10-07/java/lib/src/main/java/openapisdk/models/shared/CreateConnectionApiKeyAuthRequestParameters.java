@@ -1,0 +1,22 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+/**
+ * CreateConnectionApiKeyAuthRequestParameters
+ * Contains the API key authorization parameters for the connection.
+**/
+public class CreateConnectionApiKeyAuthRequestParameters {
+    @JsonProperty("ApiKeyName")
+    public String apiKeyName;
+    public CreateConnectionApiKeyAuthRequestParameters withApiKeyName(String apiKeyName) {
+        this.apiKeyName = apiKeyName;
+        return this;
+    }
+    @JsonProperty("ApiKeyValue")
+    public String apiKeyValue;
+    public CreateConnectionApiKeyAuthRequestParameters withApiKeyValue(String apiKeyValue) {
+        this.apiKeyValue = apiKeyValue;
+        return this;
+    }
+}

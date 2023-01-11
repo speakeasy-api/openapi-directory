@@ -1,0 +1,17 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class BookingAvailabilityTourgradesPricingmatrixRequest {
+    public BookingAvailabilityTourgradesPricingmatrixHeaders headers;
+    public BookingAvailabilityTourgradesPricingmatrixRequest withHeaders(BookingAvailabilityTourgradesPricingmatrixHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public BookingAvailabilityTourgradesPricingmatrixRequestBody request;
+    public BookingAvailabilityTourgradesPricingmatrixRequest withRequest(BookingAvailabilityTourgradesPricingmatrixRequestBody request) {
+        this.request = request;
+        return this;
+    }
+}

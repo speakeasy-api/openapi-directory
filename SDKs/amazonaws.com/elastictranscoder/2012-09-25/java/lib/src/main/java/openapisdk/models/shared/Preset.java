@@ -1,0 +1,75 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * Preset
+ * Presets are templates that contain most of the settings for transcoding media files from one format to another. Elastic Transcoder includes some default presets for common formats, for example, several iPod and iPhone versions. You can also create your own presets for formats that aren't included among the default presets. You specify which preset you want to use when you create a job.
+**/
+public class Preset {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Arn")
+    public String arn;
+    public Preset withArn(String arn) {
+        this.arn = arn;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Audio")
+    public AudioParameters audio;
+    public Preset withAudio(AudioParameters audio) {
+        this.audio = audio;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Container")
+    public String container;
+    public Preset withContainer(String container) {
+        this.container = container;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Description")
+    public String description;
+    public Preset withDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Id")
+    public String id;
+    public Preset withId(String id) {
+        this.id = id;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Name")
+    public String name;
+    public Preset withName(String name) {
+        this.name = name;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Thumbnails")
+    public Thumbnails thumbnails;
+    public Preset withThumbnails(Thumbnails thumbnails) {
+        this.thumbnails = thumbnails;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Type")
+    public String type;
+    public Preset withType(String type) {
+        this.type = type;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Video")
+    public VideoParameters video;
+    public Preset withVideo(VideoParameters video) {
+        this.video = video;
+        return this;
+    }
+}

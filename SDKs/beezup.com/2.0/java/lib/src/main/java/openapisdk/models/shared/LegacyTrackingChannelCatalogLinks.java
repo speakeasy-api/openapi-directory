@@ -1,0 +1,25 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * LegacyTrackingChannelCatalogLinks
+ * Indicates the actions you can do on a channel catalog
+**/
+public class LegacyTrackingChannelCatalogLinks {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("migrate")
+    public LinksMigrateLegacyTrackingChannelCatalogLink migrate;
+    public LegacyTrackingChannelCatalogLinks withMigrate(LinksMigrateLegacyTrackingChannelCatalogLink migrate) {
+        this.migrate = migrate;
+        return this;
+    }
+    @JsonProperty("self")
+    public LinksGetLegacyTrackingChannelCatalogLink self;
+    public LegacyTrackingChannelCatalogLinks withSelf(LinksGetLegacyTrackingChannelCatalogLink self) {
+        this.self = self;
+        return this;
+    }
+}

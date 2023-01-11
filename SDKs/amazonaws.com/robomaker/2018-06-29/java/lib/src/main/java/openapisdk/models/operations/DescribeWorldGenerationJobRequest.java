@@ -1,0 +1,17 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class DescribeWorldGenerationJobRequest {
+    public DescribeWorldGenerationJobHeaders headers;
+    public DescribeWorldGenerationJobRequest withHeaders(DescribeWorldGenerationJobHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public DescribeWorldGenerationJobRequestBody request;
+    public DescribeWorldGenerationJobRequest withRequest(DescribeWorldGenerationJobRequestBody request) {
+        this.request = request;
+        return this;
+    }
+}

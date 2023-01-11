@@ -1,0 +1,17 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class OrgsUpdateMembershipForAuthenticatedUserRequest {
+    public OrgsUpdateMembershipForAuthenticatedUserPathParams pathParams;
+    public OrgsUpdateMembershipForAuthenticatedUserRequest withPathParams(OrgsUpdateMembershipForAuthenticatedUserPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public OrgsUpdateMembershipForAuthenticatedUserRequestBody request;
+    public OrgsUpdateMembershipForAuthenticatedUserRequest withRequest(OrgsUpdateMembershipForAuthenticatedUserRequestBody request) {
+        this.request = request;
+        return this;
+    }
+}

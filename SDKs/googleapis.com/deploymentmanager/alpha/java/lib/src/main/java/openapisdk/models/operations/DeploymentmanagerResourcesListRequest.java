@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class DeploymentmanagerResourcesListRequest {
+    public DeploymentmanagerResourcesListPathParams pathParams;
+    public DeploymentmanagerResourcesListRequest withPathParams(DeploymentmanagerResourcesListPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public DeploymentmanagerResourcesListQueryParams queryParams;
+    public DeploymentmanagerResourcesListRequest withQueryParams(DeploymentmanagerResourcesListQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public DeploymentmanagerResourcesListSecurity security;
+    public DeploymentmanagerResourcesListRequest withSecurity(DeploymentmanagerResourcesListSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

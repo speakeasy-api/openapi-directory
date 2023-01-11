@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class AppsListInstallationReposForAuthenticatedUserRequest {
+    public AppsListInstallationReposForAuthenticatedUserPathParams pathParams;
+    public AppsListInstallationReposForAuthenticatedUserRequest withPathParams(AppsListInstallationReposForAuthenticatedUserPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public AppsListInstallationReposForAuthenticatedUserQueryParams queryParams;
+    public AppsListInstallationReposForAuthenticatedUserRequest withQueryParams(AppsListInstallationReposForAuthenticatedUserQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+}

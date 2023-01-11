@@ -1,0 +1,43 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class CreateTokenResponse {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("accessToken")
+    public String accessToken;
+    public CreateTokenResponse withAccessToken(String accessToken) {
+        this.accessToken = accessToken;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("expiresIn")
+    public Long expiresIn;
+    public CreateTokenResponse withExpiresIn(Long expiresIn) {
+        this.expiresIn = expiresIn;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("idToken")
+    public String idToken;
+    public CreateTokenResponse withIdToken(String idToken) {
+        this.idToken = idToken;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("refreshToken")
+    public String refreshToken;
+    public CreateTokenResponse withRefreshToken(String refreshToken) {
+        this.refreshToken = refreshToken;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("tokenType")
+    public String tokenType;
+    public CreateTokenResponse withTokenType(String tokenType) {
+        this.tokenType = tokenType;
+        return this;
+    }
+}

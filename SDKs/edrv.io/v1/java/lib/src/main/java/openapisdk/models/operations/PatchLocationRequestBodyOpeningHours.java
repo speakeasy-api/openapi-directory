@@ -1,0 +1,57 @@
+package openapisdk.models.operations;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class PatchLocationRequestBodyOpeningHours {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("0")
+    public PatchLocationRequestBodyOpeningHours0[] zero;
+    public PatchLocationRequestBodyOpeningHours withZero(PatchLocationRequestBodyOpeningHours0[] zero) {
+        this.zero = zero;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("1")
+    public PatchLocationRequestBodyOpeningHours1[] one;
+    public PatchLocationRequestBodyOpeningHours withOne(PatchLocationRequestBodyOpeningHours1[] one) {
+        this.one = one;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("2")
+    public PatchLocationRequestBodyOpeningHours2[] two;
+    public PatchLocationRequestBodyOpeningHours withTwo(PatchLocationRequestBodyOpeningHours2[] two) {
+        this.two = two;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("3")
+    public PatchLocationRequestBodyOpeningHours3[] three;
+    public PatchLocationRequestBodyOpeningHours withThree(PatchLocationRequestBodyOpeningHours3[] three) {
+        this.three = three;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("4")
+    public PatchLocationRequestBodyOpeningHours4[] four;
+    public PatchLocationRequestBodyOpeningHours withFour(PatchLocationRequestBodyOpeningHours4[] four) {
+        this.four = four;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("5")
+    public PatchLocationRequestBodyOpeningHours5[] five;
+    public PatchLocationRequestBodyOpeningHours withFive(PatchLocationRequestBodyOpeningHours5[] five) {
+        this.five = five;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("6")
+    public PatchLocationRequestBodyOpeningHours6[] six;
+    public PatchLocationRequestBodyOpeningHours withSix(PatchLocationRequestBodyOpeningHours6[] six) {
+        this.six = six;
+        return this;
+    }
+}

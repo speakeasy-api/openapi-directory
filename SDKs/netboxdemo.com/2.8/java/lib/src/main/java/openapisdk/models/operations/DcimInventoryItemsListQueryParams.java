@@ -1,0 +1,372 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class DcimInventoryItemsListQueryParams {
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=asset_tag")
+    public String assetTag;
+    public DcimInventoryItemsListQueryParams withAssetTag(String assetTag) {
+        this.assetTag = assetTag;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=asset_tag__ic")
+    public String assetTagIc;
+    public DcimInventoryItemsListQueryParams withAssetTagIc(String assetTagIc) {
+        this.assetTagIc = assetTagIc;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=asset_tag__ie")
+    public String assetTagIe;
+    public DcimInventoryItemsListQueryParams withAssetTagIe(String assetTagIe) {
+        this.assetTagIe = assetTagIe;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=asset_tag__iew")
+    public String assetTagIew;
+    public DcimInventoryItemsListQueryParams withAssetTagIew(String assetTagIew) {
+        this.assetTagIew = assetTagIew;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=asset_tag__isw")
+    public String assetTagIsw;
+    public DcimInventoryItemsListQueryParams withAssetTagIsw(String assetTagIsw) {
+        this.assetTagIsw = assetTagIsw;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=asset_tag__n")
+    public String assetTagN;
+    public DcimInventoryItemsListQueryParams withAssetTagN(String assetTagN) {
+        this.assetTagN = assetTagN;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=asset_tag__nic")
+    public String assetTagNic;
+    public DcimInventoryItemsListQueryParams withAssetTagNic(String assetTagNic) {
+        this.assetTagNic = assetTagNic;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=asset_tag__nie")
+    public String assetTagNie;
+    public DcimInventoryItemsListQueryParams withAssetTagNie(String assetTagNie) {
+        this.assetTagNie = assetTagNie;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=asset_tag__niew")
+    public String assetTagNiew;
+    public DcimInventoryItemsListQueryParams withAssetTagNiew(String assetTagNiew) {
+        this.assetTagNiew = assetTagNiew;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=asset_tag__nisw")
+    public String assetTagNisw;
+    public DcimInventoryItemsListQueryParams withAssetTagNisw(String assetTagNisw) {
+        this.assetTagNisw = assetTagNisw;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=device")
+    public String device;
+    public DcimInventoryItemsListQueryParams withDevice(String device) {
+        this.device = device;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=device__n")
+    public String deviceN;
+    public DcimInventoryItemsListQueryParams withDeviceN(String deviceN) {
+        this.deviceN = deviceN;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=device_id")
+    public String deviceId;
+    public DcimInventoryItemsListQueryParams withDeviceId(String deviceId) {
+        this.deviceId = deviceId;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=device_id__n")
+    public String deviceIdN;
+    public DcimInventoryItemsListQueryParams withDeviceIdN(String deviceIdN) {
+        this.deviceIdN = deviceIdN;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=discovered")
+    public String discovered;
+    public DcimInventoryItemsListQueryParams withDiscovered(String discovered) {
+        this.discovered = discovered;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id")
+    public String id;
+    public DcimInventoryItemsListQueryParams withId(String id) {
+        this.id = id;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id__gt")
+    public String idGt;
+    public DcimInventoryItemsListQueryParams withIdGt(String idGt) {
+        this.idGt = idGt;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id__gte")
+    public String idGte;
+    public DcimInventoryItemsListQueryParams withIdGte(String idGte) {
+        this.idGte = idGte;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id__lt")
+    public String idLt;
+    public DcimInventoryItemsListQueryParams withIdLt(String idLt) {
+        this.idLt = idLt;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id__lte")
+    public String idLte;
+    public DcimInventoryItemsListQueryParams withIdLte(String idLte) {
+        this.idLte = idLte;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id__n")
+    public String idN;
+    public DcimInventoryItemsListQueryParams withIdN(String idN) {
+        this.idN = idN;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public DcimInventoryItemsListQueryParams withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=manufacturer")
+    public String manufacturer;
+    public DcimInventoryItemsListQueryParams withManufacturer(String manufacturer) {
+        this.manufacturer = manufacturer;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=manufacturer__n")
+    public String manufacturerN;
+    public DcimInventoryItemsListQueryParams withManufacturerN(String manufacturerN) {
+        this.manufacturerN = manufacturerN;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=manufacturer_id")
+    public String manufacturerId;
+    public DcimInventoryItemsListQueryParams withManufacturerId(String manufacturerId) {
+        this.manufacturerId = manufacturerId;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=manufacturer_id__n")
+    public String manufacturerIdN;
+    public DcimInventoryItemsListQueryParams withManufacturerIdN(String manufacturerIdN) {
+        this.manufacturerIdN = manufacturerIdN;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
+    public String name;
+    public DcimInventoryItemsListQueryParams withName(String name) {
+        this.name = name;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name__ic")
+    public String nameIc;
+    public DcimInventoryItemsListQueryParams withNameIc(String nameIc) {
+        this.nameIc = nameIc;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name__ie")
+    public String nameIe;
+    public DcimInventoryItemsListQueryParams withNameIe(String nameIe) {
+        this.nameIe = nameIe;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name__iew")
+    public String nameIew;
+    public DcimInventoryItemsListQueryParams withNameIew(String nameIew) {
+        this.nameIew = nameIew;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name__isw")
+    public String nameIsw;
+    public DcimInventoryItemsListQueryParams withNameIsw(String nameIsw) {
+        this.nameIsw = nameIsw;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name__n")
+    public String nameN;
+    public DcimInventoryItemsListQueryParams withNameN(String nameN) {
+        this.nameN = nameN;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name__nic")
+    public String nameNic;
+    public DcimInventoryItemsListQueryParams withNameNic(String nameNic) {
+        this.nameNic = nameNic;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name__nie")
+    public String nameNie;
+    public DcimInventoryItemsListQueryParams withNameNie(String nameNie) {
+        this.nameNie = nameNie;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name__niew")
+    public String nameNiew;
+    public DcimInventoryItemsListQueryParams withNameNiew(String nameNiew) {
+        this.nameNiew = nameNiew;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name__nisw")
+    public String nameNisw;
+    public DcimInventoryItemsListQueryParams withNameNisw(String nameNisw) {
+        this.nameNisw = nameNisw;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Long offset;
+    public DcimInventoryItemsListQueryParams withOffset(Long offset) {
+        this.offset = offset;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=parent_id")
+    public String parentId;
+    public DcimInventoryItemsListQueryParams withParentId(String parentId) {
+        this.parentId = parentId;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=parent_id__n")
+    public String parentIdN;
+    public DcimInventoryItemsListQueryParams withParentIdN(String parentIdN) {
+        this.parentIdN = parentIdN;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=part_id")
+    public String partId;
+    public DcimInventoryItemsListQueryParams withPartId(String partId) {
+        this.partId = partId;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=part_id__ic")
+    public String partIdIc;
+    public DcimInventoryItemsListQueryParams withPartIdIc(String partIdIc) {
+        this.partIdIc = partIdIc;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=part_id__ie")
+    public String partIdIe;
+    public DcimInventoryItemsListQueryParams withPartIdIe(String partIdIe) {
+        this.partIdIe = partIdIe;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=part_id__iew")
+    public String partIdIew;
+    public DcimInventoryItemsListQueryParams withPartIdIew(String partIdIew) {
+        this.partIdIew = partIdIew;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=part_id__isw")
+    public String partIdIsw;
+    public DcimInventoryItemsListQueryParams withPartIdIsw(String partIdIsw) {
+        this.partIdIsw = partIdIsw;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=part_id__n")
+    public String partIdN;
+    public DcimInventoryItemsListQueryParams withPartIdN(String partIdN) {
+        this.partIdN = partIdN;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=part_id__nic")
+    public String partIdNic;
+    public DcimInventoryItemsListQueryParams withPartIdNic(String partIdNic) {
+        this.partIdNic = partIdNic;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=part_id__nie")
+    public String partIdNie;
+    public DcimInventoryItemsListQueryParams withPartIdNie(String partIdNie) {
+        this.partIdNie = partIdNie;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=part_id__niew")
+    public String partIdNiew;
+    public DcimInventoryItemsListQueryParams withPartIdNiew(String partIdNiew) {
+        this.partIdNiew = partIdNiew;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=part_id__nisw")
+    public String partIdNisw;
+    public DcimInventoryItemsListQueryParams withPartIdNisw(String partIdNisw) {
+        this.partIdNisw = partIdNisw;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=q")
+    public String q;
+    public DcimInventoryItemsListQueryParams withQ(String q) {
+        this.q = q;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=region")
+    public String region;
+    public DcimInventoryItemsListQueryParams withRegion(String region) {
+        this.region = region;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=region__n")
+    public String regionN;
+    public DcimInventoryItemsListQueryParams withRegionN(String regionN) {
+        this.regionN = regionN;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=region_id")
+    public String regionId;
+    public DcimInventoryItemsListQueryParams withRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=region_id__n")
+    public String regionIdN;
+    public DcimInventoryItemsListQueryParams withRegionIdN(String regionIdN) {
+        this.regionIdN = regionIdN;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=serial")
+    public String serial;
+    public DcimInventoryItemsListQueryParams withSerial(String serial) {
+        this.serial = serial;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=site")
+    public String site;
+    public DcimInventoryItemsListQueryParams withSite(String site) {
+        this.site = site;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=site__n")
+    public String siteN;
+    public DcimInventoryItemsListQueryParams withSiteN(String siteN) {
+        this.siteN = siteN;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=site_id")
+    public String siteId;
+    public DcimInventoryItemsListQueryParams withSiteId(String siteId) {
+        this.siteId = siteId;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=site_id__n")
+    public String siteIdN;
+    public DcimInventoryItemsListQueryParams withSiteIdN(String siteIdN) {
+        this.siteIdN = siteIdN;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tag")
+    public String tag;
+    public DcimInventoryItemsListQueryParams withTag(String tag) {
+        this.tag = tag;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tag__n")
+    public String tagN;
+    public DcimInventoryItemsListQueryParams withTagN(String tagN) {
+        this.tagN = tagN;
+        return this;
+    }
+}

@@ -1,0 +1,22 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class Rule {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Parameters")
+    public java.util.Map<String, String> parameters;
+    public Rule withParameters(java.util.Map<String, String> parameters) {
+        this.parameters = parameters;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Type")
+    public RuleTypeEnum type;
+    public Rule withType(RuleTypeEnum type) {
+        this.type = type;
+        return this;
+    }
+}

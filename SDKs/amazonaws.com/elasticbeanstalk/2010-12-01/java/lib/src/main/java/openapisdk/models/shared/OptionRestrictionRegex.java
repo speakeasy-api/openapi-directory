@@ -1,0 +1,20 @@
+package openapisdk.models.shared;
+
+
+
+/**
+ * OptionRestrictionRegex
+ * A regular expression representing a restriction on a string configuration option value.
+**/
+public class OptionRestrictionRegex {
+    public String label;
+    public OptionRestrictionRegex withLabel(String label) {
+        this.label = label;
+        return this;
+    }
+    public String pattern;
+    public OptionRestrictionRegex withPattern(String pattern) {
+        this.pattern = pattern;
+        return this;
+    }
+}

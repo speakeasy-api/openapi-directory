@@ -1,0 +1,274 @@
+package openapisdk;
+
+import openapisdk.utils.HTTPClient;
+import openapisdk.utils.HTTPRequest;
+import java.net.http.HttpResponse;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import java.nio.charset.StandardCharsets;
+import openapisdk.utils.SerializedBody;
+import org.apache.http.NameValuePair;
+
+public class Creatives {
+	private HTTPClient _defaultClient;
+	private HTTPClient _securityClient;
+	private String _serverUrl;
+	private String _language;
+	private String _sdkVersion;
+	private String _genVersion;
+
+	public Creatives(HTTPClient defaultClient, HTTPClient securityClient, String serverUrl, String language, String sdkVersion, String genVersion) {
+		this._defaultClient = defaultClient;
+		this._securityClient = securityClient;
+		this._serverUrl = serverUrl;
+		this._language = language;
+		this._sdkVersion = sdkVersion;
+		this._genVersion = genVersion;
+	}
+	
+	
+    /**
+     * adexchangebuyerCreativesAddDeal - Add a deal id association for the creative.
+    **/
+    public openapisdk.models.operations.AdexchangebuyerCreativesAddDealResponse adexchangebuyerCreativesAddDeal(openapisdk.models.operations.AdexchangebuyerCreativesAddDealRequest request) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = openapisdk.utils.Utils.generateURL(baseUrl, "/creatives/{accountId}/{buyerCreativeId}/addDeal/{dealId}", request.pathParams);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("POST");
+        req.setURL(url);
+        
+        java.util.List<NameValuePair> queryParams = openapisdk.utils.Utils.getQueryParams(request.queryParams);
+        if (queryParams != null) {
+            for (NameValuePair queryParam : queryParams) {
+                req.addQueryParam(queryParam);
+            }
+        }
+        
+        HTTPClient client = openapisdk.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().allValues("Content-Type").get(0);
+
+        openapisdk.models.operations.AdexchangebuyerCreativesAddDealResponse res = new openapisdk.models.operations.AdexchangebuyerCreativesAddDealResponse() {{
+        }};
+        res.statusCode = Long.valueOf(httpRes.statusCode());
+        res.contentType = contentType;
+        
+        if (httpRes.statusCode() == 200) {
+        }
+
+        return res;
+    }
+	
+	
+    /**
+     * adexchangebuyerCreativesGet - Gets the status for a single creative. A creative will be available 30-40 minutes after submission.
+    **/
+    public openapisdk.models.operations.AdexchangebuyerCreativesGetResponse adexchangebuyerCreativesGet(openapisdk.models.operations.AdexchangebuyerCreativesGetRequest request) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = openapisdk.utils.Utils.generateURL(baseUrl, "/creatives/{accountId}/{buyerCreativeId}", request.pathParams);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("GET");
+        req.setURL(url);
+        
+        java.util.List<NameValuePair> queryParams = openapisdk.utils.Utils.getQueryParams(request.queryParams);
+        if (queryParams != null) {
+            for (NameValuePair queryParam : queryParams) {
+                req.addQueryParam(queryParam);
+            }
+        }
+        
+        HTTPClient client = openapisdk.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().allValues("Content-Type").get(0);
+
+        openapisdk.models.operations.AdexchangebuyerCreativesGetResponse res = new openapisdk.models.operations.AdexchangebuyerCreativesGetResponse() {{
+            creative = null;
+        }};
+        res.statusCode = Long.valueOf(httpRes.statusCode());
+        res.contentType = contentType;
+        
+        if (httpRes.statusCode() == 200) {
+            if (openapisdk.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = new ObjectMapper();
+                mapper.findAndRegisterModules();
+                openapisdk.models.shared.Creative out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), openapisdk.models.shared.Creative.class);
+                res.creative = out;
+            }
+        }
+
+        return res;
+    }
+	
+	
+    /**
+     * adexchangebuyerCreativesInsert - Submit a new creative.
+    **/
+    public openapisdk.models.operations.AdexchangebuyerCreativesInsertResponse adexchangebuyerCreativesInsert(openapisdk.models.operations.AdexchangebuyerCreativesInsertRequest request) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = openapisdk.utils.Utils.generateURL(baseUrl, "/creatives");
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("POST");
+        req.setURL(url);
+        SerializedBody serializedRequestBody = openapisdk.utils.Utils.serializeRequestBody(request);
+        req.setBody(serializedRequestBody);
+        
+        java.util.List<NameValuePair> queryParams = openapisdk.utils.Utils.getQueryParams(request.queryParams);
+        if (queryParams != null) {
+            for (NameValuePair queryParam : queryParams) {
+                req.addQueryParam(queryParam);
+            }
+        }
+        
+        HTTPClient client = openapisdk.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().allValues("Content-Type").get(0);
+
+        openapisdk.models.operations.AdexchangebuyerCreativesInsertResponse res = new openapisdk.models.operations.AdexchangebuyerCreativesInsertResponse() {{
+            creative = null;
+        }};
+        res.statusCode = Long.valueOf(httpRes.statusCode());
+        res.contentType = contentType;
+        
+        if (httpRes.statusCode() == 200) {
+            if (openapisdk.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = new ObjectMapper();
+                mapper.findAndRegisterModules();
+                openapisdk.models.shared.Creative out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), openapisdk.models.shared.Creative.class);
+                res.creative = out;
+            }
+        }
+
+        return res;
+    }
+	
+	
+    /**
+     * adexchangebuyerCreativesList - Retrieves a list of the authenticated user's active creatives. A creative will be available 30-40 minutes after submission.
+    **/
+    public openapisdk.models.operations.AdexchangebuyerCreativesListResponse adexchangebuyerCreativesList(openapisdk.models.operations.AdexchangebuyerCreativesListRequest request) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = openapisdk.utils.Utils.generateURL(baseUrl, "/creatives");
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("GET");
+        req.setURL(url);
+        
+        java.util.List<NameValuePair> queryParams = openapisdk.utils.Utils.getQueryParams(request.queryParams);
+        if (queryParams != null) {
+            for (NameValuePair queryParam : queryParams) {
+                req.addQueryParam(queryParam);
+            }
+        }
+        
+        HTTPClient client = openapisdk.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().allValues("Content-Type").get(0);
+
+        openapisdk.models.operations.AdexchangebuyerCreativesListResponse res = new openapisdk.models.operations.AdexchangebuyerCreativesListResponse() {{
+            creativesList = null;
+        }};
+        res.statusCode = Long.valueOf(httpRes.statusCode());
+        res.contentType = contentType;
+        
+        if (httpRes.statusCode() == 200) {
+            if (openapisdk.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = new ObjectMapper();
+                mapper.findAndRegisterModules();
+                openapisdk.models.shared.CreativesList out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), openapisdk.models.shared.CreativesList.class);
+                res.creativesList = out;
+            }
+        }
+
+        return res;
+    }
+	
+	
+    /**
+     * adexchangebuyerCreativesListDeals - Lists the external deal ids associated with the creative.
+    **/
+    public openapisdk.models.operations.AdexchangebuyerCreativesListDealsResponse adexchangebuyerCreativesListDeals(openapisdk.models.operations.AdexchangebuyerCreativesListDealsRequest request) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = openapisdk.utils.Utils.generateURL(baseUrl, "/creatives/{accountId}/{buyerCreativeId}/listDeals", request.pathParams);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("GET");
+        req.setURL(url);
+        
+        java.util.List<NameValuePair> queryParams = openapisdk.utils.Utils.getQueryParams(request.queryParams);
+        if (queryParams != null) {
+            for (NameValuePair queryParam : queryParams) {
+                req.addQueryParam(queryParam);
+            }
+        }
+        
+        HTTPClient client = openapisdk.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().allValues("Content-Type").get(0);
+
+        openapisdk.models.operations.AdexchangebuyerCreativesListDealsResponse res = new openapisdk.models.operations.AdexchangebuyerCreativesListDealsResponse() {{
+            creativeDealIds = null;
+        }};
+        res.statusCode = Long.valueOf(httpRes.statusCode());
+        res.contentType = contentType;
+        
+        if (httpRes.statusCode() == 200) {
+            if (openapisdk.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = new ObjectMapper();
+                mapper.findAndRegisterModules();
+                openapisdk.models.shared.CreativeDealIds out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), openapisdk.models.shared.CreativeDealIds.class);
+                res.creativeDealIds = out;
+            }
+        }
+
+        return res;
+    }
+	
+	
+    /**
+     * adexchangebuyerCreativesRemoveDeal - Remove a deal id associated with the creative.
+    **/
+    public openapisdk.models.operations.AdexchangebuyerCreativesRemoveDealResponse adexchangebuyerCreativesRemoveDeal(openapisdk.models.operations.AdexchangebuyerCreativesRemoveDealRequest request) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = openapisdk.utils.Utils.generateURL(baseUrl, "/creatives/{accountId}/{buyerCreativeId}/removeDeal/{dealId}", request.pathParams);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("POST");
+        req.setURL(url);
+        
+        java.util.List<NameValuePair> queryParams = openapisdk.utils.Utils.getQueryParams(request.queryParams);
+        if (queryParams != null) {
+            for (NameValuePair queryParam : queryParams) {
+                req.addQueryParam(queryParam);
+            }
+        }
+        
+        HTTPClient client = openapisdk.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().allValues("Content-Type").get(0);
+
+        openapisdk.models.operations.AdexchangebuyerCreativesRemoveDealResponse res = new openapisdk.models.operations.AdexchangebuyerCreativesRemoveDealResponse() {{
+        }};
+        res.statusCode = Long.valueOf(httpRes.statusCode());
+        res.contentType = contentType;
+        
+        if (httpRes.statusCode() == 200) {
+        }
+
+        return res;
+    }
+	
+}

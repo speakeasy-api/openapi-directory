@@ -1,0 +1,22 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class CreateStreamingImageRequest {
+    public CreateStreamingImagePathParams pathParams;
+    public CreateStreamingImageRequest withPathParams(CreateStreamingImagePathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public CreateStreamingImageHeaders headers;
+    public CreateStreamingImageRequest withHeaders(CreateStreamingImageHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public CreateStreamingImageRequestBody request;
+    public CreateStreamingImageRequest withRequest(CreateStreamingImageRequestBody request) {
+        this.request = request;
+        return this;
+    }
+}

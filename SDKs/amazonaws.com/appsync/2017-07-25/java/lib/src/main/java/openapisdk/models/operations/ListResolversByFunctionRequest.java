@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class ListResolversByFunctionRequest {
+    public ListResolversByFunctionPathParams pathParams;
+    public ListResolversByFunctionRequest withPathParams(ListResolversByFunctionPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public ListResolversByFunctionQueryParams queryParams;
+    public ListResolversByFunctionRequest withQueryParams(ListResolversByFunctionQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public ListResolversByFunctionHeaders headers;
+    public ListResolversByFunctionRequest withHeaders(ListResolversByFunctionHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+}

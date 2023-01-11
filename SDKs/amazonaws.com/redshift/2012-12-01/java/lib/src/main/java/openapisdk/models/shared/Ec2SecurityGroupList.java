@@ -1,0 +1,30 @@
+package openapisdk.models.shared;
+
+
+
+/**
+ * Ec2SecurityGroupList
+ * Describes an Amazon EC2 security group.
+**/
+public class Ec2SecurityGroupList {
+    public String ec2SecurityGroupName;
+    public Ec2SecurityGroupList withEc2SecurityGroupName(String ec2SecurityGroupName) {
+        this.ec2SecurityGroupName = ec2SecurityGroupName;
+        return this;
+    }
+    public String ec2SecurityGroupOwnerId;
+    public Ec2SecurityGroupList withEc2SecurityGroupOwnerId(String ec2SecurityGroupOwnerId) {
+        this.ec2SecurityGroupOwnerId = ec2SecurityGroupOwnerId;
+        return this;
+    }
+    public String status;
+    public Ec2SecurityGroupList withStatus(String status) {
+        this.status = status;
+        return this;
+    }
+    public TagList[] tags;
+    public Ec2SecurityGroupList withTags(TagList[] tags) {
+        this.tags = tags;
+        return this;
+    }
+}

@@ -1,0 +1,28 @@
+package openapisdk.models.shared;
+
+
+public enum ConstraintViolationConstraintTypeEnum {
+    MUST_BE_FALSE("MUST_BE_FALSE"),
+    MUST_BE_TRUE("MUST_BE_TRUE"),
+    MUST_BE_LESS_THAN("MUST_BE_LESS_THAN"),
+    MUST_BE_GREATER_THAN("MUST_BE_GREATER_THAN"),
+    DIGIT_OUT_OF_BOUNDS("DIGIT_OUT_OF_BOUNDS"),
+    DATE_MUST_BE_IN_THE_FUTURE("DATE_MUST_BE_IN_THE_FUTURE"),
+    MUST_BE_LESS_OR_EQUAL_THAN("MUST_BE_LESS_OR_EQUAL_THAN"),
+    MUST_BE_GREATER_OR_EQUAL_TO("MUST_BE_GREATER_OR_EQUAL_TO"),
+    MUST_NOT_BE_NULL("MUST_NOT_BE_NULL"),
+    MUST_BE_NULL("MUST_BE_NULL"),
+    DATE_MUST_BE_IN_THE_PAST("DATE_MUST_BE_IN_THE_PAST"),
+    MUST_MATCH_PATTERN("MUST_MATCH_PATTERN"),
+    INVALID_SIZE("INVALID_SIZE"),
+    INVALID_EMAIL("INVALID_EMAIL"),
+    MUST_NOT_BE_EMPTY("MUST_NOT_BE_EMPTY"),
+    INVALID_RANGE("INVALID_RANGE"),
+    UNKNOWN("UNKNOWN");
+
+    public final String value;
+
+    private ConstraintViolationConstraintTypeEnum(String value) {
+        this.value = value;
+    }
+}

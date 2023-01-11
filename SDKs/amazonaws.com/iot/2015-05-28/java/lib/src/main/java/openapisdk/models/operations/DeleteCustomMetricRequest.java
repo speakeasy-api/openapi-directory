@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class DeleteCustomMetricRequest {
+    public DeleteCustomMetricPathParams pathParams;
+    public DeleteCustomMetricRequest withPathParams(DeleteCustomMetricPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public DeleteCustomMetricHeaders headers;
+    public DeleteCustomMetricRequest withHeaders(DeleteCustomMetricHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+}

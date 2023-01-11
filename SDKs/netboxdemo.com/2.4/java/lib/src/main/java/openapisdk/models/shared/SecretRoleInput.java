@@ -1,0 +1,18 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+public class SecretRoleInput {
+    @JsonProperty("name")
+    public String name;
+    public SecretRoleInput withName(String name) {
+        this.name = name;
+        return this;
+    }
+    @JsonProperty("slug")
+    public String slug;
+    public SecretRoleInput withSlug(String slug) {
+        this.slug = slug;
+        return this;
+    }
+}

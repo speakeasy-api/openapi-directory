@@ -1,0 +1,25 @@
+package openapisdk.models.shared;
+
+
+public enum OnemandatesGetResponses200ContentApplication1jsonSchemaPropertiesMandatesItemsStatusEnum {
+    CREATED("CREATED"),
+    LIVE("LIVE"),
+    REJECT_REQUESTED("REJECT_REQUESTED"),
+    REJECT_RECORD_IN_PROGRESS("REJECT_RECORD_IN_PROGRESS"),
+    REJECT_RECORDED("REJECT_RECORDED"),
+    REJECT_FILE_CREATED("REJECT_FILE_CREATED"),
+    REJECT_FILE_SENT("REJECT_FILE_SENT"),
+    CANCEL_REQUESTED("CANCEL_REQUESTED"),
+    CANCEL_RECORD_IN_PROGRESS("CANCEL_RECORD_IN_PROGRESS"),
+    CANCEL_RECORDED("CANCEL_RECORDED"),
+    CANCEL_FILE_CREATED("CANCEL_FILE_CREATED"),
+    CANCEL_FILE_SENT("CANCEL_FILE_SENT"),
+    COMPLETE("COMPLETE"),
+    DORMANT("DORMANT");
+
+    public final String value;
+
+    private OnemandatesGetResponses200ContentApplication1jsonSchemaPropertiesMandatesItemsStatusEnum(String value) {
+        this.value = value;
+    }
+}

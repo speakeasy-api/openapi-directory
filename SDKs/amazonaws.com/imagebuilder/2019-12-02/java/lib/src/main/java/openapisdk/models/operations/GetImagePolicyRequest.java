@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class GetImagePolicyRequest {
+    public GetImagePolicyQueryParams queryParams;
+    public GetImagePolicyRequest withQueryParams(GetImagePolicyQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public GetImagePolicyHeaders headers;
+    public GetImagePolicyRequest withHeaders(GetImagePolicyHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+}

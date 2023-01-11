@@ -1,0 +1,27 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class MessagesAddRequest {
+    public MessagesAddQueryParams queryParams;
+    public MessagesAddRequest withQueryParams(MessagesAddQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public MessagesAddHeaders headers;
+    public MessagesAddRequest withHeaders(MessagesAddHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public openapisdk.models.shared.MessageInput request;
+    public MessagesAddRequest withRequest(openapisdk.models.shared.MessageInput request) {
+        this.request = request;
+        return this;
+    }
+    public MessagesAddSecurity security;
+    public MessagesAddRequest withSecurity(MessagesAddSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class GetHostedPagesRequest {
+    public GetHostedPagesQueryParams queryParams;
+    public GetHostedPagesRequest withQueryParams(GetHostedPagesQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public GetHostedPagesHeaders headers;
+    public GetHostedPagesRequest withHeaders(GetHostedPagesHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+}

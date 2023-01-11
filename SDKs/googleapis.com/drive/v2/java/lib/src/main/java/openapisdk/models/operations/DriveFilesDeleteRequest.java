@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class DriveFilesDeleteRequest {
+    public DriveFilesDeletePathParams pathParams;
+    public DriveFilesDeleteRequest withPathParams(DriveFilesDeletePathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public DriveFilesDeleteQueryParams queryParams;
+    public DriveFilesDeleteRequest withQueryParams(DriveFilesDeleteQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public DriveFilesDeleteSecurity security;
+    public DriveFilesDeleteRequest withSecurity(DriveFilesDeleteSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

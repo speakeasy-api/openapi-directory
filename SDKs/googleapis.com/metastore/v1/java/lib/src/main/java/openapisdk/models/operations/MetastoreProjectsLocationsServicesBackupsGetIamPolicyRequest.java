@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class MetastoreProjectsLocationsServicesBackupsGetIamPolicyRequest {
+    public MetastoreProjectsLocationsServicesBackupsGetIamPolicyPathParams pathParams;
+    public MetastoreProjectsLocationsServicesBackupsGetIamPolicyRequest withPathParams(MetastoreProjectsLocationsServicesBackupsGetIamPolicyPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public MetastoreProjectsLocationsServicesBackupsGetIamPolicyQueryParams queryParams;
+    public MetastoreProjectsLocationsServicesBackupsGetIamPolicyRequest withQueryParams(MetastoreProjectsLocationsServicesBackupsGetIamPolicyQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public MetastoreProjectsLocationsServicesBackupsGetIamPolicySecurity security;
+    public MetastoreProjectsLocationsServicesBackupsGetIamPolicyRequest withSecurity(MetastoreProjectsLocationsServicesBackupsGetIamPolicySecurity security) {
+        this.security = security;
+        return this;
+    }
+}

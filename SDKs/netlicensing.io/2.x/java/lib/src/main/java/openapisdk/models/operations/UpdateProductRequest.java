@@ -1,0 +1,22 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class UpdateProductRequest {
+    public UpdateProductPathParams pathParams;
+    public UpdateProductRequest withPathParams(UpdateProductPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
+    public UpdateProductRequestBody request;
+    public UpdateProductRequest withRequest(UpdateProductRequestBody request) {
+        this.request = request;
+        return this;
+    }
+    public UpdateProductSecurity security;
+    public UpdateProductRequest withSecurity(UpdateProductSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

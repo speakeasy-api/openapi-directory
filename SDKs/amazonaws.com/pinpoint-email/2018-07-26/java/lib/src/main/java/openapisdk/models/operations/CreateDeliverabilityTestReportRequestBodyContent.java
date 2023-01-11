@@ -1,0 +1,33 @@
+package openapisdk.models.operations;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * CreateDeliverabilityTestReportRequestBodyContent
+ * An object that defines the entire content of the email, including the message headers and the body content. You can create a simple email message, in which you specify the subject and the text and HTML versions of the message body. You can also create raw messages, in which you specify a complete MIME-formatted message. Raw messages can include attachments and custom headers.
+**/
+public class CreateDeliverabilityTestReportRequestBodyContent {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Raw")
+    public openapisdk.models.shared.RawMessage raw;
+    public CreateDeliverabilityTestReportRequestBodyContent withRaw(openapisdk.models.shared.RawMessage raw) {
+        this.raw = raw;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Simple")
+    public openapisdk.models.shared.Message simple;
+    public CreateDeliverabilityTestReportRequestBodyContent withSimple(openapisdk.models.shared.Message simple) {
+        this.simple = simple;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Template")
+    public openapisdk.models.shared.Template template;
+    public CreateDeliverabilityTestReportRequestBodyContent withTemplate(openapisdk.models.shared.Template template) {
+        this.template = template;
+        return this;
+    }
+}

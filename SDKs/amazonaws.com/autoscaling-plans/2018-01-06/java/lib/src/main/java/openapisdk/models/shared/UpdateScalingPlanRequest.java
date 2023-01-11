@@ -1,0 +1,34 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class UpdateScalingPlanRequest {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ApplicationSource")
+    public ApplicationSource applicationSource;
+    public UpdateScalingPlanRequest withApplicationSource(ApplicationSource applicationSource) {
+        this.applicationSource = applicationSource;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ScalingInstructions")
+    public ScalingInstruction[] scalingInstructions;
+    public UpdateScalingPlanRequest withScalingInstructions(ScalingInstruction[] scalingInstructions) {
+        this.scalingInstructions = scalingInstructions;
+        return this;
+    }
+    @JsonProperty("ScalingPlanName")
+    public String scalingPlanName;
+    public UpdateScalingPlanRequest withScalingPlanName(String scalingPlanName) {
+        this.scalingPlanName = scalingPlanName;
+        return this;
+    }
+    @JsonProperty("ScalingPlanVersion")
+    public Long scalingPlanVersion;
+    public UpdateScalingPlanRequest withScalingPlanVersion(Long scalingPlanVersion) {
+        this.scalingPlanVersion = scalingPlanVersion;
+        return this;
+    }
+}

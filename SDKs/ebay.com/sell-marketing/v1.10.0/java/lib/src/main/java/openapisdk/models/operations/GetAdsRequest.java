@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class GetAdsRequest {
+    public GetAdsPathParams pathParams;
+    public GetAdsRequest withPathParams(GetAdsPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public GetAdsQueryParams queryParams;
+    public GetAdsRequest withQueryParams(GetAdsQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public GetAdsSecurity security;
+    public GetAdsRequest withSecurity(GetAdsSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

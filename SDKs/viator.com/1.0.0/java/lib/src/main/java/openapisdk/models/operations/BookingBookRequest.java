@@ -1,0 +1,17 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class BookingBookRequest {
+    public BookingBookHeaders headers;
+    public BookingBookRequest withHeaders(BookingBookHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public BookingBookRequestBody request;
+    public BookingBookRequest withRequest(BookingBookRequestBody request) {
+        this.request = request;
+        return this;
+    }
+}

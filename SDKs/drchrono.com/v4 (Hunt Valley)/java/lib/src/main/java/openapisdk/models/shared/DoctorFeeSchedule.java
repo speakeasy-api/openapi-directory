@@ -1,0 +1,176 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class DoctorFeeSchedule {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("allowed_amount")
+    public Double allowedAmount;
+    public DoctorFeeSchedule withAllowedAmount(Double allowedAmount) {
+        this.allowedAmount = allowedAmount;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("base_price")
+    public Double basePrice;
+    public DoctorFeeSchedule withBasePrice(Double basePrice) {
+        this.basePrice = basePrice;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("billing_description")
+    public String billingDescription;
+    public DoctorFeeSchedule withBillingDescription(String billingDescription) {
+        this.billingDescription = billingDescription;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("cash_price")
+    public Double cashPrice;
+    public DoctorFeeSchedule withCashPrice(Double cashPrice) {
+        this.cashPrice = cashPrice;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("code")
+    public String code;
+    public DoctorFeeSchedule withCode(String code) {
+        this.code = code;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("code_type")
+    public DoctorFeeScheduleCodeTypeEnum codeType;
+    public DoctorFeeSchedule withCodeType(DoctorFeeScheduleCodeTypeEnum codeType) {
+        this.codeType = codeType;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("cpt_hcpcs_modifier1")
+    public String cptHcpcsModifier1;
+    public DoctorFeeSchedule withCptHcpcsModifier1(String cptHcpcsModifier1) {
+        this.cptHcpcsModifier1 = cptHcpcsModifier1;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("cpt_hcpcs_modifier2")
+    public DoctorFeeScheduleCptHcpcsModifierNumber2Enum cptHcpcsModifier2;
+    public DoctorFeeSchedule withCptHcpcsModifier2(DoctorFeeScheduleCptHcpcsModifierNumber2Enum cptHcpcsModifier2) {
+        this.cptHcpcsModifier2 = cptHcpcsModifier2;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("cpt_hcpcs_modifier3")
+    public DoctorFeeScheduleCptHcpcsModifierNumber3Enum cptHcpcsModifier3;
+    public DoctorFeeSchedule withCptHcpcsModifier3(DoctorFeeScheduleCptHcpcsModifierNumber3Enum cptHcpcsModifier3) {
+        this.cptHcpcsModifier3 = cptHcpcsModifier3;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("cpt_hcpcs_modifier4")
+    public DoctorFeeScheduleCptHcpcsModifierNumber4Enum cptHcpcsModifier4;
+    public DoctorFeeSchedule withCptHcpcsModifier4(DoctorFeeScheduleCptHcpcsModifierNumber4Enum cptHcpcsModifier4) {
+        this.cptHcpcsModifier4 = cptHcpcsModifier4;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("created_at")
+    public String createdAt;
+    public DoctorFeeSchedule withCreatedAt(String createdAt) {
+        this.createdAt = createdAt;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("description")
+    public String description;
+    public DoctorFeeSchedule withDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("doctor")
+    public Long doctor;
+    public DoctorFeeSchedule withDoctor(Long doctor) {
+        this.doctor = doctor;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("id")
+    public Long id;
+    public DoctorFeeSchedule withId(Long id) {
+        this.id = id;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("insured_out_of_network_price")
+    public Double insuredOutOfNetworkPrice;
+    public DoctorFeeSchedule withInsuredOutOfNetworkPrice(Double insuredOutOfNetworkPrice) {
+        this.insuredOutOfNetworkPrice = insuredOutOfNetworkPrice;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("insured_price")
+    public Double insuredPrice;
+    public DoctorFeeSchedule withInsuredPrice(Double insuredPrice) {
+        this.insuredPrice = insuredPrice;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ndc_code")
+    public String ndcCode;
+    public DoctorFeeSchedule withNdcCode(String ndcCode) {
+        this.ndcCode = ndcCode;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ndc_quantity")
+    public Double ndcQuantity;
+    public DoctorFeeSchedule withNdcQuantity(Double ndcQuantity) {
+        this.ndcQuantity = ndcQuantity;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ndc_units")
+    public DoctorFeeScheduleNdcUnitsEnum ndcUnits;
+    public DoctorFeeSchedule withNdcUnits(DoctorFeeScheduleNdcUnitsEnum ndcUnits) {
+        this.ndcUnits = ndcUnits;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("office")
+    public Long office;
+    public DoctorFeeSchedule withOffice(Long office) {
+        this.office = office;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("payer_id")
+    public String payerId;
+    public DoctorFeeSchedule withPayerId(String payerId) {
+        this.payerId = payerId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("picklist_category")
+    public String picklistCategory;
+    public DoctorFeeSchedule withPicklistCategory(String picklistCategory) {
+        this.picklistCategory = picklistCategory;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("plan_name")
+    public String planName;
+    public DoctorFeeSchedule withPlanName(String planName) {
+        this.planName = planName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("updated_at")
+    public String updatedAt;
+    public DoctorFeeSchedule withUpdatedAt(String updatedAt) {
+        this.updatedAt = updatedAt;
+        return this;
+    }
+}

@@ -1,0 +1,27 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class ListTrackerConsumersRequest {
+    public ListTrackerConsumersPathParams pathParams;
+    public ListTrackerConsumersRequest withPathParams(ListTrackerConsumersPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public ListTrackerConsumersQueryParams queryParams;
+    public ListTrackerConsumersRequest withQueryParams(ListTrackerConsumersQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public ListTrackerConsumersHeaders headers;
+    public ListTrackerConsumersRequest withHeaders(ListTrackerConsumersHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public ListTrackerConsumersRequestBody request;
+    public ListTrackerConsumersRequest withRequest(ListTrackerConsumersRequestBody request) {
+        this.request = request;
+        return this;
+    }
+}

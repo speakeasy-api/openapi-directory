@@ -1,0 +1,47 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * VoiceMessage
+ * Specifies the settings for a one-time voice message that's sent directly to an endpoint through the voice channel.
+**/
+public class VoiceMessage {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Body")
+    public String body;
+    public VoiceMessage withBody(String body) {
+        this.body = body;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("LanguageCode")
+    public String languageCode;
+    public VoiceMessage withLanguageCode(String languageCode) {
+        this.languageCode = languageCode;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("OriginationNumber")
+    public String originationNumber;
+    public VoiceMessage withOriginationNumber(String originationNumber) {
+        this.originationNumber = originationNumber;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Substitutions")
+    public java.util.Map<String, String[]> substitutions;
+    public VoiceMessage withSubstitutions(java.util.Map<String, String[]> substitutions) {
+        this.substitutions = substitutions;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("VoiceId")
+    public String voiceId;
+    public VoiceMessage withVoiceId(String voiceId) {
+        this.voiceId = voiceId;
+        return this;
+    }
+}

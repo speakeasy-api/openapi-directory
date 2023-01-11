@@ -1,0 +1,24 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class AppengineProjectsLocationsOperationsListSecurity {
+    @SpeakeasyMetadata("security:option=true")
+    public AppengineProjectsLocationsOperationsListSecurityOption1 option1;
+    public AppengineProjectsLocationsOperationsListSecurity withOption1(AppengineProjectsLocationsOperationsListSecurityOption1 option1) {
+        this.option1 = option1;
+        return this;
+    }
+    @SpeakeasyMetadata("security:option=true")
+    public AppengineProjectsLocationsOperationsListSecurityOption2 option2;
+    public AppengineProjectsLocationsOperationsListSecurity withOption2(AppengineProjectsLocationsOperationsListSecurityOption2 option2) {
+        this.option2 = option2;
+        return this;
+    }
+    @SpeakeasyMetadata("security:option=true")
+    public AppengineProjectsLocationsOperationsListSecurityOption3 option3;
+    public AppengineProjectsLocationsOperationsListSecurity withOption3(AppengineProjectsLocationsOperationsListSecurityOption3 option3) {
+        this.option3 = option3;
+        return this;
+    }
+}

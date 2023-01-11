@@ -1,0 +1,63 @@
+package openapisdk.models.shared;
+
+import java.time.OffsetDateTime;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import openapisdk.utils.DateTimeSerializer;
+import openapisdk.utils.DateTimeDeserializer;
+
+/**
+ * FeatureTransformation
+ * Provides feature transformation information. Feature transformation is the process of modifying raw input data into a form more suitable for model training.
+**/
+public class FeatureTransformation {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonSerialize(contentUsing = DateTimeSerializer.class)
+    @JsonDeserialize(contentUsing = DateTimeDeserializer.class)
+    @JsonProperty("creationDateTime")
+    public OffsetDateTime creationDateTime;
+    public FeatureTransformation withCreationDateTime(OffsetDateTime creationDateTime) {
+        this.creationDateTime = creationDateTime;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("defaultParameters")
+    public java.util.Map<String, String> defaultParameters;
+    public FeatureTransformation withDefaultParameters(java.util.Map<String, String> defaultParameters) {
+        this.defaultParameters = defaultParameters;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("featureTransformationArn")
+    public String featureTransformationArn;
+    public FeatureTransformation withFeatureTransformationArn(String featureTransformationArn) {
+        this.featureTransformationArn = featureTransformationArn;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonSerialize(contentUsing = DateTimeSerializer.class)
+    @JsonDeserialize(contentUsing = DateTimeDeserializer.class)
+    @JsonProperty("lastUpdatedDateTime")
+    public OffsetDateTime lastUpdatedDateTime;
+    public FeatureTransformation withLastUpdatedDateTime(OffsetDateTime lastUpdatedDateTime) {
+        this.lastUpdatedDateTime = lastUpdatedDateTime;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("name")
+    public String name;
+    public FeatureTransformation withName(String name) {
+        this.name = name;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("status")
+    public String status;
+    public FeatureTransformation withStatus(String status) {
+        this.status = status;
+        return this;
+    }
+}

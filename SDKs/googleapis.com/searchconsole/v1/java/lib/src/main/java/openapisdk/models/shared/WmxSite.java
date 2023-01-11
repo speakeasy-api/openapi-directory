@@ -1,0 +1,26 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * WmxSite
+ * Contains permission level information about a Search Console site. For more information, see [Permissions in Search Console](https://support.google.com/webmasters/answer/2451999).
+**/
+public class WmxSite {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("permissionLevel")
+    public WmxSitePermissionLevelEnum permissionLevel;
+    public WmxSite withPermissionLevel(WmxSitePermissionLevelEnum permissionLevel) {
+        this.permissionLevel = permissionLevel;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("siteUrl")
+    public String siteUrl;
+    public WmxSite withSiteUrl(String siteUrl) {
+        this.siteUrl = siteUrl;
+        return this;
+    }
+}

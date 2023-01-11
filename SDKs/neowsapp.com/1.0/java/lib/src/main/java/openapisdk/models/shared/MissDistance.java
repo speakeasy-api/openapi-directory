@@ -1,0 +1,36 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class MissDistance {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("astronomical")
+    public String astronomical;
+    public MissDistance withAstronomical(String astronomical) {
+        this.astronomical = astronomical;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("kilometers")
+    public String kilometers;
+    public MissDistance withKilometers(String kilometers) {
+        this.kilometers = kilometers;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("lunar")
+    public String lunar;
+    public MissDistance withLunar(String lunar) {
+        this.lunar = lunar;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("miles")
+    public String miles;
+    public MissDistance withMiles(String miles) {
+        this.miles = miles;
+        return this;
+    }
+}

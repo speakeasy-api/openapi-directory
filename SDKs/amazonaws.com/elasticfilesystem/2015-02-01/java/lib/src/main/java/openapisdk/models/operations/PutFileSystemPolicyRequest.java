@@ -1,0 +1,22 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class PutFileSystemPolicyRequest {
+    public PutFileSystemPolicyPathParams pathParams;
+    public PutFileSystemPolicyRequest withPathParams(PutFileSystemPolicyPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public PutFileSystemPolicyHeaders headers;
+    public PutFileSystemPolicyRequest withHeaders(PutFileSystemPolicyHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public PutFileSystemPolicyRequestBody request;
+    public PutFileSystemPolicyRequest withRequest(PutFileSystemPolicyRequestBody request) {
+        this.request = request;
+        return this;
+    }
+}

@@ -1,0 +1,33 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * ApprovalRuleEventMetadata
+ * Returns information about an event for an approval rule.
+**/
+public class ApprovalRuleEventMetadata {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("approvalRuleContent")
+    public String approvalRuleContent;
+    public ApprovalRuleEventMetadata withApprovalRuleContent(String approvalRuleContent) {
+        this.approvalRuleContent = approvalRuleContent;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("approvalRuleId")
+    public String approvalRuleId;
+    public ApprovalRuleEventMetadata withApprovalRuleId(String approvalRuleId) {
+        this.approvalRuleId = approvalRuleId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("approvalRuleName")
+    public String approvalRuleName;
+    public ApprovalRuleEventMetadata withApprovalRuleName(String approvalRuleName) {
+        this.approvalRuleName = approvalRuleName;
+        return this;
+    }
+}

@@ -1,0 +1,40 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * SubResourceSummary
+ * The attack information for the specified SubResource.
+**/
+public class SubResourceSummary {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("AttackVectors")
+    public SummarizedAttackVector[] attackVectors;
+    public SubResourceSummary withAttackVectors(SummarizedAttackVector[] attackVectors) {
+        this.attackVectors = attackVectors;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Counters")
+    public SummarizedCounter[] counters;
+    public SubResourceSummary withCounters(SummarizedCounter[] counters) {
+        this.counters = counters;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Id")
+    public String id;
+    public SubResourceSummary withId(String id) {
+        this.id = id;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Type")
+    public SubResourceTypeEnum type;
+    public SubResourceSummary withType(SubResourceTypeEnum type) {
+        this.type = type;
+        return this;
+    }
+}

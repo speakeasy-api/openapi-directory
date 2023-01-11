@@ -1,0 +1,47 @@
+<!-- Start SDK Example Usage -->
+```java
+package hello.world;
+
+import openapisdk.SDK;
+import openapisdk.models.shared.Security;
+
+public class Application {
+    public static void main(String[] args) {
+        try {
+            SDK.Builder builder = SDK.builder();
+
+            SDK sdk = builder.build();
+
+            HscerRequest req = new HscerRequest() {{
+                security = new HscerSecurity() {{
+                    apiKey = new SchemeApiKey() {{
+                        apiKey = "YOUR_API_KEY_HERE";
+                    }};
+                    clientId = new SchemeClientId() {{
+                        apiKey = "YOUR_API_KEY_HERE";
+                    }};
+                }};
+                request = new HscerRequestBody() {{
+                    certificateParameters = new HscerRequestBodyCertificateParameters() {{
+                        dob = "aliquid";
+                        fullName = "accusamus";
+                        rroll = "culpa";
+                        uid = "consequatur";
+                        year = "animi";
+                    }};
+                    consentArtifact = "minima";
+                    format = "pdf";
+                    txnId = "dicta";
+                }};
+            }};
+
+            HscerResponse res = sdk.apIs.hscer(req);
+
+            if (res.statusCode == 200) {
+                // handle response
+            }
+        } catch (Exception e) {
+            // handle exception
+        }
+```
+<!-- End SDK Example Usage -->

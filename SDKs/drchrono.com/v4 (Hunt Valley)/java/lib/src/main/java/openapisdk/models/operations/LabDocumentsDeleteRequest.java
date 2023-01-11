@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class LabDocumentsDeleteRequest {
+    public LabDocumentsDeletePathParams pathParams;
+    public LabDocumentsDeleteRequest withPathParams(LabDocumentsDeletePathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public LabDocumentsDeleteQueryParams queryParams;
+    public LabDocumentsDeleteRequest withQueryParams(LabDocumentsDeleteQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public LabDocumentsDeleteSecurity security;
+    public LabDocumentsDeleteRequest withSecurity(LabDocumentsDeleteSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

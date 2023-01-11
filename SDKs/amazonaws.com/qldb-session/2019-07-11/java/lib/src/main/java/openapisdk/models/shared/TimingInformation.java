@@ -1,0 +1,19 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * TimingInformation
+ * Contains server-side performance information for a command. Amazon QLDB captures timing information between the times when it receives the request and when it sends the corresponding response.
+**/
+public class TimingInformation {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ProcessingTimeMilliseconds")
+    public Long processingTimeMilliseconds;
+    public TimingInformation withProcessingTimeMilliseconds(Long processingTimeMilliseconds) {
+        this.processingTimeMilliseconds = processingTimeMilliseconds;
+        return this;
+    }
+}

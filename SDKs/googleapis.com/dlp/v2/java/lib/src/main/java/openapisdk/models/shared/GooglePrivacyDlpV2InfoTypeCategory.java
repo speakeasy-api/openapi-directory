@@ -1,0 +1,33 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * GooglePrivacyDlpV2InfoTypeCategory
+ * Classification of infoTypes to organize them according to geographic location, industry, and data type.
+**/
+public class GooglePrivacyDlpV2InfoTypeCategory {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("industryCategory")
+    public GooglePrivacyDlpV2InfoTypeCategoryIndustryCategoryEnum industryCategory;
+    public GooglePrivacyDlpV2InfoTypeCategory withIndustryCategory(GooglePrivacyDlpV2InfoTypeCategoryIndustryCategoryEnum industryCategory) {
+        this.industryCategory = industryCategory;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("locationCategory")
+    public GooglePrivacyDlpV2InfoTypeCategoryLocationCategoryEnum locationCategory;
+    public GooglePrivacyDlpV2InfoTypeCategory withLocationCategory(GooglePrivacyDlpV2InfoTypeCategoryLocationCategoryEnum locationCategory) {
+        this.locationCategory = locationCategory;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("typeCategory")
+    public GooglePrivacyDlpV2InfoTypeCategoryTypeCategoryEnum typeCategory;
+    public GooglePrivacyDlpV2InfoTypeCategory withTypeCategory(GooglePrivacyDlpV2InfoTypeCategoryTypeCategoryEnum typeCategory) {
+        this.typeCategory = typeCategory;
+        return this;
+    }
+}

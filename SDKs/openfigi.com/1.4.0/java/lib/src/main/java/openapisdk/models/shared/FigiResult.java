@@ -1,0 +1,85 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class FigiResult {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("compositeFIGI")
+    public String compositeFIGI;
+    public FigiResult withCompositeFigi(String compositeFIGI) {
+        this.compositeFIGI = compositeFIGI;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("exchCode")
+    public String exchCode;
+    public FigiResult withExchCode(String exchCode) {
+        this.exchCode = exchCode;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("figi")
+    public String figi;
+    public FigiResult withFigi(String figi) {
+        this.figi = figi;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("marketSector")
+    public String marketSector;
+    public FigiResult withMarketSector(String marketSector) {
+        this.marketSector = marketSector;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("metadata")
+    public String metadata;
+    public FigiResult withMetadata(String metadata) {
+        this.metadata = metadata;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("name")
+    public String name;
+    public FigiResult withName(String name) {
+        this.name = name;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("securityDescription")
+    public String securityDescription;
+    public FigiResult withSecurityDescription(String securityDescription) {
+        this.securityDescription = securityDescription;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("securityType")
+    public String securityType;
+    public FigiResult withSecurityType(String securityType) {
+        this.securityType = securityType;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("securityType2")
+    public String securityType2;
+    public FigiResult withSecurityType2(String securityType2) {
+        this.securityType2 = securityType2;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("shareClassFIGI")
+    public String shareClassFIGI;
+    public FigiResult withShareClassFigi(String shareClassFIGI) {
+        this.shareClassFIGI = shareClassFIGI;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ticker")
+    public String ticker;
+    public FigiResult withTicker(String ticker) {
+        this.ticker = ticker;
+        return this;
+    }
+}

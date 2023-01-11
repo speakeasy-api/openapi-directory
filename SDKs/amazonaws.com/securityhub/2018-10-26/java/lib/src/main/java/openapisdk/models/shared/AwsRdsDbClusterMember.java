@@ -1,0 +1,40 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * AwsRdsDbClusterMember
+ * Information about an instance in the DB cluster.
+**/
+public class AwsRdsDbClusterMember {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("DbClusterParameterGroupStatus")
+    public String dbClusterParameterGroupStatus;
+    public AwsRdsDbClusterMember withDbClusterParameterGroupStatus(String dbClusterParameterGroupStatus) {
+        this.dbClusterParameterGroupStatus = dbClusterParameterGroupStatus;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("DbInstanceIdentifier")
+    public String dbInstanceIdentifier;
+    public AwsRdsDbClusterMember withDbInstanceIdentifier(String dbInstanceIdentifier) {
+        this.dbInstanceIdentifier = dbInstanceIdentifier;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("IsClusterWriter")
+    public Boolean isClusterWriter;
+    public AwsRdsDbClusterMember withIsClusterWriter(Boolean isClusterWriter) {
+        this.isClusterWriter = isClusterWriter;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("PromotionTier")
+    public Long promotionTier;
+    public AwsRdsDbClusterMember withPromotionTier(Long promotionTier) {
+        this.promotionTier = promotionTier;
+        return this;
+    }
+}

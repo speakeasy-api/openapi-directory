@@ -1,0 +1,30 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+public class KeyMaterial {
+    @JsonProperty("cryptoAlg")
+    public String cryptoAlg;
+    public KeyMaterial withCryptoAlg(String cryptoAlg) {
+        this.cryptoAlg = cryptoAlg;
+        return this;
+    }
+    @JsonProperty("curve")
+    public String curve;
+    public KeyMaterial withCurve(String curve) {
+        this.curve = curve;
+        return this;
+    }
+    @JsonProperty("dhPublicKey")
+    public KeyObject dhPublicKey;
+    public KeyMaterial withDhPublicKey(KeyObject dhPublicKey) {
+        this.dhPublicKey = dhPublicKey;
+        return this;
+    }
+    @JsonProperty("nonce")
+    public String nonce;
+    public KeyMaterial withNonce(String nonce) {
+        this.nonce = nonce;
+        return this;
+    }
+}

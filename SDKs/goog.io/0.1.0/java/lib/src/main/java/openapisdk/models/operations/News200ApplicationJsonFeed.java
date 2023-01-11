@@ -1,0 +1,106 @@
+package openapisdk.models.operations;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class News200ApplicationJsonFeed {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("generator")
+    public String generator;
+    public News200ApplicationJsonFeed withGenerator(String generator) {
+        this.generator = generator;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("generator_detail")
+    public String generatorDetail;
+    public News200ApplicationJsonFeed withGeneratorDetail(String generatorDetail) {
+        this.generatorDetail = generatorDetail;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("language")
+    public String language;
+    public News200ApplicationJsonFeed withLanguage(String language) {
+        this.language = language;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("link")
+    public String link;
+    public News200ApplicationJsonFeed withLink(String link) {
+        this.link = link;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("links")
+    public String links;
+    public News200ApplicationJsonFeed withLinks(String links) {
+        this.links = links;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("publisher")
+    public String publisher;
+    public News200ApplicationJsonFeed withPublisher(String publisher) {
+        this.publisher = publisher;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("publisher_detail")
+    public String publisherDetail;
+    public News200ApplicationJsonFeed withPublisherDetail(String publisherDetail) {
+        this.publisherDetail = publisherDetail;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("rights")
+    public String rights;
+    public News200ApplicationJsonFeed withRights(String rights) {
+        this.rights = rights;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("rights_detail")
+    public String rightsDetail;
+    public News200ApplicationJsonFeed withRightsDetail(String rightsDetail) {
+        this.rightsDetail = rightsDetail;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("subtitle")
+    public String subtitle;
+    public News200ApplicationJsonFeed withSubtitle(String subtitle) {
+        this.subtitle = subtitle;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("subtitle_detail")
+    public String subtitleDetail;
+    public News200ApplicationJsonFeed withSubtitleDetail(String subtitleDetail) {
+        this.subtitleDetail = subtitleDetail;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("title")
+    public String title;
+    public News200ApplicationJsonFeed withTitle(String title) {
+        this.title = title;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("updated")
+    public String updated;
+    public News200ApplicationJsonFeed withUpdated(String updated) {
+        this.updated = updated;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("updated_parsed")
+    public String updatedParsed;
+    public News200ApplicationJsonFeed withUpdatedParsed(String updatedParsed) {
+        this.updatedParsed = updatedParsed;
+        return this;
+    }
+}

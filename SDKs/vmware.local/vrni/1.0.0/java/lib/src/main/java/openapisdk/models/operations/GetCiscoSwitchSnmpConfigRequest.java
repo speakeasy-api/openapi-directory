@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class GetCiscoSwitchSnmpConfigRequest {
+    public GetCiscoSwitchSnmpConfigPathParams pathParams;
+    public GetCiscoSwitchSnmpConfigRequest withPathParams(GetCiscoSwitchSnmpConfigPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public GetCiscoSwitchSnmpConfigSecurity security;
+    public GetCiscoSwitchSnmpConfigRequest withSecurity(GetCiscoSwitchSnmpConfigSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

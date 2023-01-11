@@ -1,0 +1,22 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+/**
+ * PutRepositoryTriggersInput
+ * Represents the input of a put repository triggers operation.
+**/
+public class PutRepositoryTriggersInput {
+    @JsonProperty("repositoryName")
+    public String repositoryName;
+    public PutRepositoryTriggersInput withRepositoryName(String repositoryName) {
+        this.repositoryName = repositoryName;
+        return this;
+    }
+    @JsonProperty("triggers")
+    public RepositoryTrigger[] triggers;
+    public PutRepositoryTriggersInput withTriggers(RepositoryTrigger[] triggers) {
+        this.triggers = triggers;
+        return this;
+    }
+}

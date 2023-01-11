@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class ListFieldLevelEncryptionProfiles20200531Request {
+    public ListFieldLevelEncryptionProfiles20200531QueryParams queryParams;
+    public ListFieldLevelEncryptionProfiles20200531Request withQueryParams(ListFieldLevelEncryptionProfiles20200531QueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public ListFieldLevelEncryptionProfiles20200531Headers headers;
+    public ListFieldLevelEncryptionProfiles20200531Request withHeaders(ListFieldLevelEncryptionProfiles20200531Headers headers) {
+        this.headers = headers;
+        return this;
+    }
+}

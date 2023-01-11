@@ -1,0 +1,16 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+/**
+ * GroupIdentity
+ * Contains information for a group identity in an access policy.
+**/
+public class GroupIdentity {
+    @JsonProperty("id")
+    public String id;
+    public GroupIdentity withId(String id) {
+        this.id = id;
+        return this;
+    }
+}

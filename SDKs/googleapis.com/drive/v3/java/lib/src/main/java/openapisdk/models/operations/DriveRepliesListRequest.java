@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class DriveRepliesListRequest {
+    public DriveRepliesListPathParams pathParams;
+    public DriveRepliesListRequest withPathParams(DriveRepliesListPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public DriveRepliesListQueryParams queryParams;
+    public DriveRepliesListRequest withQueryParams(DriveRepliesListQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public DriveRepliesListSecurity security;
+    public DriveRepliesListRequest withSecurity(DriveRepliesListSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

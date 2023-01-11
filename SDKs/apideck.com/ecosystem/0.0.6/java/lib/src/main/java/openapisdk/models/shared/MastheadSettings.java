@@ -1,0 +1,50 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class MastheadSettings {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("background")
+    public String background;
+    public MastheadSettings withBackground(String background) {
+        this.background = background;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("background_color")
+    public String backgroundColor;
+    public MastheadSettings withBackgroundColor(String backgroundColor) {
+        this.backgroundColor = backgroundColor;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("color")
+    public String color;
+    public MastheadSettings withColor(String color) {
+        this.color = color;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("columns")
+    public Long columns;
+    public MastheadSettings withColumns(Long columns) {
+        this.columns = columns;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("description")
+    public String description;
+    public MastheadSettings withDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("title")
+    public String title;
+    public MastheadSettings withTitle(String title) {
+        this.title = title;
+        return this;
+    }
+}

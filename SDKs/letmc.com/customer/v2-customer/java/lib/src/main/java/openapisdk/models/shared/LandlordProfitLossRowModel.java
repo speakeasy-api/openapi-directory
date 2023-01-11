@@ -1,0 +1,40 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * LandlordProfitLossRowModel
+ * Class for a group of entries.
+**/
+public class LandlordProfitLossRowModel {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("MonthTotals")
+    public KeyValuePairStringString[] monthTotals;
+    public LandlordProfitLossRowModel withMonthTotals(KeyValuePairStringString[] monthTotals) {
+        this.monthTotals = monthTotals;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("NominalCode")
+    public String nominalCode;
+    public LandlordProfitLossRowModel withNominalCode(String nominalCode) {
+        this.nominalCode = nominalCode;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Title")
+    public String title;
+    public LandlordProfitLossRowModel withTitle(String title) {
+        this.title = title;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Total")
+    public String total;
+    public LandlordProfitLossRowModel withTotal(String total) {
+        this.total = total;
+        return this;
+    }
+}

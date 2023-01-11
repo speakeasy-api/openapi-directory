@@ -1,0 +1,26 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * ListTestsResult
+ * Represents the result of a list tests request.
+**/
+public class ListTestsResult {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("nextToken")
+    public String nextToken;
+    public ListTestsResult withNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("tests")
+    public Test[] tests;
+    public ListTestsResult withTests(Test[] tests) {
+        this.tests = tests;
+        return this;
+    }
+}

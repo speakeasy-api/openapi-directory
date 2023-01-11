@@ -1,0 +1,22 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class PdfOcrPdfToLinesWithLocationRequest {
+    public PdfOcrPdfToLinesWithLocationHeaders headers;
+    public PdfOcrPdfToLinesWithLocationRequest withHeaders(PdfOcrPdfToLinesWithLocationHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+    @SpeakeasyMetadata("request:mediaType=multipart/form-data")
+    public PdfOcrPdfToLinesWithLocationRequestBody request;
+    public PdfOcrPdfToLinesWithLocationRequest withRequest(PdfOcrPdfToLinesWithLocationRequestBody request) {
+        this.request = request;
+        return this;
+    }
+    public PdfOcrPdfToLinesWithLocationSecurity security;
+    public PdfOcrPdfToLinesWithLocationRequest withSecurity(PdfOcrPdfToLinesWithLocationSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class GetVolumesNameJsonRequest {
+    public GetVolumesNameJsonPathParams pathParams;
+    public GetVolumesNameJsonRequest withPathParams(GetVolumesNameJsonPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public GetVolumesNameJsonHeaders headers;
+    public GetVolumesNameJsonRequest withHeaders(GetVolumesNameJsonHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+}

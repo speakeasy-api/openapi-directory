@@ -1,0 +1,11 @@
+package openapisdk.models.operations;
+
+
+
+public class ListConversationsRequest {
+    public ListConversationsQueryParams queryParams;
+    public ListConversationsRequest withQueryParams(ListConversationsQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+}

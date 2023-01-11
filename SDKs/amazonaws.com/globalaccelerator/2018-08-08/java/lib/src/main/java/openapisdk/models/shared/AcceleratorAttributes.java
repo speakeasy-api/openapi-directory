@@ -1,0 +1,33 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * AcceleratorAttributes
+ * Attributes of an accelerator.
+**/
+public class AcceleratorAttributes {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("FlowLogsEnabled")
+    public Boolean flowLogsEnabled;
+    public AcceleratorAttributes withFlowLogsEnabled(Boolean flowLogsEnabled) {
+        this.flowLogsEnabled = flowLogsEnabled;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("FlowLogsS3Bucket")
+    public String flowLogsS3Bucket;
+    public AcceleratorAttributes withFlowLogsS3Bucket(String flowLogsS3Bucket) {
+        this.flowLogsS3Bucket = flowLogsS3Bucket;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("FlowLogsS3Prefix")
+    public String flowLogsS3Prefix;
+    public AcceleratorAttributes withFlowLogsS3Prefix(String flowLogsS3Prefix) {
+        this.flowLogsS3Prefix = flowLogsS3Prefix;
+        return this;
+    }
+}

@@ -1,0 +1,29 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class GenerateDataKeyResponse {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("CiphertextBlob")
+    public String ciphertextBlob;
+    public GenerateDataKeyResponse withCiphertextBlob(String ciphertextBlob) {
+        this.ciphertextBlob = ciphertextBlob;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("KeyId")
+    public String keyId;
+    public GenerateDataKeyResponse withKeyId(String keyId) {
+        this.keyId = keyId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Plaintext")
+    public String plaintext;
+    public GenerateDataKeyResponse withPlaintext(String plaintext) {
+        this.plaintext = plaintext;
+        return this;
+    }
+}

@@ -1,0 +1,24 @@
+package openapisdk.models.shared;
+
+
+public enum SubmissionEntryProtocolIdEnum {
+    IMPLICIT("IMPLICIT"),
+    SHORT_MESSAGE_TYPE0("SHORT_MESSAGE_TYPE_0"),
+    REPLACE_MESSAGE1("REPLACE_MESSAGE_1"),
+    REPLACE_MESSAGE2("REPLACE_MESSAGE_2"),
+    REPLACE_MESSAGE3("REPLACE_MESSAGE_3"),
+    REPLACE_MESSAGE4("REPLACE_MESSAGE_4"),
+    REPLACE_MESSAGE5("REPLACE_MESSAGE_5"),
+    REPLACE_MESSAGE6("REPLACE_MESSAGE_6"),
+    REPLACE_MESSAGE7("REPLACE_MESSAGE_7"),
+    RETURN_CALL("RETURN_CALL"),
+    ME_DOWNLOAD("ME_DOWNLOAD"),
+    ME_DEPERSONALIZE("ME_DEPERSONALIZE"),
+    SIM_DOWNLOAD("SIM_DOWNLOAD");
+
+    public final String value;
+
+    private SubmissionEntryProtocolIdEnum(String value) {
+        this.value = value;
+    }
+}

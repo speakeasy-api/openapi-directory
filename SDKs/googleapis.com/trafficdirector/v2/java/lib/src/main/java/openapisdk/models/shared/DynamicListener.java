@@ -1,0 +1,47 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * DynamicListener
+ * Describes a dynamically loaded listener via the LDS API. [#next-free-field: 6]
+**/
+public class DynamicListener {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("activeState")
+    public DynamicListenerState activeState;
+    public DynamicListener withActiveState(DynamicListenerState activeState) {
+        this.activeState = activeState;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("drainingState")
+    public DynamicListenerState drainingState;
+    public DynamicListener withDrainingState(DynamicListenerState drainingState) {
+        this.drainingState = drainingState;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("errorState")
+    public UpdateFailureState errorState;
+    public DynamicListener withErrorState(UpdateFailureState errorState) {
+        this.errorState = errorState;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("name")
+    public String name;
+    public DynamicListener withName(String name) {
+        this.name = name;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("warmingState")
+    public DynamicListenerState warmingState;
+    public DynamicListener withWarmingState(DynamicListenerState warmingState) {
+        this.warmingState = warmingState;
+        return this;
+    }
+}

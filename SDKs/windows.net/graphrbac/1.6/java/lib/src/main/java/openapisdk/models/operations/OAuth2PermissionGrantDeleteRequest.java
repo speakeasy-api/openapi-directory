@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class OAuth2PermissionGrantDeleteRequest {
+    public OAuth2PermissionGrantDeletePathParams pathParams;
+    public OAuth2PermissionGrantDeleteRequest withPathParams(OAuth2PermissionGrantDeletePathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public OAuth2PermissionGrantDeleteQueryParams queryParams;
+    public OAuth2PermissionGrantDeleteRequest withQueryParams(OAuth2PermissionGrantDeleteQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+}

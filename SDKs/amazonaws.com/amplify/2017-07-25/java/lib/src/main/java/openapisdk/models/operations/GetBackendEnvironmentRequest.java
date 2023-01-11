@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class GetBackendEnvironmentRequest {
+    public GetBackendEnvironmentPathParams pathParams;
+    public GetBackendEnvironmentRequest withPathParams(GetBackendEnvironmentPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public GetBackendEnvironmentHeaders headers;
+    public GetBackendEnvironmentRequest withHeaders(GetBackendEnvironmentHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+}

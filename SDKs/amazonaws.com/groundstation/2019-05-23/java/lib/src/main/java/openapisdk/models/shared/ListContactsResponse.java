@@ -1,0 +1,26 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * ListContactsResponse
+ * <p/>
+**/
+public class ListContactsResponse {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("contactList")
+    public ContactData[] contactList;
+    public ListContactsResponse withContactList(ContactData[] contactList) {
+        this.contactList = contactList;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("nextToken")
+    public String nextToken;
+    public ListContactsResponse withNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+}

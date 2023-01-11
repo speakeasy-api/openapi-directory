@@ -1,0 +1,22 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+/**
+ * BatchPutGeofenceRequestEntry
+ * Contains geofence geometry details. 
+**/
+public class BatchPutGeofenceRequestEntry {
+    @JsonProperty("GeofenceId")
+    public String geofenceId;
+    public BatchPutGeofenceRequestEntry withGeofenceId(String geofenceId) {
+        this.geofenceId = geofenceId;
+        return this;
+    }
+    @JsonProperty("Geometry")
+    public GeofenceGeometry geometry;
+    public BatchPutGeofenceRequestEntry withGeometry(GeofenceGeometry geometry) {
+        this.geometry = geometry;
+        return this;
+    }
+}

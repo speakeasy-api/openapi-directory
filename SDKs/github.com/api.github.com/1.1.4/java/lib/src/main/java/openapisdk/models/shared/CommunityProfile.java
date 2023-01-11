@@ -1,0 +1,56 @@
+package openapisdk.models.shared;
+
+import java.time.OffsetDateTime;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import openapisdk.utils.DateTimeSerializer;
+import openapisdk.utils.DateTimeDeserializer;
+
+/**
+ * CommunityProfile
+ * Community Profile
+**/
+public class CommunityProfile {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("content_reports_enabled")
+    public Boolean contentReportsEnabled;
+    public CommunityProfile withContentReportsEnabled(Boolean contentReportsEnabled) {
+        this.contentReportsEnabled = contentReportsEnabled;
+        return this;
+    }
+    @JsonProperty("description")
+    public String description;
+    public CommunityProfile withDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    @JsonProperty("documentation")
+    public String documentation;
+    public CommunityProfile withDocumentation(String documentation) {
+        this.documentation = documentation;
+        return this;
+    }
+    @JsonProperty("files")
+    public CommunityProfileFiles files;
+    public CommunityProfile withFiles(CommunityProfileFiles files) {
+        this.files = files;
+        return this;
+    }
+    @JsonProperty("health_percentage")
+    public Long healthPercentage;
+    public CommunityProfile withHealthPercentage(Long healthPercentage) {
+        this.healthPercentage = healthPercentage;
+        return this;
+    }
+    @JsonSerialize(using = DateTimeSerializer.class)
+    @JsonDeserialize(using = DateTimeDeserializer.class)
+    @JsonProperty("updated_at")
+    public OffsetDateTime updatedAt;
+    public CommunityProfile withUpdatedAt(OffsetDateTime updatedAt) {
+        this.updatedAt = updatedAt;
+        return this;
+    }
+}

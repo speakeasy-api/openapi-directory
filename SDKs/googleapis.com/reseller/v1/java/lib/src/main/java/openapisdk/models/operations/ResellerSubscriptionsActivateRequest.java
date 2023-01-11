@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class ResellerSubscriptionsActivateRequest {
+    public ResellerSubscriptionsActivatePathParams pathParams;
+    public ResellerSubscriptionsActivateRequest withPathParams(ResellerSubscriptionsActivatePathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public ResellerSubscriptionsActivateQueryParams queryParams;
+    public ResellerSubscriptionsActivateRequest withQueryParams(ResellerSubscriptionsActivateQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public ResellerSubscriptionsActivateSecurity security;
+    public ResellerSubscriptionsActivateRequest withSecurity(ResellerSubscriptionsActivateSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

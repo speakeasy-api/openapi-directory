@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class DeleteJuniperSwitchRequest {
+    public DeleteJuniperSwitchPathParams pathParams;
+    public DeleteJuniperSwitchRequest withPathParams(DeleteJuniperSwitchPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public DeleteJuniperSwitchSecurity security;
+    public DeleteJuniperSwitchRequest withSecurity(DeleteJuniperSwitchSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

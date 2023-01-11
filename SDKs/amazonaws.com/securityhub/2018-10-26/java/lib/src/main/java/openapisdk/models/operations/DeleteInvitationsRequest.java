@@ -1,0 +1,17 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class DeleteInvitationsRequest {
+    public DeleteInvitationsHeaders headers;
+    public DeleteInvitationsRequest withHeaders(DeleteInvitationsHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public DeleteInvitationsRequestBody request;
+    public DeleteInvitationsRequest withRequest(DeleteInvitationsRequestBody request) {
+        this.request = request;
+        return this;
+    }
+}

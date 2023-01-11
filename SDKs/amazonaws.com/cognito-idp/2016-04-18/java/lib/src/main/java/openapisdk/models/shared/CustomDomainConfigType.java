@@ -1,0 +1,16 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+/**
+ * CustomDomainConfigType
+ * The configuration for a custom domain that hosts the sign-up and sign-in webpages for your application.
+**/
+public class CustomDomainConfigType {
+    @JsonProperty("CertificateArn")
+    public String certificateArn;
+    public CustomDomainConfigType withCertificateArn(String certificateArn) {
+        this.certificateArn = certificateArn;
+        return this;
+    }
+}

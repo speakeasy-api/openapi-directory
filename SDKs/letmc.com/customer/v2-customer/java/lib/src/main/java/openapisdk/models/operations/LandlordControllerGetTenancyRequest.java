@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class LandlordControllerGetTenancyRequest {
+    public LandlordControllerGetTenancyPathParams pathParams;
+    public LandlordControllerGetTenancyRequest withPathParams(LandlordControllerGetTenancyPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public LandlordControllerGetTenancyQueryParams queryParams;
+    public LandlordControllerGetTenancyRequest withQueryParams(LandlordControllerGetTenancyQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+}

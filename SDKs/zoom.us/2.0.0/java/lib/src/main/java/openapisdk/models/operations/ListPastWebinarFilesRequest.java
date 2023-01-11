@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class ListPastWebinarFilesRequest {
+    public ListPastWebinarFilesPathParams pathParams;
+    public ListPastWebinarFilesRequest withPathParams(ListPastWebinarFilesPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public ListPastWebinarFilesSecurity security;
+    public ListPastWebinarFilesRequest withSecurity(ListPastWebinarFilesSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

@@ -1,0 +1,17 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class BatchEnableStandardsRequest {
+    public BatchEnableStandardsHeaders headers;
+    public BatchEnableStandardsRequest withHeaders(BatchEnableStandardsHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public BatchEnableStandardsRequestBody request;
+    public BatchEnableStandardsRequest withRequest(BatchEnableStandardsRequestBody request) {
+        this.request = request;
+        return this;
+    }
+}

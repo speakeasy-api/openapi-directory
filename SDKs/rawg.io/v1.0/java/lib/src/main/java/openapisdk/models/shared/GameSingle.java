@@ -1,0 +1,309 @@
+package openapisdk.models.shared;
+
+import java.time.OffsetDateTime;
+import java.time.LocalDate;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import openapisdk.utils.DateTimeSerializer;
+import openapisdk.utils.DateTimeDeserializer;
+
+public class GameSingle {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("achievements_count")
+    public Long achievementsCount;
+    public GameSingle withAchievementsCount(Long achievementsCount) {
+        this.achievementsCount = achievementsCount;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("added")
+    public Long added;
+    public GameSingle withAdded(Long added) {
+        this.added = added;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("added_by_status")
+    public java.util.Map<String, Object> addedByStatus;
+    public GameSingle withAddedByStatus(java.util.Map<String, Object> addedByStatus) {
+        this.addedByStatus = addedByStatus;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("additions_count")
+    public Long additionsCount;
+    public GameSingle withAdditionsCount(Long additionsCount) {
+        this.additionsCount = additionsCount;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("alternative_names")
+    public String[] alternativeNames;
+    public GameSingle withAlternativeNames(String[] alternativeNames) {
+        this.alternativeNames = alternativeNames;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("background_image")
+    public String backgroundImage;
+    public GameSingle withBackgroundImage(String backgroundImage) {
+        this.backgroundImage = backgroundImage;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("background_image_additional")
+    public String backgroundImageAdditional;
+    public GameSingle withBackgroundImageAdditional(String backgroundImageAdditional) {
+        this.backgroundImageAdditional = backgroundImageAdditional;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("creators_count")
+    public Long creatorsCount;
+    public GameSingle withCreatorsCount(Long creatorsCount) {
+        this.creatorsCount = creatorsCount;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("description")
+    public String description;
+    public GameSingle withDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("esrb_rating")
+    public GameSingleEsrbRating esrbRating;
+    public GameSingle withEsrbRating(GameSingleEsrbRating esrbRating) {
+        this.esrbRating = esrbRating;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("game_series_count")
+    public Long gameSeriesCount;
+    public GameSingle withGameSeriesCount(Long gameSeriesCount) {
+        this.gameSeriesCount = gameSeriesCount;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("id")
+    public Long id;
+    public GameSingle withId(Long id) {
+        this.id = id;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("metacritic")
+    public Long metacritic;
+    public GameSingle withMetacritic(Long metacritic) {
+        this.metacritic = metacritic;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("metacritic_platforms")
+    public GamePlatformMetacritic[] metacriticPlatforms;
+    public GameSingle withMetacriticPlatforms(GamePlatformMetacritic[] metacriticPlatforms) {
+        this.metacriticPlatforms = metacriticPlatforms;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("metacritic_url")
+    public String metacriticUrl;
+    public GameSingle withMetacriticUrl(String metacriticUrl) {
+        this.metacriticUrl = metacriticUrl;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("movies_count")
+    public Long moviesCount;
+    public GameSingle withMoviesCount(Long moviesCount) {
+        this.moviesCount = moviesCount;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("name")
+    public String name;
+    public GameSingle withName(String name) {
+        this.name = name;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("name_original")
+    public String nameOriginal;
+    public GameSingle withNameOriginal(String nameOriginal) {
+        this.nameOriginal = nameOriginal;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("parent_achievements_count")
+    public String parentAchievementsCount;
+    public GameSingle withParentAchievementsCount(String parentAchievementsCount) {
+        this.parentAchievementsCount = parentAchievementsCount;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("parents_count")
+    public Long parentsCount;
+    public GameSingle withParentsCount(Long parentsCount) {
+        this.parentsCount = parentsCount;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("platforms")
+    public GameSinglePlatforms[] platforms;
+    public GameSingle withPlatforms(GameSinglePlatforms[] platforms) {
+        this.platforms = platforms;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("playtime")
+    public Long playtime;
+    public GameSingle withPlaytime(Long playtime) {
+        this.playtime = playtime;
+        return this;
+    }
+    @JsonProperty("rating")
+    public Double rating;
+    public GameSingle withRating(Double rating) {
+        this.rating = rating;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("rating_top")
+    public Long ratingTop;
+    public GameSingle withRatingTop(Long ratingTop) {
+        this.ratingTop = ratingTop;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ratings")
+    public java.util.Map<String, Object> ratings;
+    public GameSingle withRatings(java.util.Map<String, Object> ratings) {
+        this.ratings = ratings;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ratings_count")
+    public Long ratingsCount;
+    public GameSingle withRatingsCount(Long ratingsCount) {
+        this.ratingsCount = ratingsCount;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("reactions")
+    public java.util.Map<String, Object> reactions;
+    public GameSingle withReactions(java.util.Map<String, Object> reactions) {
+        this.reactions = reactions;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("reddit_count")
+    public Long redditCount;
+    public GameSingle withRedditCount(Long redditCount) {
+        this.redditCount = redditCount;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("reddit_description")
+    public String redditDescription;
+    public GameSingle withRedditDescription(String redditDescription) {
+        this.redditDescription = redditDescription;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("reddit_logo")
+    public String redditLogo;
+    public GameSingle withRedditLogo(String redditLogo) {
+        this.redditLogo = redditLogo;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("reddit_name")
+    public String redditName;
+    public GameSingle withRedditName(String redditName) {
+        this.redditName = redditName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("reddit_url")
+    public String redditUrl;
+    public GameSingle withRedditUrl(String redditUrl) {
+        this.redditUrl = redditUrl;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("released")
+    public LocalDate released;
+    public GameSingle withReleased(LocalDate released) {
+        this.released = released;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("reviews_text_count")
+    public String reviewsTextCount;
+    public GameSingle withReviewsTextCount(String reviewsTextCount) {
+        this.reviewsTextCount = reviewsTextCount;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("screenshots_count")
+    public Long screenshotsCount;
+    public GameSingle withScreenshotsCount(Long screenshotsCount) {
+        this.screenshotsCount = screenshotsCount;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("slug")
+    public String slug;
+    public GameSingle withSlug(String slug) {
+        this.slug = slug;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("suggestions_count")
+    public Long suggestionsCount;
+    public GameSingle withSuggestionsCount(Long suggestionsCount) {
+        this.suggestionsCount = suggestionsCount;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("tba")
+    public Boolean tba;
+    public GameSingle withTba(Boolean tba) {
+        this.tba = tba;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("twitch_count")
+    public String twitchCount;
+    public GameSingle withTwitchCount(String twitchCount) {
+        this.twitchCount = twitchCount;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonSerialize(contentUsing = DateTimeSerializer.class)
+    @JsonDeserialize(contentUsing = DateTimeDeserializer.class)
+    @JsonProperty("updated")
+    public OffsetDateTime updated;
+    public GameSingle withUpdated(OffsetDateTime updated) {
+        this.updated = updated;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("website")
+    public String website;
+    public GameSingle withWebsite(String website) {
+        this.website = website;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("youtube_count")
+    public String youtubeCount;
+    public GameSingle withYoutubeCount(String youtubeCount) {
+        this.youtubeCount = youtubeCount;
+        return this;
+    }
+}

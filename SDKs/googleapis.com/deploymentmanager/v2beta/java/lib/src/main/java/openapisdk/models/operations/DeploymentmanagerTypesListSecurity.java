@@ -1,0 +1,30 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class DeploymentmanagerTypesListSecurity {
+    @SpeakeasyMetadata("security:option=true")
+    public DeploymentmanagerTypesListSecurityOption1 option1;
+    public DeploymentmanagerTypesListSecurity withOption1(DeploymentmanagerTypesListSecurityOption1 option1) {
+        this.option1 = option1;
+        return this;
+    }
+    @SpeakeasyMetadata("security:option=true")
+    public DeploymentmanagerTypesListSecurityOption2 option2;
+    public DeploymentmanagerTypesListSecurity withOption2(DeploymentmanagerTypesListSecurityOption2 option2) {
+        this.option2 = option2;
+        return this;
+    }
+    @SpeakeasyMetadata("security:option=true")
+    public DeploymentmanagerTypesListSecurityOption3 option3;
+    public DeploymentmanagerTypesListSecurity withOption3(DeploymentmanagerTypesListSecurityOption3 option3) {
+        this.option3 = option3;
+        return this;
+    }
+    @SpeakeasyMetadata("security:option=true")
+    public DeploymentmanagerTypesListSecurityOption4 option4;
+    public DeploymentmanagerTypesListSecurity withOption4(DeploymentmanagerTypesListSecurityOption4 option4) {
+        this.option4 = option4;
+        return this;
+    }
+}

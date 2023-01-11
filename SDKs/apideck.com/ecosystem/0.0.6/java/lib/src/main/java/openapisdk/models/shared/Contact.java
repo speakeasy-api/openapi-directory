@@ -1,0 +1,63 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class Contact {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("email")
+    public String email;
+    public Contact withEmail(String email) {
+        this.email = email;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("first_name")
+    public String firstName;
+    public Contact withFirstName(String firstName) {
+        this.firstName = firstName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("id")
+    public String id;
+    public Contact withId(String id) {
+        this.id = id;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("last_name")
+    public String lastName;
+    public Contact withLastName(String lastName) {
+        this.lastName = lastName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("linked_in")
+    public String linkedIn;
+    public Contact withLinkedIn(String linkedIn) {
+        this.linkedIn = linkedIn;
+        return this;
+    }
+    @JsonProperty("name")
+    public String name;
+    public Contact withName(String name) {
+        this.name = name;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("role")
+    public String role;
+    public Contact withRole(String role) {
+        this.role = role;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("twitter")
+    public String twitter;
+    public Contact withTwitter(String twitter) {
+        this.twitter = twitter;
+        return this;
+    }
+}

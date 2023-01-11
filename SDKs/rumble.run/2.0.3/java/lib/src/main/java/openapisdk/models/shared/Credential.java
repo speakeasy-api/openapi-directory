@@ -1,0 +1,91 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class Credential {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("acl")
+    public java.util.Map<String, Object> acl;
+    public Credential withAcl(java.util.Map<String, Object> acl) {
+        this.acl = acl;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("cidrs")
+    public String[] cidrs;
+    public Credential withCidrs(String[] cidrs) {
+        this.cidrs = cidrs;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("client_id")
+    public String clientId;
+    public Credential withClientId(String clientId) {
+        this.clientId = clientId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("created_at")
+    public Long createdAt;
+    public Credential withCreatedAt(Long createdAt) {
+        this.createdAt = createdAt;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("created_by_email")
+    public String createdByEmail;
+    public Credential withCreatedByEmail(String createdByEmail) {
+        this.createdByEmail = createdByEmail;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("created_by_id")
+    public String createdById;
+    public Credential withCreatedById(String createdById) {
+        this.createdById = createdById;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("global")
+    public Boolean global;
+    public Credential withGlobal(Boolean global) {
+        this.global = global;
+        return this;
+    }
+    @JsonProperty("id")
+    public String id;
+    public Credential withId(String id) {
+        this.id = id;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("last_used_at")
+    public Long lastUsedAt;
+    public Credential withLastUsedAt(Long lastUsedAt) {
+        this.lastUsedAt = lastUsedAt;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("last_used_by_id")
+    public String lastUsedById;
+    public Credential withLastUsedById(String lastUsedById) {
+        this.lastUsedById = lastUsedById;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("name")
+    public String name;
+    public Credential withName(String name) {
+        this.name = name;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("type")
+    public CredentialTypeEnum type;
+    public Credential withType(CredentialTypeEnum type) {
+        this.type = type;
+        return this;
+    }
+}

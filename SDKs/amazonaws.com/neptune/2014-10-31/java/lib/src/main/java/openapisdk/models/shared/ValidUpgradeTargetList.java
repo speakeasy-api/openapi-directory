@@ -1,0 +1,35 @@
+package openapisdk.models.shared;
+
+
+
+/**
+ * ValidUpgradeTargetList
+ * The version of the database engine that a DB instance can be upgraded to.
+**/
+public class ValidUpgradeTargetList {
+    public Boolean autoUpgrade;
+    public ValidUpgradeTargetList withAutoUpgrade(Boolean autoUpgrade) {
+        this.autoUpgrade = autoUpgrade;
+        return this;
+    }
+    public String description;
+    public ValidUpgradeTargetList withDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    public String engine;
+    public ValidUpgradeTargetList withEngine(String engine) {
+        this.engine = engine;
+        return this;
+    }
+    public String engineVersion;
+    public ValidUpgradeTargetList withEngineVersion(String engineVersion) {
+        this.engineVersion = engineVersion;
+        return this;
+    }
+    public Boolean isMajorVersionUpgrade;
+    public ValidUpgradeTargetList withIsMajorVersionUpgrade(Boolean isMajorVersionUpgrade) {
+        this.isMajorVersionUpgrade = isMajorVersionUpgrade;
+        return this;
+    }
+}

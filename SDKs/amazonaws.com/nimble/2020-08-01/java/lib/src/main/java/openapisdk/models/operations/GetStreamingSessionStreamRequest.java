@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class GetStreamingSessionStreamRequest {
+    public GetStreamingSessionStreamPathParams pathParams;
+    public GetStreamingSessionStreamRequest withPathParams(GetStreamingSessionStreamPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public GetStreamingSessionStreamHeaders headers;
+    public GetStreamingSessionStreamRequest withHeaders(GetStreamingSessionStreamHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+}

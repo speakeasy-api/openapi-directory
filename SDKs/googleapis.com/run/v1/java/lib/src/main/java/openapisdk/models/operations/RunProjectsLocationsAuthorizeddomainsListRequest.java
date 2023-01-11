@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class RunProjectsLocationsAuthorizeddomainsListRequest {
+    public RunProjectsLocationsAuthorizeddomainsListPathParams pathParams;
+    public RunProjectsLocationsAuthorizeddomainsListRequest withPathParams(RunProjectsLocationsAuthorizeddomainsListPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public RunProjectsLocationsAuthorizeddomainsListQueryParams queryParams;
+    public RunProjectsLocationsAuthorizeddomainsListRequest withQueryParams(RunProjectsLocationsAuthorizeddomainsListQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public RunProjectsLocationsAuthorizeddomainsListSecurity security;
+    public RunProjectsLocationsAuthorizeddomainsListRequest withSecurity(RunProjectsLocationsAuthorizeddomainsListSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

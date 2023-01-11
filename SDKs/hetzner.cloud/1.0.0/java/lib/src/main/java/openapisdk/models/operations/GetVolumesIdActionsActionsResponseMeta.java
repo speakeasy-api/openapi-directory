@@ -1,0 +1,12 @@
+package openapisdk.models.operations;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+public class GetVolumesIdActionsActionsResponseMeta {
+    @JsonProperty("pagination")
+    public GetVolumesIdActionsActionsResponseMetaPagination pagination;
+    public GetVolumesIdActionsActionsResponseMeta withPagination(GetVolumesIdActionsActionsResponseMetaPagination pagination) {
+        this.pagination = pagination;
+        return this;
+    }
+}

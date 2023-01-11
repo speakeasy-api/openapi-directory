@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class DeleteStudioMemberRequest {
+    public DeleteStudioMemberPathParams pathParams;
+    public DeleteStudioMemberRequest withPathParams(DeleteStudioMemberPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public DeleteStudioMemberHeaders headers;
+    public DeleteStudioMemberRequest withHeaders(DeleteStudioMemberHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+}

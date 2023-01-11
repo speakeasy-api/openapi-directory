@@ -1,0 +1,47 @@
+package openapisdk.models.operations;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * UpdateEmailChannelRequestBodyEmailChannelRequest
+ * Specifies the status and settings of the email channel for an application.
+**/
+public class UpdateEmailChannelRequestBodyEmailChannelRequest {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ConfigurationSet")
+    public String configurationSet;
+    public UpdateEmailChannelRequestBodyEmailChannelRequest withConfigurationSet(String configurationSet) {
+        this.configurationSet = configurationSet;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Enabled")
+    public Boolean enabled;
+    public UpdateEmailChannelRequestBodyEmailChannelRequest withEnabled(Boolean enabled) {
+        this.enabled = enabled;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("FromAddress")
+    public String fromAddress;
+    public UpdateEmailChannelRequestBodyEmailChannelRequest withFromAddress(String fromAddress) {
+        this.fromAddress = fromAddress;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Identity")
+    public String identity;
+    public UpdateEmailChannelRequestBodyEmailChannelRequest withIdentity(String identity) {
+        this.identity = identity;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("RoleArn")
+    public String roleArn;
+    public UpdateEmailChannelRequestBodyEmailChannelRequest withRoleArn(String roleArn) {
+        this.roleArn = roleArn;
+        return this;
+    }
+}

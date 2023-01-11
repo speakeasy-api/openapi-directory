@@ -1,0 +1,61 @@
+package openapisdk.models.shared;
+
+import java.time.OffsetDateTime;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import openapisdk.utils.DateTimeSerializer;
+import openapisdk.utils.DateTimeDeserializer;
+
+/**
+ * Node
+ * Represents an individual node within a DAX cluster.
+**/
+public class Node {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("AvailabilityZone")
+    public String availabilityZone;
+    public Node withAvailabilityZone(String availabilityZone) {
+        this.availabilityZone = availabilityZone;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Endpoint")
+    public Endpoint endpoint;
+    public Node withEndpoint(Endpoint endpoint) {
+        this.endpoint = endpoint;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonSerialize(contentUsing = DateTimeSerializer.class)
+    @JsonDeserialize(contentUsing = DateTimeDeserializer.class)
+    @JsonProperty("NodeCreateTime")
+    public OffsetDateTime nodeCreateTime;
+    public Node withNodeCreateTime(OffsetDateTime nodeCreateTime) {
+        this.nodeCreateTime = nodeCreateTime;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("NodeId")
+    public String nodeId;
+    public Node withNodeId(String nodeId) {
+        this.nodeId = nodeId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("NodeStatus")
+    public String nodeStatus;
+    public Node withNodeStatus(String nodeStatus) {
+        this.nodeStatus = nodeStatus;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ParameterGroupStatus")
+    public String parameterGroupStatus;
+    public Node withParameterGroupStatus(String parameterGroupStatus) {
+        this.parameterGroupStatus = parameterGroupStatus;
+        return this;
+    }
+}

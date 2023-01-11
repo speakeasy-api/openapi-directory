@@ -1,0 +1,28 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class RebootReplicationInstanceMessage {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ForceFailover")
+    public Boolean forceFailover;
+    public RebootReplicationInstanceMessage withForceFailover(Boolean forceFailover) {
+        this.forceFailover = forceFailover;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ForcePlannedFailover")
+    public Boolean forcePlannedFailover;
+    public RebootReplicationInstanceMessage withForcePlannedFailover(Boolean forcePlannedFailover) {
+        this.forcePlannedFailover = forcePlannedFailover;
+        return this;
+    }
+    @JsonProperty("ReplicationInstanceArn")
+    public String replicationInstanceArn;
+    public RebootReplicationInstanceMessage withReplicationInstanceArn(String replicationInstanceArn) {
+        this.replicationInstanceArn = replicationInstanceArn;
+        return this;
+    }
+}

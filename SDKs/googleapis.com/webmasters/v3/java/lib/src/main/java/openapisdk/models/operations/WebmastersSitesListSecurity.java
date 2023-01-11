@@ -1,0 +1,18 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class WebmastersSitesListSecurity {
+    @SpeakeasyMetadata("security:option=true")
+    public WebmastersSitesListSecurityOption1 option1;
+    public WebmastersSitesListSecurity withOption1(WebmastersSitesListSecurityOption1 option1) {
+        this.option1 = option1;
+        return this;
+    }
+    @SpeakeasyMetadata("security:option=true")
+    public WebmastersSitesListSecurityOption2 option2;
+    public WebmastersSitesListSecurity withOption2(WebmastersSitesListSecurityOption2 option2) {
+        this.option2 = option2;
+        return this;
+    }
+}

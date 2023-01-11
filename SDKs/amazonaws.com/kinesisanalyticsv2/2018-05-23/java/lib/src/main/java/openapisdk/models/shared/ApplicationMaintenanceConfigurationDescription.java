@@ -1,0 +1,22 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+/**
+ * ApplicationMaintenanceConfigurationDescription
+ * The details of the maintenance configuration for the application.
+**/
+public class ApplicationMaintenanceConfigurationDescription {
+    @JsonProperty("ApplicationMaintenanceWindowEndTime")
+    public String applicationMaintenanceWindowEndTime;
+    public ApplicationMaintenanceConfigurationDescription withApplicationMaintenanceWindowEndTime(String applicationMaintenanceWindowEndTime) {
+        this.applicationMaintenanceWindowEndTime = applicationMaintenanceWindowEndTime;
+        return this;
+    }
+    @JsonProperty("ApplicationMaintenanceWindowStartTime")
+    public String applicationMaintenanceWindowStartTime;
+    public ApplicationMaintenanceConfigurationDescription withApplicationMaintenanceWindowStartTime(String applicationMaintenanceWindowStartTime) {
+        this.applicationMaintenanceWindowStartTime = applicationMaintenanceWindowStartTime;
+        return this;
+    }
+}

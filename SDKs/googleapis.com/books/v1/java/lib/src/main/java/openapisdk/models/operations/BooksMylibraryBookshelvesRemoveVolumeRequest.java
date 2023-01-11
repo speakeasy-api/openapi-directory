@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class BooksMylibraryBookshelvesRemoveVolumeRequest {
+    public BooksMylibraryBookshelvesRemoveVolumePathParams pathParams;
+    public BooksMylibraryBookshelvesRemoveVolumeRequest withPathParams(BooksMylibraryBookshelvesRemoveVolumePathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public BooksMylibraryBookshelvesRemoveVolumeQueryParams queryParams;
+    public BooksMylibraryBookshelvesRemoveVolumeRequest withQueryParams(BooksMylibraryBookshelvesRemoveVolumeQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public BooksMylibraryBookshelvesRemoveVolumeSecurity security;
+    public BooksMylibraryBookshelvesRemoveVolumeRequest withSecurity(BooksMylibraryBookshelvesRemoveVolumeSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

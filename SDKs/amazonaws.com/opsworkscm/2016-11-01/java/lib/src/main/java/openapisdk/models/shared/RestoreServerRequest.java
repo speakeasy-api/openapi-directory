@@ -1,0 +1,34 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class RestoreServerRequest {
+    @JsonProperty("BackupId")
+    public String backupId;
+    public RestoreServerRequest withBackupId(String backupId) {
+        this.backupId = backupId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("InstanceType")
+    public String instanceType;
+    public RestoreServerRequest withInstanceType(String instanceType) {
+        this.instanceType = instanceType;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("KeyPair")
+    public String keyPair;
+    public RestoreServerRequest withKeyPair(String keyPair) {
+        this.keyPair = keyPair;
+        return this;
+    }
+    @JsonProperty("ServerName")
+    public String serverName;
+    public RestoreServerRequest withServerName(String serverName) {
+        this.serverName = serverName;
+        return this;
+    }
+}

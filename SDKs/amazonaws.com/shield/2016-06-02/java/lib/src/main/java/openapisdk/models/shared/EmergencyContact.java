@@ -1,0 +1,32 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * EmergencyContact
+ * Contact information that the SRT can use to contact you if you have proactive engagement enabled, for escalations to the SRT and to initiate proactive customer support.
+**/
+public class EmergencyContact {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ContactNotes")
+    public String contactNotes;
+    public EmergencyContact withContactNotes(String contactNotes) {
+        this.contactNotes = contactNotes;
+        return this;
+    }
+    @JsonProperty("EmailAddress")
+    public String emailAddress;
+    public EmergencyContact withEmailAddress(String emailAddress) {
+        this.emailAddress = emailAddress;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("PhoneNumber")
+    public String phoneNumber;
+    public EmergencyContact withPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+        return this;
+    }
+}

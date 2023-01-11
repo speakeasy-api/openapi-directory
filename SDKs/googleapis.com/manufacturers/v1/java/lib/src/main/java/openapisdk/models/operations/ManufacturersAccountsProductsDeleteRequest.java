@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class ManufacturersAccountsProductsDeleteRequest {
+    public ManufacturersAccountsProductsDeletePathParams pathParams;
+    public ManufacturersAccountsProductsDeleteRequest withPathParams(ManufacturersAccountsProductsDeletePathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public ManufacturersAccountsProductsDeleteQueryParams queryParams;
+    public ManufacturersAccountsProductsDeleteRequest withQueryParams(ManufacturersAccountsProductsDeleteQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public ManufacturersAccountsProductsDeleteSecurity security;
+    public ManufacturersAccountsProductsDeleteRequest withSecurity(ManufacturersAccountsProductsDeleteSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

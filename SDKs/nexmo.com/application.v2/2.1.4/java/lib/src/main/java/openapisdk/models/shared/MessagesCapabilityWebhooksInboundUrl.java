@@ -1,0 +1,26 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * MessagesCapabilityWebhooksInboundUrl
+ * Vonage will forward inbound messages to this URL
+**/
+public class MessagesCapabilityWebhooksInboundUrl {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("address")
+    public String address;
+    public MessagesCapabilityWebhooksInboundUrl withAddress(String address) {
+        this.address = address;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("http_method")
+    public MessagesCapabilityWebhooksInboundUrlHttpMethodEnum httpMethod;
+    public MessagesCapabilityWebhooksInboundUrl withHttpMethod(MessagesCapabilityWebhooksInboundUrlHttpMethodEnum httpMethod) {
+        this.httpMethod = httpMethod;
+        return this;
+    }
+}

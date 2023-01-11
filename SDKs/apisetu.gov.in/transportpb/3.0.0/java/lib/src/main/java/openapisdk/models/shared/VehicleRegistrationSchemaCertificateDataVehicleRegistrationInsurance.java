@@ -1,0 +1,21 @@
+package openapisdk.models.shared;
+
+
+
+public class VehicleRegistrationSchemaCertificateDataVehicleRegistrationInsurance {
+    public String companyName;
+    public VehicleRegistrationSchemaCertificateDataVehicleRegistrationInsurance withCompanyName(String companyName) {
+        this.companyName = companyName;
+        return this;
+    }
+    public String policyNo;
+    public VehicleRegistrationSchemaCertificateDataVehicleRegistrationInsurance withPolicyNo(String policyNo) {
+        this.policyNo = policyNo;
+        return this;
+    }
+    public String validTill;
+    public VehicleRegistrationSchemaCertificateDataVehicleRegistrationInsurance withValidTill(String validTill) {
+        this.validTill = validTill;
+        return this;
+    }
+}

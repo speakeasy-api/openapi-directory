@@ -1,0 +1,26 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * BatchItemError
+ * Contains the batch request error details associated with the request.
+**/
+public class BatchItemError {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Code")
+    public BatchItemErrorCodeEnum code;
+    public BatchItemError withCode(BatchItemErrorCodeEnum code) {
+        this.code = code;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Message")
+    public String message;
+    public BatchItemError withMessage(String message) {
+        this.message = message;
+        return this;
+    }
+}

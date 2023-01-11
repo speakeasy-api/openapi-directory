@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class GetFieldLevelEncryptionProfile20181105Request {
+    public GetFieldLevelEncryptionProfile20181105PathParams pathParams;
+    public GetFieldLevelEncryptionProfile20181105Request withPathParams(GetFieldLevelEncryptionProfile20181105PathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public GetFieldLevelEncryptionProfile20181105Headers headers;
+    public GetFieldLevelEncryptionProfile20181105Request withHeaders(GetFieldLevelEncryptionProfile20181105Headers headers) {
+        this.headers = headers;
+        return this;
+    }
+}

@@ -1,0 +1,34 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class PlatformParentSingle {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("id")
+    public Long id;
+    public PlatformParentSingle withId(Long id) {
+        this.id = id;
+        return this;
+    }
+    @JsonProperty("name")
+    public String name;
+    public PlatformParentSingle withName(String name) {
+        this.name = name;
+        return this;
+    }
+    @JsonProperty("platforms")
+    public Platform[] platforms;
+    public PlatformParentSingle withPlatforms(Platform[] platforms) {
+        this.platforms = platforms;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("slug")
+    public String slug;
+    public PlatformParentSingle withSlug(String slug) {
+        this.slug = slug;
+        return this;
+    }
+}

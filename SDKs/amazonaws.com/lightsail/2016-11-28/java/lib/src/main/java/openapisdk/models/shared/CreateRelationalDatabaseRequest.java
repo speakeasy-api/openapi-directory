@@ -1,0 +1,80 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class CreateRelationalDatabaseRequest {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("availabilityZone")
+    public String availabilityZone;
+    public CreateRelationalDatabaseRequest withAvailabilityZone(String availabilityZone) {
+        this.availabilityZone = availabilityZone;
+        return this;
+    }
+    @JsonProperty("masterDatabaseName")
+    public String masterDatabaseName;
+    public CreateRelationalDatabaseRequest withMasterDatabaseName(String masterDatabaseName) {
+        this.masterDatabaseName = masterDatabaseName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("masterUserPassword")
+    public String masterUserPassword;
+    public CreateRelationalDatabaseRequest withMasterUserPassword(String masterUserPassword) {
+        this.masterUserPassword = masterUserPassword;
+        return this;
+    }
+    @JsonProperty("masterUsername")
+    public String masterUsername;
+    public CreateRelationalDatabaseRequest withMasterUsername(String masterUsername) {
+        this.masterUsername = masterUsername;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("preferredBackupWindow")
+    public String preferredBackupWindow;
+    public CreateRelationalDatabaseRequest withPreferredBackupWindow(String preferredBackupWindow) {
+        this.preferredBackupWindow = preferredBackupWindow;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("preferredMaintenanceWindow")
+    public String preferredMaintenanceWindow;
+    public CreateRelationalDatabaseRequest withPreferredMaintenanceWindow(String preferredMaintenanceWindow) {
+        this.preferredMaintenanceWindow = preferredMaintenanceWindow;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("publiclyAccessible")
+    public Boolean publiclyAccessible;
+    public CreateRelationalDatabaseRequest withPubliclyAccessible(Boolean publiclyAccessible) {
+        this.publiclyAccessible = publiclyAccessible;
+        return this;
+    }
+    @JsonProperty("relationalDatabaseBlueprintId")
+    public String relationalDatabaseBlueprintId;
+    public CreateRelationalDatabaseRequest withRelationalDatabaseBlueprintId(String relationalDatabaseBlueprintId) {
+        this.relationalDatabaseBlueprintId = relationalDatabaseBlueprintId;
+        return this;
+    }
+    @JsonProperty("relationalDatabaseBundleId")
+    public String relationalDatabaseBundleId;
+    public CreateRelationalDatabaseRequest withRelationalDatabaseBundleId(String relationalDatabaseBundleId) {
+        this.relationalDatabaseBundleId = relationalDatabaseBundleId;
+        return this;
+    }
+    @JsonProperty("relationalDatabaseName")
+    public String relationalDatabaseName;
+    public CreateRelationalDatabaseRequest withRelationalDatabaseName(String relationalDatabaseName) {
+        this.relationalDatabaseName = relationalDatabaseName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("tags")
+    public Tag[] tags;
+    public CreateRelationalDatabaseRequest withTags(Tag[] tags) {
+        this.tags = tags;
+        return this;
+    }
+}

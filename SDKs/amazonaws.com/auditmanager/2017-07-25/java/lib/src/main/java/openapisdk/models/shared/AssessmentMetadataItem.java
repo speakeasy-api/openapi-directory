@@ -1,0 +1,77 @@
+package openapisdk.models.shared;
+
+import java.time.OffsetDateTime;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import openapisdk.utils.DateTimeSerializer;
+import openapisdk.utils.DateTimeDeserializer;
+
+/**
+ * AssessmentMetadataItem
+ *  A metadata object associated with an assessment in Audit Manager. 
+**/
+public class AssessmentMetadataItem {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("complianceType")
+    public String complianceType;
+    public AssessmentMetadataItem withComplianceType(String complianceType) {
+        this.complianceType = complianceType;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonSerialize(contentUsing = DateTimeSerializer.class)
+    @JsonDeserialize(contentUsing = DateTimeDeserializer.class)
+    @JsonProperty("creationTime")
+    public OffsetDateTime creationTime;
+    public AssessmentMetadataItem withCreationTime(OffsetDateTime creationTime) {
+        this.creationTime = creationTime;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("delegations")
+    public Delegation[] delegations;
+    public AssessmentMetadataItem withDelegations(Delegation[] delegations) {
+        this.delegations = delegations;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("id")
+    public String id;
+    public AssessmentMetadataItem withId(String id) {
+        this.id = id;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonSerialize(contentUsing = DateTimeSerializer.class)
+    @JsonDeserialize(contentUsing = DateTimeDeserializer.class)
+    @JsonProperty("lastUpdated")
+    public OffsetDateTime lastUpdated;
+    public AssessmentMetadataItem withLastUpdated(OffsetDateTime lastUpdated) {
+        this.lastUpdated = lastUpdated;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("name")
+    public String name;
+    public AssessmentMetadataItem withName(String name) {
+        this.name = name;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("roles")
+    public Role[] roles;
+    public AssessmentMetadataItem withRoles(Role[] roles) {
+        this.roles = roles;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("status")
+    public AssessmentStatusEnum status;
+    public AssessmentMetadataItem withStatus(AssessmentStatusEnum status) {
+        this.status = status;
+        return this;
+    }
+}

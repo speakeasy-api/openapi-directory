@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class ImGroupMembersRequest {
+    public ImGroupMembersPathParams pathParams;
+    public ImGroupMembersRequest withPathParams(ImGroupMembersPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public ImGroupMembersQueryParams queryParams;
+    public ImGroupMembersRequest withQueryParams(ImGroupMembersQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public ImGroupMembersSecurity security;
+    public ImGroupMembersRequest withSecurity(ImGroupMembersSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

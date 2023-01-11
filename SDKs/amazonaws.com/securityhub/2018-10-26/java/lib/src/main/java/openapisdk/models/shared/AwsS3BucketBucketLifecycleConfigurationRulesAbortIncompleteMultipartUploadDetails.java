@@ -1,0 +1,19 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * AwsS3BucketBucketLifecycleConfigurationRulesAbortIncompleteMultipartUploadDetails
+ * Information about what Amazon S3 does when a multipart upload is incomplete.
+**/
+public class AwsS3BucketBucketLifecycleConfigurationRulesAbortIncompleteMultipartUploadDetails {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("DaysAfterInitiation")
+    public Long daysAfterInitiation;
+    public AwsS3BucketBucketLifecycleConfigurationRulesAbortIncompleteMultipartUploadDetails withDaysAfterInitiation(Long daysAfterInitiation) {
+        this.daysAfterInitiation = daysAfterInitiation;
+        return this;
+    }
+}

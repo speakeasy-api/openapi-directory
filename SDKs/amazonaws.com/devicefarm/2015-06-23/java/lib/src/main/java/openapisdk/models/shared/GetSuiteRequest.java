@@ -1,0 +1,16 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+/**
+ * GetSuiteRequest
+ * Represents a request to the get suite operation.
+**/
+public class GetSuiteRequest {
+    @JsonProperty("arn")
+    public String arn;
+    public GetSuiteRequest withArn(String arn) {
+        this.arn = arn;
+        return this;
+    }
+}

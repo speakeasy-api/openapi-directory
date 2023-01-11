@@ -1,0 +1,43 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class Week {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("firstGameStart")
+    public String firstGameStart;
+    public Week withFirstGameStart(String firstGameStart) {
+        this.firstGameStart = firstGameStart;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("lastGameStart")
+    public String lastGameStart;
+    public Week withLastGameStart(String lastGameStart) {
+        this.lastGameStart = lastGameStart;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("season")
+    public Long season;
+    public Week withSeason(Long season) {
+        this.season = season;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("seasonType")
+    public String seasonType;
+    public Week withSeasonType(String seasonType) {
+        this.seasonType = seasonType;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("week")
+    public Long week;
+    public Week withWeek(Long week) {
+        this.week = week;
+        return this;
+    }
+}

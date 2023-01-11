@@ -1,0 +1,27 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class StartBlueprintRunRequest {
+    @JsonProperty("BlueprintName")
+    public String blueprintName;
+    public StartBlueprintRunRequest withBlueprintName(String blueprintName) {
+        this.blueprintName = blueprintName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Parameters")
+    public String parameters;
+    public StartBlueprintRunRequest withParameters(String parameters) {
+        this.parameters = parameters;
+        return this;
+    }
+    @JsonProperty("RoleArn")
+    public String roleArn;
+    public StartBlueprintRunRequest withRoleArn(String roleArn) {
+        this.roleArn = roleArn;
+        return this;
+    }
+}

@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class GetEventAwardsRequest {
+    public GetEventAwardsPathParams pathParams;
+    public GetEventAwardsRequest withPathParams(GetEventAwardsPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public GetEventAwardsHeaders headers;
+    public GetEventAwardsRequest withHeaders(GetEventAwardsHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+    public GetEventAwardsSecurity security;
+    public GetEventAwardsRequest withSecurity(GetEventAwardsSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

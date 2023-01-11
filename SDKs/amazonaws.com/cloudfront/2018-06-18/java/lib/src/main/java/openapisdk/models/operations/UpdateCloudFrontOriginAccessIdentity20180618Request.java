@@ -1,0 +1,22 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class UpdateCloudFrontOriginAccessIdentity20180618Request {
+    public UpdateCloudFrontOriginAccessIdentity20180618PathParams pathParams;
+    public UpdateCloudFrontOriginAccessIdentity20180618Request withPathParams(UpdateCloudFrontOriginAccessIdentity20180618PathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public UpdateCloudFrontOriginAccessIdentity20180618Headers headers;
+    public UpdateCloudFrontOriginAccessIdentity20180618Request withHeaders(UpdateCloudFrontOriginAccessIdentity20180618Headers headers) {
+        this.headers = headers;
+        return this;
+    }
+    @SpeakeasyMetadata("request:mediaType=text/xml")
+    public byte[] request;
+    public UpdateCloudFrontOriginAccessIdentity20180618Request withRequest(byte[] request) {
+        this.request = request;
+        return this;
+    }
+}

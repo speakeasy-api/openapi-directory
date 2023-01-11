@@ -1,0 +1,28 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+/**
+ * AdminSetUserSettingsRequest
+ * You can use this parameter to set an MFA configuration that uses the SMS delivery medium.
+**/
+public class AdminSetUserSettingsRequest {
+    @JsonProperty("MFAOptions")
+    public MfaOptionType[] mfaOptions;
+    public AdminSetUserSettingsRequest withMfaOptions(MfaOptionType[] mfaOptions) {
+        this.mfaOptions = mfaOptions;
+        return this;
+    }
+    @JsonProperty("UserPoolId")
+    public String userPoolId;
+    public AdminSetUserSettingsRequest withUserPoolId(String userPoolId) {
+        this.userPoolId = userPoolId;
+        return this;
+    }
+    @JsonProperty("Username")
+    public String username;
+    public AdminSetUserSettingsRequest withUsername(String username) {
+        this.username = username;
+        return this;
+    }
+}

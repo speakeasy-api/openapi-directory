@@ -1,0 +1,22 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class TaxRateProductCount {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("count")
+    public Integer count;
+    public TaxRateProductCount withCount(Integer count) {
+        this.count = count;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("taxRateUuid")
+    public String taxRateUuid;
+    public TaxRateProductCount withTaxRateUuid(String taxRateUuid) {
+        this.taxRateUuid = taxRateUuid;
+        return this;
+    }
+}

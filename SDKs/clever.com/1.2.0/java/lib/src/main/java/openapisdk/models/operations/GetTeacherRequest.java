@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class GetTeacherRequest {
+    public GetTeacherPathParams pathParams;
+    public GetTeacherRequest withPathParams(GetTeacherPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public GetTeacherQueryParams queryParams;
+    public GetTeacherRequest withQueryParams(GetTeacherQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+}

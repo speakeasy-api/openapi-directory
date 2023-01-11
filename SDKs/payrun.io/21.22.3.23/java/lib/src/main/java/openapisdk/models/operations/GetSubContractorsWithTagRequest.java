@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class GetSubContractorsWithTagRequest {
+    public GetSubContractorsWithTagPathParams pathParams;
+    public GetSubContractorsWithTagRequest withPathParams(GetSubContractorsWithTagPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public GetSubContractorsWithTagHeaders headers;
+    public GetSubContractorsWithTagRequest withHeaders(GetSubContractorsWithTagHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+}

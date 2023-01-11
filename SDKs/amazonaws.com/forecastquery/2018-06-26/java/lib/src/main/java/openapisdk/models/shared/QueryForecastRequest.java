@@ -1,0 +1,41 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class QueryForecastRequest {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("EndDate")
+    public String endDate;
+    public QueryForecastRequest withEndDate(String endDate) {
+        this.endDate = endDate;
+        return this;
+    }
+    @JsonProperty("Filters")
+    public java.util.Map<String, String> filters;
+    public QueryForecastRequest withFilters(java.util.Map<String, String> filters) {
+        this.filters = filters;
+        return this;
+    }
+    @JsonProperty("ForecastArn")
+    public String forecastArn;
+    public QueryForecastRequest withForecastArn(String forecastArn) {
+        this.forecastArn = forecastArn;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("NextToken")
+    public String nextToken;
+    public QueryForecastRequest withNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("StartDate")
+    public String startDate;
+    public QueryForecastRequest withStartDate(String startDate) {
+        this.startDate = startDate;
+        return this;
+    }
+}

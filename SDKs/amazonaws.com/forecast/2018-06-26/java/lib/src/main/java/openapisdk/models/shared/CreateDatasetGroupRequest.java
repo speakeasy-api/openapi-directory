@@ -1,0 +1,34 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class CreateDatasetGroupRequest {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("DatasetArns")
+    public String[] datasetArns;
+    public CreateDatasetGroupRequest withDatasetArns(String[] datasetArns) {
+        this.datasetArns = datasetArns;
+        return this;
+    }
+    @JsonProperty("DatasetGroupName")
+    public String datasetGroupName;
+    public CreateDatasetGroupRequest withDatasetGroupName(String datasetGroupName) {
+        this.datasetGroupName = datasetGroupName;
+        return this;
+    }
+    @JsonProperty("Domain")
+    public DomainEnum domain;
+    public CreateDatasetGroupRequest withDomain(DomainEnum domain) {
+        this.domain = domain;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Tags")
+    public Tag[] tags;
+    public CreateDatasetGroupRequest withTags(Tag[] tags) {
+        this.tags = tags;
+        return this;
+    }
+}

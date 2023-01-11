@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class GetImagesIdActionsRequest {
+    public GetImagesIdActionsPathParams pathParams;
+    public GetImagesIdActionsRequest withPathParams(GetImagesIdActionsPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public GetImagesIdActionsQueryParams queryParams;
+    public GetImagesIdActionsRequest withQueryParams(GetImagesIdActionsQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+}

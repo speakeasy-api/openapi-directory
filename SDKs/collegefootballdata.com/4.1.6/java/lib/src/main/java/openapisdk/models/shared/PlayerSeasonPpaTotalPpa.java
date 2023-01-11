@@ -1,0 +1,64 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class PlayerSeasonPpaTotalPpa {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("all")
+    public Double all;
+    public PlayerSeasonPpaTotalPpa withAll(Double all) {
+        this.all = all;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("firstDown")
+    public Double firstDown;
+    public PlayerSeasonPpaTotalPpa withFirstDown(Double firstDown) {
+        this.firstDown = firstDown;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("pass")
+    public Double pass;
+    public PlayerSeasonPpaTotalPpa withPass(Double pass) {
+        this.pass = pass;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("passingDowns")
+    public Double passingDowns;
+    public PlayerSeasonPpaTotalPpa withPassingDowns(Double passingDowns) {
+        this.passingDowns = passingDowns;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("rush")
+    public Double rush;
+    public PlayerSeasonPpaTotalPpa withRush(Double rush) {
+        this.rush = rush;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("secondDown")
+    public Double secondDown;
+    public PlayerSeasonPpaTotalPpa withSecondDown(Double secondDown) {
+        this.secondDown = secondDown;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("standardDowns")
+    public Double standardDowns;
+    public PlayerSeasonPpaTotalPpa withStandardDowns(Double standardDowns) {
+        this.standardDowns = standardDowns;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("thirdDown")
+    public Double thirdDown;
+    public PlayerSeasonPpaTotalPpa withThirdDown(Double thirdDown) {
+        this.thirdDown = thirdDown;
+        return this;
+    }
+}

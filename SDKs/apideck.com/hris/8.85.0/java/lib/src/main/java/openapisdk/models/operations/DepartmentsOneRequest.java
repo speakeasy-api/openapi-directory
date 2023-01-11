@@ -1,0 +1,26 @@
+package openapisdk.models.operations;
+
+
+
+public class DepartmentsOneRequest {
+    public DepartmentsOnePathParams pathParams;
+    public DepartmentsOneRequest withPathParams(DepartmentsOnePathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public DepartmentsOneQueryParams queryParams;
+    public DepartmentsOneRequest withQueryParams(DepartmentsOneQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public DepartmentsOneHeaders headers;
+    public DepartmentsOneRequest withHeaders(DepartmentsOneHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+    public DepartmentsOneSecurity security;
+    public DepartmentsOneRequest withSecurity(DepartmentsOneSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

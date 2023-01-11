@@ -1,0 +1,72 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class FitnessUsersDataSourcesDatasetsPatchSecurity {
+    @SpeakeasyMetadata("security:option=true")
+    public FitnessUsersDataSourcesDatasetsPatchSecurityOption1 option1;
+    public FitnessUsersDataSourcesDatasetsPatchSecurity withOption1(FitnessUsersDataSourcesDatasetsPatchSecurityOption1 option1) {
+        this.option1 = option1;
+        return this;
+    }
+    @SpeakeasyMetadata("security:option=true")
+    public FitnessUsersDataSourcesDatasetsPatchSecurityOption2 option2;
+    public FitnessUsersDataSourcesDatasetsPatchSecurity withOption2(FitnessUsersDataSourcesDatasetsPatchSecurityOption2 option2) {
+        this.option2 = option2;
+        return this;
+    }
+    @SpeakeasyMetadata("security:option=true")
+    public FitnessUsersDataSourcesDatasetsPatchSecurityOption3 option3;
+    public FitnessUsersDataSourcesDatasetsPatchSecurity withOption3(FitnessUsersDataSourcesDatasetsPatchSecurityOption3 option3) {
+        this.option3 = option3;
+        return this;
+    }
+    @SpeakeasyMetadata("security:option=true")
+    public FitnessUsersDataSourcesDatasetsPatchSecurityOption4 option4;
+    public FitnessUsersDataSourcesDatasetsPatchSecurity withOption4(FitnessUsersDataSourcesDatasetsPatchSecurityOption4 option4) {
+        this.option4 = option4;
+        return this;
+    }
+    @SpeakeasyMetadata("security:option=true")
+    public FitnessUsersDataSourcesDatasetsPatchSecurityOption5 option5;
+    public FitnessUsersDataSourcesDatasetsPatchSecurity withOption5(FitnessUsersDataSourcesDatasetsPatchSecurityOption5 option5) {
+        this.option5 = option5;
+        return this;
+    }
+    @SpeakeasyMetadata("security:option=true")
+    public FitnessUsersDataSourcesDatasetsPatchSecurityOption6 option6;
+    public FitnessUsersDataSourcesDatasetsPatchSecurity withOption6(FitnessUsersDataSourcesDatasetsPatchSecurityOption6 option6) {
+        this.option6 = option6;
+        return this;
+    }
+    @SpeakeasyMetadata("security:option=true")
+    public FitnessUsersDataSourcesDatasetsPatchSecurityOption7 option7;
+    public FitnessUsersDataSourcesDatasetsPatchSecurity withOption7(FitnessUsersDataSourcesDatasetsPatchSecurityOption7 option7) {
+        this.option7 = option7;
+        return this;
+    }
+    @SpeakeasyMetadata("security:option=true")
+    public FitnessUsersDataSourcesDatasetsPatchSecurityOption8 option8;
+    public FitnessUsersDataSourcesDatasetsPatchSecurity withOption8(FitnessUsersDataSourcesDatasetsPatchSecurityOption8 option8) {
+        this.option8 = option8;
+        return this;
+    }
+    @SpeakeasyMetadata("security:option=true")
+    public FitnessUsersDataSourcesDatasetsPatchSecurityOption9 option9;
+    public FitnessUsersDataSourcesDatasetsPatchSecurity withOption9(FitnessUsersDataSourcesDatasetsPatchSecurityOption9 option9) {
+        this.option9 = option9;
+        return this;
+    }
+    @SpeakeasyMetadata("security:option=true")
+    public FitnessUsersDataSourcesDatasetsPatchSecurityOption10 option10;
+    public FitnessUsersDataSourcesDatasetsPatchSecurity withOption10(FitnessUsersDataSourcesDatasetsPatchSecurityOption10 option10) {
+        this.option10 = option10;
+        return this;
+    }
+    @SpeakeasyMetadata("security:option=true")
+    public FitnessUsersDataSourcesDatasetsPatchSecurityOption11 option11;
+    public FitnessUsersDataSourcesDatasetsPatchSecurity withOption11(FitnessUsersDataSourcesDatasetsPatchSecurityOption11 option11) {
+        this.option11 = option11;
+        return this;
+    }
+}

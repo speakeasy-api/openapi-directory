@@ -1,0 +1,19 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * UpdatePipelineStatusResponse
+ * When you update status for a pipeline, Elastic Transcoder returns the values that you specified in the request.
+**/
+public class UpdatePipelineStatusResponse {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Pipeline")
+    public Pipeline pipeline;
+    public UpdatePipelineStatusResponse withPipeline(Pipeline pipeline) {
+        this.pipeline = pipeline;
+        return this;
+    }
+}

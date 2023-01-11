@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class ListConflictingAliases20200531Request {
+    public ListConflictingAliases20200531QueryParams queryParams;
+    public ListConflictingAliases20200531Request withQueryParams(ListConflictingAliases20200531QueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public ListConflictingAliases20200531Headers headers;
+    public ListConflictingAliases20200531Request withHeaders(ListConflictingAliases20200531Headers headers) {
+        this.headers = headers;
+        return this;
+    }
+}

@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class Adexchangebuyer2AccountsCreativesDealAssociationsListRequest {
+    public Adexchangebuyer2AccountsCreativesDealAssociationsListPathParams pathParams;
+    public Adexchangebuyer2AccountsCreativesDealAssociationsListRequest withPathParams(Adexchangebuyer2AccountsCreativesDealAssociationsListPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public Adexchangebuyer2AccountsCreativesDealAssociationsListQueryParams queryParams;
+    public Adexchangebuyer2AccountsCreativesDealAssociationsListRequest withQueryParams(Adexchangebuyer2AccountsCreativesDealAssociationsListQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public Adexchangebuyer2AccountsCreativesDealAssociationsListSecurity security;
+    public Adexchangebuyer2AccountsCreativesDealAssociationsListRequest withSecurity(Adexchangebuyer2AccountsCreativesDealAssociationsListSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

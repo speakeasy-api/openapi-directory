@@ -1,0 +1,22 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class FunctionsCreateTagRequest {
+    public FunctionsCreateTagPathParams pathParams;
+    public FunctionsCreateTagRequest withPathParams(FunctionsCreateTagPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    @SpeakeasyMetadata("request:mediaType=multipart/form-data")
+    public FunctionsCreateTagRequestBody request;
+    public FunctionsCreateTagRequest withRequest(FunctionsCreateTagRequestBody request) {
+        this.request = request;
+        return this;
+    }
+    public FunctionsCreateTagSecurity security;
+    public FunctionsCreateTagRequest withSecurity(FunctionsCreateTagSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

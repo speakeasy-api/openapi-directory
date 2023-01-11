@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class DescribeProjectRequest {
+    public DescribeProjectPathParams pathParams;
+    public DescribeProjectRequest withPathParams(DescribeProjectPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public DescribeProjectHeaders headers;
+    public DescribeProjectRequest withHeaders(DescribeProjectHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+}

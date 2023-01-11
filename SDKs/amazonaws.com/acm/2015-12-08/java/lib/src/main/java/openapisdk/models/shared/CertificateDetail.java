@@ -1,0 +1,211 @@
+package openapisdk.models.shared;
+
+import java.time.OffsetDateTime;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import openapisdk.utils.DateTimeSerializer;
+import openapisdk.utils.DateTimeDeserializer;
+
+/**
+ * CertificateDetail
+ * Contains metadata about an ACM certificate. This structure is returned in the response to a <a>DescribeCertificate</a> request. 
+**/
+public class CertificateDetail {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("CertificateArn")
+    public String certificateArn;
+    public CertificateDetail withCertificateArn(String certificateArn) {
+        this.certificateArn = certificateArn;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("CertificateAuthorityArn")
+    public String certificateAuthorityArn;
+    public CertificateDetail withCertificateAuthorityArn(String certificateAuthorityArn) {
+        this.certificateAuthorityArn = certificateAuthorityArn;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonSerialize(contentUsing = DateTimeSerializer.class)
+    @JsonDeserialize(contentUsing = DateTimeDeserializer.class)
+    @JsonProperty("CreatedAt")
+    public OffsetDateTime createdAt;
+    public CertificateDetail withCreatedAt(OffsetDateTime createdAt) {
+        this.createdAt = createdAt;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("DomainName")
+    public String domainName;
+    public CertificateDetail withDomainName(String domainName) {
+        this.domainName = domainName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("DomainValidationOptions")
+    public DomainValidation[] domainValidationOptions;
+    public CertificateDetail withDomainValidationOptions(DomainValidation[] domainValidationOptions) {
+        this.domainValidationOptions = domainValidationOptions;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ExtendedKeyUsages")
+    public ExtendedKeyUsage[] extendedKeyUsages;
+    public CertificateDetail withExtendedKeyUsages(ExtendedKeyUsage[] extendedKeyUsages) {
+        this.extendedKeyUsages = extendedKeyUsages;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("FailureReason")
+    public FailureReasonEnum failureReason;
+    public CertificateDetail withFailureReason(FailureReasonEnum failureReason) {
+        this.failureReason = failureReason;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonSerialize(contentUsing = DateTimeSerializer.class)
+    @JsonDeserialize(contentUsing = DateTimeDeserializer.class)
+    @JsonProperty("ImportedAt")
+    public OffsetDateTime importedAt;
+    public CertificateDetail withImportedAt(OffsetDateTime importedAt) {
+        this.importedAt = importedAt;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("InUseBy")
+    public String[] inUseBy;
+    public CertificateDetail withInUseBy(String[] inUseBy) {
+        this.inUseBy = inUseBy;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonSerialize(contentUsing = DateTimeSerializer.class)
+    @JsonDeserialize(contentUsing = DateTimeDeserializer.class)
+    @JsonProperty("IssuedAt")
+    public OffsetDateTime issuedAt;
+    public CertificateDetail withIssuedAt(OffsetDateTime issuedAt) {
+        this.issuedAt = issuedAt;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Issuer")
+    public String issuer;
+    public CertificateDetail withIssuer(String issuer) {
+        this.issuer = issuer;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("KeyAlgorithm")
+    public KeyAlgorithmEnum keyAlgorithm;
+    public CertificateDetail withKeyAlgorithm(KeyAlgorithmEnum keyAlgorithm) {
+        this.keyAlgorithm = keyAlgorithm;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("KeyUsages")
+    public KeyUsage[] keyUsages;
+    public CertificateDetail withKeyUsages(KeyUsage[] keyUsages) {
+        this.keyUsages = keyUsages;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonSerialize(contentUsing = DateTimeSerializer.class)
+    @JsonDeserialize(contentUsing = DateTimeDeserializer.class)
+    @JsonProperty("NotAfter")
+    public OffsetDateTime notAfter;
+    public CertificateDetail withNotAfter(OffsetDateTime notAfter) {
+        this.notAfter = notAfter;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonSerialize(contentUsing = DateTimeSerializer.class)
+    @JsonDeserialize(contentUsing = DateTimeDeserializer.class)
+    @JsonProperty("NotBefore")
+    public OffsetDateTime notBefore;
+    public CertificateDetail withNotBefore(OffsetDateTime notBefore) {
+        this.notBefore = notBefore;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Options")
+    public CertificateOptions options;
+    public CertificateDetail withOptions(CertificateOptions options) {
+        this.options = options;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("RenewalEligibility")
+    public RenewalEligibilityEnum renewalEligibility;
+    public CertificateDetail withRenewalEligibility(RenewalEligibilityEnum renewalEligibility) {
+        this.renewalEligibility = renewalEligibility;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("RenewalSummary")
+    public RenewalSummary renewalSummary;
+    public CertificateDetail withRenewalSummary(RenewalSummary renewalSummary) {
+        this.renewalSummary = renewalSummary;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("RevocationReason")
+    public RevocationReasonEnum revocationReason;
+    public CertificateDetail withRevocationReason(RevocationReasonEnum revocationReason) {
+        this.revocationReason = revocationReason;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonSerialize(contentUsing = DateTimeSerializer.class)
+    @JsonDeserialize(contentUsing = DateTimeDeserializer.class)
+    @JsonProperty("RevokedAt")
+    public OffsetDateTime revokedAt;
+    public CertificateDetail withRevokedAt(OffsetDateTime revokedAt) {
+        this.revokedAt = revokedAt;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Serial")
+    public String serial;
+    public CertificateDetail withSerial(String serial) {
+        this.serial = serial;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("SignatureAlgorithm")
+    public String signatureAlgorithm;
+    public CertificateDetail withSignatureAlgorithm(String signatureAlgorithm) {
+        this.signatureAlgorithm = signatureAlgorithm;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Status")
+    public CertificateStatusEnum status;
+    public CertificateDetail withStatus(CertificateStatusEnum status) {
+        this.status = status;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Subject")
+    public String subject;
+    public CertificateDetail withSubject(String subject) {
+        this.subject = subject;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("SubjectAlternativeNames")
+    public String[] subjectAlternativeNames;
+    public CertificateDetail withSubjectAlternativeNames(String[] subjectAlternativeNames) {
+        this.subjectAlternativeNames = subjectAlternativeNames;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Type")
+    public CertificateTypeEnum type;
+    public CertificateDetail withType(CertificateTypeEnum type) {
+        this.type = type;
+        return this;
+    }
+}

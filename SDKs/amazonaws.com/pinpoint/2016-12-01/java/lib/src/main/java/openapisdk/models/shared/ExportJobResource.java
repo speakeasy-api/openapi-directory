@@ -1,0 +1,38 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * ExportJobResource
+ * Provides information about the resource settings for a job that exports endpoint definitions to a file. The file can be added directly to an Amazon Simple Storage Service (Amazon S3) bucket by using the Amazon Pinpoint API or downloaded directly to a computer by using the Amazon Pinpoint console.
+**/
+public class ExportJobResource {
+    @JsonProperty("RoleArn")
+    public String roleArn;
+    public ExportJobResource withRoleArn(String roleArn) {
+        this.roleArn = roleArn;
+        return this;
+    }
+    @JsonProperty("S3UrlPrefix")
+    public String s3UrlPrefix;
+    public ExportJobResource withS3UrlPrefix(String s3UrlPrefix) {
+        this.s3UrlPrefix = s3UrlPrefix;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("SegmentId")
+    public String segmentId;
+    public ExportJobResource withSegmentId(String segmentId) {
+        this.segmentId = segmentId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("SegmentVersion")
+    public Long segmentVersion;
+    public ExportJobResource withSegmentVersion(Long segmentVersion) {
+        this.segmentVersion = segmentVersion;
+        return this;
+    }
+}

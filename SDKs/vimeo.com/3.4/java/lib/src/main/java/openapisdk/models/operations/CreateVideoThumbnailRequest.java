@@ -1,0 +1,22 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class CreateVideoThumbnailRequest {
+    public CreateVideoThumbnailPathParams pathParams;
+    public CreateVideoThumbnailRequest withPathParams(CreateVideoThumbnailPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    @SpeakeasyMetadata("request:mediaType=application/vnd.vimeo.picture+json")
+    public CreateVideoThumbnailRequestBody request;
+    public CreateVideoThumbnailRequest withRequest(CreateVideoThumbnailRequestBody request) {
+        this.request = request;
+        return this;
+    }
+    public CreateVideoThumbnailSecurity security;
+    public CreateVideoThumbnailRequest withSecurity(CreateVideoThumbnailSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

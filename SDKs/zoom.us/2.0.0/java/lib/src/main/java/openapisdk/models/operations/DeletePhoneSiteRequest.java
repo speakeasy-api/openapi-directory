@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class DeletePhoneSiteRequest {
+    public DeletePhoneSitePathParams pathParams;
+    public DeletePhoneSiteRequest withPathParams(DeletePhoneSitePathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public DeletePhoneSiteQueryParams queryParams;
+    public DeletePhoneSiteRequest withQueryParams(DeletePhoneSiteQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public DeletePhoneSiteSecurity security;
+    public DeletePhoneSiteRequest withSecurity(DeletePhoneSiteSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

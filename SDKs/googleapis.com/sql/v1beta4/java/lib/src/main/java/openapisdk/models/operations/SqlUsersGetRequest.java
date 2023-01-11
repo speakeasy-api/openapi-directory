@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class SqlUsersGetRequest {
+    public SqlUsersGetPathParams pathParams;
+    public SqlUsersGetRequest withPathParams(SqlUsersGetPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public SqlUsersGetQueryParams queryParams;
+    public SqlUsersGetRequest withQueryParams(SqlUsersGetQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public SqlUsersGetSecurity security;
+    public SqlUsersGetRequest withSecurity(SqlUsersGetSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

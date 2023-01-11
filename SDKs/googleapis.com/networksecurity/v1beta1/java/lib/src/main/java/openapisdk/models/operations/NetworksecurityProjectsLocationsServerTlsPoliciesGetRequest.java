@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class NetworksecurityProjectsLocationsServerTlsPoliciesGetRequest {
+    public NetworksecurityProjectsLocationsServerTlsPoliciesGetPathParams pathParams;
+    public NetworksecurityProjectsLocationsServerTlsPoliciesGetRequest withPathParams(NetworksecurityProjectsLocationsServerTlsPoliciesGetPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public NetworksecurityProjectsLocationsServerTlsPoliciesGetQueryParams queryParams;
+    public NetworksecurityProjectsLocationsServerTlsPoliciesGetRequest withQueryParams(NetworksecurityProjectsLocationsServerTlsPoliciesGetQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public NetworksecurityProjectsLocationsServerTlsPoliciesGetSecurity security;
+    public NetworksecurityProjectsLocationsServerTlsPoliciesGetRequest withSecurity(NetworksecurityProjectsLocationsServerTlsPoliciesGetSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

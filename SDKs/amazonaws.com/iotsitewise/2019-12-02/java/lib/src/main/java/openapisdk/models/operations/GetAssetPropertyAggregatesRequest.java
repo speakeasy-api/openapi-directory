@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class GetAssetPropertyAggregatesRequest {
+    public GetAssetPropertyAggregatesQueryParams queryParams;
+    public GetAssetPropertyAggregatesRequest withQueryParams(GetAssetPropertyAggregatesQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public GetAssetPropertyAggregatesHeaders headers;
+    public GetAssetPropertyAggregatesRequest withHeaders(GetAssetPropertyAggregatesHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+}

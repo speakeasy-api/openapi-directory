@@ -1,0 +1,24 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class GetInformationContentResourcePathParams {
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=object_category")
+    public String objectCategory;
+    public GetInformationContentResourcePathParams withObjectCategory(String objectCategory) {
+        this.objectCategory = objectCategory;
+        return this;
+    }
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=subject_category")
+    public String subjectCategory;
+    public GetInformationContentResourcePathParams withSubjectCategory(String subjectCategory) {
+        this.subjectCategory = subjectCategory;
+        return this;
+    }
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=subject_taxon")
+    public String subjectTaxon;
+    public GetInformationContentResourcePathParams withSubjectTaxon(String subjectTaxon) {
+        this.subjectTaxon = subjectTaxon;
+        return this;
+    }
+}

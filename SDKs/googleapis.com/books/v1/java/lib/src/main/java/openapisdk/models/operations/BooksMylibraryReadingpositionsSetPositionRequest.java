@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class BooksMylibraryReadingpositionsSetPositionRequest {
+    public BooksMylibraryReadingpositionsSetPositionPathParams pathParams;
+    public BooksMylibraryReadingpositionsSetPositionRequest withPathParams(BooksMylibraryReadingpositionsSetPositionPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public BooksMylibraryReadingpositionsSetPositionQueryParams queryParams;
+    public BooksMylibraryReadingpositionsSetPositionRequest withQueryParams(BooksMylibraryReadingpositionsSetPositionQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public BooksMylibraryReadingpositionsSetPositionSecurity security;
+    public BooksMylibraryReadingpositionsSetPositionRequest withSecurity(BooksMylibraryReadingpositionsSetPositionSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

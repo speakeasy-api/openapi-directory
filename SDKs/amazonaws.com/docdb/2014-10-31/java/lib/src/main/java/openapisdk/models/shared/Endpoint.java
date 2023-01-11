@@ -1,0 +1,25 @@
+package openapisdk.models.shared;
+
+
+
+/**
+ * Endpoint
+ * Network information for accessing a cluster or instance. Client programs must specify a valid endpoint to access these Amazon DocumentDB resources.
+**/
+public class Endpoint {
+    public String address;
+    public Endpoint withAddress(String address) {
+        this.address = address;
+        return this;
+    }
+    public String hostedZoneId;
+    public Endpoint withHostedZoneId(String hostedZoneId) {
+        this.hostedZoneId = hostedZoneId;
+        return this;
+    }
+    public Long port;
+    public Endpoint withPort(Long port) {
+        this.port = port;
+        return this;
+    }
+}

@@ -1,0 +1,26 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * ServiceMeshDataPlaneManagement
+ * Status of data plane management. Only reported per-member.
+**/
+public class ServiceMeshDataPlaneManagement {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("details")
+    public ServiceMeshStatusDetails[] details;
+    public ServiceMeshDataPlaneManagement withDetails(ServiceMeshStatusDetails[] details) {
+        this.details = details;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("state")
+    public ServiceMeshDataPlaneManagementStateEnum state;
+    public ServiceMeshDataPlaneManagement withState(ServiceMeshDataPlaneManagementStateEnum state) {
+        this.state = state;
+        return this;
+    }
+}

@@ -1,0 +1,44 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * NeighborConnectionDetail
+ * Details about neighboring servers.
+**/
+public class NeighborConnectionDetail {
+    @JsonProperty("connectionsCount")
+    public Long connectionsCount;
+    public NeighborConnectionDetail withConnectionsCount(Long connectionsCount) {
+        this.connectionsCount = connectionsCount;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("destinationPort")
+    public Long destinationPort;
+    public NeighborConnectionDetail withDestinationPort(Long destinationPort) {
+        this.destinationPort = destinationPort;
+        return this;
+    }
+    @JsonProperty("destinationServerId")
+    public String destinationServerId;
+    public NeighborConnectionDetail withDestinationServerId(String destinationServerId) {
+        this.destinationServerId = destinationServerId;
+        return this;
+    }
+    @JsonProperty("sourceServerId")
+    public String sourceServerId;
+    public NeighborConnectionDetail withSourceServerId(String sourceServerId) {
+        this.sourceServerId = sourceServerId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("transportProtocol")
+    public String transportProtocol;
+    public NeighborConnectionDetail withTransportProtocol(String transportProtocol) {
+        this.transportProtocol = transportProtocol;
+        return this;
+    }
+}

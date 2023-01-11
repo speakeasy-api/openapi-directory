@@ -1,0 +1,75 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * RdsDbInstance
+ * Describes an Amazon RDS instance.
+**/
+public class RdsDbInstance {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Address")
+    public String address;
+    public RdsDbInstance withAddress(String address) {
+        this.address = address;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("DbInstanceIdentifier")
+    public String dbInstanceIdentifier;
+    public RdsDbInstance withDbInstanceIdentifier(String dbInstanceIdentifier) {
+        this.dbInstanceIdentifier = dbInstanceIdentifier;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("DbPassword")
+    public String dbPassword;
+    public RdsDbInstance withDbPassword(String dbPassword) {
+        this.dbPassword = dbPassword;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("DbUser")
+    public String dbUser;
+    public RdsDbInstance withDbUser(String dbUser) {
+        this.dbUser = dbUser;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Engine")
+    public String engine;
+    public RdsDbInstance withEngine(String engine) {
+        this.engine = engine;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("MissingOnRds")
+    public Boolean missingOnRds;
+    public RdsDbInstance withMissingOnRds(Boolean missingOnRds) {
+        this.missingOnRds = missingOnRds;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("RdsDbInstanceArn")
+    public String rdsDbInstanceArn;
+    public RdsDbInstance withRdsDbInstanceArn(String rdsDbInstanceArn) {
+        this.rdsDbInstanceArn = rdsDbInstanceArn;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Region")
+    public String region;
+    public RdsDbInstance withRegion(String region) {
+        this.region = region;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("StackId")
+    public String stackId;
+    public RdsDbInstance withStackId(String stackId) {
+        this.stackId = stackId;
+        return this;
+    }
+}

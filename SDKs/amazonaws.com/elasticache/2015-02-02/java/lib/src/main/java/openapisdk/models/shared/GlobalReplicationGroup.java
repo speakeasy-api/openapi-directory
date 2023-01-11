@@ -1,0 +1,75 @@
+package openapisdk.models.shared;
+
+
+
+/**
+ * GlobalReplicationGroup
+ * <p>Consists of a primary cluster that accepts writes and an associated secondary cluster that resides in a different Amazon region. The secondary cluster accepts only reads. The primary cluster automatically replicates updates to the secondary cluster.</p> <ul> <li> <p>The <b>GlobalReplicationGroupIdSuffix</b> represents the name of the Global datastore, which is what you use to associate a secondary cluster.</p> </li> </ul>
+**/
+public class GlobalReplicationGroup {
+    public String arn;
+    public GlobalReplicationGroup withArn(String arn) {
+        this.arn = arn;
+        return this;
+    }
+    public Boolean atRestEncryptionEnabled;
+    public GlobalReplicationGroup withAtRestEncryptionEnabled(Boolean atRestEncryptionEnabled) {
+        this.atRestEncryptionEnabled = atRestEncryptionEnabled;
+        return this;
+    }
+    public Boolean authTokenEnabled;
+    public GlobalReplicationGroup withAuthTokenEnabled(Boolean authTokenEnabled) {
+        this.authTokenEnabled = authTokenEnabled;
+        return this;
+    }
+    public String cacheNodeType;
+    public GlobalReplicationGroup withCacheNodeType(String cacheNodeType) {
+        this.cacheNodeType = cacheNodeType;
+        return this;
+    }
+    public Boolean clusterEnabled;
+    public GlobalReplicationGroup withClusterEnabled(Boolean clusterEnabled) {
+        this.clusterEnabled = clusterEnabled;
+        return this;
+    }
+    public String engine;
+    public GlobalReplicationGroup withEngine(String engine) {
+        this.engine = engine;
+        return this;
+    }
+    public String engineVersion;
+    public GlobalReplicationGroup withEngineVersion(String engineVersion) {
+        this.engineVersion = engineVersion;
+        return this;
+    }
+    public GlobalNodeGroupList[] globalNodeGroups;
+    public GlobalReplicationGroup withGlobalNodeGroups(GlobalNodeGroupList[] globalNodeGroups) {
+        this.globalNodeGroups = globalNodeGroups;
+        return this;
+    }
+    public String globalReplicationGroupDescription;
+    public GlobalReplicationGroup withGlobalReplicationGroupDescription(String globalReplicationGroupDescription) {
+        this.globalReplicationGroupDescription = globalReplicationGroupDescription;
+        return this;
+    }
+    public String globalReplicationGroupId;
+    public GlobalReplicationGroup withGlobalReplicationGroupId(String globalReplicationGroupId) {
+        this.globalReplicationGroupId = globalReplicationGroupId;
+        return this;
+    }
+    public GlobalReplicationGroupMemberList[] members;
+    public GlobalReplicationGroup withMembers(GlobalReplicationGroupMemberList[] members) {
+        this.members = members;
+        return this;
+    }
+    public String status;
+    public GlobalReplicationGroup withStatus(String status) {
+        this.status = status;
+        return this;
+    }
+    public Boolean transitEncryptionEnabled;
+    public GlobalReplicationGroup withTransitEncryptionEnabled(Boolean transitEncryptionEnabled) {
+        this.transitEncryptionEnabled = transitEncryptionEnabled;
+        return this;
+    }
+}

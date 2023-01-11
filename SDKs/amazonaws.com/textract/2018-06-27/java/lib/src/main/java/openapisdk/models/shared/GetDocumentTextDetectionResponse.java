@@ -1,0 +1,57 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class GetDocumentTextDetectionResponse {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Blocks")
+    public Block[] blocks;
+    public GetDocumentTextDetectionResponse withBlocks(Block[] blocks) {
+        this.blocks = blocks;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("DetectDocumentTextModelVersion")
+    public String detectDocumentTextModelVersion;
+    public GetDocumentTextDetectionResponse withDetectDocumentTextModelVersion(String detectDocumentTextModelVersion) {
+        this.detectDocumentTextModelVersion = detectDocumentTextModelVersion;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("DocumentMetadata")
+    public DocumentMetadata documentMetadata;
+    public GetDocumentTextDetectionResponse withDocumentMetadata(DocumentMetadata documentMetadata) {
+        this.documentMetadata = documentMetadata;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("JobStatus")
+    public JobStatusEnum jobStatus;
+    public GetDocumentTextDetectionResponse withJobStatus(JobStatusEnum jobStatus) {
+        this.jobStatus = jobStatus;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("NextToken")
+    public String nextToken;
+    public GetDocumentTextDetectionResponse withNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("StatusMessage")
+    public String statusMessage;
+    public GetDocumentTextDetectionResponse withStatusMessage(String statusMessage) {
+        this.statusMessage = statusMessage;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Warnings")
+    public Warning[] warnings;
+    public GetDocumentTextDetectionResponse withWarnings(Warning[] warnings) {
+        this.warnings = warnings;
+        return this;
+    }
+}

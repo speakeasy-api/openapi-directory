@@ -1,0 +1,20 @@
+package openapisdk.models.shared;
+
+
+
+/**
+ * LoadBalancerAttribute
+ * Information about a load balancer attribute.
+**/
+public class LoadBalancerAttribute {
+    public String key;
+    public LoadBalancerAttribute withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    public String value;
+    public LoadBalancerAttribute withValue(String value) {
+        this.value = value;
+        return this;
+    }
+}

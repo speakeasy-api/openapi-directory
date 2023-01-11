@@ -1,0 +1,29 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class PredictionTag {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Probability")
+    public Float probability;
+    public PredictionTag withProbability(Float probability) {
+        this.probability = probability;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Tag")
+    public String tag;
+    public PredictionTag withTag(String tag) {
+        this.tag = tag;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("TagId")
+    public String tagId;
+    public PredictionTag withTagId(String tagId) {
+        this.tagId = tagId;
+        return this;
+    }
+}

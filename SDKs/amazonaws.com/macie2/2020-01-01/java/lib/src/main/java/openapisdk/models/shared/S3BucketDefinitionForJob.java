@@ -1,0 +1,22 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+/**
+ * S3BucketDefinitionForJob
+ * Specifies an Amazon Web Services account that owns S3 buckets for a classification job to analyze, and one or more specific buckets to analyze for that account.
+**/
+public class S3BucketDefinitionForJob {
+    @JsonProperty("accountId")
+    public String accountId;
+    public S3BucketDefinitionForJob withAccountId(String accountId) {
+        this.accountId = accountId;
+        return this;
+    }
+    @JsonProperty("buckets")
+    public String[] buckets;
+    public S3BucketDefinitionForJob withBuckets(String[] buckets) {
+        this.buckets = buckets;
+        return this;
+    }
+}

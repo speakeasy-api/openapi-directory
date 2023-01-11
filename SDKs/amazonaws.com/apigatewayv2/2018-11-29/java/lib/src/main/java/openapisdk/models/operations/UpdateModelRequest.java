@@ -1,0 +1,22 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class UpdateModelRequest {
+    public UpdateModelPathParams pathParams;
+    public UpdateModelRequest withPathParams(UpdateModelPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public UpdateModelHeaders headers;
+    public UpdateModelRequest withHeaders(UpdateModelHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public UpdateModelRequestBody request;
+    public UpdateModelRequest withRequest(UpdateModelRequestBody request) {
+        this.request = request;
+        return this;
+    }
+}

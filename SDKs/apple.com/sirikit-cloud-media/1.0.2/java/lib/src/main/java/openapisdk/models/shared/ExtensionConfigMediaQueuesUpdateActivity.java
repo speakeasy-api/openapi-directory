@@ -1,0 +1,16 @@
+package openapisdk.models.shared;
+
+
+
+public class ExtensionConfigMediaQueuesUpdateActivity {
+    public java.util.Map<String, Object> hdr;
+    public ExtensionConfigMediaQueuesUpdateActivity withHdr(java.util.Map<String, Object> hdr) {
+        this.hdr = hdr;
+        return this;
+    }
+    public String url;
+    public ExtensionConfigMediaQueuesUpdateActivity withUrl(String url) {
+        this.url = url;
+        return this;
+    }
+}

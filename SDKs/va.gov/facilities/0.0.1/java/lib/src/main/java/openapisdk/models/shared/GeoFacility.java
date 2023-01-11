@@ -1,0 +1,28 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+/**
+ * GeoFacility
+ * GeoJSON-complaint Feature object describing a VA Facility
+**/
+public class GeoFacility {
+    @JsonProperty("geometry")
+    public Geometry geometry;
+    public GeoFacility withGeometry(Geometry geometry) {
+        this.geometry = geometry;
+        return this;
+    }
+    @JsonProperty("properties")
+    public Properties properties;
+    public GeoFacility withProperties(Properties properties) {
+        this.properties = properties;
+        return this;
+    }
+    @JsonProperty("type")
+    public GeoFacilityTypeEnum type;
+    public GeoFacility withType(GeoFacilityTypeEnum type) {
+        this.type = type;
+        return this;
+    }
+}

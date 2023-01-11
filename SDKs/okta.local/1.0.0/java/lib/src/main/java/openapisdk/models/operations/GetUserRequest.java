@@ -1,0 +1,17 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class GetUserRequest {
+    public GetUserPathParams pathParams;
+    public GetUserRequest withPathParams(GetUserPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    @SpeakeasyMetadata("request:mediaType=application/octet-stream")
+    public byte[] request;
+    public GetUserRequest withRequest(byte[] request) {
+        this.request = request;
+        return this;
+    }
+}

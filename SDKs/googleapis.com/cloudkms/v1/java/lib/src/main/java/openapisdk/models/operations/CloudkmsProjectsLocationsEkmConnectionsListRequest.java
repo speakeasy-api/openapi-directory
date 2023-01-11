@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class CloudkmsProjectsLocationsEkmConnectionsListRequest {
+    public CloudkmsProjectsLocationsEkmConnectionsListPathParams pathParams;
+    public CloudkmsProjectsLocationsEkmConnectionsListRequest withPathParams(CloudkmsProjectsLocationsEkmConnectionsListPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public CloudkmsProjectsLocationsEkmConnectionsListQueryParams queryParams;
+    public CloudkmsProjectsLocationsEkmConnectionsListRequest withQueryParams(CloudkmsProjectsLocationsEkmConnectionsListQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public CloudkmsProjectsLocationsEkmConnectionsListSecurity security;
+    public CloudkmsProjectsLocationsEkmConnectionsListRequest withSecurity(CloudkmsProjectsLocationsEkmConnectionsListSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

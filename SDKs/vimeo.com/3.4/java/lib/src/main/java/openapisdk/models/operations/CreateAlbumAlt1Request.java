@@ -1,0 +1,17 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class CreateAlbumAlt1Request {
+    @SpeakeasyMetadata("request:mediaType=application/vnd.vimeo.album+json")
+    public CreateAlbumAlt1RequestBody request;
+    public CreateAlbumAlt1Request withRequest(CreateAlbumAlt1RequestBody request) {
+        this.request = request;
+        return this;
+    }
+    public CreateAlbumAlt1Security security;
+    public CreateAlbumAlt1Request withSecurity(CreateAlbumAlt1Security security) {
+        this.security = security;
+        return this;
+    }
+}

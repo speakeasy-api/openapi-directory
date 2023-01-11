@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class GetPirateGenerateNameRequest {
+    public GetPirateGenerateNameQueryParams queryParams;
+    public GetPirateGenerateNameRequest withQueryParams(GetPirateGenerateNameQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public GetPirateGenerateNameSecurity security;
+    public GetPirateGenerateNameRequest withSecurity(GetPirateGenerateNameSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

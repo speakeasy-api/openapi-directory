@@ -1,0 +1,22 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class InitiateVaultLockRequest {
+    public InitiateVaultLockPathParams pathParams;
+    public InitiateVaultLockRequest withPathParams(InitiateVaultLockPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public InitiateVaultLockHeaders headers;
+    public InitiateVaultLockRequest withHeaders(InitiateVaultLockHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public InitiateVaultLockRequestBody request;
+    public InitiateVaultLockRequest withRequest(InitiateVaultLockRequestBody request) {
+        this.request = request;
+        return this;
+    }
+}

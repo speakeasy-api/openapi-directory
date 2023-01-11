@@ -1,0 +1,25 @@
+package openapisdk.models.shared;
+
+
+
+/**
+ * DefaultClusterParameters
+ * Describes the default cluster parameters for a parameter group family.
+**/
+public class DefaultClusterParameters {
+    public String marker;
+    public DefaultClusterParameters withMarker(String marker) {
+        this.marker = marker;
+        return this;
+    }
+    public String parameterGroupFamily;
+    public DefaultClusterParameters withParameterGroupFamily(String parameterGroupFamily) {
+        this.parameterGroupFamily = parameterGroupFamily;
+        return this;
+    }
+    public ParametersList[] parameters;
+    public DefaultClusterParameters withParameters(ParametersList[] parameters) {
+        this.parameters = parameters;
+        return this;
+    }
+}

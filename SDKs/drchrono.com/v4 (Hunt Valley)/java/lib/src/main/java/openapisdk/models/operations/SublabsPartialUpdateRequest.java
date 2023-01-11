@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class SublabsPartialUpdateRequest {
+    public SublabsPartialUpdatePathParams pathParams;
+    public SublabsPartialUpdateRequest withPathParams(SublabsPartialUpdatePathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public SublabsPartialUpdateSecurity security;
+    public SublabsPartialUpdateRequest withSecurity(SublabsPartialUpdateSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

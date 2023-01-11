@@ -1,0 +1,20 @@
+package openapisdk.models.shared;
+
+
+
+/**
+ * ModifyLoadBalancerAttributesOutput
+ * Contains the output of ModifyLoadBalancerAttributes.
+**/
+public class ModifyLoadBalancerAttributesOutput {
+    public LoadBalancerAttributes loadBalancerAttributes;
+    public ModifyLoadBalancerAttributesOutput withLoadBalancerAttributes(LoadBalancerAttributes loadBalancerAttributes) {
+        this.loadBalancerAttributes = loadBalancerAttributes;
+        return this;
+    }
+    public String loadBalancerName;
+    public ModifyLoadBalancerAttributesOutput withLoadBalancerName(String loadBalancerName) {
+        this.loadBalancerName = loadBalancerName;
+        return this;
+    }
+}

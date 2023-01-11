@@ -1,0 +1,50 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class GetCoreDefinitionVersionResponse {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Arn")
+    public String arn;
+    public GetCoreDefinitionVersionResponse withArn(String arn) {
+        this.arn = arn;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("CreationTimestamp")
+    public String creationTimestamp;
+    public GetCoreDefinitionVersionResponse withCreationTimestamp(String creationTimestamp) {
+        this.creationTimestamp = creationTimestamp;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Definition")
+    public CoreDefinitionVersion definition;
+    public GetCoreDefinitionVersionResponse withDefinition(CoreDefinitionVersion definition) {
+        this.definition = definition;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Id")
+    public String id;
+    public GetCoreDefinitionVersionResponse withId(String id) {
+        this.id = id;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("NextToken")
+    public String nextToken;
+    public GetCoreDefinitionVersionResponse withNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Version")
+    public String version;
+    public GetCoreDefinitionVersionResponse withVersion(String version) {
+        this.version = version;
+        return this;
+    }
+}

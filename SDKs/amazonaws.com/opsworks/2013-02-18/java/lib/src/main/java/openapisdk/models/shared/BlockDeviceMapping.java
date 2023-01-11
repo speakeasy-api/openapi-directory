@@ -1,0 +1,40 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * BlockDeviceMapping
+ * Describes a block device mapping. This data type maps directly to the Amazon EC2 <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_BlockDeviceMapping.html">BlockDeviceMapping</a> data type. 
+**/
+public class BlockDeviceMapping {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("DeviceName")
+    public String deviceName;
+    public BlockDeviceMapping withDeviceName(String deviceName) {
+        this.deviceName = deviceName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Ebs")
+    public EbsBlockDevice ebs;
+    public BlockDeviceMapping withEbs(EbsBlockDevice ebs) {
+        this.ebs = ebs;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("NoDevice")
+    public String noDevice;
+    public BlockDeviceMapping withNoDevice(String noDevice) {
+        this.noDevice = noDevice;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("VirtualName")
+    public String virtualName;
+    public BlockDeviceMapping withVirtualName(String virtualName) {
+        this.virtualName = virtualName;
+        return this;
+    }
+}

@@ -1,0 +1,47 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * DomainIspPlacement
+ * An object that contains inbox placement data for email sent from one of your email domains to a specific email provider.
+**/
+public class DomainIspPlacement {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("InboxPercentage")
+    public Double inboxPercentage;
+    public DomainIspPlacement withInboxPercentage(Double inboxPercentage) {
+        this.inboxPercentage = inboxPercentage;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("InboxRawCount")
+    public Long inboxRawCount;
+    public DomainIspPlacement withInboxRawCount(Long inboxRawCount) {
+        this.inboxRawCount = inboxRawCount;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("IspName")
+    public String ispName;
+    public DomainIspPlacement withIspName(String ispName) {
+        this.ispName = ispName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("SpamPercentage")
+    public Double spamPercentage;
+    public DomainIspPlacement withSpamPercentage(Double spamPercentage) {
+        this.spamPercentage = spamPercentage;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("SpamRawCount")
+    public Long spamRawCount;
+    public DomainIspPlacement withSpamRawCount(Long spamRawCount) {
+        this.spamRawCount = spamRawCount;
+        return this;
+    }
+}

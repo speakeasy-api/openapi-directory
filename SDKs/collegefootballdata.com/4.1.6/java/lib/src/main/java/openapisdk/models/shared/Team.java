@@ -1,0 +1,99 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class Team {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("abbreviation")
+    public String abbreviation;
+    public Team withAbbreviation(String abbreviation) {
+        this.abbreviation = abbreviation;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("alt_color")
+    public String altColor;
+    public Team withAltColor(String altColor) {
+        this.altColor = altColor;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("alt_name_1")
+    public String altName1;
+    public Team withAltName1(String altName1) {
+        this.altName1 = altName1;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("alt_name_2")
+    public String altName2;
+    public Team withAltName2(String altName2) {
+        this.altName2 = altName2;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("alt_name_3")
+    public String altName3;
+    public Team withAltName3(String altName3) {
+        this.altName3 = altName3;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("color")
+    public String color;
+    public Team withColor(String color) {
+        this.color = color;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("conference")
+    public String conference;
+    public Team withConference(String conference) {
+        this.conference = conference;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("division")
+    public String division;
+    public Team withDivision(String division) {
+        this.division = division;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("id")
+    public Long id;
+    public Team withId(Long id) {
+        this.id = id;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("location")
+    public TeamLocation location;
+    public Team withLocation(TeamLocation location) {
+        this.location = location;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("logos")
+    public String[] logos;
+    public Team withLogos(String[] logos) {
+        this.logos = logos;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("mascot")
+    public String mascot;
+    public Team withMascot(String mascot) {
+        this.mascot = mascot;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("school")
+    public String school;
+    public Team withSchool(String school) {
+        this.school = school;
+        return this;
+    }
+}

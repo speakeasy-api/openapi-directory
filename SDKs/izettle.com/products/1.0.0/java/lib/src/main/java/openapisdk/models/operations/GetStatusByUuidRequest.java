@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class GetStatusByUuidRequest {
+    public GetStatusByUuidPathParams pathParams;
+    public GetStatusByUuidRequest withPathParams(GetStatusByUuidPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public GetStatusByUuidSecurity security;
+    public GetStatusByUuidRequest withSecurity(GetStatusByUuidSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

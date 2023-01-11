@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class DisplayvideoAdvertisersInsertionOrdersGetRequest {
+    public DisplayvideoAdvertisersInsertionOrdersGetPathParams pathParams;
+    public DisplayvideoAdvertisersInsertionOrdersGetRequest withPathParams(DisplayvideoAdvertisersInsertionOrdersGetPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public DisplayvideoAdvertisersInsertionOrdersGetQueryParams queryParams;
+    public DisplayvideoAdvertisersInsertionOrdersGetRequest withQueryParams(DisplayvideoAdvertisersInsertionOrdersGetQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public DisplayvideoAdvertisersInsertionOrdersGetSecurity security;
+    public DisplayvideoAdvertisersInsertionOrdersGetRequest withSecurity(DisplayvideoAdvertisersInsertionOrdersGetSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

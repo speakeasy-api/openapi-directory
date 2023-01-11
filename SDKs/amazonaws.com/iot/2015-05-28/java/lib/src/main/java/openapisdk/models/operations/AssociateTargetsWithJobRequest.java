@@ -1,0 +1,27 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class AssociateTargetsWithJobRequest {
+    public AssociateTargetsWithJobPathParams pathParams;
+    public AssociateTargetsWithJobRequest withPathParams(AssociateTargetsWithJobPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public AssociateTargetsWithJobQueryParams queryParams;
+    public AssociateTargetsWithJobRequest withQueryParams(AssociateTargetsWithJobQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public AssociateTargetsWithJobHeaders headers;
+    public AssociateTargetsWithJobRequest withHeaders(AssociateTargetsWithJobHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public AssociateTargetsWithJobRequestBody request;
+    public AssociateTargetsWithJobRequest withRequest(AssociateTargetsWithJobRequestBody request) {
+        this.request = request;
+        return this;
+    }
+}

@@ -1,0 +1,29 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class CreateProductOutput {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ProductViewDetail")
+    public ProductViewDetail productViewDetail;
+    public CreateProductOutput withProductViewDetail(ProductViewDetail productViewDetail) {
+        this.productViewDetail = productViewDetail;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ProvisioningArtifactDetail")
+    public ProvisioningArtifactDetail provisioningArtifactDetail;
+    public CreateProductOutput withProvisioningArtifactDetail(ProvisioningArtifactDetail provisioningArtifactDetail) {
+        this.provisioningArtifactDetail = provisioningArtifactDetail;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Tags")
+    public Tag[] tags;
+    public CreateProductOutput withTags(Tag[] tags) {
+        this.tags = tags;
+        return this;
+    }
+}

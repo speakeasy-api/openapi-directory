@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class DatastreamProjectsLocationsStreamsObjectsListRequest {
+    public DatastreamProjectsLocationsStreamsObjectsListPathParams pathParams;
+    public DatastreamProjectsLocationsStreamsObjectsListRequest withPathParams(DatastreamProjectsLocationsStreamsObjectsListPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public DatastreamProjectsLocationsStreamsObjectsListQueryParams queryParams;
+    public DatastreamProjectsLocationsStreamsObjectsListRequest withQueryParams(DatastreamProjectsLocationsStreamsObjectsListQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public DatastreamProjectsLocationsStreamsObjectsListSecurity security;
+    public DatastreamProjectsLocationsStreamsObjectsListRequest withSecurity(DatastreamProjectsLocationsStreamsObjectsListSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

@@ -1,0 +1,29 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class CreateAliasModel {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("destinations")
+    public DestinationModel[] destinations;
+    public CreateAliasModel withDestinations(DestinationModel[] destinations) {
+        this.destinations = destinations;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("metatags")
+    public MetaTagModel[] metatags;
+    public CreateAliasModel withMetatags(MetaTagModel[] metatags) {
+        this.metatags = metatags;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("snippets")
+    public SnippetModel[] snippets;
+    public CreateAliasModel withSnippets(SnippetModel[] snippets) {
+        this.snippets = snippets;
+        return this;
+    }
+}

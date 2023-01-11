@@ -1,0 +1,162 @@
+# openapisdk
+
+<!-- Start SDK Installation -->
+## SDK Installation
+
+### Gradle
+
+```groovy
+implementation 'openapisdk:openapisdk:0.0.1'
+```
+<!-- End SDK Installation -->
+
+## SDK Example Usage
+<!-- Start SDK Example Usage -->
+```java
+package hello.world;
+
+import openapisdk.SDK;
+import openapisdk.models.shared.Security;
+
+public class Application {
+    public static void main(String[] args) {
+        try {
+            SDK.Builder builder = SDK.builder();
+
+            builder.setSecurity(
+                new Security() {{
+                    hmac = new SchemeHmac() {{
+                        apiKey = "YOUR_API_KEY_HERE";
+                    }};
+                }}
+            );
+
+            SDK sdk = builder.build();
+
+            GetAddSourceIdentifierToSubscriptionRequest req = new GetAddSourceIdentifierToSubscriptionRequest() {{
+                queryParams = new GetAddSourceIdentifierToSubscriptionQueryParams() {{
+                    action = "AddSourceIdentifierToSubscription";
+                    sourceIdentifier = "ad";
+                    subscriptionName = "ut";
+                    version = "2013-01-10";
+                }};
+                headers = new GetAddSourceIdentifierToSubscriptionHeaders() {{
+                    xAmzAlgorithm = "qui";
+                    xAmzContentSha256 = "in";
+                    xAmzCredential = "ea";
+                    xAmzDate = "voluptate";
+                    xAmzSecurityToken = "et";
+                    xAmzSignature = "consequatur";
+                    xAmzSignedHeaders = "aliquam";
+                }};
+            }};
+
+            GetAddSourceIdentifierToSubscriptionResponse res = sdk.getAddSourceIdentifierToSubscription(req);
+
+            if (res.body.isPresent()) {
+                // handle response
+            }
+        } catch (Exception e) {
+            // handle exception
+        }
+```
+<!-- End SDK Example Usage -->
+
+<!-- Start SDK Available Operations -->
+## SDK Available Operations
+
+### SDK SDK
+
+* `getAddSourceIdentifierToSubscription`
+* `getAuthorizeDbSecurityGroupIngress`
+* `getCopyDbSnapshot`
+* `getCreateDbInstanceReadReplica`
+* `getCreateDbParameterGroup`
+* `getCreateDbSecurityGroup`
+* `getCreateDbSnapshot`
+* `getCreateOptionGroup`
+* `getDeleteDbInstance`
+* `getDeleteDbParameterGroup`
+* `getDeleteDbSecurityGroup`
+* `getDeleteDbSnapshot`
+* `getDeleteDbSubnetGroup`
+* `getDeleteEventSubscription`
+* `getDeleteOptionGroup`
+* `getDescribeDbEngineVersions`
+* `getDescribeDbInstances`
+* `getDescribeDbParameterGroups`
+* `getDescribeDbParameters`
+* `getDescribeDbSecurityGroups`
+* `getDescribeDbSnapshots`
+* `getDescribeDbSubnetGroups`
+* `getDescribeEngineDefaultParameters`
+* `getDescribeEventCategories`
+* `getDescribeEventSubscriptions`
+* `getDescribeOptionGroupOptions`
+* `getDescribeOptionGroups`
+* `getDescribeOrderableDbInstanceOptions`
+* `getDescribeReservedDbInstances`
+* `getDescribeReservedDbInstancesOfferings`
+* `getListTagsForResource`
+* `getPromoteReadReplica`
+* `getPurchaseReservedDbInstancesOffering`
+* `getRebootDbInstance`
+* `getRemoveSourceIdentifierFromSubscription`
+* `getRemoveTagsFromResource`
+* `getRestoreDbInstanceFromDbSnapshot`
+* `getRestoreDbInstanceToPointInTime`
+* `getRevokeDbSecurityGroupIngress`
+* `postAddSourceIdentifierToSubscription`
+* `postAddTagsToResource`
+* `postAuthorizeDbSecurityGroupIngress`
+* `postCopyDbSnapshot`
+* `postCreateDbInstance`
+* `postCreateDbInstanceReadReplica`
+* `postCreateDbParameterGroup`
+* `postCreateDbSecurityGroup`
+* `postCreateDbSnapshot`
+* `postCreateDbSubnetGroup`
+* `postCreateEventSubscription`
+* `postCreateOptionGroup`
+* `postDeleteDbInstance`
+* `postDeleteDbParameterGroup`
+* `postDeleteDbSecurityGroup`
+* `postDeleteDbSnapshot`
+* `postDeleteDbSubnetGroup`
+* `postDeleteEventSubscription`
+* `postDeleteOptionGroup`
+* `postDescribeDbEngineVersions`
+* `postDescribeDbInstances`
+* `postDescribeDbParameterGroups`
+* `postDescribeDbParameters`
+* `postDescribeDbSecurityGroups`
+* `postDescribeDbSnapshots`
+* `postDescribeDbSubnetGroups`
+* `postDescribeEngineDefaultParameters`
+* `postDescribeEventCategories`
+* `postDescribeEventSubscriptions`
+* `postDescribeEvents`
+* `postDescribeOptionGroupOptions`
+* `postDescribeOptionGroups`
+* `postDescribeOrderableDbInstanceOptions`
+* `postDescribeReservedDbInstances`
+* `postDescribeReservedDbInstancesOfferings`
+* `postListTagsForResource`
+* `postModifyDbInstance`
+* `postModifyDbParameterGroup`
+* `postModifyDbSubnetGroup`
+* `postModifyEventSubscription`
+* `postModifyOptionGroup`
+* `postPromoteReadReplica`
+* `postPurchaseReservedDbInstancesOffering`
+* `postRebootDbInstance`
+* `postRemoveSourceIdentifierFromSubscription`
+* `postRemoveTagsFromResource`
+* `postResetDbParameterGroup`
+* `postRestoreDbInstanceFromDbSnapshot`
+* `postRestoreDbInstanceToPointInTime`
+* `postRevokeDbSecurityGroupIngress`
+
+<!-- End SDK Available Operations -->
+
+### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

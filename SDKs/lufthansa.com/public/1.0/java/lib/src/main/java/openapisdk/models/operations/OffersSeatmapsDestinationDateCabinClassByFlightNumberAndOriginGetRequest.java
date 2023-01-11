@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class OffersSeatmapsDestinationDateCabinClassByFlightNumberAndOriginGetRequest {
+    public OffersSeatmapsDestinationDateCabinClassByFlightNumberAndOriginGetPathParams pathParams;
+    public OffersSeatmapsDestinationDateCabinClassByFlightNumberAndOriginGetRequest withPathParams(OffersSeatmapsDestinationDateCabinClassByFlightNumberAndOriginGetPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public OffersSeatmapsDestinationDateCabinClassByFlightNumberAndOriginGetHeaders headers;
+    public OffersSeatmapsDestinationDateCabinClassByFlightNumberAndOriginGetRequest withHeaders(OffersSeatmapsDestinationDateCabinClassByFlightNumberAndOriginGetHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+    public OffersSeatmapsDestinationDateCabinClassByFlightNumberAndOriginGetSecurity security;
+    public OffersSeatmapsDestinationDateCabinClassByFlightNumberAndOriginGetRequest withSecurity(OffersSeatmapsDestinationDateCabinClassByFlightNumberAndOriginGetSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

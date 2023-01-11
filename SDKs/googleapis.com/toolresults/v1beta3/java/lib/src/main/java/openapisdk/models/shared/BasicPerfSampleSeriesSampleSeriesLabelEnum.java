@@ -1,0 +1,24 @@
+package openapisdk.models.shared;
+
+
+public enum BasicPerfSampleSeriesSampleSeriesLabelEnum {
+    SAMPLE_SERIES_TYPE_UNSPECIFIED("sampleSeriesTypeUnspecified"),
+    MEMORY_RSS_PRIVATE("memoryRssPrivate"),
+    MEMORY_RSS_SHARED("memoryRssShared"),
+    MEMORY_RSS_TOTAL("memoryRssTotal"),
+    MEMORY_TOTAL("memoryTotal"),
+    CPU_USER("cpuUser"),
+    CPU_KERNEL("cpuKernel"),
+    CPU_TOTAL("cpuTotal"),
+    NT_BYTES_TRANSFERRED("ntBytesTransferred"),
+    NT_BYTES_RECEIVED("ntBytesReceived"),
+    NETWORK_SENT("networkSent"),
+    NETWORK_RECEIVED("networkReceived"),
+    GRAPHICS_FRAME_RATE("graphicsFrameRate");
+
+    public final String value;
+
+    private BasicPerfSampleSeriesSampleSeriesLabelEnum(String value) {
+        this.value = value;
+    }
+}

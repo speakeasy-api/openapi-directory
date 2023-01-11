@@ -1,0 +1,40 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * CampaignEmailMessage
+ * Specifies the content and "From" address for an email message that's sent to recipients of a campaign.
+**/
+public class CampaignEmailMessage {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Body")
+    public String body;
+    public CampaignEmailMessage withBody(String body) {
+        this.body = body;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("FromAddress")
+    public String fromAddress;
+    public CampaignEmailMessage withFromAddress(String fromAddress) {
+        this.fromAddress = fromAddress;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("HtmlBody")
+    public String htmlBody;
+    public CampaignEmailMessage withHtmlBody(String htmlBody) {
+        this.htmlBody = htmlBody;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Title")
+    public String title;
+    public CampaignEmailMessage withTitle(String title) {
+        this.title = title;
+        return this;
+    }
+}

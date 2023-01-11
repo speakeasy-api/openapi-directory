@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class DescribeBackupPolicyRequest {
+    public DescribeBackupPolicyPathParams pathParams;
+    public DescribeBackupPolicyRequest withPathParams(DescribeBackupPolicyPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public DescribeBackupPolicyHeaders headers;
+    public DescribeBackupPolicyRequest withHeaders(DescribeBackupPolicyHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+}

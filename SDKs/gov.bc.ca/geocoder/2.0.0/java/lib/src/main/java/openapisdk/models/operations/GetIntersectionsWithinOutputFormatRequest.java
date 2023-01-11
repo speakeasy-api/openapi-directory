@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class GetIntersectionsWithinOutputFormatRequest {
+    public GetIntersectionsWithinOutputFormatPathParams pathParams;
+    public GetIntersectionsWithinOutputFormatRequest withPathParams(GetIntersectionsWithinOutputFormatPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public GetIntersectionsWithinOutputFormatQueryParams queryParams;
+    public GetIntersectionsWithinOutputFormatRequest withQueryParams(GetIntersectionsWithinOutputFormatQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+}

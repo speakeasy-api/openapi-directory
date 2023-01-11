@@ -1,0 +1,21 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class StartAssessmentRunRequest {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("assessmentRunName")
+    public String assessmentRunName;
+    public StartAssessmentRunRequest withAssessmentRunName(String assessmentRunName) {
+        this.assessmentRunName = assessmentRunName;
+        return this;
+    }
+    @JsonProperty("assessmentTemplateArn")
+    public String assessmentTemplateArn;
+    public StartAssessmentRunRequest withAssessmentTemplateArn(String assessmentTemplateArn) {
+        this.assessmentTemplateArn = assessmentTemplateArn;
+        return this;
+    }
+}

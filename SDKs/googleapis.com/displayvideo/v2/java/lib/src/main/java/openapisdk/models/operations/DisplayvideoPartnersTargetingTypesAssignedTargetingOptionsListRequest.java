@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class DisplayvideoPartnersTargetingTypesAssignedTargetingOptionsListRequest {
+    public DisplayvideoPartnersTargetingTypesAssignedTargetingOptionsListPathParams pathParams;
+    public DisplayvideoPartnersTargetingTypesAssignedTargetingOptionsListRequest withPathParams(DisplayvideoPartnersTargetingTypesAssignedTargetingOptionsListPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public DisplayvideoPartnersTargetingTypesAssignedTargetingOptionsListQueryParams queryParams;
+    public DisplayvideoPartnersTargetingTypesAssignedTargetingOptionsListRequest withQueryParams(DisplayvideoPartnersTargetingTypesAssignedTargetingOptionsListQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public DisplayvideoPartnersTargetingTypesAssignedTargetingOptionsListSecurity security;
+    public DisplayvideoPartnersTargetingTypesAssignedTargetingOptionsListRequest withSecurity(DisplayvideoPartnersTargetingTypesAssignedTargetingOptionsListSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

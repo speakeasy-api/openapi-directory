@@ -1,0 +1,30 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class YoutubeChannelSectionsListSecurity {
+    @SpeakeasyMetadata("security:option=true")
+    public YoutubeChannelSectionsListSecurityOption1 option1;
+    public YoutubeChannelSectionsListSecurity withOption1(YoutubeChannelSectionsListSecurityOption1 option1) {
+        this.option1 = option1;
+        return this;
+    }
+    @SpeakeasyMetadata("security:option=true")
+    public YoutubeChannelSectionsListSecurityOption2 option2;
+    public YoutubeChannelSectionsListSecurity withOption2(YoutubeChannelSectionsListSecurityOption2 option2) {
+        this.option2 = option2;
+        return this;
+    }
+    @SpeakeasyMetadata("security:option=true")
+    public YoutubeChannelSectionsListSecurityOption3 option3;
+    public YoutubeChannelSectionsListSecurity withOption3(YoutubeChannelSectionsListSecurityOption3 option3) {
+        this.option3 = option3;
+        return this;
+    }
+    @SpeakeasyMetadata("security:option=true")
+    public YoutubeChannelSectionsListSecurityOption4 option4;
+    public YoutubeChannelSectionsListSecurity withOption4(YoutubeChannelSectionsListSecurityOption4 option4) {
+        this.option4 = option4;
+        return this;
+    }
+}

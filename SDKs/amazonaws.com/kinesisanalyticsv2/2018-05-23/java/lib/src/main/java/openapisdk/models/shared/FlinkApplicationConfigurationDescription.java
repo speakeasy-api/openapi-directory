@@ -1,0 +1,40 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * FlinkApplicationConfigurationDescription
+ * Describes configuration parameters for a Flink-based Kinesis Data Analytics application.
+**/
+public class FlinkApplicationConfigurationDescription {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("CheckpointConfigurationDescription")
+    public CheckpointConfigurationDescription checkpointConfigurationDescription;
+    public FlinkApplicationConfigurationDescription withCheckpointConfigurationDescription(CheckpointConfigurationDescription checkpointConfigurationDescription) {
+        this.checkpointConfigurationDescription = checkpointConfigurationDescription;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("JobPlanDescription")
+    public String jobPlanDescription;
+    public FlinkApplicationConfigurationDescription withJobPlanDescription(String jobPlanDescription) {
+        this.jobPlanDescription = jobPlanDescription;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("MonitoringConfigurationDescription")
+    public MonitoringConfigurationDescription monitoringConfigurationDescription;
+    public FlinkApplicationConfigurationDescription withMonitoringConfigurationDescription(MonitoringConfigurationDescription monitoringConfigurationDescription) {
+        this.monitoringConfigurationDescription = monitoringConfigurationDescription;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ParallelismConfigurationDescription")
+    public ParallelismConfigurationDescription parallelismConfigurationDescription;
+    public FlinkApplicationConfigurationDescription withParallelismConfigurationDescription(ParallelismConfigurationDescription parallelismConfigurationDescription) {
+        this.parallelismConfigurationDescription = parallelismConfigurationDescription;
+        return this;
+    }
+}

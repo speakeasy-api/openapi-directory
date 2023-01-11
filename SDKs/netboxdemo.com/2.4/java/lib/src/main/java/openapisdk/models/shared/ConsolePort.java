@@ -1,0 +1,48 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class ConsolePort {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("connection_status")
+    public Boolean connectionStatus;
+    public ConsolePort withConnectionStatus(Boolean connectionStatus) {
+        this.connectionStatus = connectionStatus;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("cs_port")
+    public NestedConsoleServerPort csPort;
+    public ConsolePort withCsPort(NestedConsoleServerPort csPort) {
+        this.csPort = csPort;
+        return this;
+    }
+    @JsonProperty("device")
+    public NestedDevice device;
+    public ConsolePort withDevice(NestedDevice device) {
+        this.device = device;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("id")
+    public Long id;
+    public ConsolePort withId(Long id) {
+        this.id = id;
+        return this;
+    }
+    @JsonProperty("name")
+    public String name;
+    public ConsolePort withName(String name) {
+        this.name = name;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("tags")
+    public String[] tags;
+    public ConsolePort withTags(String[] tags) {
+        this.tags = tags;
+        return this;
+    }
+}

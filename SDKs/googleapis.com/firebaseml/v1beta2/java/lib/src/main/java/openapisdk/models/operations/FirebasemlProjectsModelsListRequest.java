@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class FirebasemlProjectsModelsListRequest {
+    public FirebasemlProjectsModelsListPathParams pathParams;
+    public FirebasemlProjectsModelsListRequest withPathParams(FirebasemlProjectsModelsListPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public FirebasemlProjectsModelsListQueryParams queryParams;
+    public FirebasemlProjectsModelsListRequest withQueryParams(FirebasemlProjectsModelsListQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public FirebasemlProjectsModelsListSecurity security;
+    public FirebasemlProjectsModelsListRequest withSecurity(FirebasemlProjectsModelsListSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

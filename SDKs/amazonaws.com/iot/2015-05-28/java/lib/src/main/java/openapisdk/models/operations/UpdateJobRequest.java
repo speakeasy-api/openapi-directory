@@ -1,0 +1,27 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class UpdateJobRequest {
+    public UpdateJobPathParams pathParams;
+    public UpdateJobRequest withPathParams(UpdateJobPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public UpdateJobQueryParams queryParams;
+    public UpdateJobRequest withQueryParams(UpdateJobQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public UpdateJobHeaders headers;
+    public UpdateJobRequest withHeaders(UpdateJobHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public UpdateJobRequestBody request;
+    public UpdateJobRequest withRequest(UpdateJobRequestBody request) {
+        this.request = request;
+        return this;
+    }
+}

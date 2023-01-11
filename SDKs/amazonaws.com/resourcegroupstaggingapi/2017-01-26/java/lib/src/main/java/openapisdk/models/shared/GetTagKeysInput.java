@@ -1,0 +1,15 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class GetTagKeysInput {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("PaginationToken")
+    public String paginationToken;
+    public GetTagKeysInput withPaginationToken(String paginationToken) {
+        this.paginationToken = paginationToken;
+        return this;
+    }
+}

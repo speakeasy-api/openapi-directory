@@ -1,0 +1,145 @@
+package openapisdk.models.shared;
+
+import java.time.OffsetDateTime;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import openapisdk.utils.DateTimeSerializer;
+import openapisdk.utils.DateTimeDeserializer;
+
+/**
+ * AssessmentEvidenceFolder
+ *  The folder in which Audit Manager stores evidence for an assessment. 
+**/
+public class AssessmentEvidenceFolder {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("assessmentId")
+    public String assessmentId;
+    public AssessmentEvidenceFolder withAssessmentId(String assessmentId) {
+        this.assessmentId = assessmentId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("assessmentReportSelectionCount")
+    public Long assessmentReportSelectionCount;
+    public AssessmentEvidenceFolder withAssessmentReportSelectionCount(Long assessmentReportSelectionCount) {
+        this.assessmentReportSelectionCount = assessmentReportSelectionCount;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("author")
+    public String author;
+    public AssessmentEvidenceFolder withAuthor(String author) {
+        this.author = author;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("controlId")
+    public String controlId;
+    public AssessmentEvidenceFolder withControlId(String controlId) {
+        this.controlId = controlId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("controlName")
+    public String controlName;
+    public AssessmentEvidenceFolder withControlName(String controlName) {
+        this.controlName = controlName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("controlSetId")
+    public String controlSetId;
+    public AssessmentEvidenceFolder withControlSetId(String controlSetId) {
+        this.controlSetId = controlSetId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("dataSource")
+    public String dataSource;
+    public AssessmentEvidenceFolder withDataSource(String dataSource) {
+        this.dataSource = dataSource;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonSerialize(contentUsing = DateTimeSerializer.class)
+    @JsonDeserialize(contentUsing = DateTimeDeserializer.class)
+    @JsonProperty("date")
+    public OffsetDateTime date;
+    public AssessmentEvidenceFolder withDate(OffsetDateTime date) {
+        this.date = date;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("evidenceAwsServiceSourceCount")
+    public Long evidenceAwsServiceSourceCount;
+    public AssessmentEvidenceFolder withEvidenceAwsServiceSourceCount(Long evidenceAwsServiceSourceCount) {
+        this.evidenceAwsServiceSourceCount = evidenceAwsServiceSourceCount;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("evidenceByTypeComplianceCheckCount")
+    public Long evidenceByTypeComplianceCheckCount;
+    public AssessmentEvidenceFolder withEvidenceByTypeComplianceCheckCount(Long evidenceByTypeComplianceCheckCount) {
+        this.evidenceByTypeComplianceCheckCount = evidenceByTypeComplianceCheckCount;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("evidenceByTypeComplianceCheckIssuesCount")
+    public Long evidenceByTypeComplianceCheckIssuesCount;
+    public AssessmentEvidenceFolder withEvidenceByTypeComplianceCheckIssuesCount(Long evidenceByTypeComplianceCheckIssuesCount) {
+        this.evidenceByTypeComplianceCheckIssuesCount = evidenceByTypeComplianceCheckIssuesCount;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("evidenceByTypeConfigurationDataCount")
+    public Long evidenceByTypeConfigurationDataCount;
+    public AssessmentEvidenceFolder withEvidenceByTypeConfigurationDataCount(Long evidenceByTypeConfigurationDataCount) {
+        this.evidenceByTypeConfigurationDataCount = evidenceByTypeConfigurationDataCount;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("evidenceByTypeManualCount")
+    public Long evidenceByTypeManualCount;
+    public AssessmentEvidenceFolder withEvidenceByTypeManualCount(Long evidenceByTypeManualCount) {
+        this.evidenceByTypeManualCount = evidenceByTypeManualCount;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("evidenceByTypeUserActivityCount")
+    public Long evidenceByTypeUserActivityCount;
+    public AssessmentEvidenceFolder withEvidenceByTypeUserActivityCount(Long evidenceByTypeUserActivityCount) {
+        this.evidenceByTypeUserActivityCount = evidenceByTypeUserActivityCount;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("evidenceResourcesIncludedCount")
+    public Long evidenceResourcesIncludedCount;
+    public AssessmentEvidenceFolder withEvidenceResourcesIncludedCount(Long evidenceResourcesIncludedCount) {
+        this.evidenceResourcesIncludedCount = evidenceResourcesIncludedCount;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("id")
+    public String id;
+    public AssessmentEvidenceFolder withId(String id) {
+        this.id = id;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("name")
+    public String name;
+    public AssessmentEvidenceFolder withName(String name) {
+        this.name = name;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("totalEvidence")
+    public Long totalEvidence;
+    public AssessmentEvidenceFolder withTotalEvidence(Long totalEvidence) {
+        this.totalEvidence = totalEvidence;
+        return this;
+    }
+}

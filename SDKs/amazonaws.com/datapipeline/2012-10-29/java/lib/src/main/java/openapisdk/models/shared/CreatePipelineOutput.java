@@ -1,0 +1,16 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+/**
+ * CreatePipelineOutput
+ * Contains the output of CreatePipeline.
+**/
+public class CreatePipelineOutput {
+    @JsonProperty("pipelineId")
+    public String pipelineId;
+    public CreatePipelineOutput withPipelineId(String pipelineId) {
+        this.pipelineId = pipelineId;
+        return this;
+    }
+}

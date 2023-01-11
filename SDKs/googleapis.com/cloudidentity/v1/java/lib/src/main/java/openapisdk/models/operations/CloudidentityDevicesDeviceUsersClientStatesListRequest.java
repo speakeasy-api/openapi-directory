@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class CloudidentityDevicesDeviceUsersClientStatesListRequest {
+    public CloudidentityDevicesDeviceUsersClientStatesListPathParams pathParams;
+    public CloudidentityDevicesDeviceUsersClientStatesListRequest withPathParams(CloudidentityDevicesDeviceUsersClientStatesListPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public CloudidentityDevicesDeviceUsersClientStatesListQueryParams queryParams;
+    public CloudidentityDevicesDeviceUsersClientStatesListRequest withQueryParams(CloudidentityDevicesDeviceUsersClientStatesListQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public CloudidentityDevicesDeviceUsersClientStatesListSecurity security;
+    public CloudidentityDevicesDeviceUsersClientStatesListRequest withSecurity(CloudidentityDevicesDeviceUsersClientStatesListSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

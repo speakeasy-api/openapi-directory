@@ -1,0 +1,27 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class InvokeRequest {
+    public InvokePathParams pathParams;
+    public InvokeRequest withPathParams(InvokePathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public InvokeQueryParams queryParams;
+    public InvokeRequest withQueryParams(InvokeQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public InvokeHeaders headers;
+    public InvokeRequest withHeaders(InvokeHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public InvokeRequestBody request;
+    public InvokeRequest withRequest(InvokeRequestBody request) {
+        this.request = request;
+        return this;
+    }
+}

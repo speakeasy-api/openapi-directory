@@ -1,0 +1,151 @@
+package openapisdk.models.operations;
+
+import java.time.LocalDate;
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class GetSchedulesScheduleDQueryParams {
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api_key")
+    public String apiKey;
+    public GetSchedulesScheduleDQueryParams withApiKey(String apiKey) {
+        this.apiKey = apiKey;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=candidate_id")
+    public String[] candidateId;
+    public GetSchedulesScheduleDQueryParams withCandidateId(String[] candidateId) {
+        this.candidateId = candidateId;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=committee_id")
+    public String[] committeeId;
+    public GetSchedulesScheduleDQueryParams withCommitteeId(String[] committeeId) {
+        this.committeeId = committeeId;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=creditor_debtor_name")
+    public String[] creditorDebtorName;
+    public GetSchedulesScheduleDQueryParams withCreditorDebtorName(String[] creditorDebtorName) {
+        this.creditorDebtorName = creditorDebtorName;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=image_number")
+    public String[] imageNumber;
+    public GetSchedulesScheduleDQueryParams withImageNumber(String[] imageNumber) {
+        this.imageNumber = imageNumber;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max_amount_incurred")
+    public Float maxAmountIncurred;
+    public GetSchedulesScheduleDQueryParams withMaxAmountIncurred(Float maxAmountIncurred) {
+        this.maxAmountIncurred = maxAmountIncurred;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max_amount_outstanding_beginning")
+    public Float maxAmountOutstandingBeginning;
+    public GetSchedulesScheduleDQueryParams withMaxAmountOutstandingBeginning(Float maxAmountOutstandingBeginning) {
+        this.maxAmountOutstandingBeginning = maxAmountOutstandingBeginning;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max_amount_outstanding_close")
+    public Float maxAmountOutstandingClose;
+    public GetSchedulesScheduleDQueryParams withMaxAmountOutstandingClose(Float maxAmountOutstandingClose) {
+        this.maxAmountOutstandingClose = maxAmountOutstandingClose;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max_date")
+    public LocalDate maxDate;
+    public GetSchedulesScheduleDQueryParams withMaxDate(LocalDate maxDate) {
+        this.maxDate = maxDate;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max_image_number")
+    public String maxImageNumber;
+    public GetSchedulesScheduleDQueryParams withMaxImageNumber(String maxImageNumber) {
+        this.maxImageNumber = maxImageNumber;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max_payment_period")
+    public Float maxPaymentPeriod;
+    public GetSchedulesScheduleDQueryParams withMaxPaymentPeriod(Float maxPaymentPeriod) {
+        this.maxPaymentPeriod = maxPaymentPeriod;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=min_amount_incurred")
+    public Float minAmountIncurred;
+    public GetSchedulesScheduleDQueryParams withMinAmountIncurred(Float minAmountIncurred) {
+        this.minAmountIncurred = minAmountIncurred;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=min_amount_outstanding_beginning")
+    public Float minAmountOutstandingBeginning;
+    public GetSchedulesScheduleDQueryParams withMinAmountOutstandingBeginning(Float minAmountOutstandingBeginning) {
+        this.minAmountOutstandingBeginning = minAmountOutstandingBeginning;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=min_amount_outstanding_close")
+    public Float minAmountOutstandingClose;
+    public GetSchedulesScheduleDQueryParams withMinAmountOutstandingClose(Float minAmountOutstandingClose) {
+        this.minAmountOutstandingClose = minAmountOutstandingClose;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=min_date")
+    public LocalDate minDate;
+    public GetSchedulesScheduleDQueryParams withMinDate(LocalDate minDate) {
+        this.minDate = minDate;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=min_image_number")
+    public String minImageNumber;
+    public GetSchedulesScheduleDQueryParams withMinImageNumber(String minImageNumber) {
+        this.minImageNumber = minImageNumber;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=min_payment_period")
+    public Float minPaymentPeriod;
+    public GetSchedulesScheduleDQueryParams withMinPaymentPeriod(Float minPaymentPeriod) {
+        this.minPaymentPeriod = minPaymentPeriod;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=nature_of_debt")
+    public String natureOfDebt;
+    public GetSchedulesScheduleDQueryParams withNatureOfDebt(String natureOfDebt) {
+        this.natureOfDebt = natureOfDebt;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Integer page;
+    public GetSchedulesScheduleDQueryParams withPage(Integer page) {
+        this.page = page;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Integer perPage;
+    public GetSchedulesScheduleDQueryParams withPerPage(Integer perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public String sort;
+    public GetSchedulesScheduleDQueryParams withSort(String sort) {
+        this.sort = sort;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_hide_null")
+    public Boolean sortHideNull;
+    public GetSchedulesScheduleDQueryParams withSortHideNull(Boolean sortHideNull) {
+        this.sortHideNull = sortHideNull;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_null_only")
+    public Boolean sortNullOnly;
+    public GetSchedulesScheduleDQueryParams withSortNullOnly(Boolean sortNullOnly) {
+        this.sortNullOnly = sortNullOnly;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_nulls_last")
+    public Boolean sortNullsLast;
+    public GetSchedulesScheduleDQueryParams withSortNullsLast(Boolean sortNullsLast) {
+        this.sortNullsLast = sortNullsLast;
+        return this;
+    }
+}

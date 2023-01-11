@@ -1,0 +1,26 @@
+package openapisdk.models.operations;
+
+
+
+public class DrivesOneRequest {
+    public DrivesOnePathParams pathParams;
+    public DrivesOneRequest withPathParams(DrivesOnePathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public DrivesOneQueryParams queryParams;
+    public DrivesOneRequest withQueryParams(DrivesOneQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public DrivesOneHeaders headers;
+    public DrivesOneRequest withHeaders(DrivesOneHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+    public DrivesOneSecurity security;
+    public DrivesOneRequest withSecurity(DrivesOneSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

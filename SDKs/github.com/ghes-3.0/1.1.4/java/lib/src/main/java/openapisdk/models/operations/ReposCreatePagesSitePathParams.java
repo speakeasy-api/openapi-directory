@@ -1,0 +1,18 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class ReposCreatePagesSitePathParams {
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public ReposCreatePagesSitePathParams withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public ReposCreatePagesSitePathParams withRepo(String repo) {
+        this.repo = repo;
+        return this;
+    }
+}

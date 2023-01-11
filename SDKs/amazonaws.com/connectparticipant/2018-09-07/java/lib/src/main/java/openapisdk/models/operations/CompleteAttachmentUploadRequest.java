@@ -1,0 +1,17 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class CompleteAttachmentUploadRequest {
+    public CompleteAttachmentUploadHeaders headers;
+    public CompleteAttachmentUploadRequest withHeaders(CompleteAttachmentUploadHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public CompleteAttachmentUploadRequestBody request;
+    public CompleteAttachmentUploadRequest withRequest(CompleteAttachmentUploadRequestBody request) {
+        this.request = request;
+        return this;
+    }
+}

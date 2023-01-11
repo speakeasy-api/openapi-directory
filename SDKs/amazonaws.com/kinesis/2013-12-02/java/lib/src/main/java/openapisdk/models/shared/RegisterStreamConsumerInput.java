@@ -1,0 +1,18 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+public class RegisterStreamConsumerInput {
+    @JsonProperty("ConsumerName")
+    public String consumerName;
+    public RegisterStreamConsumerInput withConsumerName(String consumerName) {
+        this.consumerName = consumerName;
+        return this;
+    }
+    @JsonProperty("StreamARN")
+    public String streamARN;
+    public RegisterStreamConsumerInput withStreamArn(String streamARN) {
+        this.streamARN = streamARN;
+        return this;
+    }
+}

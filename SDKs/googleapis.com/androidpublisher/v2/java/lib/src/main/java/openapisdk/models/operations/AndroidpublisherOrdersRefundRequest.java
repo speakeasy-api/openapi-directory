@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class AndroidpublisherOrdersRefundRequest {
+    public AndroidpublisherOrdersRefundPathParams pathParams;
+    public AndroidpublisherOrdersRefundRequest withPathParams(AndroidpublisherOrdersRefundPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public AndroidpublisherOrdersRefundQueryParams queryParams;
+    public AndroidpublisherOrdersRefundRequest withQueryParams(AndroidpublisherOrdersRefundQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public AndroidpublisherOrdersRefundSecurity security;
+    public AndroidpublisherOrdersRefundRequest withSecurity(AndroidpublisherOrdersRefundSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

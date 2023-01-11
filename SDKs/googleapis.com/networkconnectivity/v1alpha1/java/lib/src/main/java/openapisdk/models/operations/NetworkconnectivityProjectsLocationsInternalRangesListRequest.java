@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class NetworkconnectivityProjectsLocationsInternalRangesListRequest {
+    public NetworkconnectivityProjectsLocationsInternalRangesListPathParams pathParams;
+    public NetworkconnectivityProjectsLocationsInternalRangesListRequest withPathParams(NetworkconnectivityProjectsLocationsInternalRangesListPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public NetworkconnectivityProjectsLocationsInternalRangesListQueryParams queryParams;
+    public NetworkconnectivityProjectsLocationsInternalRangesListRequest withQueryParams(NetworkconnectivityProjectsLocationsInternalRangesListQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public NetworkconnectivityProjectsLocationsInternalRangesListSecurity security;
+    public NetworkconnectivityProjectsLocationsInternalRangesListRequest withSecurity(NetworkconnectivityProjectsLocationsInternalRangesListSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

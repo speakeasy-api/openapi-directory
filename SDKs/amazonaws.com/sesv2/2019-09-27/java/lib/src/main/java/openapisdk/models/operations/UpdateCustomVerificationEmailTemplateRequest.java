@@ -1,0 +1,22 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class UpdateCustomVerificationEmailTemplateRequest {
+    public UpdateCustomVerificationEmailTemplatePathParams pathParams;
+    public UpdateCustomVerificationEmailTemplateRequest withPathParams(UpdateCustomVerificationEmailTemplatePathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public UpdateCustomVerificationEmailTemplateHeaders headers;
+    public UpdateCustomVerificationEmailTemplateRequest withHeaders(UpdateCustomVerificationEmailTemplateHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public UpdateCustomVerificationEmailTemplateRequestBody request;
+    public UpdateCustomVerificationEmailTemplateRequest withRequest(UpdateCustomVerificationEmailTemplateRequestBody request) {
+        this.request = request;
+        return this;
+    }
+}

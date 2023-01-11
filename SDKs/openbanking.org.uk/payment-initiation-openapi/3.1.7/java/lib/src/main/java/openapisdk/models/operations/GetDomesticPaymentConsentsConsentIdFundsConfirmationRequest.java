@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class GetDomesticPaymentConsentsConsentIdFundsConfirmationRequest {
+    public GetDomesticPaymentConsentsConsentIdFundsConfirmationPathParams pathParams;
+    public GetDomesticPaymentConsentsConsentIdFundsConfirmationRequest withPathParams(GetDomesticPaymentConsentsConsentIdFundsConfirmationPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public GetDomesticPaymentConsentsConsentIdFundsConfirmationHeaders headers;
+    public GetDomesticPaymentConsentsConsentIdFundsConfirmationRequest withHeaders(GetDomesticPaymentConsentsConsentIdFundsConfirmationHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+    public GetDomesticPaymentConsentsConsentIdFundsConfirmationSecurity security;
+    public GetDomesticPaymentConsentsConsentIdFundsConfirmationRequest withSecurity(GetDomesticPaymentConsentsConsentIdFundsConfirmationSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

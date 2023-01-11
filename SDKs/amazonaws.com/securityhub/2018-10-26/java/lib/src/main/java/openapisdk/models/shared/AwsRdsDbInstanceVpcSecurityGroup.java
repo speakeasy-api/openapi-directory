@@ -1,0 +1,26 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * AwsRdsDbInstanceVpcSecurityGroup
+ * A VPC security groups that the DB instance belongs to.
+**/
+public class AwsRdsDbInstanceVpcSecurityGroup {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Status")
+    public String status;
+    public AwsRdsDbInstanceVpcSecurityGroup withStatus(String status) {
+        this.status = status;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("VpcSecurityGroupId")
+    public String vpcSecurityGroupId;
+    public AwsRdsDbInstanceVpcSecurityGroup withVpcSecurityGroupId(String vpcSecurityGroupId) {
+        this.vpcSecurityGroupId = vpcSecurityGroupId;
+        return this;
+    }
+}

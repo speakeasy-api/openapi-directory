@@ -1,0 +1,145 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * AwsDynamoDbTableDetails
+ * Provides details about a DynamoDB table.
+**/
+public class AwsDynamoDbTableDetails {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("AttributeDefinitions")
+    public AwsDynamoDbTableAttributeDefinition[] attributeDefinitions;
+    public AwsDynamoDbTableDetails withAttributeDefinitions(AwsDynamoDbTableAttributeDefinition[] attributeDefinitions) {
+        this.attributeDefinitions = attributeDefinitions;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("BillingModeSummary")
+    public AwsDynamoDbTableBillingModeSummary billingModeSummary;
+    public AwsDynamoDbTableDetails withBillingModeSummary(AwsDynamoDbTableBillingModeSummary billingModeSummary) {
+        this.billingModeSummary = billingModeSummary;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("CreationDateTime")
+    public String creationDateTime;
+    public AwsDynamoDbTableDetails withCreationDateTime(String creationDateTime) {
+        this.creationDateTime = creationDateTime;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("GlobalSecondaryIndexes")
+    public AwsDynamoDbTableGlobalSecondaryIndex[] globalSecondaryIndexes;
+    public AwsDynamoDbTableDetails withGlobalSecondaryIndexes(AwsDynamoDbTableGlobalSecondaryIndex[] globalSecondaryIndexes) {
+        this.globalSecondaryIndexes = globalSecondaryIndexes;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("GlobalTableVersion")
+    public String globalTableVersion;
+    public AwsDynamoDbTableDetails withGlobalTableVersion(String globalTableVersion) {
+        this.globalTableVersion = globalTableVersion;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ItemCount")
+    public Long itemCount;
+    public AwsDynamoDbTableDetails withItemCount(Long itemCount) {
+        this.itemCount = itemCount;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("KeySchema")
+    public AwsDynamoDbTableKeySchema[] keySchema;
+    public AwsDynamoDbTableDetails withKeySchema(AwsDynamoDbTableKeySchema[] keySchema) {
+        this.keySchema = keySchema;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("LatestStreamArn")
+    public String latestStreamArn;
+    public AwsDynamoDbTableDetails withLatestStreamArn(String latestStreamArn) {
+        this.latestStreamArn = latestStreamArn;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("LatestStreamLabel")
+    public String latestStreamLabel;
+    public AwsDynamoDbTableDetails withLatestStreamLabel(String latestStreamLabel) {
+        this.latestStreamLabel = latestStreamLabel;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("LocalSecondaryIndexes")
+    public AwsDynamoDbTableLocalSecondaryIndex[] localSecondaryIndexes;
+    public AwsDynamoDbTableDetails withLocalSecondaryIndexes(AwsDynamoDbTableLocalSecondaryIndex[] localSecondaryIndexes) {
+        this.localSecondaryIndexes = localSecondaryIndexes;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ProvisionedThroughput")
+    public AwsDynamoDbTableProvisionedThroughput provisionedThroughput;
+    public AwsDynamoDbTableDetails withProvisionedThroughput(AwsDynamoDbTableProvisionedThroughput provisionedThroughput) {
+        this.provisionedThroughput = provisionedThroughput;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Replicas")
+    public AwsDynamoDbTableReplica[] replicas;
+    public AwsDynamoDbTableDetails withReplicas(AwsDynamoDbTableReplica[] replicas) {
+        this.replicas = replicas;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("RestoreSummary")
+    public AwsDynamoDbTableRestoreSummary restoreSummary;
+    public AwsDynamoDbTableDetails withRestoreSummary(AwsDynamoDbTableRestoreSummary restoreSummary) {
+        this.restoreSummary = restoreSummary;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("SseDescription")
+    public AwsDynamoDbTableSseDescription sseDescription;
+    public AwsDynamoDbTableDetails withSseDescription(AwsDynamoDbTableSseDescription sseDescription) {
+        this.sseDescription = sseDescription;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("StreamSpecification")
+    public AwsDynamoDbTableStreamSpecification streamSpecification;
+    public AwsDynamoDbTableDetails withStreamSpecification(AwsDynamoDbTableStreamSpecification streamSpecification) {
+        this.streamSpecification = streamSpecification;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("TableId")
+    public String tableId;
+    public AwsDynamoDbTableDetails withTableId(String tableId) {
+        this.tableId = tableId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("TableName")
+    public String tableName;
+    public AwsDynamoDbTableDetails withTableName(String tableName) {
+        this.tableName = tableName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("TableSizeBytes")
+    public Long tableSizeBytes;
+    public AwsDynamoDbTableDetails withTableSizeBytes(Long tableSizeBytes) {
+        this.tableSizeBytes = tableSizeBytes;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("TableStatus")
+    public String tableStatus;
+    public AwsDynamoDbTableDetails withTableStatus(String tableStatus) {
+        this.tableStatus = tableStatus;
+        return this;
+    }
+}

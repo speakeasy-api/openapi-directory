@@ -1,0 +1,29 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class QueueResponseStats {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("acknowledgementRate")
+    public Double acknowledgementRate;
+    public QueueResponseStats withAcknowledgementRate(Double acknowledgementRate) {
+        this.acknowledgementRate = acknowledgementRate;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("deliveryRate")
+    public Double deliveryRate;
+    public QueueResponseStats withDeliveryRate(Double deliveryRate) {
+        this.deliveryRate = deliveryRate;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("publishRate")
+    public Double publishRate;
+    public QueueResponseStats withPublishRate(Double publishRate) {
+        this.publishRate = publishRate;
+        return this;
+    }
+}

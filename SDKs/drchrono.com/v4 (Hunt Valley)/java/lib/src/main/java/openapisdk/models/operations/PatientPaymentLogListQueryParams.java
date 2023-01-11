@@ -1,0 +1,36 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class PatientPaymentLogListQueryParams {
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
+    public String cursor;
+    public PatientPaymentLogListQueryParams withCursor(String cursor) {
+        this.cursor = cursor;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=doctor")
+    public Long doctor;
+    public PatientPaymentLogListQueryParams withDoctor(Long doctor) {
+        this.doctor = doctor;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=office")
+    public Long office;
+    public PatientPaymentLogListQueryParams withOffice(Long office) {
+        this.office = office;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_size")
+    public Long pageSize;
+    public PatientPaymentLogListQueryParams withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=since")
+    public String since;
+    public PatientPaymentLogListQueryParams withSince(String since) {
+        this.since = since;
+        return this;
+    }
+}

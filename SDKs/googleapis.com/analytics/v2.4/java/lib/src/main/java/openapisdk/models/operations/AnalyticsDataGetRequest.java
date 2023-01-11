@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class AnalyticsDataGetRequest {
+    public AnalyticsDataGetQueryParams queryParams;
+    public AnalyticsDataGetRequest withQueryParams(AnalyticsDataGetQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public AnalyticsDataGetSecurity security;
+    public AnalyticsDataGetRequest withSecurity(AnalyticsDataGetSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

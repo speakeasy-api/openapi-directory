@@ -1,0 +1,31 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * SourceSchema
+ * Describes the format of the data in the streaming source, and how each data element maps to corresponding columns created in the in-application stream.
+**/
+public class SourceSchema {
+    @JsonProperty("RecordColumns")
+    public RecordColumn[] recordColumns;
+    public SourceSchema withRecordColumns(RecordColumn[] recordColumns) {
+        this.recordColumns = recordColumns;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("RecordEncoding")
+    public String recordEncoding;
+    public SourceSchema withRecordEncoding(String recordEncoding) {
+        this.recordEncoding = recordEncoding;
+        return this;
+    }
+    @JsonProperty("RecordFormat")
+    public RecordFormat recordFormat;
+    public SourceSchema withRecordFormat(RecordFormat recordFormat) {
+        this.recordFormat = recordFormat;
+        return this;
+    }
+}

@@ -1,0 +1,80 @@
+package openapisdk.models.shared;
+
+import java.time.OffsetDateTime;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import openapisdk.utils.DateTimeSerializer;
+import openapisdk.utils.DateTimeDeserializer;
+
+/**
+ * EnvironmentTemplate
+ * The environment template data.
+**/
+public class EnvironmentTemplate {
+    @JsonProperty("arn")
+    public String arn;
+    public EnvironmentTemplate withArn(String arn) {
+        this.arn = arn;
+        return this;
+    }
+    @JsonSerialize(using = DateTimeSerializer.class)
+    @JsonDeserialize(using = DateTimeDeserializer.class)
+    @JsonProperty("createdAt")
+    public OffsetDateTime createdAt;
+    public EnvironmentTemplate withCreatedAt(OffsetDateTime createdAt) {
+        this.createdAt = createdAt;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("description")
+    public String description;
+    public EnvironmentTemplate withDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("displayName")
+    public String displayName;
+    public EnvironmentTemplate withDisplayName(String displayName) {
+        this.displayName = displayName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("encryptionKey")
+    public String encryptionKey;
+    public EnvironmentTemplate withEncryptionKey(String encryptionKey) {
+        this.encryptionKey = encryptionKey;
+        return this;
+    }
+    @JsonSerialize(using = DateTimeSerializer.class)
+    @JsonDeserialize(using = DateTimeDeserializer.class)
+    @JsonProperty("lastModifiedAt")
+    public OffsetDateTime lastModifiedAt;
+    public EnvironmentTemplate withLastModifiedAt(OffsetDateTime lastModifiedAt) {
+        this.lastModifiedAt = lastModifiedAt;
+        return this;
+    }
+    @JsonProperty("name")
+    public String name;
+    public EnvironmentTemplate withName(String name) {
+        this.name = name;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("provisioning")
+    public ProvisioningEnum provisioning;
+    public EnvironmentTemplate withProvisioning(ProvisioningEnum provisioning) {
+        this.provisioning = provisioning;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("recommendedVersion")
+    public String recommendedVersion;
+    public EnvironmentTemplate withRecommendedVersion(String recommendedVersion) {
+        this.recommendedVersion = recommendedVersion;
+        return this;
+    }
+}

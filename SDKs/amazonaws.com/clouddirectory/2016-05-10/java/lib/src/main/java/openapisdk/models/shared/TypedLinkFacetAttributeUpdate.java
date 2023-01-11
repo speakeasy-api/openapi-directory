@@ -1,0 +1,22 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+/**
+ * TypedLinkFacetAttributeUpdate
+ * A typed link facet attribute update.
+**/
+public class TypedLinkFacetAttributeUpdate {
+    @JsonProperty("Action")
+    public UpdateActionTypeEnum action;
+    public TypedLinkFacetAttributeUpdate withAction(UpdateActionTypeEnum action) {
+        this.action = action;
+        return this;
+    }
+    @JsonProperty("Attribute")
+    public TypedLinkAttributeDefinition attribute;
+    public TypedLinkFacetAttributeUpdate withAttribute(TypedLinkAttributeDefinition attribute) {
+        this.attribute = attribute;
+        return this;
+    }
+}

@@ -1,0 +1,22 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class WebhooksExecuteRequest {
+    public WebhooksExecutePathParams pathParams;
+    public WebhooksExecuteRequest withPathParams(WebhooksExecutePathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public Object request;
+    public WebhooksExecuteRequest withRequest(Object request) {
+        this.request = request;
+        return this;
+    }
+    public WebhooksExecuteSecurity security;
+    public WebhooksExecuteRequest withSecurity(WebhooksExecuteSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

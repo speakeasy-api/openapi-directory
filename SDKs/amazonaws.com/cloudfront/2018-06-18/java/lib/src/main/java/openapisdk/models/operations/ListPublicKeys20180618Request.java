@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class ListPublicKeys20180618Request {
+    public ListPublicKeys20180618QueryParams queryParams;
+    public ListPublicKeys20180618Request withQueryParams(ListPublicKeys20180618QueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public ListPublicKeys20180618Headers headers;
+    public ListPublicKeys20180618Request withHeaders(ListPublicKeys20180618Headers headers) {
+        this.headers = headers;
+        return this;
+    }
+}

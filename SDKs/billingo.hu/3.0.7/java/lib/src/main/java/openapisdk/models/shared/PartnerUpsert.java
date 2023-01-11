@@ -1,0 +1,69 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class PartnerUpsert {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("account_number")
+    public String accountNumber;
+    public PartnerUpsert withAccountNumber(String accountNumber) {
+        this.accountNumber = accountNumber;
+        return this;
+    }
+    @JsonProperty("address")
+    public Address address;
+    public PartnerUpsert withAddress(Address address) {
+        this.address = address;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("emails")
+    public String[] emails;
+    public PartnerUpsert withEmails(String[] emails) {
+        this.emails = emails;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("general_ledger_number")
+    public String generalLedgerNumber;
+    public PartnerUpsert withGeneralLedgerNumber(String generalLedgerNumber) {
+        this.generalLedgerNumber = generalLedgerNumber;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("iban")
+    public String iban;
+    public PartnerUpsert withIban(String iban) {
+        this.iban = iban;
+        return this;
+    }
+    @JsonProperty("name")
+    public String name;
+    public PartnerUpsert withName(String name) {
+        this.name = name;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("phone")
+    public String phone;
+    public PartnerUpsert withPhone(String phone) {
+        this.phone = phone;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("swift")
+    public String swift;
+    public PartnerUpsert withSwift(String swift) {
+        this.swift = swift;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("taxcode")
+    public String taxcode;
+    public PartnerUpsert withTaxcode(String taxcode) {
+        this.taxcode = taxcode;
+        return this;
+    }
+}

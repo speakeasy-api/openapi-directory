@@ -1,0 +1,29 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class MessagesResponsePagination {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("limit")
+    public Long limit;
+    public MessagesResponsePagination withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("offset")
+    public Long offset;
+    public MessagesResponsePagination withOffset(Long offset) {
+        this.offset = offset;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("totalCount")
+    public Long totalCount;
+    public MessagesResponsePagination withTotalCount(Long totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+}

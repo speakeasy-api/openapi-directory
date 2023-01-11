@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class ConnectionsAllRequest {
+    public ConnectionsAllQueryParams queryParams;
+    public ConnectionsAllRequest withQueryParams(ConnectionsAllQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public ConnectionsAllHeaders headers;
+    public ConnectionsAllRequest withHeaders(ConnectionsAllHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+    public ConnectionsAllSecurity security;
+    public ConnectionsAllRequest withSecurity(ConnectionsAllSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

@@ -1,0 +1,30 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class GetFiltersCreateQueryParams {
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=base")
+    public String base;
+    public GetFiltersCreateQueryParams withBase(String base) {
+        this.base = base;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=exclude")
+    public String exclude;
+    public GetFiltersCreateQueryParams withExclude(String exclude) {
+        this.exclude = exclude;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include")
+    public String include;
+    public GetFiltersCreateQueryParams withInclude(String include) {
+        this.include = include;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=unsafe")
+    public Boolean unsafe;
+    public GetFiltersCreateQueryParams withUnsafe(Boolean unsafe) {
+        this.unsafe = unsafe;
+        return this;
+    }
+}

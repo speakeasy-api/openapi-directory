@@ -1,0 +1,24 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class ReposAddCollaboratorPathParams {
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public ReposAddCollaboratorPathParams withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public ReposAddCollaboratorPathParams withRepo(String repo) {
+        this.repo = repo;
+        return this;
+    }
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=username")
+    public String username;
+    public ReposAddCollaboratorPathParams withUsername(String username) {
+        this.username = username;
+        return this;
+    }
+}

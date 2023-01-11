@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class WebinarRegistrantGetRequest {
+    public WebinarRegistrantGetPathParams pathParams;
+    public WebinarRegistrantGetRequest withPathParams(WebinarRegistrantGetPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public WebinarRegistrantGetQueryParams queryParams;
+    public WebinarRegistrantGetRequest withQueryParams(WebinarRegistrantGetQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public WebinarRegistrantGetSecurity security;
+    public WebinarRegistrantGetRequest withSecurity(WebinarRegistrantGetSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

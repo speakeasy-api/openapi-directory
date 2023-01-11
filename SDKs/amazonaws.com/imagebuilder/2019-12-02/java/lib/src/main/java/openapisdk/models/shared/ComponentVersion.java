@@ -1,0 +1,75 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * ComponentVersion
+ * The defining characteristics of a specific version of an Amazon Web Services TOE component.
+**/
+public class ComponentVersion {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("arn")
+    public String arn;
+    public ComponentVersion withArn(String arn) {
+        this.arn = arn;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("dateCreated")
+    public String dateCreated;
+    public ComponentVersion withDateCreated(String dateCreated) {
+        this.dateCreated = dateCreated;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("description")
+    public String description;
+    public ComponentVersion withDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("name")
+    public String name;
+    public ComponentVersion withName(String name) {
+        this.name = name;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("owner")
+    public String owner;
+    public ComponentVersion withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("platform")
+    public PlatformEnum platform;
+    public ComponentVersion withPlatform(PlatformEnum platform) {
+        this.platform = platform;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("supportedOsVersions")
+    public String[] supportedOsVersions;
+    public ComponentVersion withSupportedOsVersions(String[] supportedOsVersions) {
+        this.supportedOsVersions = supportedOsVersions;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("type")
+    public ComponentTypeEnum type;
+    public ComponentVersion withType(ComponentTypeEnum type) {
+        this.type = type;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("version")
+    public String version;
+    public ComponentVersion withVersion(String version) {
+        this.version = version;
+        return this;
+    }
+}

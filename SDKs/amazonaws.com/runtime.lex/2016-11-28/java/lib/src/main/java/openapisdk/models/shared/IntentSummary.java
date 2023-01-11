@@ -1,0 +1,60 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * IntentSummary
+ * Provides information about the state of an intent. You can use this information to get the current state of an intent so that you can process the intent, or so that you can return the intent to its previous state.
+**/
+public class IntentSummary {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("checkpointLabel")
+    public String checkpointLabel;
+    public IntentSummary withCheckpointLabel(String checkpointLabel) {
+        this.checkpointLabel = checkpointLabel;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("confirmationStatus")
+    public ConfirmationStatusEnum confirmationStatus;
+    public IntentSummary withConfirmationStatus(ConfirmationStatusEnum confirmationStatus) {
+        this.confirmationStatus = confirmationStatus;
+        return this;
+    }
+    @JsonProperty("dialogActionType")
+    public DialogActionTypeEnum dialogActionType;
+    public IntentSummary withDialogActionType(DialogActionTypeEnum dialogActionType) {
+        this.dialogActionType = dialogActionType;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("fulfillmentState")
+    public FulfillmentStateEnum fulfillmentState;
+    public IntentSummary withFulfillmentState(FulfillmentStateEnum fulfillmentState) {
+        this.fulfillmentState = fulfillmentState;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("intentName")
+    public String intentName;
+    public IntentSummary withIntentName(String intentName) {
+        this.intentName = intentName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("slotToElicit")
+    public String slotToElicit;
+    public IntentSummary withSlotToElicit(String slotToElicit) {
+        this.slotToElicit = slotToElicit;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("slots")
+    public java.util.Map<String, String> slots;
+    public IntentSummary withSlots(java.util.Map<String, String> slots) {
+        this.slots = slots;
+        return this;
+    }
+}

@@ -1,0 +1,160 @@
+package openapisdk.models.shared;
+
+import java.time.OffsetDateTime;
+
+/**
+ * CacheClusterList
+ * Contains all of the attributes of a specific cluster.
+**/
+public class CacheClusterList {
+    public String arn;
+    public CacheClusterList withArn(String arn) {
+        this.arn = arn;
+        return this;
+    }
+    public Boolean atRestEncryptionEnabled;
+    public CacheClusterList withAtRestEncryptionEnabled(Boolean atRestEncryptionEnabled) {
+        this.atRestEncryptionEnabled = atRestEncryptionEnabled;
+        return this;
+    }
+    public Boolean authTokenEnabled;
+    public CacheClusterList withAuthTokenEnabled(Boolean authTokenEnabled) {
+        this.authTokenEnabled = authTokenEnabled;
+        return this;
+    }
+    public OffsetDateTime authTokenLastModifiedDate;
+    public CacheClusterList withAuthTokenLastModifiedDate(OffsetDateTime authTokenLastModifiedDate) {
+        this.authTokenLastModifiedDate = authTokenLastModifiedDate;
+        return this;
+    }
+    public Boolean autoMinorVersionUpgrade;
+    public CacheClusterList withAutoMinorVersionUpgrade(Boolean autoMinorVersionUpgrade) {
+        this.autoMinorVersionUpgrade = autoMinorVersionUpgrade;
+        return this;
+    }
+    public OffsetDateTime cacheClusterCreateTime;
+    public CacheClusterList withCacheClusterCreateTime(OffsetDateTime cacheClusterCreateTime) {
+        this.cacheClusterCreateTime = cacheClusterCreateTime;
+        return this;
+    }
+    public String cacheClusterId;
+    public CacheClusterList withCacheClusterId(String cacheClusterId) {
+        this.cacheClusterId = cacheClusterId;
+        return this;
+    }
+    public String cacheClusterStatus;
+    public CacheClusterList withCacheClusterStatus(String cacheClusterStatus) {
+        this.cacheClusterStatus = cacheClusterStatus;
+        return this;
+    }
+    public String cacheNodeType;
+    public CacheClusterList withCacheNodeType(String cacheNodeType) {
+        this.cacheNodeType = cacheNodeType;
+        return this;
+    }
+    public CacheNodeList[] cacheNodes;
+    public CacheClusterList withCacheNodes(CacheNodeList[] cacheNodes) {
+        this.cacheNodes = cacheNodes;
+        return this;
+    }
+    public CacheParameterGroupStatus cacheParameterGroup;
+    public CacheClusterList withCacheParameterGroup(CacheParameterGroupStatus cacheParameterGroup) {
+        this.cacheParameterGroup = cacheParameterGroup;
+        return this;
+    }
+    public CacheSecurityGroupMembershipList[] cacheSecurityGroups;
+    public CacheClusterList withCacheSecurityGroups(CacheSecurityGroupMembershipList[] cacheSecurityGroups) {
+        this.cacheSecurityGroups = cacheSecurityGroups;
+        return this;
+    }
+    public String cacheSubnetGroupName;
+    public CacheClusterList withCacheSubnetGroupName(String cacheSubnetGroupName) {
+        this.cacheSubnetGroupName = cacheSubnetGroupName;
+        return this;
+    }
+    public String clientDownloadLandingPage;
+    public CacheClusterList withClientDownloadLandingPage(String clientDownloadLandingPage) {
+        this.clientDownloadLandingPage = clientDownloadLandingPage;
+        return this;
+    }
+    public Endpoint configurationEndpoint;
+    public CacheClusterList withConfigurationEndpoint(Endpoint configurationEndpoint) {
+        this.configurationEndpoint = configurationEndpoint;
+        return this;
+    }
+    public String engine;
+    public CacheClusterList withEngine(String engine) {
+        this.engine = engine;
+        return this;
+    }
+    public String engineVersion;
+    public CacheClusterList withEngineVersion(String engineVersion) {
+        this.engineVersion = engineVersion;
+        return this;
+    }
+    public LogDeliveryConfigurationList[] logDeliveryConfigurations;
+    public CacheClusterList withLogDeliveryConfigurations(LogDeliveryConfigurationList[] logDeliveryConfigurations) {
+        this.logDeliveryConfigurations = logDeliveryConfigurations;
+        return this;
+    }
+    public NotificationConfiguration notificationConfiguration;
+    public CacheClusterList withNotificationConfiguration(NotificationConfiguration notificationConfiguration) {
+        this.notificationConfiguration = notificationConfiguration;
+        return this;
+    }
+    public Long numCacheNodes;
+    public CacheClusterList withNumCacheNodes(Long numCacheNodes) {
+        this.numCacheNodes = numCacheNodes;
+        return this;
+    }
+    public PendingModifiedValues pendingModifiedValues;
+    public CacheClusterList withPendingModifiedValues(PendingModifiedValues pendingModifiedValues) {
+        this.pendingModifiedValues = pendingModifiedValues;
+        return this;
+    }
+    public String preferredAvailabilityZone;
+    public CacheClusterList withPreferredAvailabilityZone(String preferredAvailabilityZone) {
+        this.preferredAvailabilityZone = preferredAvailabilityZone;
+        return this;
+    }
+    public String preferredMaintenanceWindow;
+    public CacheClusterList withPreferredMaintenanceWindow(String preferredMaintenanceWindow) {
+        this.preferredMaintenanceWindow = preferredMaintenanceWindow;
+        return this;
+    }
+    public String preferredOutpostArn;
+    public CacheClusterList withPreferredOutpostArn(String preferredOutpostArn) {
+        this.preferredOutpostArn = preferredOutpostArn;
+        return this;
+    }
+    public String replicationGroupId;
+    public CacheClusterList withReplicationGroupId(String replicationGroupId) {
+        this.replicationGroupId = replicationGroupId;
+        return this;
+    }
+    public Boolean replicationGroupLogDeliveryEnabled;
+    public CacheClusterList withReplicationGroupLogDeliveryEnabled(Boolean replicationGroupLogDeliveryEnabled) {
+        this.replicationGroupLogDeliveryEnabled = replicationGroupLogDeliveryEnabled;
+        return this;
+    }
+    public SecurityGroupMembership[] securityGroups;
+    public CacheClusterList withSecurityGroups(SecurityGroupMembership[] securityGroups) {
+        this.securityGroups = securityGroups;
+        return this;
+    }
+    public Long snapshotRetentionLimit;
+    public CacheClusterList withSnapshotRetentionLimit(Long snapshotRetentionLimit) {
+        this.snapshotRetentionLimit = snapshotRetentionLimit;
+        return this;
+    }
+    public String snapshotWindow;
+    public CacheClusterList withSnapshotWindow(String snapshotWindow) {
+        this.snapshotWindow = snapshotWindow;
+        return this;
+    }
+    public Boolean transitEncryptionEnabled;
+    public CacheClusterList withTransitEncryptionEnabled(Boolean transitEncryptionEnabled) {
+        this.transitEncryptionEnabled = transitEncryptionEnabled;
+        return this;
+    }
+}

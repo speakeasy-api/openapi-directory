@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class ReposListReleasesRequest {
+    public ReposListReleasesPathParams pathParams;
+    public ReposListReleasesRequest withPathParams(ReposListReleasesPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public ReposListReleasesQueryParams queryParams;
+    public ReposListReleasesRequest withQueryParams(ReposListReleasesQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+}

@@ -1,0 +1,30 @@
+package openapisdk.models.shared;
+
+
+
+/**
+ * PublicKeyConfig
+ * Information about a public key you add to CloudFront to use with features like field-level encryption.
+**/
+public class PublicKeyConfig {
+    public String callerReference;
+    public PublicKeyConfig withCallerReference(String callerReference) {
+        this.callerReference = callerReference;
+        return this;
+    }
+    public String comment;
+    public PublicKeyConfig withComment(String comment) {
+        this.comment = comment;
+        return this;
+    }
+    public String encodedKey;
+    public PublicKeyConfig withEncodedKey(String encodedKey) {
+        this.encodedKey = encodedKey;
+        return this;
+    }
+    public String name;
+    public PublicKeyConfig withName(String name) {
+        this.name = name;
+        return this;
+    }
+}

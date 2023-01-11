@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class MybusinessAccountsLocationsInsuranceNetworksListRequest {
+    public MybusinessAccountsLocationsInsuranceNetworksListPathParams pathParams;
+    public MybusinessAccountsLocationsInsuranceNetworksListRequest withPathParams(MybusinessAccountsLocationsInsuranceNetworksListPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public MybusinessAccountsLocationsInsuranceNetworksListQueryParams queryParams;
+    public MybusinessAccountsLocationsInsuranceNetworksListRequest withQueryParams(MybusinessAccountsLocationsInsuranceNetworksListQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+}

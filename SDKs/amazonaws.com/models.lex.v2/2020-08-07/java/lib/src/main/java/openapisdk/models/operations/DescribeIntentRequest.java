@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class DescribeIntentRequest {
+    public DescribeIntentPathParams pathParams;
+    public DescribeIntentRequest withPathParams(DescribeIntentPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public DescribeIntentHeaders headers;
+    public DescribeIntentRequest withHeaders(DescribeIntentHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+}

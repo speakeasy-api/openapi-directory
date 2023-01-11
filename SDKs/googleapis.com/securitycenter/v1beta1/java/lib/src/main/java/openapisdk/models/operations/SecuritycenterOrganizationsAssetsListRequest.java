@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class SecuritycenterOrganizationsAssetsListRequest {
+    public SecuritycenterOrganizationsAssetsListPathParams pathParams;
+    public SecuritycenterOrganizationsAssetsListRequest withPathParams(SecuritycenterOrganizationsAssetsListPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public SecuritycenterOrganizationsAssetsListQueryParams queryParams;
+    public SecuritycenterOrganizationsAssetsListRequest withQueryParams(SecuritycenterOrganizationsAssetsListQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public SecuritycenterOrganizationsAssetsListSecurity security;
+    public SecuritycenterOrganizationsAssetsListRequest withSecurity(SecuritycenterOrganizationsAssetsListSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

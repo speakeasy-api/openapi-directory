@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class CancelPolicyGenerationRequest {
+    public CancelPolicyGenerationPathParams pathParams;
+    public CancelPolicyGenerationRequest withPathParams(CancelPolicyGenerationPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public CancelPolicyGenerationHeaders headers;
+    public CancelPolicyGenerationRequest withHeaders(CancelPolicyGenerationHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+}

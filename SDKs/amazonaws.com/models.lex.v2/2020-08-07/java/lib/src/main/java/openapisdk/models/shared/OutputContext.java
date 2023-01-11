@@ -1,0 +1,28 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+/**
+ * OutputContext
+ * Describes a session context that is activated when an intent is fulfilled.
+**/
+public class OutputContext {
+    @JsonProperty("name")
+    public String name;
+    public OutputContext withName(String name) {
+        this.name = name;
+        return this;
+    }
+    @JsonProperty("timeToLiveInSeconds")
+    public Long timeToLiveInSeconds;
+    public OutputContext withTimeToLiveInSeconds(Long timeToLiveInSeconds) {
+        this.timeToLiveInSeconds = timeToLiveInSeconds;
+        return this;
+    }
+    @JsonProperty("turnsToLive")
+    public Long turnsToLive;
+    public OutputContext withTurnsToLive(Long turnsToLive) {
+        this.turnsToLive = turnsToLive;
+        return this;
+    }
+}

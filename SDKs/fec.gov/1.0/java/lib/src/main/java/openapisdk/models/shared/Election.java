@@ -1,0 +1,93 @@
+package openapisdk.models.shared;
+
+import java.time.LocalDate;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class Election {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("candidate_election_year")
+    public Integer candidateElectionYear;
+    public Election withCandidateElectionYear(Integer candidateElectionYear) {
+        this.candidateElectionYear = candidateElectionYear;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("candidate_id")
+    public String candidateId;
+    public Election withCandidateId(String candidateId) {
+        this.candidateId = candidateId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("candidate_name")
+    public String candidateName;
+    public Election withCandidateName(String candidateName) {
+        this.candidateName = candidateName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("candidate_pcc_id")
+    public String candidatePccId;
+    public Election withCandidatePccId(String candidatePccId) {
+        this.candidatePccId = candidatePccId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("candidate_pcc_name")
+    public String candidatePccName;
+    public Election withCandidatePccName(String candidatePccName) {
+        this.candidatePccName = candidatePccName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("cash_on_hand_end_period")
+    public Double cashOnHandEndPeriod;
+    public Election withCashOnHandEndPeriod(Double cashOnHandEndPeriod) {
+        this.cashOnHandEndPeriod = cashOnHandEndPeriod;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("committee_ids")
+    public String[] committeeIds;
+    public Election withCommitteeIds(String[] committeeIds) {
+        this.committeeIds = committeeIds;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("coverage_end_date")
+    public LocalDate coverageEndDate;
+    public Election withCoverageEndDate(LocalDate coverageEndDate) {
+        this.coverageEndDate = coverageEndDate;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("incumbent_challenge_full")
+    public String incumbentChallengeFull;
+    public Election withIncumbentChallengeFull(String incumbentChallengeFull) {
+        this.incumbentChallengeFull = incumbentChallengeFull;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("party_full")
+    public String partyFull;
+    public Election withPartyFull(String partyFull) {
+        this.partyFull = partyFull;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("total_disbursements")
+    public Double totalDisbursements;
+    public Election withTotalDisbursements(Double totalDisbursements) {
+        this.totalDisbursements = totalDisbursements;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("total_receipts")
+    public Double totalReceipts;
+    public Election withTotalReceipts(Double totalReceipts) {
+        this.totalReceipts = totalReceipts;
+        return this;
+    }
+}

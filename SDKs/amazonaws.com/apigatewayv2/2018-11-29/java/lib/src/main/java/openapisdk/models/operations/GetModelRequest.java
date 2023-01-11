@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class GetModelRequest {
+    public GetModelPathParams pathParams;
+    public GetModelRequest withPathParams(GetModelPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public GetModelHeaders headers;
+    public GetModelRequest withHeaders(GetModelHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+}

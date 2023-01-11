@@ -1,0 +1,40 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * GooglePrivacyDlpV2CreateDlpJobRequest
+ * Request message for CreateDlpJobRequest. Used to initiate long running jobs such as calculating risk metrics or inspecting Google Cloud Storage.
+**/
+public class GooglePrivacyDlpV2CreateDlpJobRequest {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("inspectJob")
+    public GooglePrivacyDlpV2InspectJobConfig inspectJob;
+    public GooglePrivacyDlpV2CreateDlpJobRequest withInspectJob(GooglePrivacyDlpV2InspectJobConfig inspectJob) {
+        this.inspectJob = inspectJob;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("jobId")
+    public String jobId;
+    public GooglePrivacyDlpV2CreateDlpJobRequest withJobId(String jobId) {
+        this.jobId = jobId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("locationId")
+    public String locationId;
+    public GooglePrivacyDlpV2CreateDlpJobRequest withLocationId(String locationId) {
+        this.locationId = locationId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("riskJob")
+    public GooglePrivacyDlpV2RiskAnalysisJobConfig riskJob;
+    public GooglePrivacyDlpV2CreateDlpJobRequest withRiskJob(GooglePrivacyDlpV2RiskAnalysisJobConfig riskJob) {
+        this.riskJob = riskJob;
+        return this;
+    }
+}

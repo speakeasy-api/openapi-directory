@@ -1,0 +1,27 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class CreateSipAuthCallsIpAccessControlListMappingRequest {
+    public String serverURL;
+    public CreateSipAuthCallsIpAccessControlListMappingRequest withServerUrl(String serverURL) {
+        this.serverURL = serverURL;
+        return this;
+    }
+    public CreateSipAuthCallsIpAccessControlListMappingPathParams pathParams;
+    public CreateSipAuthCallsIpAccessControlListMappingRequest withPathParams(CreateSipAuthCallsIpAccessControlListMappingPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
+    public CreateSipAuthCallsIpAccessControlListMappingCreateSipAuthCallsIpAccessControlListMappingRequest request;
+    public CreateSipAuthCallsIpAccessControlListMappingRequest withRequest(CreateSipAuthCallsIpAccessControlListMappingCreateSipAuthCallsIpAccessControlListMappingRequest request) {
+        this.request = request;
+        return this;
+    }
+    public CreateSipAuthCallsIpAccessControlListMappingSecurity security;
+    public CreateSipAuthCallsIpAccessControlListMappingRequest withSecurity(CreateSipAuthCallsIpAccessControlListMappingSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

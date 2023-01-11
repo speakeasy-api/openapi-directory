@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class DeleteAccessPolicyRequest {
+    public DeleteAccessPolicyPathParams pathParams;
+    public DeleteAccessPolicyRequest withPathParams(DeleteAccessPolicyPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public DeleteAccessPolicyQueryParams queryParams;
+    public DeleteAccessPolicyRequest withQueryParams(DeleteAccessPolicyQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public DeleteAccessPolicyHeaders headers;
+    public DeleteAccessPolicyRequest withHeaders(DeleteAccessPolicyHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+}

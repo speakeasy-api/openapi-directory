@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class GamesConfigurationAchievementConfigurationsGetRequest {
+    public GamesConfigurationAchievementConfigurationsGetPathParams pathParams;
+    public GamesConfigurationAchievementConfigurationsGetRequest withPathParams(GamesConfigurationAchievementConfigurationsGetPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public GamesConfigurationAchievementConfigurationsGetQueryParams queryParams;
+    public GamesConfigurationAchievementConfigurationsGetRequest withQueryParams(GamesConfigurationAchievementConfigurationsGetQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public GamesConfigurationAchievementConfigurationsGetSecurity security;
+    public GamesConfigurationAchievementConfigurationsGetRequest withSecurity(GamesConfigurationAchievementConfigurationsGetSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

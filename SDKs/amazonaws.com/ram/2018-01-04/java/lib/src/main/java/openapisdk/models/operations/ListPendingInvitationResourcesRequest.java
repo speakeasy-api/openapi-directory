@@ -1,0 +1,22 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class ListPendingInvitationResourcesRequest {
+    public ListPendingInvitationResourcesQueryParams queryParams;
+    public ListPendingInvitationResourcesRequest withQueryParams(ListPendingInvitationResourcesQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public ListPendingInvitationResourcesHeaders headers;
+    public ListPendingInvitationResourcesRequest withHeaders(ListPendingInvitationResourcesHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public ListPendingInvitationResourcesRequestBody request;
+    public ListPendingInvitationResourcesRequest withRequest(ListPendingInvitationResourcesRequestBody request) {
+        this.request = request;
+        return this;
+    }
+}

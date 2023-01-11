@@ -1,0 +1,11 @@
+package openapisdk.models.operations;
+
+
+
+public class GetConsumerV1ServicegroupsIdRequest {
+    public GetConsumerV1ServicegroupsIdPathParams pathParams;
+    public GetConsumerV1ServicegroupsIdRequest withPathParams(GetConsumerV1ServicegroupsIdPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+}

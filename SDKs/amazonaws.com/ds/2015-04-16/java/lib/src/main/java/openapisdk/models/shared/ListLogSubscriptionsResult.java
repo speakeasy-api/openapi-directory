@@ -1,0 +1,22 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class ListLogSubscriptionsResult {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("LogSubscriptions")
+    public LogSubscription[] logSubscriptions;
+    public ListLogSubscriptionsResult withLogSubscriptions(LogSubscription[] logSubscriptions) {
+        this.logSubscriptions = logSubscriptions;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("NextToken")
+    public String nextToken;
+    public ListLogSubscriptionsResult withNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+}

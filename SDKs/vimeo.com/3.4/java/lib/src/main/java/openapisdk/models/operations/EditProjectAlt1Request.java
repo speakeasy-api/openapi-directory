@@ -1,0 +1,22 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class EditProjectAlt1Request {
+    public EditProjectAlt1PathParams pathParams;
+    public EditProjectAlt1Request withPathParams(EditProjectAlt1PathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public EditProjectAlt1RequestBody request;
+    public EditProjectAlt1Request withRequest(EditProjectAlt1RequestBody request) {
+        this.request = request;
+        return this;
+    }
+    public EditProjectAlt1Security security;
+    public EditProjectAlt1Request withSecurity(EditProjectAlt1Security security) {
+        this.security = security;
+        return this;
+    }
+}

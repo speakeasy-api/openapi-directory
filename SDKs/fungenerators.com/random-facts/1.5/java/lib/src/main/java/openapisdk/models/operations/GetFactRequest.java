@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class GetFactRequest {
+    public GetFactQueryParams queryParams;
+    public GetFactRequest withQueryParams(GetFactQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public GetFactSecurity security;
+    public GetFactRequest withSecurity(GetFactSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class EnterpriseAdminListSelfHostedRunnerGroupsForEnterpriseRequest {
+    public EnterpriseAdminListSelfHostedRunnerGroupsForEnterprisePathParams pathParams;
+    public EnterpriseAdminListSelfHostedRunnerGroupsForEnterpriseRequest withPathParams(EnterpriseAdminListSelfHostedRunnerGroupsForEnterprisePathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public EnterpriseAdminListSelfHostedRunnerGroupsForEnterpriseQueryParams queryParams;
+    public EnterpriseAdminListSelfHostedRunnerGroupsForEnterpriseRequest withQueryParams(EnterpriseAdminListSelfHostedRunnerGroupsForEnterpriseQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+}

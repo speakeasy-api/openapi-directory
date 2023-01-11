@@ -1,0 +1,18 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class NameTypeGeoPathParams {
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=countryIso2")
+    public String countryIso2;
+    public NameTypeGeoPathParams withCountryIso2(String countryIso2) {
+        this.countryIso2 = countryIso2;
+        return this;
+    }
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=properNoun")
+    public String properNoun;
+    public NameTypeGeoPathParams withProperNoun(String properNoun) {
+        this.properNoun = properNoun;
+        return this;
+    }
+}

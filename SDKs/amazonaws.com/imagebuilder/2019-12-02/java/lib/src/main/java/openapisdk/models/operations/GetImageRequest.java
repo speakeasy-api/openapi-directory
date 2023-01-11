@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class GetImageRequest {
+    public GetImageQueryParams queryParams;
+    public GetImageRequest withQueryParams(GetImageQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public GetImageHeaders headers;
+    public GetImageRequest withHeaders(GetImageHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+}

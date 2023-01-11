@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class GetEmployeesFromPayRunRequest {
+    public GetEmployeesFromPayRunPathParams pathParams;
+    public GetEmployeesFromPayRunRequest withPathParams(GetEmployeesFromPayRunPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public GetEmployeesFromPayRunHeaders headers;
+    public GetEmployeesFromPayRunRequest withHeaders(GetEmployeesFromPayRunHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+}

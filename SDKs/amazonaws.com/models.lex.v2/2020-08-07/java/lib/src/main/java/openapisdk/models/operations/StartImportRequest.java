@@ -1,0 +1,17 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class StartImportRequest {
+    public StartImportHeaders headers;
+    public StartImportRequest withHeaders(StartImportHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public StartImportRequestBody request;
+    public StartImportRequest withRequest(StartImportRequestBody request) {
+        this.request = request;
+        return this;
+    }
+}

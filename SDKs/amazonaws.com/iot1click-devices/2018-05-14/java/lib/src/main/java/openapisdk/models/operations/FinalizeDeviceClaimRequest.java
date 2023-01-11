@@ -1,0 +1,22 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class FinalizeDeviceClaimRequest {
+    public FinalizeDeviceClaimPathParams pathParams;
+    public FinalizeDeviceClaimRequest withPathParams(FinalizeDeviceClaimPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public FinalizeDeviceClaimHeaders headers;
+    public FinalizeDeviceClaimRequest withHeaders(FinalizeDeviceClaimHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public FinalizeDeviceClaimRequestBody request;
+    public FinalizeDeviceClaimRequest withRequest(FinalizeDeviceClaimRequestBody request) {
+        this.request = request;
+        return this;
+    }
+}

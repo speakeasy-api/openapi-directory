@@ -1,0 +1,36 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class SeriesSeriesSeriesSubscriptionReleaseInfo {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("cancelTime")
+    public String cancelTime;
+    public SeriesSeriesSeriesSubscriptionReleaseInfo withCancelTime(String cancelTime) {
+        this.cancelTime = cancelTime;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("currentReleaseInfo")
+    public SeriesSeriesSeriesSubscriptionReleaseInfoCurrentReleaseInfo currentReleaseInfo;
+    public SeriesSeriesSeriesSubscriptionReleaseInfo withCurrentReleaseInfo(SeriesSeriesSeriesSubscriptionReleaseInfoCurrentReleaseInfo currentReleaseInfo) {
+        this.currentReleaseInfo = currentReleaseInfo;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("nextReleaseInfo")
+    public SeriesSeriesSeriesSubscriptionReleaseInfoNextReleaseInfo nextReleaseInfo;
+    public SeriesSeriesSeriesSubscriptionReleaseInfo withNextReleaseInfo(SeriesSeriesSeriesSubscriptionReleaseInfoNextReleaseInfo nextReleaseInfo) {
+        this.nextReleaseInfo = nextReleaseInfo;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("seriesSubscriptionType")
+    public String seriesSubscriptionType;
+    public SeriesSeriesSeriesSubscriptionReleaseInfo withSeriesSubscriptionType(String seriesSubscriptionType) {
+        this.seriesSubscriptionType = seriesSubscriptionType;
+        return this;
+    }
+}

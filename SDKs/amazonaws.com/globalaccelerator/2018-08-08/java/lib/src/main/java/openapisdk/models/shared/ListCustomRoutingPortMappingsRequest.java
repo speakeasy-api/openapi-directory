@@ -1,0 +1,35 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class ListCustomRoutingPortMappingsRequest {
+    @JsonProperty("AcceleratorArn")
+    public String acceleratorArn;
+    public ListCustomRoutingPortMappingsRequest withAcceleratorArn(String acceleratorArn) {
+        this.acceleratorArn = acceleratorArn;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("EndpointGroupArn")
+    public String endpointGroupArn;
+    public ListCustomRoutingPortMappingsRequest withEndpointGroupArn(String endpointGroupArn) {
+        this.endpointGroupArn = endpointGroupArn;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("MaxResults")
+    public Long maxResults;
+    public ListCustomRoutingPortMappingsRequest withMaxResults(Long maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("NextToken")
+    public String nextToken;
+    public ListCustomRoutingPortMappingsRequest withNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+}

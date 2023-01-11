@@ -1,0 +1,116 @@
+package openapisdk.models.shared;
+
+import java.time.OffsetDateTime;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import openapisdk.utils.DateTimeSerializer;
+import openapisdk.utils.DateTimeDeserializer;
+
+public class AnalysisDetail {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("config")
+    public String config;
+    public AnalysisDetail withConfig(String config) {
+        this.config = config;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonSerialize(contentUsing = DateTimeSerializer.class)
+    @JsonDeserialize(contentUsing = DateTimeDeserializer.class)
+    @JsonProperty("date_finished")
+    public OffsetDateTime dateFinished;
+    public AnalysisDetail withDateFinished(OffsetDateTime dateFinished) {
+        this.dateFinished = dateFinished;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonSerialize(contentUsing = DateTimeSerializer.class)
+    @JsonDeserialize(contentUsing = DateTimeDeserializer.class)
+    @JsonProperty("date_last_modified")
+    public OffsetDateTime dateLastModified;
+    public AnalysisDetail withDateLastModified(OffsetDateTime dateLastModified) {
+        this.dateLastModified = dateLastModified;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonSerialize(contentUsing = DateTimeSerializer.class)
+    @JsonDeserialize(contentUsing = DateTimeDeserializer.class)
+    @JsonProperty("date_launched")
+    public OffsetDateTime dateLaunched;
+    public AnalysisDetail withDateLaunched(OffsetDateTime dateLaunched) {
+        this.dateLaunched = dateLaunched;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("failures")
+    public String failures;
+    public AnalysisDetail withFailures(String failures) {
+        this.failures = failures;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("features")
+    public String features;
+    public AnalysisDetail withFeatures(String features) {
+        this.features = features;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("id")
+    public Long id;
+    public AnalysisDetail withId(Long id) {
+        this.id = id;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("name")
+    public String name;
+    public AnalysisDetail withName(String name) {
+        this.name = name;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("red_button_domain")
+    public String redButtonDomain;
+    public AnalysisDetail withRedButtonDomain(String redButtonDomain) {
+        this.redButtonDomain = redButtonDomain;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("slug")
+    public String slug;
+    public AnalysisDetail withSlug(String slug) {
+        this.slug = slug;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("url")
+    public String url;
+    public AnalysisDetail withUrl(String url) {
+        this.url = url;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("urls_done")
+    public String urlsDone;
+    public AnalysisDetail withUrlsDone(String urlsDone) {
+        this.urlsDone = urlsDone;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("urls_in_queue")
+    public String urlsInQueue;
+    public AnalysisDetail withUrlsInQueue(String urlsInQueue) {
+        this.urlsInQueue = urlsInQueue;
+        return this;
+    }
+    @JsonProperty("user")
+    public User user;
+    public AnalysisDetail withUser(User user) {
+        this.user = user;
+        return this;
+    }
+}

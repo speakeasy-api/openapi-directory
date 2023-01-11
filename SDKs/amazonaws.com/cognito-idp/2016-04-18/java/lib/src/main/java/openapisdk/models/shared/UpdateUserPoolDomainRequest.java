@@ -1,0 +1,28 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+/**
+ * UpdateUserPoolDomainRequest
+ * The UpdateUserPoolDomain request input.
+**/
+public class UpdateUserPoolDomainRequest {
+    @JsonProperty("CustomDomainConfig")
+    public CustomDomainConfigType customDomainConfig;
+    public UpdateUserPoolDomainRequest withCustomDomainConfig(CustomDomainConfigType customDomainConfig) {
+        this.customDomainConfig = customDomainConfig;
+        return this;
+    }
+    @JsonProperty("Domain")
+    public String domain;
+    public UpdateUserPoolDomainRequest withDomain(String domain) {
+        this.domain = domain;
+        return this;
+    }
+    @JsonProperty("UserPoolId")
+    public String userPoolId;
+    public UpdateUserPoolDomainRequest withUserPoolId(String userPoolId) {
+        this.userPoolId = userPoolId;
+        return this;
+    }
+}

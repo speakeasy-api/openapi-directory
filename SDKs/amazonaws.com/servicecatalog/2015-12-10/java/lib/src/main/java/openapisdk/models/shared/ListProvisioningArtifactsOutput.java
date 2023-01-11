@@ -1,0 +1,22 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class ListProvisioningArtifactsOutput {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("NextPageToken")
+    public String nextPageToken;
+    public ListProvisioningArtifactsOutput withNextPageToken(String nextPageToken) {
+        this.nextPageToken = nextPageToken;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ProvisioningArtifactDetails")
+    public ProvisioningArtifactDetail[] provisioningArtifactDetails;
+    public ListProvisioningArtifactsOutput withProvisioningArtifactDetails(ProvisioningArtifactDetail[] provisioningArtifactDetails) {
+        this.provisioningArtifactDetails = provisioningArtifactDetails;
+        return this;
+    }
+}

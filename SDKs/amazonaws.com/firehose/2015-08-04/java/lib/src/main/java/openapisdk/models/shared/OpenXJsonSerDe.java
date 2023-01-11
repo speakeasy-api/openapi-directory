@@ -1,0 +1,33 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * OpenXJsonSerDe
+ * The OpenX SerDe. Used by Kinesis Data Firehose for deserializing data, which means converting it from the JSON format in preparation for serializing it to the Parquet or ORC format. This is one of two deserializers you can choose, depending on which one offers the functionality you need. The other option is the native Hive / HCatalog JsonSerDe.
+**/
+public class OpenXJsonSerDe {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("CaseInsensitive")
+    public Boolean caseInsensitive;
+    public OpenXJsonSerDe withCaseInsensitive(Boolean caseInsensitive) {
+        this.caseInsensitive = caseInsensitive;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ColumnToJsonKeyMappings")
+    public java.util.Map<String, String> columnToJsonKeyMappings;
+    public OpenXJsonSerDe withColumnToJsonKeyMappings(java.util.Map<String, String> columnToJsonKeyMappings) {
+        this.columnToJsonKeyMappings = columnToJsonKeyMappings;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ConvertDotsInJsonKeysToUnderscores")
+    public Boolean convertDotsInJsonKeysToUnderscores;
+    public OpenXJsonSerDe withConvertDotsInJsonKeysToUnderscores(Boolean convertDotsInJsonKeysToUnderscores) {
+        this.convertDotsInJsonKeysToUnderscores = convertDotsInJsonKeysToUnderscores;
+        return this;
+    }
+}

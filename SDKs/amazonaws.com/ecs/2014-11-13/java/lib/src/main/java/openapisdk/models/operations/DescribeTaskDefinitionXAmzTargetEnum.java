@@ -1,0 +1,12 @@
+package openapisdk.models.operations;
+
+
+public enum DescribeTaskDefinitionXAmzTargetEnum {
+    AMAZON_EC2_CONTAINER_SERVICE_V20141113_DESCRIBE_TASK_DEFINITION("AmazonEC2ContainerServiceV20141113.DescribeTaskDefinition");
+
+    public final String value;
+
+    private DescribeTaskDefinitionXAmzTargetEnum(String value) {
+        this.value = value;
+    }
+}

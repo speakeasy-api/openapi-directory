@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class DfareportingContentCategoriesDeleteRequest {
+    public DfareportingContentCategoriesDeletePathParams pathParams;
+    public DfareportingContentCategoriesDeleteRequest withPathParams(DfareportingContentCategoriesDeletePathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public DfareportingContentCategoriesDeleteQueryParams queryParams;
+    public DfareportingContentCategoriesDeleteRequest withQueryParams(DfareportingContentCategoriesDeleteQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public DfareportingContentCategoriesDeleteSecurity security;
+    public DfareportingContentCategoriesDeleteRequest withSecurity(DfareportingContentCategoriesDeleteSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

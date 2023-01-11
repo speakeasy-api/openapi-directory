@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class JobDeleteRequest {
+    public JobDeletePathParams pathParams;
+    public JobDeleteRequest withPathParams(JobDeletePathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public JobDeleteQueryParams queryParams;
+    public JobDeleteRequest withQueryParams(JobDeleteQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public JobDeleteHeaders headers;
+    public JobDeleteRequest withHeaders(JobDeleteHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+}

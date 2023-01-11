@@ -1,0 +1,16 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+/**
+ * GlueDataCatalogConfiguration
+ * The configuration of the Glue Data Catalog that you use for Apache Flink SQL queries and table API transforms that you write in an application.
+**/
+public class GlueDataCatalogConfiguration {
+    @JsonProperty("DatabaseARN")
+    public String databaseARN;
+    public GlueDataCatalogConfiguration withDatabaseArn(String databaseARN) {
+        this.databaseARN = databaseARN;
+        return this;
+    }
+}

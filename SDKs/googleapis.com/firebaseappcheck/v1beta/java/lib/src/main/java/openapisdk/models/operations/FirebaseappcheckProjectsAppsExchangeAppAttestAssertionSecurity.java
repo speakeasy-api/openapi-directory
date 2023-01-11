@@ -1,0 +1,18 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class FirebaseappcheckProjectsAppsExchangeAppAttestAssertionSecurity {
+    @SpeakeasyMetadata("security:option=true")
+    public FirebaseappcheckProjectsAppsExchangeAppAttestAssertionSecurityOption1 option1;
+    public FirebaseappcheckProjectsAppsExchangeAppAttestAssertionSecurity withOption1(FirebaseappcheckProjectsAppsExchangeAppAttestAssertionSecurityOption1 option1) {
+        this.option1 = option1;
+        return this;
+    }
+    @SpeakeasyMetadata("security:option=true")
+    public FirebaseappcheckProjectsAppsExchangeAppAttestAssertionSecurityOption2 option2;
+    public FirebaseappcheckProjectsAppsExchangeAppAttestAssertionSecurity withOption2(FirebaseappcheckProjectsAppsExchangeAppAttestAssertionSecurityOption2 option2) {
+        this.option2 = option2;
+        return this;
+    }
+}

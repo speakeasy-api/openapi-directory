@@ -1,0 +1,49 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class Tag {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("games_count")
+    public Long gamesCount;
+    public Tag withGamesCount(Long gamesCount) {
+        this.gamesCount = gamesCount;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("id")
+    public Long id;
+    public Tag withId(Long id) {
+        this.id = id;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("image_background")
+    public String imageBackground;
+    public Tag withImageBackground(String imageBackground) {
+        this.imageBackground = imageBackground;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("language")
+    public String language;
+    public Tag withLanguage(String language) {
+        this.language = language;
+        return this;
+    }
+    @JsonProperty("name")
+    public String name;
+    public Tag withName(String name) {
+        this.name = name;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("slug")
+    public String slug;
+    public Tag withSlug(String slug) {
+        this.slug = slug;
+        return this;
+    }
+}

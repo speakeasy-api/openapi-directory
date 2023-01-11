@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class ContentLiasettingsGetaccessiblegmbaccountsRequest {
+    public ContentLiasettingsGetaccessiblegmbaccountsPathParams pathParams;
+    public ContentLiasettingsGetaccessiblegmbaccountsRequest withPathParams(ContentLiasettingsGetaccessiblegmbaccountsPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public ContentLiasettingsGetaccessiblegmbaccountsQueryParams queryParams;
+    public ContentLiasettingsGetaccessiblegmbaccountsRequest withQueryParams(ContentLiasettingsGetaccessiblegmbaccountsQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public ContentLiasettingsGetaccessiblegmbaccountsSecurity security;
+    public ContentLiasettingsGetaccessiblegmbaccountsRequest withSecurity(ContentLiasettingsGetaccessiblegmbaccountsSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

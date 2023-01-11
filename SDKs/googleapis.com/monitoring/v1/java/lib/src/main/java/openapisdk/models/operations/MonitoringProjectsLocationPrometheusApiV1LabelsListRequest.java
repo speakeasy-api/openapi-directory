@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class MonitoringProjectsLocationPrometheusApiV1LabelsListRequest {
+    public MonitoringProjectsLocationPrometheusApiV1LabelsListPathParams pathParams;
+    public MonitoringProjectsLocationPrometheusApiV1LabelsListRequest withPathParams(MonitoringProjectsLocationPrometheusApiV1LabelsListPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public MonitoringProjectsLocationPrometheusApiV1LabelsListQueryParams queryParams;
+    public MonitoringProjectsLocationPrometheusApiV1LabelsListRequest withQueryParams(MonitoringProjectsLocationPrometheusApiV1LabelsListQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public MonitoringProjectsLocationPrometheusApiV1LabelsListSecurity security;
+    public MonitoringProjectsLocationPrometheusApiV1LabelsListRequest withSecurity(MonitoringProjectsLocationPrometheusApiV1LabelsListSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

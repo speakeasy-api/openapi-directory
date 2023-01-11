@@ -1,0 +1,21 @@
+package openapisdk.models.shared;
+
+
+
+public class ExtensionConfigIntentAddMedia {
+    public java.util.Map<String, Object> hdr;
+    public ExtensionConfigIntentAddMedia withHdr(java.util.Map<String, Object> hdr) {
+        this.hdr = hdr;
+        return this;
+    }
+    public ExtensionConfigIntentAddMediaOptEnum[] opt;
+    public ExtensionConfigIntentAddMedia withOpt(ExtensionConfigIntentAddMediaOptEnum[] opt) {
+        this.opt = opt;
+        return this;
+    }
+    public String url;
+    public ExtensionConfigIntentAddMedia withUrl(String url) {
+        this.url = url;
+        return this;
+    }
+}

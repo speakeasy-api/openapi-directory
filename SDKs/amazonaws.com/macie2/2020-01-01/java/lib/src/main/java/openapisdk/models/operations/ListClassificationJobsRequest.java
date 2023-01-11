@@ -1,0 +1,22 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class ListClassificationJobsRequest {
+    public ListClassificationJobsQueryParams queryParams;
+    public ListClassificationJobsRequest withQueryParams(ListClassificationJobsQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public ListClassificationJobsHeaders headers;
+    public ListClassificationJobsRequest withHeaders(ListClassificationJobsHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public ListClassificationJobsRequestBody request;
+    public ListClassificationJobsRequest withRequest(ListClassificationJobsRequestBody request) {
+        this.request = request;
+        return this;
+    }
+}

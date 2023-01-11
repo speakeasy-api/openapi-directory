@@ -1,0 +1,29 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class UploadEntityDefinitionsRequest {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("deprecateExistingEntities")
+    public Boolean deprecateExistingEntities;
+    public UploadEntityDefinitionsRequest withDeprecateExistingEntities(Boolean deprecateExistingEntities) {
+        this.deprecateExistingEntities = deprecateExistingEntities;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("document")
+    public DefinitionDocument document;
+    public UploadEntityDefinitionsRequest withDocument(DefinitionDocument document) {
+        this.document = document;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("syncWithPublicNamespace")
+    public Boolean syncWithPublicNamespace;
+    public UploadEntityDefinitionsRequest withSyncWithPublicNamespace(Boolean syncWithPublicNamespace) {
+        this.syncWithPublicNamespace = syncWithPublicNamespace;
+        return this;
+    }
+}

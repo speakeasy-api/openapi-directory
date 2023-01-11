@@ -1,0 +1,18 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+public class UpdateJobRequest {
+    @JsonProperty("JobName")
+    public String jobName;
+    public UpdateJobRequest withJobName(String jobName) {
+        this.jobName = jobName;
+        return this;
+    }
+    @JsonProperty("JobUpdate")
+    public JobUpdate jobUpdate;
+    public UpdateJobRequest withJobUpdate(JobUpdate jobUpdate) {
+        this.jobUpdate = jobUpdate;
+        return this;
+    }
+}

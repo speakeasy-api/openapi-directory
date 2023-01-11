@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class GetVnicRequest {
+    public GetVnicPathParams pathParams;
+    public GetVnicRequest withPathParams(GetVnicPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public GetVnicQueryParams queryParams;
+    public GetVnicRequest withQueryParams(GetVnicQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public GetVnicSecurity security;
+    public GetVnicRequest withSecurity(GetVnicSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

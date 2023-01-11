@@ -1,0 +1,18 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class FirebaseappcheckProjectsAppsExchangePlayIntegrityTokenSecurity {
+    @SpeakeasyMetadata("security:option=true")
+    public FirebaseappcheckProjectsAppsExchangePlayIntegrityTokenSecurityOption1 option1;
+    public FirebaseappcheckProjectsAppsExchangePlayIntegrityTokenSecurity withOption1(FirebaseappcheckProjectsAppsExchangePlayIntegrityTokenSecurityOption1 option1) {
+        this.option1 = option1;
+        return this;
+    }
+    @SpeakeasyMetadata("security:option=true")
+    public FirebaseappcheckProjectsAppsExchangePlayIntegrityTokenSecurityOption2 option2;
+    public FirebaseappcheckProjectsAppsExchangePlayIntegrityTokenSecurity withOption2(FirebaseappcheckProjectsAppsExchangePlayIntegrityTokenSecurityOption2 option2) {
+        this.option2 = option2;
+        return this;
+    }
+}

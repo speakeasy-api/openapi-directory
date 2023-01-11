@@ -1,0 +1,56 @@
+package openapisdk.models.shared;
+
+
+public enum InputParameterDataTypeEnum {
+    DATA_TYPE_UNSPECIFIED("DATA_TYPE_UNSPECIFIED"),
+    INT("INT"),
+    SMALLINT("SMALLINT"),
+    DOUBLE("DOUBLE"),
+    DATE("DATE"),
+    DATETIME("DATETIME"),
+    TIME("TIME"),
+    STRING("STRING"),
+    LONG_("LONG"),
+    BOOLEAN_("BOOLEAN"),
+    DECIMAL("DECIMAL"),
+    UUID("UUID"),
+    BLOB("BLOB"),
+    BIT("BIT"),
+    TINYINT("TINYINT"),
+    INTEGER("INTEGER"),
+    BIGINT("BIGINT"),
+    FLOAT("FLOAT"),
+    REAL("REAL"),
+    NUMERIC("NUMERIC"),
+    CHAR("CHAR"),
+    VARCHAR("VARCHAR"),
+    LONGVARCHAR("LONGVARCHAR"),
+    TIMESTAMP("TIMESTAMP"),
+    NCHAR("NCHAR"),
+    NVARCHAR("NVARCHAR"),
+    LONGNVARCHAR("LONGNVARCHAR"),
+    NULL_("NULL"),
+    OTHER("OTHER"),
+    JAVA_OBJECT("JAVA_OBJECT"),
+    DISTINCT("DISTINCT"),
+    STRUCT("STRUCT"),
+    ARRAY("ARRAY"),
+    CLOB("CLOB"),
+    REF("REF"),
+    DATALINK("DATALINK"),
+    ROWID("ROWID"),
+    BINARY("BINARY"),
+    VARBINARY("VARBINARY"),
+    LONGVARBINARY("LONGVARBINARY"),
+    NCLOB("NCLOB"),
+    SQLXML("SQLXML"),
+    REF_CURSOR("REF_CURSOR"),
+    TIME_WITH_TIMEZONE("TIME_WITH_TIMEZONE"),
+    TIMESTAMP_WITH_TIMEZONE("TIMESTAMP_WITH_TIMEZONE");
+
+    public final String value;
+
+    private InputParameterDataTypeEnum(String value) {
+        this.value = value;
+    }
+}

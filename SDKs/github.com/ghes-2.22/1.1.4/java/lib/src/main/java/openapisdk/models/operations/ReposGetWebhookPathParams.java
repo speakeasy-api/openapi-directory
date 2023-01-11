@@ -1,0 +1,24 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class ReposGetWebhookPathParams {
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=hook_id")
+    public Long hookId;
+    public ReposGetWebhookPathParams withHookId(Long hookId) {
+        this.hookId = hookId;
+        return this;
+    }
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public ReposGetWebhookPathParams withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public ReposGetWebhookPathParams withRepo(String repo) {
+        this.repo = repo;
+        return this;
+    }
+}

@@ -1,0 +1,26 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * Rule
+ * A safety rule. A safety rule can be an assertion rule or a gating rule.
+**/
+public class Rule {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ASSERTION")
+    public AssertionRule assertion;
+    public Rule withAssertion(AssertionRule assertion) {
+        this.assertion = assertion;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("GATING")
+    public GatingRule gating;
+    public Rule withGating(GatingRule gating) {
+        this.gating = gating;
+        return this;
+    }
+}

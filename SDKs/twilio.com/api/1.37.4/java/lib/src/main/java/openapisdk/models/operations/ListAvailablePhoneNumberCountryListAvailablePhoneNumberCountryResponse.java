@@ -1,0 +1,71 @@
+package openapisdk.models.operations;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class ListAvailablePhoneNumberCountryListAvailablePhoneNumberCountryResponse {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("countries")
+    public openapisdk.models.shared.ApiV2010AccountAvailablePhoneNumberCountry[] countries;
+    public ListAvailablePhoneNumberCountryListAvailablePhoneNumberCountryResponse withCountries(openapisdk.models.shared.ApiV2010AccountAvailablePhoneNumberCountry[] countries) {
+        this.countries = countries;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("end")
+    public Long end;
+    public ListAvailablePhoneNumberCountryListAvailablePhoneNumberCountryResponse withEnd(Long end) {
+        this.end = end;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("first_page_uri")
+    public String firstPageUri;
+    public ListAvailablePhoneNumberCountryListAvailablePhoneNumberCountryResponse withFirstPageUri(String firstPageUri) {
+        this.firstPageUri = firstPageUri;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("next_page_uri")
+    public String nextPageUri;
+    public ListAvailablePhoneNumberCountryListAvailablePhoneNumberCountryResponse withNextPageUri(String nextPageUri) {
+        this.nextPageUri = nextPageUri;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("page")
+    public Long page;
+    public ListAvailablePhoneNumberCountryListAvailablePhoneNumberCountryResponse withPage(Long page) {
+        this.page = page;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("page_size")
+    public Long pageSize;
+    public ListAvailablePhoneNumberCountryListAvailablePhoneNumberCountryResponse withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("previous_page_uri")
+    public String previousPageUri;
+    public ListAvailablePhoneNumberCountryListAvailablePhoneNumberCountryResponse withPreviousPageUri(String previousPageUri) {
+        this.previousPageUri = previousPageUri;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("start")
+    public Long start;
+    public ListAvailablePhoneNumberCountryListAvailablePhoneNumberCountryResponse withStart(Long start) {
+        this.start = start;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("uri")
+    public String uri;
+    public ListAvailablePhoneNumberCountryListAvailablePhoneNumberCountryResponse withUri(String uri) {
+        this.uri = uri;
+        return this;
+    }
+}

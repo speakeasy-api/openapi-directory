@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class MigrationsListForOrgRequest {
+    public MigrationsListForOrgPathParams pathParams;
+    public MigrationsListForOrgRequest withPathParams(MigrationsListForOrgPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public MigrationsListForOrgQueryParams queryParams;
+    public MigrationsListForOrgRequest withQueryParams(MigrationsListForOrgQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+}

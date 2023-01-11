@@ -1,0 +1,100 @@
+package openapisdk.models.shared;
+
+import java.time.OffsetDateTime;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import openapisdk.utils.DateTimeSerializer;
+import openapisdk.utils.DateTimeDeserializer;
+
+/**
+ * Experiment
+ * Describes an experiment.
+**/
+public class Experiment {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("actions")
+    public java.util.Map<String, ExperimentAction> actions;
+    public Experiment withActions(java.util.Map<String, ExperimentAction> actions) {
+        this.actions = actions;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonSerialize(contentUsing = DateTimeSerializer.class)
+    @JsonDeserialize(contentUsing = DateTimeDeserializer.class)
+    @JsonProperty("creationTime")
+    public OffsetDateTime creationTime;
+    public Experiment withCreationTime(OffsetDateTime creationTime) {
+        this.creationTime = creationTime;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonSerialize(contentUsing = DateTimeSerializer.class)
+    @JsonDeserialize(contentUsing = DateTimeDeserializer.class)
+    @JsonProperty("endTime")
+    public OffsetDateTime endTime;
+    public Experiment withEndTime(OffsetDateTime endTime) {
+        this.endTime = endTime;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("experimentTemplateId")
+    public String experimentTemplateId;
+    public Experiment withExperimentTemplateId(String experimentTemplateId) {
+        this.experimentTemplateId = experimentTemplateId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("id")
+    public String id;
+    public Experiment withId(String id) {
+        this.id = id;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("roleArn")
+    public String roleArn;
+    public Experiment withRoleArn(String roleArn) {
+        this.roleArn = roleArn;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonSerialize(contentUsing = DateTimeSerializer.class)
+    @JsonDeserialize(contentUsing = DateTimeDeserializer.class)
+    @JsonProperty("startTime")
+    public OffsetDateTime startTime;
+    public Experiment withStartTime(OffsetDateTime startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("state")
+    public ExperimentState state;
+    public Experiment withState(ExperimentState state) {
+        this.state = state;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("stopConditions")
+    public ExperimentStopCondition[] stopConditions;
+    public Experiment withStopConditions(ExperimentStopCondition[] stopConditions) {
+        this.stopConditions = stopConditions;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("tags")
+    public java.util.Map<String, String> tags;
+    public Experiment withTags(java.util.Map<String, String> tags) {
+        this.tags = tags;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("targets")
+    public java.util.Map<String, ExperimentTarget> targets;
+    public Experiment withTargets(java.util.Map<String, ExperimentTarget> targets) {
+        this.targets = targets;
+        return this;
+    }
+}

@@ -1,0 +1,75 @@
+package openapisdk.models.shared;
+
+import java.time.OffsetDateTime;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import openapisdk.utils.DateTimeSerializer;
+import openapisdk.utils.DateTimeDeserializer;
+
+/**
+ * TestCase
+ *  Information about a test case created using a framework such as NUnit or Cucumber. A test case might be a unit test or a configuration test. 
+**/
+public class TestCase {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("durationInNanoSeconds")
+    public Long durationInNanoSeconds;
+    public TestCase withDurationInNanoSeconds(Long durationInNanoSeconds) {
+        this.durationInNanoSeconds = durationInNanoSeconds;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonSerialize(contentUsing = DateTimeSerializer.class)
+    @JsonDeserialize(contentUsing = DateTimeDeserializer.class)
+    @JsonProperty("expired")
+    public OffsetDateTime expired;
+    public TestCase withExpired(OffsetDateTime expired) {
+        this.expired = expired;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("message")
+    public String message;
+    public TestCase withMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("name")
+    public String name;
+    public TestCase withName(String name) {
+        this.name = name;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("prefix")
+    public String prefix;
+    public TestCase withPrefix(String prefix) {
+        this.prefix = prefix;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("reportArn")
+    public String reportArn;
+    public TestCase withReportArn(String reportArn) {
+        this.reportArn = reportArn;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("status")
+    public String status;
+    public TestCase withStatus(String status) {
+        this.status = status;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("testRawDataPath")
+    public String testRawDataPath;
+    public TestCase withTestRawDataPath(String testRawDataPath) {
+        this.testRawDataPath = testRawDataPath;
+        return this;
+    }
+}

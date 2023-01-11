@@ -1,0 +1,30 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+public class SendWorkflowStepStateRequest {
+    @JsonProperty("ExecutionId")
+    public String executionId;
+    public SendWorkflowStepStateRequest withExecutionId(String executionId) {
+        this.executionId = executionId;
+        return this;
+    }
+    @JsonProperty("Status")
+    public CustomStepStatusEnum status;
+    public SendWorkflowStepStateRequest withStatus(CustomStepStatusEnum status) {
+        this.status = status;
+        return this;
+    }
+    @JsonProperty("Token")
+    public String token;
+    public SendWorkflowStepStateRequest withToken(String token) {
+        this.token = token;
+        return this;
+    }
+    @JsonProperty("WorkflowId")
+    public String workflowId;
+    public SendWorkflowStepStateRequest withWorkflowId(String workflowId) {
+        this.workflowId = workflowId;
+        return this;
+    }
+}

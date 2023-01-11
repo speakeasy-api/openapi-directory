@@ -1,0 +1,18 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class SendPostHeaders {
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public SendPostHeaders withAccept(String accept) {
+        this.accept = accept;
+        return this;
+    }
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public SendPostHeaders withContentType(String contentType) {
+        this.contentType = contentType;
+        return this;
+    }
+}

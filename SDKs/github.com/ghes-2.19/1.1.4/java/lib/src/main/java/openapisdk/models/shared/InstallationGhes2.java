@@ -1,0 +1,134 @@
+package openapisdk.models.shared;
+
+import java.time.OffsetDateTime;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import openapisdk.utils.DateTimeSerializer;
+import openapisdk.utils.DateTimeDeserializer;
+
+/**
+ * InstallationGhes2
+ * Installation
+**/
+public class InstallationGhes2 {
+    @JsonProperty("access_tokens_url")
+    public String accessTokensUrl;
+    public InstallationGhes2 withAccessTokensUrl(String accessTokensUrl) {
+        this.accessTokensUrl = accessTokensUrl;
+        return this;
+    }
+    @JsonProperty("account")
+    public Object account;
+    public InstallationGhes2 withAccount(Object account) {
+        this.account = account;
+        return this;
+    }
+    @JsonProperty("app_id")
+    public Long appId;
+    public InstallationGhes2 withAppId(Long appId) {
+        this.appId = appId;
+        return this;
+    }
+    @JsonProperty("app_slug")
+    public String appSlug;
+    public InstallationGhes2 withAppSlug(String appSlug) {
+        this.appSlug = appSlug;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("contact_email")
+    public String contactEmail;
+    public InstallationGhes2 withContactEmail(String contactEmail) {
+        this.contactEmail = contactEmail;
+        return this;
+    }
+    @JsonSerialize(using = DateTimeSerializer.class)
+    @JsonDeserialize(using = DateTimeDeserializer.class)
+    @JsonProperty("created_at")
+    public OffsetDateTime createdAt;
+    public InstallationGhes2 withCreatedAt(OffsetDateTime createdAt) {
+        this.createdAt = createdAt;
+        return this;
+    }
+    @JsonProperty("events")
+    public String[] events;
+    public InstallationGhes2 withEvents(String[] events) {
+        this.events = events;
+        return this;
+    }
+    @JsonProperty("html_url")
+    public String htmlUrl;
+    public InstallationGhes2 withHtmlUrl(String htmlUrl) {
+        this.htmlUrl = htmlUrl;
+        return this;
+    }
+    @JsonProperty("id")
+    public Long id;
+    public InstallationGhes2 withId(Long id) {
+        this.id = id;
+        return this;
+    }
+    @JsonProperty("permissions")
+    public InstallationGhes2Permissions permissions;
+    public InstallationGhes2 withPermissions(InstallationGhes2Permissions permissions) {
+        this.permissions = permissions;
+        return this;
+    }
+    @JsonProperty("repositories_url")
+    public String repositoriesUrl;
+    public InstallationGhes2 withRepositoriesUrl(String repositoriesUrl) {
+        this.repositoriesUrl = repositoriesUrl;
+        return this;
+    }
+    @JsonProperty("repository_selection")
+    public InstallationGhes2RepositorySelectionEnum repositorySelection;
+    public InstallationGhes2 withRepositorySelection(InstallationGhes2RepositorySelectionEnum repositorySelection) {
+        this.repositorySelection = repositorySelection;
+        return this;
+    }
+    @JsonProperty("single_file_name")
+    public String singleFileName;
+    public InstallationGhes2 withSingleFileName(String singleFileName) {
+        this.singleFileName = singleFileName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonSerialize(contentUsing = DateTimeSerializer.class)
+    @JsonDeserialize(contentUsing = DateTimeDeserializer.class)
+    @JsonProperty("suspended_at")
+    public OffsetDateTime suspendedAt;
+    public InstallationGhes2 withSuspendedAt(OffsetDateTime suspendedAt) {
+        this.suspendedAt = suspendedAt;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("suspended_by")
+    public InstallationGhes2SimpleUser suspendedBy;
+    public InstallationGhes2 withSuspendedBy(InstallationGhes2SimpleUser suspendedBy) {
+        this.suspendedBy = suspendedBy;
+        return this;
+    }
+    @JsonProperty("target_id")
+    public Long targetId;
+    public InstallationGhes2 withTargetId(Long targetId) {
+        this.targetId = targetId;
+        return this;
+    }
+    @JsonProperty("target_type")
+    public String targetType;
+    public InstallationGhes2 withTargetType(String targetType) {
+        this.targetType = targetType;
+        return this;
+    }
+    @JsonSerialize(using = DateTimeSerializer.class)
+    @JsonDeserialize(using = DateTimeDeserializer.class)
+    @JsonProperty("updated_at")
+    public OffsetDateTime updatedAt;
+    public InstallationGhes2 withUpdatedAt(OffsetDateTime updatedAt) {
+        this.updatedAt = updatedAt;
+        return this;
+    }
+}

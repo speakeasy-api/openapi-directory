@@ -1,0 +1,33 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * GoogleCloudChannelV1FetchReportResultsResponse
+ * Response message for CloudChannelReportsService.FetchReportResults. Contains a tabular representation of the report results.
+**/
+public class GoogleCloudChannelV1FetchReportResultsResponse {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("nextPageToken")
+    public String nextPageToken;
+    public GoogleCloudChannelV1FetchReportResultsResponse withNextPageToken(String nextPageToken) {
+        this.nextPageToken = nextPageToken;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("reportMetadata")
+    public GoogleCloudChannelV1ReportResultsMetadata reportMetadata;
+    public GoogleCloudChannelV1FetchReportResultsResponse withReportMetadata(GoogleCloudChannelV1ReportResultsMetadata reportMetadata) {
+        this.reportMetadata = reportMetadata;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("rows")
+    public GoogleCloudChannelV1Row[] rows;
+    public GoogleCloudChannelV1FetchReportResultsResponse withRows(GoogleCloudChannelV1Row[] rows) {
+        this.rows = rows;
+        return this;
+    }
+}

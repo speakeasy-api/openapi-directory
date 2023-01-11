@@ -1,0 +1,30 @@
+package openapisdk.models.shared;
+
+
+
+/**
+ * FieldLevelEncryptionProfileConfig
+ * A complex data type of profiles for the field-level encryption.
+**/
+public class FieldLevelEncryptionProfileConfig {
+    public String callerReference;
+    public FieldLevelEncryptionProfileConfig withCallerReference(String callerReference) {
+        this.callerReference = callerReference;
+        return this;
+    }
+    public String comment;
+    public FieldLevelEncryptionProfileConfig withComment(String comment) {
+        this.comment = comment;
+        return this;
+    }
+    public EncryptionEntities encryptionEntities;
+    public FieldLevelEncryptionProfileConfig withEncryptionEntities(EncryptionEntities encryptionEntities) {
+        this.encryptionEntities = encryptionEntities;
+        return this;
+    }
+    public String name;
+    public FieldLevelEncryptionProfileConfig withName(String name) {
+        this.name = name;
+        return this;
+    }
+}

@@ -1,0 +1,48 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class MessagesCreateQueryParams {
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=doctor")
+    public Long doctor;
+    public MessagesCreateQueryParams withDoctor(Long doctor) {
+        this.doctor = doctor;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=owner")
+    public Long owner;
+    public MessagesCreateQueryParams withOwner(Long owner) {
+        this.owner = owner;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=patient")
+    public Long patient;
+    public MessagesCreateQueryParams withPatient(Long patient) {
+        this.patient = patient;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=received_since")
+    public String receivedSince;
+    public MessagesCreateQueryParams withReceivedSince(String receivedSince) {
+        this.receivedSince = receivedSince;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=responsible_user")
+    public Long responsibleUser;
+    public MessagesCreateQueryParams withResponsibleUser(Long responsibleUser) {
+        this.responsibleUser = responsibleUser;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
+    public String type;
+    public MessagesCreateQueryParams withType(String type) {
+        this.type = type;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=updated_since")
+    public String updatedSince;
+    public MessagesCreateQueryParams withUpdatedSince(String updatedSince) {
+        this.updatedSince = updatedSince;
+        return this;
+    }
+}

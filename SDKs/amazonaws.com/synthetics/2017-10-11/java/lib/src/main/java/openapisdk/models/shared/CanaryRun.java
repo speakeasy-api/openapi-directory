@@ -1,0 +1,47 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * CanaryRun
+ * This structure contains the details about one run of one canary.
+**/
+public class CanaryRun {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ArtifactS3Location")
+    public String artifactS3Location;
+    public CanaryRun withArtifactS3Location(String artifactS3Location) {
+        this.artifactS3Location = artifactS3Location;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Id")
+    public String id;
+    public CanaryRun withId(String id) {
+        this.id = id;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Name")
+    public String name;
+    public CanaryRun withName(String name) {
+        this.name = name;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Status")
+    public CanaryRunStatus status;
+    public CanaryRun withStatus(CanaryRunStatus status) {
+        this.status = status;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Timeline")
+    public CanaryRunTimeline timeline;
+    public CanaryRun withTimeline(CanaryRunTimeline timeline) {
+        this.timeline = timeline;
+        return this;
+    }
+}

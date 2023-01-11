@@ -1,0 +1,18 @@
+package openapisdk.models.shared;
+
+
+public enum MobileUsabilityIssueIssueTypeEnum {
+    MOBILE_USABILITY_ISSUE_TYPE_UNSPECIFIED("MOBILE_USABILITY_ISSUE_TYPE_UNSPECIFIED"),
+    USES_INCOMPATIBLE_PLUGINS("USES_INCOMPATIBLE_PLUGINS"),
+    CONFIGURE_VIEWPORT("CONFIGURE_VIEWPORT"),
+    FIXED_WIDTH_VIEWPORT("FIXED_WIDTH_VIEWPORT"),
+    SIZE_CONTENT_TO_VIEWPORT("SIZE_CONTENT_TO_VIEWPORT"),
+    USE_LEGIBLE_FONT_SIZES("USE_LEGIBLE_FONT_SIZES"),
+    TAP_TARGETS_TOO_CLOSE("TAP_TARGETS_TOO_CLOSE");
+
+    public final String value;
+
+    private MobileUsabilityIssueIssueTypeEnum(String value) {
+        this.value = value;
+    }
+}

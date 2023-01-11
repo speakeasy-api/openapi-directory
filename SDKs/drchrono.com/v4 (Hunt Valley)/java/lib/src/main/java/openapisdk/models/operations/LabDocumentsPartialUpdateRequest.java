@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class LabDocumentsPartialUpdateRequest {
+    public LabDocumentsPartialUpdatePathParams pathParams;
+    public LabDocumentsPartialUpdateRequest withPathParams(LabDocumentsPartialUpdatePathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public LabDocumentsPartialUpdateQueryParams queryParams;
+    public LabDocumentsPartialUpdateRequest withQueryParams(LabDocumentsPartialUpdateQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public LabDocumentsPartialUpdateSecurity security;
+    public LabDocumentsPartialUpdateRequest withSecurity(LabDocumentsPartialUpdateSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

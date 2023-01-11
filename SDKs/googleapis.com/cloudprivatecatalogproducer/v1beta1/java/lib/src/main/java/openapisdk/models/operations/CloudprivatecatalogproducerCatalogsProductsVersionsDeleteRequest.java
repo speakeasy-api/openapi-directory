@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class CloudprivatecatalogproducerCatalogsProductsVersionsDeleteRequest {
+    public CloudprivatecatalogproducerCatalogsProductsVersionsDeletePathParams pathParams;
+    public CloudprivatecatalogproducerCatalogsProductsVersionsDeleteRequest withPathParams(CloudprivatecatalogproducerCatalogsProductsVersionsDeletePathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public CloudprivatecatalogproducerCatalogsProductsVersionsDeleteQueryParams queryParams;
+    public CloudprivatecatalogproducerCatalogsProductsVersionsDeleteRequest withQueryParams(CloudprivatecatalogproducerCatalogsProductsVersionsDeleteQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public CloudprivatecatalogproducerCatalogsProductsVersionsDeleteSecurity security;
+    public CloudprivatecatalogproducerCatalogsProductsVersionsDeleteRequest withSecurity(CloudprivatecatalogproducerCatalogsProductsVersionsDeleteSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

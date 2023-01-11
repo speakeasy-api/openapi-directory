@@ -1,0 +1,66 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * S3DestinationConfiguration
+ * Describes the configuration of a destination in Amazon S3.
+**/
+public class S3DestinationConfiguration {
+    @JsonProperty("BucketARN")
+    public String bucketARN;
+    public S3DestinationConfiguration withBucketArn(String bucketARN) {
+        this.bucketARN = bucketARN;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("BufferingHints")
+    public BufferingHints bufferingHints;
+    public S3DestinationConfiguration withBufferingHints(BufferingHints bufferingHints) {
+        this.bufferingHints = bufferingHints;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("CloudWatchLoggingOptions")
+    public CloudWatchLoggingOptions cloudWatchLoggingOptions;
+    public S3DestinationConfiguration withCloudWatchLoggingOptions(CloudWatchLoggingOptions cloudWatchLoggingOptions) {
+        this.cloudWatchLoggingOptions = cloudWatchLoggingOptions;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("CompressionFormat")
+    public CompressionFormatEnum compressionFormat;
+    public S3DestinationConfiguration withCompressionFormat(CompressionFormatEnum compressionFormat) {
+        this.compressionFormat = compressionFormat;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("EncryptionConfiguration")
+    public EncryptionConfiguration encryptionConfiguration;
+    public S3DestinationConfiguration withEncryptionConfiguration(EncryptionConfiguration encryptionConfiguration) {
+        this.encryptionConfiguration = encryptionConfiguration;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ErrorOutputPrefix")
+    public String errorOutputPrefix;
+    public S3DestinationConfiguration withErrorOutputPrefix(String errorOutputPrefix) {
+        this.errorOutputPrefix = errorOutputPrefix;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Prefix")
+    public String prefix;
+    public S3DestinationConfiguration withPrefix(String prefix) {
+        this.prefix = prefix;
+        return this;
+    }
+    @JsonProperty("RoleARN")
+    public String roleARN;
+    public S3DestinationConfiguration withRoleArn(String roleARN) {
+        this.roleARN = roleARN;
+        return this;
+    }
+}

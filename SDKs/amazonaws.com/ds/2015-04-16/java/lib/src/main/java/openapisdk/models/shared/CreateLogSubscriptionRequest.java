@@ -1,0 +1,18 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+public class CreateLogSubscriptionRequest {
+    @JsonProperty("DirectoryId")
+    public String directoryId;
+    public CreateLogSubscriptionRequest withDirectoryId(String directoryId) {
+        this.directoryId = directoryId;
+        return this;
+    }
+    @JsonProperty("LogGroupName")
+    public String logGroupName;
+    public CreateLogSubscriptionRequest withLogGroupName(String logGroupName) {
+        this.logGroupName = logGroupName;
+        return this;
+    }
+}

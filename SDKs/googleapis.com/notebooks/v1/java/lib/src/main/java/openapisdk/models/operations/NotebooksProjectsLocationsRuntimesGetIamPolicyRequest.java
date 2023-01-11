@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class NotebooksProjectsLocationsRuntimesGetIamPolicyRequest {
+    public NotebooksProjectsLocationsRuntimesGetIamPolicyPathParams pathParams;
+    public NotebooksProjectsLocationsRuntimesGetIamPolicyRequest withPathParams(NotebooksProjectsLocationsRuntimesGetIamPolicyPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public NotebooksProjectsLocationsRuntimesGetIamPolicyQueryParams queryParams;
+    public NotebooksProjectsLocationsRuntimesGetIamPolicyRequest withQueryParams(NotebooksProjectsLocationsRuntimesGetIamPolicyQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public NotebooksProjectsLocationsRuntimesGetIamPolicySecurity security;
+    public NotebooksProjectsLocationsRuntimesGetIamPolicyRequest withSecurity(NotebooksProjectsLocationsRuntimesGetIamPolicySecurity security) {
+        this.security = security;
+        return this;
+    }
+}

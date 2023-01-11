@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class GetAccountListRequest {
+    public GetAccountListQueryParams queryParams;
+    public GetAccountListRequest withQueryParams(GetAccountListQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public GetAccountListHeaders headers;
+    public GetAccountListRequest withHeaders(GetAccountListHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+    public GetAccountListSecurity security;
+    public GetAccountListRequest withSecurity(GetAccountListSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

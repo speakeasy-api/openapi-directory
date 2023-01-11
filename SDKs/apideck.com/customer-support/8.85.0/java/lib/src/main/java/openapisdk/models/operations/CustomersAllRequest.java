@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class CustomersAllRequest {
+    public CustomersAllQueryParams queryParams;
+    public CustomersAllRequest withQueryParams(CustomersAllQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public CustomersAllHeaders headers;
+    public CustomersAllRequest withHeaders(CustomersAllHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+    public CustomersAllSecurity security;
+    public CustomersAllRequest withSecurity(CustomersAllSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

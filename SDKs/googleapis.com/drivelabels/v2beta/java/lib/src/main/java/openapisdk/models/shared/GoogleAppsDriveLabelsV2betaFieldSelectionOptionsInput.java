@@ -1,0 +1,26 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * GoogleAppsDriveLabelsV2betaFieldSelectionOptionsInput
+ * Options for the selection field type.
+**/
+public class GoogleAppsDriveLabelsV2betaFieldSelectionOptionsInput {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("choices")
+    public GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceInput[] choices;
+    public GoogleAppsDriveLabelsV2betaFieldSelectionOptionsInput withChoices(GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceInput[] choices) {
+        this.choices = choices;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("listOptions")
+    public GoogleAppsDriveLabelsV2betaFieldListOptions listOptions;
+    public GoogleAppsDriveLabelsV2betaFieldSelectionOptionsInput withListOptions(GoogleAppsDriveLabelsV2betaFieldListOptions listOptions) {
+        this.listOptions = listOptions;
+        return this;
+    }
+}

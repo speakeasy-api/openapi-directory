@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class PostContainersNameOrIdRestartRequest {
+    public PostContainersNameOrIdRestartPathParams pathParams;
+    public PostContainersNameOrIdRestartRequest withPathParams(PostContainersNameOrIdRestartPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public PostContainersNameOrIdRestartQueryParams queryParams;
+    public PostContainersNameOrIdRestartRequest withQueryParams(PostContainersNameOrIdRestartQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public PostContainersNameOrIdRestartHeaders headers;
+    public PostContainersNameOrIdRestartRequest withHeaders(PostContainersNameOrIdRestartHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+}

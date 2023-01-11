@@ -1,0 +1,71 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class ModifierGroupInput {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("alternate_name")
+    public String alternateName;
+    public ModifierGroupInput withAlternateName(String alternateName) {
+        this.alternateName = alternateName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("deleted")
+    public Boolean deleted;
+    public ModifierGroupInput withDeleted(Boolean deleted) {
+        this.deleted = deleted;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("maximum_allowed")
+    public Long maximumAllowed;
+    public ModifierGroupInput withMaximumAllowed(Long maximumAllowed) {
+        this.maximumAllowed = maximumAllowed;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("minimum_required")
+    public Long minimumRequired;
+    public ModifierGroupInput withMinimumRequired(Long minimumRequired) {
+        this.minimumRequired = minimumRequired;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("modifiers")
+    public Object[] modifiers;
+    public ModifierGroupInput withModifiers(Object[] modifiers) {
+        this.modifiers = modifiers;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("name")
+    public String name;
+    public ModifierGroupInput withName(String name) {
+        this.name = name;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("present_at_all_locations")
+    public Boolean presentAtAllLocations;
+    public ModifierGroupInput withPresentAtAllLocations(Boolean presentAtAllLocations) {
+        this.presentAtAllLocations = presentAtAllLocations;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("row_version")
+    public String rowVersion;
+    public ModifierGroupInput withRowVersion(String rowVersion) {
+        this.rowVersion = rowVersion;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("selection_type")
+    public ModifierGroupIndicatesWhetherMultipleOptionsFromTheModifierGroupCanBeAppliedToASingleOrMultipleModifiersEnum selectionType;
+    public ModifierGroupInput withSelectionType(ModifierGroupIndicatesWhetherMultipleOptionsFromTheModifierGroupCanBeAppliedToASingleOrMultipleModifiersEnum selectionType) {
+        this.selectionType = selectionType;
+        return this;
+    }
+}

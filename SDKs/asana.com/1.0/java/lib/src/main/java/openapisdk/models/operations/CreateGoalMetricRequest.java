@@ -1,0 +1,22 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class CreateGoalMetricRequest {
+    public CreateGoalMetricPathParams pathParams;
+    public CreateGoalMetricRequest withPathParams(CreateGoalMetricPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public CreateGoalMetricQueryParams queryParams;
+    public CreateGoalMetricRequest withQueryParams(CreateGoalMetricQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public CreateGoalMetricRequestBodyInput request;
+    public CreateGoalMetricRequest withRequest(CreateGoalMetricRequestBodyInput request) {
+        this.request = request;
+        return this;
+    }
+}

@@ -1,0 +1,12 @@
+package openapisdk.models.operations;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+public class PostAdminRequestsRemoveByMetadataRequestBodyNegativeRegularExpressionMatch {
+    @JsonProperty("doesNotMatch")
+    public String doesNotMatch;
+    public PostAdminRequestsRemoveByMetadataRequestBodyNegativeRegularExpressionMatch withDoesNotMatch(String doesNotMatch) {
+        this.doesNotMatch = doesNotMatch;
+        return this;
+    }
+}

@@ -1,0 +1,22 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class UpdatePlacementRequest {
+    public UpdatePlacementPathParams pathParams;
+    public UpdatePlacementRequest withPathParams(UpdatePlacementPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public UpdatePlacementHeaders headers;
+    public UpdatePlacementRequest withHeaders(UpdatePlacementHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public UpdatePlacementRequestBody request;
+    public UpdatePlacementRequest withRequest(UpdatePlacementRequestBody request) {
+        this.request = request;
+        return this;
+    }
+}

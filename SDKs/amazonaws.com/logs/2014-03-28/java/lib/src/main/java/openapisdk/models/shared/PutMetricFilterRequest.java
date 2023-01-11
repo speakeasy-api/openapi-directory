@@ -1,0 +1,30 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+public class PutMetricFilterRequest {
+    @JsonProperty("filterName")
+    public String filterName;
+    public PutMetricFilterRequest withFilterName(String filterName) {
+        this.filterName = filterName;
+        return this;
+    }
+    @JsonProperty("filterPattern")
+    public String filterPattern;
+    public PutMetricFilterRequest withFilterPattern(String filterPattern) {
+        this.filterPattern = filterPattern;
+        return this;
+    }
+    @JsonProperty("logGroupName")
+    public String logGroupName;
+    public PutMetricFilterRequest withLogGroupName(String logGroupName) {
+        this.logGroupName = logGroupName;
+        return this;
+    }
+    @JsonProperty("metricTransformations")
+    public MetricTransformation[] metricTransformations;
+    public PutMetricFilterRequest withMetricTransformations(MetricTransformation[] metricTransformations) {
+        this.metricTransformations = metricTransformations;
+        return this;
+    }
+}

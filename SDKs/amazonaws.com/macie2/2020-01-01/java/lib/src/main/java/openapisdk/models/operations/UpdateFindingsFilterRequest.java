@@ -1,0 +1,22 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class UpdateFindingsFilterRequest {
+    public UpdateFindingsFilterPathParams pathParams;
+    public UpdateFindingsFilterRequest withPathParams(UpdateFindingsFilterPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public UpdateFindingsFilterHeaders headers;
+    public UpdateFindingsFilterRequest withHeaders(UpdateFindingsFilterHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public UpdateFindingsFilterRequestBody request;
+    public UpdateFindingsFilterRequest withRequest(UpdateFindingsFilterRequestBody request) {
+        this.request = request;
+        return this;
+    }
+}

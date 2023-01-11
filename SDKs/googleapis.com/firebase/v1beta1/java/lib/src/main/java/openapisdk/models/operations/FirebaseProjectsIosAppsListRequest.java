@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class FirebaseProjectsIosAppsListRequest {
+    public FirebaseProjectsIosAppsListPathParams pathParams;
+    public FirebaseProjectsIosAppsListRequest withPathParams(FirebaseProjectsIosAppsListPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public FirebaseProjectsIosAppsListQueryParams queryParams;
+    public FirebaseProjectsIosAppsListRequest withQueryParams(FirebaseProjectsIosAppsListQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public FirebaseProjectsIosAppsListSecurity security;
+    public FirebaseProjectsIosAppsListRequest withSecurity(FirebaseProjectsIosAppsListSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

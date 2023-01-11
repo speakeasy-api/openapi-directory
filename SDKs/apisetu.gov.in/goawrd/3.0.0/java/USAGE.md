@@ -1,0 +1,44 @@
+<!-- Start SDK Example Usage -->
+```java
+package hello.world;
+
+import openapisdk.SDK;
+import openapisdk.models.shared.Security;
+
+public class Application {
+    public static void main(String[] args) {
+        try {
+            SDK.Builder builder = SDK.builder();
+
+            SDK sdk = builder.build();
+
+            ErcerRequest req = new ErcerRequest() {{
+                security = new ErcerSecurity() {{
+                    apiKey = new SchemeApiKey() {{
+                        apiKey = "YOUR_API_KEY_HERE";
+                    }};
+                    clientId = new SchemeClientId() {{
+                        apiKey = "YOUR_API_KEY_HERE";
+                    }};
+                }};
+                request = new ErcerRequestBody() {{
+                    certificateParameters = new ErcerRequestBodyCertificateParameters() {{
+                        fullName = "vero";
+                        registration = "eius";
+                    }};
+                    consentArtifact = "veniam";
+                    format = "pdf";
+                    txnId = "et";
+                }};
+            }};
+
+            ErcerResponse res = sdk.apIs.ercer(req);
+
+            if (res.statusCode == 200) {
+                // handle response
+            }
+        } catch (Exception e) {
+            // handle exception
+        }
+```
+<!-- End SDK Example Usage -->

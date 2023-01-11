@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class DeleteFolderRequest {
+    public DeleteFolderPathParams pathParams;
+    public DeleteFolderRequest withPathParams(DeleteFolderPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public DeleteFolderHeaders headers;
+    public DeleteFolderRequest withHeaders(DeleteFolderHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+    public DeleteFolderSecurity security;
+    public DeleteFolderRequest withSecurity(DeleteFolderSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

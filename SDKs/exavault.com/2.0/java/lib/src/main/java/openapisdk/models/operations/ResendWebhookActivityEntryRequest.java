@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class ResendWebhookActivityEntryRequest {
+    public ResendWebhookActivityEntryPathParams pathParams;
+    public ResendWebhookActivityEntryRequest withPathParams(ResendWebhookActivityEntryPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public ResendWebhookActivityEntryHeaders headers;
+    public ResendWebhookActivityEntryRequest withHeaders(ResendWebhookActivityEntryHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+}

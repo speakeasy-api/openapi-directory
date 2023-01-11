@@ -1,0 +1,57 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class IssueSearchResultItemLabels {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("color")
+    public String color;
+    public IssueSearchResultItemLabels withColor(String color) {
+        this.color = color;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("default")
+    public Boolean default_;
+    public IssueSearchResultItemLabels withDefault(Boolean default_) {
+        this.default_ = default_;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("description")
+    public String description;
+    public IssueSearchResultItemLabels withDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("id")
+    public Long id;
+    public IssueSearchResultItemLabels withId(Long id) {
+        this.id = id;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("name")
+    public String name;
+    public IssueSearchResultItemLabels withName(String name) {
+        this.name = name;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("node_id")
+    public String nodeId;
+    public IssueSearchResultItemLabels withNodeId(String nodeId) {
+        this.nodeId = nodeId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("url")
+    public String url;
+    public IssueSearchResultItemLabels withUrl(String url) {
+        this.url = url;
+        return this;
+    }
+}

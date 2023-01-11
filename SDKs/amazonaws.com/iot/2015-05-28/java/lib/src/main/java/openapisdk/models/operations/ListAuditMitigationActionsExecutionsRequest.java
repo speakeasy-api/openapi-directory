@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class ListAuditMitigationActionsExecutionsRequest {
+    public ListAuditMitigationActionsExecutionsQueryParams queryParams;
+    public ListAuditMitigationActionsExecutionsRequest withQueryParams(ListAuditMitigationActionsExecutionsQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public ListAuditMitigationActionsExecutionsHeaders headers;
+    public ListAuditMitigationActionsExecutionsRequest withHeaders(ListAuditMitigationActionsExecutionsHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+}

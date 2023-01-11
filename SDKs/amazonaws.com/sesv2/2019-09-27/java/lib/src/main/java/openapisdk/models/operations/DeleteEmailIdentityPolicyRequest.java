@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class DeleteEmailIdentityPolicyRequest {
+    public DeleteEmailIdentityPolicyPathParams pathParams;
+    public DeleteEmailIdentityPolicyRequest withPathParams(DeleteEmailIdentityPolicyPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public DeleteEmailIdentityPolicyHeaders headers;
+    public DeleteEmailIdentityPolicyRequest withHeaders(DeleteEmailIdentityPolicyHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+}

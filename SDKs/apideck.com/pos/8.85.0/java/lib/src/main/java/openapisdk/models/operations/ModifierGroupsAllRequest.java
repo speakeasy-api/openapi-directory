@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class ModifierGroupsAllRequest {
+    public ModifierGroupsAllQueryParams queryParams;
+    public ModifierGroupsAllRequest withQueryParams(ModifierGroupsAllQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public ModifierGroupsAllHeaders headers;
+    public ModifierGroupsAllRequest withHeaders(ModifierGroupsAllHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+    public ModifierGroupsAllSecurity security;
+    public ModifierGroupsAllRequest withSecurity(ModifierGroupsAllSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

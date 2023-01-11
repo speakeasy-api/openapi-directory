@@ -1,0 +1,37 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * Contact
+ * A personal contact or escalation plan that Incident Manager engages during an incident.
+**/
+public class Contact {
+    @JsonProperty("Alias")
+    public String alias;
+    public Contact withAlias(String alias) {
+        this.alias = alias;
+        return this;
+    }
+    @JsonProperty("ContactArn")
+    public String contactArn;
+    public Contact withContactArn(String contactArn) {
+        this.contactArn = contactArn;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("DisplayName")
+    public String displayName;
+    public Contact withDisplayName(String displayName) {
+        this.displayName = displayName;
+        return this;
+    }
+    @JsonProperty("Type")
+    public ContactTypeEnum type;
+    public Contact withType(ContactTypeEnum type) {
+        this.type = type;
+        return this;
+    }
+}

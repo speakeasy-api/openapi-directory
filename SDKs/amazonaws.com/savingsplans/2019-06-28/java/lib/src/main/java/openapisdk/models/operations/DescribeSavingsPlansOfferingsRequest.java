@@ -1,0 +1,17 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class DescribeSavingsPlansOfferingsRequest {
+    public DescribeSavingsPlansOfferingsHeaders headers;
+    public DescribeSavingsPlansOfferingsRequest withHeaders(DescribeSavingsPlansOfferingsHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public DescribeSavingsPlansOfferingsRequestBody request;
+    public DescribeSavingsPlansOfferingsRequest withRequest(DescribeSavingsPlansOfferingsRequestBody request) {
+        this.request = request;
+        return this;
+    }
+}

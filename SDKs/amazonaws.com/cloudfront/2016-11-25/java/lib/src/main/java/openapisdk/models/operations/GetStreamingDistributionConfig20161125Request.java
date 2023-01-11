@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class GetStreamingDistributionConfig20161125Request {
+    public GetStreamingDistributionConfig20161125PathParams pathParams;
+    public GetStreamingDistributionConfig20161125Request withPathParams(GetStreamingDistributionConfig20161125PathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public GetStreamingDistributionConfig20161125Headers headers;
+    public GetStreamingDistributionConfig20161125Request withHeaders(GetStreamingDistributionConfig20161125Headers headers) {
+        this.headers = headers;
+        return this;
+    }
+}

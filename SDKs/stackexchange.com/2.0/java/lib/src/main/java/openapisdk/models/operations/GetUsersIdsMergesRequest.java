@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class GetUsersIdsMergesRequest {
+    public GetUsersIdsMergesPathParams pathParams;
+    public GetUsersIdsMergesRequest withPathParams(GetUsersIdsMergesPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public GetUsersIdsMergesQueryParams queryParams;
+    public GetUsersIdsMergesRequest withQueryParams(GetUsersIdsMergesQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+}

@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class DoubleclicksearchSavedColumnsListRequest {
+    public DoubleclicksearchSavedColumnsListPathParams pathParams;
+    public DoubleclicksearchSavedColumnsListRequest withPathParams(DoubleclicksearchSavedColumnsListPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public DoubleclicksearchSavedColumnsListQueryParams queryParams;
+    public DoubleclicksearchSavedColumnsListRequest withQueryParams(DoubleclicksearchSavedColumnsListQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public DoubleclicksearchSavedColumnsListSecurity security;
+    public DoubleclicksearchSavedColumnsListRequest withSecurity(DoubleclicksearchSavedColumnsListSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class GetEvidenceRequest {
+    public GetEvidencePathParams pathParams;
+    public GetEvidenceRequest withPathParams(GetEvidencePathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public GetEvidenceHeaders headers;
+    public GetEvidenceRequest withHeaders(GetEvidenceHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+}

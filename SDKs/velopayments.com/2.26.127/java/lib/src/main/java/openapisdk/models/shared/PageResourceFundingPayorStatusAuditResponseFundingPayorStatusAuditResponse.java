@@ -1,0 +1,29 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class PageResourceFundingPayorStatusAuditResponseFundingPayorStatusAuditResponse {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("content")
+    public FundingPayorStatusAuditResponse[] content;
+    public PageResourceFundingPayorStatusAuditResponseFundingPayorStatusAuditResponse withContent(FundingPayorStatusAuditResponse[] content) {
+        this.content = content;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("links")
+    public LinkForResponse[] links;
+    public PageResourceFundingPayorStatusAuditResponseFundingPayorStatusAuditResponse withLinks(LinkForResponse[] links) {
+        this.links = links;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("page")
+    public PageForResponse page;
+    public PageResourceFundingPayorStatusAuditResponseFundingPayorStatusAuditResponse withPage(PageForResponse page) {
+        this.page = page;
+        return this;
+    }
+}

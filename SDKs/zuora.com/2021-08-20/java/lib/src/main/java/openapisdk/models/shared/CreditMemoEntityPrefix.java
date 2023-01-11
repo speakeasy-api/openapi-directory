@@ -1,0 +1,29 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * CreditMemoEntityPrefix
+ * Container for the prefix and starting document number of credit memos.
+ * 
+ * **Note:** This field is only available if you have the Invoice Settlement feature enabled. The Invoice Settlement feature is generally available as of Zuora Billing Release 296 (March 2021). This feature includes Unapplied Payments, Credit and Debit Memo, and Invoice Item Settlement. If you want to enable Invoice Settlement, see [Invoice Settlement Enablement and Checklist Guide](https://knowledgecenter.zuora.com/Billing/Billing_and_Payments/Invoice_Settlement/Invoice_Settlement_Migration_Checklist_and_Guide) for more information.
+ * 
+**/
+public class CreditMemoEntityPrefix {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("prefix")
+    public String prefix;
+    public CreditMemoEntityPrefix withPrefix(String prefix) {
+        this.prefix = prefix;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("startNumber")
+    public Long startNumber;
+    public CreditMemoEntityPrefix withStartNumber(Long startNumber) {
+        this.startNumber = startNumber;
+        return this;
+    }
+}

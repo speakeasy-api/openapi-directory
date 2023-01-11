@@ -1,0 +1,68 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * RxNormAttribute
+ * The extracted attributes that relate to this entity. The attributes recognized by InferRxNorm are <code>DOSAGE</code>, <code>DURATION</code>, <code>FORM</code>, <code>FREQUENCY</code>, <code>RATE</code>, <code>ROUTE_OR_MODE</code>.
+**/
+public class RxNormAttribute {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("BeginOffset")
+    public Long beginOffset;
+    public RxNormAttribute withBeginOffset(Long beginOffset) {
+        this.beginOffset = beginOffset;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("EndOffset")
+    public Long endOffset;
+    public RxNormAttribute withEndOffset(Long endOffset) {
+        this.endOffset = endOffset;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Id")
+    public Long id;
+    public RxNormAttribute withId(Long id) {
+        this.id = id;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("RelationshipScore")
+    public Float relationshipScore;
+    public RxNormAttribute withRelationshipScore(Float relationshipScore) {
+        this.relationshipScore = relationshipScore;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Score")
+    public Float score;
+    public RxNormAttribute withScore(Float score) {
+        this.score = score;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Text")
+    public String text;
+    public RxNormAttribute withText(String text) {
+        this.text = text;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Traits")
+    public RxNormTrait[] traits;
+    public RxNormAttribute withTraits(RxNormTrait[] traits) {
+        this.traits = traits;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Type")
+    public RxNormAttributeTypeEnum type;
+    public RxNormAttribute withType(RxNormAttributeTypeEnum type) {
+        this.type = type;
+        return this;
+    }
+}

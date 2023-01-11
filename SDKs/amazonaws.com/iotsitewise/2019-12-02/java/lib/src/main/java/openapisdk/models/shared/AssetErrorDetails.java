@@ -1,0 +1,28 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+/**
+ * AssetErrorDetails
+ * Contains error details for the requested associate project asset action.
+**/
+public class AssetErrorDetails {
+    @JsonProperty("assetId")
+    public String assetId;
+    public AssetErrorDetails withAssetId(String assetId) {
+        this.assetId = assetId;
+        return this;
+    }
+    @JsonProperty("code")
+    public AssetErrorCodeEnum code;
+    public AssetErrorDetails withCode(AssetErrorCodeEnum code) {
+        this.code = code;
+        return this;
+    }
+    @JsonProperty("message")
+    public String message;
+    public AssetErrorDetails withMessage(String message) {
+        this.message = message;
+        return this;
+    }
+}

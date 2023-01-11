@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class OrgsListFailedInvitationsRequest {
+    public OrgsListFailedInvitationsPathParams pathParams;
+    public OrgsListFailedInvitationsRequest withPathParams(OrgsListFailedInvitationsPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public OrgsListFailedInvitationsQueryParams queryParams;
+    public OrgsListFailedInvitationsRequest withQueryParams(OrgsListFailedInvitationsQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+}

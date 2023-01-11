@@ -1,0 +1,65 @@
+package openapisdk.models.shared;
+
+import java.time.OffsetDateTime;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import openapisdk.utils.DateTimeSerializer;
+import openapisdk.utils.DateTimeDeserializer;
+
+/**
+ * ChannelSummary
+ * A summary of information about a channel.
+**/
+public class ChannelSummary {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("channelName")
+    public String channelName;
+    public ChannelSummary withChannelName(String channelName) {
+        this.channelName = channelName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("channelStorage")
+    public ChannelStorageSummary channelStorage;
+    public ChannelSummary withChannelStorage(ChannelStorageSummary channelStorage) {
+        this.channelStorage = channelStorage;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonSerialize(contentUsing = DateTimeSerializer.class)
+    @JsonDeserialize(contentUsing = DateTimeDeserializer.class)
+    @JsonProperty("creationTime")
+    public OffsetDateTime creationTime;
+    public ChannelSummary withCreationTime(OffsetDateTime creationTime) {
+        this.creationTime = creationTime;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonSerialize(contentUsing = DateTimeSerializer.class)
+    @JsonDeserialize(contentUsing = DateTimeDeserializer.class)
+    @JsonProperty("lastMessageArrivalTime")
+    public OffsetDateTime lastMessageArrivalTime;
+    public ChannelSummary withLastMessageArrivalTime(OffsetDateTime lastMessageArrivalTime) {
+        this.lastMessageArrivalTime = lastMessageArrivalTime;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonSerialize(contentUsing = DateTimeSerializer.class)
+    @JsonDeserialize(contentUsing = DateTimeDeserializer.class)
+    @JsonProperty("lastUpdateTime")
+    public OffsetDateTime lastUpdateTime;
+    public ChannelSummary withLastUpdateTime(OffsetDateTime lastUpdateTime) {
+        this.lastUpdateTime = lastUpdateTime;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("status")
+    public ChannelStatusEnum status;
+    public ChannelSummary withStatus(ChannelStatusEnum status) {
+        this.status = status;
+        return this;
+    }
+}

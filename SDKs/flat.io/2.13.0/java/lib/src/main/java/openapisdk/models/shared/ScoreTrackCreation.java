@@ -1,0 +1,48 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * ScoreTrackCreation
+ * Creation of a new track. This one must contain the URL of the track or the corresponding file
+ * 
+**/
+public class ScoreTrackCreation {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("default")
+    public Boolean default_;
+    public ScoreTrackCreation withDefault(Boolean default_) {
+        this.default_ = default_;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("state")
+    public ScoreTrackStateEnum state;
+    public ScoreTrackCreation withState(ScoreTrackStateEnum state) {
+        this.state = state;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("synchronizationPoints")
+    public ScoreTrackPoint[] synchronizationPoints;
+    public ScoreTrackCreation withSynchronizationPoints(ScoreTrackPoint[] synchronizationPoints) {
+        this.synchronizationPoints = synchronizationPoints;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("title")
+    public String title;
+    public ScoreTrackCreation withTitle(String title) {
+        this.title = title;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("url")
+    public String url;
+    public ScoreTrackCreation withUrl(String url) {
+        this.url = url;
+        return this;
+    }
+}

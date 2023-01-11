@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class GetEventIntegrationRequest {
+    public GetEventIntegrationPathParams pathParams;
+    public GetEventIntegrationRequest withPathParams(GetEventIntegrationPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public GetEventIntegrationHeaders headers;
+    public GetEventIntegrationRequest withHeaders(GetEventIntegrationHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+}

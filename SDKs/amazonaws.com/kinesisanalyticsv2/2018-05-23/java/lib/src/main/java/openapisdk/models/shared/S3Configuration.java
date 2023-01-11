@@ -1,0 +1,22 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+/**
+ * S3Configuration
+ * For a SQL-based Kinesis Data Analytics application, provides a description of an Amazon S3 data source, including the Amazon Resource Name (ARN) of the S3 bucket and the name of the Amazon S3 object that contains the data.
+**/
+public class S3Configuration {
+    @JsonProperty("BucketARN")
+    public String bucketARN;
+    public S3Configuration withBucketArn(String bucketARN) {
+        this.bucketARN = bucketARN;
+        return this;
+    }
+    @JsonProperty("FileKey")
+    public String fileKey;
+    public S3Configuration withFileKey(String fileKey) {
+        this.fileKey = fileKey;
+        return this;
+    }
+}

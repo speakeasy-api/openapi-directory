@@ -1,0 +1,18 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+public class DescribeMigrationTaskRequest {
+    @JsonProperty("MigrationTaskName")
+    public String migrationTaskName;
+    public DescribeMigrationTaskRequest withMigrationTaskName(String migrationTaskName) {
+        this.migrationTaskName = migrationTaskName;
+        return this;
+    }
+    @JsonProperty("ProgressUpdateStream")
+    public String progressUpdateStream;
+    public DescribeMigrationTaskRequest withProgressUpdateStream(String progressUpdateStream) {
+        this.progressUpdateStream = progressUpdateStream;
+        return this;
+    }
+}

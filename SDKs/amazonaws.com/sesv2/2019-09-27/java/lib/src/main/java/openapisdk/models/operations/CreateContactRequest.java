@@ -1,0 +1,22 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class CreateContactRequest {
+    public CreateContactPathParams pathParams;
+    public CreateContactRequest withPathParams(CreateContactPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public CreateContactHeaders headers;
+    public CreateContactRequest withHeaders(CreateContactHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public CreateContactRequestBody request;
+    public CreateContactRequest withRequest(CreateContactRequestBody request) {
+        this.request = request;
+        return this;
+    }
+}

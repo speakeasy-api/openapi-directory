@@ -1,0 +1,47 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * UploadListElement
+ * A list of in-progress multipart uploads for a vault.
+**/
+public class UploadListElement {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ArchiveDescription")
+    public String archiveDescription;
+    public UploadListElement withArchiveDescription(String archiveDescription) {
+        this.archiveDescription = archiveDescription;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("CreationDate")
+    public String creationDate;
+    public UploadListElement withCreationDate(String creationDate) {
+        this.creationDate = creationDate;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("MultipartUploadId")
+    public String multipartUploadId;
+    public UploadListElement withMultipartUploadId(String multipartUploadId) {
+        this.multipartUploadId = multipartUploadId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("PartSizeInBytes")
+    public Long partSizeInBytes;
+    public UploadListElement withPartSizeInBytes(Long partSizeInBytes) {
+        this.partSizeInBytes = partSizeInBytes;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("VaultARN")
+    public String vaultARN;
+    public UploadListElement withVaultArn(String vaultARN) {
+        this.vaultARN = vaultARN;
+        return this;
+    }
+}

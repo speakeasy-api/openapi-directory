@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class GetAllPayScheduleTagsRequest {
+    public GetAllPayScheduleTagsPathParams pathParams;
+    public GetAllPayScheduleTagsRequest withPathParams(GetAllPayScheduleTagsPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public GetAllPayScheduleTagsHeaders headers;
+    public GetAllPayScheduleTagsRequest withHeaders(GetAllPayScheduleTagsHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+}

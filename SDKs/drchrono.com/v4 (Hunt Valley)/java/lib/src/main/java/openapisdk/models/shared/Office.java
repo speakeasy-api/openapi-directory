@@ -1,0 +1,127 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class Office {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("address")
+    public String address;
+    public Office withAddress(String address) {
+        this.address = address;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("archived")
+    public Boolean archived;
+    public Office withArchived(Boolean archived) {
+        this.archived = archived;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("city")
+    public String city;
+    public Office withCity(String city) {
+        this.city = city;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("country")
+    public OfficeCountryEnum country;
+    public Office withCountry(OfficeCountryEnum country) {
+        this.country = country;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("doctor")
+    public String doctor;
+    public Office withDoctor(String doctor) {
+        this.doctor = doctor;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("end_time")
+    public String endTime;
+    public Office withEndTime(String endTime) {
+        this.endTime = endTime;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("exam_rooms")
+    public String examRooms;
+    public Office withExamRooms(String examRooms) {
+        this.examRooms = examRooms;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("fax_number")
+    public String faxNumber;
+    public Office withFaxNumber(String faxNumber) {
+        this.faxNumber = faxNumber;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("id")
+    public Long id;
+    public Office withId(Long id) {
+        this.id = id;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("name")
+    public String name;
+    public Office withName(String name) {
+        this.name = name;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("online_scheduling")
+    public Boolean onlineScheduling;
+    public Office withOnlineScheduling(Boolean onlineScheduling) {
+        this.onlineScheduling = onlineScheduling;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("online_timeslots")
+    public OfficeOfficeOnlineHours[] onlineTimeslots;
+    public Office withOnlineTimeslots(OfficeOfficeOnlineHours[] onlineTimeslots) {
+        this.onlineTimeslots = onlineTimeslots;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("phone_number")
+    public String phoneNumber;
+    public Office withPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("start_time")
+    public String startTime;
+    public Office withStartTime(String startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("state")
+    public OfficeStateEnum state;
+    public Office withState(OfficeStateEnum state) {
+        this.state = state;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("tax_id_number_professional")
+    public String taxIdNumberProfessional;
+    public Office withTaxIdNumberProfessional(String taxIdNumberProfessional) {
+        this.taxIdNumberProfessional = taxIdNumberProfessional;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("zip_code")
+    public String zipCode;
+    public Office withZipCode(String zipCode) {
+        this.zipCode = zipCode;
+        return this;
+    }
+}

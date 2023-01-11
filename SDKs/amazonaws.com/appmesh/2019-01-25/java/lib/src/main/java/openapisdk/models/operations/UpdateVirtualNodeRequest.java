@@ -1,0 +1,27 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class UpdateVirtualNodeRequest {
+    public UpdateVirtualNodePathParams pathParams;
+    public UpdateVirtualNodeRequest withPathParams(UpdateVirtualNodePathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public UpdateVirtualNodeQueryParams queryParams;
+    public UpdateVirtualNodeRequest withQueryParams(UpdateVirtualNodeQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public UpdateVirtualNodeHeaders headers;
+    public UpdateVirtualNodeRequest withHeaders(UpdateVirtualNodeHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public UpdateVirtualNodeRequestBody request;
+    public UpdateVirtualNodeRequest withRequest(UpdateVirtualNodeRequestBody request) {
+        this.request = request;
+        return this;
+    }
+}

@@ -1,0 +1,24 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+public class UpdateEnvironmentMembershipRequest {
+    @JsonProperty("environmentId")
+    public String environmentId;
+    public UpdateEnvironmentMembershipRequest withEnvironmentId(String environmentId) {
+        this.environmentId = environmentId;
+        return this;
+    }
+    @JsonProperty("permissions")
+    public MemberPermissionsEnum permissions;
+    public UpdateEnvironmentMembershipRequest withPermissions(MemberPermissionsEnum permissions) {
+        this.permissions = permissions;
+        return this;
+    }
+    @JsonProperty("userArn")
+    public String userArn;
+    public UpdateEnvironmentMembershipRequest withUserArn(String userArn) {
+        this.userArn = userArn;
+        return this;
+    }
+}

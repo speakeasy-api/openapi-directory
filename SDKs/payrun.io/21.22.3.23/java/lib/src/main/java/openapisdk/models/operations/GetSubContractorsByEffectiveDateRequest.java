@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class GetSubContractorsByEffectiveDateRequest {
+    public GetSubContractorsByEffectiveDatePathParams pathParams;
+    public GetSubContractorsByEffectiveDateRequest withPathParams(GetSubContractorsByEffectiveDatePathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public GetSubContractorsByEffectiveDateHeaders headers;
+    public GetSubContractorsByEffectiveDateRequest withHeaders(GetSubContractorsByEffectiveDateHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+}

@@ -1,0 +1,32 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * LaunchTemplateConfiguration
+ * Identifies an Amazon EC2 launch template to use for a specific account.
+**/
+public class LaunchTemplateConfiguration {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("accountId")
+    public String accountId;
+    public LaunchTemplateConfiguration withAccountId(String accountId) {
+        this.accountId = accountId;
+        return this;
+    }
+    @JsonProperty("launchTemplateId")
+    public String launchTemplateId;
+    public LaunchTemplateConfiguration withLaunchTemplateId(String launchTemplateId) {
+        this.launchTemplateId = launchTemplateId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("setDefaultVersion")
+    public Boolean setDefaultVersion;
+    public LaunchTemplateConfiguration withSetDefaultVersion(Boolean setDefaultVersion) {
+        this.setDefaultVersion = setDefaultVersion;
+        return this;
+    }
+}

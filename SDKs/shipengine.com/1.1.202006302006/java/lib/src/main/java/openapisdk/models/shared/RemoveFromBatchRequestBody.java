@@ -1,0 +1,26 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * RemoveFromBatchRequestBody
+ * A modify batch object
+**/
+public class RemoveFromBatchRequestBody {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("rate_ids")
+    public String[] rateIds;
+    public RemoveFromBatchRequestBody withRateIds(String[] rateIds) {
+        this.rateIds = rateIds;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("shipment_ids")
+    public String[] shipmentIds;
+    public RemoveFromBatchRequestBody withShipmentIds(String[] shipmentIds) {
+        this.shipmentIds = shipmentIds;
+        return this;
+    }
+}

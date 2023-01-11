@@ -1,0 +1,22 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class CreateInvalidation20181105Request {
+    public CreateInvalidation20181105PathParams pathParams;
+    public CreateInvalidation20181105Request withPathParams(CreateInvalidation20181105PathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public CreateInvalidation20181105Headers headers;
+    public CreateInvalidation20181105Request withHeaders(CreateInvalidation20181105Headers headers) {
+        this.headers = headers;
+        return this;
+    }
+    @SpeakeasyMetadata("request:mediaType=text/xml")
+    public byte[] request;
+    public CreateInvalidation20181105Request withRequest(byte[] request) {
+        this.request = request;
+        return this;
+    }
+}

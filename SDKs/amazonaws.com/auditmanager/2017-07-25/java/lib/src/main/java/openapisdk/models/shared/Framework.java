@@ -1,0 +1,119 @@
+package openapisdk.models.shared;
+
+import java.time.OffsetDateTime;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import openapisdk.utils.DateTimeSerializer;
+import openapisdk.utils.DateTimeDeserializer;
+
+/**
+ * Framework
+ *  The file used to structure and automate Audit Manager assessments for a given compliance standard. 
+**/
+public class Framework {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("arn")
+    public String arn;
+    public Framework withArn(String arn) {
+        this.arn = arn;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("complianceType")
+    public String complianceType;
+    public Framework withComplianceType(String complianceType) {
+        this.complianceType = complianceType;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("controlSets")
+    public ControlSet[] controlSets;
+    public Framework withControlSets(ControlSet[] controlSets) {
+        this.controlSets = controlSets;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("controlSources")
+    public String controlSources;
+    public Framework withControlSources(String controlSources) {
+        this.controlSources = controlSources;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonSerialize(contentUsing = DateTimeSerializer.class)
+    @JsonDeserialize(contentUsing = DateTimeDeserializer.class)
+    @JsonProperty("createdAt")
+    public OffsetDateTime createdAt;
+    public Framework withCreatedAt(OffsetDateTime createdAt) {
+        this.createdAt = createdAt;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("createdBy")
+    public String createdBy;
+    public Framework withCreatedBy(String createdBy) {
+        this.createdBy = createdBy;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("description")
+    public String description;
+    public Framework withDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("id")
+    public String id;
+    public Framework withId(String id) {
+        this.id = id;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonSerialize(contentUsing = DateTimeSerializer.class)
+    @JsonDeserialize(contentUsing = DateTimeDeserializer.class)
+    @JsonProperty("lastUpdatedAt")
+    public OffsetDateTime lastUpdatedAt;
+    public Framework withLastUpdatedAt(OffsetDateTime lastUpdatedAt) {
+        this.lastUpdatedAt = lastUpdatedAt;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("lastUpdatedBy")
+    public String lastUpdatedBy;
+    public Framework withLastUpdatedBy(String lastUpdatedBy) {
+        this.lastUpdatedBy = lastUpdatedBy;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("logo")
+    public String logo;
+    public Framework withLogo(String logo) {
+        this.logo = logo;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("name")
+    public String name;
+    public Framework withName(String name) {
+        this.name = name;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("tags")
+    public java.util.Map<String, String> tags;
+    public Framework withTags(java.util.Map<String, String> tags) {
+        this.tags = tags;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("type")
+    public FrameworkTypeEnum type;
+    public Framework withType(FrameworkTypeEnum type) {
+        this.type = type;
+        return this;
+    }
+}

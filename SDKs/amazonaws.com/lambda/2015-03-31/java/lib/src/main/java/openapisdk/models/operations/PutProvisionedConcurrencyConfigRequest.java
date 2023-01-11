@@ -1,0 +1,27 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class PutProvisionedConcurrencyConfigRequest {
+    public PutProvisionedConcurrencyConfigPathParams pathParams;
+    public PutProvisionedConcurrencyConfigRequest withPathParams(PutProvisionedConcurrencyConfigPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public PutProvisionedConcurrencyConfigQueryParams queryParams;
+    public PutProvisionedConcurrencyConfigRequest withQueryParams(PutProvisionedConcurrencyConfigQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public PutProvisionedConcurrencyConfigHeaders headers;
+    public PutProvisionedConcurrencyConfigRequest withHeaders(PutProvisionedConcurrencyConfigHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public PutProvisionedConcurrencyConfigRequestBody request;
+    public PutProvisionedConcurrencyConfigRequest withRequest(PutProvisionedConcurrencyConfigRequestBody request) {
+        this.request = request;
+        return this;
+    }
+}

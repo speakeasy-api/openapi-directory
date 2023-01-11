@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class ListCloudFrontOriginAccessIdentities20190326Request {
+    public ListCloudFrontOriginAccessIdentities20190326QueryParams queryParams;
+    public ListCloudFrontOriginAccessIdentities20190326Request withQueryParams(ListCloudFrontOriginAccessIdentities20190326QueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public ListCloudFrontOriginAccessIdentities20190326Headers headers;
+    public ListCloudFrontOriginAccessIdentities20190326Request withHeaders(ListCloudFrontOriginAccessIdentities20190326Headers headers) {
+        this.headers = headers;
+        return this;
+    }
+}

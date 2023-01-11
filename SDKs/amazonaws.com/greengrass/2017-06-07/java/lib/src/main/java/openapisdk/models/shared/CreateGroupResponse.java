@@ -1,0 +1,57 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class CreateGroupResponse {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Arn")
+    public String arn;
+    public CreateGroupResponse withArn(String arn) {
+        this.arn = arn;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("CreationTimestamp")
+    public String creationTimestamp;
+    public CreateGroupResponse withCreationTimestamp(String creationTimestamp) {
+        this.creationTimestamp = creationTimestamp;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Id")
+    public String id;
+    public CreateGroupResponse withId(String id) {
+        this.id = id;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("LastUpdatedTimestamp")
+    public String lastUpdatedTimestamp;
+    public CreateGroupResponse withLastUpdatedTimestamp(String lastUpdatedTimestamp) {
+        this.lastUpdatedTimestamp = lastUpdatedTimestamp;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("LatestVersion")
+    public String latestVersion;
+    public CreateGroupResponse withLatestVersion(String latestVersion) {
+        this.latestVersion = latestVersion;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("LatestVersionArn")
+    public String latestVersionArn;
+    public CreateGroupResponse withLatestVersionArn(String latestVersionArn) {
+        this.latestVersionArn = latestVersionArn;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Name")
+    public String name;
+    public CreateGroupResponse withName(String name) {
+        this.name = name;
+        return this;
+    }
+}

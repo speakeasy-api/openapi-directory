@@ -1,0 +1,30 @@
+package openapisdk.models.operations;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+public class RatcrRequestBodyCertificateParameters {
+    @JsonProperty("DOB")
+    public String dob;
+    public RatcrRequestBodyCertificateParameters withDob(String dob) {
+        this.dob = dob;
+        return this;
+    }
+    @JsonProperty("FullName")
+    public String fullName;
+    public RatcrRequestBodyCertificateParameters withFullName(String fullName) {
+        this.fullName = fullName;
+        return this;
+    }
+    @JsonProperty("GENDER")
+    public String gender;
+    public RatcrRequestBodyCertificateParameters withGender(String gender) {
+        this.gender = gender;
+        return this;
+    }
+    @JsonProperty("UID")
+    public String uid;
+    public RatcrRequestBodyCertificateParameters withUid(String uid) {
+        this.uid = uid;
+        return this;
+    }
+}

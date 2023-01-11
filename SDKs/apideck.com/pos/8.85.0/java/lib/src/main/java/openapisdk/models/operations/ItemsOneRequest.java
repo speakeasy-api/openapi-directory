@@ -1,0 +1,26 @@
+package openapisdk.models.operations;
+
+
+
+public class ItemsOneRequest {
+    public ItemsOnePathParams pathParams;
+    public ItemsOneRequest withPathParams(ItemsOnePathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public ItemsOneQueryParams queryParams;
+    public ItemsOneRequest withQueryParams(ItemsOneQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public ItemsOneHeaders headers;
+    public ItemsOneRequest withHeaders(ItemsOneHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+    public ItemsOneSecurity security;
+    public ItemsOneRequest withSecurity(ItemsOneSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

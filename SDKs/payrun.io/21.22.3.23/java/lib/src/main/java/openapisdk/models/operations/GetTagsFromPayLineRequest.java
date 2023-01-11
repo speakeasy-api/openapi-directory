@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class GetTagsFromPayLineRequest {
+    public GetTagsFromPayLinePathParams pathParams;
+    public GetTagsFromPayLineRequest withPathParams(GetTagsFromPayLinePathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public GetTagsFromPayLineHeaders headers;
+    public GetTagsFromPayLineRequest withHeaders(GetTagsFromPayLineHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+}

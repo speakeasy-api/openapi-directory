@@ -1,0 +1,38 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * ReplaceContentEntry
+ * Information about a replacement content entry in the conflict of a merge or pull request operation.
+**/
+public class ReplaceContentEntry {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("content")
+    public String content;
+    public ReplaceContentEntry withContent(String content) {
+        this.content = content;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("fileMode")
+    public FileModeTypeEnumEnum fileMode;
+    public ReplaceContentEntry withFileMode(FileModeTypeEnumEnum fileMode) {
+        this.fileMode = fileMode;
+        return this;
+    }
+    @JsonProperty("filePath")
+    public String filePath;
+    public ReplaceContentEntry withFilePath(String filePath) {
+        this.filePath = filePath;
+        return this;
+    }
+    @JsonProperty("replacementType")
+    public ReplacementTypeEnumEnum replacementType;
+    public ReplaceContentEntry withReplacementType(ReplacementTypeEnumEnum replacementType) {
+        this.replacementType = replacementType;
+        return this;
+    }
+}

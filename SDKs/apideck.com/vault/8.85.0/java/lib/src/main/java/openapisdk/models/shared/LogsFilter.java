@@ -1,0 +1,24 @@
+package openapisdk.models.shared;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class LogsFilter {
+    @SpeakeasyMetadata("queryParam:name=connector_id")
+    public String connectorId;
+    public LogsFilter withConnectorId(String connectorId) {
+        this.connectorId = connectorId;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:name=exclude_unified_apis")
+    public String excludeUnifiedApis;
+    public LogsFilter withExcludeUnifiedApis(String excludeUnifiedApis) {
+        this.excludeUnifiedApis = excludeUnifiedApis;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:name=status_code")
+    public Double statusCode;
+    public LogsFilter withStatusCode(Double statusCode) {
+        this.statusCode = statusCode;
+        return this;
+    }
+}

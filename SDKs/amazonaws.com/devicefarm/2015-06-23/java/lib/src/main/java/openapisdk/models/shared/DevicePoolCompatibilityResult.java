@@ -1,0 +1,33 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * DevicePoolCompatibilityResult
+ * Represents a device pool compatibility result.
+**/
+public class DevicePoolCompatibilityResult {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("compatible")
+    public Boolean compatible;
+    public DevicePoolCompatibilityResult withCompatible(Boolean compatible) {
+        this.compatible = compatible;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("device")
+    public Device device;
+    public DevicePoolCompatibilityResult withDevice(Device device) {
+        this.device = device;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("incompatibilityMessages")
+    public IncompatibilityMessage[] incompatibilityMessages;
+    public DevicePoolCompatibilityResult withIncompatibilityMessages(IncompatibilityMessage[] incompatibilityMessages) {
+        this.incompatibilityMessages = incompatibilityMessages;
+        return this;
+    }
+}

@@ -1,0 +1,135 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * CreateDeploymentGroupInput
+ * Represents the input of a <code>CreateDeploymentGroup</code> operation.
+**/
+public class CreateDeploymentGroupInput {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("alarmConfiguration")
+    public AlarmConfiguration alarmConfiguration;
+    public CreateDeploymentGroupInput withAlarmConfiguration(AlarmConfiguration alarmConfiguration) {
+        this.alarmConfiguration = alarmConfiguration;
+        return this;
+    }
+    @JsonProperty("applicationName")
+    public String applicationName;
+    public CreateDeploymentGroupInput withApplicationName(String applicationName) {
+        this.applicationName = applicationName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("autoRollbackConfiguration")
+    public AutoRollbackConfiguration autoRollbackConfiguration;
+    public CreateDeploymentGroupInput withAutoRollbackConfiguration(AutoRollbackConfiguration autoRollbackConfiguration) {
+        this.autoRollbackConfiguration = autoRollbackConfiguration;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("autoScalingGroups")
+    public String[] autoScalingGroups;
+    public CreateDeploymentGroupInput withAutoScalingGroups(String[] autoScalingGroups) {
+        this.autoScalingGroups = autoScalingGroups;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("blueGreenDeploymentConfiguration")
+    public BlueGreenDeploymentConfiguration blueGreenDeploymentConfiguration;
+    public CreateDeploymentGroupInput withBlueGreenDeploymentConfiguration(BlueGreenDeploymentConfiguration blueGreenDeploymentConfiguration) {
+        this.blueGreenDeploymentConfiguration = blueGreenDeploymentConfiguration;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("deploymentConfigName")
+    public String deploymentConfigName;
+    public CreateDeploymentGroupInput withDeploymentConfigName(String deploymentConfigName) {
+        this.deploymentConfigName = deploymentConfigName;
+        return this;
+    }
+    @JsonProperty("deploymentGroupName")
+    public String deploymentGroupName;
+    public CreateDeploymentGroupInput withDeploymentGroupName(String deploymentGroupName) {
+        this.deploymentGroupName = deploymentGroupName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("deploymentStyle")
+    public DeploymentStyle deploymentStyle;
+    public CreateDeploymentGroupInput withDeploymentStyle(DeploymentStyle deploymentStyle) {
+        this.deploymentStyle = deploymentStyle;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ec2TagFilters")
+    public Ec2TagFilter[] ec2TagFilters;
+    public CreateDeploymentGroupInput withEc2TagFilters(Ec2TagFilter[] ec2TagFilters) {
+        this.ec2TagFilters = ec2TagFilters;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ec2TagSet")
+    public Ec2TagSet ec2TagSet;
+    public CreateDeploymentGroupInput withEc2TagSet(Ec2TagSet ec2TagSet) {
+        this.ec2TagSet = ec2TagSet;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ecsServices")
+    public EcsService[] ecsServices;
+    public CreateDeploymentGroupInput withEcsServices(EcsService[] ecsServices) {
+        this.ecsServices = ecsServices;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("loadBalancerInfo")
+    public LoadBalancerInfo loadBalancerInfo;
+    public CreateDeploymentGroupInput withLoadBalancerInfo(LoadBalancerInfo loadBalancerInfo) {
+        this.loadBalancerInfo = loadBalancerInfo;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("onPremisesInstanceTagFilters")
+    public TagFilter[] onPremisesInstanceTagFilters;
+    public CreateDeploymentGroupInput withOnPremisesInstanceTagFilters(TagFilter[] onPremisesInstanceTagFilters) {
+        this.onPremisesInstanceTagFilters = onPremisesInstanceTagFilters;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("onPremisesTagSet")
+    public OnPremisesTagSet onPremisesTagSet;
+    public CreateDeploymentGroupInput withOnPremisesTagSet(OnPremisesTagSet onPremisesTagSet) {
+        this.onPremisesTagSet = onPremisesTagSet;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("outdatedInstancesStrategy")
+    public OutdatedInstancesStrategyEnum outdatedInstancesStrategy;
+    public CreateDeploymentGroupInput withOutdatedInstancesStrategy(OutdatedInstancesStrategyEnum outdatedInstancesStrategy) {
+        this.outdatedInstancesStrategy = outdatedInstancesStrategy;
+        return this;
+    }
+    @JsonProperty("serviceRoleArn")
+    public String serviceRoleArn;
+    public CreateDeploymentGroupInput withServiceRoleArn(String serviceRoleArn) {
+        this.serviceRoleArn = serviceRoleArn;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("tags")
+    public Tag[] tags;
+    public CreateDeploymentGroupInput withTags(Tag[] tags) {
+        this.tags = tags;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("triggerConfigurations")
+    public TriggerConfig[] triggerConfigurations;
+    public CreateDeploymentGroupInput withTriggerConfigurations(TriggerConfig[] triggerConfigurations) {
+        this.triggerConfigurations = triggerConfigurations;
+        return this;
+    }
+}

@@ -1,0 +1,27 @@
+package openapisdk.models.shared;
+
+
+public enum JobLogEventEnum {
+    JOB_START("JOB_START"),
+    SERVER_SKIPPED("SERVER_SKIPPED"),
+    CLEANUP_START("CLEANUP_START"),
+    CLEANUP_END("CLEANUP_END"),
+    CLEANUP_FAIL("CLEANUP_FAIL"),
+    SNAPSHOT_START("SNAPSHOT_START"),
+    SNAPSHOT_END("SNAPSHOT_END"),
+    SNAPSHOT_FAIL("SNAPSHOT_FAIL"),
+    USING_PREVIOUS_SNAPSHOT("USING_PREVIOUS_SNAPSHOT"),
+    CONVERSION_START("CONVERSION_START"),
+    CONVERSION_END("CONVERSION_END"),
+    CONVERSION_FAIL("CONVERSION_FAIL"),
+    LAUNCH_START("LAUNCH_START"),
+    LAUNCH_FAILED("LAUNCH_FAILED"),
+    JOB_CANCEL("JOB_CANCEL"),
+    JOB_END("JOB_END");
+
+    public final String value;
+
+    private JobLogEventEnum(String value) {
+        this.value = value;
+    }
+}

@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class GetFileAssociationsRequest {
+    public GetFileAssociationsPathParams pathParams;
+    public GetFileAssociationsRequest withPathParams(GetFileAssociationsPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public GetFileAssociationsHeaders headers;
+    public GetFileAssociationsRequest withHeaders(GetFileAssociationsHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+    public GetFileAssociationsSecurity security;
+    public GetFileAssociationsRequest withSecurity(GetFileAssociationsSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

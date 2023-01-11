@@ -1,0 +1,17 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class UpdateDistributionConfigurationRequest {
+    public UpdateDistributionConfigurationHeaders headers;
+    public UpdateDistributionConfigurationRequest withHeaders(UpdateDistributionConfigurationHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public UpdateDistributionConfigurationRequestBody request;
+    public UpdateDistributionConfigurationRequest withRequest(UpdateDistributionConfigurationRequestBody request) {
+        this.request = request;
+        return this;
+    }
+}

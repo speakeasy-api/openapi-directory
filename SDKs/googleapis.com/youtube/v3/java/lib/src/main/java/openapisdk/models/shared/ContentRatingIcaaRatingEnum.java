@@ -1,0 +1,20 @@
+package openapisdk.models.shared;
+
+
+public enum ContentRatingIcaaRatingEnum {
+    ICAA_UNSPECIFIED("icaaUnspecified"),
+    ICAA_APTA("icaaApta"),
+    ICAA7("icaa7"),
+    ICAA12("icaa12"),
+    ICAA13("icaa13"),
+    ICAA16("icaa16"),
+    ICAA18("icaa18"),
+    ICAA_X("icaaX"),
+    ICAA_UNRATED("icaaUnrated");
+
+    public final String value;
+
+    private ContentRatingIcaaRatingEnum(String value) {
+        this.value = value;
+    }
+}

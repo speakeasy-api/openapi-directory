@@ -1,0 +1,22 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class TagResource20170325Request {
+    public TagResource20170325QueryParams queryParams;
+    public TagResource20170325Request withQueryParams(TagResource20170325QueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public TagResource20170325Headers headers;
+    public TagResource20170325Request withHeaders(TagResource20170325Headers headers) {
+        this.headers = headers;
+        return this;
+    }
+    @SpeakeasyMetadata("request:mediaType=text/xml")
+    public byte[] request;
+    public TagResource20170325Request withRequest(byte[] request) {
+        this.request = request;
+        return this;
+    }
+}

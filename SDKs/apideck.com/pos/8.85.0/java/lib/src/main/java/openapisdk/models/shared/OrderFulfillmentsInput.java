@@ -1,0 +1,43 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class OrderFulfillmentsInput {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("id")
+    public String id;
+    public OrderFulfillmentsInput withId(String id) {
+        this.id = id;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("pickup_details")
+    public OrderFulfillmentsPickupDetailsInput pickupDetails;
+    public OrderFulfillmentsInput withPickupDetails(OrderFulfillmentsPickupDetailsInput pickupDetails) {
+        this.pickupDetails = pickupDetails;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("shipment_details")
+    public java.util.Map<String, Object> shipmentDetails;
+    public OrderFulfillmentsInput withShipmentDetails(java.util.Map<String, Object> shipmentDetails) {
+        this.shipmentDetails = shipmentDetails;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("status")
+    public OrderFulfillmentsFulfillmentStatusEnum status;
+    public OrderFulfillmentsInput withStatus(OrderFulfillmentsFulfillmentStatusEnum status) {
+        this.status = status;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("type")
+    public OrderFulfillmentsTypeEnum type;
+    public OrderFulfillmentsInput withType(OrderFulfillmentsTypeEnum type) {
+        this.type = type;
+        return this;
+    }
+}

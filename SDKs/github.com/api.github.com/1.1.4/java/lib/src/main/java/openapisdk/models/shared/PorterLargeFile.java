@@ -1,0 +1,34 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+/**
+ * PorterLargeFile
+ * Porter Large File
+**/
+public class PorterLargeFile {
+    @JsonProperty("oid")
+    public String oid;
+    public PorterLargeFile withOid(String oid) {
+        this.oid = oid;
+        return this;
+    }
+    @JsonProperty("path")
+    public String path;
+    public PorterLargeFile withPath(String path) {
+        this.path = path;
+        return this;
+    }
+    @JsonProperty("ref_name")
+    public String refName;
+    public PorterLargeFile withRefName(String refName) {
+        this.refName = refName;
+        return this;
+    }
+    @JsonProperty("size")
+    public Long size;
+    public PorterLargeFile withSize(Long size) {
+        this.size = size;
+        return this;
+    }
+}

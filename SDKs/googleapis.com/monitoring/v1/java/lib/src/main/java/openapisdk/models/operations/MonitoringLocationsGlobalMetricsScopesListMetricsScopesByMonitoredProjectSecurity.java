@@ -1,0 +1,24 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class MonitoringLocationsGlobalMetricsScopesListMetricsScopesByMonitoredProjectSecurity {
+    @SpeakeasyMetadata("security:option=true")
+    public MonitoringLocationsGlobalMetricsScopesListMetricsScopesByMonitoredProjectSecurityOption1 option1;
+    public MonitoringLocationsGlobalMetricsScopesListMetricsScopesByMonitoredProjectSecurity withOption1(MonitoringLocationsGlobalMetricsScopesListMetricsScopesByMonitoredProjectSecurityOption1 option1) {
+        this.option1 = option1;
+        return this;
+    }
+    @SpeakeasyMetadata("security:option=true")
+    public MonitoringLocationsGlobalMetricsScopesListMetricsScopesByMonitoredProjectSecurityOption2 option2;
+    public MonitoringLocationsGlobalMetricsScopesListMetricsScopesByMonitoredProjectSecurity withOption2(MonitoringLocationsGlobalMetricsScopesListMetricsScopesByMonitoredProjectSecurityOption2 option2) {
+        this.option2 = option2;
+        return this;
+    }
+    @SpeakeasyMetadata("security:option=true")
+    public MonitoringLocationsGlobalMetricsScopesListMetricsScopesByMonitoredProjectSecurityOption3 option3;
+    public MonitoringLocationsGlobalMetricsScopesListMetricsScopesByMonitoredProjectSecurity withOption3(MonitoringLocationsGlobalMetricsScopesListMetricsScopesByMonitoredProjectSecurityOption3 option3) {
+        this.option3 = option3;
+        return this;
+    }
+}

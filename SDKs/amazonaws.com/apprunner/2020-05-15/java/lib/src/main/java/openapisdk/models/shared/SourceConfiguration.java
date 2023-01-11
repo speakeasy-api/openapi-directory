@@ -1,0 +1,40 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * SourceConfiguration
+ * Describes the source deployed to an AWS App Runner service. It can be a code or an image repository.
+**/
+public class SourceConfiguration {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("AuthenticationConfiguration")
+    public AuthenticationConfiguration authenticationConfiguration;
+    public SourceConfiguration withAuthenticationConfiguration(AuthenticationConfiguration authenticationConfiguration) {
+        this.authenticationConfiguration = authenticationConfiguration;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("AutoDeploymentsEnabled")
+    public Boolean autoDeploymentsEnabled;
+    public SourceConfiguration withAutoDeploymentsEnabled(Boolean autoDeploymentsEnabled) {
+        this.autoDeploymentsEnabled = autoDeploymentsEnabled;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("CodeRepository")
+    public CodeRepository codeRepository;
+    public SourceConfiguration withCodeRepository(CodeRepository codeRepository) {
+        this.codeRepository = codeRepository;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ImageRepository")
+    public ImageRepository imageRepository;
+    public SourceConfiguration withImageRepository(ImageRepository imageRepository) {
+        this.imageRepository = imageRepository;
+        return this;
+    }
+}

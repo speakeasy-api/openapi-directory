@@ -1,0 +1,20 @@
+package openapisdk.models.shared;
+
+
+
+/**
+ * ContentTypeProfiles
+ * Field-level encryption content type-profile. 
+**/
+public class ContentTypeProfiles {
+    public ContentTypeProfileList[] items;
+    public ContentTypeProfiles withItems(ContentTypeProfileList[] items) {
+        this.items = items;
+        return this;
+    }
+    public Long quantity;
+    public ContentTypeProfiles withQuantity(Long quantity) {
+        this.quantity = quantity;
+        return this;
+    }
+}

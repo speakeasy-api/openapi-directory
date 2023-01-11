@@ -1,0 +1,30 @@
+package openapisdk.models.shared;
+
+import java.time.OffsetDateTime;
+
+/**
+ * Invalidation
+ * An invalidation. 
+**/
+public class Invalidation {
+    public OffsetDateTime createTime;
+    public Invalidation withCreateTime(OffsetDateTime createTime) {
+        this.createTime = createTime;
+        return this;
+    }
+    public String id;
+    public Invalidation withId(String id) {
+        this.id = id;
+        return this;
+    }
+    public InvalidationBatch invalidationBatch;
+    public Invalidation withInvalidationBatch(InvalidationBatch invalidationBatch) {
+        this.invalidationBatch = invalidationBatch;
+        return this;
+    }
+    public String status;
+    public Invalidation withStatus(String status) {
+        this.status = status;
+        return this;
+    }
+}

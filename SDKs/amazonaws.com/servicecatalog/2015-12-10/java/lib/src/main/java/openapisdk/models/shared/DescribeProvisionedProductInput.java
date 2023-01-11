@@ -1,0 +1,33 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * DescribeProvisionedProductInput
+ * DescribeProvisionedProductAPI input structure. AcceptLanguage - [Optional] The language code for localization. Id - [Optional] The provisioned product identifier. Name - [Optional] Another provisioned product identifier. Customers must provide either Id or Name.
+**/
+public class DescribeProvisionedProductInput {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("AcceptLanguage")
+    public String acceptLanguage;
+    public DescribeProvisionedProductInput withAcceptLanguage(String acceptLanguage) {
+        this.acceptLanguage = acceptLanguage;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Id")
+    public String id;
+    public DescribeProvisionedProductInput withId(String id) {
+        this.id = id;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Name")
+    public String name;
+    public DescribeProvisionedProductInput withName(String name) {
+        this.name = name;
+        return this;
+    }
+}

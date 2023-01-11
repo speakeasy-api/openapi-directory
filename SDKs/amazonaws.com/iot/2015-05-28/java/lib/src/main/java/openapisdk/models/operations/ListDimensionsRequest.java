@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class ListDimensionsRequest {
+    public ListDimensionsQueryParams queryParams;
+    public ListDimensionsRequest withQueryParams(ListDimensionsQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public ListDimensionsHeaders headers;
+    public ListDimensionsRequest withHeaders(ListDimensionsHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+}

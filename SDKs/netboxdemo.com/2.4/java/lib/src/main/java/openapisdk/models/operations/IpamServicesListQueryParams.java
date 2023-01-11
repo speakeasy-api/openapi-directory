@@ -1,0 +1,72 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class IpamServicesListQueryParams {
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=device")
+    public String device;
+    public IpamServicesListQueryParams withDevice(String device) {
+        this.device = device;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=device_id")
+    public String deviceId;
+    public IpamServicesListQueryParams withDeviceId(String deviceId) {
+        this.deviceId = deviceId;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public IpamServicesListQueryParams withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
+    public String name;
+    public IpamServicesListQueryParams withName(String name) {
+        this.name = name;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Long offset;
+    public IpamServicesListQueryParams withOffset(Long offset) {
+        this.offset = offset;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=port")
+    public Double port;
+    public IpamServicesListQueryParams withPort(Double port) {
+        this.port = port;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=protocol")
+    public String protocol;
+    public IpamServicesListQueryParams withProtocol(String protocol) {
+        this.protocol = protocol;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=q")
+    public String q;
+    public IpamServicesListQueryParams withQ(String q) {
+        this.q = q;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tag")
+    public String tag;
+    public IpamServicesListQueryParams withTag(String tag) {
+        this.tag = tag;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=virtual_machine")
+    public String virtualMachine;
+    public IpamServicesListQueryParams withVirtualMachine(String virtualMachine) {
+        this.virtualMachine = virtualMachine;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=virtual_machine_id")
+    public String virtualMachineId;
+    public IpamServicesListQueryParams withVirtualMachineId(String virtualMachineId) {
+        this.virtualMachineId = virtualMachineId;
+        return this;
+    }
+}

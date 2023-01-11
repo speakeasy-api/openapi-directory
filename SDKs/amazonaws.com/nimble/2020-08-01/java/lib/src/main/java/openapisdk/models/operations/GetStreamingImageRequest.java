@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class GetStreamingImageRequest {
+    public GetStreamingImagePathParams pathParams;
+    public GetStreamingImageRequest withPathParams(GetStreamingImagePathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public GetStreamingImageHeaders headers;
+    public GetStreamingImageRequest withHeaders(GetStreamingImageHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+}

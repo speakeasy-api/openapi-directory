@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class GetStudioMemberRequest {
+    public GetStudioMemberPathParams pathParams;
+    public GetStudioMemberRequest withPathParams(GetStudioMemberPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public GetStudioMemberHeaders headers;
+    public GetStudioMemberRequest withHeaders(GetStudioMemberHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+}

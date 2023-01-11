@@ -1,0 +1,119 @@
+package openapisdk.models.shared;
+
+import java.time.OffsetDateTime;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import openapisdk.utils.DateTimeSerializer;
+import openapisdk.utils.DateTimeDeserializer;
+
+/**
+ * CertificateDescription
+ * Describes a certificate.
+**/
+public class CertificateDescription {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("caCertificateId")
+    public String caCertificateId;
+    public CertificateDescription withCaCertificateId(String caCertificateId) {
+        this.caCertificateId = caCertificateId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("certificateArn")
+    public String certificateArn;
+    public CertificateDescription withCertificateArn(String certificateArn) {
+        this.certificateArn = certificateArn;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("certificateId")
+    public String certificateId;
+    public CertificateDescription withCertificateId(String certificateId) {
+        this.certificateId = certificateId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("certificateMode")
+    public CertificateModeEnum certificateMode;
+    public CertificateDescription withCertificateMode(CertificateModeEnum certificateMode) {
+        this.certificateMode = certificateMode;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("certificatePem")
+    public String certificatePem;
+    public CertificateDescription withCertificatePem(String certificatePem) {
+        this.certificatePem = certificatePem;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonSerialize(contentUsing = DateTimeSerializer.class)
+    @JsonDeserialize(contentUsing = DateTimeDeserializer.class)
+    @JsonProperty("creationDate")
+    public OffsetDateTime creationDate;
+    public CertificateDescription withCreationDate(OffsetDateTime creationDate) {
+        this.creationDate = creationDate;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("customerVersion")
+    public Long customerVersion;
+    public CertificateDescription withCustomerVersion(Long customerVersion) {
+        this.customerVersion = customerVersion;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("generationId")
+    public String generationId;
+    public CertificateDescription withGenerationId(String generationId) {
+        this.generationId = generationId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonSerialize(contentUsing = DateTimeSerializer.class)
+    @JsonDeserialize(contentUsing = DateTimeDeserializer.class)
+    @JsonProperty("lastModifiedDate")
+    public OffsetDateTime lastModifiedDate;
+    public CertificateDescription withLastModifiedDate(OffsetDateTime lastModifiedDate) {
+        this.lastModifiedDate = lastModifiedDate;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ownedBy")
+    public String ownedBy;
+    public CertificateDescription withOwnedBy(String ownedBy) {
+        this.ownedBy = ownedBy;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("previousOwnedBy")
+    public String previousOwnedBy;
+    public CertificateDescription withPreviousOwnedBy(String previousOwnedBy) {
+        this.previousOwnedBy = previousOwnedBy;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("status")
+    public CertificateStatusEnum status;
+    public CertificateDescription withStatus(CertificateStatusEnum status) {
+        this.status = status;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("transferData")
+    public TransferData transferData;
+    public CertificateDescription withTransferData(TransferData transferData) {
+        this.transferData = transferData;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("validity")
+    public CertificateValidity validity;
+    public CertificateDescription withValidity(CertificateValidity validity) {
+        this.validity = validity;
+        return this;
+    }
+}

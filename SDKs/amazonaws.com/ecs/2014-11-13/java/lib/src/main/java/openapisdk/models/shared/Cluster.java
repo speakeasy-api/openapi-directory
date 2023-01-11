@@ -1,0 +1,117 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * Cluster
+ * A regional grouping of one or more container instances on which you can run task requests. Each account receives a default cluster the first time you use the Amazon ECS service, but you may also create other clusters. Clusters may contain more than one instance type simultaneously.
+**/
+public class Cluster {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("activeServicesCount")
+    public Long activeServicesCount;
+    public Cluster withActiveServicesCount(Long activeServicesCount) {
+        this.activeServicesCount = activeServicesCount;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("attachments")
+    public Attachment[] attachments;
+    public Cluster withAttachments(Attachment[] attachments) {
+        this.attachments = attachments;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("attachmentsStatus")
+    public String attachmentsStatus;
+    public Cluster withAttachmentsStatus(String attachmentsStatus) {
+        this.attachmentsStatus = attachmentsStatus;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("capacityProviders")
+    public String[] capacityProviders;
+    public Cluster withCapacityProviders(String[] capacityProviders) {
+        this.capacityProviders = capacityProviders;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("clusterArn")
+    public String clusterArn;
+    public Cluster withClusterArn(String clusterArn) {
+        this.clusterArn = clusterArn;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("clusterName")
+    public String clusterName;
+    public Cluster withClusterName(String clusterName) {
+        this.clusterName = clusterName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("configuration")
+    public ClusterConfiguration configuration;
+    public Cluster withConfiguration(ClusterConfiguration configuration) {
+        this.configuration = configuration;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("defaultCapacityProviderStrategy")
+    public CapacityProviderStrategyItem[] defaultCapacityProviderStrategy;
+    public Cluster withDefaultCapacityProviderStrategy(CapacityProviderStrategyItem[] defaultCapacityProviderStrategy) {
+        this.defaultCapacityProviderStrategy = defaultCapacityProviderStrategy;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("pendingTasksCount")
+    public Long pendingTasksCount;
+    public Cluster withPendingTasksCount(Long pendingTasksCount) {
+        this.pendingTasksCount = pendingTasksCount;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("registeredContainerInstancesCount")
+    public Long registeredContainerInstancesCount;
+    public Cluster withRegisteredContainerInstancesCount(Long registeredContainerInstancesCount) {
+        this.registeredContainerInstancesCount = registeredContainerInstancesCount;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("runningTasksCount")
+    public Long runningTasksCount;
+    public Cluster withRunningTasksCount(Long runningTasksCount) {
+        this.runningTasksCount = runningTasksCount;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("settings")
+    public ClusterSetting[] settings;
+    public Cluster withSettings(ClusterSetting[] settings) {
+        this.settings = settings;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("statistics")
+    public KeyValuePair[] statistics;
+    public Cluster withStatistics(KeyValuePair[] statistics) {
+        this.statistics = statistics;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("status")
+    public String status;
+    public Cluster withStatus(String status) {
+        this.status = status;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("tags")
+    public Tag[] tags;
+    public Cluster withTags(Tag[] tags) {
+        this.tags = tags;
+        return this;
+    }
+}

@@ -1,0 +1,36 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+public class CreatePortalResponse {
+    @JsonProperty("portalArn")
+    public String portalArn;
+    public CreatePortalResponse withPortalArn(String portalArn) {
+        this.portalArn = portalArn;
+        return this;
+    }
+    @JsonProperty("portalId")
+    public String portalId;
+    public CreatePortalResponse withPortalId(String portalId) {
+        this.portalId = portalId;
+        return this;
+    }
+    @JsonProperty("portalStartUrl")
+    public String portalStartUrl;
+    public CreatePortalResponse withPortalStartUrl(String portalStartUrl) {
+        this.portalStartUrl = portalStartUrl;
+        return this;
+    }
+    @JsonProperty("portalStatus")
+    public PortalStatus portalStatus;
+    public CreatePortalResponse withPortalStatus(PortalStatus portalStatus) {
+        this.portalStatus = portalStatus;
+        return this;
+    }
+    @JsonProperty("ssoApplicationId")
+    public String ssoApplicationId;
+    public CreatePortalResponse withSsoApplicationId(String ssoApplicationId) {
+        this.ssoApplicationId = ssoApplicationId;
+        return this;
+    }
+}

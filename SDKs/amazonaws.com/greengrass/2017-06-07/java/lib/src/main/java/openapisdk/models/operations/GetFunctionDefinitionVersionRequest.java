@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class GetFunctionDefinitionVersionRequest {
+    public GetFunctionDefinitionVersionPathParams pathParams;
+    public GetFunctionDefinitionVersionRequest withPathParams(GetFunctionDefinitionVersionPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public GetFunctionDefinitionVersionQueryParams queryParams;
+    public GetFunctionDefinitionVersionRequest withQueryParams(GetFunctionDefinitionVersionQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public GetFunctionDefinitionVersionHeaders headers;
+    public GetFunctionDefinitionVersionRequest withHeaders(GetFunctionDefinitionVersionHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+}

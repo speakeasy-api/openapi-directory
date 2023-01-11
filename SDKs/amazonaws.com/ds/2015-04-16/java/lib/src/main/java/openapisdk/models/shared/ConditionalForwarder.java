@@ -1,0 +1,33 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * ConditionalForwarder
+ * Points to a remote domain with which you are setting up a trust relationship. Conditional forwarders are required in order to set up a trust relationship with another domain.
+**/
+public class ConditionalForwarder {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("DnsIpAddrs")
+    public String[] dnsIpAddrs;
+    public ConditionalForwarder withDnsIpAddrs(String[] dnsIpAddrs) {
+        this.dnsIpAddrs = dnsIpAddrs;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("RemoteDomainName")
+    public String remoteDomainName;
+    public ConditionalForwarder withRemoteDomainName(String remoteDomainName) {
+        this.remoteDomainName = remoteDomainName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ReplicationScope")
+    public ReplicationScopeEnum replicationScope;
+    public ConditionalForwarder withReplicationScope(ReplicationScopeEnum replicationScope) {
+        this.replicationScope = replicationScope;
+        return this;
+    }
+}

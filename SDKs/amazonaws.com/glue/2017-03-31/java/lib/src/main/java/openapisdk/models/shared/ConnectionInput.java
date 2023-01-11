@@ -1,0 +1,51 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * ConnectionInput
+ * A structure that is used to specify a connection to create or update.
+**/
+public class ConnectionInput {
+    @JsonProperty("ConnectionProperties")
+    public java.util.Map<String, String> connectionProperties;
+    public ConnectionInput withConnectionProperties(java.util.Map<String, String> connectionProperties) {
+        this.connectionProperties = connectionProperties;
+        return this;
+    }
+    @JsonProperty("ConnectionType")
+    public ConnectionTypeEnum connectionType;
+    public ConnectionInput withConnectionType(ConnectionTypeEnum connectionType) {
+        this.connectionType = connectionType;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Description")
+    public String description;
+    public ConnectionInput withDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("MatchCriteria")
+    public String[] matchCriteria;
+    public ConnectionInput withMatchCriteria(String[] matchCriteria) {
+        this.matchCriteria = matchCriteria;
+        return this;
+    }
+    @JsonProperty("Name")
+    public String name;
+    public ConnectionInput withName(String name) {
+        this.name = name;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("PhysicalConnectionRequirements")
+    public PhysicalConnectionRequirements physicalConnectionRequirements;
+    public ConnectionInput withPhysicalConnectionRequirements(PhysicalConnectionRequirements physicalConnectionRequirements) {
+        this.physicalConnectionRequirements = physicalConnectionRequirements;
+        return this;
+    }
+}

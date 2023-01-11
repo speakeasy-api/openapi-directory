@@ -1,0 +1,72 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class PatientsCreateQueryParams {
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=chart_id")
+    public String chartId;
+    public PatientsCreateQueryParams withChartId(String chartId) {
+        this.chartId = chartId;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=date_of_birth")
+    public String dateOfBirth;
+    public PatientsCreateQueryParams withDateOfBirth(String dateOfBirth) {
+        this.dateOfBirth = dateOfBirth;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=doctor")
+    public Long doctor;
+    public PatientsCreateQueryParams withDoctor(Long doctor) {
+        this.doctor = doctor;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=email")
+    public String email;
+    public PatientsCreateQueryParams withEmail(String email) {
+        this.email = email;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ethnicity")
+    public String ethnicity;
+    public PatientsCreateQueryParams withEthnicity(String ethnicity) {
+        this.ethnicity = ethnicity;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=first_name")
+    public String firstName;
+    public PatientsCreateQueryParams withFirstName(String firstName) {
+        this.firstName = firstName;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=gender")
+    public String gender;
+    public PatientsCreateQueryParams withGender(String gender) {
+        this.gender = gender;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=last_name")
+    public String lastName;
+    public PatientsCreateQueryParams withLastName(String lastName) {
+        this.lastName = lastName;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=preferred_language")
+    public String preferredLanguage;
+    public PatientsCreateQueryParams withPreferredLanguage(String preferredLanguage) {
+        this.preferredLanguage = preferredLanguage;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=race")
+    public String race;
+    public PatientsCreateQueryParams withRace(String race) {
+        this.race = race;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=since")
+    public String since;
+    public PatientsCreateQueryParams withSince(String since) {
+        this.since = since;
+        return this;
+    }
+}

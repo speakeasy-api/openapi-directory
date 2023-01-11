@@ -1,0 +1,38 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * PaginationResultLinks
+ * The navigation links 'first', 'last', 'next', 'previous'
+**/
+public class PaginationResultLinks {
+    @JsonProperty("first")
+    public Link3 first;
+    public PaginationResultLinks withFirst(Link3 first) {
+        this.first = first;
+        return this;
+    }
+    @JsonProperty("last")
+    public Link3 last;
+    public PaginationResultLinks withLast(Link3 last) {
+        this.last = last;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("next")
+    public Link3 next;
+    public PaginationResultLinks withNext(Link3 next) {
+        this.next = next;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("previous")
+    public Link3 previous;
+    public PaginationResultLinks withPrevious(Link3 previous) {
+        this.previous = previous;
+        return this;
+    }
+}

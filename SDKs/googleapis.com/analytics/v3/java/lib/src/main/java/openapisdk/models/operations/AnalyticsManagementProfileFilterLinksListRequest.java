@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class AnalyticsManagementProfileFilterLinksListRequest {
+    public AnalyticsManagementProfileFilterLinksListPathParams pathParams;
+    public AnalyticsManagementProfileFilterLinksListRequest withPathParams(AnalyticsManagementProfileFilterLinksListPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public AnalyticsManagementProfileFilterLinksListQueryParams queryParams;
+    public AnalyticsManagementProfileFilterLinksListRequest withQueryParams(AnalyticsManagementProfileFilterLinksListQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public AnalyticsManagementProfileFilterLinksListSecurity security;
+    public AnalyticsManagementProfileFilterLinksListRequest withSecurity(AnalyticsManagementProfileFilterLinksListSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

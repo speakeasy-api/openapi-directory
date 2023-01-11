@@ -1,0 +1,50 @@
+package openapisdk.models.shared;
+
+import java.time.OffsetDateTime;
+
+/**
+ * Datapoint
+ * Encapsulates the statistical data that CloudWatch computes from metric data.
+**/
+public class Datapoint {
+    public Double average;
+    public Datapoint withAverage(Double average) {
+        this.average = average;
+        return this;
+    }
+    public java.util.Map<String, Double> extendedStatistics;
+    public Datapoint withExtendedStatistics(java.util.Map<String, Double> extendedStatistics) {
+        this.extendedStatistics = extendedStatistics;
+        return this;
+    }
+    public Double maximum;
+    public Datapoint withMaximum(Double maximum) {
+        this.maximum = maximum;
+        return this;
+    }
+    public Double minimum;
+    public Datapoint withMinimum(Double minimum) {
+        this.minimum = minimum;
+        return this;
+    }
+    public Double sampleCount;
+    public Datapoint withSampleCount(Double sampleCount) {
+        this.sampleCount = sampleCount;
+        return this;
+    }
+    public Double sum;
+    public Datapoint withSum(Double sum) {
+        this.sum = sum;
+        return this;
+    }
+    public OffsetDateTime timestamp;
+    public Datapoint withTimestamp(OffsetDateTime timestamp) {
+        this.timestamp = timestamp;
+        return this;
+    }
+    public StandardUnitEnum unit;
+    public Datapoint withUnit(StandardUnitEnum unit) {
+        this.unit = unit;
+        return this;
+    }
+}

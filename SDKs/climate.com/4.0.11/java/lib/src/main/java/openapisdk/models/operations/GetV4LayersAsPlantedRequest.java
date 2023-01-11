@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class GetV4LayersAsPlantedRequest {
+    public GetV4LayersAsPlantedQueryParams queryParams;
+    public GetV4LayersAsPlantedRequest withQueryParams(GetV4LayersAsPlantedQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public GetV4LayersAsPlantedHeaders headers;
+    public GetV4LayersAsPlantedRequest withHeaders(GetV4LayersAsPlantedHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+    public GetV4LayersAsPlantedSecurity security;
+    public GetV4LayersAsPlantedRequest withSecurity(GetV4LayersAsPlantedSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

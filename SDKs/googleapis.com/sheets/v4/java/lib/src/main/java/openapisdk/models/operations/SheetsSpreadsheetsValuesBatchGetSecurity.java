@@ -1,0 +1,36 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class SheetsSpreadsheetsValuesBatchGetSecurity {
+    @SpeakeasyMetadata("security:option=true")
+    public SheetsSpreadsheetsValuesBatchGetSecurityOption1 option1;
+    public SheetsSpreadsheetsValuesBatchGetSecurity withOption1(SheetsSpreadsheetsValuesBatchGetSecurityOption1 option1) {
+        this.option1 = option1;
+        return this;
+    }
+    @SpeakeasyMetadata("security:option=true")
+    public SheetsSpreadsheetsValuesBatchGetSecurityOption2 option2;
+    public SheetsSpreadsheetsValuesBatchGetSecurity withOption2(SheetsSpreadsheetsValuesBatchGetSecurityOption2 option2) {
+        this.option2 = option2;
+        return this;
+    }
+    @SpeakeasyMetadata("security:option=true")
+    public SheetsSpreadsheetsValuesBatchGetSecurityOption3 option3;
+    public SheetsSpreadsheetsValuesBatchGetSecurity withOption3(SheetsSpreadsheetsValuesBatchGetSecurityOption3 option3) {
+        this.option3 = option3;
+        return this;
+    }
+    @SpeakeasyMetadata("security:option=true")
+    public SheetsSpreadsheetsValuesBatchGetSecurityOption4 option4;
+    public SheetsSpreadsheetsValuesBatchGetSecurity withOption4(SheetsSpreadsheetsValuesBatchGetSecurityOption4 option4) {
+        this.option4 = option4;
+        return this;
+    }
+    @SpeakeasyMetadata("security:option=true")
+    public SheetsSpreadsheetsValuesBatchGetSecurityOption5 option5;
+    public SheetsSpreadsheetsValuesBatchGetSecurity withOption5(SheetsSpreadsheetsValuesBatchGetSecurityOption5 option5) {
+        this.option5 = option5;
+        return this;
+    }
+}

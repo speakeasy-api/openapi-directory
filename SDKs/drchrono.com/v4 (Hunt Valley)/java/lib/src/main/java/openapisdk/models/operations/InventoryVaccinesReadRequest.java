@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class InventoryVaccinesReadRequest {
+    public InventoryVaccinesReadPathParams pathParams;
+    public InventoryVaccinesReadRequest withPathParams(InventoryVaccinesReadPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public InventoryVaccinesReadQueryParams queryParams;
+    public InventoryVaccinesReadRequest withQueryParams(InventoryVaccinesReadQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public InventoryVaccinesReadSecurity security;
+    public InventoryVaccinesReadRequest withSecurity(InventoryVaccinesReadSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

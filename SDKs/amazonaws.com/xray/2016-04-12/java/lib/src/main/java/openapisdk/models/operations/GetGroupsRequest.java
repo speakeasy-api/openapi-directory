@@ -1,0 +1,22 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class GetGroupsRequest {
+    public GetGroupsQueryParams queryParams;
+    public GetGroupsRequest withQueryParams(GetGroupsQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public GetGroupsHeaders headers;
+    public GetGroupsRequest withHeaders(GetGroupsHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public GetGroupsRequestBody request;
+    public GetGroupsRequest withRequest(GetGroupsRequestBody request) {
+        this.request = request;
+        return this;
+    }
+}

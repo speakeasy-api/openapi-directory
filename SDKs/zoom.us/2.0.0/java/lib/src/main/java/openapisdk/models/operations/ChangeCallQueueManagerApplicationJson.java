@@ -1,0 +1,15 @@
+package openapisdk.models.operations;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class ChangeCallQueueManagerApplicationJson {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("member_id")
+    public String memberId;
+    public ChangeCallQueueManagerApplicationJson withMemberId(String memberId) {
+        this.memberId = memberId;
+        return this;
+    }
+}

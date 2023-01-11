@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class ListAlarmModelVersionsRequest {
+    public ListAlarmModelVersionsPathParams pathParams;
+    public ListAlarmModelVersionsRequest withPathParams(ListAlarmModelVersionsPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public ListAlarmModelVersionsQueryParams queryParams;
+    public ListAlarmModelVersionsRequest withQueryParams(ListAlarmModelVersionsQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public ListAlarmModelVersionsHeaders headers;
+    public ListAlarmModelVersionsRequest withHeaders(ListAlarmModelVersionsHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+}

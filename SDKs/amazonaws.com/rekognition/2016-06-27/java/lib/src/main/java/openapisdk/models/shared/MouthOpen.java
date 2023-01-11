@@ -1,0 +1,26 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * MouthOpen
+ * Indicates whether or not the mouth on the face is open, and the confidence level in the determination.
+**/
+public class MouthOpen {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Confidence")
+    public Float confidence;
+    public MouthOpen withConfidence(Float confidence) {
+        this.confidence = confidence;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Value")
+    public Boolean value;
+    public MouthOpen withValue(Boolean value) {
+        this.value = value;
+        return this;
+    }
+}

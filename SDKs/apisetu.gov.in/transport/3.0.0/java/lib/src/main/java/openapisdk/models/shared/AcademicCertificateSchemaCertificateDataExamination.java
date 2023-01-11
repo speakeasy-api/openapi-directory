@@ -1,0 +1,21 @@
+package openapisdk.models.shared;
+
+
+
+public class AcademicCertificateSchemaCertificateDataExamination {
+    public String month;
+    public AcademicCertificateSchemaCertificateDataExamination withMonth(String month) {
+        this.month = month;
+        return this;
+    }
+    public String name;
+    public AcademicCertificateSchemaCertificateDataExamination withName(String name) {
+        this.name = name;
+        return this;
+    }
+    public String year;
+    public AcademicCertificateSchemaCertificateDataExamination withYear(String year) {
+        this.year = year;
+        return this;
+    }
+}

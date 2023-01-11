@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class ServicebrokerProjectsBrokersInstancesListRequest {
+    public ServicebrokerProjectsBrokersInstancesListPathParams pathParams;
+    public ServicebrokerProjectsBrokersInstancesListRequest withPathParams(ServicebrokerProjectsBrokersInstancesListPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public ServicebrokerProjectsBrokersInstancesListQueryParams queryParams;
+    public ServicebrokerProjectsBrokersInstancesListRequest withQueryParams(ServicebrokerProjectsBrokersInstancesListQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public ServicebrokerProjectsBrokersInstancesListSecurity security;
+    public ServicebrokerProjectsBrokersInstancesListRequest withSecurity(ServicebrokerProjectsBrokersInstancesListSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

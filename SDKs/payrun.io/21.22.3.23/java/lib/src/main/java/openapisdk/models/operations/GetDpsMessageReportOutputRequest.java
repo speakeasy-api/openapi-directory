@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class GetDpsMessageReportOutputRequest {
+    public GetDpsMessageReportOutputQueryParams queryParams;
+    public GetDpsMessageReportOutputRequest withQueryParams(GetDpsMessageReportOutputQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public GetDpsMessageReportOutputHeaders headers;
+    public GetDpsMessageReportOutputRequest withHeaders(GetDpsMessageReportOutputHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+}

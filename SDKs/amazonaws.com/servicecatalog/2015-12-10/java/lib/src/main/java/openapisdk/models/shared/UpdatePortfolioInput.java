@@ -1,0 +1,56 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class UpdatePortfolioInput {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("AcceptLanguage")
+    public String acceptLanguage;
+    public UpdatePortfolioInput withAcceptLanguage(String acceptLanguage) {
+        this.acceptLanguage = acceptLanguage;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("AddTags")
+    public Tag[] addTags;
+    public UpdatePortfolioInput withAddTags(Tag[] addTags) {
+        this.addTags = addTags;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Description")
+    public String description;
+    public UpdatePortfolioInput withDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("DisplayName")
+    public String displayName;
+    public UpdatePortfolioInput withDisplayName(String displayName) {
+        this.displayName = displayName;
+        return this;
+    }
+    @JsonProperty("Id")
+    public String id;
+    public UpdatePortfolioInput withId(String id) {
+        this.id = id;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ProviderName")
+    public String providerName;
+    public UpdatePortfolioInput withProviderName(String providerName) {
+        this.providerName = providerName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("RemoveTags")
+    public String[] removeTags;
+    public UpdatePortfolioInput withRemoveTags(String[] removeTags) {
+        this.removeTags = removeTags;
+        return this;
+    }
+}

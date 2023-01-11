@@ -1,0 +1,47 @@
+package openapisdk.models.operations;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * CreateSafetyRuleRequestBodyAssertionRule
+ * A new assertion rule for a control panel.
+**/
+public class CreateSafetyRuleRequestBodyAssertionRule {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("AssertedControls")
+    public String[] assertedControls;
+    public CreateSafetyRuleRequestBodyAssertionRule withAssertedControls(String[] assertedControls) {
+        this.assertedControls = assertedControls;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ControlPanelArn")
+    public String controlPanelArn;
+    public CreateSafetyRuleRequestBodyAssertionRule withControlPanelArn(String controlPanelArn) {
+        this.controlPanelArn = controlPanelArn;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Name")
+    public String name;
+    public CreateSafetyRuleRequestBodyAssertionRule withName(String name) {
+        this.name = name;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("RuleConfig")
+    public openapisdk.models.shared.RuleConfig ruleConfig;
+    public CreateSafetyRuleRequestBodyAssertionRule withRuleConfig(openapisdk.models.shared.RuleConfig ruleConfig) {
+        this.ruleConfig = ruleConfig;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("WaitPeriodMs")
+    public Long waitPeriodMs;
+    public CreateSafetyRuleRequestBodyAssertionRule withWaitPeriodMs(Long waitPeriodMs) {
+        this.waitPeriodMs = waitPeriodMs;
+        return this;
+    }
+}

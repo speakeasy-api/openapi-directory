@@ -1,0 +1,60 @@
+package openapisdk.models.shared;
+
+import java.time.OffsetDateTime;
+
+/**
+ * ConfigurationSettingsDescription
+ * Describes the settings for a configuration set.
+**/
+public class ConfigurationSettingsDescription {
+    public String applicationName;
+    public ConfigurationSettingsDescription withApplicationName(String applicationName) {
+        this.applicationName = applicationName;
+        return this;
+    }
+    public OffsetDateTime dateCreated;
+    public ConfigurationSettingsDescription withDateCreated(OffsetDateTime dateCreated) {
+        this.dateCreated = dateCreated;
+        return this;
+    }
+    public OffsetDateTime dateUpdated;
+    public ConfigurationSettingsDescription withDateUpdated(OffsetDateTime dateUpdated) {
+        this.dateUpdated = dateUpdated;
+        return this;
+    }
+    public ConfigurationDeploymentStatusEnum deploymentStatus;
+    public ConfigurationSettingsDescription withDeploymentStatus(ConfigurationDeploymentStatusEnum deploymentStatus) {
+        this.deploymentStatus = deploymentStatus;
+        return this;
+    }
+    public String description;
+    public ConfigurationSettingsDescription withDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    public String environmentName;
+    public ConfigurationSettingsDescription withEnvironmentName(String environmentName) {
+        this.environmentName = environmentName;
+        return this;
+    }
+    public ConfigurationOptionSetting[] optionSettings;
+    public ConfigurationSettingsDescription withOptionSettings(ConfigurationOptionSetting[] optionSettings) {
+        this.optionSettings = optionSettings;
+        return this;
+    }
+    public String platformArn;
+    public ConfigurationSettingsDescription withPlatformArn(String platformArn) {
+        this.platformArn = platformArn;
+        return this;
+    }
+    public String solutionStackName;
+    public ConfigurationSettingsDescription withSolutionStackName(String solutionStackName) {
+        this.solutionStackName = solutionStackName;
+        return this;
+    }
+    public String templateName;
+    public ConfigurationSettingsDescription withTemplateName(String templateName) {
+        this.templateName = templateName;
+        return this;
+    }
+}

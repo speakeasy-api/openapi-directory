@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class ListJobTemplatesRequest {
+    public ListJobTemplatesQueryParams queryParams;
+    public ListJobTemplatesRequest withQueryParams(ListJobTemplatesQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public ListJobTemplatesHeaders headers;
+    public ListJobTemplatesRequest withHeaders(ListJobTemplatesHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+}

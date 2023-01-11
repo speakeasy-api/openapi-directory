@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class TaskNotesPartialUpdateRequest {
+    public TaskNotesPartialUpdatePathParams pathParams;
+    public TaskNotesPartialUpdateRequest withPathParams(TaskNotesPartialUpdatePathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public TaskNotesPartialUpdateQueryParams queryParams;
+    public TaskNotesPartialUpdateRequest withQueryParams(TaskNotesPartialUpdateQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public TaskNotesPartialUpdateSecurity security;
+    public TaskNotesPartialUpdateRequest withSecurity(TaskNotesPartialUpdateSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

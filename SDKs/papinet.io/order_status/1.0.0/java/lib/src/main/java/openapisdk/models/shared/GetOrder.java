@@ -1,0 +1,46 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class GetOrder {
+    @JsonProperty("id")
+    public String id;
+    public GetOrder withId(String id) {
+        this.id = id;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("links")
+    public PaginationLinks links;
+    public GetOrder withLinks(PaginationLinks links) {
+        this.links = links;
+        return this;
+    }
+    @JsonProperty("numberOfLineItems")
+    public Long numberOfLineItems;
+    public GetOrder withNumberOfLineItems(Long numberOfLineItems) {
+        this.numberOfLineItems = numberOfLineItems;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("orderLineItems")
+    public OrderLineItem[] orderLineItems;
+    public GetOrder withOrderLineItems(OrderLineItem[] orderLineItems) {
+        this.orderLineItems = orderLineItems;
+        return this;
+    }
+    @JsonProperty("orderNumber")
+    public String orderNumber;
+    public GetOrder withOrderNumber(String orderNumber) {
+        this.orderNumber = orderNumber;
+        return this;
+    }
+    @JsonProperty("orderStatus")
+    public GetOrderOrderStatusEnum orderStatus;
+    public GetOrder withOrderStatus(GetOrderOrderStatusEnum orderStatus) {
+        this.orderStatus = orderStatus;
+        return this;
+    }
+}

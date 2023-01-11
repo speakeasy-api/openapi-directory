@@ -1,0 +1,47 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * HeavyEquipmentsSearchResponse
+ * Heavy Equipments search query response
+**/
+public class HeavyEquipmentsSearchResponse {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("facets")
+    public java.util.Map<String, Object> facets;
+    public HeavyEquipmentsSearchResponse withFacets(java.util.Map<String, Object> facets) {
+        this.facets = facets;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("listings")
+    public HeavyEquipmentsBaseListing[] listings;
+    public HeavyEquipmentsSearchResponse withListings(HeavyEquipmentsBaseListing[] listings) {
+        this.listings = listings;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("num_found")
+    public Long numFound;
+    public HeavyEquipmentsSearchResponse withNumFound(Long numFound) {
+        this.numFound = numFound;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("range_facets")
+    public java.util.Map<String, Object> rangeFacets;
+    public HeavyEquipmentsSearchResponse withRangeFacets(java.util.Map<String, Object> rangeFacets) {
+        this.rangeFacets = rangeFacets;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("stats")
+    public java.util.Map<String, Object> stats;
+    public HeavyEquipmentsSearchResponse withStats(java.util.Map<String, Object> stats) {
+        this.stats = stats;
+        return this;
+    }
+}

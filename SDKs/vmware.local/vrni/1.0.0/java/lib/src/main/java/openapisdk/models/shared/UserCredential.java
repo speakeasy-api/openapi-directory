@@ -1,0 +1,29 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class UserCredential {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("domain")
+    public Domain domain;
+    public UserCredential withDomain(Domain domain) {
+        this.domain = domain;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("password")
+    public String password;
+    public UserCredential withPassword(String password) {
+        this.password = password;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("username")
+    public String username;
+    public UserCredential withUsername(String username) {
+        this.username = username;
+        return this;
+    }
+}

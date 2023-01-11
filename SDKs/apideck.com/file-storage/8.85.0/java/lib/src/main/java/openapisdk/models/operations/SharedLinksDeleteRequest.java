@@ -1,0 +1,26 @@
+package openapisdk.models.operations;
+
+
+
+public class SharedLinksDeleteRequest {
+    public SharedLinksDeletePathParams pathParams;
+    public SharedLinksDeleteRequest withPathParams(SharedLinksDeletePathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public SharedLinksDeleteQueryParams queryParams;
+    public SharedLinksDeleteRequest withQueryParams(SharedLinksDeleteQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public SharedLinksDeleteHeaders headers;
+    public SharedLinksDeleteRequest withHeaders(SharedLinksDeleteHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+    public SharedLinksDeleteSecurity security;
+    public SharedLinksDeleteRequest withSecurity(SharedLinksDeleteSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

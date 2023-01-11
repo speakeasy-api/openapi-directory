@@ -1,0 +1,81 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class SubTransaction {
+    @JsonProperty("amount")
+    public Long amount;
+    public SubTransaction withAmount(Long amount) {
+        this.amount = amount;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("category_id")
+    public String categoryId;
+    public SubTransaction withCategoryId(String categoryId) {
+        this.categoryId = categoryId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("category_name")
+    public String categoryName;
+    public SubTransaction withCategoryName(String categoryName) {
+        this.categoryName = categoryName;
+        return this;
+    }
+    @JsonProperty("deleted")
+    public Boolean deleted;
+    public SubTransaction withDeleted(Boolean deleted) {
+        this.deleted = deleted;
+        return this;
+    }
+    @JsonProperty("id")
+    public String id;
+    public SubTransaction withId(String id) {
+        this.id = id;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("memo")
+    public String memo;
+    public SubTransaction withMemo(String memo) {
+        this.memo = memo;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("payee_id")
+    public String payeeId;
+    public SubTransaction withPayeeId(String payeeId) {
+        this.payeeId = payeeId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("payee_name")
+    public String payeeName;
+    public SubTransaction withPayeeName(String payeeName) {
+        this.payeeName = payeeName;
+        return this;
+    }
+    @JsonProperty("transaction_id")
+    public String transactionId;
+    public SubTransaction withTransactionId(String transactionId) {
+        this.transactionId = transactionId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("transfer_account_id")
+    public String transferAccountId;
+    public SubTransaction withTransferAccountId(String transferAccountId) {
+        this.transferAccountId = transferAccountId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("transfer_transaction_id")
+    public String transferTransactionId;
+    public SubTransaction withTransferTransactionId(String transferTransactionId) {
+        this.transferTransactionId = transferTransactionId;
+        return this;
+    }
+}

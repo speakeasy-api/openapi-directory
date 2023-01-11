@@ -1,0 +1,138 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * Cluster
+ * Contains all of the attributes of a specific DAX cluster.
+**/
+public class Cluster {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ActiveNodes")
+    public Long activeNodes;
+    public Cluster withActiveNodes(Long activeNodes) {
+        this.activeNodes = activeNodes;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ClusterArn")
+    public String clusterArn;
+    public Cluster withClusterArn(String clusterArn) {
+        this.clusterArn = clusterArn;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ClusterDiscoveryEndpoint")
+    public Endpoint clusterDiscoveryEndpoint;
+    public Cluster withClusterDiscoveryEndpoint(Endpoint clusterDiscoveryEndpoint) {
+        this.clusterDiscoveryEndpoint = clusterDiscoveryEndpoint;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ClusterEndpointEncryptionType")
+    public ClusterEndpointEncryptionTypeEnum clusterEndpointEncryptionType;
+    public Cluster withClusterEndpointEncryptionType(ClusterEndpointEncryptionTypeEnum clusterEndpointEncryptionType) {
+        this.clusterEndpointEncryptionType = clusterEndpointEncryptionType;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ClusterName")
+    public String clusterName;
+    public Cluster withClusterName(String clusterName) {
+        this.clusterName = clusterName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Description")
+    public String description;
+    public Cluster withDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("IamRoleArn")
+    public String iamRoleArn;
+    public Cluster withIamRoleArn(String iamRoleArn) {
+        this.iamRoleArn = iamRoleArn;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("NodeIdsToRemove")
+    public String[] nodeIdsToRemove;
+    public Cluster withNodeIdsToRemove(String[] nodeIdsToRemove) {
+        this.nodeIdsToRemove = nodeIdsToRemove;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("NodeType")
+    public String nodeType;
+    public Cluster withNodeType(String nodeType) {
+        this.nodeType = nodeType;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Nodes")
+    public Node[] nodes;
+    public Cluster withNodes(Node[] nodes) {
+        this.nodes = nodes;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("NotificationConfiguration")
+    public NotificationConfiguration notificationConfiguration;
+    public Cluster withNotificationConfiguration(NotificationConfiguration notificationConfiguration) {
+        this.notificationConfiguration = notificationConfiguration;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ParameterGroup")
+    public ParameterGroupStatus parameterGroup;
+    public Cluster withParameterGroup(ParameterGroupStatus parameterGroup) {
+        this.parameterGroup = parameterGroup;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("PreferredMaintenanceWindow")
+    public String preferredMaintenanceWindow;
+    public Cluster withPreferredMaintenanceWindow(String preferredMaintenanceWindow) {
+        this.preferredMaintenanceWindow = preferredMaintenanceWindow;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("SSEDescription")
+    public SseDescription sseDescription;
+    public Cluster withSseDescription(SseDescription sseDescription) {
+        this.sseDescription = sseDescription;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("SecurityGroups")
+    public SecurityGroupMembership[] securityGroups;
+    public Cluster withSecurityGroups(SecurityGroupMembership[] securityGroups) {
+        this.securityGroups = securityGroups;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Status")
+    public String status;
+    public Cluster withStatus(String status) {
+        this.status = status;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("SubnetGroup")
+    public String subnetGroup;
+    public Cluster withSubnetGroup(String subnetGroup) {
+        this.subnetGroup = subnetGroup;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("TotalNodes")
+    public Long totalNodes;
+    public Cluster withTotalNodes(Long totalNodes) {
+        this.totalNodes = totalNodes;
+        return this;
+    }
+}

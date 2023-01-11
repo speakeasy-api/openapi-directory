@@ -1,0 +1,22 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class ImageOcrImageWordsWithLocationRequest {
+    public ImageOcrImageWordsWithLocationHeaders headers;
+    public ImageOcrImageWordsWithLocationRequest withHeaders(ImageOcrImageWordsWithLocationHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+    @SpeakeasyMetadata("request:mediaType=multipart/form-data")
+    public ImageOcrImageWordsWithLocationRequestBody request;
+    public ImageOcrImageWordsWithLocationRequest withRequest(ImageOcrImageWordsWithLocationRequestBody request) {
+        this.request = request;
+        return this;
+    }
+    public ImageOcrImageWordsWithLocationSecurity security;
+    public ImageOcrImageWordsWithLocationRequest withSecurity(ImageOcrImageWordsWithLocationSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

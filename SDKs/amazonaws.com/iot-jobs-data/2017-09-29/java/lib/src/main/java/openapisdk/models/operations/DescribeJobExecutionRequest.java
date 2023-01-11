@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class DescribeJobExecutionRequest {
+    public DescribeJobExecutionPathParams pathParams;
+    public DescribeJobExecutionRequest withPathParams(DescribeJobExecutionPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public DescribeJobExecutionQueryParams queryParams;
+    public DescribeJobExecutionRequest withQueryParams(DescribeJobExecutionQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public DescribeJobExecutionHeaders headers;
+    public DescribeJobExecutionRequest withHeaders(DescribeJobExecutionHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+}

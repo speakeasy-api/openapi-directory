@@ -1,0 +1,26 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * GoogleChromeManagementV1CpuTemperatureInfo
+ * CPU temperature of a device. Sampled per CPU core in Celsius. * This field is telemetry information and this will change over time as the device is utilized. * Data for this field is controlled via policy: [ReportDeviceCpuInfo](https://chromeenterprise.google/policies/#ReportDeviceCpuInfo) * Data Collection Frequency: Every 10 minutes * Default Data Reporting Frequency: 3 hours - Policy Controlled: Yes * Cache: If the device is offline, the collected data is stored locally, and will be reported when the device is next online: No * Reported for affiliated users only: N/A
+**/
+public class GoogleChromeManagementV1CpuTemperatureInfo {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("label")
+    public String label;
+    public GoogleChromeManagementV1CpuTemperatureInfo withLabel(String label) {
+        this.label = label;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("temperatureCelsius")
+    public Integer temperatureCelsius;
+    public GoogleChromeManagementV1CpuTemperatureInfo withTemperatureCelsius(Integer temperatureCelsius) {
+        this.temperatureCelsius = temperatureCelsius;
+        return this;
+    }
+}

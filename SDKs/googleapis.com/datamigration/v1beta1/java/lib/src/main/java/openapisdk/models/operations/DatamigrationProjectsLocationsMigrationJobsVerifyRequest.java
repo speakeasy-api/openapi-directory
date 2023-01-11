@@ -1,0 +1,27 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class DatamigrationProjectsLocationsMigrationJobsVerifyRequest {
+    public DatamigrationProjectsLocationsMigrationJobsVerifyPathParams pathParams;
+    public DatamigrationProjectsLocationsMigrationJobsVerifyRequest withPathParams(DatamigrationProjectsLocationsMigrationJobsVerifyPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public DatamigrationProjectsLocationsMigrationJobsVerifyQueryParams queryParams;
+    public DatamigrationProjectsLocationsMigrationJobsVerifyRequest withQueryParams(DatamigrationProjectsLocationsMigrationJobsVerifyQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public java.util.Map<String, Object> request;
+    public DatamigrationProjectsLocationsMigrationJobsVerifyRequest withRequest(java.util.Map<String, Object> request) {
+        this.request = request;
+        return this;
+    }
+    public DatamigrationProjectsLocationsMigrationJobsVerifySecurity security;
+    public DatamigrationProjectsLocationsMigrationJobsVerifyRequest withSecurity(DatamigrationProjectsLocationsMigrationJobsVerifySecurity security) {
+        this.security = security;
+        return this;
+    }
+}

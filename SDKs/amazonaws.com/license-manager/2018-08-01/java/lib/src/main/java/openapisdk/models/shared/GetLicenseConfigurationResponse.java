@@ -1,0 +1,127 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class GetLicenseConfigurationResponse {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("AutomatedDiscoveryInformation")
+    public AutomatedDiscoveryInformation automatedDiscoveryInformation;
+    public GetLicenseConfigurationResponse withAutomatedDiscoveryInformation(AutomatedDiscoveryInformation automatedDiscoveryInformation) {
+        this.automatedDiscoveryInformation = automatedDiscoveryInformation;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ConsumedLicenseSummaryList")
+    public ConsumedLicenseSummary[] consumedLicenseSummaryList;
+    public GetLicenseConfigurationResponse withConsumedLicenseSummaryList(ConsumedLicenseSummary[] consumedLicenseSummaryList) {
+        this.consumedLicenseSummaryList = consumedLicenseSummaryList;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ConsumedLicenses")
+    public Long consumedLicenses;
+    public GetLicenseConfigurationResponse withConsumedLicenses(Long consumedLicenses) {
+        this.consumedLicenses = consumedLicenses;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Description")
+    public String description;
+    public GetLicenseConfigurationResponse withDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("DisassociateWhenNotFound")
+    public Boolean disassociateWhenNotFound;
+    public GetLicenseConfigurationResponse withDisassociateWhenNotFound(Boolean disassociateWhenNotFound) {
+        this.disassociateWhenNotFound = disassociateWhenNotFound;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("LicenseConfigurationArn")
+    public String licenseConfigurationArn;
+    public GetLicenseConfigurationResponse withLicenseConfigurationArn(String licenseConfigurationArn) {
+        this.licenseConfigurationArn = licenseConfigurationArn;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("LicenseConfigurationId")
+    public String licenseConfigurationId;
+    public GetLicenseConfigurationResponse withLicenseConfigurationId(String licenseConfigurationId) {
+        this.licenseConfigurationId = licenseConfigurationId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("LicenseCount")
+    public Long licenseCount;
+    public GetLicenseConfigurationResponse withLicenseCount(Long licenseCount) {
+        this.licenseCount = licenseCount;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("LicenseCountHardLimit")
+    public Boolean licenseCountHardLimit;
+    public GetLicenseConfigurationResponse withLicenseCountHardLimit(Boolean licenseCountHardLimit) {
+        this.licenseCountHardLimit = licenseCountHardLimit;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("LicenseCountingType")
+    public LicenseCountingTypeEnum licenseCountingType;
+    public GetLicenseConfigurationResponse withLicenseCountingType(LicenseCountingTypeEnum licenseCountingType) {
+        this.licenseCountingType = licenseCountingType;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("LicenseRules")
+    public String[] licenseRules;
+    public GetLicenseConfigurationResponse withLicenseRules(String[] licenseRules) {
+        this.licenseRules = licenseRules;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ManagedResourceSummaryList")
+    public ManagedResourceSummary[] managedResourceSummaryList;
+    public GetLicenseConfigurationResponse withManagedResourceSummaryList(ManagedResourceSummary[] managedResourceSummaryList) {
+        this.managedResourceSummaryList = managedResourceSummaryList;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Name")
+    public String name;
+    public GetLicenseConfigurationResponse withName(String name) {
+        this.name = name;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("OwnerAccountId")
+    public String ownerAccountId;
+    public GetLicenseConfigurationResponse withOwnerAccountId(String ownerAccountId) {
+        this.ownerAccountId = ownerAccountId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ProductInformationList")
+    public ProductInformation[] productInformationList;
+    public GetLicenseConfigurationResponse withProductInformationList(ProductInformation[] productInformationList) {
+        this.productInformationList = productInformationList;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Status")
+    public String status;
+    public GetLicenseConfigurationResponse withStatus(String status) {
+        this.status = status;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Tags")
+    public Tag[] tags;
+    public GetLicenseConfigurationResponse withTags(Tag[] tags) {
+        this.tags = tags;
+        return this;
+    }
+}

@@ -1,0 +1,22 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class CreateDistributionWithTags20171030Request {
+    public CreateDistributionWithTags20171030QueryParams queryParams;
+    public CreateDistributionWithTags20171030Request withQueryParams(CreateDistributionWithTags20171030QueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public CreateDistributionWithTags20171030Headers headers;
+    public CreateDistributionWithTags20171030Request withHeaders(CreateDistributionWithTags20171030Headers headers) {
+        this.headers = headers;
+        return this;
+    }
+    @SpeakeasyMetadata("request:mediaType=text/xml")
+    public byte[] request;
+    public CreateDistributionWithTags20171030Request withRequest(byte[] request) {
+        this.request = request;
+        return this;
+    }
+}

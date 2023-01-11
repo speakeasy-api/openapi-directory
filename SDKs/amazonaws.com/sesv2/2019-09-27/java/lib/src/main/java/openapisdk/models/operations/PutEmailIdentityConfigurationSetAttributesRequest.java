@@ -1,0 +1,22 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class PutEmailIdentityConfigurationSetAttributesRequest {
+    public PutEmailIdentityConfigurationSetAttributesPathParams pathParams;
+    public PutEmailIdentityConfigurationSetAttributesRequest withPathParams(PutEmailIdentityConfigurationSetAttributesPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public PutEmailIdentityConfigurationSetAttributesHeaders headers;
+    public PutEmailIdentityConfigurationSetAttributesRequest withHeaders(PutEmailIdentityConfigurationSetAttributesHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public PutEmailIdentityConfigurationSetAttributesRequestBody request;
+    public PutEmailIdentityConfigurationSetAttributesRequest withRequest(PutEmailIdentityConfigurationSetAttributesRequestBody request) {
+        this.request = request;
+        return this;
+    }
+}

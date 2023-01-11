@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class DeleteNominalCodeRequest {
+    public DeleteNominalCodePathParams pathParams;
+    public DeleteNominalCodeRequest withPathParams(DeleteNominalCodePathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public DeleteNominalCodeHeaders headers;
+    public DeleteNominalCodeRequest withHeaders(DeleteNominalCodeHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+}

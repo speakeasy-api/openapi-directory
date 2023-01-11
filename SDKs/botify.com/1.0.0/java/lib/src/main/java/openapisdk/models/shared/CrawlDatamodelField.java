@@ -1,0 +1,48 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+public class CrawlDatamodelField {
+    @JsonProperty("group")
+    public String group;
+    public CrawlDatamodelField withGroup(String group) {
+        this.group = group;
+        return this;
+    }
+    @JsonProperty("id")
+    public String id;
+    public CrawlDatamodelField withId(String id) {
+        this.id = id;
+        return this;
+    }
+    @JsonProperty("multiple")
+    public Boolean multiple;
+    public CrawlDatamodelField withMultiple(Boolean multiple) {
+        this.multiple = multiple;
+        return this;
+    }
+    @JsonProperty("name")
+    public String name;
+    public CrawlDatamodelField withName(String name) {
+        this.name = name;
+        return this;
+    }
+    @JsonProperty("permissions")
+    public String[] permissions;
+    public CrawlDatamodelField withPermissions(String[] permissions) {
+        this.permissions = permissions;
+        return this;
+    }
+    @JsonProperty("subtype")
+    public String subtype;
+    public CrawlDatamodelField withSubtype(String subtype) {
+        this.subtype = subtype;
+        return this;
+    }
+    @JsonProperty("type")
+    public String type;
+    public CrawlDatamodelField withType(String type) {
+        this.type = type;
+        return this;
+    }
+}

@@ -1,0 +1,57 @@
+package openapisdk.models.operations;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class ListSubscriptionListSubscriptionResponseMeta {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("first_page_url")
+    public String firstPageUrl;
+    public ListSubscriptionListSubscriptionResponseMeta withFirstPageUrl(String firstPageUrl) {
+        this.firstPageUrl = firstPageUrl;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("key")
+    public String key;
+    public ListSubscriptionListSubscriptionResponseMeta withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("next_page_url")
+    public String nextPageUrl;
+    public ListSubscriptionListSubscriptionResponseMeta withNextPageUrl(String nextPageUrl) {
+        this.nextPageUrl = nextPageUrl;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("page")
+    public Long page;
+    public ListSubscriptionListSubscriptionResponseMeta withPage(Long page) {
+        this.page = page;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("page_size")
+    public Long pageSize;
+    public ListSubscriptionListSubscriptionResponseMeta withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("previous_page_url")
+    public String previousPageUrl;
+    public ListSubscriptionListSubscriptionResponseMeta withPreviousPageUrl(String previousPageUrl) {
+        this.previousPageUrl = previousPageUrl;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("url")
+    public String url;
+    public ListSubscriptionListSubscriptionResponseMeta withUrl(String url) {
+        this.url = url;
+        return this;
+    }
+}

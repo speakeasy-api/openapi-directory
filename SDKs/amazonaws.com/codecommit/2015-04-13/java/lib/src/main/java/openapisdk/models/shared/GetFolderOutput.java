@@ -1,0 +1,55 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class GetFolderOutput {
+    @JsonProperty("commitId")
+    public String commitId;
+    public GetFolderOutput withCommitId(String commitId) {
+        this.commitId = commitId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("files")
+    public File[] files;
+    public GetFolderOutput withFiles(File[] files) {
+        this.files = files;
+        return this;
+    }
+    @JsonProperty("folderPath")
+    public String folderPath;
+    public GetFolderOutput withFolderPath(String folderPath) {
+        this.folderPath = folderPath;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("subFolders")
+    public Folder[] subFolders;
+    public GetFolderOutput withSubFolders(Folder[] subFolders) {
+        this.subFolders = subFolders;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("subModules")
+    public SubModule[] subModules;
+    public GetFolderOutput withSubModules(SubModule[] subModules) {
+        this.subModules = subModules;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("symbolicLinks")
+    public SymbolicLink[] symbolicLinks;
+    public GetFolderOutput withSymbolicLinks(SymbolicLink[] symbolicLinks) {
+        this.symbolicLinks = symbolicLinks;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("treeId")
+    public String treeId;
+    public GetFolderOutput withTreeId(String treeId) {
+        this.treeId = treeId;
+        return this;
+    }
+}

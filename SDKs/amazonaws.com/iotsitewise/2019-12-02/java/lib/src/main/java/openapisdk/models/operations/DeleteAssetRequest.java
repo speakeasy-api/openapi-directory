@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class DeleteAssetRequest {
+    public DeleteAssetPathParams pathParams;
+    public DeleteAssetRequest withPathParams(DeleteAssetPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public DeleteAssetQueryParams queryParams;
+    public DeleteAssetRequest withQueryParams(DeleteAssetQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public DeleteAssetHeaders headers;
+    public DeleteAssetRequest withHeaders(DeleteAssetHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+}

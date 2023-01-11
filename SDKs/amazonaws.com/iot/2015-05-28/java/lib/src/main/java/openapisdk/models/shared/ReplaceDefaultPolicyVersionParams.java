@@ -1,0 +1,16 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+/**
+ * ReplaceDefaultPolicyVersionParams
+ * Parameters to define a mitigation action that adds a blank policy to restrict permissions.
+**/
+public class ReplaceDefaultPolicyVersionParams {
+    @JsonProperty("templateName")
+    public PolicyTemplateNameEnum templateName;
+    public ReplaceDefaultPolicyVersionParams withTemplateName(PolicyTemplateNameEnum templateName) {
+        this.templateName = templateName;
+        return this;
+    }
+}

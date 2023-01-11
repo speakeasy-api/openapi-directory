@@ -1,0 +1,51 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * MetricTransformation
+ * Indicates how to transform ingested log events to metric data in a CloudWatch metric.
+**/
+public class MetricTransformation {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("defaultValue")
+    public Double defaultValue;
+    public MetricTransformation withDefaultValue(Double defaultValue) {
+        this.defaultValue = defaultValue;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("dimensions")
+    public java.util.Map<String, String> dimensions;
+    public MetricTransformation withDimensions(java.util.Map<String, String> dimensions) {
+        this.dimensions = dimensions;
+        return this;
+    }
+    @JsonProperty("metricName")
+    public String metricName;
+    public MetricTransformation withMetricName(String metricName) {
+        this.metricName = metricName;
+        return this;
+    }
+    @JsonProperty("metricNamespace")
+    public String metricNamespace;
+    public MetricTransformation withMetricNamespace(String metricNamespace) {
+        this.metricNamespace = metricNamespace;
+        return this;
+    }
+    @JsonProperty("metricValue")
+    public String metricValue;
+    public MetricTransformation withMetricValue(String metricValue) {
+        this.metricValue = metricValue;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("unit")
+    public StandardUnitEnum unit;
+    public MetricTransformation withUnit(StandardUnitEnum unit) {
+        this.unit = unit;
+        return this;
+    }
+}

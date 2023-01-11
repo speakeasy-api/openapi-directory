@@ -1,0 +1,32 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * GrpcRouteMetadata
+ * An object that represents the match metadata for the route.
+**/
+public class GrpcRouteMetadata {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("invert")
+    public Boolean invert;
+    public GrpcRouteMetadata withInvert(Boolean invert) {
+        this.invert = invert;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("match")
+    public GrpcRouteMetadataMatchMethod match;
+    public GrpcRouteMetadata withMatch(GrpcRouteMetadataMatchMethod match) {
+        this.match = match;
+        return this;
+    }
+    @JsonProperty("name")
+    public String name;
+    public GrpcRouteMetadata withName(String name) {
+        this.name = name;
+        return this;
+    }
+}

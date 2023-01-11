@@ -1,0 +1,40 @@
+package openapisdk.models.shared;
+
+import java.time.OffsetDateTime;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import openapisdk.utils.DateTimeSerializer;
+import openapisdk.utils.DateTimeDeserializer;
+
+/**
+ * WebsiteCaSummary
+ * The summary of the certificate authority (CA).
+**/
+public class WebsiteCaSummary {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonSerialize(contentUsing = DateTimeSerializer.class)
+    @JsonDeserialize(contentUsing = DateTimeDeserializer.class)
+    @JsonProperty("CreatedTime")
+    public OffsetDateTime createdTime;
+    public WebsiteCaSummary withCreatedTime(OffsetDateTime createdTime) {
+        this.createdTime = createdTime;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("DisplayName")
+    public String displayName;
+    public WebsiteCaSummary withDisplayName(String displayName) {
+        this.displayName = displayName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("WebsiteCaId")
+    public String websiteCaId;
+    public WebsiteCaSummary withWebsiteCaId(String websiteCaId) {
+        this.websiteCaId = websiteCaId;
+        return this;
+    }
+}

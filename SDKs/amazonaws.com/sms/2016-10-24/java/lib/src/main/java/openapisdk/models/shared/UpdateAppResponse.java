@@ -1,0 +1,29 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class UpdateAppResponse {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("appSummary")
+    public AppSummary appSummary;
+    public UpdateAppResponse withAppSummary(AppSummary appSummary) {
+        this.appSummary = appSummary;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("serverGroups")
+    public ServerGroup[] serverGroups;
+    public UpdateAppResponse withServerGroups(ServerGroup[] serverGroups) {
+        this.serverGroups = serverGroups;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("tags")
+    public Tag[] tags;
+    public UpdateAppResponse withTags(Tag[] tags) {
+        this.tags = tags;
+        return this;
+    }
+}

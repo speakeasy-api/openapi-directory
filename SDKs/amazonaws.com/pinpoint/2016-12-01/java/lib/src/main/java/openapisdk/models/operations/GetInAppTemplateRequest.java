@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class GetInAppTemplateRequest {
+    public GetInAppTemplatePathParams pathParams;
+    public GetInAppTemplateRequest withPathParams(GetInAppTemplatePathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public GetInAppTemplateQueryParams queryParams;
+    public GetInAppTemplateRequest withQueryParams(GetInAppTemplateQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public GetInAppTemplateHeaders headers;
+    public GetInAppTemplateRequest withHeaders(GetInAppTemplateHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+}

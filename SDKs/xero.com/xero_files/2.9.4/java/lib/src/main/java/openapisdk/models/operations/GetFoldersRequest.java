@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class GetFoldersRequest {
+    public GetFoldersQueryParams queryParams;
+    public GetFoldersRequest withQueryParams(GetFoldersQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public GetFoldersHeaders headers;
+    public GetFoldersRequest withHeaders(GetFoldersHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+    public GetFoldersSecurity security;
+    public GetFoldersRequest withSecurity(GetFoldersSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

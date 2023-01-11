@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class AuthorizedbuyersmarketplaceBuyersPublisherProfilesListRequest {
+    public AuthorizedbuyersmarketplaceBuyersPublisherProfilesListPathParams pathParams;
+    public AuthorizedbuyersmarketplaceBuyersPublisherProfilesListRequest withPathParams(AuthorizedbuyersmarketplaceBuyersPublisherProfilesListPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public AuthorizedbuyersmarketplaceBuyersPublisherProfilesListQueryParams queryParams;
+    public AuthorizedbuyersmarketplaceBuyersPublisherProfilesListRequest withQueryParams(AuthorizedbuyersmarketplaceBuyersPublisherProfilesListQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public AuthorizedbuyersmarketplaceBuyersPublisherProfilesListSecurity security;
+    public AuthorizedbuyersmarketplaceBuyersPublisherProfilesListRequest withSecurity(AuthorizedbuyersmarketplaceBuyersPublisherProfilesListSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

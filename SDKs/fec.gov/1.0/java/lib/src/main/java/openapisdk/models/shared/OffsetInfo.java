@@ -1,0 +1,36 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class OffsetInfo {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("count")
+    public Integer count;
+    public OffsetInfo withCount(Integer count) {
+        this.count = count;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("page")
+    public Integer page;
+    public OffsetInfo withPage(Integer page) {
+        this.page = page;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("pages")
+    public Integer pages;
+    public OffsetInfo withPages(Integer pages) {
+        this.pages = pages;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("per_page")
+    public Integer perPage;
+    public OffsetInfo withPerPage(Integer perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+}

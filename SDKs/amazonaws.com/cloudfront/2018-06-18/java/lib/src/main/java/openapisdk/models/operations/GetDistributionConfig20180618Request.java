@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class GetDistributionConfig20180618Request {
+    public GetDistributionConfig20180618PathParams pathParams;
+    public GetDistributionConfig20180618Request withPathParams(GetDistributionConfig20180618PathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public GetDistributionConfig20180618Headers headers;
+    public GetDistributionConfig20180618Request withHeaders(GetDistributionConfig20180618Headers headers) {
+        this.headers = headers;
+        return this;
+    }
+}

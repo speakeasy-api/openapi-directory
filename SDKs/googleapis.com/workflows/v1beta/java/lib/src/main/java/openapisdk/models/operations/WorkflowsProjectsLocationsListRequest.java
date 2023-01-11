@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class WorkflowsProjectsLocationsListRequest {
+    public WorkflowsProjectsLocationsListPathParams pathParams;
+    public WorkflowsProjectsLocationsListRequest withPathParams(WorkflowsProjectsLocationsListPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public WorkflowsProjectsLocationsListQueryParams queryParams;
+    public WorkflowsProjectsLocationsListRequest withQueryParams(WorkflowsProjectsLocationsListQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public WorkflowsProjectsLocationsListSecurity security;
+    public WorkflowsProjectsLocationsListRequest withSecurity(WorkflowsProjectsLocationsListSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

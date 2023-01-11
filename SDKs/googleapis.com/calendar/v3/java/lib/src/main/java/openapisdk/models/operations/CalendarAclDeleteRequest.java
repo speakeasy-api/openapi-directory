@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class CalendarAclDeleteRequest {
+    public CalendarAclDeletePathParams pathParams;
+    public CalendarAclDeleteRequest withPathParams(CalendarAclDeletePathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public CalendarAclDeleteQueryParams queryParams;
+    public CalendarAclDeleteRequest withQueryParams(CalendarAclDeleteQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public CalendarAclDeleteSecurity security;
+    public CalendarAclDeleteRequest withSecurity(CalendarAclDeleteSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

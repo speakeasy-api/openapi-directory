@@ -1,0 +1,21 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class ExclusionFiltersResponseLinks {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("configure")
+    public LinksConfigureChannelCatalogExclusionFiltersLink configure;
+    public ExclusionFiltersResponseLinks withConfigure(LinksConfigureChannelCatalogExclusionFiltersLink configure) {
+        this.configure = configure;
+        return this;
+    }
+    @JsonProperty("self")
+    public LinksGetChannelCatalogExclusionFiltersLink self;
+    public ExclusionFiltersResponseLinks withSelf(LinksGetChannelCatalogExclusionFiltersLink self) {
+        this.self = self;
+        return this;
+    }
+}

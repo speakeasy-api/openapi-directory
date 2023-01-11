@@ -1,0 +1,26 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * HttpGatewayRoutePrefixRewrite
+ * An object representing the beginning characters of the route to rewrite.
+**/
+public class HttpGatewayRoutePrefixRewrite {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("defaultPrefix")
+    public DefaultGatewayRouteRewriteEnum defaultPrefix;
+    public HttpGatewayRoutePrefixRewrite withDefaultPrefix(DefaultGatewayRouteRewriteEnum defaultPrefix) {
+        this.defaultPrefix = defaultPrefix;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("value")
+    public String value;
+    public HttpGatewayRoutePrefixRewrite withValue(String value) {
+        this.value = value;
+        return this;
+    }
+}

@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class GetJourneyExecutionMetricsRequest {
+    public GetJourneyExecutionMetricsPathParams pathParams;
+    public GetJourneyExecutionMetricsRequest withPathParams(GetJourneyExecutionMetricsPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public GetJourneyExecutionMetricsQueryParams queryParams;
+    public GetJourneyExecutionMetricsRequest withQueryParams(GetJourneyExecutionMetricsQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public GetJourneyExecutionMetricsHeaders headers;
+    public GetJourneyExecutionMetricsRequest withHeaders(GetJourneyExecutionMetricsHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+}

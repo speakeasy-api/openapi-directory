@@ -1,0 +1,20 @@
+package openapisdk.models.shared;
+
+
+
+/**
+ * ResourcePendingMaintenanceActions
+ * Describes the pending maintenance actions for a resource.
+**/
+public class ResourcePendingMaintenanceActions {
+    public PendingMaintenanceActionDetails[] pendingMaintenanceActionDetails;
+    public ResourcePendingMaintenanceActions withPendingMaintenanceActionDetails(PendingMaintenanceActionDetails[] pendingMaintenanceActionDetails) {
+        this.pendingMaintenanceActionDetails = pendingMaintenanceActionDetails;
+        return this;
+    }
+    public String resourceIdentifier;
+    public ResourcePendingMaintenanceActions withResourceIdentifier(String resourceIdentifier) {
+        this.resourceIdentifier = resourceIdentifier;
+        return this;
+    }
+}

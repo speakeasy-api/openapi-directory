@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class CloudfunctionsProjectsLocationsOperationsGetRequest {
+    public CloudfunctionsProjectsLocationsOperationsGetPathParams pathParams;
+    public CloudfunctionsProjectsLocationsOperationsGetRequest withPathParams(CloudfunctionsProjectsLocationsOperationsGetPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public CloudfunctionsProjectsLocationsOperationsGetQueryParams queryParams;
+    public CloudfunctionsProjectsLocationsOperationsGetRequest withQueryParams(CloudfunctionsProjectsLocationsOperationsGetQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public CloudfunctionsProjectsLocationsOperationsGetSecurity security;
+    public CloudfunctionsProjectsLocationsOperationsGetRequest withSecurity(CloudfunctionsProjectsLocationsOperationsGetSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

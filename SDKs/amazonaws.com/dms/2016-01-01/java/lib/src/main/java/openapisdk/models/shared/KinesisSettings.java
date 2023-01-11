@@ -1,0 +1,82 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * KinesisSettings
+ * Provides information that describes an Amazon Kinesis Data Stream endpoint. This information includes the output format of records applied to the endpoint and details of transaction and control table data information.
+**/
+public class KinesisSettings {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("IncludeControlDetails")
+    public Boolean includeControlDetails;
+    public KinesisSettings withIncludeControlDetails(Boolean includeControlDetails) {
+        this.includeControlDetails = includeControlDetails;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("IncludeNullAndEmpty")
+    public Boolean includeNullAndEmpty;
+    public KinesisSettings withIncludeNullAndEmpty(Boolean includeNullAndEmpty) {
+        this.includeNullAndEmpty = includeNullAndEmpty;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("IncludePartitionValue")
+    public Boolean includePartitionValue;
+    public KinesisSettings withIncludePartitionValue(Boolean includePartitionValue) {
+        this.includePartitionValue = includePartitionValue;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("IncludeTableAlterOperations")
+    public Boolean includeTableAlterOperations;
+    public KinesisSettings withIncludeTableAlterOperations(Boolean includeTableAlterOperations) {
+        this.includeTableAlterOperations = includeTableAlterOperations;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("IncludeTransactionDetails")
+    public Boolean includeTransactionDetails;
+    public KinesisSettings withIncludeTransactionDetails(Boolean includeTransactionDetails) {
+        this.includeTransactionDetails = includeTransactionDetails;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("MessageFormat")
+    public MessageFormatValueEnum messageFormat;
+    public KinesisSettings withMessageFormat(MessageFormatValueEnum messageFormat) {
+        this.messageFormat = messageFormat;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("NoHexPrefix")
+    public Boolean noHexPrefix;
+    public KinesisSettings withNoHexPrefix(Boolean noHexPrefix) {
+        this.noHexPrefix = noHexPrefix;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("PartitionIncludeSchemaTable")
+    public Boolean partitionIncludeSchemaTable;
+    public KinesisSettings withPartitionIncludeSchemaTable(Boolean partitionIncludeSchemaTable) {
+        this.partitionIncludeSchemaTable = partitionIncludeSchemaTable;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ServiceAccessRoleArn")
+    public String serviceAccessRoleArn;
+    public KinesisSettings withServiceAccessRoleArn(String serviceAccessRoleArn) {
+        this.serviceAccessRoleArn = serviceAccessRoleArn;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("StreamArn")
+    public String streamArn;
+    public KinesisSettings withStreamArn(String streamArn) {
+        this.streamArn = streamArn;
+        return this;
+    }
+}

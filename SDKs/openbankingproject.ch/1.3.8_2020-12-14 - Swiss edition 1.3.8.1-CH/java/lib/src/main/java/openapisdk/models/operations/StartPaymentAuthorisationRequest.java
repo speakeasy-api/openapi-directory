@@ -1,0 +1,27 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class StartPaymentAuthorisationRequest {
+    public StartPaymentAuthorisationPathParams pathParams;
+    public StartPaymentAuthorisationRequest withPathParams(StartPaymentAuthorisationPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public StartPaymentAuthorisationHeaders headers;
+    public StartPaymentAuthorisationRequest withHeaders(StartPaymentAuthorisationHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public Object request;
+    public StartPaymentAuthorisationRequest withRequest(Object request) {
+        this.request = request;
+        return this;
+    }
+    public StartPaymentAuthorisationSecurity security;
+    public StartPaymentAuthorisationRequest withSecurity(StartPaymentAuthorisationSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

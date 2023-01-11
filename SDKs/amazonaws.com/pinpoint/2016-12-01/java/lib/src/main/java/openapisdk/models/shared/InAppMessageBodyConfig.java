@@ -1,0 +1,28 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+/**
+ * InAppMessageBodyConfig
+ * Text config for Message Body.
+**/
+public class InAppMessageBodyConfig {
+    @JsonProperty("Alignment")
+    public AlignmentEnum alignment;
+    public InAppMessageBodyConfig withAlignment(AlignmentEnum alignment) {
+        this.alignment = alignment;
+        return this;
+    }
+    @JsonProperty("Body")
+    public String body;
+    public InAppMessageBodyConfig withBody(String body) {
+        this.body = body;
+        return this;
+    }
+    @JsonProperty("TextColor")
+    public String textColor;
+    public InAppMessageBodyConfig withTextColor(String textColor) {
+        this.textColor = textColor;
+        return this;
+    }
+}

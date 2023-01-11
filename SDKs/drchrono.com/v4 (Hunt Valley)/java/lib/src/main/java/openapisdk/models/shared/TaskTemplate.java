@@ -1,0 +1,105 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class TaskTemplate {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("archived")
+    public Boolean archived;
+    public TaskTemplate withArchived(Boolean archived) {
+        this.archived = archived;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("created_at")
+    public String createdAt;
+    public TaskTemplate withCreatedAt(String createdAt) {
+        this.createdAt = createdAt;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("default_assignee_group")
+    public Long defaultAssigneeGroup;
+    public TaskTemplate withDefaultAssigneeGroup(Long defaultAssigneeGroup) {
+        this.defaultAssigneeGroup = defaultAssigneeGroup;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("default_assignee_user")
+    public String defaultAssigneeUser;
+    public TaskTemplate withDefaultAssigneeUser(String defaultAssigneeUser) {
+        this.defaultAssigneeUser = defaultAssigneeUser;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("default_category")
+    public Long defaultCategory;
+    public TaskTemplate withDefaultCategory(Long defaultCategory) {
+        this.defaultCategory = defaultCategory;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("default_due_date_offset")
+    public String defaultDueDateOffset;
+    public TaskTemplate withDefaultDueDateOffset(String defaultDueDateOffset) {
+        this.defaultDueDateOffset = defaultDueDateOffset;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("default_note")
+    public String defaultNote;
+    public TaskTemplate withDefaultNote(String defaultNote) {
+        this.defaultNote = defaultNote;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("default_priority")
+    public TaskTemplateDefaultPriorityEnum defaultPriority;
+    public TaskTemplate withDefaultPriority(TaskTemplateDefaultPriorityEnum defaultPriority) {
+        this.defaultPriority = defaultPriority;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("default_status")
+    public Long defaultStatus;
+    public TaskTemplate withDefaultStatus(Long defaultStatus) {
+        this.defaultStatus = defaultStatus;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("default_title")
+    public String defaultTitle;
+    public TaskTemplate withDefaultTitle(String defaultTitle) {
+        this.defaultTitle = defaultTitle;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("id")
+    public Long id;
+    public TaskTemplate withId(Long id) {
+        this.id = id;
+        return this;
+    }
+    @JsonProperty("name")
+    public String name;
+    public TaskTemplate withName(String name) {
+        this.name = name;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("practice_group")
+    public String practiceGroup;
+    public TaskTemplate withPracticeGroup(String practiceGroup) {
+        this.practiceGroup = practiceGroup;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("updated_at")
+    public String updatedAt;
+    public TaskTemplate withUpdatedAt(String updatedAt) {
+        this.updatedAt = updatedAt;
+        return this;
+    }
+}

@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class ListTagsRequest {
+    public ListTagsPathParams pathParams;
+    public ListTagsRequest withPathParams(ListTagsPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public ListTagsHeaders headers;
+    public ListTagsRequest withHeaders(ListTagsHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+}

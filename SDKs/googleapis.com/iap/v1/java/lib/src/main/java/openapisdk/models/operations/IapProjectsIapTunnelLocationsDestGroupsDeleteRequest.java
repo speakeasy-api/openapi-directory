@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class IapProjectsIapTunnelLocationsDestGroupsDeleteRequest {
+    public IapProjectsIapTunnelLocationsDestGroupsDeletePathParams pathParams;
+    public IapProjectsIapTunnelLocationsDestGroupsDeleteRequest withPathParams(IapProjectsIapTunnelLocationsDestGroupsDeletePathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public IapProjectsIapTunnelLocationsDestGroupsDeleteQueryParams queryParams;
+    public IapProjectsIapTunnelLocationsDestGroupsDeleteRequest withQueryParams(IapProjectsIapTunnelLocationsDestGroupsDeleteQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public IapProjectsIapTunnelLocationsDestGroupsDeleteSecurity security;
+    public IapProjectsIapTunnelLocationsDestGroupsDeleteRequest withSecurity(IapProjectsIapTunnelLocationsDestGroupsDeleteSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class GetV4LayersAsPlantedActivityIdContentsRequest {
+    public GetV4LayersAsPlantedActivityIdContentsPathParams pathParams;
+    public GetV4LayersAsPlantedActivityIdContentsRequest withPathParams(GetV4LayersAsPlantedActivityIdContentsPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public GetV4LayersAsPlantedActivityIdContentsHeaders headers;
+    public GetV4LayersAsPlantedActivityIdContentsRequest withHeaders(GetV4LayersAsPlantedActivityIdContentsHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+    public GetV4LayersAsPlantedActivityIdContentsSecurity security;
+    public GetV4LayersAsPlantedActivityIdContentsRequest withSecurity(GetV4LayersAsPlantedActivityIdContentsSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

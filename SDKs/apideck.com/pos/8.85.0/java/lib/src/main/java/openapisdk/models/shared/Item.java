@@ -1,0 +1,219 @@
+package openapisdk.models.shared;
+
+import java.time.OffsetDateTime;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import openapisdk.utils.DateTimeSerializer;
+import openapisdk.utils.DateTimeDeserializer;
+
+public class Item {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("abbreviation")
+    public String abbreviation;
+    public Item withAbbreviation(String abbreviation) {
+        this.abbreviation = abbreviation;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("absent_at_location_ids")
+    public String[] absentAtLocationIds;
+    public Item withAbsentAtLocationIds(String[] absentAtLocationIds) {
+        this.absentAtLocationIds = absentAtLocationIds;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("available")
+    public Boolean available;
+    public Item withAvailable(Boolean available) {
+        this.available = available;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("available_for_pickup")
+    public Boolean availableForPickup;
+    public Item withAvailableForPickup(Boolean availableForPickup) {
+        this.availableForPickup = availableForPickup;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("available_online")
+    public Boolean availableOnline;
+    public Item withAvailableOnline(Boolean availableOnline) {
+        this.availableOnline = availableOnline;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("categories")
+    public Object[] categories;
+    public Item withCategories(Object[] categories) {
+        this.categories = categories;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("code")
+    public String code;
+    public Item withCode(String code) {
+        this.code = code;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("cost")
+    public Double cost;
+    public Item withCost(Double cost) {
+        this.cost = cost;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonSerialize(contentUsing = DateTimeSerializer.class)
+    @JsonDeserialize(contentUsing = DateTimeDeserializer.class)
+    @JsonProperty("created_at")
+    public OffsetDateTime createdAt;
+    public Item withCreatedAt(OffsetDateTime createdAt) {
+        this.createdAt = createdAt;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("created_by")
+    public String createdBy;
+    public Item withCreatedBy(String createdBy) {
+        this.createdBy = createdBy;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("deleted")
+    public Boolean deleted;
+    public Item withDeleted(Boolean deleted) {
+        this.deleted = deleted;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("description")
+    public String description;
+    public Item withDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("hidden")
+    public Boolean hidden;
+    public Item withHidden(Boolean hidden) {
+        this.hidden = hidden;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("id")
+    public String id;
+    public Item withId(String id) {
+        this.id = id;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("idempotency_key")
+    public String idempotencyKey;
+    public Item withIdempotencyKey(String idempotencyKey) {
+        this.idempotencyKey = idempotencyKey;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("modifier_groups")
+    public Object[] modifierGroups;
+    public Item withModifierGroups(Object[] modifierGroups) {
+        this.modifierGroups = modifierGroups;
+        return this;
+    }
+    @JsonProperty("name")
+    public String name;
+    public Item withName(String name) {
+        this.name = name;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("options")
+    public Object[] options;
+    public Item withOptions(Object[] options) {
+        this.options = options;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("present_at_all_locations")
+    public Boolean presentAtAllLocations;
+    public Item withPresentAtAllLocations(Boolean presentAtAllLocations) {
+        this.presentAtAllLocations = presentAtAllLocations;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("price_amount")
+    public Double priceAmount;
+    public Item withPriceAmount(Double priceAmount) {
+        this.priceAmount = priceAmount;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("price_currency")
+    public CurrencyEnum priceCurrency;
+    public Item withPriceCurrency(CurrencyEnum priceCurrency) {
+        this.priceCurrency = priceCurrency;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("pricing_type")
+    public ItemPricingTypeEnum pricingType;
+    public Item withPricingType(ItemPricingTypeEnum pricingType) {
+        this.pricingType = pricingType;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("product_type")
+    public ItemProductTypeEnum productType;
+    public Item withProductType(ItemProductTypeEnum productType) {
+        this.productType = productType;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("sku")
+    public String sku;
+    public Item withSku(String sku) {
+        this.sku = sku;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("tax_ids")
+    public String[] taxIds;
+    public Item withTaxIds(String[] taxIds) {
+        this.taxIds = taxIds;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonSerialize(contentUsing = DateTimeSerializer.class)
+    @JsonDeserialize(contentUsing = DateTimeDeserializer.class)
+    @JsonProperty("updated_at")
+    public OffsetDateTime updatedAt;
+    public Item withUpdatedAt(OffsetDateTime updatedAt) {
+        this.updatedAt = updatedAt;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("updated_by")
+    public String updatedBy;
+    public Item withUpdatedBy(String updatedBy) {
+        this.updatedBy = updatedBy;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("variations")
+    public Object[] variations;
+    public Item withVariations(Object[] variations) {
+        this.variations = variations;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("version")
+    public String version;
+    public Item withVersion(String version) {
+        this.version = version;
+        return this;
+    }
+}

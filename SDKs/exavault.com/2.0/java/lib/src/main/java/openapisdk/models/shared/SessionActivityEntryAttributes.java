@@ -1,0 +1,85 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class SessionActivityEntryAttributes {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("bytesTransferred")
+    public Long bytesTransferred;
+    public SessionActivityEntryAttributes withBytesTransferred(Long bytesTransferred) {
+        this.bytesTransferred = bytesTransferred;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("created")
+    public String created;
+    public SessionActivityEntryAttributes withCreated(String created) {
+        this.created = created;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("duration")
+    public Long duration;
+    public SessionActivityEntryAttributes withDuration(Long duration) {
+        this.duration = duration;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("fileName")
+    public String fileName;
+    public SessionActivityEntryAttributes withFileName(String fileName) {
+        this.fileName = fileName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("fileSource")
+    public String fileSource;
+    public SessionActivityEntryAttributes withFileSource(String fileSource) {
+        this.fileSource = fileSource;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ipAddress")
+    public String ipAddress;
+    public SessionActivityEntryAttributes withIpAddress(String ipAddress) {
+        this.ipAddress = ipAddress;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("operation")
+    public String operation;
+    public SessionActivityEntryAttributes withOperation(String operation) {
+        this.operation = operation;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("protocol")
+    public String protocol;
+    public SessionActivityEntryAttributes withProtocol(String protocol) {
+        this.protocol = protocol;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("sessionId")
+    public String sessionId;
+    public SessionActivityEntryAttributes withSessionId(String sessionId) {
+        this.sessionId = sessionId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("status")
+    public String status;
+    public SessionActivityEntryAttributes withStatus(String status) {
+        this.status = status;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("username")
+    public String username;
+    public SessionActivityEntryAttributes withUsername(String username) {
+        this.username = username;
+        return this;
+    }
+}

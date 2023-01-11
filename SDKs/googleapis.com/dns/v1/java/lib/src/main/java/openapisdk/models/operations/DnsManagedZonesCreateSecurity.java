@@ -1,0 +1,18 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class DnsManagedZonesCreateSecurity {
+    @SpeakeasyMetadata("security:option=true")
+    public DnsManagedZonesCreateSecurityOption1 option1;
+    public DnsManagedZonesCreateSecurity withOption1(DnsManagedZonesCreateSecurityOption1 option1) {
+        this.option1 = option1;
+        return this;
+    }
+    @SpeakeasyMetadata("security:option=true")
+    public DnsManagedZonesCreateSecurityOption2 option2;
+    public DnsManagedZonesCreateSecurity withOption2(DnsManagedZonesCreateSecurityOption2 option2) {
+        this.option2 = option2;
+        return this;
+    }
+}

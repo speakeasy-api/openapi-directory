@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class DisplayvideoFirstAndThirdPartyAudiencesListRequest {
+    public DisplayvideoFirstAndThirdPartyAudiencesListQueryParams queryParams;
+    public DisplayvideoFirstAndThirdPartyAudiencesListRequest withQueryParams(DisplayvideoFirstAndThirdPartyAudiencesListQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public DisplayvideoFirstAndThirdPartyAudiencesListSecurity security;
+    public DisplayvideoFirstAndThirdPartyAudiencesListRequest withSecurity(DisplayvideoFirstAndThirdPartyAudiencesListSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

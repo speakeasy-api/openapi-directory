@@ -1,0 +1,33 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * DefaultCategoricalHyperParameterRange
+ * Provides the name and default range of a categorical hyperparameter and whether the hyperparameter is tunable. A tunable hyperparameter can have its value determined during hyperparameter optimization (HPO).
+**/
+public class DefaultCategoricalHyperParameterRange {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("isTunable")
+    public Boolean isTunable;
+    public DefaultCategoricalHyperParameterRange withIsTunable(Boolean isTunable) {
+        this.isTunable = isTunable;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("name")
+    public String name;
+    public DefaultCategoricalHyperParameterRange withName(String name) {
+        this.name = name;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("values")
+    public String[] values;
+    public DefaultCategoricalHyperParameterRange withValues(String[] values) {
+        this.values = values;
+        return this;
+    }
+}

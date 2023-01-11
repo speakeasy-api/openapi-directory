@@ -1,0 +1,26 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * ReplicationRunStageDetails
+ * Details of the current stage of a replication run.
+**/
+public class ReplicationRunStageDetails {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("stage")
+    public String stage;
+    public ReplicationRunStageDetails withStage(String stage) {
+        this.stage = stage;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("stageProgress")
+    public String stageProgress;
+    public ReplicationRunStageDetails withStageProgress(String stageProgress) {
+        this.stageProgress = stageProgress;
+        return this;
+    }
+}

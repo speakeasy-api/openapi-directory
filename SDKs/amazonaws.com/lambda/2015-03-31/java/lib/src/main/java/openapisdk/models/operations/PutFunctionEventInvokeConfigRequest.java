@@ -1,0 +1,27 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class PutFunctionEventInvokeConfigRequest {
+    public PutFunctionEventInvokeConfigPathParams pathParams;
+    public PutFunctionEventInvokeConfigRequest withPathParams(PutFunctionEventInvokeConfigPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public PutFunctionEventInvokeConfigQueryParams queryParams;
+    public PutFunctionEventInvokeConfigRequest withQueryParams(PutFunctionEventInvokeConfigQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public PutFunctionEventInvokeConfigHeaders headers;
+    public PutFunctionEventInvokeConfigRequest withHeaders(PutFunctionEventInvokeConfigHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public PutFunctionEventInvokeConfigRequestBody request;
+    public PutFunctionEventInvokeConfigRequest withRequest(PutFunctionEventInvokeConfigRequestBody request) {
+        this.request = request;
+        return this;
+    }
+}

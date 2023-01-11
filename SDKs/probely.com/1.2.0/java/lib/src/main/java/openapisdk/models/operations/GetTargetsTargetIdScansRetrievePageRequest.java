@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class GetTargetsTargetIdScansRetrievePageRequest {
+    public GetTargetsTargetIdScansRetrievePagePathParams pathParams;
+    public GetTargetsTargetIdScansRetrievePageRequest withPathParams(GetTargetsTargetIdScansRetrievePagePathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public GetTargetsTargetIdScansRetrievePageQueryParams queryParams;
+    public GetTargetsTargetIdScansRetrievePageRequest withQueryParams(GetTargetsTargetIdScansRetrievePageQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+}

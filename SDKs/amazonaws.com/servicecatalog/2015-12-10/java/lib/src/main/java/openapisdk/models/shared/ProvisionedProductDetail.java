@@ -1,0 +1,117 @@
+package openapisdk.models.shared;
+
+import java.time.OffsetDateTime;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import openapisdk.utils.DateTimeSerializer;
+import openapisdk.utils.DateTimeDeserializer;
+
+/**
+ * ProvisionedProductDetail
+ * Information about a provisioned product.
+**/
+public class ProvisionedProductDetail {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Arn")
+    public String arn;
+    public ProvisionedProductDetail withArn(String arn) {
+        this.arn = arn;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonSerialize(contentUsing = DateTimeSerializer.class)
+    @JsonDeserialize(contentUsing = DateTimeDeserializer.class)
+    @JsonProperty("CreatedTime")
+    public OffsetDateTime createdTime;
+    public ProvisionedProductDetail withCreatedTime(OffsetDateTime createdTime) {
+        this.createdTime = createdTime;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Id")
+    public String id;
+    public ProvisionedProductDetail withId(String id) {
+        this.id = id;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("IdempotencyToken")
+    public String idempotencyToken;
+    public ProvisionedProductDetail withIdempotencyToken(String idempotencyToken) {
+        this.idempotencyToken = idempotencyToken;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("LastProvisioningRecordId")
+    public String lastProvisioningRecordId;
+    public ProvisionedProductDetail withLastProvisioningRecordId(String lastProvisioningRecordId) {
+        this.lastProvisioningRecordId = lastProvisioningRecordId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("LastRecordId")
+    public String lastRecordId;
+    public ProvisionedProductDetail withLastRecordId(String lastRecordId) {
+        this.lastRecordId = lastRecordId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("LastSuccessfulProvisioningRecordId")
+    public String lastSuccessfulProvisioningRecordId;
+    public ProvisionedProductDetail withLastSuccessfulProvisioningRecordId(String lastSuccessfulProvisioningRecordId) {
+        this.lastSuccessfulProvisioningRecordId = lastSuccessfulProvisioningRecordId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("LaunchRoleArn")
+    public String launchRoleArn;
+    public ProvisionedProductDetail withLaunchRoleArn(String launchRoleArn) {
+        this.launchRoleArn = launchRoleArn;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Name")
+    public String name;
+    public ProvisionedProductDetail withName(String name) {
+        this.name = name;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ProductId")
+    public String productId;
+    public ProvisionedProductDetail withProductId(String productId) {
+        this.productId = productId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ProvisioningArtifactId")
+    public String provisioningArtifactId;
+    public ProvisionedProductDetail withProvisioningArtifactId(String provisioningArtifactId) {
+        this.provisioningArtifactId = provisioningArtifactId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Status")
+    public ProvisionedProductStatusEnum status;
+    public ProvisionedProductDetail withStatus(ProvisionedProductStatusEnum status) {
+        this.status = status;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("StatusMessage")
+    public String statusMessage;
+    public ProvisionedProductDetail withStatusMessage(String statusMessage) {
+        this.statusMessage = statusMessage;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Type")
+    public String type;
+    public ProvisionedProductDetail withType(String type) {
+        this.type = type;
+        return this;
+    }
+}

@@ -1,0 +1,35 @@
+package openapisdk.models.operations;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class PutFirewallsIdFirewallResponseFirewallAppliedTo {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("applied_to_resources")
+    public PutFirewallsIdFirewallResponseFirewallAppliedToAppliedToResources[] appliedToResources;
+    public PutFirewallsIdFirewallResponseFirewallAppliedTo withAppliedToResources(PutFirewallsIdFirewallResponseFirewallAppliedToAppliedToResources[] appliedToResources) {
+        this.appliedToResources = appliedToResources;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("label_selector")
+    public PutFirewallsIdFirewallResponseFirewallAppliedToLabelSelector labelSelector;
+    public PutFirewallsIdFirewallResponseFirewallAppliedTo withLabelSelector(PutFirewallsIdFirewallResponseFirewallAppliedToLabelSelector labelSelector) {
+        this.labelSelector = labelSelector;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("server")
+    public PutFirewallsIdFirewallResponseFirewallAppliedToServer server;
+    public PutFirewallsIdFirewallResponseFirewallAppliedTo withServer(PutFirewallsIdFirewallResponseFirewallAppliedToServer server) {
+        this.server = server;
+        return this;
+    }
+    @JsonProperty("type")
+    public PutFirewallsIdFirewallResponseFirewallAppliedToTypeEnum type;
+    public PutFirewallsIdFirewallResponseFirewallAppliedTo withType(PutFirewallsIdFirewallResponseFirewallAppliedToTypeEnum type) {
+        this.type = type;
+        return this;
+    }
+}

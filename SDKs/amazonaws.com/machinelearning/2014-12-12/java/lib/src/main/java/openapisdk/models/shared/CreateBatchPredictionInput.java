@@ -1,0 +1,39 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class CreateBatchPredictionInput {
+    @JsonProperty("BatchPredictionDataSourceId")
+    public String batchPredictionDataSourceId;
+    public CreateBatchPredictionInput withBatchPredictionDataSourceId(String batchPredictionDataSourceId) {
+        this.batchPredictionDataSourceId = batchPredictionDataSourceId;
+        return this;
+    }
+    @JsonProperty("BatchPredictionId")
+    public String batchPredictionId;
+    public CreateBatchPredictionInput withBatchPredictionId(String batchPredictionId) {
+        this.batchPredictionId = batchPredictionId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("BatchPredictionName")
+    public String batchPredictionName;
+    public CreateBatchPredictionInput withBatchPredictionName(String batchPredictionName) {
+        this.batchPredictionName = batchPredictionName;
+        return this;
+    }
+    @JsonProperty("MLModelId")
+    public String mlModelId;
+    public CreateBatchPredictionInput withMlModelId(String mlModelId) {
+        this.mlModelId = mlModelId;
+        return this;
+    }
+    @JsonProperty("OutputUri")
+    public String outputUri;
+    public CreateBatchPredictionInput withOutputUri(String outputUri) {
+        this.outputUri = outputUri;
+        return this;
+    }
+}

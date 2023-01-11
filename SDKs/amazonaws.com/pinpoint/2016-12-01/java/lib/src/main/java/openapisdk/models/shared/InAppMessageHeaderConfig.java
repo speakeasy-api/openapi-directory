@@ -1,0 +1,28 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+/**
+ * InAppMessageHeaderConfig
+ * Text config for Message Header.
+**/
+public class InAppMessageHeaderConfig {
+    @JsonProperty("Alignment")
+    public AlignmentEnum alignment;
+    public InAppMessageHeaderConfig withAlignment(AlignmentEnum alignment) {
+        this.alignment = alignment;
+        return this;
+    }
+    @JsonProperty("Header")
+    public String header;
+    public InAppMessageHeaderConfig withHeader(String header) {
+        this.header = header;
+        return this;
+    }
+    @JsonProperty("TextColor")
+    public String textColor;
+    public InAppMessageHeaderConfig withTextColor(String textColor) {
+        this.textColor = textColor;
+        return this;
+    }
+}

@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class LeadsAllRequest {
+    public LeadsAllQueryParams queryParams;
+    public LeadsAllRequest withQueryParams(LeadsAllQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public LeadsAllHeaders headers;
+    public LeadsAllRequest withHeaders(LeadsAllHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+    public LeadsAllSecurity security;
+    public LeadsAllRequest withSecurity(LeadsAllSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

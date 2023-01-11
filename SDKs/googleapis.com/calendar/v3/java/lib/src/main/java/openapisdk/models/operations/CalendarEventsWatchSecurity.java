@@ -1,0 +1,30 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class CalendarEventsWatchSecurity {
+    @SpeakeasyMetadata("security:option=true")
+    public CalendarEventsWatchSecurityOption1 option1;
+    public CalendarEventsWatchSecurity withOption1(CalendarEventsWatchSecurityOption1 option1) {
+        this.option1 = option1;
+        return this;
+    }
+    @SpeakeasyMetadata("security:option=true")
+    public CalendarEventsWatchSecurityOption2 option2;
+    public CalendarEventsWatchSecurity withOption2(CalendarEventsWatchSecurityOption2 option2) {
+        this.option2 = option2;
+        return this;
+    }
+    @SpeakeasyMetadata("security:option=true")
+    public CalendarEventsWatchSecurityOption3 option3;
+    public CalendarEventsWatchSecurity withOption3(CalendarEventsWatchSecurityOption3 option3) {
+        this.option3 = option3;
+        return this;
+    }
+    @SpeakeasyMetadata("security:option=true")
+    public CalendarEventsWatchSecurityOption4 option4;
+    public CalendarEventsWatchSecurity withOption4(CalendarEventsWatchSecurityOption4 option4) {
+        this.option4 = option4;
+        return this;
+    }
+}

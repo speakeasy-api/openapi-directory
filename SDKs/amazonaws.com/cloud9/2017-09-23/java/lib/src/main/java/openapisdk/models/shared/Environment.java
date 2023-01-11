@@ -1,0 +1,72 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * Environment
+ * Information about an Cloud9 development environment.
+**/
+public class Environment {
+    @JsonProperty("arn")
+    public String arn;
+    public Environment withArn(String arn) {
+        this.arn = arn;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("connectionType")
+    public ConnectionTypeEnum connectionType;
+    public Environment withConnectionType(ConnectionTypeEnum connectionType) {
+        this.connectionType = connectionType;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("description")
+    public String description;
+    public Environment withDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("id")
+    public String id;
+    public Environment withId(String id) {
+        this.id = id;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("lifecycle")
+    public EnvironmentLifecycle lifecycle;
+    public Environment withLifecycle(EnvironmentLifecycle lifecycle) {
+        this.lifecycle = lifecycle;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("managedCredentialsStatus")
+    public ManagedCredentialsStatusEnum managedCredentialsStatus;
+    public Environment withManagedCredentialsStatus(ManagedCredentialsStatusEnum managedCredentialsStatus) {
+        this.managedCredentialsStatus = managedCredentialsStatus;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("name")
+    public String name;
+    public Environment withName(String name) {
+        this.name = name;
+        return this;
+    }
+    @JsonProperty("ownerArn")
+    public String ownerArn;
+    public Environment withOwnerArn(String ownerArn) {
+        this.ownerArn = ownerArn;
+        return this;
+    }
+    @JsonProperty("type")
+    public EnvironmentTypeEnum type;
+    public Environment withType(EnvironmentTypeEnum type) {
+        this.type = type;
+        return this;
+    }
+}

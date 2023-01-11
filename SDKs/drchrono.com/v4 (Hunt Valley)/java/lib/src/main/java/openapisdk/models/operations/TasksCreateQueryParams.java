@@ -1,0 +1,60 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class TasksCreateQueryParams {
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=assignee_group")
+    public Long assigneeGroup;
+    public TasksCreateQueryParams withAssigneeGroup(Long assigneeGroup) {
+        this.assigneeGroup = assigneeGroup;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=assignee_user")
+    public Long assigneeUser;
+    public TasksCreateQueryParams withAssigneeUser(Long assigneeUser) {
+        this.assigneeUser = assigneeUser;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=category")
+    public Long category;
+    public TasksCreateQueryParams withCategory(Long category) {
+        this.category = category;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=due_at_date")
+    public String dueAtDate;
+    public TasksCreateQueryParams withDueAtDate(String dueAtDate) {
+        this.dueAtDate = dueAtDate;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=due_at_range")
+    public String dueAtRange;
+    public TasksCreateQueryParams withDueAtRange(String dueAtRange) {
+        this.dueAtRange = dueAtRange;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=due_at_since")
+    public String dueAtSince;
+    public TasksCreateQueryParams withDueAtSince(String dueAtSince) {
+        this.dueAtSince = dueAtSince;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=due_at_unknown")
+    public String dueAtUnknown;
+    public TasksCreateQueryParams withDueAtUnknown(String dueAtUnknown) {
+        this.dueAtUnknown = dueAtUnknown;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=since")
+    public String since;
+    public TasksCreateQueryParams withSince(String since) {
+        this.since = since;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
+    public Long status;
+    public TasksCreateQueryParams withStatus(Long status) {
+        this.status = status;
+        return this;
+    }
+}

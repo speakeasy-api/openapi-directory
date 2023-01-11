@@ -1,0 +1,18 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class GetDatabasePathParams {
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=database_cluster_uuid")
+    public String databaseClusterUuid;
+    public GetDatabasePathParams withDatabaseClusterUuid(String databaseClusterUuid) {
+        this.databaseClusterUuid = databaseClusterUuid;
+        return this;
+    }
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=database_name")
+    public String databaseName;
+    public GetDatabasePathParams withDatabaseName(String databaseName) {
+        this.databaseName = databaseName;
+        return this;
+    }
+}

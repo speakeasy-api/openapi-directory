@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class AppengineAppsGetRequest {
+    public AppengineAppsGetPathParams pathParams;
+    public AppengineAppsGetRequest withPathParams(AppengineAppsGetPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public AppengineAppsGetQueryParams queryParams;
+    public AppengineAppsGetRequest withQueryParams(AppengineAppsGetQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public AppengineAppsGetSecurity security;
+    public AppengineAppsGetRequest withSecurity(AppengineAppsGetSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

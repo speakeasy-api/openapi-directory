@@ -1,0 +1,91 @@
+package openapisdk.models.shared;
+
+import java.time.OffsetDateTime;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import openapisdk.utils.DateTimeSerializer;
+import openapisdk.utils.DateTimeDeserializer;
+
+/**
+ * LifecyclePolicy
+ * Detailed information about a lifecycle policy.
+**/
+public class LifecyclePolicy {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonSerialize(contentUsing = DateTimeSerializer.class)
+    @JsonDeserialize(contentUsing = DateTimeDeserializer.class)
+    @JsonProperty("DateCreated")
+    public OffsetDateTime dateCreated;
+    public LifecyclePolicy withDateCreated(OffsetDateTime dateCreated) {
+        this.dateCreated = dateCreated;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonSerialize(contentUsing = DateTimeSerializer.class)
+    @JsonDeserialize(contentUsing = DateTimeDeserializer.class)
+    @JsonProperty("DateModified")
+    public OffsetDateTime dateModified;
+    public LifecyclePolicy withDateModified(OffsetDateTime dateModified) {
+        this.dateModified = dateModified;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Description")
+    public String description;
+    public LifecyclePolicy withDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ExecutionRoleArn")
+    public String executionRoleArn;
+    public LifecyclePolicy withExecutionRoleArn(String executionRoleArn) {
+        this.executionRoleArn = executionRoleArn;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("PolicyArn")
+    public String policyArn;
+    public LifecyclePolicy withPolicyArn(String policyArn) {
+        this.policyArn = policyArn;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("PolicyDetails")
+    public PolicyDetails policyDetails;
+    public LifecyclePolicy withPolicyDetails(PolicyDetails policyDetails) {
+        this.policyDetails = policyDetails;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("PolicyId")
+    public String policyId;
+    public LifecyclePolicy withPolicyId(String policyId) {
+        this.policyId = policyId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("State")
+    public GettablePolicyStateValuesEnum state;
+    public LifecyclePolicy withState(GettablePolicyStateValuesEnum state) {
+        this.state = state;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("StatusMessage")
+    public String statusMessage;
+    public LifecyclePolicy withStatusMessage(String statusMessage) {
+        this.statusMessage = statusMessage;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Tags")
+    public java.util.Map<String, String> tags;
+    public LifecyclePolicy withTags(java.util.Map<String, String> tags) {
+        this.tags = tags;
+        return this;
+    }
+}

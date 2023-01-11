@@ -1,0 +1,16 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+/**
+ * SubjectAlternativeNameMatchers
+ * An object that represents the methods by which a subject alternative name on a peer Transport Layer Security (TLS) certificate can be matched.
+**/
+public class SubjectAlternativeNameMatchers {
+    @JsonProperty("exact")
+    public String[] exact;
+    public SubjectAlternativeNameMatchers withExact(String[] exact) {
+        this.exact = exact;
+        return this;
+    }
+}

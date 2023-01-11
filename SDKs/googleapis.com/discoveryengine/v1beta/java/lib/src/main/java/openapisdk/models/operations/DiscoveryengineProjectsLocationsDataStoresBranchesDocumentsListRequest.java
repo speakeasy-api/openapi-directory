@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsListRequest {
+    public DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsListPathParams pathParams;
+    public DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsListRequest withPathParams(DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsListPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsListQueryParams queryParams;
+    public DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsListRequest withQueryParams(DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsListQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsListSecurity security;
+    public DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsListRequest withSecurity(DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsListSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

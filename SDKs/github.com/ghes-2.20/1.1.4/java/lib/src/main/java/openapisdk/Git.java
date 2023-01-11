@@ -1,0 +1,890 @@
+package openapisdk;
+
+import openapisdk.utils.HTTPClient;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import openapisdk.utils.HTTPRequest;
+import java.net.http.HttpResponse;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import java.nio.charset.StandardCharsets;
+import openapisdk.utils.SerializedBody;
+import org.apache.http.NameValuePair;
+
+public class Git {
+	private HTTPClient _defaultClient;
+	private HTTPClient _securityClient;
+	private String _serverUrl;
+	private String _language;
+	private String _sdkVersion;
+	private String _genVersion;
+
+	public Git(HTTPClient defaultClient, HTTPClient securityClient, String serverUrl, String language, String sdkVersion, String genVersion) {
+		this._defaultClient = defaultClient;
+		this._securityClient = securityClient;
+		this._serverUrl = serverUrl;
+		this._language = language;
+		this._sdkVersion = sdkVersion;
+		this._genVersion = genVersion;
+	}
+	
+	
+    /**
+     * gitCreateBlob - Create a blob
+     *
+     * https://docs.github.com/enterprise-server@2.20/rest/reference/git#create-a-blob - API method documentation
+    **/
+    public openapisdk.models.operations.GitCreateBlobResponse gitCreateBlob(openapisdk.models.operations.GitCreateBlobRequest request) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = openapisdk.utils.Utils.generateURL(baseUrl, "/repos/{owner}/{repo}/git/blobs", request.pathParams);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("POST");
+        req.setURL(url);
+        SerializedBody serializedRequestBody = openapisdk.utils.Utils.serializeRequestBody(request);
+        req.setBody(serializedRequestBody);
+        
+        
+        HTTPClient client = this._defaultClient;
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().allValues("Content-Type").get(0);
+
+        openapisdk.models.operations.GitCreateBlobResponse res = new openapisdk.models.operations.GitCreateBlobResponse() {{
+            shortBlob = null;
+            basicError = null;
+            basicError = null;
+            basicError = null;
+            validationError = null;
+        }};
+        res.statusCode = Long.valueOf(httpRes.statusCode());
+        res.contentType = contentType;
+        
+        if (httpRes.statusCode() == 201) {
+            res.headers = httpRes.headers().map().keySet().stream().collect(Collectors.toMap(Function.identity(), k -> httpRes.headers().allValues(k).toArray(new String[0])));
+            
+            if (openapisdk.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = new ObjectMapper();
+                mapper.findAndRegisterModules();
+                openapisdk.models.shared.ShortBlob out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), openapisdk.models.shared.ShortBlob.class);
+                res.shortBlob = out;
+            }
+        }
+        else if (httpRes.statusCode() == 403) {
+            if (openapisdk.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = new ObjectMapper();
+                mapper.findAndRegisterModules();
+                openapisdk.models.shared.BasicError out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), openapisdk.models.shared.BasicError.class);
+                res.basicError = out;
+            }
+        }
+        else if (httpRes.statusCode() == 404) {
+            if (openapisdk.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = new ObjectMapper();
+                mapper.findAndRegisterModules();
+                openapisdk.models.shared.BasicError out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), openapisdk.models.shared.BasicError.class);
+                res.basicError = out;
+            }
+        }
+        else if (httpRes.statusCode() == 409) {
+            if (openapisdk.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = new ObjectMapper();
+                mapper.findAndRegisterModules();
+                openapisdk.models.shared.BasicError out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), openapisdk.models.shared.BasicError.class);
+                res.basicError = out;
+            }
+        }
+        else if (httpRes.statusCode() == 422) {
+            if (openapisdk.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = new ObjectMapper();
+                mapper.findAndRegisterModules();
+                openapisdk.models.shared.ValidationError out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), openapisdk.models.shared.ValidationError.class);
+                res.validationError = out;
+            }
+        }
+
+        return res;
+    }
+	
+	
+    /**
+     * gitCreateCommit - Create a commit
+     *
+     * Creates a new Git [commit object](https://git-scm.com/book/en/v1/Git-Internals-Git-Objects#Commit-Objects).
+     * 
+     * **Signature verification object**
+     * 
+     * The response will include a `verification` object that describes the result of verifying the commit's signature. The following fields are included in the `verification` object:
+     * 
+     * | Name | Type | Description |
+     * | ---- | ---- | ----------- |
+     * | `verified` | `boolean` | Indicates whether GitHub considers the signature in this commit to be verified. |
+     * | `reason` | `string` | The reason for verified value. Possible values and their meanings are enumerated in table below. |
+     * | `signature` | `string` | The signature that was extracted from the commit. |
+     * | `payload` | `string` | The value that was signed. |
+     * 
+     * These are the possible values for `reason` in the `verification` object:
+     * 
+     * | Value | Description |
+     * | ----- | ----------- |
+     * | `expired_key` | The key that made the signature is expired. |
+     * | `not_signing_key` | The "signing" flag is not among the usage flags in the GPG key that made the signature. |
+     * | `gpgverify_error` | There was an error communicating with the signature verification service. |
+     * | `gpgverify_unavailable` | The signature verification service is currently unavailable. |
+     * | `unsigned` | The object does not include a signature. |
+     * | `unknown_signature_type` | A non-PGP signature was found in the commit. |
+     * | `no_user` | No user was associated with the `committer` email address in the commit. |
+     * | `unverified_email` | The `committer` email address in the commit was associated with a user, but the email address is not verified on her/his account. |
+     * | `bad_email` | The `committer` email address in the commit is not included in the identities of the PGP key that made the signature. |
+     * | `unknown_key` | The key that made the signature has not been registered with any user's account. |
+     * | `malformed_signature` | There was an error parsing the signature. |
+     * | `invalid` | The signature could not be cryptographically verified using the key whose key-id was found in the signature. |
+     * | `valid` | None of the above errors applied, so the signature is considered to be verified. |
+     *
+     * https://docs.github.com/enterprise-server@2.20/rest/reference/git#create-a-commit - API method documentation
+    **/
+    public openapisdk.models.operations.GitCreateCommitResponse gitCreateCommit(openapisdk.models.operations.GitCreateCommitRequest request) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = openapisdk.utils.Utils.generateURL(baseUrl, "/repos/{owner}/{repo}/git/commits", request.pathParams);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("POST");
+        req.setURL(url);
+        SerializedBody serializedRequestBody = openapisdk.utils.Utils.serializeRequestBody(request);
+        req.setBody(serializedRequestBody);
+        
+        
+        HTTPClient client = this._defaultClient;
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().allValues("Content-Type").get(0);
+
+        openapisdk.models.operations.GitCreateCommitResponse res = new openapisdk.models.operations.GitCreateCommitResponse() {{
+            gitCommit = null;
+            basicError = null;
+            validationError = null;
+        }};
+        res.statusCode = Long.valueOf(httpRes.statusCode());
+        res.contentType = contentType;
+        
+        if (httpRes.statusCode() == 201) {
+            res.headers = httpRes.headers().map().keySet().stream().collect(Collectors.toMap(Function.identity(), k -> httpRes.headers().allValues(k).toArray(new String[0])));
+            
+            if (openapisdk.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = new ObjectMapper();
+                mapper.findAndRegisterModules();
+                openapisdk.models.shared.GitCommit out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), openapisdk.models.shared.GitCommit.class);
+                res.gitCommit = out;
+            }
+        }
+        else if (httpRes.statusCode() == 404) {
+            if (openapisdk.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = new ObjectMapper();
+                mapper.findAndRegisterModules();
+                openapisdk.models.shared.BasicError out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), openapisdk.models.shared.BasicError.class);
+                res.basicError = out;
+            }
+        }
+        else if (httpRes.statusCode() == 422) {
+            if (openapisdk.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = new ObjectMapper();
+                mapper.findAndRegisterModules();
+                openapisdk.models.shared.ValidationError out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), openapisdk.models.shared.ValidationError.class);
+                res.validationError = out;
+            }
+        }
+
+        return res;
+    }
+	
+	
+    /**
+     * gitCreateRef - Create a reference
+     *
+     * Creates a reference for your repository. You are unable to create new references for empty repositories, even if the commit SHA-1 hash used exists. Empty repositories are repositories without branches.
+     *
+     * https://docs.github.com/enterprise-server@2.20/rest/reference/git#create-a-reference - API method documentation
+    **/
+    public openapisdk.models.operations.GitCreateRefResponse gitCreateRef(openapisdk.models.operations.GitCreateRefRequest request) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = openapisdk.utils.Utils.generateURL(baseUrl, "/repos/{owner}/{repo}/git/refs", request.pathParams);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("POST");
+        req.setURL(url);
+        SerializedBody serializedRequestBody = openapisdk.utils.Utils.serializeRequestBody(request);
+        req.setBody(serializedRequestBody);
+        
+        
+        HTTPClient client = this._defaultClient;
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().allValues("Content-Type").get(0);
+
+        openapisdk.models.operations.GitCreateRefResponse res = new openapisdk.models.operations.GitCreateRefResponse() {{
+            gitRef = null;
+            validationError = null;
+        }};
+        res.statusCode = Long.valueOf(httpRes.statusCode());
+        res.contentType = contentType;
+        
+        if (httpRes.statusCode() == 201) {
+            res.headers = httpRes.headers().map().keySet().stream().collect(Collectors.toMap(Function.identity(), k -> httpRes.headers().allValues(k).toArray(new String[0])));
+            
+            if (openapisdk.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = new ObjectMapper();
+                mapper.findAndRegisterModules();
+                openapisdk.models.shared.GitRef out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), openapisdk.models.shared.GitRef.class);
+                res.gitRef = out;
+            }
+        }
+        else if (httpRes.statusCode() == 422) {
+            if (openapisdk.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = new ObjectMapper();
+                mapper.findAndRegisterModules();
+                openapisdk.models.shared.ValidationError out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), openapisdk.models.shared.ValidationError.class);
+                res.validationError = out;
+            }
+        }
+
+        return res;
+    }
+	
+	
+    /**
+     * gitCreateTag - Create a tag object
+     *
+     * Note that creating a tag object does not create the reference that makes a tag in Git. If you want to create an annotated tag in Git, you have to do this call to create the tag object, and then [create](https://docs.github.com/enterprise-server@2.20/rest/reference/git#create-a-reference) the `refs/tags/[tag]` reference. If you want to create a lightweight tag, you only have to [create](https://docs.github.com/enterprise-server@2.20/rest/reference/git#create-a-reference) the tag reference - this call would be unnecessary.
+     * 
+     * **Signature verification object**
+     * 
+     * The response will include a `verification` object that describes the result of verifying the commit's signature. The following fields are included in the `verification` object:
+     * 
+     * | Name | Type | Description |
+     * | ---- | ---- | ----------- |
+     * | `verified` | `boolean` | Indicates whether GitHub considers the signature in this commit to be verified. |
+     * | `reason` | `string` | The reason for verified value. Possible values and their meanings are enumerated in table below. |
+     * | `signature` | `string` | The signature that was extracted from the commit. |
+     * | `payload` | `string` | The value that was signed. |
+     * 
+     * These are the possible values for `reason` in the `verification` object:
+     * 
+     * | Value | Description |
+     * | ----- | ----------- |
+     * | `expired_key` | The key that made the signature is expired. |
+     * | `not_signing_key` | The "signing" flag is not among the usage flags in the GPG key that made the signature. |
+     * | `gpgverify_error` | There was an error communicating with the signature verification service. |
+     * | `gpgverify_unavailable` | The signature verification service is currently unavailable. |
+     * | `unsigned` | The object does not include a signature. |
+     * | `unknown_signature_type` | A non-PGP signature was found in the commit. |
+     * | `no_user` | No user was associated with the `committer` email address in the commit. |
+     * | `unverified_email` | The `committer` email address in the commit was associated with a user, but the email address is not verified on her/his account. |
+     * | `bad_email` | The `committer` email address in the commit is not included in the identities of the PGP key that made the signature. |
+     * | `unknown_key` | The key that made the signature has not been registered with any user's account. |
+     * | `malformed_signature` | There was an error parsing the signature. |
+     * | `invalid` | The signature could not be cryptographically verified using the key whose key-id was found in the signature. |
+     * | `valid` | None of the above errors applied, so the signature is considered to be verified. |
+     *
+     * https://docs.github.com/enterprise-server@2.20/rest/reference/git#create-a-tag-object - API method documentation
+    **/
+    public openapisdk.models.operations.GitCreateTagResponse gitCreateTag(openapisdk.models.operations.GitCreateTagRequest request) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = openapisdk.utils.Utils.generateURL(baseUrl, "/repos/{owner}/{repo}/git/tags", request.pathParams);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("POST");
+        req.setURL(url);
+        SerializedBody serializedRequestBody = openapisdk.utils.Utils.serializeRequestBody(request);
+        req.setBody(serializedRequestBody);
+        
+        
+        HTTPClient client = this._defaultClient;
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().allValues("Content-Type").get(0);
+
+        openapisdk.models.operations.GitCreateTagResponse res = new openapisdk.models.operations.GitCreateTagResponse() {{
+            gitTag = null;
+            validationError = null;
+        }};
+        res.statusCode = Long.valueOf(httpRes.statusCode());
+        res.contentType = contentType;
+        
+        if (httpRes.statusCode() == 201) {
+            res.headers = httpRes.headers().map().keySet().stream().collect(Collectors.toMap(Function.identity(), k -> httpRes.headers().allValues(k).toArray(new String[0])));
+            
+            if (openapisdk.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = new ObjectMapper();
+                mapper.findAndRegisterModules();
+                openapisdk.models.shared.GitTag out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), openapisdk.models.shared.GitTag.class);
+                res.gitTag = out;
+            }
+        }
+        else if (httpRes.statusCode() == 422) {
+            if (openapisdk.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = new ObjectMapper();
+                mapper.findAndRegisterModules();
+                openapisdk.models.shared.ValidationError out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), openapisdk.models.shared.ValidationError.class);
+                res.validationError = out;
+            }
+        }
+
+        return res;
+    }
+	
+	
+    /**
+     * gitCreateTree - Create a tree
+     *
+     * The tree creation API accepts nested entries. If you specify both a tree and a nested path modifying that tree, this endpoint will overwrite the contents of the tree with the new path contents, and create a new tree structure.
+     * 
+     * If you use this endpoint to add, delete, or modify the file contents in a tree, you will need to commit the tree and then update a branch to point to the commit. For more information see "[Create a commit](https://docs.github.com/enterprise-server@2.20/rest/reference/git#create-a-commit)" and "[Update a reference](https://docs.github.com/enterprise-server@2.20/rest/reference/git#update-a-reference)."
+     *
+     * https://docs.github.com/enterprise-server@2.20/rest/reference/git#create-a-tree - API method documentation
+    **/
+    public openapisdk.models.operations.GitCreateTreeResponse gitCreateTree(openapisdk.models.operations.GitCreateTreeRequest request) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = openapisdk.utils.Utils.generateURL(baseUrl, "/repos/{owner}/{repo}/git/trees", request.pathParams);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("POST");
+        req.setURL(url);
+        SerializedBody serializedRequestBody = openapisdk.utils.Utils.serializeRequestBody(request);
+        req.setBody(serializedRequestBody);
+        
+        
+        HTTPClient client = this._defaultClient;
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().allValues("Content-Type").get(0);
+
+        openapisdk.models.operations.GitCreateTreeResponse res = new openapisdk.models.operations.GitCreateTreeResponse() {{
+            gitTree = null;
+            basicError = null;
+            basicError = null;
+            validationError = null;
+        }};
+        res.statusCode = Long.valueOf(httpRes.statusCode());
+        res.contentType = contentType;
+        
+        if (httpRes.statusCode() == 201) {
+            res.headers = httpRes.headers().map().keySet().stream().collect(Collectors.toMap(Function.identity(), k -> httpRes.headers().allValues(k).toArray(new String[0])));
+            
+            if (openapisdk.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = new ObjectMapper();
+                mapper.findAndRegisterModules();
+                openapisdk.models.shared.GitTree out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), openapisdk.models.shared.GitTree.class);
+                res.gitTree = out;
+            }
+        }
+        else if (httpRes.statusCode() == 403) {
+            if (openapisdk.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = new ObjectMapper();
+                mapper.findAndRegisterModules();
+                openapisdk.models.shared.BasicError out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), openapisdk.models.shared.BasicError.class);
+                res.basicError = out;
+            }
+        }
+        else if (httpRes.statusCode() == 404) {
+            if (openapisdk.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = new ObjectMapper();
+                mapper.findAndRegisterModules();
+                openapisdk.models.shared.BasicError out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), openapisdk.models.shared.BasicError.class);
+                res.basicError = out;
+            }
+        }
+        else if (httpRes.statusCode() == 422) {
+            if (openapisdk.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = new ObjectMapper();
+                mapper.findAndRegisterModules();
+                openapisdk.models.shared.ValidationError out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), openapisdk.models.shared.ValidationError.class);
+                res.validationError = out;
+            }
+        }
+
+        return res;
+    }
+	
+	
+    /**
+     * gitDeleteRef - Delete a reference
+     *
+     * https://docs.github.com/enterprise-server@2.20/rest/reference/git#delete-a-reference - API method documentation
+    **/
+    public openapisdk.models.operations.GitDeleteRefResponse gitDeleteRef(openapisdk.models.operations.GitDeleteRefRequest request) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = openapisdk.utils.Utils.generateURL(baseUrl, "/repos/{owner}/{repo}/git/refs/{ref}", request.pathParams);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("DELETE");
+        req.setURL(url);
+        
+        
+        HTTPClient client = this._defaultClient;
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().allValues("Content-Type").get(0);
+
+        openapisdk.models.operations.GitDeleteRefResponse res = new openapisdk.models.operations.GitDeleteRefResponse() {{
+            validationError = null;
+        }};
+        res.statusCode = Long.valueOf(httpRes.statusCode());
+        res.contentType = contentType;
+        
+        if (httpRes.statusCode() == 204) {
+        }
+        else if (httpRes.statusCode() == 422) {
+            if (openapisdk.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = new ObjectMapper();
+                mapper.findAndRegisterModules();
+                openapisdk.models.shared.ValidationError out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), openapisdk.models.shared.ValidationError.class);
+                res.validationError = out;
+            }
+        }
+
+        return res;
+    }
+	
+	
+    /**
+     * gitGetBlob - Get a blob
+     *
+     * The `content` in the response will always be Base64 encoded.
+     * 
+     * _Note_: This API supports blobs up to 100 megabytes in size.
+     *
+     * https://docs.github.com/enterprise-server@2.20/rest/reference/git#get-a-blob - API method documentation
+    **/
+    public openapisdk.models.operations.GitGetBlobResponse gitGetBlob(openapisdk.models.operations.GitGetBlobRequest request) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = openapisdk.utils.Utils.generateURL(baseUrl, "/repos/{owner}/{repo}/git/blobs/{file_sha}", request.pathParams);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("GET");
+        req.setURL(url);
+        
+        
+        HTTPClient client = this._defaultClient;
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().allValues("Content-Type").get(0);
+
+        openapisdk.models.operations.GitGetBlobResponse res = new openapisdk.models.operations.GitGetBlobResponse() {{
+            blob = null;
+            basicError = null;
+            basicError = null;
+            validationError = null;
+        }};
+        res.statusCode = Long.valueOf(httpRes.statusCode());
+        res.contentType = contentType;
+        
+        if (httpRes.statusCode() == 200) {
+            if (openapisdk.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = new ObjectMapper();
+                mapper.findAndRegisterModules();
+                openapisdk.models.shared.Blob out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), openapisdk.models.shared.Blob.class);
+                res.blob = out;
+            }
+        }
+        else if (httpRes.statusCode() == 403) {
+            if (openapisdk.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = new ObjectMapper();
+                mapper.findAndRegisterModules();
+                openapisdk.models.shared.BasicError out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), openapisdk.models.shared.BasicError.class);
+                res.basicError = out;
+            }
+        }
+        else if (httpRes.statusCode() == 404) {
+            if (openapisdk.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = new ObjectMapper();
+                mapper.findAndRegisterModules();
+                openapisdk.models.shared.BasicError out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), openapisdk.models.shared.BasicError.class);
+                res.basicError = out;
+            }
+        }
+        else if (httpRes.statusCode() == 422) {
+            if (openapisdk.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = new ObjectMapper();
+                mapper.findAndRegisterModules();
+                openapisdk.models.shared.ValidationError out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), openapisdk.models.shared.ValidationError.class);
+                res.validationError = out;
+            }
+        }
+
+        return res;
+    }
+	
+	
+    /**
+     * gitGetCommit - Get a commit
+     *
+     * Gets a Git [commit object](https://git-scm.com/book/en/v1/Git-Internals-Git-Objects#Commit-Objects).
+     * 
+     * **Signature verification object**
+     * 
+     * The response will include a `verification` object that describes the result of verifying the commit's signature. The following fields are included in the `verification` object:
+     * 
+     * | Name | Type | Description |
+     * | ---- | ---- | ----------- |
+     * | `verified` | `boolean` | Indicates whether GitHub considers the signature in this commit to be verified. |
+     * | `reason` | `string` | The reason for verified value. Possible values and their meanings are enumerated in table below. |
+     * | `signature` | `string` | The signature that was extracted from the commit. |
+     * | `payload` | `string` | The value that was signed. |
+     * 
+     * These are the possible values for `reason` in the `verification` object:
+     * 
+     * | Value | Description |
+     * | ----- | ----------- |
+     * | `expired_key` | The key that made the signature is expired. |
+     * | `not_signing_key` | The "signing" flag is not among the usage flags in the GPG key that made the signature. |
+     * | `gpgverify_error` | There was an error communicating with the signature verification service. |
+     * | `gpgverify_unavailable` | The signature verification service is currently unavailable. |
+     * | `unsigned` | The object does not include a signature. |
+     * | `unknown_signature_type` | A non-PGP signature was found in the commit. |
+     * | `no_user` | No user was associated with the `committer` email address in the commit. |
+     * | `unverified_email` | The `committer` email address in the commit was associated with a user, but the email address is not verified on her/his account. |
+     * | `bad_email` | The `committer` email address in the commit is not included in the identities of the PGP key that made the signature. |
+     * | `unknown_key` | The key that made the signature has not been registered with any user's account. |
+     * | `malformed_signature` | There was an error parsing the signature. |
+     * | `invalid` | The signature could not be cryptographically verified using the key whose key-id was found in the signature. |
+     * | `valid` | None of the above errors applied, so the signature is considered to be verified. |
+     *
+     * https://docs.github.com/enterprise-server@2.20/rest/reference/git#get-a-commit - API method documentation
+    **/
+    public openapisdk.models.operations.GitGetCommitResponse gitGetCommit(openapisdk.models.operations.GitGetCommitRequest request) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = openapisdk.utils.Utils.generateURL(baseUrl, "/repos/{owner}/{repo}/git/commits/{commit_sha}", request.pathParams);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("GET");
+        req.setURL(url);
+        
+        
+        HTTPClient client = this._defaultClient;
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().allValues("Content-Type").get(0);
+
+        openapisdk.models.operations.GitGetCommitResponse res = new openapisdk.models.operations.GitGetCommitResponse() {{
+            gitCommit = null;
+            basicError = null;
+        }};
+        res.statusCode = Long.valueOf(httpRes.statusCode());
+        res.contentType = contentType;
+        
+        if (httpRes.statusCode() == 200) {
+            if (openapisdk.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = new ObjectMapper();
+                mapper.findAndRegisterModules();
+                openapisdk.models.shared.GitCommit out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), openapisdk.models.shared.GitCommit.class);
+                res.gitCommit = out;
+            }
+        }
+        else if (httpRes.statusCode() == 404) {
+            if (openapisdk.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = new ObjectMapper();
+                mapper.findAndRegisterModules();
+                openapisdk.models.shared.BasicError out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), openapisdk.models.shared.BasicError.class);
+                res.basicError = out;
+            }
+        }
+
+        return res;
+    }
+	
+	
+    /**
+     * gitGetRef - Get a reference
+     *
+     * Returns a single reference from your Git database. The `:ref` in the URL must be formatted as `heads/<branch name>` for branches and `tags/<tag name>` for tags. If the `:ref` doesn't match an existing ref, a `404` is returned.
+     * 
+     * **Note:** You need to explicitly [request a pull request](https://docs.github.com/enterprise-server@2.20/rest/reference/pulls#get-a-pull-request) to trigger a test merge commit, which checks the mergeability of pull requests. For more information, see "[Checking mergeability of pull requests](https://docs.github.com/enterprise-server@2.20/rest/guides/getting-started-with-the-git-database-api#checking-mergeability-of-pull-requests)".
+     *
+     * https://docs.github.com/enterprise-server@2.20/rest/reference/git#get-a-reference - API method documentation
+    **/
+    public openapisdk.models.operations.GitGetRefResponse gitGetRef(openapisdk.models.operations.GitGetRefRequest request) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = openapisdk.utils.Utils.generateURL(baseUrl, "/repos/{owner}/{repo}/git/ref/{ref}", request.pathParams);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("GET");
+        req.setURL(url);
+        
+        
+        HTTPClient client = this._defaultClient;
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().allValues("Content-Type").get(0);
+
+        openapisdk.models.operations.GitGetRefResponse res = new openapisdk.models.operations.GitGetRefResponse() {{
+            gitRef = null;
+            basicError = null;
+        }};
+        res.statusCode = Long.valueOf(httpRes.statusCode());
+        res.contentType = contentType;
+        
+        if (httpRes.statusCode() == 200) {
+            if (openapisdk.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = new ObjectMapper();
+                mapper.findAndRegisterModules();
+                openapisdk.models.shared.GitRef out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), openapisdk.models.shared.GitRef.class);
+                res.gitRef = out;
+            }
+        }
+        else if (httpRes.statusCode() == 404) {
+            if (openapisdk.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = new ObjectMapper();
+                mapper.findAndRegisterModules();
+                openapisdk.models.shared.BasicError out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), openapisdk.models.shared.BasicError.class);
+                res.basicError = out;
+            }
+        }
+
+        return res;
+    }
+	
+	
+    /**
+     * gitGetTag - Get a tag
+     *
+     * **Signature verification object**
+     * 
+     * The response will include a `verification` object that describes the result of verifying the commit's signature. The following fields are included in the `verification` object:
+     * 
+     * | Name | Type | Description |
+     * | ---- | ---- | ----------- |
+     * | `verified` | `boolean` | Indicates whether GitHub considers the signature in this commit to be verified. |
+     * | `reason` | `string` | The reason for verified value. Possible values and their meanings are enumerated in table below. |
+     * | `signature` | `string` | The signature that was extracted from the commit. |
+     * | `payload` | `string` | The value that was signed. |
+     * 
+     * These are the possible values for `reason` in the `verification` object:
+     * 
+     * | Value | Description |
+     * | ----- | ----------- |
+     * | `expired_key` | The key that made the signature is expired. |
+     * | `not_signing_key` | The "signing" flag is not among the usage flags in the GPG key that made the signature. |
+     * | `gpgverify_error` | There was an error communicating with the signature verification service. |
+     * | `gpgverify_unavailable` | The signature verification service is currently unavailable. |
+     * | `unsigned` | The object does not include a signature. |
+     * | `unknown_signature_type` | A non-PGP signature was found in the commit. |
+     * | `no_user` | No user was associated with the `committer` email address in the commit. |
+     * | `unverified_email` | The `committer` email address in the commit was associated with a user, but the email address is not verified on her/his account. |
+     * | `bad_email` | The `committer` email address in the commit is not included in the identities of the PGP key that made the signature. |
+     * | `unknown_key` | The key that made the signature has not been registered with any user's account. |
+     * | `malformed_signature` | There was an error parsing the signature. |
+     * | `invalid` | The signature could not be cryptographically verified using the key whose key-id was found in the signature. |
+     * | `valid` | None of the above errors applied, so the signature is considered to be verified. |
+     *
+     * https://docs.github.com/enterprise-server@2.20/rest/reference/git#get-a-tag - API method documentation
+    **/
+    public openapisdk.models.operations.GitGetTagResponse gitGetTag(openapisdk.models.operations.GitGetTagRequest request) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = openapisdk.utils.Utils.generateURL(baseUrl, "/repos/{owner}/{repo}/git/tags/{tag_sha}", request.pathParams);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("GET");
+        req.setURL(url);
+        
+        
+        HTTPClient client = this._defaultClient;
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().allValues("Content-Type").get(0);
+
+        openapisdk.models.operations.GitGetTagResponse res = new openapisdk.models.operations.GitGetTagResponse() {{
+            gitTag = null;
+            basicError = null;
+        }};
+        res.statusCode = Long.valueOf(httpRes.statusCode());
+        res.contentType = contentType;
+        
+        if (httpRes.statusCode() == 200) {
+            if (openapisdk.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = new ObjectMapper();
+                mapper.findAndRegisterModules();
+                openapisdk.models.shared.GitTag out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), openapisdk.models.shared.GitTag.class);
+                res.gitTag = out;
+            }
+        }
+        else if (httpRes.statusCode() == 404) {
+            if (openapisdk.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = new ObjectMapper();
+                mapper.findAndRegisterModules();
+                openapisdk.models.shared.BasicError out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), openapisdk.models.shared.BasicError.class);
+                res.basicError = out;
+            }
+        }
+
+        return res;
+    }
+	
+	
+    /**
+     * gitGetTree - Get a tree
+     *
+     * Returns a single tree using the SHA1 value for that tree.
+     * 
+     * If `truncated` is `true` in the response then the number of items in the `tree` array exceeded our maximum limit. If you need to fetch more items, use the non-recursive method of fetching trees, and fetch one sub-tree at a time.
+     *
+     * https://docs.github.com/enterprise-server@2.20/rest/reference/git#get-a-tree - API method documentation
+    **/
+    public openapisdk.models.operations.GitGetTreeResponse gitGetTree(openapisdk.models.operations.GitGetTreeRequest request) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = openapisdk.utils.Utils.generateURL(baseUrl, "/repos/{owner}/{repo}/git/trees/{tree_sha}", request.pathParams);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("GET");
+        req.setURL(url);
+        
+        java.util.List<NameValuePair> queryParams = openapisdk.utils.Utils.getQueryParams(request.queryParams);
+        if (queryParams != null) {
+            for (NameValuePair queryParam : queryParams) {
+                req.addQueryParam(queryParam);
+            }
+        }
+        
+        HTTPClient client = this._defaultClient;
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().allValues("Content-Type").get(0);
+
+        openapisdk.models.operations.GitGetTreeResponse res = new openapisdk.models.operations.GitGetTreeResponse() {{
+            gitTree = null;
+            basicError = null;
+            validationError = null;
+        }};
+        res.statusCode = Long.valueOf(httpRes.statusCode());
+        res.contentType = contentType;
+        
+        if (httpRes.statusCode() == 200) {
+            if (openapisdk.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = new ObjectMapper();
+                mapper.findAndRegisterModules();
+                openapisdk.models.shared.GitTree out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), openapisdk.models.shared.GitTree.class);
+                res.gitTree = out;
+            }
+        }
+        else if (httpRes.statusCode() == 404) {
+            if (openapisdk.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = new ObjectMapper();
+                mapper.findAndRegisterModules();
+                openapisdk.models.shared.BasicError out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), openapisdk.models.shared.BasicError.class);
+                res.basicError = out;
+            }
+        }
+        else if (httpRes.statusCode() == 422) {
+            if (openapisdk.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = new ObjectMapper();
+                mapper.findAndRegisterModules();
+                openapisdk.models.shared.ValidationError out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), openapisdk.models.shared.ValidationError.class);
+                res.validationError = out;
+            }
+        }
+
+        return res;
+    }
+	
+	
+    /**
+     * gitListMatchingRefs - List matching references
+     *
+     * Returns an array of references from your Git database that match the supplied name. The `:ref` in the URL must be formatted as `heads/<branch name>` for branches and `tags/<tag name>` for tags. If the `:ref` doesn't exist in the repository, but existing refs start with `:ref`, they will be returned as an array.
+     * 
+     * When you use this endpoint without providing a `:ref`, it will return an array of all the references from your Git database, including notes and stashes if they exist on the server. Anything in the namespace is returned, not just `heads` and `tags`.
+     * 
+     * **Note:** You need to explicitly [request a pull request](https://docs.github.com/enterprise-server@2.20/rest/reference/pulls#get-a-pull-request) to trigger a test merge commit, which checks the mergeability of pull requests. For more information, see "[Checking mergeability of pull requests](https://docs.github.com/enterprise-server@2.20/rest/guides/getting-started-with-the-git-database-api#checking-mergeability-of-pull-requests)".
+     * 
+     * If you request matching references for a branch named `feature` but the branch `feature` doesn't exist, the response can still include other matching head refs that start with the word `feature`, such as `featureA` and `featureB`.
+     *
+     * https://docs.github.com/enterprise-server@2.20/rest/reference/git#list-matching-references - API method documentation
+    **/
+    public openapisdk.models.operations.GitListMatchingRefsResponse gitListMatchingRefs(openapisdk.models.operations.GitListMatchingRefsRequest request) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = openapisdk.utils.Utils.generateURL(baseUrl, "/repos/{owner}/{repo}/git/matching-refs/{ref}", request.pathParams);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("GET");
+        req.setURL(url);
+        
+        java.util.List<NameValuePair> queryParams = openapisdk.utils.Utils.getQueryParams(request.queryParams);
+        if (queryParams != null) {
+            for (NameValuePair queryParam : queryParams) {
+                req.addQueryParam(queryParam);
+            }
+        }
+        
+        HTTPClient client = this._defaultClient;
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().allValues("Content-Type").get(0);
+
+        openapisdk.models.operations.GitListMatchingRefsResponse res = new openapisdk.models.operations.GitListMatchingRefsResponse() {{
+            gitRefs = null;
+        }};
+        res.statusCode = Long.valueOf(httpRes.statusCode());
+        res.contentType = contentType;
+        
+        if (httpRes.statusCode() == 200) {
+            res.headers = httpRes.headers().map().keySet().stream().collect(Collectors.toMap(Function.identity(), k -> httpRes.headers().allValues(k).toArray(new String[0])));
+            
+            if (openapisdk.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = new ObjectMapper();
+                mapper.findAndRegisterModules();
+                openapisdk.models.shared.GitRef[] out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), openapisdk.models.shared.GitRef[].class);
+                res.gitRefs = out;
+            }
+        }
+
+        return res;
+    }
+	
+	
+    /**
+     * gitUpdateRef - Update a reference
+     *
+     * https://docs.github.com/enterprise-server@2.20/rest/reference/git#update-a-reference - API method documentation
+    **/
+    public openapisdk.models.operations.GitUpdateRefResponse gitUpdateRef(openapisdk.models.operations.GitUpdateRefRequest request) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = openapisdk.utils.Utils.generateURL(baseUrl, "/repos/{owner}/{repo}/git/refs/{ref}", request.pathParams);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("PATCH");
+        req.setURL(url);
+        SerializedBody serializedRequestBody = openapisdk.utils.Utils.serializeRequestBody(request);
+        req.setBody(serializedRequestBody);
+        
+        
+        HTTPClient client = this._defaultClient;
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().allValues("Content-Type").get(0);
+
+        openapisdk.models.operations.GitUpdateRefResponse res = new openapisdk.models.operations.GitUpdateRefResponse() {{
+            gitRef = null;
+            validationError = null;
+        }};
+        res.statusCode = Long.valueOf(httpRes.statusCode());
+        res.contentType = contentType;
+        
+        if (httpRes.statusCode() == 200) {
+            if (openapisdk.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = new ObjectMapper();
+                mapper.findAndRegisterModules();
+                openapisdk.models.shared.GitRef out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), openapisdk.models.shared.GitRef.class);
+                res.gitRef = out;
+            }
+        }
+        else if (httpRes.statusCode() == 422) {
+            if (openapisdk.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = new ObjectMapper();
+                mapper.findAndRegisterModules();
+                openapisdk.models.shared.ValidationError out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), openapisdk.models.shared.ValidationError.class);
+                res.validationError = out;
+            }
+        }
+
+        return res;
+    }
+	
+}

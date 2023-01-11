@@ -1,0 +1,24 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+public class ImportSshPublicKeyRequest {
+    @JsonProperty("ServerId")
+    public String serverId;
+    public ImportSshPublicKeyRequest withServerId(String serverId) {
+        this.serverId = serverId;
+        return this;
+    }
+    @JsonProperty("SshPublicKeyBody")
+    public String sshPublicKeyBody;
+    public ImportSshPublicKeyRequest withSshPublicKeyBody(String sshPublicKeyBody) {
+        this.sshPublicKeyBody = sshPublicKeyBody;
+        return this;
+    }
+    @JsonProperty("UserName")
+    public String userName;
+    public ImportSshPublicKeyRequest withUserName(String userName) {
+        this.userName = userName;
+        return this;
+    }
+}

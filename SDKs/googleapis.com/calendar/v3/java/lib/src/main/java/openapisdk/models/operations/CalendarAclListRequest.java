@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class CalendarAclListRequest {
+    public CalendarAclListPathParams pathParams;
+    public CalendarAclListRequest withPathParams(CalendarAclListPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public CalendarAclListQueryParams queryParams;
+    public CalendarAclListRequest withQueryParams(CalendarAclListQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public CalendarAclListSecurity security;
+    public CalendarAclListRequest withSecurity(CalendarAclListSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

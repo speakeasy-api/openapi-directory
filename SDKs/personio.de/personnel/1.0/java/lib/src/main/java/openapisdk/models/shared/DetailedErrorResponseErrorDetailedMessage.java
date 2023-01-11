@@ -1,0 +1,71 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class DetailedErrorResponseErrorDetailedMessage {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("break")
+    public Long break_;
+    public DetailedErrorResponseErrorDetailedMessage withBreak(Long break_) {
+        this.break_ = break_;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("comment")
+    public String comment;
+    public DetailedErrorResponseErrorDetailedMessage withComment(String comment) {
+        this.comment = comment;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("date")
+    public String date;
+    public DetailedErrorResponseErrorDetailedMessage withDate(String date) {
+        this.date = date;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("employee")
+    public Long employee;
+    public DetailedErrorResponseErrorDetailedMessage withEmployee(Long employee) {
+        this.employee = employee;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("end_time")
+    public String endTime;
+    public DetailedErrorResponseErrorDetailedMessage withEndTime(String endTime) {
+        this.endTime = endTime;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("error_msg")
+    public String errorMsg;
+    public DetailedErrorResponseErrorDetailedMessage withErrorMsg(String errorMsg) {
+        this.errorMsg = errorMsg;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("id")
+    public Long id;
+    public DetailedErrorResponseErrorDetailedMessage withId(Long id) {
+        this.id = id;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("start_time")
+    public String startTime;
+    public DetailedErrorResponseErrorDetailedMessage withStartTime(String startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("success")
+    public Boolean success;
+    public DetailedErrorResponseErrorDetailedMessage withSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+}

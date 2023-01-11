@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class IdsProjectsLocationsOperationsListRequest {
+    public IdsProjectsLocationsOperationsListPathParams pathParams;
+    public IdsProjectsLocationsOperationsListRequest withPathParams(IdsProjectsLocationsOperationsListPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public IdsProjectsLocationsOperationsListQueryParams queryParams;
+    public IdsProjectsLocationsOperationsListRequest withQueryParams(IdsProjectsLocationsOperationsListQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public IdsProjectsLocationsOperationsListSecurity security;
+    public IdsProjectsLocationsOperationsListRequest withSecurity(IdsProjectsLocationsOperationsListSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

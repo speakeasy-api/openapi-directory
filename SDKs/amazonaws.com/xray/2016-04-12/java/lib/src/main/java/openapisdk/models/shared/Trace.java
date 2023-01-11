@@ -1,0 +1,40 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * Trace
+ * A collection of segment documents with matching trace IDs.
+**/
+public class Trace {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Duration")
+    public Double duration;
+    public Trace withDuration(Double duration) {
+        this.duration = duration;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Id")
+    public String id;
+    public Trace withId(String id) {
+        this.id = id;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("LimitExceeded")
+    public Boolean limitExceeded;
+    public Trace withLimitExceeded(Boolean limitExceeded) {
+        this.limitExceeded = limitExceeded;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Segments")
+    public Segment[] segments;
+    public Trace withSegments(Segment[] segments) {
+        this.segments = segments;
+        return this;
+    }
+}

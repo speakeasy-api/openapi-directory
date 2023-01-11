@@ -1,0 +1,23 @@
+package openapisdk.models.shared;
+
+
+public enum ExtendedKeyUsageNameEnum {
+    TLS_WEB_SERVER_AUTHENTICATION("TLS_WEB_SERVER_AUTHENTICATION"),
+    TLS_WEB_CLIENT_AUTHENTICATION("TLS_WEB_CLIENT_AUTHENTICATION"),
+    CODE_SIGNING("CODE_SIGNING"),
+    EMAIL_PROTECTION("EMAIL_PROTECTION"),
+    TIME_STAMPING("TIME_STAMPING"),
+    OCSP_SIGNING("OCSP_SIGNING"),
+    IPSEC_END_SYSTEM("IPSEC_END_SYSTEM"),
+    IPSEC_TUNNEL("IPSEC_TUNNEL"),
+    IPSEC_USER("IPSEC_USER"),
+    ANY("ANY"),
+    NONE("NONE"),
+    CUSTOM("CUSTOM");
+
+    public final String value;
+
+    private ExtendedKeyUsageNameEnum(String value) {
+        this.value = value;
+    }
+}

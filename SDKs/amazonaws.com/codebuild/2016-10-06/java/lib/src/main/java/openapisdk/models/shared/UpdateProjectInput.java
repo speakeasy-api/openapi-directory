@@ -1,0 +1,154 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class UpdateProjectInput {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("artifacts")
+    public ProjectArtifacts artifacts;
+    public UpdateProjectInput withArtifacts(ProjectArtifacts artifacts) {
+        this.artifacts = artifacts;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("badgeEnabled")
+    public Boolean badgeEnabled;
+    public UpdateProjectInput withBadgeEnabled(Boolean badgeEnabled) {
+        this.badgeEnabled = badgeEnabled;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("buildBatchConfig")
+    public ProjectBuildBatchConfig buildBatchConfig;
+    public UpdateProjectInput withBuildBatchConfig(ProjectBuildBatchConfig buildBatchConfig) {
+        this.buildBatchConfig = buildBatchConfig;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("cache")
+    public ProjectCache cache;
+    public UpdateProjectInput withCache(ProjectCache cache) {
+        this.cache = cache;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("concurrentBuildLimit")
+    public Long concurrentBuildLimit;
+    public UpdateProjectInput withConcurrentBuildLimit(Long concurrentBuildLimit) {
+        this.concurrentBuildLimit = concurrentBuildLimit;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("description")
+    public String description;
+    public UpdateProjectInput withDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("encryptionKey")
+    public String encryptionKey;
+    public UpdateProjectInput withEncryptionKey(String encryptionKey) {
+        this.encryptionKey = encryptionKey;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("environment")
+    public ProjectEnvironment environment;
+    public UpdateProjectInput withEnvironment(ProjectEnvironment environment) {
+        this.environment = environment;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("fileSystemLocations")
+    public ProjectFileSystemLocation[] fileSystemLocations;
+    public UpdateProjectInput withFileSystemLocations(ProjectFileSystemLocation[] fileSystemLocations) {
+        this.fileSystemLocations = fileSystemLocations;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("logsConfig")
+    public LogsConfig logsConfig;
+    public UpdateProjectInput withLogsConfig(LogsConfig logsConfig) {
+        this.logsConfig = logsConfig;
+        return this;
+    }
+    @JsonProperty("name")
+    public String name;
+    public UpdateProjectInput withName(String name) {
+        this.name = name;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("queuedTimeoutInMinutes")
+    public Long queuedTimeoutInMinutes;
+    public UpdateProjectInput withQueuedTimeoutInMinutes(Long queuedTimeoutInMinutes) {
+        this.queuedTimeoutInMinutes = queuedTimeoutInMinutes;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("secondaryArtifacts")
+    public ProjectArtifacts[] secondaryArtifacts;
+    public UpdateProjectInput withSecondaryArtifacts(ProjectArtifacts[] secondaryArtifacts) {
+        this.secondaryArtifacts = secondaryArtifacts;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("secondarySourceVersions")
+    public ProjectSourceVersion[] secondarySourceVersions;
+    public UpdateProjectInput withSecondarySourceVersions(ProjectSourceVersion[] secondarySourceVersions) {
+        this.secondarySourceVersions = secondarySourceVersions;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("secondarySources")
+    public ProjectSource[] secondarySources;
+    public UpdateProjectInput withSecondarySources(ProjectSource[] secondarySources) {
+        this.secondarySources = secondarySources;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("serviceRole")
+    public String serviceRole;
+    public UpdateProjectInput withServiceRole(String serviceRole) {
+        this.serviceRole = serviceRole;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("source")
+    public ProjectSource source;
+    public UpdateProjectInput withSource(ProjectSource source) {
+        this.source = source;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("sourceVersion")
+    public String sourceVersion;
+    public UpdateProjectInput withSourceVersion(String sourceVersion) {
+        this.sourceVersion = sourceVersion;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("tags")
+    public Tag[] tags;
+    public UpdateProjectInput withTags(Tag[] tags) {
+        this.tags = tags;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("timeoutInMinutes")
+    public Long timeoutInMinutes;
+    public UpdateProjectInput withTimeoutInMinutes(Long timeoutInMinutes) {
+        this.timeoutInMinutes = timeoutInMinutes;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("vpcConfig")
+    public VpcConfig vpcConfig;
+    public UpdateProjectInput withVpcConfig(VpcConfig vpcConfig) {
+        this.vpcConfig = vpcConfig;
+        return this;
+    }
+}

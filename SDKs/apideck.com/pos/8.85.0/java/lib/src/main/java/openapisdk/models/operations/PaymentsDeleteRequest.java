@@ -1,0 +1,26 @@
+package openapisdk.models.operations;
+
+
+
+public class PaymentsDeleteRequest {
+    public PaymentsDeletePathParams pathParams;
+    public PaymentsDeleteRequest withPathParams(PaymentsDeletePathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public PaymentsDeleteQueryParams queryParams;
+    public PaymentsDeleteRequest withQueryParams(PaymentsDeleteQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public PaymentsDeleteHeaders headers;
+    public PaymentsDeleteRequest withHeaders(PaymentsDeleteHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+    public PaymentsDeleteSecurity security;
+    public PaymentsDeleteRequest withSecurity(PaymentsDeleteSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

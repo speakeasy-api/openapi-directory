@@ -1,0 +1,16 @@
+package openapisdk.models.shared;
+
+
+
+public class AcademicCertificateSchemaCertificateDataSchool {
+    public String code;
+    public AcademicCertificateSchemaCertificateDataSchool withCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String name;
+    public AcademicCertificateSchemaCertificateDataSchool withName(String name) {
+        this.name = name;
+        return this;
+    }
+}

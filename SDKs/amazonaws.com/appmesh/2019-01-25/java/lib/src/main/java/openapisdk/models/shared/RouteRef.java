@@ -1,0 +1,73 @@
+package openapisdk.models.shared;
+
+import java.time.OffsetDateTime;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import openapisdk.utils.DateTimeSerializer;
+import openapisdk.utils.DateTimeDeserializer;
+
+/**
+ * RouteRef
+ * An object that represents a route returned by a list operation.
+**/
+public class RouteRef {
+    @JsonProperty("arn")
+    public String arn;
+    public RouteRef withArn(String arn) {
+        this.arn = arn;
+        return this;
+    }
+    @JsonSerialize(using = DateTimeSerializer.class)
+    @JsonDeserialize(using = DateTimeDeserializer.class)
+    @JsonProperty("createdAt")
+    public OffsetDateTime createdAt;
+    public RouteRef withCreatedAt(OffsetDateTime createdAt) {
+        this.createdAt = createdAt;
+        return this;
+    }
+    @JsonSerialize(using = DateTimeSerializer.class)
+    @JsonDeserialize(using = DateTimeDeserializer.class)
+    @JsonProperty("lastUpdatedAt")
+    public OffsetDateTime lastUpdatedAt;
+    public RouteRef withLastUpdatedAt(OffsetDateTime lastUpdatedAt) {
+        this.lastUpdatedAt = lastUpdatedAt;
+        return this;
+    }
+    @JsonProperty("meshName")
+    public String meshName;
+    public RouteRef withMeshName(String meshName) {
+        this.meshName = meshName;
+        return this;
+    }
+    @JsonProperty("meshOwner")
+    public String meshOwner;
+    public RouteRef withMeshOwner(String meshOwner) {
+        this.meshOwner = meshOwner;
+        return this;
+    }
+    @JsonProperty("resourceOwner")
+    public String resourceOwner;
+    public RouteRef withResourceOwner(String resourceOwner) {
+        this.resourceOwner = resourceOwner;
+        return this;
+    }
+    @JsonProperty("routeName")
+    public String routeName;
+    public RouteRef withRouteName(String routeName) {
+        this.routeName = routeName;
+        return this;
+    }
+    @JsonProperty("version")
+    public Long version;
+    public RouteRef withVersion(Long version) {
+        this.version = version;
+        return this;
+    }
+    @JsonProperty("virtualRouterName")
+    public String virtualRouterName;
+    public RouteRef withVirtualRouterName(String virtualRouterName) {
+        this.virtualRouterName = virtualRouterName;
+        return this;
+    }
+}

@@ -1,0 +1,22 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class ImageOcrPhotoRecognizeFormAdvancedRequest {
+    public ImageOcrPhotoRecognizeFormAdvancedHeaders headers;
+    public ImageOcrPhotoRecognizeFormAdvancedRequest withHeaders(ImageOcrPhotoRecognizeFormAdvancedHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+    @SpeakeasyMetadata("request:mediaType=multipart/form-data")
+    public ImageOcrPhotoRecognizeFormAdvancedRequestBody request;
+    public ImageOcrPhotoRecognizeFormAdvancedRequest withRequest(ImageOcrPhotoRecognizeFormAdvancedRequestBody request) {
+        this.request = request;
+        return this;
+    }
+    public ImageOcrPhotoRecognizeFormAdvancedSecurity security;
+    public ImageOcrPhotoRecognizeFormAdvancedRequest withSecurity(ImageOcrPhotoRecognizeFormAdvancedSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class DeploymentmanagerTypeProvidersGetRequest {
+    public DeploymentmanagerTypeProvidersGetPathParams pathParams;
+    public DeploymentmanagerTypeProvidersGetRequest withPathParams(DeploymentmanagerTypeProvidersGetPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public DeploymentmanagerTypeProvidersGetQueryParams queryParams;
+    public DeploymentmanagerTypeProvidersGetRequest withQueryParams(DeploymentmanagerTypeProvidersGetQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public DeploymentmanagerTypeProvidersGetSecurity security;
+    public DeploymentmanagerTypeProvidersGetRequest withSecurity(DeploymentmanagerTypeProvidersGetSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

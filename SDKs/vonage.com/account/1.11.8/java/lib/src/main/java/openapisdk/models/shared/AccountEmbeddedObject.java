@@ -1,0 +1,19 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * AccountEmbeddedObject
+ * Account object
+**/
+public class AccountEmbeddedObject {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("data")
+    public Account data;
+    public AccountEmbeddedObject withData(Account data) {
+        this.data = data;
+        return this;
+    }
+}

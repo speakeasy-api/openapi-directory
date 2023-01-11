@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class GamesManagementPlayersUnhideRequest {
+    public GamesManagementPlayersUnhidePathParams pathParams;
+    public GamesManagementPlayersUnhideRequest withPathParams(GamesManagementPlayersUnhidePathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public GamesManagementPlayersUnhideQueryParams queryParams;
+    public GamesManagementPlayersUnhideRequest withQueryParams(GamesManagementPlayersUnhideQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public GamesManagementPlayersUnhideSecurity security;
+    public GamesManagementPlayersUnhideRequest withSecurity(GamesManagementPlayersUnhideSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

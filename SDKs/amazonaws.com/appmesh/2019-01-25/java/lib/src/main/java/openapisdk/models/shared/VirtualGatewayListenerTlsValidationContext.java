@@ -1,0 +1,25 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * VirtualGatewayListenerTlsValidationContext
+ * An object that represents a virtual gateway's listener's Transport Layer Security (TLS) validation context.
+**/
+public class VirtualGatewayListenerTlsValidationContext {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("subjectAlternativeNames")
+    public SubjectAlternativeNames subjectAlternativeNames;
+    public VirtualGatewayListenerTlsValidationContext withSubjectAlternativeNames(SubjectAlternativeNames subjectAlternativeNames) {
+        this.subjectAlternativeNames = subjectAlternativeNames;
+        return this;
+    }
+    @JsonProperty("trust")
+    public VirtualGatewayListenerTlsValidationContextTrust trust;
+    public VirtualGatewayListenerTlsValidationContext withTrust(VirtualGatewayListenerTlsValidationContextTrust trust) {
+        this.trust = trust;
+        return this;
+    }
+}

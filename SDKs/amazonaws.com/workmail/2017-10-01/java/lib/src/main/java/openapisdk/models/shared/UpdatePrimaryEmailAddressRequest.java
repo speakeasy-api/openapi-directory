@@ -1,0 +1,24 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+public class UpdatePrimaryEmailAddressRequest {
+    @JsonProperty("Email")
+    public String email;
+    public UpdatePrimaryEmailAddressRequest withEmail(String email) {
+        this.email = email;
+        return this;
+    }
+    @JsonProperty("EntityId")
+    public String entityId;
+    public UpdatePrimaryEmailAddressRequest withEntityId(String entityId) {
+        this.entityId = entityId;
+        return this;
+    }
+    @JsonProperty("OrganizationId")
+    public String organizationId;
+    public UpdatePrimaryEmailAddressRequest withOrganizationId(String organizationId) {
+        this.organizationId = organizationId;
+        return this;
+    }
+}

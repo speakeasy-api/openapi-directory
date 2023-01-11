@@ -1,0 +1,26 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * AdminAccount
+ * Represents a Security Hub administrator account designated by an organization management account.
+**/
+public class AdminAccount {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("AccountId")
+    public String accountId;
+    public AdminAccount withAccountId(String accountId) {
+        this.accountId = accountId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Status")
+    public AdminStatusEnum status;
+    public AdminAccount withStatus(AdminStatusEnum status) {
+        this.status = status;
+        return this;
+    }
+}

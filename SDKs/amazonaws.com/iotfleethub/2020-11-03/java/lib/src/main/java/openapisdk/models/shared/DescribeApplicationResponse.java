@@ -1,0 +1,84 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class DescribeApplicationResponse {
+    @JsonProperty("applicationArn")
+    public String applicationArn;
+    public DescribeApplicationResponse withApplicationArn(String applicationArn) {
+        this.applicationArn = applicationArn;
+        return this;
+    }
+    @JsonProperty("applicationCreationDate")
+    public Long applicationCreationDate;
+    public DescribeApplicationResponse withApplicationCreationDate(Long applicationCreationDate) {
+        this.applicationCreationDate = applicationCreationDate;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("applicationDescription")
+    public String applicationDescription;
+    public DescribeApplicationResponse withApplicationDescription(String applicationDescription) {
+        this.applicationDescription = applicationDescription;
+        return this;
+    }
+    @JsonProperty("applicationId")
+    public String applicationId;
+    public DescribeApplicationResponse withApplicationId(String applicationId) {
+        this.applicationId = applicationId;
+        return this;
+    }
+    @JsonProperty("applicationLastUpdateDate")
+    public Long applicationLastUpdateDate;
+    public DescribeApplicationResponse withApplicationLastUpdateDate(Long applicationLastUpdateDate) {
+        this.applicationLastUpdateDate = applicationLastUpdateDate;
+        return this;
+    }
+    @JsonProperty("applicationName")
+    public String applicationName;
+    public DescribeApplicationResponse withApplicationName(String applicationName) {
+        this.applicationName = applicationName;
+        return this;
+    }
+    @JsonProperty("applicationState")
+    public ApplicationStateEnum applicationState;
+    public DescribeApplicationResponse withApplicationState(ApplicationStateEnum applicationState) {
+        this.applicationState = applicationState;
+        return this;
+    }
+    @JsonProperty("applicationUrl")
+    public String applicationUrl;
+    public DescribeApplicationResponse withApplicationUrl(String applicationUrl) {
+        this.applicationUrl = applicationUrl;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("errorMessage")
+    public String errorMessage;
+    public DescribeApplicationResponse withErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    @JsonProperty("roleArn")
+    public String roleArn;
+    public DescribeApplicationResponse withRoleArn(String roleArn) {
+        this.roleArn = roleArn;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ssoClientId")
+    public String ssoClientId;
+    public DescribeApplicationResponse withSsoClientId(String ssoClientId) {
+        this.ssoClientId = ssoClientId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("tags")
+    public java.util.Map<String, String> tags;
+    public DescribeApplicationResponse withTags(java.util.Map<String, String> tags) {
+        this.tags = tags;
+        return this;
+    }
+}

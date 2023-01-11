@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class ConsentFormsPartialUpdateRequest {
+    public ConsentFormsPartialUpdatePathParams pathParams;
+    public ConsentFormsPartialUpdateRequest withPathParams(ConsentFormsPartialUpdatePathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public ConsentFormsPartialUpdateQueryParams queryParams;
+    public ConsentFormsPartialUpdateRequest withQueryParams(ConsentFormsPartialUpdateQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public ConsentFormsPartialUpdateSecurity security;
+    public ConsentFormsPartialUpdateRequest withSecurity(ConsentFormsPartialUpdateSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

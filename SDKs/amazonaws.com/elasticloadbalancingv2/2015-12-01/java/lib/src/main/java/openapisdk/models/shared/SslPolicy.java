@@ -1,0 +1,25 @@
+package openapisdk.models.shared;
+
+
+
+/**
+ * SslPolicy
+ * Information about a policy used for SSL negotiation.
+**/
+public class SslPolicy {
+    public Cipher[] ciphers;
+    public SslPolicy withCiphers(Cipher[] ciphers) {
+        this.ciphers = ciphers;
+        return this;
+    }
+    public String name;
+    public SslPolicy withName(String name) {
+        this.name = name;
+        return this;
+    }
+    public String[] sslProtocols;
+    public SslPolicy withSslProtocols(String[] sslProtocols) {
+        this.sslProtocols = sslProtocols;
+        return this;
+    }
+}

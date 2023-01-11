@@ -1,0 +1,26 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * GoogleCloudVisionV1p1beta1AsyncBatchAnnotateFilesRequest
+ * Multiple async file annotation requests are batched into a single service call.
+**/
+public class GoogleCloudVisionV1p1beta1AsyncBatchAnnotateFilesRequest {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("parent")
+    public String parent;
+    public GoogleCloudVisionV1p1beta1AsyncBatchAnnotateFilesRequest withParent(String parent) {
+        this.parent = parent;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("requests")
+    public GoogleCloudVisionV1p1beta1AsyncAnnotateFileRequest[] requests;
+    public GoogleCloudVisionV1p1beta1AsyncBatchAnnotateFilesRequest withRequests(GoogleCloudVisionV1p1beta1AsyncAnnotateFileRequest[] requests) {
+        this.requests = requests;
+        return this;
+    }
+}

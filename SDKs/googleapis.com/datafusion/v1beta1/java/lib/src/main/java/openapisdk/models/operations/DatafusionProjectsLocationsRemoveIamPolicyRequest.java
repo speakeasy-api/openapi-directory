@@ -1,0 +1,27 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class DatafusionProjectsLocationsRemoveIamPolicyRequest {
+    public DatafusionProjectsLocationsRemoveIamPolicyPathParams pathParams;
+    public DatafusionProjectsLocationsRemoveIamPolicyRequest withPathParams(DatafusionProjectsLocationsRemoveIamPolicyPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public DatafusionProjectsLocationsRemoveIamPolicyQueryParams queryParams;
+    public DatafusionProjectsLocationsRemoveIamPolicyRequest withQueryParams(DatafusionProjectsLocationsRemoveIamPolicyQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public java.util.Map<String, Object> request;
+    public DatafusionProjectsLocationsRemoveIamPolicyRequest withRequest(java.util.Map<String, Object> request) {
+        this.request = request;
+        return this;
+    }
+    public DatafusionProjectsLocationsRemoveIamPolicySecurity security;
+    public DatafusionProjectsLocationsRemoveIamPolicyRequest withSecurity(DatafusionProjectsLocationsRemoveIamPolicySecurity security) {
+        this.security = security;
+        return this;
+    }
+}

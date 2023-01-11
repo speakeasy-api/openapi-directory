@@ -1,0 +1,18 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class FirebasehostingSitesVersionsCloneSecurity {
+    @SpeakeasyMetadata("security:option=true")
+    public FirebasehostingSitesVersionsCloneSecurityOption1 option1;
+    public FirebasehostingSitesVersionsCloneSecurity withOption1(FirebasehostingSitesVersionsCloneSecurityOption1 option1) {
+        this.option1 = option1;
+        return this;
+    }
+    @SpeakeasyMetadata("security:option=true")
+    public FirebasehostingSitesVersionsCloneSecurityOption2 option2;
+    public FirebasehostingSitesVersionsCloneSecurity withOption2(FirebasehostingSitesVersionsCloneSecurityOption2 option2) {
+        this.option2 = option2;
+        return this;
+    }
+}

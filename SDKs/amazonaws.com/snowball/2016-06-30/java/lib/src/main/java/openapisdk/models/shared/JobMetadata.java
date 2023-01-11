@@ -1,0 +1,173 @@
+package openapisdk.models.shared;
+
+import java.time.OffsetDateTime;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import openapisdk.utils.DateTimeSerializer;
+import openapisdk.utils.DateTimeDeserializer;
+
+/**
+ * JobMetadata
+ * Contains information about a specific job including shipping information, job status, and other important metadata. This information is returned as a part of the response syntax of the <code>DescribeJob</code> action.
+**/
+public class JobMetadata {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("AddressId")
+    public String addressId;
+    public JobMetadata withAddressId(String addressId) {
+        this.addressId = addressId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ClusterId")
+    public String clusterId;
+    public JobMetadata withClusterId(String clusterId) {
+        this.clusterId = clusterId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonSerialize(contentUsing = DateTimeSerializer.class)
+    @JsonDeserialize(contentUsing = DateTimeDeserializer.class)
+    @JsonProperty("CreationDate")
+    public OffsetDateTime creationDate;
+    public JobMetadata withCreationDate(OffsetDateTime creationDate) {
+        this.creationDate = creationDate;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("DataTransferProgress")
+    public DataTransfer dataTransferProgress;
+    public JobMetadata withDataTransferProgress(DataTransfer dataTransferProgress) {
+        this.dataTransferProgress = dataTransferProgress;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Description")
+    public String description;
+    public JobMetadata withDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("DeviceConfiguration")
+    public DeviceConfiguration deviceConfiguration;
+    public JobMetadata withDeviceConfiguration(DeviceConfiguration deviceConfiguration) {
+        this.deviceConfiguration = deviceConfiguration;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ForwardingAddressId")
+    public String forwardingAddressId;
+    public JobMetadata withForwardingAddressId(String forwardingAddressId) {
+        this.forwardingAddressId = forwardingAddressId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("JobId")
+    public String jobId;
+    public JobMetadata withJobId(String jobId) {
+        this.jobId = jobId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("JobLogInfo")
+    public JobLogs jobLogInfo;
+    public JobMetadata withJobLogInfo(JobLogs jobLogInfo) {
+        this.jobLogInfo = jobLogInfo;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("JobState")
+    public JobStateEnum jobState;
+    public JobMetadata withJobState(JobStateEnum jobState) {
+        this.jobState = jobState;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("JobType")
+    public JobTypeEnum jobType;
+    public JobMetadata withJobType(JobTypeEnum jobType) {
+        this.jobType = jobType;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("KmsKeyARN")
+    public String kmsKeyARN;
+    public JobMetadata withKmsKeyArn(String kmsKeyARN) {
+        this.kmsKeyARN = kmsKeyARN;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("LongTermPricingId")
+    public String longTermPricingId;
+    public JobMetadata withLongTermPricingId(String longTermPricingId) {
+        this.longTermPricingId = longTermPricingId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Notification")
+    public Notification notification;
+    public JobMetadata withNotification(Notification notification) {
+        this.notification = notification;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("OnDeviceServiceConfiguration")
+    public OnDeviceServiceConfiguration onDeviceServiceConfiguration;
+    public JobMetadata withOnDeviceServiceConfiguration(OnDeviceServiceConfiguration onDeviceServiceConfiguration) {
+        this.onDeviceServiceConfiguration = onDeviceServiceConfiguration;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("RemoteManagement")
+    public RemoteManagementEnum remoteManagement;
+    public JobMetadata withRemoteManagement(RemoteManagementEnum remoteManagement) {
+        this.remoteManagement = remoteManagement;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Resources")
+    public JobResource resources;
+    public JobMetadata withResources(JobResource resources) {
+        this.resources = resources;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("RoleARN")
+    public String roleARN;
+    public JobMetadata withRoleArn(String roleARN) {
+        this.roleARN = roleARN;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ShippingDetails")
+    public ShippingDetails shippingDetails;
+    public JobMetadata withShippingDetails(ShippingDetails shippingDetails) {
+        this.shippingDetails = shippingDetails;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("SnowballCapacityPreference")
+    public SnowballCapacityEnum snowballCapacityPreference;
+    public JobMetadata withSnowballCapacityPreference(SnowballCapacityEnum snowballCapacityPreference) {
+        this.snowballCapacityPreference = snowballCapacityPreference;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("SnowballType")
+    public SnowballTypeEnum snowballType;
+    public JobMetadata withSnowballType(SnowballTypeEnum snowballType) {
+        this.snowballType = snowballType;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("TaxDocuments")
+    public TaxDocuments taxDocuments;
+    public JobMetadata withTaxDocuments(TaxDocuments taxDocuments) {
+        this.taxDocuments = taxDocuments;
+        return this;
+    }
+}

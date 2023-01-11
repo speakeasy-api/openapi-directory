@@ -1,0 +1,12 @@
+package openapisdk.models.operations;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+public class PostAssetsVolatilityRequestBody3 {
+    @JsonProperty("assets")
+    public PostAssetsVolatilityRequestBody3Assets[] assets;
+    public PostAssetsVolatilityRequestBody3 withAssets(PostAssetsVolatilityRequestBody3Assets[] assets) {
+        this.assets = assets;
+        return this;
+    }
+}

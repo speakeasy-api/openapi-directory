@@ -1,0 +1,74 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * Product
+ * Contains details about a product.
+**/
+public class Product {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ActivationUrl")
+    public String activationUrl;
+    public Product withActivationUrl(String activationUrl) {
+        this.activationUrl = activationUrl;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Categories")
+    public String[] categories;
+    public Product withCategories(String[] categories) {
+        this.categories = categories;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("CompanyName")
+    public String companyName;
+    public Product withCompanyName(String companyName) {
+        this.companyName = companyName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Description")
+    public String description;
+    public Product withDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("IntegrationTypes")
+    public IntegrationTypeEnum[] integrationTypes;
+    public Product withIntegrationTypes(IntegrationTypeEnum[] integrationTypes) {
+        this.integrationTypes = integrationTypes;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("MarketplaceUrl")
+    public String marketplaceUrl;
+    public Product withMarketplaceUrl(String marketplaceUrl) {
+        this.marketplaceUrl = marketplaceUrl;
+        return this;
+    }
+    @JsonProperty("ProductArn")
+    public String productArn;
+    public Product withProductArn(String productArn) {
+        this.productArn = productArn;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ProductName")
+    public String productName;
+    public Product withProductName(String productName) {
+        this.productName = productName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ProductSubscriptionResourcePolicy")
+    public String productSubscriptionResourcePolicy;
+    public Product withProductSubscriptionResourcePolicy(String productSubscriptionResourcePolicy) {
+        this.productSubscriptionResourcePolicy = productSubscriptionResourcePolicy;
+        return this;
+    }
+}

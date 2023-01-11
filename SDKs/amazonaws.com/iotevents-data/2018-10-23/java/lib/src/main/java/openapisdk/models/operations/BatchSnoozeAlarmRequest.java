@@ -1,0 +1,17 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class BatchSnoozeAlarmRequest {
+    public BatchSnoozeAlarmHeaders headers;
+    public BatchSnoozeAlarmRequest withHeaders(BatchSnoozeAlarmHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public BatchSnoozeAlarmRequestBody request;
+    public BatchSnoozeAlarmRequest withRequest(BatchSnoozeAlarmRequestBody request) {
+        this.request = request;
+        return this;
+    }
+}

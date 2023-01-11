@@ -1,0 +1,25 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * ProjectStatus
+ * An indication of whether a project creation or deletion is failed or successful.
+**/
+public class ProjectStatus {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("reason")
+    public String reason;
+    public ProjectStatus withReason(String reason) {
+        this.reason = reason;
+        return this;
+    }
+    @JsonProperty("state")
+    public String state;
+    public ProjectStatus withState(String state) {
+        this.state = state;
+        return this;
+    }
+}

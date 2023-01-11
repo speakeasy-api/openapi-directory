@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class DeleteBillingGroupRequest {
+    public DeleteBillingGroupPathParams pathParams;
+    public DeleteBillingGroupRequest withPathParams(DeleteBillingGroupPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public DeleteBillingGroupQueryParams queryParams;
+    public DeleteBillingGroupRequest withQueryParams(DeleteBillingGroupQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public DeleteBillingGroupHeaders headers;
+    public DeleteBillingGroupRequest withHeaders(DeleteBillingGroupHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+}

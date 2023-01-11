@@ -1,0 +1,55 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class VCenterDataSourceRequest {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("credentials")
+    public PasswordCredentials credentials;
+    public VCenterDataSourceRequest withCredentials(PasswordCredentials credentials) {
+        this.credentials = credentials;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("enabled")
+    public Boolean enabled;
+    public VCenterDataSourceRequest withEnabled(Boolean enabled) {
+        this.enabled = enabled;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("fqdn")
+    public String fqdn;
+    public VCenterDataSourceRequest withFqdn(String fqdn) {
+        this.fqdn = fqdn;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ip")
+    public String ip;
+    public VCenterDataSourceRequest withIp(String ip) {
+        this.ip = ip;
+        return this;
+    }
+    @JsonProperty("nickname")
+    public String nickname;
+    public VCenterDataSourceRequest withNickname(String nickname) {
+        this.nickname = nickname;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("notes")
+    public String notes;
+    public VCenterDataSourceRequest withNotes(String notes) {
+        this.notes = notes;
+        return this;
+    }
+    @JsonProperty("proxy_id")
+    public String proxyId;
+    public VCenterDataSourceRequest withProxyId(String proxyId) {
+        this.proxyId = proxyId;
+        return this;
+    }
+}

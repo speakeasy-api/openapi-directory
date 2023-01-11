@@ -1,0 +1,57 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * ActionConfigurationProperty
+ * Represents information about an action configuration property.
+**/
+public class ActionConfigurationProperty {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("description")
+    public String description;
+    public ActionConfigurationProperty withDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    @JsonProperty("key")
+    public Boolean key;
+    public ActionConfigurationProperty withKey(Boolean key) {
+        this.key = key;
+        return this;
+    }
+    @JsonProperty("name")
+    public String name;
+    public ActionConfigurationProperty withName(String name) {
+        this.name = name;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("queryable")
+    public Boolean queryable;
+    public ActionConfigurationProperty withQueryable(Boolean queryable) {
+        this.queryable = queryable;
+        return this;
+    }
+    @JsonProperty("required")
+    public Boolean required;
+    public ActionConfigurationProperty withRequired(Boolean required) {
+        this.required = required;
+        return this;
+    }
+    @JsonProperty("secret")
+    public Boolean secret;
+    public ActionConfigurationProperty withSecret(Boolean secret) {
+        this.secret = secret;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("type")
+    public ActionConfigurationPropertyTypeEnum type;
+    public ActionConfigurationProperty withType(ActionConfigurationPropertyTypeEnum type) {
+        this.type = type;
+        return this;
+    }
+}

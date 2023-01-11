@@ -1,0 +1,63 @@
+package openapisdk.models.shared;
+
+import java.time.OffsetDateTime;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import openapisdk.utils.DateTimeSerializer;
+import openapisdk.utils.DateTimeDeserializer;
+
+/**
+ * StartSupportDataExportRequest
+ * Container for the parameters to the StartSupportDataExport operation.
+**/
+public class StartSupportDataExportRequest {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("customerDefinedValues")
+    public java.util.Map<String, String> customerDefinedValues;
+    public StartSupportDataExportRequest withCustomerDefinedValues(java.util.Map<String, String> customerDefinedValues) {
+        this.customerDefinedValues = customerDefinedValues;
+        return this;
+    }
+    @JsonProperty("dataSetType")
+    public SupportDataSetTypeEnum dataSetType;
+    public StartSupportDataExportRequest withDataSetType(SupportDataSetTypeEnum dataSetType) {
+        this.dataSetType = dataSetType;
+        return this;
+    }
+    @JsonProperty("destinationS3BucketName")
+    public String destinationS3BucketName;
+    public StartSupportDataExportRequest withDestinationS3BucketName(String destinationS3BucketName) {
+        this.destinationS3BucketName = destinationS3BucketName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("destinationS3Prefix")
+    public String destinationS3Prefix;
+    public StartSupportDataExportRequest withDestinationS3Prefix(String destinationS3Prefix) {
+        this.destinationS3Prefix = destinationS3Prefix;
+        return this;
+    }
+    @JsonSerialize(using = DateTimeSerializer.class)
+    @JsonDeserialize(using = DateTimeDeserializer.class)
+    @JsonProperty("fromDate")
+    public OffsetDateTime fromDate;
+    public StartSupportDataExportRequest withFromDate(OffsetDateTime fromDate) {
+        this.fromDate = fromDate;
+        return this;
+    }
+    @JsonProperty("roleNameArn")
+    public String roleNameArn;
+    public StartSupportDataExportRequest withRoleNameArn(String roleNameArn) {
+        this.roleNameArn = roleNameArn;
+        return this;
+    }
+    @JsonProperty("snsTopicArn")
+    public String snsTopicArn;
+    public StartSupportDataExportRequest withSnsTopicArn(String snsTopicArn) {
+        this.snsTopicArn = snsTopicArn;
+        return this;
+    }
+}

@@ -1,0 +1,22 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class ListSignalingChannelsRequest {
+    public ListSignalingChannelsQueryParams queryParams;
+    public ListSignalingChannelsRequest withQueryParams(ListSignalingChannelsQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public ListSignalingChannelsHeaders headers;
+    public ListSignalingChannelsRequest withHeaders(ListSignalingChannelsHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public ListSignalingChannelsRequestBody request;
+    public ListSignalingChannelsRequest withRequest(ListSignalingChannelsRequestBody request) {
+        this.request = request;
+        return this;
+    }
+}

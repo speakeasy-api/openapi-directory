@@ -1,0 +1,47 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * AwsApiGatewayV2RouteSettings
+ * Contains route settings for a stage.
+**/
+public class AwsApiGatewayV2RouteSettings {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("DataTraceEnabled")
+    public Boolean dataTraceEnabled;
+    public AwsApiGatewayV2RouteSettings withDataTraceEnabled(Boolean dataTraceEnabled) {
+        this.dataTraceEnabled = dataTraceEnabled;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("DetailedMetricsEnabled")
+    public Boolean detailedMetricsEnabled;
+    public AwsApiGatewayV2RouteSettings withDetailedMetricsEnabled(Boolean detailedMetricsEnabled) {
+        this.detailedMetricsEnabled = detailedMetricsEnabled;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("LoggingLevel")
+    public String loggingLevel;
+    public AwsApiGatewayV2RouteSettings withLoggingLevel(String loggingLevel) {
+        this.loggingLevel = loggingLevel;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ThrottlingBurstLimit")
+    public Long throttlingBurstLimit;
+    public AwsApiGatewayV2RouteSettings withThrottlingBurstLimit(Long throttlingBurstLimit) {
+        this.throttlingBurstLimit = throttlingBurstLimit;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ThrottlingRateLimit")
+    public Double throttlingRateLimit;
+    public AwsApiGatewayV2RouteSettings withThrottlingRateLimit(Double throttlingRateLimit) {
+        this.throttlingRateLimit = throttlingRateLimit;
+        return this;
+    }
+}

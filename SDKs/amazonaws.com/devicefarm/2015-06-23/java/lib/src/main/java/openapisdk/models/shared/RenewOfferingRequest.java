@@ -1,0 +1,22 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+/**
+ * RenewOfferingRequest
+ * A request that represents an offering renewal.
+**/
+public class RenewOfferingRequest {
+    @JsonProperty("offeringId")
+    public String offeringId;
+    public RenewOfferingRequest withOfferingId(String offeringId) {
+        this.offeringId = offeringId;
+        return this;
+    }
+    @JsonProperty("quantity")
+    public Long quantity;
+    public RenewOfferingRequest withQuantity(Long quantity) {
+        this.quantity = quantity;
+        return this;
+    }
+}

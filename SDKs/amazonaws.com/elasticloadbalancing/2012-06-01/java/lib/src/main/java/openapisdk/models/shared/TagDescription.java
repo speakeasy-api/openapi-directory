@@ -1,0 +1,20 @@
+package openapisdk.models.shared;
+
+
+
+/**
+ * TagDescription
+ * The tags associated with a load balancer.
+**/
+public class TagDescription {
+    public String loadBalancerName;
+    public TagDescription withLoadBalancerName(String loadBalancerName) {
+        this.loadBalancerName = loadBalancerName;
+        return this;
+    }
+    public Tag[] tags;
+    public TagDescription withTags(Tag[] tags) {
+        this.tags = tags;
+        return this;
+    }
+}

@@ -1,0 +1,30 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class FirebaseProjectsAvailableLocationsListSecurity {
+    @SpeakeasyMetadata("security:option=true")
+    public FirebaseProjectsAvailableLocationsListSecurityOption1 option1;
+    public FirebaseProjectsAvailableLocationsListSecurity withOption1(FirebaseProjectsAvailableLocationsListSecurityOption1 option1) {
+        this.option1 = option1;
+        return this;
+    }
+    @SpeakeasyMetadata("security:option=true")
+    public FirebaseProjectsAvailableLocationsListSecurityOption2 option2;
+    public FirebaseProjectsAvailableLocationsListSecurity withOption2(FirebaseProjectsAvailableLocationsListSecurityOption2 option2) {
+        this.option2 = option2;
+        return this;
+    }
+    @SpeakeasyMetadata("security:option=true")
+    public FirebaseProjectsAvailableLocationsListSecurityOption3 option3;
+    public FirebaseProjectsAvailableLocationsListSecurity withOption3(FirebaseProjectsAvailableLocationsListSecurityOption3 option3) {
+        this.option3 = option3;
+        return this;
+    }
+    @SpeakeasyMetadata("security:option=true")
+    public FirebaseProjectsAvailableLocationsListSecurityOption4 option4;
+    public FirebaseProjectsAvailableLocationsListSecurity withOption4(FirebaseProjectsAvailableLocationsListSecurityOption4 option4) {
+        this.option4 = option4;
+        return this;
+    }
+}

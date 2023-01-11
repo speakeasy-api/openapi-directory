@@ -1,0 +1,82 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class CreateEndpointGroupRequest {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("EndpointConfigurations")
+    public EndpointConfiguration[] endpointConfigurations;
+    public CreateEndpointGroupRequest withEndpointConfigurations(EndpointConfiguration[] endpointConfigurations) {
+        this.endpointConfigurations = endpointConfigurations;
+        return this;
+    }
+    @JsonProperty("EndpointGroupRegion")
+    public String endpointGroupRegion;
+    public CreateEndpointGroupRequest withEndpointGroupRegion(String endpointGroupRegion) {
+        this.endpointGroupRegion = endpointGroupRegion;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("HealthCheckIntervalSeconds")
+    public Long healthCheckIntervalSeconds;
+    public CreateEndpointGroupRequest withHealthCheckIntervalSeconds(Long healthCheckIntervalSeconds) {
+        this.healthCheckIntervalSeconds = healthCheckIntervalSeconds;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("HealthCheckPath")
+    public String healthCheckPath;
+    public CreateEndpointGroupRequest withHealthCheckPath(String healthCheckPath) {
+        this.healthCheckPath = healthCheckPath;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("HealthCheckPort")
+    public Long healthCheckPort;
+    public CreateEndpointGroupRequest withHealthCheckPort(Long healthCheckPort) {
+        this.healthCheckPort = healthCheckPort;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("HealthCheckProtocol")
+    public HealthCheckProtocolEnum healthCheckProtocol;
+    public CreateEndpointGroupRequest withHealthCheckProtocol(HealthCheckProtocolEnum healthCheckProtocol) {
+        this.healthCheckProtocol = healthCheckProtocol;
+        return this;
+    }
+    @JsonProperty("IdempotencyToken")
+    public String idempotencyToken;
+    public CreateEndpointGroupRequest withIdempotencyToken(String idempotencyToken) {
+        this.idempotencyToken = idempotencyToken;
+        return this;
+    }
+    @JsonProperty("ListenerArn")
+    public String listenerArn;
+    public CreateEndpointGroupRequest withListenerArn(String listenerArn) {
+        this.listenerArn = listenerArn;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("PortOverrides")
+    public PortOverride[] portOverrides;
+    public CreateEndpointGroupRequest withPortOverrides(PortOverride[] portOverrides) {
+        this.portOverrides = portOverrides;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ThresholdCount")
+    public Long thresholdCount;
+    public CreateEndpointGroupRequest withThresholdCount(Long thresholdCount) {
+        this.thresholdCount = thresholdCount;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("TrafficDialPercentage")
+    public Float trafficDialPercentage;
+    public CreateEndpointGroupRequest withTrafficDialPercentage(Float trafficDialPercentage) {
+        this.trafficDialPercentage = trafficDialPercentage;
+        return this;
+    }
+}

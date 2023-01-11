@@ -1,0 +1,22 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+/**
+ * UpdateRepositoryNameInput
+ * Represents the input of an update repository description operation.
+**/
+public class UpdateRepositoryNameInput {
+    @JsonProperty("newName")
+    public String newName;
+    public UpdateRepositoryNameInput withNewName(String newName) {
+        this.newName = newName;
+        return this;
+    }
+    @JsonProperty("oldName")
+    public String oldName;
+    public UpdateRepositoryNameInput withOldName(String oldName) {
+        this.oldName = oldName;
+        return this;
+    }
+}

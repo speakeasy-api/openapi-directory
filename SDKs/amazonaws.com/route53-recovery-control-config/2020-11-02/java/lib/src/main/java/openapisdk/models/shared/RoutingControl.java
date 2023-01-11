@@ -1,0 +1,40 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * RoutingControl
+ * A routing control has one of two states: ON and OFF. You can map the routing control state to the state of an Amazon Route 53 health check, which can be used to control traffic routing.
+**/
+public class RoutingControl {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ControlPanelArn")
+    public String controlPanelArn;
+    public RoutingControl withControlPanelArn(String controlPanelArn) {
+        this.controlPanelArn = controlPanelArn;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Name")
+    public String name;
+    public RoutingControl withName(String name) {
+        this.name = name;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("RoutingControlArn")
+    public String routingControlArn;
+    public RoutingControl withRoutingControlArn(String routingControlArn) {
+        this.routingControlArn = routingControlArn;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Status")
+    public StatusEnum status;
+    public RoutingControl withStatus(StatusEnum status) {
+        this.status = status;
+        return this;
+    }
+}

@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class TeamsListReposRequest {
+    public TeamsListReposPathParams pathParams;
+    public TeamsListReposRequest withPathParams(TeamsListReposPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public TeamsListReposQueryParams queryParams;
+    public TeamsListReposRequest withQueryParams(TeamsListReposQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+}

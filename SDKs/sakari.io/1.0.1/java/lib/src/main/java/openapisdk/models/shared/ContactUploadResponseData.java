@@ -1,0 +1,50 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class ContactUploadResponseData {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("contacts")
+    public Contact[] contacts;
+    public ContactUploadResponseData withContacts(Contact[] contacts) {
+        this.contacts = contacts;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("errors")
+    public Contact[] errors;
+    public ContactUploadResponseData withErrors(Contact[] errors) {
+        this.errors = errors;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("inserted")
+    public Long inserted;
+    public ContactUploadResponseData withInserted(Long inserted) {
+        this.inserted = inserted;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("submitted")
+    public Long submitted;
+    public ContactUploadResponseData withSubmitted(Long submitted) {
+        this.submitted = submitted;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("success")
+    public Long success;
+    public ContactUploadResponseData withSuccess(Long success) {
+        this.success = success;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("updated")
+    public Long updated;
+    public ContactUploadResponseData withUpdated(Long updated) {
+        this.updated = updated;
+        return this;
+    }
+}

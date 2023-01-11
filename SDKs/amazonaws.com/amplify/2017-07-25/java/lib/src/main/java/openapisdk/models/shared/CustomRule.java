@@ -1,0 +1,38 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * CustomRule
+ *  Describes a custom rewrite or redirect rule. 
+**/
+public class CustomRule {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("condition")
+    public String condition;
+    public CustomRule withCondition(String condition) {
+        this.condition = condition;
+        return this;
+    }
+    @JsonProperty("source")
+    public String source;
+    public CustomRule withSource(String source) {
+        this.source = source;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("status")
+    public String status;
+    public CustomRule withStatus(String status) {
+        this.status = status;
+        return this;
+    }
+    @JsonProperty("target")
+    public String target;
+    public CustomRule withTarget(String target) {
+        this.target = target;
+        return this;
+    }
+}

@@ -1,0 +1,46 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * GetDevicePoolCompatibilityRequest
+ * Represents a request to the get device pool compatibility operation.
+**/
+public class GetDevicePoolCompatibilityRequest {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("appArn")
+    public String appArn;
+    public GetDevicePoolCompatibilityRequest withAppArn(String appArn) {
+        this.appArn = appArn;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("configuration")
+    public ScheduleRunConfiguration configuration;
+    public GetDevicePoolCompatibilityRequest withConfiguration(ScheduleRunConfiguration configuration) {
+        this.configuration = configuration;
+        return this;
+    }
+    @JsonProperty("devicePoolArn")
+    public String devicePoolArn;
+    public GetDevicePoolCompatibilityRequest withDevicePoolArn(String devicePoolArn) {
+        this.devicePoolArn = devicePoolArn;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("test")
+    public ScheduleRunTest test;
+    public GetDevicePoolCompatibilityRequest withTest(ScheduleRunTest test) {
+        this.test = test;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("testType")
+    public TestTypeEnum testType;
+    public GetDevicePoolCompatibilityRequest withTestType(TestTypeEnum testType) {
+        this.testType = testType;
+        return this;
+    }
+}

@@ -1,0 +1,38 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * GrpcRoute
+ * An object that represents a gRPC route type.
+**/
+public class GrpcRoute {
+    @JsonProperty("action")
+    public GrpcRouteAction action;
+    public GrpcRoute withAction(GrpcRouteAction action) {
+        this.action = action;
+        return this;
+    }
+    @JsonProperty("match")
+    public GrpcRouteMatch match;
+    public GrpcRoute withMatch(GrpcRouteMatch match) {
+        this.match = match;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("retryPolicy")
+    public GrpcRetryPolicy retryPolicy;
+    public GrpcRoute withRetryPolicy(GrpcRetryPolicy retryPolicy) {
+        this.retryPolicy = retryPolicy;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("timeout")
+    public GrpcTimeout timeout;
+    public GrpcRoute withTimeout(GrpcTimeout timeout) {
+        this.timeout = timeout;
+        return this;
+    }
+}

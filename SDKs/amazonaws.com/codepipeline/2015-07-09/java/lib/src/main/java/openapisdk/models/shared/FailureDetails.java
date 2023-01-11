@@ -1,0 +1,31 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * FailureDetails
+ * Represents information about failure details.
+**/
+public class FailureDetails {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("externalExecutionId")
+    public String externalExecutionId;
+    public FailureDetails withExternalExecutionId(String externalExecutionId) {
+        this.externalExecutionId = externalExecutionId;
+        return this;
+    }
+    @JsonProperty("message")
+    public String message;
+    public FailureDetails withMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    @JsonProperty("type")
+    public FailureTypeEnum type;
+    public FailureDetails withType(FailureTypeEnum type) {
+        this.type = type;
+        return this;
+    }
+}

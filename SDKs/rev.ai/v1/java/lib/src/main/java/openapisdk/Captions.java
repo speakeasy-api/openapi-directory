@@ -1,0 +1,132 @@
+package openapisdk;
+
+import openapisdk.utils.HTTPClient;
+import openapisdk.utils.HTTPRequest;
+import java.net.http.HttpResponse;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import java.nio.charset.StandardCharsets;
+import org.apache.http.NameValuePair;
+
+public class Captions {
+	private HTTPClient _defaultClient;
+	private HTTPClient _securityClient;
+	private String _serverUrl;
+	private String _language;
+	private String _sdkVersion;
+	private String _genVersion;
+
+	public Captions(HTTPClient defaultClient, HTTPClient securityClient, String serverUrl, String language, String sdkVersion, String genVersion) {
+		this._defaultClient = defaultClient;
+		this._securityClient = securityClient;
+		this._serverUrl = serverUrl;
+		this._language = language;
+		this._sdkVersion = sdkVersion;
+		this._genVersion = genVersion;
+	}
+	
+	
+    /**
+     * getCaptions - Get Captions
+     *
+     * Returns the caption output for a transcription job. We currently support SubRip (SRT) and Web Video Text Tracks (VTT) output.
+     * Caption output format can be specified in the `Accept` header. Returns SRT by default.
+     * ***
+     * Note: For streaming jobs, transient failure of our storage during a live session may prevent the final hypothesis elements from saving properly, resulting in an incomplete caption file. This is rare, but not impossible.
+     * 
+    **/
+    public openapisdk.models.operations.GetCaptionsResponse getCaptions(openapisdk.models.operations.GetCaptionsRequest request) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = openapisdk.utils.Utils.generateURL(baseUrl, "/jobs/{id}/captions", request.pathParams);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("GET");
+        req.setURL(url);
+        
+        java.util.List<NameValuePair> queryParams = openapisdk.utils.Utils.getQueryParams(request.queryParams);
+        if (queryParams != null) {
+            for (NameValuePair queryParam : queryParams) {
+                req.addQueryParam(queryParam);
+            }
+        }
+        java.util.Map<String, java.util.List<String>> headers = openapisdk.utils.Utils.getHeaders(request.headers);
+        if (headers != null) {
+            for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
+                for (String value : header.getValue()) {
+                    req.addHeader(header.getKey(), value);
+                }
+            }
+        }
+        
+        HTTPClient client = this._securityClient;
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().allValues("Content-Type").get(0);
+
+        openapisdk.models.operations.GetCaptionsResponse res = new openapisdk.models.operations.GetCaptionsResponse() {{
+            body = null;
+            body = null;
+            getCaptions401ApplicationProblemPlusJsonAny = null;
+            getCaptions404ApplicationProblemPlusJsonObject = null;
+            getCaptions405ApplicationProblemPlusJsonObject = null;
+            getCaptions406ApplicationProblemPlusJsonObject = null;
+            getCaptions409ApplicationProblemPlusJsonObject = null;
+        }};
+        res.statusCode = Long.valueOf(httpRes.statusCode());
+        res.contentType = contentType;
+        
+        if (httpRes.statusCode() == 200) {
+            if (openapisdk.utils.Utils.matchContentType(contentType, "application/x-subrip")) {
+                byte[] out = httpRes.body();
+                res.body = out;
+            }
+            if (openapisdk.utils.Utils.matchContentType(contentType, "text/vtt")) {
+                byte[] out = httpRes.body();
+                res.body = out;
+            }
+        }
+        else if (httpRes.statusCode() == 401) {
+            if (openapisdk.utils.Utils.matchContentType(contentType, "application/problem+json")) {
+                ObjectMapper mapper = new ObjectMapper();
+                mapper.findAndRegisterModules();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.getCaptions401ApplicationProblemPlusJsonAny = out;
+            }
+        }
+        else if (httpRes.statusCode() == 404) {
+            if (openapisdk.utils.Utils.matchContentType(contentType, "application/problem+json")) {
+                ObjectMapper mapper = new ObjectMapper();
+                mapper.findAndRegisterModules();
+                openapisdk.models.operations.GetCaptions404ApplicationProblemPlusJson out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), openapisdk.models.operations.GetCaptions404ApplicationProblemPlusJson.class);
+                res.getCaptions404ApplicationProblemPlusJsonObject = out;
+            }
+        }
+        else if (httpRes.statusCode() == 405) {
+            if (openapisdk.utils.Utils.matchContentType(contentType, "application/problem+json")) {
+                ObjectMapper mapper = new ObjectMapper();
+                mapper.findAndRegisterModules();
+                openapisdk.models.operations.GetCaptions405ApplicationProblemPlusJson out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), openapisdk.models.operations.GetCaptions405ApplicationProblemPlusJson.class);
+                res.getCaptions405ApplicationProblemPlusJsonObject = out;
+            }
+        }
+        else if (httpRes.statusCode() == 406) {
+            if (openapisdk.utils.Utils.matchContentType(contentType, "application/problem+json")) {
+                ObjectMapper mapper = new ObjectMapper();
+                mapper.findAndRegisterModules();
+                openapisdk.models.operations.GetCaptions406ApplicationProblemPlusJson out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), openapisdk.models.operations.GetCaptions406ApplicationProblemPlusJson.class);
+                res.getCaptions406ApplicationProblemPlusJsonObject = out;
+            }
+        }
+        else if (httpRes.statusCode() == 409) {
+            if (openapisdk.utils.Utils.matchContentType(contentType, "application/problem+json")) {
+                ObjectMapper mapper = new ObjectMapper();
+                mapper.findAndRegisterModules();
+                openapisdk.models.operations.GetCaptions409ApplicationProblemPlusJson out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), openapisdk.models.operations.GetCaptions409ApplicationProblemPlusJson.class);
+                res.getCaptions409ApplicationProblemPlusJsonObject = out;
+            }
+        }
+
+        return res;
+    }
+	
+}

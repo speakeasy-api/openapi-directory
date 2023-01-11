@@ -1,0 +1,18 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class DetectImageRequestBodyImageData {
+    @SpeakeasyMetadata("multipartForm:content")
+    public byte[] content;
+    public DetectImageRequestBodyImageData withContent(byte[] content) {
+        this.content = content;
+        return this;
+    }
+    @SpeakeasyMetadata("multipartForm:name=imageData")
+    public String imageData;
+    public DetectImageRequestBodyImageData withImageData(String imageData) {
+        this.imageData = imageData;
+        return this;
+    }
+}

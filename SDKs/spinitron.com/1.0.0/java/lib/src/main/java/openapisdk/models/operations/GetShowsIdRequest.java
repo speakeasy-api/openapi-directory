@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class GetShowsIdRequest {
+    public GetShowsIdPathParams pathParams;
+    public GetShowsIdRequest withPathParams(GetShowsIdPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public GetShowsIdQueryParams queryParams;
+    public GetShowsIdRequest withQueryParams(GetShowsIdQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+}

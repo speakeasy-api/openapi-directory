@@ -1,0 +1,27 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class CertificatemanagerProjectsLocationsOperationsCancelRequest {
+    public CertificatemanagerProjectsLocationsOperationsCancelPathParams pathParams;
+    public CertificatemanagerProjectsLocationsOperationsCancelRequest withPathParams(CertificatemanagerProjectsLocationsOperationsCancelPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public CertificatemanagerProjectsLocationsOperationsCancelQueryParams queryParams;
+    public CertificatemanagerProjectsLocationsOperationsCancelRequest withQueryParams(CertificatemanagerProjectsLocationsOperationsCancelQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public java.util.Map<String, Object> request;
+    public CertificatemanagerProjectsLocationsOperationsCancelRequest withRequest(java.util.Map<String, Object> request) {
+        this.request = request;
+        return this;
+    }
+    public CertificatemanagerProjectsLocationsOperationsCancelSecurity security;
+    public CertificatemanagerProjectsLocationsOperationsCancelRequest withSecurity(CertificatemanagerProjectsLocationsOperationsCancelSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class GetDistrictEventsRequest {
+    public GetDistrictEventsPathParams pathParams;
+    public GetDistrictEventsRequest withPathParams(GetDistrictEventsPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public GetDistrictEventsHeaders headers;
+    public GetDistrictEventsRequest withHeaders(GetDistrictEventsHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+    public GetDistrictEventsSecurity security;
+    public GetDistrictEventsRequest withSecurity(GetDistrictEventsSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

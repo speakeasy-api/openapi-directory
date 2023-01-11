@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class DomainsProjectsLocationsRegistrationsRetrieveImportableDomainsRequest {
+    public DomainsProjectsLocationsRegistrationsRetrieveImportableDomainsPathParams pathParams;
+    public DomainsProjectsLocationsRegistrationsRetrieveImportableDomainsRequest withPathParams(DomainsProjectsLocationsRegistrationsRetrieveImportableDomainsPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public DomainsProjectsLocationsRegistrationsRetrieveImportableDomainsQueryParams queryParams;
+    public DomainsProjectsLocationsRegistrationsRetrieveImportableDomainsRequest withQueryParams(DomainsProjectsLocationsRegistrationsRetrieveImportableDomainsQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public DomainsProjectsLocationsRegistrationsRetrieveImportableDomainsSecurity security;
+    public DomainsProjectsLocationsRegistrationsRetrieveImportableDomainsRequest withSecurity(DomainsProjectsLocationsRegistrationsRetrieveImportableDomainsSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

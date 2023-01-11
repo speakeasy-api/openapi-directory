@@ -1,0 +1,18 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+public class ListWebhookDeliveryLogsResponseLinks {
+    @JsonProperty("next")
+    public String next;
+    public ListWebhookDeliveryLogsResponseLinks withNext(String next) {
+        this.next = next;
+        return this;
+    }
+    @JsonProperty("prev")
+    public String prev;
+    public ListWebhookDeliveryLogsResponseLinks withPrev(String prev) {
+        this.prev = prev;
+        return this;
+    }
+}

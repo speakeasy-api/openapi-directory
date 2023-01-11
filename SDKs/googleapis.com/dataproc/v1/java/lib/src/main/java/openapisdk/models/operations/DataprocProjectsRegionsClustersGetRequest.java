@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class DataprocProjectsRegionsClustersGetRequest {
+    public DataprocProjectsRegionsClustersGetPathParams pathParams;
+    public DataprocProjectsRegionsClustersGetRequest withPathParams(DataprocProjectsRegionsClustersGetPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public DataprocProjectsRegionsClustersGetQueryParams queryParams;
+    public DataprocProjectsRegionsClustersGetRequest withQueryParams(DataprocProjectsRegionsClustersGetQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public DataprocProjectsRegionsClustersGetSecurity security;
+    public DataprocProjectsRegionsClustersGetRequest withSecurity(DataprocProjectsRegionsClustersGetSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

@@ -1,0 +1,81 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * ProjectSource
+ * Information about the build input source code for the build project.
+**/
+public class ProjectSource {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("auth")
+    public SourceAuth auth;
+    public ProjectSource withAuth(SourceAuth auth) {
+        this.auth = auth;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("buildStatusConfig")
+    public BuildStatusConfig buildStatusConfig;
+    public ProjectSource withBuildStatusConfig(BuildStatusConfig buildStatusConfig) {
+        this.buildStatusConfig = buildStatusConfig;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("buildspec")
+    public String buildspec;
+    public ProjectSource withBuildspec(String buildspec) {
+        this.buildspec = buildspec;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("gitCloneDepth")
+    public Long gitCloneDepth;
+    public ProjectSource withGitCloneDepth(Long gitCloneDepth) {
+        this.gitCloneDepth = gitCloneDepth;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("gitSubmodulesConfig")
+    public GitSubmodulesConfig gitSubmodulesConfig;
+    public ProjectSource withGitSubmodulesConfig(GitSubmodulesConfig gitSubmodulesConfig) {
+        this.gitSubmodulesConfig = gitSubmodulesConfig;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("insecureSsl")
+    public Boolean insecureSsl;
+    public ProjectSource withInsecureSsl(Boolean insecureSsl) {
+        this.insecureSsl = insecureSsl;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("location")
+    public String location;
+    public ProjectSource withLocation(String location) {
+        this.location = location;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("reportBuildStatus")
+    public Boolean reportBuildStatus;
+    public ProjectSource withReportBuildStatus(Boolean reportBuildStatus) {
+        this.reportBuildStatus = reportBuildStatus;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("sourceIdentifier")
+    public String sourceIdentifier;
+    public ProjectSource withSourceIdentifier(String sourceIdentifier) {
+        this.sourceIdentifier = sourceIdentifier;
+        return this;
+    }
+    @JsonProperty("type")
+    public SourceTypeEnum type;
+    public ProjectSource withType(SourceTypeEnum type) {
+        this.type = type;
+        return this;
+    }
+}

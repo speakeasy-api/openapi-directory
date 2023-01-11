@@ -1,0 +1,44 @@
+package openapisdk.models.shared;
+
+import java.time.OffsetDateTime;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import openapisdk.utils.DateTimeSerializer;
+import openapisdk.utils.DateTimeDeserializer;
+
+/**
+ * RenewalSummary
+ * Contains information about the status of ACM's <a href="https://docs.aws.amazon.com/acm/latest/userguide/acm-renewal.html">managed renewal</a> for the certificate. This structure exists only when the certificate type is <code>AMAZON_ISSUED</code>.
+**/
+public class RenewalSummary {
+    @JsonProperty("DomainValidationOptions")
+    public DomainValidation[] domainValidationOptions;
+    public RenewalSummary withDomainValidationOptions(DomainValidation[] domainValidationOptions) {
+        this.domainValidationOptions = domainValidationOptions;
+        return this;
+    }
+    @JsonProperty("RenewalStatus")
+    public RenewalStatusEnum renewalStatus;
+    public RenewalSummary withRenewalStatus(RenewalStatusEnum renewalStatus) {
+        this.renewalStatus = renewalStatus;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("RenewalStatusReason")
+    public FailureReasonEnum renewalStatusReason;
+    public RenewalSummary withRenewalStatusReason(FailureReasonEnum renewalStatusReason) {
+        this.renewalStatusReason = renewalStatusReason;
+        return this;
+    }
+    @JsonSerialize(using = DateTimeSerializer.class)
+    @JsonDeserialize(using = DateTimeDeserializer.class)
+    @JsonProperty("UpdatedAt")
+    public OffsetDateTime updatedAt;
+    public RenewalSummary withUpdatedAt(OffsetDateTime updatedAt) {
+        this.updatedAt = updatedAt;
+        return this;
+    }
+}

@@ -1,0 +1,119 @@
+package openapisdk.models.shared;
+
+import java.time.OffsetDateTime;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import openapisdk.utils.DateTimeSerializer;
+import openapisdk.utils.DateTimeDeserializer;
+
+/**
+ * BaseConfigurationItem
+ * The detailed configuration of a specified resource.
+**/
+public class BaseConfigurationItem {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("accountId")
+    public String accountId;
+    public BaseConfigurationItem withAccountId(String accountId) {
+        this.accountId = accountId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("arn")
+    public String arn;
+    public BaseConfigurationItem withArn(String arn) {
+        this.arn = arn;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("availabilityZone")
+    public String availabilityZone;
+    public BaseConfigurationItem withAvailabilityZone(String availabilityZone) {
+        this.availabilityZone = availabilityZone;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("awsRegion")
+    public String awsRegion;
+    public BaseConfigurationItem withAwsRegion(String awsRegion) {
+        this.awsRegion = awsRegion;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("configuration")
+    public String configuration;
+    public BaseConfigurationItem withConfiguration(String configuration) {
+        this.configuration = configuration;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonSerialize(contentUsing = DateTimeSerializer.class)
+    @JsonDeserialize(contentUsing = DateTimeDeserializer.class)
+    @JsonProperty("configurationItemCaptureTime")
+    public OffsetDateTime configurationItemCaptureTime;
+    public BaseConfigurationItem withConfigurationItemCaptureTime(OffsetDateTime configurationItemCaptureTime) {
+        this.configurationItemCaptureTime = configurationItemCaptureTime;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("configurationItemStatus")
+    public ConfigurationItemStatusEnum configurationItemStatus;
+    public BaseConfigurationItem withConfigurationItemStatus(ConfigurationItemStatusEnum configurationItemStatus) {
+        this.configurationItemStatus = configurationItemStatus;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("configurationStateId")
+    public String configurationStateId;
+    public BaseConfigurationItem withConfigurationStateId(String configurationStateId) {
+        this.configurationStateId = configurationStateId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonSerialize(contentUsing = DateTimeSerializer.class)
+    @JsonDeserialize(contentUsing = DateTimeDeserializer.class)
+    @JsonProperty("resourceCreationTime")
+    public OffsetDateTime resourceCreationTime;
+    public BaseConfigurationItem withResourceCreationTime(OffsetDateTime resourceCreationTime) {
+        this.resourceCreationTime = resourceCreationTime;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("resourceId")
+    public String resourceId;
+    public BaseConfigurationItem withResourceId(String resourceId) {
+        this.resourceId = resourceId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("resourceName")
+    public String resourceName;
+    public BaseConfigurationItem withResourceName(String resourceName) {
+        this.resourceName = resourceName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("resourceType")
+    public ResourceTypeEnum resourceType;
+    public BaseConfigurationItem withResourceType(ResourceTypeEnum resourceType) {
+        this.resourceType = resourceType;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("supplementaryConfiguration")
+    public java.util.Map<String, String> supplementaryConfiguration;
+    public BaseConfigurationItem withSupplementaryConfiguration(java.util.Map<String, String> supplementaryConfiguration) {
+        this.supplementaryConfiguration = supplementaryConfiguration;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("version")
+    public String version;
+    public BaseConfigurationItem withVersion(String version) {
+        this.version = version;
+        return this;
+    }
+}

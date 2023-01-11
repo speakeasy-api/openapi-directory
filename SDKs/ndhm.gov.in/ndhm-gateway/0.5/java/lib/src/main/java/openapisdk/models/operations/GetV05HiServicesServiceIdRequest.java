@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class GetV05HiServicesServiceIdRequest {
+    public GetV05HiServicesServiceIdPathParams pathParams;
+    public GetV05HiServicesServiceIdRequest withPathParams(GetV05HiServicesServiceIdPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public GetV05HiServicesServiceIdHeaders headers;
+    public GetV05HiServicesServiceIdRequest withHeaders(GetV05HiServicesServiceIdHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+}

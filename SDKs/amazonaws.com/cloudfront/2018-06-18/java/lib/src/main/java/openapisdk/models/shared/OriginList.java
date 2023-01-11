@@ -1,0 +1,40 @@
+package openapisdk.models.shared;
+
+
+
+/**
+ * OriginList
+ * <p>A complex type that describes the Amazon S3 bucket or the HTTP server (for example, a web server) from which CloudFront gets your files. You must create at least one origin.</p> <p>For the current limit on the number of origins that you can create for a distribution, see <a href="http://docs.aws.amazon.com/general/latest/gr/aws_service_limits.html#limits_cloudfront">Amazon CloudFront Limits</a> in the <i>AWS General Reference</i>.</p>
+**/
+public class OriginList {
+    public CustomHeaders customHeaders;
+    public OriginList withCustomHeaders(CustomHeaders customHeaders) {
+        this.customHeaders = customHeaders;
+        return this;
+    }
+    public CustomOriginConfig customOriginConfig;
+    public OriginList withCustomOriginConfig(CustomOriginConfig customOriginConfig) {
+        this.customOriginConfig = customOriginConfig;
+        return this;
+    }
+    public String domainName;
+    public OriginList withDomainName(String domainName) {
+        this.domainName = domainName;
+        return this;
+    }
+    public String id;
+    public OriginList withId(String id) {
+        this.id = id;
+        return this;
+    }
+    public String originPath;
+    public OriginList withOriginPath(String originPath) {
+        this.originPath = originPath;
+        return this;
+    }
+    public S3OriginConfig s3OriginConfig;
+    public OriginList withS3OriginConfig(S3OriginConfig s3OriginConfig) {
+        this.s3OriginConfig = s3OriginConfig;
+        return this;
+    }
+}

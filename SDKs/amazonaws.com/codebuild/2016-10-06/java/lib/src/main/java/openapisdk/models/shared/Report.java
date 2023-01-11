@@ -1,0 +1,105 @@
+package openapisdk.models.shared;
+
+import java.time.OffsetDateTime;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import openapisdk.utils.DateTimeSerializer;
+import openapisdk.utils.DateTimeDeserializer;
+
+/**
+ * Report
+ * Information about the results from running a series of test cases during the run of a build project. The test cases are specified in the buildspec for the build project using one or more paths to the test case files. You can specify any type of tests you want, such as unit tests, integration tests, and functional tests. 
+**/
+public class Report {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("arn")
+    public String arn;
+    public Report withArn(String arn) {
+        this.arn = arn;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("codeCoverageSummary")
+    public CodeCoverageReportSummary codeCoverageSummary;
+    public Report withCodeCoverageSummary(CodeCoverageReportSummary codeCoverageSummary) {
+        this.codeCoverageSummary = codeCoverageSummary;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonSerialize(contentUsing = DateTimeSerializer.class)
+    @JsonDeserialize(contentUsing = DateTimeDeserializer.class)
+    @JsonProperty("created")
+    public OffsetDateTime created;
+    public Report withCreated(OffsetDateTime created) {
+        this.created = created;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("executionId")
+    public String executionId;
+    public Report withExecutionId(String executionId) {
+        this.executionId = executionId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonSerialize(contentUsing = DateTimeSerializer.class)
+    @JsonDeserialize(contentUsing = DateTimeDeserializer.class)
+    @JsonProperty("expired")
+    public OffsetDateTime expired;
+    public Report withExpired(OffsetDateTime expired) {
+        this.expired = expired;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("exportConfig")
+    public ReportExportConfig exportConfig;
+    public Report withExportConfig(ReportExportConfig exportConfig) {
+        this.exportConfig = exportConfig;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("name")
+    public String name;
+    public Report withName(String name) {
+        this.name = name;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("reportGroupArn")
+    public String reportGroupArn;
+    public Report withReportGroupArn(String reportGroupArn) {
+        this.reportGroupArn = reportGroupArn;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("status")
+    public ReportStatusTypeEnum status;
+    public Report withStatus(ReportStatusTypeEnum status) {
+        this.status = status;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("testSummary")
+    public TestReportSummary testSummary;
+    public Report withTestSummary(TestReportSummary testSummary) {
+        this.testSummary = testSummary;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("truncated")
+    public Boolean truncated;
+    public Report withTruncated(Boolean truncated) {
+        this.truncated = truncated;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("type")
+    public ReportTypeEnum type;
+    public Report withType(ReportTypeEnum type) {
+        this.type = type;
+        return this;
+    }
+}

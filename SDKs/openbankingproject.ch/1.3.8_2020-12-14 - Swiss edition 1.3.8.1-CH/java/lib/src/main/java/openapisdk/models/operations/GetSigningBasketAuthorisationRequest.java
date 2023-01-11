@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class GetSigningBasketAuthorisationRequest {
+    public GetSigningBasketAuthorisationPathParams pathParams;
+    public GetSigningBasketAuthorisationRequest withPathParams(GetSigningBasketAuthorisationPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public GetSigningBasketAuthorisationHeaders headers;
+    public GetSigningBasketAuthorisationRequest withHeaders(GetSigningBasketAuthorisationHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+    public GetSigningBasketAuthorisationSecurity security;
+    public GetSigningBasketAuthorisationRequest withSecurity(GetSigningBasketAuthorisationSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

@@ -1,0 +1,17 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class FollowUsersAlt1Request {
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public FollowUsersAlt1RequestBody request;
+    public FollowUsersAlt1Request withRequest(FollowUsersAlt1RequestBody request) {
+        this.request = request;
+        return this;
+    }
+    public FollowUsersAlt1Security security;
+    public FollowUsersAlt1Request withSecurity(FollowUsersAlt1Security security) {
+        this.security = security;
+        return this;
+    }
+}

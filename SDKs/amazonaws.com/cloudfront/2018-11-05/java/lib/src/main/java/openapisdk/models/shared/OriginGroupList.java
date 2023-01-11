@@ -1,0 +1,25 @@
+package openapisdk.models.shared;
+
+
+
+/**
+ * OriginGroupList
+ * An origin group includes two origins (a primary origin and a second origin to failover to) and a failover criteria that you specify. You create an origin group to support origin failover in CloudFront. When you create or update a distribution, you can specifiy the origin group instead of a single origin, and CloudFront will failover from the primary origin to the second origin under the failover conditions that you've chosen.
+**/
+public class OriginGroupList {
+    public OriginGroupFailoverCriteria failoverCriteria;
+    public OriginGroupList withFailoverCriteria(OriginGroupFailoverCriteria failoverCriteria) {
+        this.failoverCriteria = failoverCriteria;
+        return this;
+    }
+    public String id;
+    public OriginGroupList withId(String id) {
+        this.id = id;
+        return this;
+    }
+    public OriginGroupMembers members;
+    public OriginGroupList withMembers(OriginGroupMembers members) {
+        this.members = members;
+        return this;
+    }
+}

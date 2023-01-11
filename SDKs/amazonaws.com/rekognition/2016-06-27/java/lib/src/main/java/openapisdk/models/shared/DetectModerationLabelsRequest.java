@@ -1,0 +1,28 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class DetectModerationLabelsRequest {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("HumanLoopConfig")
+    public HumanLoopConfig humanLoopConfig;
+    public DetectModerationLabelsRequest withHumanLoopConfig(HumanLoopConfig humanLoopConfig) {
+        this.humanLoopConfig = humanLoopConfig;
+        return this;
+    }
+    @JsonProperty("Image")
+    public Image image;
+    public DetectModerationLabelsRequest withImage(Image image) {
+        this.image = image;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("MinConfidence")
+    public Float minConfidence;
+    public DetectModerationLabelsRequest withMinConfidence(Float minConfidence) {
+        this.minConfidence = minConfidence;
+        return this;
+    }
+}

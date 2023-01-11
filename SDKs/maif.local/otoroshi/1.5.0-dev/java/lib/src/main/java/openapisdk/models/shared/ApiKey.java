@@ -1,0 +1,70 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * ApiKey
+ * An Otoroshi Api Key. An Api Key is defined for a group of services to allow usage of the same Api Key for multiple services.
+**/
+public class ApiKey {
+    @JsonProperty("authorizedEntities")
+    public String[] authorizedEntities;
+    public ApiKey withAuthorizedEntities(String[] authorizedEntities) {
+        this.authorizedEntities = authorizedEntities;
+        return this;
+    }
+    @JsonProperty("clientId")
+    public String clientId;
+    public ApiKey withClientId(String clientId) {
+        this.clientId = clientId;
+        return this;
+    }
+    @JsonProperty("clientName")
+    public String clientName;
+    public ApiKey withClientName(String clientName) {
+        this.clientName = clientName;
+        return this;
+    }
+    @JsonProperty("clientSecret")
+    public String clientSecret;
+    public ApiKey withClientSecret(String clientSecret) {
+        this.clientSecret = clientSecret;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("dailyQuota")
+    public Long dailyQuota;
+    public ApiKey withDailyQuota(Long dailyQuota) {
+        this.dailyQuota = dailyQuota;
+        return this;
+    }
+    @JsonProperty("enabled")
+    public Boolean enabled;
+    public ApiKey withEnabled(Boolean enabled) {
+        this.enabled = enabled;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("metadata")
+    public java.util.Map<String, String> metadata;
+    public ApiKey withMetadata(java.util.Map<String, String> metadata) {
+        this.metadata = metadata;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("monthlyQuota")
+    public Long monthlyQuota;
+    public ApiKey withMonthlyQuota(Long monthlyQuota) {
+        this.monthlyQuota = monthlyQuota;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("throttlingQuota")
+    public Long throttlingQuota;
+    public ApiKey withThrottlingQuota(Long throttlingQuota) {
+        this.throttlingQuota = throttlingQuota;
+        return this;
+    }
+}

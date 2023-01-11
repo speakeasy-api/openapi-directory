@@ -1,0 +1,86 @@
+package openapisdk.models.shared;
+
+
+
+public class Map {
+    public String dbsnpVersion;
+    public Map withDbsnpVersion(String dbsnpVersion) {
+        this.dbsnpVersion = dbsnpVersion;
+        return this;
+    }
+    public String description;
+    public Map withDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    public Integer key;
+    public Map withKey(Integer key) {
+        this.key = key;
+        return this;
+    }
+    public Integer methodKey;
+    public Map withMethodKey(Integer methodKey) {
+        this.methodKey = methodKey;
+        return this;
+    }
+    public String name;
+    public Map withName(String name) {
+        this.name = name;
+        return this;
+    }
+    public String notes;
+    public Map withNotes(String notes) {
+        this.notes = notes;
+        return this;
+    }
+    public Boolean primaryRefAssembly;
+    public Map withPrimaryRefAssembly(Boolean primaryRefAssembly) {
+        this.primaryRefAssembly = primaryRefAssembly;
+        return this;
+    }
+    public Integer rank;
+    public Map withRank(Integer rank) {
+        this.rank = rank;
+        return this;
+    }
+    public String refSeqAssemblyAcc;
+    public Map withRefSeqAssemblyAcc(String refSeqAssemblyAcc) {
+        this.refSeqAssemblyAcc = refSeqAssemblyAcc;
+        return this;
+    }
+    public String refSeqAssemblyName;
+    public Map withRefSeqAssemblyName(String refSeqAssemblyName) {
+        this.refSeqAssemblyName = refSeqAssemblyName;
+        return this;
+    }
+    public Integer rgdId;
+    public Map withRgdId(Integer rgdId) {
+        this.rgdId = rgdId;
+        return this;
+    }
+    public String source;
+    public Map withSource(String source) {
+        this.source = source;
+        return this;
+    }
+    public Integer speciesTypeKey;
+    public Map withSpeciesTypeKey(Integer speciesTypeKey) {
+        this.speciesTypeKey = speciesTypeKey;
+        return this;
+    }
+    public String ucscAssemblyId;
+    public Map withUcscAssemblyId(String ucscAssemblyId) {
+        this.ucscAssemblyId = ucscAssemblyId;
+        return this;
+    }
+    public String unit;
+    public Map withUnit(String unit) {
+        this.unit = unit;
+        return this;
+    }
+    public String version;
+    public Map withVersion(String version) {
+        this.version = version;
+        return this;
+    }
+}

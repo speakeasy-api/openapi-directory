@@ -1,0 +1,50 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class QuerySchemaVersionMetadataInput {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("MaxResults")
+    public Long maxResults;
+    public QuerySchemaVersionMetadataInput withMaxResults(Long maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("MetadataList")
+    public MetadataKeyValuePair[] metadataList;
+    public QuerySchemaVersionMetadataInput withMetadataList(MetadataKeyValuePair[] metadataList) {
+        this.metadataList = metadataList;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("NextToken")
+    public String nextToken;
+    public QuerySchemaVersionMetadataInput withNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("SchemaId")
+    public SchemaId schemaId;
+    public QuerySchemaVersionMetadataInput withSchemaId(SchemaId schemaId) {
+        this.schemaId = schemaId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("SchemaVersionId")
+    public String schemaVersionId;
+    public QuerySchemaVersionMetadataInput withSchemaVersionId(String schemaVersionId) {
+        this.schemaVersionId = schemaVersionId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("SchemaVersionNumber")
+    public SchemaVersionNumber schemaVersionNumber;
+    public QuerySchemaVersionMetadataInput withSchemaVersionNumber(SchemaVersionNumber schemaVersionNumber) {
+        this.schemaVersionNumber = schemaVersionNumber;
+        return this;
+    }
+}

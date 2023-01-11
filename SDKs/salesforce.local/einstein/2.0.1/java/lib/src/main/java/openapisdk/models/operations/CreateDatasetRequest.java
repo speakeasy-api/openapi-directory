@@ -1,0 +1,17 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class CreateDatasetRequest {
+    @SpeakeasyMetadata("request:mediaType=multipart/form-data")
+    public CreateDatasetRequestBody request;
+    public CreateDatasetRequest withRequest(CreateDatasetRequestBody request) {
+        this.request = request;
+        return this;
+    }
+    public CreateDatasetSecurity security;
+    public CreateDatasetRequest withSecurity(CreateDatasetSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class FirebasestorageProjectsBucketsListRequest {
+    public FirebasestorageProjectsBucketsListPathParams pathParams;
+    public FirebasestorageProjectsBucketsListRequest withPathParams(FirebasestorageProjectsBucketsListPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public FirebasestorageProjectsBucketsListQueryParams queryParams;
+    public FirebasestorageProjectsBucketsListRequest withQueryParams(FirebasestorageProjectsBucketsListQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public FirebasestorageProjectsBucketsListSecurity security;
+    public FirebasestorageProjectsBucketsListRequest withSecurity(FirebasestorageProjectsBucketsListSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

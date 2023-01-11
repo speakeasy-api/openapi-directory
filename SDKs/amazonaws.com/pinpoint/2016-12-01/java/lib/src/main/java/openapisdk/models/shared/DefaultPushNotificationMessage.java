@@ -1,0 +1,61 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * DefaultPushNotificationMessage
+ * Specifies the default settings and content for a push notification that's sent directly to an endpoint.
+**/
+public class DefaultPushNotificationMessage {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Action")
+    public ActionEnum action;
+    public DefaultPushNotificationMessage withAction(ActionEnum action) {
+        this.action = action;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Body")
+    public String body;
+    public DefaultPushNotificationMessage withBody(String body) {
+        this.body = body;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Data")
+    public java.util.Map<String, String> data;
+    public DefaultPushNotificationMessage withData(java.util.Map<String, String> data) {
+        this.data = data;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("SilentPush")
+    public Boolean silentPush;
+    public DefaultPushNotificationMessage withSilentPush(Boolean silentPush) {
+        this.silentPush = silentPush;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Substitutions")
+    public java.util.Map<String, String[]> substitutions;
+    public DefaultPushNotificationMessage withSubstitutions(java.util.Map<String, String[]> substitutions) {
+        this.substitutions = substitutions;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Title")
+    public String title;
+    public DefaultPushNotificationMessage withTitle(String title) {
+        this.title = title;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Url")
+    public String url;
+    public DefaultPushNotificationMessage withUrl(String url) {
+        this.url = url;
+        return this;
+    }
+}

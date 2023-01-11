@@ -1,0 +1,17 @@
+package openapisdk.models.shared;
+
+
+public enum LoadBalancerInfoLoadBalancerTypeEnum {
+    LOAD_BALANCER_TYPE_UNSPECIFIED("LOAD_BALANCER_TYPE_UNSPECIFIED"),
+    INTERNAL_TCP_UDP("INTERNAL_TCP_UDP"),
+    NETWORK_TCP_UDP("NETWORK_TCP_UDP"),
+    HTTP_PROXY("HTTP_PROXY"),
+    TCP_PROXY("TCP_PROXY"),
+    SSL_PROXY("SSL_PROXY");
+
+    public final String value;
+
+    private LoadBalancerInfoLoadBalancerTypeEnum(String value) {
+        this.value = value;
+    }
+}

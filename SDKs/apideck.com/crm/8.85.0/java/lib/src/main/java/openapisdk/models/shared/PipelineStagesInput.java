@@ -1,0 +1,36 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class PipelineStagesInput {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("display_order")
+    public Long displayOrder;
+    public PipelineStagesInput withDisplayOrder(Long displayOrder) {
+        this.displayOrder = displayOrder;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("name")
+    public String name;
+    public PipelineStagesInput withName(String name) {
+        this.name = name;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("value")
+    public String value;
+    public PipelineStagesInput withValue(String value) {
+        this.value = value;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("win_probability")
+    public Long winProbability;
+    public PipelineStagesInput withWinProbability(Long winProbability) {
+        this.winProbability = winProbability;
+        return this;
+    }
+}

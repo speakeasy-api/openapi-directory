@@ -1,0 +1,49 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * CloudwatchMetricAction
+ * Describes an action that captures a CloudWatch metric.
+**/
+public class CloudwatchMetricAction {
+    @JsonProperty("metricName")
+    public String metricName;
+    public CloudwatchMetricAction withMetricName(String metricName) {
+        this.metricName = metricName;
+        return this;
+    }
+    @JsonProperty("metricNamespace")
+    public String metricNamespace;
+    public CloudwatchMetricAction withMetricNamespace(String metricNamespace) {
+        this.metricNamespace = metricNamespace;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("metricTimestamp")
+    public String metricTimestamp;
+    public CloudwatchMetricAction withMetricTimestamp(String metricTimestamp) {
+        this.metricTimestamp = metricTimestamp;
+        return this;
+    }
+    @JsonProperty("metricUnit")
+    public String metricUnit;
+    public CloudwatchMetricAction withMetricUnit(String metricUnit) {
+        this.metricUnit = metricUnit;
+        return this;
+    }
+    @JsonProperty("metricValue")
+    public String metricValue;
+    public CloudwatchMetricAction withMetricValue(String metricValue) {
+        this.metricValue = metricValue;
+        return this;
+    }
+    @JsonProperty("roleArn")
+    public String roleArn;
+    public CloudwatchMetricAction withRoleArn(String roleArn) {
+        this.roleArn = roleArn;
+        return this;
+    }
+}

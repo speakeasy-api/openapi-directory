@@ -1,0 +1,18 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+public class FrontPortTemplateType {
+    @JsonProperty("label")
+    public FrontPortTemplateTypeLabelEnum label;
+    public FrontPortTemplateType withLabel(FrontPortTemplateTypeLabelEnum label) {
+        this.label = label;
+        return this;
+    }
+    @JsonProperty("value")
+    public FrontPortTemplateTypeValueEnum value;
+    public FrontPortTemplateType withValue(FrontPortTemplateTypeValueEnum value) {
+        this.value = value;
+        return this;
+    }
+}

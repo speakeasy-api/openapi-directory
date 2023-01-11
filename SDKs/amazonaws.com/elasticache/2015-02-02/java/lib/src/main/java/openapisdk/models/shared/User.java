@@ -1,0 +1,46 @@
+package openapisdk.models.shared;
+
+
+
+public class User {
+    public String arn;
+    public User withArn(String arn) {
+        this.arn = arn;
+        return this;
+    }
+    public String accessString;
+    public User withAccessString(String accessString) {
+        this.accessString = accessString;
+        return this;
+    }
+    public Authentication authentication;
+    public User withAuthentication(Authentication authentication) {
+        this.authentication = authentication;
+        return this;
+    }
+    public String engine;
+    public User withEngine(String engine) {
+        this.engine = engine;
+        return this;
+    }
+    public String status;
+    public User withStatus(String status) {
+        this.status = status;
+        return this;
+    }
+    public String[] userGroupIds;
+    public User withUserGroupIds(String[] userGroupIds) {
+        this.userGroupIds = userGroupIds;
+        return this;
+    }
+    public String userId;
+    public User withUserId(String userId) {
+        this.userId = userId;
+        return this;
+    }
+    public String userName;
+    public User withUserName(String userName) {
+        this.userName = userName;
+        return this;
+    }
+}

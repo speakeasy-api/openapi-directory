@@ -1,0 +1,79 @@
+package openapisdk.models.shared;
+
+import java.time.OffsetDateTime;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import openapisdk.utils.DateTimeSerializer;
+import openapisdk.utils.DateTimeDeserializer;
+
+/**
+ * AnalyzerSummary
+ * Contains information about the analyzer.
+**/
+public class AnalyzerSummary {
+    @JsonProperty("arn")
+    public String arn;
+    public AnalyzerSummary withArn(String arn) {
+        this.arn = arn;
+        return this;
+    }
+    @JsonSerialize(using = DateTimeSerializer.class)
+    @JsonDeserialize(using = DateTimeDeserializer.class)
+    @JsonProperty("createdAt")
+    public OffsetDateTime createdAt;
+    public AnalyzerSummary withCreatedAt(OffsetDateTime createdAt) {
+        this.createdAt = createdAt;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("lastResourceAnalyzed")
+    public String lastResourceAnalyzed;
+    public AnalyzerSummary withLastResourceAnalyzed(String lastResourceAnalyzed) {
+        this.lastResourceAnalyzed = lastResourceAnalyzed;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonSerialize(contentUsing = DateTimeSerializer.class)
+    @JsonDeserialize(contentUsing = DateTimeDeserializer.class)
+    @JsonProperty("lastResourceAnalyzedAt")
+    public OffsetDateTime lastResourceAnalyzedAt;
+    public AnalyzerSummary withLastResourceAnalyzedAt(OffsetDateTime lastResourceAnalyzedAt) {
+        this.lastResourceAnalyzedAt = lastResourceAnalyzedAt;
+        return this;
+    }
+    @JsonProperty("name")
+    public String name;
+    public AnalyzerSummary withName(String name) {
+        this.name = name;
+        return this;
+    }
+    @JsonProperty("status")
+    public AnalyzerStatusEnum status;
+    public AnalyzerSummary withStatus(AnalyzerStatusEnum status) {
+        this.status = status;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("statusReason")
+    public StatusReason statusReason;
+    public AnalyzerSummary withStatusReason(StatusReason statusReason) {
+        this.statusReason = statusReason;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("tags")
+    public java.util.Map<String, String> tags;
+    public AnalyzerSummary withTags(java.util.Map<String, String> tags) {
+        this.tags = tags;
+        return this;
+    }
+    @JsonProperty("type")
+    public TypeEnum type;
+    public AnalyzerSummary withType(TypeEnum type) {
+        this.type = type;
+        return this;
+    }
+}

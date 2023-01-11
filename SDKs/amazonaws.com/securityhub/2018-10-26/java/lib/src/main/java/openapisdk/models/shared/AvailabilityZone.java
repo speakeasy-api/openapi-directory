@@ -1,0 +1,26 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * AvailabilityZone
+ * Information about an Availability Zone.
+**/
+public class AvailabilityZone {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("SubnetId")
+    public String subnetId;
+    public AvailabilityZone withSubnetId(String subnetId) {
+        this.subnetId = subnetId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ZoneName")
+    public String zoneName;
+    public AvailabilityZone withZoneName(String zoneName) {
+        this.zoneName = zoneName;
+        return this;
+    }
+}

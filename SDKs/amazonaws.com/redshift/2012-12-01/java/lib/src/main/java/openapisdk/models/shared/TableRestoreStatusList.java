@@ -1,0 +1,80 @@
+package openapisdk.models.shared;
+
+import java.time.OffsetDateTime;
+
+/**
+ * TableRestoreStatusList
+ * Describes the status of a <a>RestoreTableFromClusterSnapshot</a> operation.
+**/
+public class TableRestoreStatusList {
+    public String clusterIdentifier;
+    public TableRestoreStatusList withClusterIdentifier(String clusterIdentifier) {
+        this.clusterIdentifier = clusterIdentifier;
+        return this;
+    }
+    public String message;
+    public TableRestoreStatusList withMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String newTableName;
+    public TableRestoreStatusList withNewTableName(String newTableName) {
+        this.newTableName = newTableName;
+        return this;
+    }
+    public Long progressInMegaBytes;
+    public TableRestoreStatusList withProgressInMegaBytes(Long progressInMegaBytes) {
+        this.progressInMegaBytes = progressInMegaBytes;
+        return this;
+    }
+    public OffsetDateTime requestTime;
+    public TableRestoreStatusList withRequestTime(OffsetDateTime requestTime) {
+        this.requestTime = requestTime;
+        return this;
+    }
+    public String snapshotIdentifier;
+    public TableRestoreStatusList withSnapshotIdentifier(String snapshotIdentifier) {
+        this.snapshotIdentifier = snapshotIdentifier;
+        return this;
+    }
+    public String sourceDatabaseName;
+    public TableRestoreStatusList withSourceDatabaseName(String sourceDatabaseName) {
+        this.sourceDatabaseName = sourceDatabaseName;
+        return this;
+    }
+    public String sourceSchemaName;
+    public TableRestoreStatusList withSourceSchemaName(String sourceSchemaName) {
+        this.sourceSchemaName = sourceSchemaName;
+        return this;
+    }
+    public String sourceTableName;
+    public TableRestoreStatusList withSourceTableName(String sourceTableName) {
+        this.sourceTableName = sourceTableName;
+        return this;
+    }
+    public TableRestoreStatusTypeEnum status;
+    public TableRestoreStatusList withStatus(TableRestoreStatusTypeEnum status) {
+        this.status = status;
+        return this;
+    }
+    public String tableRestoreRequestId;
+    public TableRestoreStatusList withTableRestoreRequestId(String tableRestoreRequestId) {
+        this.tableRestoreRequestId = tableRestoreRequestId;
+        return this;
+    }
+    public String targetDatabaseName;
+    public TableRestoreStatusList withTargetDatabaseName(String targetDatabaseName) {
+        this.targetDatabaseName = targetDatabaseName;
+        return this;
+    }
+    public String targetSchemaName;
+    public TableRestoreStatusList withTargetSchemaName(String targetSchemaName) {
+        this.targetSchemaName = targetSchemaName;
+        return this;
+    }
+    public Long totalDataInMegaBytes;
+    public TableRestoreStatusList withTotalDataInMegaBytes(Long totalDataInMegaBytes) {
+        this.totalDataInMegaBytes = totalDataInMegaBytes;
+        return this;
+    }
+}

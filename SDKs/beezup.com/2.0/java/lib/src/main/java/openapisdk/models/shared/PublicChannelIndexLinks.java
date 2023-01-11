@@ -1,0 +1,36 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class PublicChannelIndexLinks {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("channelCountryLov")
+    public LinksGetPublicListOfValuesLink channelCountryLov;
+    public PublicChannelIndexLinks withChannelCountryLov(LinksGetPublicListOfValuesLink channelCountryLov) {
+        this.channelCountryLov = channelCountryLov;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("channelTypeLov")
+    public LinksGetPublicListOfValuesLink channelTypeLov;
+    public PublicChannelIndexLinks withChannelTypeLov(LinksGetPublicListOfValuesLink channelTypeLov) {
+        this.channelTypeLov = channelTypeLov;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("sectorLov")
+    public LinksGetPublicListOfValuesLink sectorLov;
+    public PublicChannelIndexLinks withSectorLov(LinksGetPublicListOfValuesLink sectorLov) {
+        this.sectorLov = sectorLov;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("self")
+    public LinksGetChannelsIndexLink self;
+    public PublicChannelIndexLinks withSelf(LinksGetChannelsIndexLink self) {
+        this.self = self;
+        return this;
+    }
+}

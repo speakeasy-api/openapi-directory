@@ -1,0 +1,18 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+public class PutResourcePolicyInput {
+    @JsonProperty("policy")
+    public String policy;
+    public PutResourcePolicyInput withPolicy(String policy) {
+        this.policy = policy;
+        return this;
+    }
+    @JsonProperty("resourceArn")
+    public String resourceArn;
+    public PutResourcePolicyInput withResourceArn(String resourceArn) {
+        this.resourceArn = resourceArn;
+        return this;
+    }
+}

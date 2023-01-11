@@ -1,0 +1,54 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * CustomerAction
+ * Contains information about the action that you can take to respond to the alarm.
+**/
+public class CustomerAction {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("acknowledgeActionConfiguration")
+    public AcknowledgeActionConfiguration acknowledgeActionConfiguration;
+    public CustomerAction withAcknowledgeActionConfiguration(AcknowledgeActionConfiguration acknowledgeActionConfiguration) {
+        this.acknowledgeActionConfiguration = acknowledgeActionConfiguration;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("actionName")
+    public CustomerActionNameEnum actionName;
+    public CustomerAction withActionName(CustomerActionNameEnum actionName) {
+        this.actionName = actionName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("disableActionConfiguration")
+    public DisableActionConfiguration disableActionConfiguration;
+    public CustomerAction withDisableActionConfiguration(DisableActionConfiguration disableActionConfiguration) {
+        this.disableActionConfiguration = disableActionConfiguration;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("enableActionConfiguration")
+    public EnableActionConfiguration enableActionConfiguration;
+    public CustomerAction withEnableActionConfiguration(EnableActionConfiguration enableActionConfiguration) {
+        this.enableActionConfiguration = enableActionConfiguration;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("resetActionConfiguration")
+    public ResetActionConfiguration resetActionConfiguration;
+    public CustomerAction withResetActionConfiguration(ResetActionConfiguration resetActionConfiguration) {
+        this.resetActionConfiguration = resetActionConfiguration;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("snoozeActionConfiguration")
+    public SnoozeActionConfiguration snoozeActionConfiguration;
+    public CustomerAction withSnoozeActionConfiguration(SnoozeActionConfiguration snoozeActionConfiguration) {
+        this.snoozeActionConfiguration = snoozeActionConfiguration;
+        return this;
+    }
+}

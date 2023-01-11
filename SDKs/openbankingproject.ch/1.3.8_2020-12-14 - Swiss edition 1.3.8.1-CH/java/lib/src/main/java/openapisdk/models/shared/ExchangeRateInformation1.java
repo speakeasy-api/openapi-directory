@@ -1,0 +1,33 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * ExchangeRateInformation1
+ * as in ISO pain.001.001.03.ch.02 ExchangeRateInformation1
+**/
+public class ExchangeRateInformation1 {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("contractIdentification")
+    public String contractIdentification;
+    public ExchangeRateInformation1 withContractIdentification(String contractIdentification) {
+        this.contractIdentification = contractIdentification;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("exchangeRate")
+    public String exchangeRate;
+    public ExchangeRateInformation1 withExchangeRate(String exchangeRate) {
+        this.exchangeRate = exchangeRate;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("rateType")
+    public ExchangeRateInformation1RateTypeEnum rateType;
+    public ExchangeRateInformation1 withRateType(ExchangeRateInformation1RateTypeEnum rateType) {
+        this.rateType = rateType;
+        return this;
+    }
+}

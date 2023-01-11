@@ -1,0 +1,57 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class ContentProCompany {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("companyName")
+    public String companyName;
+    public ContentProCompany withCompanyName(String companyName) {
+        this.companyName = companyName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("description")
+    public String description;
+    public ContentProCompany withDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("employee")
+    public String employee;
+    public ContentProCompany withEmployee(String employee) {
+        this.employee = employee;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("industry")
+    public String industry;
+    public ContentProCompany withIndustry(String industry) {
+        this.industry = industry;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("linkedin")
+    public String linkedin;
+    public ContentProCompany withLinkedin(String linkedin) {
+        this.linkedin = linkedin;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("twitter")
+    public String twitter;
+    public ContentProCompany withTwitter(String twitter) {
+        this.twitter = twitter;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("website")
+    public String website;
+    public ContentProCompany withWebsite(String website) {
+        this.website = website;
+        return this;
+    }
+}

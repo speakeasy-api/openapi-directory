@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class GetEpisodeByIdRequest {
+    public GetEpisodeByIdPathParams pathParams;
+    public GetEpisodeByIdRequest withPathParams(GetEpisodeByIdPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public GetEpisodeByIdQueryParams queryParams;
+    public GetEpisodeByIdRequest withQueryParams(GetEpisodeByIdQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public GetEpisodeByIdHeaders headers;
+    public GetEpisodeByIdRequest withHeaders(GetEpisodeByIdHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+}

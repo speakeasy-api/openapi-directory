@@ -1,0 +1,83 @@
+package openapisdk.models.operations;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * AddUserAddUserRequestBodyPermissions
+ * An object containing name/value pairs for each permission. Any permission that is not passed will be set to `false` by default. Note that users will be unable to see any files in the account unless you include `list` permission.
+ * When creating a user with the `role` **admin**, you should set all of the permissions to `true`
+**/
+public class AddUserAddUserRequestBodyPermissions {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("changePassword")
+    public Boolean changePassword;
+    public AddUserAddUserRequestBodyPermissions withChangePassword(Boolean changePassword) {
+        this.changePassword = changePassword;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("delete")
+    public Boolean delete;
+    public AddUserAddUserRequestBodyPermissions withDelete(Boolean delete) {
+        this.delete = delete;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("deleteFormData")
+    public Boolean deleteFormData;
+    public AddUserAddUserRequestBodyPermissions withDeleteFormData(Boolean deleteFormData) {
+        this.deleteFormData = deleteFormData;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("download")
+    public Boolean download;
+    public AddUserAddUserRequestBodyPermissions withDownload(Boolean download) {
+        this.download = download;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("list")
+    public Boolean list;
+    public AddUserAddUserRequestBodyPermissions withList(Boolean list) {
+        this.list = list;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("modify")
+    public Boolean modify;
+    public AddUserAddUserRequestBodyPermissions withModify(Boolean modify) {
+        this.modify = modify;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("notification")
+    public Boolean notification;
+    public AddUserAddUserRequestBodyPermissions withNotification(Boolean notification) {
+        this.notification = notification;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("share")
+    public Boolean share;
+    public AddUserAddUserRequestBodyPermissions withShare(Boolean share) {
+        this.share = share;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("upload")
+    public Boolean upload;
+    public AddUserAddUserRequestBodyPermissions withUpload(Boolean upload) {
+        this.upload = upload;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("viewFormData")
+    public Boolean viewFormData;
+    public AddUserAddUserRequestBodyPermissions withViewFormData(Boolean viewFormData) {
+        this.viewFormData = viewFormData;
+        return this;
+    }
+}

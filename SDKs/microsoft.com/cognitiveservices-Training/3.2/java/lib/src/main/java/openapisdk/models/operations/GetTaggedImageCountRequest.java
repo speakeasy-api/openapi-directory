@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class GetTaggedImageCountRequest {
+    public GetTaggedImageCountPathParams pathParams;
+    public GetTaggedImageCountRequest withPathParams(GetTaggedImageCountPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public GetTaggedImageCountQueryParams queryParams;
+    public GetTaggedImageCountRequest withQueryParams(GetTaggedImageCountQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+}

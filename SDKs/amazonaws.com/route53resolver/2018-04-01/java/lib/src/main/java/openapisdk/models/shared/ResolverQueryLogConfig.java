@@ -1,0 +1,82 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * ResolverQueryLogConfig
+ * In the response to a <a href="https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53resolver_CreateResolverQueryLogConfig.html">CreateResolverQueryLogConfig</a>, <a href="https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53resolver_DeleteResolverQueryLogConfig.html">DeleteResolverQueryLogConfig</a>, <a href="https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53resolver_GetResolverQueryLogConfig.html">GetResolverQueryLogConfig</a>, or <a href="https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53resolver_ListResolverQueryLogConfigs.html">ListResolverQueryLogConfigs</a> request, a complex type that contains settings for one query logging configuration.
+**/
+public class ResolverQueryLogConfig {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Arn")
+    public String arn;
+    public ResolverQueryLogConfig withArn(String arn) {
+        this.arn = arn;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("AssociationCount")
+    public Long associationCount;
+    public ResolverQueryLogConfig withAssociationCount(Long associationCount) {
+        this.associationCount = associationCount;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("CreationTime")
+    public String creationTime;
+    public ResolverQueryLogConfig withCreationTime(String creationTime) {
+        this.creationTime = creationTime;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("CreatorRequestId")
+    public String creatorRequestId;
+    public ResolverQueryLogConfig withCreatorRequestId(String creatorRequestId) {
+        this.creatorRequestId = creatorRequestId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("DestinationArn")
+    public String destinationArn;
+    public ResolverQueryLogConfig withDestinationArn(String destinationArn) {
+        this.destinationArn = destinationArn;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Id")
+    public String id;
+    public ResolverQueryLogConfig withId(String id) {
+        this.id = id;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Name")
+    public String name;
+    public ResolverQueryLogConfig withName(String name) {
+        this.name = name;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("OwnerId")
+    public String ownerId;
+    public ResolverQueryLogConfig withOwnerId(String ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ShareStatus")
+    public ShareStatusEnum shareStatus;
+    public ResolverQueryLogConfig withShareStatus(ShareStatusEnum shareStatus) {
+        this.shareStatus = shareStatus;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Status")
+    public ResolverQueryLogConfigStatusEnum status;
+    public ResolverQueryLogConfig withStatus(ResolverQueryLogConfigStatusEnum status) {
+        this.status = status;
+        return this;
+    }
+}

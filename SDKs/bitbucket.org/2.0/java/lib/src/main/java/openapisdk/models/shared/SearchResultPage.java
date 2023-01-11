@@ -1,0 +1,57 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class SearchResultPage {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("next")
+    public String next;
+    public SearchResultPage withNext(String next) {
+        this.next = next;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("page")
+    public Integer page;
+    public SearchResultPage withPage(Integer page) {
+        this.page = page;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("pagelen")
+    public Integer pagelen;
+    public SearchResultPage withPagelen(Integer pagelen) {
+        this.pagelen = pagelen;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("previous")
+    public String previous;
+    public SearchResultPage withPrevious(String previous) {
+        this.previous = previous;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("query_substituted")
+    public Boolean querySubstituted;
+    public SearchResultPage withQuerySubstituted(Boolean querySubstituted) {
+        this.querySubstituted = querySubstituted;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("size")
+    public Long size;
+    public SearchResultPage withSize(Long size) {
+        this.size = size;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("values")
+    public SearchCodeSearchResult[] values;
+    public SearchResultPage withValues(SearchCodeSearchResult[] values) {
+        this.values = values;
+        return this;
+    }
+}

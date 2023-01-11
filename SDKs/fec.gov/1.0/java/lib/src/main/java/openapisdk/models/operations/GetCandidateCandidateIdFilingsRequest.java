@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class GetCandidateCandidateIdFilingsRequest {
+    public GetCandidateCandidateIdFilingsPathParams pathParams;
+    public GetCandidateCandidateIdFilingsRequest withPathParams(GetCandidateCandidateIdFilingsPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public GetCandidateCandidateIdFilingsQueryParams queryParams;
+    public GetCandidateCandidateIdFilingsRequest withQueryParams(GetCandidateCandidateIdFilingsQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+}

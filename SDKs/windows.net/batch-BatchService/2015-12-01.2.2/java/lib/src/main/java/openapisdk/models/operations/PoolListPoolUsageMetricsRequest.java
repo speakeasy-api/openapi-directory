@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class PoolListPoolUsageMetricsRequest {
+    public PoolListPoolUsageMetricsQueryParams queryParams;
+    public PoolListPoolUsageMetricsRequest withQueryParams(PoolListPoolUsageMetricsQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public PoolListPoolUsageMetricsHeaders headers;
+    public PoolListPoolUsageMetricsRequest withHeaders(PoolListPoolUsageMetricsHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+}

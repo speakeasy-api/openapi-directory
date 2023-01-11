@@ -1,0 +1,22 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class CreateRouteRequest {
+    public CreateRoutePathParams pathParams;
+    public CreateRouteRequest withPathParams(CreateRoutePathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public CreateRouteHeaders headers;
+    public CreateRouteRequest withHeaders(CreateRouteHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public CreateRouteRequestBody request;
+    public CreateRouteRequest withRequest(CreateRouteRequestBody request) {
+        this.request = request;
+        return this;
+    }
+}

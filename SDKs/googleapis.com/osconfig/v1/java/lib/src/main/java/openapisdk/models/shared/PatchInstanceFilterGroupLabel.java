@@ -1,0 +1,19 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * PatchInstanceFilterGroupLabel
+ * Targets a group of VM instances by using their [assigned labels](https://cloud.google.com/compute/docs/labeling-resources). Labels are key-value pairs. A `GroupLabel` is a combination of labels that is used to target VMs for a patch job. For example, a patch job can target VMs that have the following `GroupLabel`: `{"env":"test", "app":"web"}`. This means that the patch job is applied to VMs that have both the labels `env=test` and `app=web`.
+**/
+public class PatchInstanceFilterGroupLabel {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("labels")
+    public java.util.Map<String, String> labels;
+    public PatchInstanceFilterGroupLabel withLabels(java.util.Map<String, String> labels) {
+        this.labels = labels;
+        return this;
+    }
+}

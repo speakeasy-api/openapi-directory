@@ -1,0 +1,26 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * BackupRetentionPolicy
+ * A policy that defines the number of days to retain backups.
+**/
+public class BackupRetentionPolicy {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Type")
+    public BackupRetentionTypeEnum type;
+    public BackupRetentionPolicy withType(BackupRetentionTypeEnum type) {
+        this.type = type;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Value")
+    public String value;
+    public BackupRetentionPolicy withValue(String value) {
+        this.value = value;
+        return this;
+    }
+}

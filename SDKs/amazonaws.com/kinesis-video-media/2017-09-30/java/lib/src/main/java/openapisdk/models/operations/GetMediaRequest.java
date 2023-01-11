@@ -1,0 +1,17 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class GetMediaRequest {
+    public GetMediaHeaders headers;
+    public GetMediaRequest withHeaders(GetMediaHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public GetMediaRequestBody request;
+    public GetMediaRequest withRequest(GetMediaRequestBody request) {
+        this.request = request;
+        return this;
+    }
+}

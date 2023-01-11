@@ -1,0 +1,16 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+/**
+ * DynamoDbSettings
+ * Provides the Amazon Resource Name (ARN) of the Identity and Access Management (IAM) role used to define an Amazon DynamoDB target endpoint.
+**/
+public class DynamoDbSettings {
+    @JsonProperty("ServiceAccessRoleArn")
+    public String serviceAccessRoleArn;
+    public DynamoDbSettings withServiceAccessRoleArn(String serviceAccessRoleArn) {
+        this.serviceAccessRoleArn = serviceAccessRoleArn;
+        return this;
+    }
+}

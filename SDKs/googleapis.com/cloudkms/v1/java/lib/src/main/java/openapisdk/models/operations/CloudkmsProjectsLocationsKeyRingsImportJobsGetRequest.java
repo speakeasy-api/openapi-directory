@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class CloudkmsProjectsLocationsKeyRingsImportJobsGetRequest {
+    public CloudkmsProjectsLocationsKeyRingsImportJobsGetPathParams pathParams;
+    public CloudkmsProjectsLocationsKeyRingsImportJobsGetRequest withPathParams(CloudkmsProjectsLocationsKeyRingsImportJobsGetPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public CloudkmsProjectsLocationsKeyRingsImportJobsGetQueryParams queryParams;
+    public CloudkmsProjectsLocationsKeyRingsImportJobsGetRequest withQueryParams(CloudkmsProjectsLocationsKeyRingsImportJobsGetQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public CloudkmsProjectsLocationsKeyRingsImportJobsGetSecurity security;
+    public CloudkmsProjectsLocationsKeyRingsImportJobsGetRequest withSecurity(CloudkmsProjectsLocationsKeyRingsImportJobsGetSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

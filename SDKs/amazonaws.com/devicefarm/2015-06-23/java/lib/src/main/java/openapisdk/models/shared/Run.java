@@ -1,0 +1,240 @@
+package openapisdk.models.shared;
+
+import java.time.OffsetDateTime;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import openapisdk.utils.DateTimeSerializer;
+import openapisdk.utils.DateTimeDeserializer;
+
+/**
+ * Run
+ * Represents a test run on a set of devices with a given app package, test parameters, and so on.
+**/
+public class Run {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("appUpload")
+    public String appUpload;
+    public Run withAppUpload(String appUpload) {
+        this.appUpload = appUpload;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("arn")
+    public String arn;
+    public Run withArn(String arn) {
+        this.arn = arn;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("billingMethod")
+    public BillingMethodEnum billingMethod;
+    public Run withBillingMethod(BillingMethodEnum billingMethod) {
+        this.billingMethod = billingMethod;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("completedJobs")
+    public Long completedJobs;
+    public Run withCompletedJobs(Long completedJobs) {
+        this.completedJobs = completedJobs;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("counters")
+    public Counters counters;
+    public Run withCounters(Counters counters) {
+        this.counters = counters;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonSerialize(contentUsing = DateTimeSerializer.class)
+    @JsonDeserialize(contentUsing = DateTimeDeserializer.class)
+    @JsonProperty("created")
+    public OffsetDateTime created;
+    public Run withCreated(OffsetDateTime created) {
+        this.created = created;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("customerArtifactPaths")
+    public CustomerArtifactPaths customerArtifactPaths;
+    public Run withCustomerArtifactPaths(CustomerArtifactPaths customerArtifactPaths) {
+        this.customerArtifactPaths = customerArtifactPaths;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("deviceMinutes")
+    public DeviceMinutes deviceMinutes;
+    public Run withDeviceMinutes(DeviceMinutes deviceMinutes) {
+        this.deviceMinutes = deviceMinutes;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("devicePoolArn")
+    public String devicePoolArn;
+    public Run withDevicePoolArn(String devicePoolArn) {
+        this.devicePoolArn = devicePoolArn;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("deviceSelectionResult")
+    public DeviceSelectionResult deviceSelectionResult;
+    public Run withDeviceSelectionResult(DeviceSelectionResult deviceSelectionResult) {
+        this.deviceSelectionResult = deviceSelectionResult;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("eventCount")
+    public Long eventCount;
+    public Run withEventCount(Long eventCount) {
+        this.eventCount = eventCount;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("jobTimeoutMinutes")
+    public Long jobTimeoutMinutes;
+    public Run withJobTimeoutMinutes(Long jobTimeoutMinutes) {
+        this.jobTimeoutMinutes = jobTimeoutMinutes;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("locale")
+    public String locale;
+    public Run withLocale(String locale) {
+        this.locale = locale;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("location")
+    public Location location;
+    public Run withLocation(Location location) {
+        this.location = location;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("message")
+    public String message;
+    public Run withMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("name")
+    public String name;
+    public Run withName(String name) {
+        this.name = name;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("networkProfile")
+    public NetworkProfile networkProfile;
+    public Run withNetworkProfile(NetworkProfile networkProfile) {
+        this.networkProfile = networkProfile;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("parsingResultUrl")
+    public String parsingResultUrl;
+    public Run withParsingResultUrl(String parsingResultUrl) {
+        this.parsingResultUrl = parsingResultUrl;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("platform")
+    public DevicePlatformEnum platform;
+    public Run withPlatform(DevicePlatformEnum platform) {
+        this.platform = platform;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("radios")
+    public Radios radios;
+    public Run withRadios(Radios radios) {
+        this.radios = radios;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("result")
+    public ExecutionResultEnum result;
+    public Run withResult(ExecutionResultEnum result) {
+        this.result = result;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("resultCode")
+    public ExecutionResultCodeEnum resultCode;
+    public Run withResultCode(ExecutionResultCodeEnum resultCode) {
+        this.resultCode = resultCode;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("seed")
+    public Long seed;
+    public Run withSeed(Long seed) {
+        this.seed = seed;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("skipAppResign")
+    public Boolean skipAppResign;
+    public Run withSkipAppResign(Boolean skipAppResign) {
+        this.skipAppResign = skipAppResign;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonSerialize(contentUsing = DateTimeSerializer.class)
+    @JsonDeserialize(contentUsing = DateTimeDeserializer.class)
+    @JsonProperty("started")
+    public OffsetDateTime started;
+    public Run withStarted(OffsetDateTime started) {
+        this.started = started;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("status")
+    public ExecutionStatusEnum status;
+    public Run withStatus(ExecutionStatusEnum status) {
+        this.status = status;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonSerialize(contentUsing = DateTimeSerializer.class)
+    @JsonDeserialize(contentUsing = DateTimeDeserializer.class)
+    @JsonProperty("stopped")
+    public OffsetDateTime stopped;
+    public Run withStopped(OffsetDateTime stopped) {
+        this.stopped = stopped;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("testSpecArn")
+    public String testSpecArn;
+    public Run withTestSpecArn(String testSpecArn) {
+        this.testSpecArn = testSpecArn;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("totalJobs")
+    public Long totalJobs;
+    public Run withTotalJobs(Long totalJobs) {
+        this.totalJobs = totalJobs;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("type")
+    public TestTypeEnum type;
+    public Run withType(TestTypeEnum type) {
+        this.type = type;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("webUrl")
+    public String webUrl;
+    public Run withWebUrl(String webUrl) {
+        this.webUrl = webUrl;
+        return this;
+    }
+}

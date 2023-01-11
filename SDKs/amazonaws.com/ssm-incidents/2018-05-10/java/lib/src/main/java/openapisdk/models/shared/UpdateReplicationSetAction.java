@@ -1,0 +1,26 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * UpdateReplicationSetAction
+ * Details used when updating the replication set.
+**/
+public class UpdateReplicationSetAction {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("addRegionAction")
+    public AddRegionAction addRegionAction;
+    public UpdateReplicationSetAction withAddRegionAction(AddRegionAction addRegionAction) {
+        this.addRegionAction = addRegionAction;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("deleteRegionAction")
+    public DeleteRegionAction deleteRegionAction;
+    public UpdateReplicationSetAction withDeleteRegionAction(DeleteRegionAction deleteRegionAction) {
+        this.deleteRegionAction = deleteRegionAction;
+        return this;
+    }
+}

@@ -1,0 +1,22 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+/**
+ * VirtualGatewayPortMapping
+ * An object that represents a port mapping.
+**/
+public class VirtualGatewayPortMapping {
+    @JsonProperty("port")
+    public Long port;
+    public VirtualGatewayPortMapping withPort(Long port) {
+        this.port = port;
+        return this;
+    }
+    @JsonProperty("protocol")
+    public VirtualGatewayPortProtocolEnum protocol;
+    public VirtualGatewayPortMapping withProtocol(VirtualGatewayPortProtocolEnum protocol) {
+        this.protocol = protocol;
+        return this;
+    }
+}

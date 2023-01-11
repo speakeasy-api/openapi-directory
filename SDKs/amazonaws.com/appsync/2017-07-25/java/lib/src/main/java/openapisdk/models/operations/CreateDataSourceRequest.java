@@ -1,0 +1,22 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class CreateDataSourceRequest {
+    public CreateDataSourcePathParams pathParams;
+    public CreateDataSourceRequest withPathParams(CreateDataSourcePathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public CreateDataSourceHeaders headers;
+    public CreateDataSourceRequest withHeaders(CreateDataSourceHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public CreateDataSourceRequestBody request;
+    public CreateDataSourceRequest withRequest(CreateDataSourceRequestBody request) {
+        this.request = request;
+        return this;
+    }
+}

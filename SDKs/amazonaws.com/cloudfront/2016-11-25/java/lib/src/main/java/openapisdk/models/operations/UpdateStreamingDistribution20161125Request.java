@@ -1,0 +1,22 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class UpdateStreamingDistribution20161125Request {
+    public UpdateStreamingDistribution20161125PathParams pathParams;
+    public UpdateStreamingDistribution20161125Request withPathParams(UpdateStreamingDistribution20161125PathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public UpdateStreamingDistribution20161125Headers headers;
+    public UpdateStreamingDistribution20161125Request withHeaders(UpdateStreamingDistribution20161125Headers headers) {
+        this.headers = headers;
+        return this;
+    }
+    @SpeakeasyMetadata("request:mediaType=text/xml")
+    public byte[] request;
+    public UpdateStreamingDistribution20161125Request withRequest(byte[] request) {
+        this.request = request;
+        return this;
+    }
+}

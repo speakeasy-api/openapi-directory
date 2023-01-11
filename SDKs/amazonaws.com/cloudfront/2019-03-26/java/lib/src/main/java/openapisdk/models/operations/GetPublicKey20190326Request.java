@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class GetPublicKey20190326Request {
+    public GetPublicKey20190326PathParams pathParams;
+    public GetPublicKey20190326Request withPathParams(GetPublicKey20190326PathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public GetPublicKey20190326Headers headers;
+    public GetPublicKey20190326Request withHeaders(GetPublicKey20190326Headers headers) {
+        this.headers = headers;
+        return this;
+    }
+}

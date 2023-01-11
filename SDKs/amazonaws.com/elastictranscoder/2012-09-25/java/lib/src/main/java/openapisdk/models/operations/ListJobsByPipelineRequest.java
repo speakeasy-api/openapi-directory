@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class ListJobsByPipelineRequest {
+    public ListJobsByPipelinePathParams pathParams;
+    public ListJobsByPipelineRequest withPathParams(ListJobsByPipelinePathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public ListJobsByPipelineQueryParams queryParams;
+    public ListJobsByPipelineRequest withQueryParams(ListJobsByPipelineQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public ListJobsByPipelineHeaders headers;
+    public ListJobsByPipelineRequest withHeaders(ListJobsByPipelineHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+}

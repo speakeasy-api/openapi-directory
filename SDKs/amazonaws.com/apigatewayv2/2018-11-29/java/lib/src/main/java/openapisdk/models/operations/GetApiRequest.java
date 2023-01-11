@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class GetApiRequest {
+    public GetApiPathParams pathParams;
+    public GetApiRequest withPathParams(GetApiPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public GetApiHeaders headers;
+    public GetApiRequest withHeaders(GetApiHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+}

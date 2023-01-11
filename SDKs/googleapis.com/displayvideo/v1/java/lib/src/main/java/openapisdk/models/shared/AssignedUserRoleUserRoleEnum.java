@@ -1,0 +1,23 @@
+package openapisdk.models.shared;
+
+
+public enum AssignedUserRoleUserRoleEnum {
+    USER_ROLE_UNSPECIFIED("USER_ROLE_UNSPECIFIED"),
+    ADMIN("ADMIN"),
+    ADMIN_PARTNER_CLIENT("ADMIN_PARTNER_CLIENT"),
+    STANDARD("STANDARD"),
+    STANDARD_PLANNER("STANDARD_PLANNER"),
+    STANDARD_PLANNER_LIMITED("STANDARD_PLANNER_LIMITED"),
+    STANDARD_PARTNER_CLIENT("STANDARD_PARTNER_CLIENT"),
+    READ_ONLY("READ_ONLY"),
+    REPORTING_ONLY("REPORTING_ONLY"),
+    LIMITED_REPORTING_ONLY("LIMITED_REPORTING_ONLY"),
+    CREATIVE("CREATIVE"),
+    CREATIVE_ADMIN("CREATIVE_ADMIN");
+
+    public final String value;
+
+    private AssignedUserRoleUserRoleEnum(String value) {
+        this.value = value;
+    }
+}

@@ -1,0 +1,61 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * AwsElasticsearchDomainServiceSoftwareOptions
+ * Information about the state of the domain relative to the latest service software.
+**/
+public class AwsElasticsearchDomainServiceSoftwareOptions {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("AutomatedUpdateDate")
+    public String automatedUpdateDate;
+    public AwsElasticsearchDomainServiceSoftwareOptions withAutomatedUpdateDate(String automatedUpdateDate) {
+        this.automatedUpdateDate = automatedUpdateDate;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Cancellable")
+    public Boolean cancellable;
+    public AwsElasticsearchDomainServiceSoftwareOptions withCancellable(Boolean cancellable) {
+        this.cancellable = cancellable;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("CurrentVersion")
+    public String currentVersion;
+    public AwsElasticsearchDomainServiceSoftwareOptions withCurrentVersion(String currentVersion) {
+        this.currentVersion = currentVersion;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Description")
+    public String description;
+    public AwsElasticsearchDomainServiceSoftwareOptions withDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("NewVersion")
+    public String newVersion;
+    public AwsElasticsearchDomainServiceSoftwareOptions withNewVersion(String newVersion) {
+        this.newVersion = newVersion;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("UpdateAvailable")
+    public Boolean updateAvailable;
+    public AwsElasticsearchDomainServiceSoftwareOptions withUpdateAvailable(Boolean updateAvailable) {
+        this.updateAvailable = updateAvailable;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("UpdateStatus")
+    public String updateStatus;
+    public AwsElasticsearchDomainServiceSoftwareOptions withUpdateStatus(String updateStatus) {
+        this.updateStatus = updateStatus;
+        return this;
+    }
+}

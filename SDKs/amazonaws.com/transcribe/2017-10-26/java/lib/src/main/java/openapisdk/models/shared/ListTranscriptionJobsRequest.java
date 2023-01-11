@@ -1,0 +1,36 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class ListTranscriptionJobsRequest {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("JobNameContains")
+    public String jobNameContains;
+    public ListTranscriptionJobsRequest withJobNameContains(String jobNameContains) {
+        this.jobNameContains = jobNameContains;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("MaxResults")
+    public Long maxResults;
+    public ListTranscriptionJobsRequest withMaxResults(Long maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("NextToken")
+    public String nextToken;
+    public ListTranscriptionJobsRequest withNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Status")
+    public TranscriptionJobStatusEnum status;
+    public ListTranscriptionJobsRequest withStatus(TranscriptionJobStatusEnum status) {
+        this.status = status;
+        return this;
+    }
+}

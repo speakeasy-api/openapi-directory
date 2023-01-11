@@ -1,0 +1,29 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class ImageFileCreateEntry {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Contents")
+    public String contents;
+    public ImageFileCreateEntry withContents(String contents) {
+        this.contents = contents;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Name")
+    public String name;
+    public ImageFileCreateEntry withName(String name) {
+        this.name = name;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("TagIds")
+    public String[] tagIds;
+    public ImageFileCreateEntry withTagIds(String[] tagIds) {
+        this.tagIds = tagIds;
+        return this;
+    }
+}

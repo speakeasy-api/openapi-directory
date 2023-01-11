@@ -1,0 +1,27 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class DfareportingCreativeAssetsInsertRequest {
+    public DfareportingCreativeAssetsInsertPathParams pathParams;
+    public DfareportingCreativeAssetsInsertRequest withPathParams(DfareportingCreativeAssetsInsertPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public DfareportingCreativeAssetsInsertQueryParams queryParams;
+    public DfareportingCreativeAssetsInsertRequest withQueryParams(DfareportingCreativeAssetsInsertQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    @SpeakeasyMetadata("request:mediaType=application/octet-stream")
+    public byte[] request;
+    public DfareportingCreativeAssetsInsertRequest withRequest(byte[] request) {
+        this.request = request;
+        return this;
+    }
+    public DfareportingCreativeAssetsInsertSecurity security;
+    public DfareportingCreativeAssetsInsertRequest withSecurity(DfareportingCreativeAssetsInsertSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

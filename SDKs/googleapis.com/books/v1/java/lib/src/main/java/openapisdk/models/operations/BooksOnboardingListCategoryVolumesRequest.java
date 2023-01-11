@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class BooksOnboardingListCategoryVolumesRequest {
+    public BooksOnboardingListCategoryVolumesQueryParams queryParams;
+    public BooksOnboardingListCategoryVolumesRequest withQueryParams(BooksOnboardingListCategoryVolumesQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public BooksOnboardingListCategoryVolumesSecurity security;
+    public BooksOnboardingListCategoryVolumesRequest withSecurity(BooksOnboardingListCategoryVolumesSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

@@ -1,0 +1,75 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * KeyUsage
+ * Defines one or more purposes for which the key contained in the certificate can be used. Default value for each option is false.
+**/
+public class KeyUsage {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("CRLSign")
+    public Boolean crlSign;
+    public KeyUsage withCrlSign(Boolean crlSign) {
+        this.crlSign = crlSign;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("DataEncipherment")
+    public Boolean dataEncipherment;
+    public KeyUsage withDataEncipherment(Boolean dataEncipherment) {
+        this.dataEncipherment = dataEncipherment;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("DecipherOnly")
+    public Boolean decipherOnly;
+    public KeyUsage withDecipherOnly(Boolean decipherOnly) {
+        this.decipherOnly = decipherOnly;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("DigitalSignature")
+    public Boolean digitalSignature;
+    public KeyUsage withDigitalSignature(Boolean digitalSignature) {
+        this.digitalSignature = digitalSignature;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("EncipherOnly")
+    public Boolean encipherOnly;
+    public KeyUsage withEncipherOnly(Boolean encipherOnly) {
+        this.encipherOnly = encipherOnly;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("KeyAgreement")
+    public Boolean keyAgreement;
+    public KeyUsage withKeyAgreement(Boolean keyAgreement) {
+        this.keyAgreement = keyAgreement;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("KeyCertSign")
+    public Boolean keyCertSign;
+    public KeyUsage withKeyCertSign(Boolean keyCertSign) {
+        this.keyCertSign = keyCertSign;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("KeyEncipherment")
+    public Boolean keyEncipherment;
+    public KeyUsage withKeyEncipherment(Boolean keyEncipherment) {
+        this.keyEncipherment = keyEncipherment;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("NonRepudiation")
+    public Boolean nonRepudiation;
+    public KeyUsage withNonRepudiation(Boolean nonRepudiation) {
+        this.nonRepudiation = nonRepudiation;
+        return this;
+    }
+}

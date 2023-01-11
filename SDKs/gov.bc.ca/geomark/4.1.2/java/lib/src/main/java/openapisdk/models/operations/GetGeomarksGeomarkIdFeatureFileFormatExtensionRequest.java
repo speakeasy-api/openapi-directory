@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class GetGeomarksGeomarkIdFeatureFileFormatExtensionRequest {
+    public GetGeomarksGeomarkIdFeatureFileFormatExtensionPathParams pathParams;
+    public GetGeomarksGeomarkIdFeatureFileFormatExtensionRequest withPathParams(GetGeomarksGeomarkIdFeatureFileFormatExtensionPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public GetGeomarksGeomarkIdFeatureFileFormatExtensionQueryParams queryParams;
+    public GetGeomarksGeomarkIdFeatureFileFormatExtensionRequest withQueryParams(GetGeomarksGeomarkIdFeatureFileFormatExtensionQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+}

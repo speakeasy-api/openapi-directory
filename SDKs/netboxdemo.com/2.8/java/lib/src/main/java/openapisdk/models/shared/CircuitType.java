@@ -1,0 +1,41 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class CircuitType {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("circuit_count")
+    public Long circuitCount;
+    public CircuitType withCircuitCount(Long circuitCount) {
+        this.circuitCount = circuitCount;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("description")
+    public String description;
+    public CircuitType withDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("id")
+    public Long id;
+    public CircuitType withId(Long id) {
+        this.id = id;
+        return this;
+    }
+    @JsonProperty("name")
+    public String name;
+    public CircuitType withName(String name) {
+        this.name = name;
+        return this;
+    }
+    @JsonProperty("slug")
+    public String slug;
+    public CircuitType withSlug(String slug) {
+        this.slug = slug;
+        return this;
+    }
+}

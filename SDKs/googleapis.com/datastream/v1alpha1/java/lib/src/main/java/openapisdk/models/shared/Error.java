@@ -1,0 +1,47 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * Error
+ * Represent a user-facing Error.
+**/
+public class Error {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("details")
+    public java.util.Map<String, String> details;
+    public Error withDetails(java.util.Map<String, String> details) {
+        this.details = details;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("errorTime")
+    public String errorTime;
+    public Error withErrorTime(String errorTime) {
+        this.errorTime = errorTime;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("errorUuid")
+    public String errorUuid;
+    public Error withErrorUuid(String errorUuid) {
+        this.errorUuid = errorUuid;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("message")
+    public String message;
+    public Error withMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("reason")
+    public String reason;
+    public Error withReason(String reason) {
+        this.reason = reason;
+        return this;
+    }
+}

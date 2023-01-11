@@ -1,0 +1,34 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+/**
+ * ConnectAmazonBuyShippingRequestBody
+ * An Amazon account information request body
+**/
+public class ConnectAmazonBuyShippingRequestBody {
+    @JsonProperty("email")
+    public String email;
+    public ConnectAmazonBuyShippingRequestBody withEmail(String email) {
+        this.email = email;
+        return this;
+    }
+    @JsonProperty("merchant_seller_id")
+    public String merchantSellerId;
+    public ConnectAmazonBuyShippingRequestBody withMerchantSellerId(String merchantSellerId) {
+        this.merchantSellerId = merchantSellerId;
+        return this;
+    }
+    @JsonProperty("mws_auth_token")
+    public String mwsAuthToken;
+    public ConnectAmazonBuyShippingRequestBody withMwsAuthToken(String mwsAuthToken) {
+        this.mwsAuthToken = mwsAuthToken;
+        return this;
+    }
+    @JsonProperty("nickname")
+    public String nickname;
+    public ConnectAmazonBuyShippingRequestBody withNickname(String nickname) {
+        this.nickname = nickname;
+        return this;
+    }
+}

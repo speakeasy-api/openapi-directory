@@ -1,0 +1,18 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class FirebaseappcheckProjectsAppsSafetyNetConfigBatchGetSecurity {
+    @SpeakeasyMetadata("security:option=true")
+    public FirebaseappcheckProjectsAppsSafetyNetConfigBatchGetSecurityOption1 option1;
+    public FirebaseappcheckProjectsAppsSafetyNetConfigBatchGetSecurity withOption1(FirebaseappcheckProjectsAppsSafetyNetConfigBatchGetSecurityOption1 option1) {
+        this.option1 = option1;
+        return this;
+    }
+    @SpeakeasyMetadata("security:option=true")
+    public FirebaseappcheckProjectsAppsSafetyNetConfigBatchGetSecurityOption2 option2;
+    public FirebaseappcheckProjectsAppsSafetyNetConfigBatchGetSecurity withOption2(FirebaseappcheckProjectsAppsSafetyNetConfigBatchGetSecurityOption2 option2) {
+        this.option2 = option2;
+        return this;
+    }
+}

@@ -1,0 +1,20 @@
+package openapisdk.models.shared;
+
+
+
+/**
+ * ClusterIamRoleList
+ * An Identity and Access Management (IAM) role that can be used by the associated Amazon Redshift cluster to access other Amazon Web Services services.
+**/
+public class ClusterIamRoleList {
+    public String applyStatus;
+    public ClusterIamRoleList withApplyStatus(String applyStatus) {
+        this.applyStatus = applyStatus;
+        return this;
+    }
+    public String iamRoleArn;
+    public ClusterIamRoleList withIamRoleArn(String iamRoleArn) {
+        this.iamRoleArn = iamRoleArn;
+        return this;
+    }
+}

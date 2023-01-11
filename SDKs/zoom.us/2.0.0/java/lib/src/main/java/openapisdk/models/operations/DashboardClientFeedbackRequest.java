@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class DashboardClientFeedbackRequest {
+    public DashboardClientFeedbackQueryParams queryParams;
+    public DashboardClientFeedbackRequest withQueryParams(DashboardClientFeedbackQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public DashboardClientFeedbackSecurity security;
+    public DashboardClientFeedbackRequest withSecurity(DashboardClientFeedbackSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

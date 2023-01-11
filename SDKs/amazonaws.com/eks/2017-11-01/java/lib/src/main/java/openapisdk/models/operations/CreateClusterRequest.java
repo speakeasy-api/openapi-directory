@@ -1,0 +1,17 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class CreateClusterRequest {
+    public CreateClusterHeaders headers;
+    public CreateClusterRequest withHeaders(CreateClusterHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public CreateClusterRequestBody request;
+    public CreateClusterRequest withRequest(CreateClusterRequestBody request) {
+        this.request = request;
+        return this;
+    }
+}

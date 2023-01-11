@@ -1,0 +1,12 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+public class ConfirmPublicVirtualInterfaceRequest {
+    @JsonProperty("virtualInterfaceId")
+    public String virtualInterfaceId;
+    public ConfirmPublicVirtualInterfaceRequest withVirtualInterfaceId(String virtualInterfaceId) {
+        this.virtualInterfaceId = virtualInterfaceId;
+        return this;
+    }
+}

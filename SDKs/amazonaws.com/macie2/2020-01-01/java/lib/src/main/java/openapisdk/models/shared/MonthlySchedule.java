@@ -1,0 +1,19 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * MonthlySchedule
+ * Specifies a monthly recurrence pattern for running a classification job.
+**/
+public class MonthlySchedule {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("dayOfMonth")
+    public Long dayOfMonth;
+    public MonthlySchedule withDayOfMonth(Long dayOfMonth) {
+        this.dayOfMonth = dayOfMonth;
+        return this;
+    }
+}

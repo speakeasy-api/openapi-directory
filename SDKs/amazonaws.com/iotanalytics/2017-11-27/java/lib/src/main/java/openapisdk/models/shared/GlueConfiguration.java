@@ -1,0 +1,22 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+/**
+ * GlueConfiguration
+ * Configuration information for coordination with Glue, a fully managed extract, transform and load (ETL) service.
+**/
+public class GlueConfiguration {
+    @JsonProperty("databaseName")
+    public String databaseName;
+    public GlueConfiguration withDatabaseName(String databaseName) {
+        this.databaseName = databaseName;
+        return this;
+    }
+    @JsonProperty("tableName")
+    public String tableName;
+    public GlueConfiguration withTableName(String tableName) {
+        this.tableName = tableName;
+        return this;
+    }
+}

@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class DeleteDistribution20180618Request {
+    public DeleteDistribution20180618PathParams pathParams;
+    public DeleteDistribution20180618Request withPathParams(DeleteDistribution20180618PathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public DeleteDistribution20180618Headers headers;
+    public DeleteDistribution20180618Request withHeaders(DeleteDistribution20180618Headers headers) {
+        this.headers = headers;
+        return this;
+    }
+}

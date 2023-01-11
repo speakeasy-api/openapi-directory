@@ -1,0 +1,57 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class BaseVnic {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("entity_id")
+    public String entityId;
+    public BaseVnic withEntityId(String entityId) {
+        this.entityId = entityId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("entity_type")
+    public EntityTypeEnum entityType;
+    public BaseVnic withEntityType(EntityTypeEnum entityType) {
+        this.entityType = entityType;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ip_addresses")
+    public IpV4Address[] ipAddresses;
+    public BaseVnic withIpAddresses(IpV4Address[] ipAddresses) {
+        this.ipAddresses = ipAddresses;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("layer2_network")
+    public Reference layer2Network;
+    public BaseVnic withLayer2Network(Reference layer2Network) {
+        this.layer2Network = layer2Network;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("name")
+    public String name;
+    public BaseVnic withName(String name) {
+        this.name = name;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("vlan")
+    public Vlan vlan;
+    public BaseVnic withVlan(Vlan vlan) {
+        this.vlan = vlan;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("vm")
+    public Reference vm;
+    public BaseVnic withVm(Reference vm) {
+        this.vm = vm;
+        return this;
+    }
+}

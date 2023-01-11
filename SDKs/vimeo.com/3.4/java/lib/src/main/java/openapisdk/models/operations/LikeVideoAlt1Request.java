@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class LikeVideoAlt1Request {
+    public LikeVideoAlt1PathParams pathParams;
+    public LikeVideoAlt1Request withPathParams(LikeVideoAlt1PathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public LikeVideoAlt1Security security;
+    public LikeVideoAlt1Request withSecurity(LikeVideoAlt1Security security) {
+        this.security = security;
+        return this;
+    }
+}

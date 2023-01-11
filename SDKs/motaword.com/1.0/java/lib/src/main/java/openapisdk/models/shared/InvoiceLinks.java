@@ -1,0 +1,57 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class InvoiceLinks {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("corporate")
+    public Href corporate;
+    public InvoiceLinks withCorporate(Href corporate) {
+        this.corporate = corporate;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("html")
+    public Href html;
+    public InvoiceLinks withHtml(Href html) {
+        this.html = html;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("json")
+    public Href json;
+    public InvoiceLinks withJson(Href json) {
+        this.json = json;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("pdf")
+    public Href pdf;
+    public InvoiceLinks withPdf(Href pdf) {
+        this.pdf = pdf;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("project")
+    public Href project;
+    public InvoiceLinks withProject(Href project) {
+        this.project = project;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("self")
+    public Href self;
+    public InvoiceLinks withSelf(Href self) {
+        this.self = self;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("view")
+    public Href view;
+    public InvoiceLinks withView(Href view) {
+        this.view = view;
+        return this;
+    }
+}

@@ -1,0 +1,33 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * SensitiveDataDetections
+ * The list of detected instances of sensitive data.
+**/
+public class SensitiveDataDetections {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Count")
+    public Long count;
+    public SensitiveDataDetections withCount(Long count) {
+        this.count = count;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Occurrences")
+    public Occurrences occurrences;
+    public SensitiveDataDetections withOccurrences(Occurrences occurrences) {
+        this.occurrences = occurrences;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Type")
+    public String type;
+    public SensitiveDataDetections withType(String type) {
+        this.type = type;
+        return this;
+    }
+}

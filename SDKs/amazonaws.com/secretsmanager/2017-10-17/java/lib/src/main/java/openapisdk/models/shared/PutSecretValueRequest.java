@@ -1,0 +1,42 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class PutSecretValueRequest {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ClientRequestToken")
+    public String clientRequestToken;
+    public PutSecretValueRequest withClientRequestToken(String clientRequestToken) {
+        this.clientRequestToken = clientRequestToken;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("SecretBinary")
+    public String secretBinary;
+    public PutSecretValueRequest withSecretBinary(String secretBinary) {
+        this.secretBinary = secretBinary;
+        return this;
+    }
+    @JsonProperty("SecretId")
+    public String secretId;
+    public PutSecretValueRequest withSecretId(String secretId) {
+        this.secretId = secretId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("SecretString")
+    public String secretString;
+    public PutSecretValueRequest withSecretString(String secretString) {
+        this.secretString = secretString;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("VersionStages")
+    public String[] versionStages;
+    public PutSecretValueRequest withVersionStages(String[] versionStages) {
+        this.versionStages = versionStages;
+        return this;
+    }
+}

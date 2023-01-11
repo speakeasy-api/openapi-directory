@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class DfareportingOrdersListRequest {
+    public DfareportingOrdersListPathParams pathParams;
+    public DfareportingOrdersListRequest withPathParams(DfareportingOrdersListPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public DfareportingOrdersListQueryParams queryParams;
+    public DfareportingOrdersListRequest withQueryParams(DfareportingOrdersListQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public DfareportingOrdersListSecurity security;
+    public DfareportingOrdersListRequest withSecurity(DfareportingOrdersListSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

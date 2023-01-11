@@ -1,0 +1,22 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class PutSessionRequest {
+    public PutSessionPathParams pathParams;
+    public PutSessionRequest withPathParams(PutSessionPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public PutSessionHeaders headers;
+    public PutSessionRequest withHeaders(PutSessionHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public PutSessionRequestBody request;
+    public PutSessionRequest withRequest(PutSessionRequestBody request) {
+        this.request = request;
+        return this;
+    }
+}

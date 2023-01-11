@@ -1,0 +1,94 @@
+package openapisdk.models.shared;
+
+import java.time.OffsetDateTime;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import openapisdk.utils.DateTimeSerializer;
+import openapisdk.utils.DateTimeDeserializer;
+
+public class PulseResponse {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("learnerFirstName")
+    public String learnerFirstName;
+    public PulseResponse withLearnerFirstName(String learnerFirstName) {
+        this.learnerFirstName = learnerFirstName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("learnerId")
+    public String learnerId;
+    public PulseResponse withLearnerId(String learnerId) {
+        this.learnerId = learnerId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("learnerLastName")
+    public String learnerLastName;
+    public PulseResponse withLearnerLastName(String learnerLastName) {
+        this.learnerLastName = learnerLastName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("pulseBaseId")
+    public String pulseBaseId;
+    public PulseResponse withPulseBaseId(String pulseBaseId) {
+        this.pulseBaseId = pulseBaseId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("pulseInstanceId")
+    public String pulseInstanceId;
+    public PulseResponse withPulseInstanceId(String pulseInstanceId) {
+        this.pulseInstanceId = pulseInstanceId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("pulseQuestion")
+    public String pulseQuestion;
+    public PulseResponse withPulseQuestion(String pulseQuestion) {
+        this.pulseQuestion = pulseQuestion;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("pulseRunDurationMinutes")
+    public Long pulseRunDurationMinutes;
+    public PulseResponse withPulseRunDurationMinutes(Long pulseRunDurationMinutes) {
+        this.pulseRunDurationMinutes = pulseRunDurationMinutes;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonSerialize(contentUsing = DateTimeSerializer.class)
+    @JsonDeserialize(contentUsing = DateTimeDeserializer.class)
+    @JsonProperty("pulseRunStart")
+    public OffsetDateTime pulseRunStart;
+    public PulseResponse withPulseRunStart(OffsetDateTime pulseRunStart) {
+        this.pulseRunStart = pulseRunStart;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("pulseType")
+    public String pulseType;
+    public PulseResponse withPulseType(String pulseType) {
+        this.pulseType = pulseType;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("response")
+    public PulseAnswer response;
+    public PulseResponse withResponse(PulseAnswer response) {
+        this.response = response;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonSerialize(contentUsing = DateTimeSerializer.class)
+    @JsonDeserialize(contentUsing = DateTimeDeserializer.class)
+    @JsonProperty("responseTime")
+    public OffsetDateTime responseTime;
+    public PulseResponse withResponseTime(OffsetDateTime responseTime) {
+        this.responseTime = responseTime;
+        return this;
+    }
+}

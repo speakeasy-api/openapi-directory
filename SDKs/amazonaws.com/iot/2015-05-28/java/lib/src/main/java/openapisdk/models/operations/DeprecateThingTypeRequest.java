@@ -1,0 +1,22 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class DeprecateThingTypeRequest {
+    public DeprecateThingTypePathParams pathParams;
+    public DeprecateThingTypeRequest withPathParams(DeprecateThingTypePathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public DeprecateThingTypeHeaders headers;
+    public DeprecateThingTypeRequest withHeaders(DeprecateThingTypeHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public DeprecateThingTypeRequestBody request;
+    public DeprecateThingTypeRequest withRequest(DeprecateThingTypeRequestBody request) {
+        this.request = request;
+        return this;
+    }
+}

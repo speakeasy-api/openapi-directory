@@ -1,0 +1,18 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class EndpointUnfollowArtistsUsersHeaders {
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Authorization")
+    public String authorization;
+    public EndpointUnfollowArtistsUsersHeaders withAuthorization(String authorization) {
+        this.authorization = authorization;
+        return this;
+    }
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public EndpointUnfollowArtistsUsersHeaders withContentType(String contentType) {
+        this.contentType = contentType;
+        return this;
+    }
+}

@@ -1,0 +1,22 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+/**
+ * Tag
+ * Metadata assigned to an AWS IoT Things Graph resource consisting of a key-value pair.
+**/
+public class Tag {
+    @JsonProperty("key")
+    public String key;
+    public Tag withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    @JsonProperty("value")
+    public String value;
+    public Tag withValue(String value) {
+        this.value = value;
+        return this;
+    }
+}

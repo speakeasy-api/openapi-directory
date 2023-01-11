@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class DeletePredictionRequest {
+    public DeletePredictionPathParams pathParams;
+    public DeletePredictionRequest withPathParams(DeletePredictionPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public DeletePredictionQueryParams queryParams;
+    public DeletePredictionRequest withQueryParams(DeletePredictionQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public DeletePredictionHeaders headers;
+    public DeletePredictionRequest withHeaders(DeletePredictionHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+}

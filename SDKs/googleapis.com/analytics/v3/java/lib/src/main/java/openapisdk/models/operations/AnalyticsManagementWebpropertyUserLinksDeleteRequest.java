@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class AnalyticsManagementWebpropertyUserLinksDeleteRequest {
+    public AnalyticsManagementWebpropertyUserLinksDeletePathParams pathParams;
+    public AnalyticsManagementWebpropertyUserLinksDeleteRequest withPathParams(AnalyticsManagementWebpropertyUserLinksDeletePathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public AnalyticsManagementWebpropertyUserLinksDeleteQueryParams queryParams;
+    public AnalyticsManagementWebpropertyUserLinksDeleteRequest withQueryParams(AnalyticsManagementWebpropertyUserLinksDeleteQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public AnalyticsManagementWebpropertyUserLinksDeleteSecurity security;
+    public AnalyticsManagementWebpropertyUserLinksDeleteRequest withSecurity(AnalyticsManagementWebpropertyUserLinksDeleteSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

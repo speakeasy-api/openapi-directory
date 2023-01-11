@@ -1,0 +1,17 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class UpdateProjectRequest {
+    public UpdateProjectPathParams pathParams;
+    public UpdateProjectRequest withPathParams(UpdateProjectPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    @SpeakeasyMetadata("request:mediaType=multipart/form-data")
+    public UpdateProjectRequestBody request;
+    public UpdateProjectRequest withRequest(UpdateProjectRequestBody request) {
+        this.request = request;
+        return this;
+    }
+}

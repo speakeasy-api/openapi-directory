@@ -1,0 +1,24 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+public class UpdateRuleGroupRequest {
+    @JsonProperty("ChangeToken")
+    public String changeToken;
+    public UpdateRuleGroupRequest withChangeToken(String changeToken) {
+        this.changeToken = changeToken;
+        return this;
+    }
+    @JsonProperty("RuleGroupId")
+    public String ruleGroupId;
+    public UpdateRuleGroupRequest withRuleGroupId(String ruleGroupId) {
+        this.ruleGroupId = ruleGroupId;
+        return this;
+    }
+    @JsonProperty("Updates")
+    public RuleGroupUpdate[] updates;
+    public UpdateRuleGroupRequest withUpdates(RuleGroupUpdate[] updates) {
+        this.updates = updates;
+        return this;
+    }
+}

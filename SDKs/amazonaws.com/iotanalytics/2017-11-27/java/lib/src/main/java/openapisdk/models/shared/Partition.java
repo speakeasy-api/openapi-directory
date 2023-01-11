@@ -1,0 +1,16 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+/**
+ * Partition
+ *  A partition dimension defined by an attribute. 
+**/
+public class Partition {
+    @JsonProperty("attributeName")
+    public String attributeName;
+    public Partition withAttributeName(String attributeName) {
+        this.attributeName = attributeName;
+        return this;
+    }
+}

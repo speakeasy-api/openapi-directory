@@ -1,0 +1,27 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class FirebaseappcheckProjectsAppsExchangeAppAttestAttestationRequest {
+    public FirebaseappcheckProjectsAppsExchangeAppAttestAttestationPathParams pathParams;
+    public FirebaseappcheckProjectsAppsExchangeAppAttestAttestationRequest withPathParams(FirebaseappcheckProjectsAppsExchangeAppAttestAttestationPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public FirebaseappcheckProjectsAppsExchangeAppAttestAttestationQueryParams queryParams;
+    public FirebaseappcheckProjectsAppsExchangeAppAttestAttestationRequest withQueryParams(FirebaseappcheckProjectsAppsExchangeAppAttestAttestationQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public openapisdk.models.shared.GoogleFirebaseAppcheckV1betaExchangeAppAttestAttestationRequest request;
+    public FirebaseappcheckProjectsAppsExchangeAppAttestAttestationRequest withRequest(openapisdk.models.shared.GoogleFirebaseAppcheckV1betaExchangeAppAttestAttestationRequest request) {
+        this.request = request;
+        return this;
+    }
+    public FirebaseappcheckProjectsAppsExchangeAppAttestAttestationSecurity security;
+    public FirebaseappcheckProjectsAppsExchangeAppAttestAttestationRequest withSecurity(FirebaseappcheckProjectsAppsExchangeAppAttestAttestationSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

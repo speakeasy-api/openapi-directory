@@ -1,0 +1,40 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * S3Target
+ * Specifies a data store in Amazon Simple Storage Service (Amazon S3).
+**/
+public class S3Target {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ConnectionName")
+    public String connectionName;
+    public S3Target withConnectionName(String connectionName) {
+        this.connectionName = connectionName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Exclusions")
+    public String[] exclusions;
+    public S3Target withExclusions(String[] exclusions) {
+        this.exclusions = exclusions;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Path")
+    public String path;
+    public S3Target withPath(String path) {
+        this.path = path;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("SampleSize")
+    public Long sampleSize;
+    public S3Target withSampleSize(Long sampleSize) {
+        this.sampleSize = sampleSize;
+        return this;
+    }
+}

@@ -1,0 +1,48 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class AuthResponse {
+    @JsonProperty("access_token")
+    public String accessToken;
+    public AuthResponse withAccessToken(String accessToken) {
+        this.accessToken = accessToken;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("entityIds")
+    public String[] entityIds;
+    public AuthResponse withEntityIds(String[] entityIds) {
+        this.entityIds = entityIds;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("expires_in")
+    public Double expiresIn;
+    public AuthResponse withExpiresIn(Double expiresIn) {
+        this.expiresIn = expiresIn;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("refresh_token")
+    public String refreshToken;
+    public AuthResponse withRefreshToken(String refreshToken) {
+        this.refreshToken = refreshToken;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("scope")
+    public String scope;
+    public AuthResponse withScope(String scope) {
+        this.scope = scope;
+        return this;
+    }
+    @JsonProperty("token_type")
+    public String tokenType;
+    public AuthResponse withTokenType(String tokenType) {
+        this.tokenType = tokenType;
+        return this;
+    }
+}

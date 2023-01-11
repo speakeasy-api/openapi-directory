@@ -1,0 +1,19 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * GoogleCloudDatalabelingV1beta1ConfusionMatrix
+ * Confusion matrix of the model running the classification. Only applicable when the metrics entry aggregates multiple labels. Not applicable when the entry is for a single label.
+**/
+public class GoogleCloudDatalabelingV1beta1ConfusionMatrix {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("row")
+    public GoogleCloudDatalabelingV1beta1Row[] row;
+    public GoogleCloudDatalabelingV1beta1ConfusionMatrix withRow(GoogleCloudDatalabelingV1beta1Row[] row) {
+        this.row = row;
+        return this;
+    }
+}

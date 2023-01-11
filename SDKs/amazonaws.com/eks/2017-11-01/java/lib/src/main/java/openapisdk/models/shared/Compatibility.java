@@ -1,0 +1,33 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * Compatibility
+ * Compatibility information.
+**/
+public class Compatibility {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("clusterVersion")
+    public String clusterVersion;
+    public Compatibility withClusterVersion(String clusterVersion) {
+        this.clusterVersion = clusterVersion;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("defaultVersion")
+    public Boolean defaultVersion;
+    public Compatibility withDefaultVersion(Boolean defaultVersion) {
+        this.defaultVersion = defaultVersion;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("platformVersions")
+    public String[] platformVersions;
+    public Compatibility withPlatformVersions(String[] platformVersions) {
+        this.platformVersions = platformVersions;
+        return this;
+    }
+}

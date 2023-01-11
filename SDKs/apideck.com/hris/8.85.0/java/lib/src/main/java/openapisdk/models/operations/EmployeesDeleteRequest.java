@@ -1,0 +1,26 @@
+package openapisdk.models.operations;
+
+
+
+public class EmployeesDeleteRequest {
+    public EmployeesDeletePathParams pathParams;
+    public EmployeesDeleteRequest withPathParams(EmployeesDeletePathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public EmployeesDeleteQueryParams queryParams;
+    public EmployeesDeleteRequest withQueryParams(EmployeesDeleteQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public EmployeesDeleteHeaders headers;
+    public EmployeesDeleteRequest withHeaders(EmployeesDeleteHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+    public EmployeesDeleteSecurity security;
+    public EmployeesDeleteRequest withSecurity(EmployeesDeleteSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

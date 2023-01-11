@@ -1,0 +1,18 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+public class CreateTimeOffPeriodResponse {
+    @JsonProperty("data")
+    public CreateTimeOffPeriodResponseData data;
+    public CreateTimeOffPeriodResponse withData(CreateTimeOffPeriodResponseData data) {
+        this.data = data;
+        return this;
+    }
+    @JsonProperty("success")
+    public Boolean success;
+    public CreateTimeOffPeriodResponse withSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+}

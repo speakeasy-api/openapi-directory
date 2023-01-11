@@ -1,0 +1,26 @@
+package openapisdk.models.operations;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * CreateNodegroupRequestBodyRemoteAccess
+ * An object representing the remote access configuration for the managed node group.
+**/
+public class CreateNodegroupRequestBodyRemoteAccess {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ec2SshKey")
+    public String ec2SshKey;
+    public CreateNodegroupRequestBodyRemoteAccess withEc2SshKey(String ec2SshKey) {
+        this.ec2SshKey = ec2SshKey;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("sourceSecurityGroups")
+    public String[] sourceSecurityGroups;
+    public CreateNodegroupRequestBodyRemoteAccess withSourceSecurityGroups(String[] sourceSecurityGroups) {
+        this.sourceSecurityGroups = sourceSecurityGroups;
+        return this;
+    }
+}

@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class GetMatchSimpleRequest {
+    public GetMatchSimplePathParams pathParams;
+    public GetMatchSimpleRequest withPathParams(GetMatchSimplePathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public GetMatchSimpleHeaders headers;
+    public GetMatchSimpleRequest withHeaders(GetMatchSimpleHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+    public GetMatchSimpleSecurity security;
+    public GetMatchSimpleRequest withSecurity(GetMatchSimpleSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

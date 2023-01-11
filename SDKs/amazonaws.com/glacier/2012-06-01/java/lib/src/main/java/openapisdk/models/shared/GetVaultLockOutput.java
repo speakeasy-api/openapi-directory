@@ -1,0 +1,40 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * GetVaultLockOutput
+ * Contains the Amazon S3 Glacier response to your request.
+**/
+public class GetVaultLockOutput {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("CreationDate")
+    public String creationDate;
+    public GetVaultLockOutput withCreationDate(String creationDate) {
+        this.creationDate = creationDate;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ExpirationDate")
+    public String expirationDate;
+    public GetVaultLockOutput withExpirationDate(String expirationDate) {
+        this.expirationDate = expirationDate;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Policy")
+    public String policy;
+    public GetVaultLockOutput withPolicy(String policy) {
+        this.policy = policy;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("State")
+    public String state;
+    public GetVaultLockOutput withState(String state) {
+        this.state = state;
+        return this;
+    }
+}

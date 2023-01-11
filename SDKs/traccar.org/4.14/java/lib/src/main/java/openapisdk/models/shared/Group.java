@@ -1,0 +1,36 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class Group {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("attributes")
+    public java.util.Map<String, Object> attributes;
+    public Group withAttributes(java.util.Map<String, Object> attributes) {
+        this.attributes = attributes;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("groupId")
+    public Long groupId;
+    public Group withGroupId(Long groupId) {
+        this.groupId = groupId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("id")
+    public Long id;
+    public Group withId(Long id) {
+        this.id = id;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("name")
+    public String name;
+    public Group withName(String name) {
+        this.name = name;
+        return this;
+    }
+}

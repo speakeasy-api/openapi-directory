@@ -1,0 +1,33 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * SourceCredentialsInfo
+ *  Information about the credentials for a GitHub, GitHub Enterprise, or Bitbucket repository. 
+**/
+public class SourceCredentialsInfo {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("arn")
+    public String arn;
+    public SourceCredentialsInfo withArn(String arn) {
+        this.arn = arn;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("authType")
+    public AuthTypeEnum authType;
+    public SourceCredentialsInfo withAuthType(AuthTypeEnum authType) {
+        this.authType = authType;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("serverType")
+    public ServerTypeEnum serverType;
+    public SourceCredentialsInfo withServerType(ServerTypeEnum serverType) {
+        this.serverType = serverType;
+        return this;
+    }
+}

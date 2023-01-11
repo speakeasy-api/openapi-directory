@@ -1,0 +1,22 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+/**
+ * FeatureValue
+ * The value associated with a feature.
+**/
+public class FeatureValue {
+    @JsonProperty("FeatureName")
+    public String featureName;
+    public FeatureValue withFeatureName(String featureName) {
+        this.featureName = featureName;
+        return this;
+    }
+    @JsonProperty("ValueAsString")
+    public String valueAsString;
+    public FeatureValue withValueAsString(String valueAsString) {
+        this.valueAsString = valueAsString;
+        return this;
+    }
+}

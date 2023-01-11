@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class DeleteWorkspacesWorkspaceProjectsProjectKeyRequest {
+    public DeleteWorkspacesWorkspaceProjectsProjectKeyPathParams pathParams;
+    public DeleteWorkspacesWorkspaceProjectsProjectKeyRequest withPathParams(DeleteWorkspacesWorkspaceProjectsProjectKeyPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public DeleteWorkspacesWorkspaceProjectsProjectKeySecurity security;
+    public DeleteWorkspacesWorkspaceProjectsProjectKeyRequest withSecurity(DeleteWorkspacesWorkspaceProjectsProjectKeySecurity security) {
+        this.security = security;
+        return this;
+    }
+}

@@ -1,0 +1,117 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * VideoParameters
+ * The <code>VideoParameters</code> structure.
+**/
+public class VideoParameters {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("AspectRatio")
+    public String aspectRatio;
+    public VideoParameters withAspectRatio(String aspectRatio) {
+        this.aspectRatio = aspectRatio;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("BitRate")
+    public String bitRate;
+    public VideoParameters withBitRate(String bitRate) {
+        this.bitRate = bitRate;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Codec")
+    public String codec;
+    public VideoParameters withCodec(String codec) {
+        this.codec = codec;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("CodecOptions")
+    public java.util.Map<String, String> codecOptions;
+    public VideoParameters withCodecOptions(java.util.Map<String, String> codecOptions) {
+        this.codecOptions = codecOptions;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("DisplayAspectRatio")
+    public String displayAspectRatio;
+    public VideoParameters withDisplayAspectRatio(String displayAspectRatio) {
+        this.displayAspectRatio = displayAspectRatio;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("FixedGOP")
+    public String fixedGOP;
+    public VideoParameters withFixedGop(String fixedGOP) {
+        this.fixedGOP = fixedGOP;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("FrameRate")
+    public String frameRate;
+    public VideoParameters withFrameRate(String frameRate) {
+        this.frameRate = frameRate;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("KeyframesMaxDist")
+    public String keyframesMaxDist;
+    public VideoParameters withKeyframesMaxDist(String keyframesMaxDist) {
+        this.keyframesMaxDist = keyframesMaxDist;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("MaxFrameRate")
+    public String maxFrameRate;
+    public VideoParameters withMaxFrameRate(String maxFrameRate) {
+        this.maxFrameRate = maxFrameRate;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("MaxHeight")
+    public String maxHeight;
+    public VideoParameters withMaxHeight(String maxHeight) {
+        this.maxHeight = maxHeight;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("MaxWidth")
+    public String maxWidth;
+    public VideoParameters withMaxWidth(String maxWidth) {
+        this.maxWidth = maxWidth;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("PaddingPolicy")
+    public String paddingPolicy;
+    public VideoParameters withPaddingPolicy(String paddingPolicy) {
+        this.paddingPolicy = paddingPolicy;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Resolution")
+    public String resolution;
+    public VideoParameters withResolution(String resolution) {
+        this.resolution = resolution;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("SizingPolicy")
+    public String sizingPolicy;
+    public VideoParameters withSizingPolicy(String sizingPolicy) {
+        this.sizingPolicy = sizingPolicy;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Watermarks")
+    public PresetWatermark[] watermarks;
+    public VideoParameters withWatermarks(PresetWatermark[] watermarks) {
+        this.watermarks = watermarks;
+        return this;
+    }
+}

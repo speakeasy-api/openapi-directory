@@ -1,0 +1,33 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * SigningProfileParameter
+ * Describes the code-signing profile.
+**/
+public class SigningProfileParameter {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("certificateArn")
+    public String certificateArn;
+    public SigningProfileParameter withCertificateArn(String certificateArn) {
+        this.certificateArn = certificateArn;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("certificatePathOnDevice")
+    public String certificatePathOnDevice;
+    public SigningProfileParameter withCertificatePathOnDevice(String certificatePathOnDevice) {
+        this.certificatePathOnDevice = certificatePathOnDevice;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("platform")
+    public String platform;
+    public SigningProfileParameter withPlatform(String platform) {
+        this.platform = platform;
+        return this;
+    }
+}

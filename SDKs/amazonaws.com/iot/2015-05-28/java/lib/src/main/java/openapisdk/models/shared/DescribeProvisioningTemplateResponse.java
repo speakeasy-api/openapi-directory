@@ -1,0 +1,87 @@
+package openapisdk.models.shared;
+
+import java.time.OffsetDateTime;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import openapisdk.utils.DateTimeSerializer;
+import openapisdk.utils.DateTimeDeserializer;
+
+public class DescribeProvisioningTemplateResponse {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonSerialize(contentUsing = DateTimeSerializer.class)
+    @JsonDeserialize(contentUsing = DateTimeDeserializer.class)
+    @JsonProperty("creationDate")
+    public OffsetDateTime creationDate;
+    public DescribeProvisioningTemplateResponse withCreationDate(OffsetDateTime creationDate) {
+        this.creationDate = creationDate;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("defaultVersionId")
+    public Long defaultVersionId;
+    public DescribeProvisioningTemplateResponse withDefaultVersionId(Long defaultVersionId) {
+        this.defaultVersionId = defaultVersionId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("description")
+    public String description;
+    public DescribeProvisioningTemplateResponse withDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("enabled")
+    public Boolean enabled;
+    public DescribeProvisioningTemplateResponse withEnabled(Boolean enabled) {
+        this.enabled = enabled;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonSerialize(contentUsing = DateTimeSerializer.class)
+    @JsonDeserialize(contentUsing = DateTimeDeserializer.class)
+    @JsonProperty("lastModifiedDate")
+    public OffsetDateTime lastModifiedDate;
+    public DescribeProvisioningTemplateResponse withLastModifiedDate(OffsetDateTime lastModifiedDate) {
+        this.lastModifiedDate = lastModifiedDate;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("preProvisioningHook")
+    public ProvisioningHook preProvisioningHook;
+    public DescribeProvisioningTemplateResponse withPreProvisioningHook(ProvisioningHook preProvisioningHook) {
+        this.preProvisioningHook = preProvisioningHook;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("provisioningRoleArn")
+    public String provisioningRoleArn;
+    public DescribeProvisioningTemplateResponse withProvisioningRoleArn(String provisioningRoleArn) {
+        this.provisioningRoleArn = provisioningRoleArn;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("templateArn")
+    public String templateArn;
+    public DescribeProvisioningTemplateResponse withTemplateArn(String templateArn) {
+        this.templateArn = templateArn;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("templateBody")
+    public String templateBody;
+    public DescribeProvisioningTemplateResponse withTemplateBody(String templateBody) {
+        this.templateBody = templateBody;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("templateName")
+    public String templateName;
+    public DescribeProvisioningTemplateResponse withTemplateName(String templateName) {
+        this.templateName = templateName;
+        return this;
+    }
+}

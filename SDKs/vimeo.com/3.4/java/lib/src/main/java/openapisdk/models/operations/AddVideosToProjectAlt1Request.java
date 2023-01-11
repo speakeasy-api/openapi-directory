@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class AddVideosToProjectAlt1Request {
+    public AddVideosToProjectAlt1PathParams pathParams;
+    public AddVideosToProjectAlt1Request withPathParams(AddVideosToProjectAlt1PathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public AddVideosToProjectAlt1QueryParams queryParams;
+    public AddVideosToProjectAlt1Request withQueryParams(AddVideosToProjectAlt1QueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public AddVideosToProjectAlt1Security security;
+    public AddVideosToProjectAlt1Request withSecurity(AddVideosToProjectAlt1Security security) {
+        this.security = security;
+        return this;
+    }
+}

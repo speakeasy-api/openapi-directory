@@ -1,0 +1,18 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class DriveCommentsInsertSecurity {
+    @SpeakeasyMetadata("security:option=true")
+    public DriveCommentsInsertSecurityOption1 option1;
+    public DriveCommentsInsertSecurity withOption1(DriveCommentsInsertSecurityOption1 option1) {
+        this.option1 = option1;
+        return this;
+    }
+    @SpeakeasyMetadata("security:option=true")
+    public DriveCommentsInsertSecurityOption2 option2;
+    public DriveCommentsInsertSecurity withOption2(DriveCommentsInsertSecurityOption2 option2) {
+        this.option2 = option2;
+        return this;
+    }
+}

@@ -1,0 +1,26 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * ListSuitesResult
+ * Represents the result of a list suites request.
+**/
+public class ListSuitesResult {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("nextToken")
+    public String nextToken;
+    public ListSuitesResult withNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("suites")
+    public Suite[] suites;
+    public ListSuitesResult withSuites(Suite[] suites) {
+        this.suites = suites;
+        return this;
+    }
+}

@@ -1,0 +1,28 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class GetConformancePackComplianceDetailsResponse {
+    @JsonProperty("ConformancePackName")
+    public String conformancePackName;
+    public GetConformancePackComplianceDetailsResponse withConformancePackName(String conformancePackName) {
+        this.conformancePackName = conformancePackName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ConformancePackRuleEvaluationResults")
+    public ConformancePackEvaluationResult[] conformancePackRuleEvaluationResults;
+    public GetConformancePackComplianceDetailsResponse withConformancePackRuleEvaluationResults(ConformancePackEvaluationResult[] conformancePackRuleEvaluationResults) {
+        this.conformancePackRuleEvaluationResults = conformancePackRuleEvaluationResults;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("NextToken")
+    public String nextToken;
+    public GetConformancePackComplianceDetailsResponse withNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+}

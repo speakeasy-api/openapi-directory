@@ -1,0 +1,17 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class CreateVideoVersionRequest {
+    public CreateVideoVersionPathParams pathParams;
+    public CreateVideoVersionRequest withPathParams(CreateVideoVersionPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    @SpeakeasyMetadata("request:mediaType=application/vnd.vimeo.video.version+json")
+    public CreateVideoVersionRequestBody request;
+    public CreateVideoVersionRequest withRequest(CreateVideoVersionRequestBody request) {
+        this.request = request;
+        return this;
+    }
+}

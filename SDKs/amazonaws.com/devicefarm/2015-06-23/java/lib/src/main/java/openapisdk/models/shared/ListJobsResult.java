@@ -1,0 +1,26 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * ListJobsResult
+ * Represents the result of a list jobs request.
+**/
+public class ListJobsResult {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("jobs")
+    public Job[] jobs;
+    public ListJobsResult withJobs(Job[] jobs) {
+        this.jobs = jobs;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("nextToken")
+    public String nextToken;
+    public ListJobsResult withNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+}

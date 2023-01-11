@@ -1,0 +1,43 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class ScreenShot {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("height")
+    public Long height;
+    public ScreenShot withHeight(Long height) {
+        this.height = height;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("hidden")
+    public Boolean hidden;
+    public ScreenShot withHidden(Boolean hidden) {
+        this.hidden = hidden;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("id")
+    public Long id;
+    public ScreenShot withId(Long id) {
+        this.id = id;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("image")
+    public String image;
+    public ScreenShot withImage(String image) {
+        this.image = image;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("width")
+    public Long width;
+    public ScreenShot withWidth(Long width) {
+        this.width = width;
+        return this;
+    }
+}

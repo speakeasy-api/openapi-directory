@@ -1,0 +1,27 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class GetFolderInput {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("commitSpecifier")
+    public String commitSpecifier;
+    public GetFolderInput withCommitSpecifier(String commitSpecifier) {
+        this.commitSpecifier = commitSpecifier;
+        return this;
+    }
+    @JsonProperty("folderPath")
+    public String folderPath;
+    public GetFolderInput withFolderPath(String folderPath) {
+        this.folderPath = folderPath;
+        return this;
+    }
+    @JsonProperty("repositoryName")
+    public String repositoryName;
+    public GetFolderInput withRepositoryName(String repositoryName) {
+        this.repositoryName = repositoryName;
+        return this;
+    }
+}

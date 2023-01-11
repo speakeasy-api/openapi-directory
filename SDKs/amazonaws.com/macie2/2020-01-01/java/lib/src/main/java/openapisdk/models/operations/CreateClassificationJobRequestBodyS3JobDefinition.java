@@ -1,0 +1,33 @@
+package openapisdk.models.operations;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * CreateClassificationJobRequestBodyS3JobDefinition
+ * Specifies which S3 buckets contain the objects that a classification job analyzes, and the scope of that analysis. The bucket specification can be static (bucketDefinitions) or dynamic (bucketCriteria). If it's static, the job analyzes objects in the same predefined set of buckets each time the job runs. If it's dynamic, the job analyzes objects in any buckets that match the specified criteria each time the job starts to run.
+**/
+public class CreateClassificationJobRequestBodyS3JobDefinition {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("bucketCriteria")
+    public openapisdk.models.shared.S3BucketCriteriaForJob bucketCriteria;
+    public CreateClassificationJobRequestBodyS3JobDefinition withBucketCriteria(openapisdk.models.shared.S3BucketCriteriaForJob bucketCriteria) {
+        this.bucketCriteria = bucketCriteria;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("bucketDefinitions")
+    public openapisdk.models.shared.S3BucketDefinitionForJob[] bucketDefinitions;
+    public CreateClassificationJobRequestBodyS3JobDefinition withBucketDefinitions(openapisdk.models.shared.S3BucketDefinitionForJob[] bucketDefinitions) {
+        this.bucketDefinitions = bucketDefinitions;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("scoping")
+    public openapisdk.models.shared.Scoping scoping;
+    public CreateClassificationJobRequestBodyS3JobDefinition withScoping(openapisdk.models.shared.Scoping scoping) {
+        this.scoping = scoping;
+        return this;
+    }
+}

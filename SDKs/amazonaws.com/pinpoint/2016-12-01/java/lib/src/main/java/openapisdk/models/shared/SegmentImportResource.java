@@ -1,0 +1,49 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * SegmentImportResource
+ * Provides information about the import job that created a segment. An import job is a job that creates a user segment by importing endpoint definitions.
+**/
+public class SegmentImportResource {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ChannelCounts")
+    public java.util.Map<String, Long> channelCounts;
+    public SegmentImportResource withChannelCounts(java.util.Map<String, Long> channelCounts) {
+        this.channelCounts = channelCounts;
+        return this;
+    }
+    @JsonProperty("ExternalId")
+    public String externalId;
+    public SegmentImportResource withExternalId(String externalId) {
+        this.externalId = externalId;
+        return this;
+    }
+    @JsonProperty("Format")
+    public FormatEnum format;
+    public SegmentImportResource withFormat(FormatEnum format) {
+        this.format = format;
+        return this;
+    }
+    @JsonProperty("RoleArn")
+    public String roleArn;
+    public SegmentImportResource withRoleArn(String roleArn) {
+        this.roleArn = roleArn;
+        return this;
+    }
+    @JsonProperty("S3Url")
+    public String s3Url;
+    public SegmentImportResource withS3Url(String s3Url) {
+        this.s3Url = s3Url;
+        return this;
+    }
+    @JsonProperty("Size")
+    public Long size;
+    public SegmentImportResource withSize(Long size) {
+        this.size = size;
+        return this;
+    }
+}

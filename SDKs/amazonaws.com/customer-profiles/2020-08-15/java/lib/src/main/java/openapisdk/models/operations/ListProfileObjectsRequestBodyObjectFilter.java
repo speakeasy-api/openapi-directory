@@ -1,0 +1,26 @@
+package openapisdk.models.operations;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * ListProfileObjectsRequestBodyObjectFilter
+ * The filter applied to ListProfileObjects response to include profile objects with the specified index values. This filter is only supported for ObjectTypeName _asset and _case.
+**/
+public class ListProfileObjectsRequestBodyObjectFilter {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("KeyName")
+    public String keyName;
+    public ListProfileObjectsRequestBodyObjectFilter withKeyName(String keyName) {
+        this.keyName = keyName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Values")
+    public String[] values;
+    public ListProfileObjectsRequestBodyObjectFilter withValues(String[] values) {
+        this.values = values;
+        return this;
+    }
+}

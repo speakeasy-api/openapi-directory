@@ -1,0 +1,33 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * WorkerLogDeliveryDescription
+ * Workers can send worker logs to different destination types. This configuration specifies the details of these destinations.
+**/
+public class WorkerLogDeliveryDescription {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("cloudWatchLogs")
+    public CloudWatchLogsLogDeliveryDescription cloudWatchLogs;
+    public WorkerLogDeliveryDescription withCloudWatchLogs(CloudWatchLogsLogDeliveryDescription cloudWatchLogs) {
+        this.cloudWatchLogs = cloudWatchLogs;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("firehose")
+    public FirehoseLogDeliveryDescription firehose;
+    public WorkerLogDeliveryDescription withFirehose(FirehoseLogDeliveryDescription firehose) {
+        this.firehose = firehose;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("s3")
+    public S3LogDeliveryDescription s3;
+    public WorkerLogDeliveryDescription withS3(S3LogDeliveryDescription s3) {
+        this.s3 = s3;
+        return this;
+    }
+}

@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class ListJobsByStatusRequest {
+    public ListJobsByStatusPathParams pathParams;
+    public ListJobsByStatusRequest withPathParams(ListJobsByStatusPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public ListJobsByStatusQueryParams queryParams;
+    public ListJobsByStatusRequest withQueryParams(ListJobsByStatusQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public ListJobsByStatusHeaders headers;
+    public ListJobsByStatusRequest withHeaders(ListJobsByStatusHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+}

@@ -1,0 +1,48 @@
+package openapisdk.models.shared;
+
+
+public enum ErrorCodeEnum {
+    AUTO_FUND_NOT_SUPPORTED("auto_fund_not_supported"),
+    BATCH_CANNOT_BE_MODIFIED("batch_cannot_be_modified"),
+    CARRIER_CONFLICT("carrier_conflict"),
+    CARRIER_DISCONNECTED("carrier_disconnected"),
+    CARRIER_NOT_CONNECTED("carrier_not_connected"),
+    CARRIER_NOT_SUPPORTED("carrier_not_supported"),
+    CONFIRMATION_NOT_SUPPORTED("confirmation_not_supported"),
+    DEFAULT_WAREHOUSE_CANNOT_BE_DELETED("default_warehouse_cannot_be_deleted"),
+    FIELD_CONFLICT("field_conflict"),
+    FIELD_VALUE_REQUIRED("field_value_required"),
+    FORBIDDEN("forbidden"),
+    IDENTIFIER_CONFLICT("identifier_conflict"),
+    IDENTIFIERS_MUST_MATCH("identifiers_must_match"),
+    INVALID_ADDRESS("invalid_address"),
+    INVALID_BILLING_PLAN("invalid_billing_plan"),
+    INVALID_FIELD_VALUE("invalid_field_value"),
+    INVALID_IDENTIFIER("invalid_identifier"),
+    INVALID_STATUS("invalid_status"),
+    INVALID_STRING_LENGTH("invalid_string_length"),
+    LABEL_IMAGES_NOT_SUPPORTED("label_images_not_supported"),
+    METER_FAILURE("meter_failure"),
+    ORDER_SOURCE_NOT_ACTIVE("order_source_not_active"),
+    RATE_LIMIT_EXCEEDED("rate_limit_exceeded"),
+    REFRESH_NOT_SUPPORTED("refresh_not_supported"),
+    REQUEST_BODY_REQUIRED("request_body_required"),
+    RETURN_LABEL_NOT_SUPPORTED("return_label_not_supported"),
+    SETTINGS_NOT_SUPPORTED("settings_not_supported"),
+    SUBSCRIPTION_INACTIVE("subscription_inactive"),
+    TERMS_NOT_ACCEPTED("terms_not_accepted"),
+    TRACKING_NOT_SUPPORTED("tracking_not_supported"),
+    TRIAL_EXPIRED("trial_expired"),
+    UNAUTHORIZED("unauthorized"),
+    UNKNOWN("unknown"),
+    UNSPECIFIED("unspecified"),
+    VERIFICATION_FAILURE("verification_failure"),
+    WAREHOUSE_CONFLICT("warehouse_conflict"),
+    WEBHOOK_EVENT_TYPE_CONFLICT("webhook_event_type_conflict");
+
+    public final String value;
+
+    private ErrorCodeEnum(String value) {
+        this.value = value;
+    }
+}

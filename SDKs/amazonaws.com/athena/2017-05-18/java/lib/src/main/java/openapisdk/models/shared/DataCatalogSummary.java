@@ -1,0 +1,26 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * DataCatalogSummary
+ * The summary information for the data catalog, which includes its name and type.
+**/
+public class DataCatalogSummary {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("CatalogName")
+    public String catalogName;
+    public DataCatalogSummary withCatalogName(String catalogName) {
+        this.catalogName = catalogName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Type")
+    public DataCatalogTypeEnum type;
+    public DataCatalogSummary withType(DataCatalogTypeEnum type) {
+        this.type = type;
+        return this;
+    }
+}

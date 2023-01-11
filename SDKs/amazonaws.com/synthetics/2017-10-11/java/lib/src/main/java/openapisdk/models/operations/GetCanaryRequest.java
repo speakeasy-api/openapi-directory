@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class GetCanaryRequest {
+    public GetCanaryPathParams pathParams;
+    public GetCanaryRequest withPathParams(GetCanaryPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public GetCanaryHeaders headers;
+    public GetCanaryRequest withHeaders(GetCanaryHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+}

@@ -1,0 +1,31 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * AssetModelHierarchy
+ * Describes an asset hierarchy that contains a hierarchy's name, ID, and child asset model ID that specifies the type of asset that can be in this hierarchy.
+**/
+public class AssetModelHierarchy {
+    @JsonProperty("childAssetModelId")
+    public String childAssetModelId;
+    public AssetModelHierarchy withChildAssetModelId(String childAssetModelId) {
+        this.childAssetModelId = childAssetModelId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("id")
+    public String id;
+    public AssetModelHierarchy withId(String id) {
+        this.id = id;
+        return this;
+    }
+    @JsonProperty("name")
+    public String name;
+    public AssetModelHierarchy withName(String name) {
+        this.name = name;
+        return this;
+    }
+}

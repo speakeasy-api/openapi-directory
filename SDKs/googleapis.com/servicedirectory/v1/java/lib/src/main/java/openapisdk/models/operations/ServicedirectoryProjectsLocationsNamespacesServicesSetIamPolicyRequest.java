@@ -1,0 +1,27 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class ServicedirectoryProjectsLocationsNamespacesServicesSetIamPolicyRequest {
+    public ServicedirectoryProjectsLocationsNamespacesServicesSetIamPolicyPathParams pathParams;
+    public ServicedirectoryProjectsLocationsNamespacesServicesSetIamPolicyRequest withPathParams(ServicedirectoryProjectsLocationsNamespacesServicesSetIamPolicyPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public ServicedirectoryProjectsLocationsNamespacesServicesSetIamPolicyQueryParams queryParams;
+    public ServicedirectoryProjectsLocationsNamespacesServicesSetIamPolicyRequest withQueryParams(ServicedirectoryProjectsLocationsNamespacesServicesSetIamPolicyQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public openapisdk.models.shared.SetIamPolicyRequest request;
+    public ServicedirectoryProjectsLocationsNamespacesServicesSetIamPolicyRequest withRequest(openapisdk.models.shared.SetIamPolicyRequest request) {
+        this.request = request;
+        return this;
+    }
+    public ServicedirectoryProjectsLocationsNamespacesServicesSetIamPolicySecurity security;
+    public ServicedirectoryProjectsLocationsNamespacesServicesSetIamPolicyRequest withSecurity(ServicedirectoryProjectsLocationsNamespacesServicesSetIamPolicySecurity security) {
+        this.security = security;
+        return this;
+    }
+}

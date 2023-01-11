@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class ListActionsRequest {
+    public ListActionsQueryParams queryParams;
+    public ListActionsRequest withQueryParams(ListActionsQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public ListActionsHeaders headers;
+    public ListActionsRequest withHeaders(ListActionsHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+}

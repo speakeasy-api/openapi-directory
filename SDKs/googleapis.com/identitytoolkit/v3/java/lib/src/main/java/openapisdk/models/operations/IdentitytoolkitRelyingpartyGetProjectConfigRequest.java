@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class IdentitytoolkitRelyingpartyGetProjectConfigRequest {
+    public IdentitytoolkitRelyingpartyGetProjectConfigQueryParams queryParams;
+    public IdentitytoolkitRelyingpartyGetProjectConfigRequest withQueryParams(IdentitytoolkitRelyingpartyGetProjectConfigQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public IdentitytoolkitRelyingpartyGetProjectConfigSecurity security;
+    public IdentitytoolkitRelyingpartyGetProjectConfigRequest withSecurity(IdentitytoolkitRelyingpartyGetProjectConfigSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

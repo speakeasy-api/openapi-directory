@@ -1,0 +1,551 @@
+package openapisdk.models.shared;
+
+import java.time.OffsetDateTime;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import openapisdk.utils.DateTimeSerializer;
+import openapisdk.utils.DateTimeDeserializer;
+
+/**
+ * MinimalRepository
+ * Minimal Repository
+**/
+public class MinimalRepository {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("anonymous_access_enabled")
+    public Boolean anonymousAccessEnabled;
+    public MinimalRepository withAnonymousAccessEnabled(Boolean anonymousAccessEnabled) {
+        this.anonymousAccessEnabled = anonymousAccessEnabled;
+        return this;
+    }
+    @JsonProperty("archive_url")
+    public String archiveUrl;
+    public MinimalRepository withArchiveUrl(String archiveUrl) {
+        this.archiveUrl = archiveUrl;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("archived")
+    public Boolean archived;
+    public MinimalRepository withArchived(Boolean archived) {
+        this.archived = archived;
+        return this;
+    }
+    @JsonProperty("assignees_url")
+    public String assigneesUrl;
+    public MinimalRepository withAssigneesUrl(String assigneesUrl) {
+        this.assigneesUrl = assigneesUrl;
+        return this;
+    }
+    @JsonProperty("blobs_url")
+    public String blobsUrl;
+    public MinimalRepository withBlobsUrl(String blobsUrl) {
+        this.blobsUrl = blobsUrl;
+        return this;
+    }
+    @JsonProperty("branches_url")
+    public String branchesUrl;
+    public MinimalRepository withBranchesUrl(String branchesUrl) {
+        this.branchesUrl = branchesUrl;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("clone_url")
+    public String cloneUrl;
+    public MinimalRepository withCloneUrl(String cloneUrl) {
+        this.cloneUrl = cloneUrl;
+        return this;
+    }
+    @JsonProperty("collaborators_url")
+    public String collaboratorsUrl;
+    public MinimalRepository withCollaboratorsUrl(String collaboratorsUrl) {
+        this.collaboratorsUrl = collaboratorsUrl;
+        return this;
+    }
+    @JsonProperty("comments_url")
+    public String commentsUrl;
+    public MinimalRepository withCommentsUrl(String commentsUrl) {
+        this.commentsUrl = commentsUrl;
+        return this;
+    }
+    @JsonProperty("commits_url")
+    public String commitsUrl;
+    public MinimalRepository withCommitsUrl(String commitsUrl) {
+        this.commitsUrl = commitsUrl;
+        return this;
+    }
+    @JsonProperty("compare_url")
+    public String compareUrl;
+    public MinimalRepository withCompareUrl(String compareUrl) {
+        this.compareUrl = compareUrl;
+        return this;
+    }
+    @JsonProperty("contents_url")
+    public String contentsUrl;
+    public MinimalRepository withContentsUrl(String contentsUrl) {
+        this.contentsUrl = contentsUrl;
+        return this;
+    }
+    @JsonProperty("contributors_url")
+    public String contributorsUrl;
+    public MinimalRepository withContributorsUrl(String contributorsUrl) {
+        this.contributorsUrl = contributorsUrl;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonSerialize(contentUsing = DateTimeSerializer.class)
+    @JsonDeserialize(contentUsing = DateTimeDeserializer.class)
+    @JsonProperty("created_at")
+    public OffsetDateTime createdAt;
+    public MinimalRepository withCreatedAt(OffsetDateTime createdAt) {
+        this.createdAt = createdAt;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("default_branch")
+    public String defaultBranch;
+    public MinimalRepository withDefaultBranch(String defaultBranch) {
+        this.defaultBranch = defaultBranch;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("delete_branch_on_merge")
+    public Boolean deleteBranchOnMerge;
+    public MinimalRepository withDeleteBranchOnMerge(Boolean deleteBranchOnMerge) {
+        this.deleteBranchOnMerge = deleteBranchOnMerge;
+        return this;
+    }
+    @JsonProperty("deployments_url")
+    public String deploymentsUrl;
+    public MinimalRepository withDeploymentsUrl(String deploymentsUrl) {
+        this.deploymentsUrl = deploymentsUrl;
+        return this;
+    }
+    @JsonProperty("description")
+    public String description;
+    public MinimalRepository withDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("disabled")
+    public Boolean disabled;
+    public MinimalRepository withDisabled(Boolean disabled) {
+        this.disabled = disabled;
+        return this;
+    }
+    @JsonProperty("downloads_url")
+    public String downloadsUrl;
+    public MinimalRepository withDownloadsUrl(String downloadsUrl) {
+        this.downloadsUrl = downloadsUrl;
+        return this;
+    }
+    @JsonProperty("events_url")
+    public String eventsUrl;
+    public MinimalRepository withEventsUrl(String eventsUrl) {
+        this.eventsUrl = eventsUrl;
+        return this;
+    }
+    @JsonProperty("fork")
+    public Boolean fork;
+    public MinimalRepository withFork(Boolean fork) {
+        this.fork = fork;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("forks")
+    public Long forks;
+    public MinimalRepository withForks(Long forks) {
+        this.forks = forks;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("forks_count")
+    public Long forksCount;
+    public MinimalRepository withForksCount(Long forksCount) {
+        this.forksCount = forksCount;
+        return this;
+    }
+    @JsonProperty("forks_url")
+    public String forksUrl;
+    public MinimalRepository withForksUrl(String forksUrl) {
+        this.forksUrl = forksUrl;
+        return this;
+    }
+    @JsonProperty("full_name")
+    public String fullName;
+    public MinimalRepository withFullName(String fullName) {
+        this.fullName = fullName;
+        return this;
+    }
+    @JsonProperty("git_commits_url")
+    public String gitCommitsUrl;
+    public MinimalRepository withGitCommitsUrl(String gitCommitsUrl) {
+        this.gitCommitsUrl = gitCommitsUrl;
+        return this;
+    }
+    @JsonProperty("git_refs_url")
+    public String gitRefsUrl;
+    public MinimalRepository withGitRefsUrl(String gitRefsUrl) {
+        this.gitRefsUrl = gitRefsUrl;
+        return this;
+    }
+    @JsonProperty("git_tags_url")
+    public String gitTagsUrl;
+    public MinimalRepository withGitTagsUrl(String gitTagsUrl) {
+        this.gitTagsUrl = gitTagsUrl;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("git_url")
+    public String gitUrl;
+    public MinimalRepository withGitUrl(String gitUrl) {
+        this.gitUrl = gitUrl;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("has_downloads")
+    public Boolean hasDownloads;
+    public MinimalRepository withHasDownloads(Boolean hasDownloads) {
+        this.hasDownloads = hasDownloads;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("has_issues")
+    public Boolean hasIssues;
+    public MinimalRepository withHasIssues(Boolean hasIssues) {
+        this.hasIssues = hasIssues;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("has_pages")
+    public Boolean hasPages;
+    public MinimalRepository withHasPages(Boolean hasPages) {
+        this.hasPages = hasPages;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("has_projects")
+    public Boolean hasProjects;
+    public MinimalRepository withHasProjects(Boolean hasProjects) {
+        this.hasProjects = hasProjects;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("has_wiki")
+    public Boolean hasWiki;
+    public MinimalRepository withHasWiki(Boolean hasWiki) {
+        this.hasWiki = hasWiki;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("homepage")
+    public String homepage;
+    public MinimalRepository withHomepage(String homepage) {
+        this.homepage = homepage;
+        return this;
+    }
+    @JsonProperty("hooks_url")
+    public String hooksUrl;
+    public MinimalRepository withHooksUrl(String hooksUrl) {
+        this.hooksUrl = hooksUrl;
+        return this;
+    }
+    @JsonProperty("html_url")
+    public String htmlUrl;
+    public MinimalRepository withHtmlUrl(String htmlUrl) {
+        this.htmlUrl = htmlUrl;
+        return this;
+    }
+    @JsonProperty("id")
+    public Long id;
+    public MinimalRepository withId(Long id) {
+        this.id = id;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("is_template")
+    public Boolean isTemplate;
+    public MinimalRepository withIsTemplate(Boolean isTemplate) {
+        this.isTemplate = isTemplate;
+        return this;
+    }
+    @JsonProperty("issue_comment_url")
+    public String issueCommentUrl;
+    public MinimalRepository withIssueCommentUrl(String issueCommentUrl) {
+        this.issueCommentUrl = issueCommentUrl;
+        return this;
+    }
+    @JsonProperty("issue_events_url")
+    public String issueEventsUrl;
+    public MinimalRepository withIssueEventsUrl(String issueEventsUrl) {
+        this.issueEventsUrl = issueEventsUrl;
+        return this;
+    }
+    @JsonProperty("issues_url")
+    public String issuesUrl;
+    public MinimalRepository withIssuesUrl(String issuesUrl) {
+        this.issuesUrl = issuesUrl;
+        return this;
+    }
+    @JsonProperty("keys_url")
+    public String keysUrl;
+    public MinimalRepository withKeysUrl(String keysUrl) {
+        this.keysUrl = keysUrl;
+        return this;
+    }
+    @JsonProperty("labels_url")
+    public String labelsUrl;
+    public MinimalRepository withLabelsUrl(String labelsUrl) {
+        this.labelsUrl = labelsUrl;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("language")
+    public String language;
+    public MinimalRepository withLanguage(String language) {
+        this.language = language;
+        return this;
+    }
+    @JsonProperty("languages_url")
+    public String languagesUrl;
+    public MinimalRepository withLanguagesUrl(String languagesUrl) {
+        this.languagesUrl = languagesUrl;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("license")
+    public MinimalRepositoryLicense license;
+    public MinimalRepository withLicense(MinimalRepositoryLicense license) {
+        this.license = license;
+        return this;
+    }
+    @JsonProperty("merges_url")
+    public String mergesUrl;
+    public MinimalRepository withMergesUrl(String mergesUrl) {
+        this.mergesUrl = mergesUrl;
+        return this;
+    }
+    @JsonProperty("milestones_url")
+    public String milestonesUrl;
+    public MinimalRepository withMilestonesUrl(String milestonesUrl) {
+        this.milestonesUrl = milestonesUrl;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("mirror_url")
+    public String mirrorUrl;
+    public MinimalRepository withMirrorUrl(String mirrorUrl) {
+        this.mirrorUrl = mirrorUrl;
+        return this;
+    }
+    @JsonProperty("name")
+    public String name;
+    public MinimalRepository withName(String name) {
+        this.name = name;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("network_count")
+    public Long networkCount;
+    public MinimalRepository withNetworkCount(Long networkCount) {
+        this.networkCount = networkCount;
+        return this;
+    }
+    @JsonProperty("node_id")
+    public String nodeId;
+    public MinimalRepository withNodeId(String nodeId) {
+        this.nodeId = nodeId;
+        return this;
+    }
+    @JsonProperty("notifications_url")
+    public String notificationsUrl;
+    public MinimalRepository withNotificationsUrl(String notificationsUrl) {
+        this.notificationsUrl = notificationsUrl;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("open_issues")
+    public Long openIssues;
+    public MinimalRepository withOpenIssues(Long openIssues) {
+        this.openIssues = openIssues;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("open_issues_count")
+    public Long openIssuesCount;
+    public MinimalRepository withOpenIssuesCount(Long openIssuesCount) {
+        this.openIssuesCount = openIssuesCount;
+        return this;
+    }
+    @JsonProperty("owner")
+    public MinimalRepositorySimpleUser owner;
+    public MinimalRepository withOwner(MinimalRepositorySimpleUser owner) {
+        this.owner = owner;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("permissions")
+    public MinimalRepositoryPermissions permissions;
+    public MinimalRepository withPermissions(MinimalRepositoryPermissions permissions) {
+        this.permissions = permissions;
+        return this;
+    }
+    @JsonProperty("private")
+    public Boolean private_;
+    public MinimalRepository withPrivate(Boolean private_) {
+        this.private_ = private_;
+        return this;
+    }
+    @JsonProperty("pulls_url")
+    public String pullsUrl;
+    public MinimalRepository withPullsUrl(String pullsUrl) {
+        this.pullsUrl = pullsUrl;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonSerialize(contentUsing = DateTimeSerializer.class)
+    @JsonDeserialize(contentUsing = DateTimeDeserializer.class)
+    @JsonProperty("pushed_at")
+    public OffsetDateTime pushedAt;
+    public MinimalRepository withPushedAt(OffsetDateTime pushedAt) {
+        this.pushedAt = pushedAt;
+        return this;
+    }
+    @JsonProperty("releases_url")
+    public String releasesUrl;
+    public MinimalRepository withReleasesUrl(String releasesUrl) {
+        this.releasesUrl = releasesUrl;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("size")
+    public Long size;
+    public MinimalRepository withSize(Long size) {
+        this.size = size;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ssh_url")
+    public String sshUrl;
+    public MinimalRepository withSshUrl(String sshUrl) {
+        this.sshUrl = sshUrl;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("stargazers_count")
+    public Long stargazersCount;
+    public MinimalRepository withStargazersCount(Long stargazersCount) {
+        this.stargazersCount = stargazersCount;
+        return this;
+    }
+    @JsonProperty("stargazers_url")
+    public String stargazersUrl;
+    public MinimalRepository withStargazersUrl(String stargazersUrl) {
+        this.stargazersUrl = stargazersUrl;
+        return this;
+    }
+    @JsonProperty("statuses_url")
+    public String statusesUrl;
+    public MinimalRepository withStatusesUrl(String statusesUrl) {
+        this.statusesUrl = statusesUrl;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("subscribers_count")
+    public Long subscribersCount;
+    public MinimalRepository withSubscribersCount(Long subscribersCount) {
+        this.subscribersCount = subscribersCount;
+        return this;
+    }
+    @JsonProperty("subscribers_url")
+    public String subscribersUrl;
+    public MinimalRepository withSubscribersUrl(String subscribersUrl) {
+        this.subscribersUrl = subscribersUrl;
+        return this;
+    }
+    @JsonProperty("subscription_url")
+    public String subscriptionUrl;
+    public MinimalRepository withSubscriptionUrl(String subscriptionUrl) {
+        this.subscriptionUrl = subscriptionUrl;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("svn_url")
+    public String svnUrl;
+    public MinimalRepository withSvnUrl(String svnUrl) {
+        this.svnUrl = svnUrl;
+        return this;
+    }
+    @JsonProperty("tags_url")
+    public String tagsUrl;
+    public MinimalRepository withTagsUrl(String tagsUrl) {
+        this.tagsUrl = tagsUrl;
+        return this;
+    }
+    @JsonProperty("teams_url")
+    public String teamsUrl;
+    public MinimalRepository withTeamsUrl(String teamsUrl) {
+        this.teamsUrl = teamsUrl;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("template_repository")
+    public MinimalRepositoryRepository templateRepository;
+    public MinimalRepository withTemplateRepository(MinimalRepositoryRepository templateRepository) {
+        this.templateRepository = templateRepository;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("topics")
+    public String[] topics;
+    public MinimalRepository withTopics(String[] topics) {
+        this.topics = topics;
+        return this;
+    }
+    @JsonProperty("trees_url")
+    public String treesUrl;
+    public MinimalRepository withTreesUrl(String treesUrl) {
+        this.treesUrl = treesUrl;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonSerialize(contentUsing = DateTimeSerializer.class)
+    @JsonDeserialize(contentUsing = DateTimeDeserializer.class)
+    @JsonProperty("updated_at")
+    public OffsetDateTime updatedAt;
+    public MinimalRepository withUpdatedAt(OffsetDateTime updatedAt) {
+        this.updatedAt = updatedAt;
+        return this;
+    }
+    @JsonProperty("url")
+    public String url;
+    public MinimalRepository withUrl(String url) {
+        this.url = url;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("visibility")
+    public String visibility;
+    public MinimalRepository withVisibility(String visibility) {
+        this.visibility = visibility;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("watchers")
+    public Long watchers;
+    public MinimalRepository withWatchers(Long watchers) {
+        this.watchers = watchers;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("watchers_count")
+    public Long watchersCount;
+    public MinimalRepository withWatchersCount(Long watchersCount) {
+        this.watchersCount = watchersCount;
+        return this;
+    }
+}

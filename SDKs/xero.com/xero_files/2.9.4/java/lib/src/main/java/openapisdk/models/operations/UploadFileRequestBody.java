@@ -1,0 +1,30 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class UploadFileRequestBody {
+    @SpeakeasyMetadata("multipartForm:name=body")
+    public String body;
+    public UploadFileRequestBody withBody(String body) {
+        this.body = body;
+        return this;
+    }
+    @SpeakeasyMetadata("multipartForm:name=filename")
+    public String filename;
+    public UploadFileRequestBody withFilename(String filename) {
+        this.filename = filename;
+        return this;
+    }
+    @SpeakeasyMetadata("multipartForm:name=mimeType")
+    public String mimeType;
+    public UploadFileRequestBody withMimeType(String mimeType) {
+        this.mimeType = mimeType;
+        return this;
+    }
+    @SpeakeasyMetadata("multipartForm:name=name")
+    public String name;
+    public UploadFileRequestBody withName(String name) {
+        this.name = name;
+        return this;
+    }
+}

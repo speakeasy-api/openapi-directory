@@ -1,0 +1,22 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+/**
+ * Job
+ *  Describes an execution job for an Amplify app. 
+**/
+public class Job {
+    @JsonProperty("steps")
+    public Step[] steps;
+    public Job withSteps(Step[] steps) {
+        this.steps = steps;
+        return this;
+    }
+    @JsonProperty("summary")
+    public JobSummary summary;
+    public Job withSummary(JobSummary summary) {
+        this.summary = summary;
+        return this;
+    }
+}

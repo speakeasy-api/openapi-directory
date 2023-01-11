@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class GetV4LayersScoutingObservationsScoutingObservationIdAttachmentsRequest {
+    public GetV4LayersScoutingObservationsScoutingObservationIdAttachmentsPathParams pathParams;
+    public GetV4LayersScoutingObservationsScoutingObservationIdAttachmentsRequest withPathParams(GetV4LayersScoutingObservationsScoutingObservationIdAttachmentsPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public GetV4LayersScoutingObservationsScoutingObservationIdAttachmentsHeaders headers;
+    public GetV4LayersScoutingObservationsScoutingObservationIdAttachmentsRequest withHeaders(GetV4LayersScoutingObservationsScoutingObservationIdAttachmentsHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+    public GetV4LayersScoutingObservationsScoutingObservationIdAttachmentsSecurity security;
+    public GetV4LayersScoutingObservationsScoutingObservationIdAttachmentsRequest withSecurity(GetV4LayersScoutingObservationsScoutingObservationIdAttachmentsSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

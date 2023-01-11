@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class ListGroupVersionsRequest {
+    public ListGroupVersionsPathParams pathParams;
+    public ListGroupVersionsRequest withPathParams(ListGroupVersionsPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public ListGroupVersionsQueryParams queryParams;
+    public ListGroupVersionsRequest withQueryParams(ListGroupVersionsQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public ListGroupVersionsHeaders headers;
+    public ListGroupVersionsRequest withHeaders(ListGroupVersionsHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+}

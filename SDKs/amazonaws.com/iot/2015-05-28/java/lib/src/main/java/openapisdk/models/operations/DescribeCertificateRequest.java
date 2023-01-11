@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class DescribeCertificateRequest {
+    public DescribeCertificatePathParams pathParams;
+    public DescribeCertificateRequest withPathParams(DescribeCertificatePathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public DescribeCertificateHeaders headers;
+    public DescribeCertificateRequest withHeaders(DescribeCertificateHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+}

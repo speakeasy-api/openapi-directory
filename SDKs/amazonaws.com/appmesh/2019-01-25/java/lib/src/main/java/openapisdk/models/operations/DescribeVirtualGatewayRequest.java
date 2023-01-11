@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class DescribeVirtualGatewayRequest {
+    public DescribeVirtualGatewayPathParams pathParams;
+    public DescribeVirtualGatewayRequest withPathParams(DescribeVirtualGatewayPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public DescribeVirtualGatewayQueryParams queryParams;
+    public DescribeVirtualGatewayRequest withQueryParams(DescribeVirtualGatewayQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public DescribeVirtualGatewayHeaders headers;
+    public DescribeVirtualGatewayRequest withHeaders(DescribeVirtualGatewayHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+}

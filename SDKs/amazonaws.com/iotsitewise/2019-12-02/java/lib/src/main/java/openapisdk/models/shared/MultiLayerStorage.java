@@ -1,0 +1,16 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+/**
+ * MultiLayerStorage
+ * Contains information about the storage destination.
+**/
+public class MultiLayerStorage {
+    @JsonProperty("customerManagedS3Storage")
+    public CustomerManagedS3Storage customerManagedS3Storage;
+    public MultiLayerStorage withCustomerManagedS3Storage(CustomerManagedS3Storage customerManagedS3Storage) {
+        this.customerManagedS3Storage = customerManagedS3Storage;
+        return this;
+    }
+}

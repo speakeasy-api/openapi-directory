@@ -1,0 +1,226 @@
+package openapisdk.models.shared;
+
+import java.time.OffsetDateTime;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import openapisdk.utils.DateTimeSerializer;
+import openapisdk.utils.DateTimeDeserializer;
+
+/**
+ * Issue
+ * Issues are a great way to keep track of tasks, enhancements, and bugs for your projects.
+**/
+public class Issue {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("active_lock_reason")
+    public String activeLockReason;
+    public Issue withActiveLockReason(String activeLockReason) {
+        this.activeLockReason = activeLockReason;
+        return this;
+    }
+    @JsonProperty("assignee")
+    public IssueSimpleUser assignee;
+    public Issue withAssignee(IssueSimpleUser assignee) {
+        this.assignee = assignee;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("assignees")
+    public SimpleUser[] assignees;
+    public Issue withAssignees(SimpleUser[] assignees) {
+        this.assignees = assignees;
+        return this;
+    }
+    @JsonProperty("author_association")
+    public AuthorAssociationEnum authorAssociation;
+    public Issue withAuthorAssociation(AuthorAssociationEnum authorAssociation) {
+        this.authorAssociation = authorAssociation;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("body")
+    public String body;
+    public Issue withBody(String body) {
+        this.body = body;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("body_html")
+    public String bodyHtml;
+    public Issue withBodyHtml(String bodyHtml) {
+        this.bodyHtml = bodyHtml;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("body_text")
+    public String bodyText;
+    public Issue withBodyText(String bodyText) {
+        this.bodyText = bodyText;
+        return this;
+    }
+    @JsonSerialize(using = DateTimeSerializer.class)
+    @JsonDeserialize(using = DateTimeDeserializer.class)
+    @JsonProperty("closed_at")
+    public OffsetDateTime closedAt;
+    public Issue withClosedAt(OffsetDateTime closedAt) {
+        this.closedAt = closedAt;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("closed_by")
+    public IssueSimpleUser closedBy;
+    public Issue withClosedBy(IssueSimpleUser closedBy) {
+        this.closedBy = closedBy;
+        return this;
+    }
+    @JsonProperty("comments")
+    public Long comments;
+    public Issue withComments(Long comments) {
+        this.comments = comments;
+        return this;
+    }
+    @JsonProperty("comments_url")
+    public String commentsUrl;
+    public Issue withCommentsUrl(String commentsUrl) {
+        this.commentsUrl = commentsUrl;
+        return this;
+    }
+    @JsonSerialize(using = DateTimeSerializer.class)
+    @JsonDeserialize(using = DateTimeDeserializer.class)
+    @JsonProperty("created_at")
+    public OffsetDateTime createdAt;
+    public Issue withCreatedAt(OffsetDateTime createdAt) {
+        this.createdAt = createdAt;
+        return this;
+    }
+    @JsonProperty("events_url")
+    public String eventsUrl;
+    public Issue withEventsUrl(String eventsUrl) {
+        this.eventsUrl = eventsUrl;
+        return this;
+    }
+    @JsonProperty("html_url")
+    public String htmlUrl;
+    public Issue withHtmlUrl(String htmlUrl) {
+        this.htmlUrl = htmlUrl;
+        return this;
+    }
+    @JsonProperty("id")
+    public Long id;
+    public Issue withId(Long id) {
+        this.id = id;
+        return this;
+    }
+    @JsonProperty("labels")
+    public Object[] labels;
+    public Issue withLabels(Object[] labels) {
+        this.labels = labels;
+        return this;
+    }
+    @JsonProperty("labels_url")
+    public String labelsUrl;
+    public Issue withLabelsUrl(String labelsUrl) {
+        this.labelsUrl = labelsUrl;
+        return this;
+    }
+    @JsonProperty("locked")
+    public Boolean locked;
+    public Issue withLocked(Boolean locked) {
+        this.locked = locked;
+        return this;
+    }
+    @JsonProperty("milestone")
+    public IssueMilestone milestone;
+    public Issue withMilestone(IssueMilestone milestone) {
+        this.milestone = milestone;
+        return this;
+    }
+    @JsonProperty("node_id")
+    public String nodeId;
+    public Issue withNodeId(String nodeId) {
+        this.nodeId = nodeId;
+        return this;
+    }
+    @JsonProperty("number")
+    public Long number;
+    public Issue withNumber(Long number) {
+        this.number = number;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("performed_via_github_app")
+    public java.util.Map<String, Object> performedViaGithubApp;
+    public Issue withPerformedViaGithubApp(java.util.Map<String, Object> performedViaGithubApp) {
+        this.performedViaGithubApp = performedViaGithubApp;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("pull_request")
+    public IssuePullRequest pullRequest;
+    public Issue withPullRequest(IssuePullRequest pullRequest) {
+        this.pullRequest = pullRequest;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("reactions")
+    public ReactionRollup reactions;
+    public Issue withReactions(ReactionRollup reactions) {
+        this.reactions = reactions;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("repository")
+    public Repository repository;
+    public Issue withRepository(Repository repository) {
+        this.repository = repository;
+        return this;
+    }
+    @JsonProperty("repository_url")
+    public String repositoryUrl;
+    public Issue withRepositoryUrl(String repositoryUrl) {
+        this.repositoryUrl = repositoryUrl;
+        return this;
+    }
+    @JsonProperty("state")
+    public String state;
+    public Issue withState(String state) {
+        this.state = state;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("timeline_url")
+    public String timelineUrl;
+    public Issue withTimelineUrl(String timelineUrl) {
+        this.timelineUrl = timelineUrl;
+        return this;
+    }
+    @JsonProperty("title")
+    public String title;
+    public Issue withTitle(String title) {
+        this.title = title;
+        return this;
+    }
+    @JsonSerialize(using = DateTimeSerializer.class)
+    @JsonDeserialize(using = DateTimeDeserializer.class)
+    @JsonProperty("updated_at")
+    public OffsetDateTime updatedAt;
+    public Issue withUpdatedAt(OffsetDateTime updatedAt) {
+        this.updatedAt = updatedAt;
+        return this;
+    }
+    @JsonProperty("url")
+    public String url;
+    public Issue withUrl(String url) {
+        this.url = url;
+        return this;
+    }
+    @JsonProperty("user")
+    public IssueSimpleUser user;
+    public Issue withUser(IssueSimpleUser user) {
+        this.user = user;
+        return this;
+    }
+}

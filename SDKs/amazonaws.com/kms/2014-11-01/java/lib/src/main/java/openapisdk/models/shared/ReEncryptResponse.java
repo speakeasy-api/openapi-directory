@@ -1,0 +1,43 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class ReEncryptResponse {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("CiphertextBlob")
+    public String ciphertextBlob;
+    public ReEncryptResponse withCiphertextBlob(String ciphertextBlob) {
+        this.ciphertextBlob = ciphertextBlob;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("DestinationEncryptionAlgorithm")
+    public EncryptionAlgorithmSpecEnum destinationEncryptionAlgorithm;
+    public ReEncryptResponse withDestinationEncryptionAlgorithm(EncryptionAlgorithmSpecEnum destinationEncryptionAlgorithm) {
+        this.destinationEncryptionAlgorithm = destinationEncryptionAlgorithm;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("KeyId")
+    public String keyId;
+    public ReEncryptResponse withKeyId(String keyId) {
+        this.keyId = keyId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("SourceEncryptionAlgorithm")
+    public EncryptionAlgorithmSpecEnum sourceEncryptionAlgorithm;
+    public ReEncryptResponse withSourceEncryptionAlgorithm(EncryptionAlgorithmSpecEnum sourceEncryptionAlgorithm) {
+        this.sourceEncryptionAlgorithm = sourceEncryptionAlgorithm;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("SourceKeyId")
+    public String sourceKeyId;
+    public ReEncryptResponse withSourceKeyId(String sourceKeyId) {
+        this.sourceKeyId = sourceKeyId;
+        return this;
+    }
+}

@@ -1,0 +1,77 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * RegisterDomainRequest
+ * The RegisterDomain request includes the following elements.
+**/
+public class RegisterDomainRequest {
+    @JsonProperty("AdminContact")
+    public ContactDetail adminContact;
+    public RegisterDomainRequest withAdminContact(ContactDetail adminContact) {
+        this.adminContact = adminContact;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("AutoRenew")
+    public Boolean autoRenew;
+    public RegisterDomainRequest withAutoRenew(Boolean autoRenew) {
+        this.autoRenew = autoRenew;
+        return this;
+    }
+    @JsonProperty("DomainName")
+    public String domainName;
+    public RegisterDomainRequest withDomainName(String domainName) {
+        this.domainName = domainName;
+        return this;
+    }
+    @JsonProperty("DurationInYears")
+    public Long durationInYears;
+    public RegisterDomainRequest withDurationInYears(Long durationInYears) {
+        this.durationInYears = durationInYears;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("IdnLangCode")
+    public String idnLangCode;
+    public RegisterDomainRequest withIdnLangCode(String idnLangCode) {
+        this.idnLangCode = idnLangCode;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("PrivacyProtectAdminContact")
+    public Boolean privacyProtectAdminContact;
+    public RegisterDomainRequest withPrivacyProtectAdminContact(Boolean privacyProtectAdminContact) {
+        this.privacyProtectAdminContact = privacyProtectAdminContact;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("PrivacyProtectRegistrantContact")
+    public Boolean privacyProtectRegistrantContact;
+    public RegisterDomainRequest withPrivacyProtectRegistrantContact(Boolean privacyProtectRegistrantContact) {
+        this.privacyProtectRegistrantContact = privacyProtectRegistrantContact;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("PrivacyProtectTechContact")
+    public Boolean privacyProtectTechContact;
+    public RegisterDomainRequest withPrivacyProtectTechContact(Boolean privacyProtectTechContact) {
+        this.privacyProtectTechContact = privacyProtectTechContact;
+        return this;
+    }
+    @JsonProperty("RegistrantContact")
+    public ContactDetail registrantContact;
+    public RegisterDomainRequest withRegistrantContact(ContactDetail registrantContact) {
+        this.registrantContact = registrantContact;
+        return this;
+    }
+    @JsonProperty("TechContact")
+    public ContactDetail techContact;
+    public RegisterDomainRequest withTechContact(ContactDetail techContact) {
+        this.techContact = techContact;
+        return this;
+    }
+}

@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class GetP32SummaryNetReportOutputRequest {
+    public GetP32SummaryNetReportOutputQueryParams queryParams;
+    public GetP32SummaryNetReportOutputRequest withQueryParams(GetP32SummaryNetReportOutputQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public GetP32SummaryNetReportOutputHeaders headers;
+    public GetP32SummaryNetReportOutputRequest withHeaders(GetP32SummaryNetReportOutputHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+}

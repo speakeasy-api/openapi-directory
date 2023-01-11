@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class GetDatasetsRequest {
+    public GetDatasetsQueryParams queryParams;
+    public GetDatasetsRequest withQueryParams(GetDatasetsQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public GetDatasetsHeaders headers;
+    public GetDatasetsRequest withHeaders(GetDatasetsHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+}

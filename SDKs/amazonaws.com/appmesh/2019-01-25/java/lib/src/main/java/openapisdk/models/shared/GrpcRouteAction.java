@@ -1,0 +1,16 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+/**
+ * GrpcRouteAction
+ * An object that represents the action to take if a match is determined.
+**/
+public class GrpcRouteAction {
+    @JsonProperty("weightedTargets")
+    public WeightedTarget[] weightedTargets;
+    public GrpcRouteAction withWeightedTargets(WeightedTarget[] weightedTargets) {
+        this.weightedTargets = weightedTargets;
+        return this;
+    }
+}

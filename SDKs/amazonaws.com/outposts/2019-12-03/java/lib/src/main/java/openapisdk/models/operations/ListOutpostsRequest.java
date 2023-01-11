@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class ListOutpostsRequest {
+    public ListOutpostsQueryParams queryParams;
+    public ListOutpostsRequest withQueryParams(ListOutpostsQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public ListOutpostsHeaders headers;
+    public ListOutpostsRequest withHeaders(ListOutpostsHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+}

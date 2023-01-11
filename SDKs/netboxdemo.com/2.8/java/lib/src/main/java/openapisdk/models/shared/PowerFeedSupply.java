@@ -1,0 +1,18 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+public class PowerFeedSupply {
+    @JsonProperty("label")
+    public PowerFeedSupplyLabelEnum label;
+    public PowerFeedSupply withLabel(PowerFeedSupplyLabelEnum label) {
+        this.label = label;
+        return this;
+    }
+    @JsonProperty("value")
+    public PowerFeedSupplyValueEnum value;
+    public PowerFeedSupply withValue(PowerFeedSupplyValueEnum value) {
+        this.value = value;
+        return this;
+    }
+}

@@ -1,0 +1,22 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class ListAccountIntegrationsRequest {
+    public ListAccountIntegrationsQueryParams queryParams;
+    public ListAccountIntegrationsRequest withQueryParams(ListAccountIntegrationsQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public ListAccountIntegrationsHeaders headers;
+    public ListAccountIntegrationsRequest withHeaders(ListAccountIntegrationsHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public ListAccountIntegrationsRequestBody request;
+    public ListAccountIntegrationsRequest withRequest(ListAccountIntegrationsRequestBody request) {
+        this.request = request;
+        return this;
+    }
+}

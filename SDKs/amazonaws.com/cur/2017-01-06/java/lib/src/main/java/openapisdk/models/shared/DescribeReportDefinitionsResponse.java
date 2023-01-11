@@ -1,0 +1,26 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * DescribeReportDefinitionsResponse
+ * If the action is successful, the service sends back an HTTP 200 response.
+**/
+public class DescribeReportDefinitionsResponse {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("NextToken")
+    public String nextToken;
+    public DescribeReportDefinitionsResponse withNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ReportDefinitions")
+    public ReportDefinition[] reportDefinitions;
+    public DescribeReportDefinitionsResponse withReportDefinitions(ReportDefinition[] reportDefinitions) {
+        this.reportDefinitions = reportDefinitions;
+        return this;
+    }
+}

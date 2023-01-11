@@ -1,0 +1,28 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+/**
+ * AcknowledgeThirdPartyJobInput
+ * Represents the input of an AcknowledgeThirdPartyJob action.
+**/
+public class AcknowledgeThirdPartyJobInput {
+    @JsonProperty("clientToken")
+    public String clientToken;
+    public AcknowledgeThirdPartyJobInput withClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    @JsonProperty("jobId")
+    public String jobId;
+    public AcknowledgeThirdPartyJobInput withJobId(String jobId) {
+        this.jobId = jobId;
+        return this;
+    }
+    @JsonProperty("nonce")
+    public String nonce;
+    public AcknowledgeThirdPartyJobInput withNonce(String nonce) {
+        this.nonce = nonce;
+        return this;
+    }
+}

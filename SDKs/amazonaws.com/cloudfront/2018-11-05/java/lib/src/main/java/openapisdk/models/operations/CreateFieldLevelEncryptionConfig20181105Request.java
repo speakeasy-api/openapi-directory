@@ -1,0 +1,17 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class CreateFieldLevelEncryptionConfig20181105Request {
+    public CreateFieldLevelEncryptionConfig20181105Headers headers;
+    public CreateFieldLevelEncryptionConfig20181105Request withHeaders(CreateFieldLevelEncryptionConfig20181105Headers headers) {
+        this.headers = headers;
+        return this;
+    }
+    @SpeakeasyMetadata("request:mediaType=text/xml")
+    public byte[] request;
+    public CreateFieldLevelEncryptionConfig20181105Request withRequest(byte[] request) {
+        this.request = request;
+        return this;
+    }
+}

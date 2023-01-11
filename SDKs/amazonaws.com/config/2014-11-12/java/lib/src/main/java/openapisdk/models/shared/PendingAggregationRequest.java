@@ -1,0 +1,26 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * PendingAggregationRequest
+ * An object that represents the account ID and region of an aggregator account that is requesting authorization but is not yet authorized.
+**/
+public class PendingAggregationRequest {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("RequesterAccountId")
+    public String requesterAccountId;
+    public PendingAggregationRequest withRequesterAccountId(String requesterAccountId) {
+        this.requesterAccountId = requesterAccountId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("RequesterAwsRegion")
+    public String requesterAwsRegion;
+    public PendingAggregationRequest withRequesterAwsRegion(String requesterAwsRegion) {
+        this.requesterAwsRegion = requesterAwsRegion;
+        return this;
+    }
+}

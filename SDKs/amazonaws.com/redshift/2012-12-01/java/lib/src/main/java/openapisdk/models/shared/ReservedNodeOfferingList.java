@@ -1,0 +1,55 @@
+package openapisdk.models.shared;
+
+
+
+/**
+ * ReservedNodeOfferingList
+ * Describes a reserved node offering.
+**/
+public class ReservedNodeOfferingList {
+    public String currencyCode;
+    public ReservedNodeOfferingList withCurrencyCode(String currencyCode) {
+        this.currencyCode = currencyCode;
+        return this;
+    }
+    public Long duration;
+    public ReservedNodeOfferingList withDuration(Long duration) {
+        this.duration = duration;
+        return this;
+    }
+    public Double fixedPrice;
+    public ReservedNodeOfferingList withFixedPrice(Double fixedPrice) {
+        this.fixedPrice = fixedPrice;
+        return this;
+    }
+    public String nodeType;
+    public ReservedNodeOfferingList withNodeType(String nodeType) {
+        this.nodeType = nodeType;
+        return this;
+    }
+    public String offeringType;
+    public ReservedNodeOfferingList withOfferingType(String offeringType) {
+        this.offeringType = offeringType;
+        return this;
+    }
+    public RecurringChargeList[] recurringCharges;
+    public ReservedNodeOfferingList withRecurringCharges(RecurringChargeList[] recurringCharges) {
+        this.recurringCharges = recurringCharges;
+        return this;
+    }
+    public String reservedNodeOfferingId;
+    public ReservedNodeOfferingList withReservedNodeOfferingId(String reservedNodeOfferingId) {
+        this.reservedNodeOfferingId = reservedNodeOfferingId;
+        return this;
+    }
+    public ReservedNodeOfferingTypeEnum reservedNodeOfferingType;
+    public ReservedNodeOfferingList withReservedNodeOfferingType(ReservedNodeOfferingTypeEnum reservedNodeOfferingType) {
+        this.reservedNodeOfferingType = reservedNodeOfferingType;
+        return this;
+    }
+    public Double usagePrice;
+    public ReservedNodeOfferingList withUsagePrice(Double usagePrice) {
+        this.usagePrice = usagePrice;
+        return this;
+    }
+}

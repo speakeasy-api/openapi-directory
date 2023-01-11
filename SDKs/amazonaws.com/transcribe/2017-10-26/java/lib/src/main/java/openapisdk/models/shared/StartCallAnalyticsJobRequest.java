@@ -1,0 +1,54 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class StartCallAnalyticsJobRequest {
+    @JsonProperty("CallAnalyticsJobName")
+    public String callAnalyticsJobName;
+    public StartCallAnalyticsJobRequest withCallAnalyticsJobName(String callAnalyticsJobName) {
+        this.callAnalyticsJobName = callAnalyticsJobName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ChannelDefinitions")
+    public ChannelDefinition[] channelDefinitions;
+    public StartCallAnalyticsJobRequest withChannelDefinitions(ChannelDefinition[] channelDefinitions) {
+        this.channelDefinitions = channelDefinitions;
+        return this;
+    }
+    @JsonProperty("DataAccessRoleArn")
+    public String dataAccessRoleArn;
+    public StartCallAnalyticsJobRequest withDataAccessRoleArn(String dataAccessRoleArn) {
+        this.dataAccessRoleArn = dataAccessRoleArn;
+        return this;
+    }
+    @JsonProperty("Media")
+    public Media media;
+    public StartCallAnalyticsJobRequest withMedia(Media media) {
+        this.media = media;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("OutputEncryptionKMSKeyId")
+    public String outputEncryptionKMSKeyId;
+    public StartCallAnalyticsJobRequest withOutputEncryptionKmsKeyId(String outputEncryptionKMSKeyId) {
+        this.outputEncryptionKMSKeyId = outputEncryptionKMSKeyId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("OutputLocation")
+    public String outputLocation;
+    public StartCallAnalyticsJobRequest withOutputLocation(String outputLocation) {
+        this.outputLocation = outputLocation;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Settings")
+    public CallAnalyticsJobSettings settings;
+    public StartCallAnalyticsJobRequest withSettings(CallAnalyticsJobSettings settings) {
+        this.settings = settings;
+        return this;
+    }
+}

@@ -1,0 +1,22 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class ListWorldGenerationJobsRequest {
+    public ListWorldGenerationJobsQueryParams queryParams;
+    public ListWorldGenerationJobsRequest withQueryParams(ListWorldGenerationJobsQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public ListWorldGenerationJobsHeaders headers;
+    public ListWorldGenerationJobsRequest withHeaders(ListWorldGenerationJobsHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public ListWorldGenerationJobsRequestBody request;
+    public ListWorldGenerationJobsRequest withRequest(ListWorldGenerationJobsRequestBody request) {
+        this.request = request;
+        return this;
+    }
+}

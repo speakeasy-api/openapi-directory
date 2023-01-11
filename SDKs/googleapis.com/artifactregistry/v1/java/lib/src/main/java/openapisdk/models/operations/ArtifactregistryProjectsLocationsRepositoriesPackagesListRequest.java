@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class ArtifactregistryProjectsLocationsRepositoriesPackagesListRequest {
+    public ArtifactregistryProjectsLocationsRepositoriesPackagesListPathParams pathParams;
+    public ArtifactregistryProjectsLocationsRepositoriesPackagesListRequest withPathParams(ArtifactregistryProjectsLocationsRepositoriesPackagesListPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public ArtifactregistryProjectsLocationsRepositoriesPackagesListQueryParams queryParams;
+    public ArtifactregistryProjectsLocationsRepositoriesPackagesListRequest withQueryParams(ArtifactregistryProjectsLocationsRepositoriesPackagesListQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public ArtifactregistryProjectsLocationsRepositoriesPackagesListSecurity security;
+    public ArtifactregistryProjectsLocationsRepositoriesPackagesListRequest withSecurity(ArtifactregistryProjectsLocationsRepositoriesPackagesListSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

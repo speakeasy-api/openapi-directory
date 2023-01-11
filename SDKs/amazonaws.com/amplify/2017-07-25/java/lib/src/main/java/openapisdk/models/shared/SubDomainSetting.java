@@ -1,0 +1,22 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+/**
+ * SubDomainSetting
+ *  Describes the settings for the subdomain. 
+**/
+public class SubDomainSetting {
+    @JsonProperty("branchName")
+    public String branchName;
+    public SubDomainSetting withBranchName(String branchName) {
+        this.branchName = branchName;
+        return this;
+    }
+    @JsonProperty("prefix")
+    public String prefix;
+    public SubDomainSetting withPrefix(String prefix) {
+        this.prefix = prefix;
+        return this;
+    }
+}

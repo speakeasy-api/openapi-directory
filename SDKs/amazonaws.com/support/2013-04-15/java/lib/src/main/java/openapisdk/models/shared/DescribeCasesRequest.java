@@ -1,0 +1,71 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class DescribeCasesRequest {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("afterTime")
+    public String afterTime;
+    public DescribeCasesRequest withAfterTime(String afterTime) {
+        this.afterTime = afterTime;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("beforeTime")
+    public String beforeTime;
+    public DescribeCasesRequest withBeforeTime(String beforeTime) {
+        this.beforeTime = beforeTime;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("caseIdList")
+    public String[] caseIdList;
+    public DescribeCasesRequest withCaseIdList(String[] caseIdList) {
+        this.caseIdList = caseIdList;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("displayId")
+    public String displayId;
+    public DescribeCasesRequest withDisplayId(String displayId) {
+        this.displayId = displayId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("includeCommunications")
+    public Boolean includeCommunications;
+    public DescribeCasesRequest withIncludeCommunications(Boolean includeCommunications) {
+        this.includeCommunications = includeCommunications;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("includeResolvedCases")
+    public Boolean includeResolvedCases;
+    public DescribeCasesRequest withIncludeResolvedCases(Boolean includeResolvedCases) {
+        this.includeResolvedCases = includeResolvedCases;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("language")
+    public String language;
+    public DescribeCasesRequest withLanguage(String language) {
+        this.language = language;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("maxResults")
+    public Long maxResults;
+    public DescribeCasesRequest withMaxResults(Long maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("nextToken")
+    public String nextToken;
+    public DescribeCasesRequest withNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+}

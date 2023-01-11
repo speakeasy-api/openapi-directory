@@ -1,0 +1,22 @@
+package openapisdk.models.operations;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class UploadVideoAlt1RequestBodyRatings {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("mpaa")
+    public UploadVideoAlt1RequestBodyRatingsMpaa mpaa;
+    public UploadVideoAlt1RequestBodyRatings withMpaa(UploadVideoAlt1RequestBodyRatingsMpaa mpaa) {
+        this.mpaa = mpaa;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("tv")
+    public UploadVideoAlt1RequestBodyRatingsTv tv;
+    public UploadVideoAlt1RequestBodyRatings withTv(UploadVideoAlt1RequestBodyRatingsTv tv) {
+        this.tv = tv;
+        return this;
+    }
+}

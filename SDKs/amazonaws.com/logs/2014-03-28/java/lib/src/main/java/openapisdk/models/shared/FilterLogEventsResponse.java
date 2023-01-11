@@ -1,0 +1,29 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class FilterLogEventsResponse {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("events")
+    public FilteredLogEvent[] events;
+    public FilterLogEventsResponse withEvents(FilteredLogEvent[] events) {
+        this.events = events;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("nextToken")
+    public String nextToken;
+    public FilterLogEventsResponse withNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("searchedLogStreams")
+    public SearchedLogStream[] searchedLogStreams;
+    public FilterLogEventsResponse withSearchedLogStreams(SearchedLogStream[] searchedLogStreams) {
+        this.searchedLogStreams = searchedLogStreams;
+        return this;
+    }
+}

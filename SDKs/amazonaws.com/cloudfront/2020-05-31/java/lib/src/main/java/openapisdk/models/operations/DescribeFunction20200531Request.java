@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class DescribeFunction20200531Request {
+    public DescribeFunction20200531PathParams pathParams;
+    public DescribeFunction20200531Request withPathParams(DescribeFunction20200531PathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public DescribeFunction20200531QueryParams queryParams;
+    public DescribeFunction20200531Request withQueryParams(DescribeFunction20200531QueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public DescribeFunction20200531Headers headers;
+    public DescribeFunction20200531Request withHeaders(DescribeFunction20200531Headers headers) {
+        this.headers = headers;
+        return this;
+    }
+}

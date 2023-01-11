@@ -1,0 +1,73 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * OrganizationCustomRuleMetadata
+ * An object that specifies organization custom rule metadata such as resource type, resource ID of Amazon Web Services resource, Lambda function ARN, and organization trigger types that trigger Config to evaluate your Amazon Web Services resources against a rule. It also provides the frequency with which you want Config to run evaluations for the rule if the trigger type is periodic.
+**/
+public class OrganizationCustomRuleMetadata {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Description")
+    public String description;
+    public OrganizationCustomRuleMetadata withDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("InputParameters")
+    public String inputParameters;
+    public OrganizationCustomRuleMetadata withInputParameters(String inputParameters) {
+        this.inputParameters = inputParameters;
+        return this;
+    }
+    @JsonProperty("LambdaFunctionArn")
+    public String lambdaFunctionArn;
+    public OrganizationCustomRuleMetadata withLambdaFunctionArn(String lambdaFunctionArn) {
+        this.lambdaFunctionArn = lambdaFunctionArn;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("MaximumExecutionFrequency")
+    public MaximumExecutionFrequencyEnum maximumExecutionFrequency;
+    public OrganizationCustomRuleMetadata withMaximumExecutionFrequency(MaximumExecutionFrequencyEnum maximumExecutionFrequency) {
+        this.maximumExecutionFrequency = maximumExecutionFrequency;
+        return this;
+    }
+    @JsonProperty("OrganizationConfigRuleTriggerTypes")
+    public OrganizationConfigRuleTriggerTypeEnum[] organizationConfigRuleTriggerTypes;
+    public OrganizationCustomRuleMetadata withOrganizationConfigRuleTriggerTypes(OrganizationConfigRuleTriggerTypeEnum[] organizationConfigRuleTriggerTypes) {
+        this.organizationConfigRuleTriggerTypes = organizationConfigRuleTriggerTypes;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ResourceIdScope")
+    public String resourceIdScope;
+    public OrganizationCustomRuleMetadata withResourceIdScope(String resourceIdScope) {
+        this.resourceIdScope = resourceIdScope;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ResourceTypesScope")
+    public String[] resourceTypesScope;
+    public OrganizationCustomRuleMetadata withResourceTypesScope(String[] resourceTypesScope) {
+        this.resourceTypesScope = resourceTypesScope;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("TagKeyScope")
+    public String tagKeyScope;
+    public OrganizationCustomRuleMetadata withTagKeyScope(String tagKeyScope) {
+        this.tagKeyScope = tagKeyScope;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("TagValueScope")
+    public String tagValueScope;
+    public OrganizationCustomRuleMetadata withTagValueScope(String tagValueScope) {
+        this.tagValueScope = tagValueScope;
+        return this;
+    }
+}

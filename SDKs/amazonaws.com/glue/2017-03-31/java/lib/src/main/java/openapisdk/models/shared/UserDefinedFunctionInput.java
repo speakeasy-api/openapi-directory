@@ -1,0 +1,47 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * UserDefinedFunctionInput
+ * A structure used to create or update a user-defined function.
+**/
+public class UserDefinedFunctionInput {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ClassName")
+    public String className;
+    public UserDefinedFunctionInput withClassName(String className) {
+        this.className = className;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("FunctionName")
+    public String functionName;
+    public UserDefinedFunctionInput withFunctionName(String functionName) {
+        this.functionName = functionName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("OwnerName")
+    public String ownerName;
+    public UserDefinedFunctionInput withOwnerName(String ownerName) {
+        this.ownerName = ownerName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("OwnerType")
+    public PrincipalTypeEnum ownerType;
+    public UserDefinedFunctionInput withOwnerType(PrincipalTypeEnum ownerType) {
+        this.ownerType = ownerType;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ResourceUris")
+    public ResourceUri[] resourceUris;
+    public UserDefinedFunctionInput withResourceUris(ResourceUri[] resourceUris) {
+        this.resourceUris = resourceUris;
+        return this;
+    }
+}

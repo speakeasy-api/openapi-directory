@@ -1,0 +1,22 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class AssociateDeviceWithPlacementRequest {
+    public AssociateDeviceWithPlacementPathParams pathParams;
+    public AssociateDeviceWithPlacementRequest withPathParams(AssociateDeviceWithPlacementPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public AssociateDeviceWithPlacementHeaders headers;
+    public AssociateDeviceWithPlacementRequest withHeaders(AssociateDeviceWithPlacementHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public AssociateDeviceWithPlacementRequestBody request;
+    public AssociateDeviceWithPlacementRequest withRequest(AssociateDeviceWithPlacementRequestBody request) {
+        this.request = request;
+        return this;
+    }
+}

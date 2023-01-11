@@ -1,0 +1,22 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * SubscribeResultCreditMemoResult
+ * The result of the credit memo.
+ * 
+ * **Note**: This field is only available if you have the Invoice Settlement feature enabled and set the `X-Zuora-WSDL-Version` request header to `107` or later.
+ * 
+**/
+public class SubscribeResultCreditMemoResult {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("CreditMemo")
+    public SubscribeResultCreditMemoResultCreditMemo[] creditMemo;
+    public SubscribeResultCreditMemoResult withCreditMemo(SubscribeResultCreditMemoResultCreditMemo[] creditMemo) {
+        this.creditMemo = creditMemo;
+        return this;
+    }
+}

@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class GetRepositoriesWorkspaceRepoSlugIssuesIssueIdChangesChangeIdRequest {
+    public GetRepositoriesWorkspaceRepoSlugIssuesIssueIdChangesChangeIdPathParams pathParams;
+    public GetRepositoriesWorkspaceRepoSlugIssuesIssueIdChangesChangeIdRequest withPathParams(GetRepositoriesWorkspaceRepoSlugIssuesIssueIdChangesChangeIdPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public GetRepositoriesWorkspaceRepoSlugIssuesIssueIdChangesChangeIdSecurity security;
+    public GetRepositoriesWorkspaceRepoSlugIssuesIssueIdChangesChangeIdRequest withSecurity(GetRepositoriesWorkspaceRepoSlugIssuesIssueIdChangesChangeIdSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

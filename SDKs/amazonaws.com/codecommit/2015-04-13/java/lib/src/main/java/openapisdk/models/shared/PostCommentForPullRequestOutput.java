@@ -1,0 +1,64 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class PostCommentForPullRequestOutput {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("afterBlobId")
+    public String afterBlobId;
+    public PostCommentForPullRequestOutput withAfterBlobId(String afterBlobId) {
+        this.afterBlobId = afterBlobId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("afterCommitId")
+    public String afterCommitId;
+    public PostCommentForPullRequestOutput withAfterCommitId(String afterCommitId) {
+        this.afterCommitId = afterCommitId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("beforeBlobId")
+    public String beforeBlobId;
+    public PostCommentForPullRequestOutput withBeforeBlobId(String beforeBlobId) {
+        this.beforeBlobId = beforeBlobId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("beforeCommitId")
+    public String beforeCommitId;
+    public PostCommentForPullRequestOutput withBeforeCommitId(String beforeCommitId) {
+        this.beforeCommitId = beforeCommitId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("comment")
+    public Comment comment;
+    public PostCommentForPullRequestOutput withComment(Comment comment) {
+        this.comment = comment;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("location")
+    public Location location;
+    public PostCommentForPullRequestOutput withLocation(Location location) {
+        this.location = location;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("pullRequestId")
+    public String pullRequestId;
+    public PostCommentForPullRequestOutput withPullRequestId(String pullRequestId) {
+        this.pullRequestId = pullRequestId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("repositoryName")
+    public String repositoryName;
+    public PostCommentForPullRequestOutput withRepositoryName(String repositoryName) {
+        this.repositoryName = repositoryName;
+        return this;
+    }
+}

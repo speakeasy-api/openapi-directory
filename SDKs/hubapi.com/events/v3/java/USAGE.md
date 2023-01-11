@@ -1,0 +1,47 @@
+<!-- Start SDK Example Usage -->
+```java
+package hello.world;
+
+import openapisdk.SDK;
+import openapisdk.models.shared.Security;
+
+public class Application {
+    public static void main(String[] args) {
+        try {
+            SDK.Builder builder = SDK.builder();
+
+            SDK sdk = builder.build();
+
+            GetEventsV3EventsGetPageRequest req = new GetEventsV3EventsGetPageRequest() {{
+                security = new GetEventsV3EventsGetPageSecurity() {{
+                    hapikey = new SchemeHapikey() {{
+                        apiKey = "YOUR_API_KEY_HERE";
+                    }};
+                }};
+                queryParams = new GetEventsV3EventsGetPageQueryParams() {{
+                    after = "neque";
+                    before = "qui";
+                    eventType = "error";
+                    limit = 2852301075646764818;
+                    objectId = 4005782589587790576;
+                    objectType = "ab";
+                    occurredAfter = "1996-01-08T07:45:13Z";
+                    occurredBefore = "1972-05-28T14:45:14Z";
+                    sort = new String[]() {{
+                        add("et"),
+                        add("aliquid"),
+                        add("sunt"),
+                    }};
+                }};
+            }};
+
+            GetEventsV3EventsGetPageResponse res = sdk.events.getEventsV3EventsGetPage(req);
+
+            if (res.collectionResponseExternalUnifiedEvent.isPresent()) {
+                // handle response
+            }
+        } catch (Exception e) {
+            // handle exception
+        }
+```
+<!-- End SDK Example Usage -->

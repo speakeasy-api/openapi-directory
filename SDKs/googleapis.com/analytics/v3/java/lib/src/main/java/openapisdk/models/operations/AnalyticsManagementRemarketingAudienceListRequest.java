@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class AnalyticsManagementRemarketingAudienceListRequest {
+    public AnalyticsManagementRemarketingAudienceListPathParams pathParams;
+    public AnalyticsManagementRemarketingAudienceListRequest withPathParams(AnalyticsManagementRemarketingAudienceListPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public AnalyticsManagementRemarketingAudienceListQueryParams queryParams;
+    public AnalyticsManagementRemarketingAudienceListRequest withQueryParams(AnalyticsManagementRemarketingAudienceListQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public AnalyticsManagementRemarketingAudienceListSecurity security;
+    public AnalyticsManagementRemarketingAudienceListRequest withSecurity(AnalyticsManagementRemarketingAudienceListSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

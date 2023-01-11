@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class GetSnippetsWorkspaceEncodedIdNodeIdFilesPathRequest {
+    public GetSnippetsWorkspaceEncodedIdNodeIdFilesPathPathParams pathParams;
+    public GetSnippetsWorkspaceEncodedIdNodeIdFilesPathRequest withPathParams(GetSnippetsWorkspaceEncodedIdNodeIdFilesPathPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public GetSnippetsWorkspaceEncodedIdNodeIdFilesPathSecurity security;
+    public GetSnippetsWorkspaceEncodedIdNodeIdFilesPathRequest withSecurity(GetSnippetsWorkspaceEncodedIdNodeIdFilesPathSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

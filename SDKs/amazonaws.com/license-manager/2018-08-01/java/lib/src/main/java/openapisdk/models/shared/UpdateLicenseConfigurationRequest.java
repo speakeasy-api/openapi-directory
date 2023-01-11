@@ -1,0 +1,70 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class UpdateLicenseConfigurationRequest {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Description")
+    public String description;
+    public UpdateLicenseConfigurationRequest withDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("DisassociateWhenNotFound")
+    public Boolean disassociateWhenNotFound;
+    public UpdateLicenseConfigurationRequest withDisassociateWhenNotFound(Boolean disassociateWhenNotFound) {
+        this.disassociateWhenNotFound = disassociateWhenNotFound;
+        return this;
+    }
+    @JsonProperty("LicenseConfigurationArn")
+    public String licenseConfigurationArn;
+    public UpdateLicenseConfigurationRequest withLicenseConfigurationArn(String licenseConfigurationArn) {
+        this.licenseConfigurationArn = licenseConfigurationArn;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("LicenseConfigurationStatus")
+    public LicenseConfigurationStatusEnum licenseConfigurationStatus;
+    public UpdateLicenseConfigurationRequest withLicenseConfigurationStatus(LicenseConfigurationStatusEnum licenseConfigurationStatus) {
+        this.licenseConfigurationStatus = licenseConfigurationStatus;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("LicenseCount")
+    public Long licenseCount;
+    public UpdateLicenseConfigurationRequest withLicenseCount(Long licenseCount) {
+        this.licenseCount = licenseCount;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("LicenseCountHardLimit")
+    public Boolean licenseCountHardLimit;
+    public UpdateLicenseConfigurationRequest withLicenseCountHardLimit(Boolean licenseCountHardLimit) {
+        this.licenseCountHardLimit = licenseCountHardLimit;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("LicenseRules")
+    public String[] licenseRules;
+    public UpdateLicenseConfigurationRequest withLicenseRules(String[] licenseRules) {
+        this.licenseRules = licenseRules;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Name")
+    public String name;
+    public UpdateLicenseConfigurationRequest withName(String name) {
+        this.name = name;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ProductInformationList")
+    public ProductInformation[] productInformationList;
+    public UpdateLicenseConfigurationRequest withProductInformationList(ProductInformation[] productInformationList) {
+        this.productInformationList = productInformationList;
+        return this;
+    }
+}

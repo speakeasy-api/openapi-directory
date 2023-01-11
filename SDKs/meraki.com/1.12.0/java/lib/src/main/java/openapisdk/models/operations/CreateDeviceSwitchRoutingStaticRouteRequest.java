@@ -1,0 +1,17 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class CreateDeviceSwitchRoutingStaticRouteRequest {
+    public CreateDeviceSwitchRoutingStaticRoutePathParams pathParams;
+    public CreateDeviceSwitchRoutingStaticRouteRequest withPathParams(CreateDeviceSwitchRoutingStaticRoutePathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public CreateDeviceSwitchRoutingStaticRouteRequestBody request;
+    public CreateDeviceSwitchRoutingStaticRouteRequest withRequest(CreateDeviceSwitchRoutingStaticRouteRequestBody request) {
+        this.request = request;
+        return this;
+    }
+}

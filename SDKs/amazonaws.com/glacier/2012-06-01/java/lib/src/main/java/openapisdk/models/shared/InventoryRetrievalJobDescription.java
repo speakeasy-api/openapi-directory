@@ -1,0 +1,47 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * InventoryRetrievalJobDescription
+ * Describes the options for a range inventory retrieval job.
+**/
+public class InventoryRetrievalJobDescription {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("EndDate")
+    public String endDate;
+    public InventoryRetrievalJobDescription withEndDate(String endDate) {
+        this.endDate = endDate;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Format")
+    public String format;
+    public InventoryRetrievalJobDescription withFormat(String format) {
+        this.format = format;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Limit")
+    public String limit;
+    public InventoryRetrievalJobDescription withLimit(String limit) {
+        this.limit = limit;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Marker")
+    public String marker;
+    public InventoryRetrievalJobDescription withMarker(String marker) {
+        this.marker = marker;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("StartDate")
+    public String startDate;
+    public InventoryRetrievalJobDescription withStartDate(String startDate) {
+        this.startDate = startDate;
+        return this;
+    }
+}

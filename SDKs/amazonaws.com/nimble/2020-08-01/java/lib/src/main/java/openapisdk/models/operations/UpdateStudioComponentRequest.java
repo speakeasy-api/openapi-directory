@@ -1,0 +1,22 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class UpdateStudioComponentRequest {
+    public UpdateStudioComponentPathParams pathParams;
+    public UpdateStudioComponentRequest withPathParams(UpdateStudioComponentPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public UpdateStudioComponentHeaders headers;
+    public UpdateStudioComponentRequest withHeaders(UpdateStudioComponentHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public UpdateStudioComponentRequestBody request;
+    public UpdateStudioComponentRequest withRequest(UpdateStudioComponentRequestBody request) {
+        this.request = request;
+        return this;
+    }
+}

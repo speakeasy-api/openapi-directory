@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class DeregisterClusterRequest {
+    public DeregisterClusterPathParams pathParams;
+    public DeregisterClusterRequest withPathParams(DeregisterClusterPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public DeregisterClusterHeaders headers;
+    public DeregisterClusterRequest withHeaders(DeregisterClusterHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+}

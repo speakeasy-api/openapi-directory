@@ -1,0 +1,40 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * SegmentGroup
+ * Specifies the base segments and dimensions for a segment, and the relationships between these base segments and dimensions.
+**/
+public class SegmentGroup {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Dimensions")
+    public SegmentDimensions[] dimensions;
+    public SegmentGroup withDimensions(SegmentDimensions[] dimensions) {
+        this.dimensions = dimensions;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("SourceSegments")
+    public SegmentReference[] sourceSegments;
+    public SegmentGroup withSourceSegments(SegmentReference[] sourceSegments) {
+        this.sourceSegments = sourceSegments;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("SourceType")
+    public SourceTypeEnum sourceType;
+    public SegmentGroup withSourceType(SourceTypeEnum sourceType) {
+        this.sourceType = sourceType;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Type")
+    public TypeEnum type;
+    public SegmentGroup withType(TypeEnum type) {
+        this.type = type;
+        return this;
+    }
+}

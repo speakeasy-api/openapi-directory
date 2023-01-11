@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class SqlInstancesPromoteReplicaRequest {
+    public SqlInstancesPromoteReplicaPathParams pathParams;
+    public SqlInstancesPromoteReplicaRequest withPathParams(SqlInstancesPromoteReplicaPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public SqlInstancesPromoteReplicaQueryParams queryParams;
+    public SqlInstancesPromoteReplicaRequest withQueryParams(SqlInstancesPromoteReplicaQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public SqlInstancesPromoteReplicaSecurity security;
+    public SqlInstancesPromoteReplicaRequest withSecurity(SqlInstancesPromoteReplicaSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

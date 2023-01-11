@@ -1,0 +1,40 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * RulesSource
+ * The stateless or stateful rules definitions for use in a single rule group. Each rule group requires a single <code>RulesSource</code>. You can use an instance of this for either stateless rules or stateful rules. 
+**/
+public class RulesSource {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("RulesSourceList")
+    public RulesSourceList rulesSourceList;
+    public RulesSource withRulesSourceList(RulesSourceList rulesSourceList) {
+        this.rulesSourceList = rulesSourceList;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("RulesString")
+    public String rulesString;
+    public RulesSource withRulesString(String rulesString) {
+        this.rulesString = rulesString;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("StatefulRules")
+    public StatefulRule[] statefulRules;
+    public RulesSource withStatefulRules(StatefulRule[] statefulRules) {
+        this.statefulRules = statefulRules;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("StatelessRulesAndCustomActions")
+    public StatelessRulesAndCustomActions statelessRulesAndCustomActions;
+    public RulesSource withStatelessRulesAndCustomActions(StatelessRulesAndCustomActions statelessRulesAndCustomActions) {
+        this.statelessRulesAndCustomActions = statelessRulesAndCustomActions;
+        return this;
+    }
+}

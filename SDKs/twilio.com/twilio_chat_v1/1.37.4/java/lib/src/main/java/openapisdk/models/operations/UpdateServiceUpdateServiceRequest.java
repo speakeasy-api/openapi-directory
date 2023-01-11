@@ -1,0 +1,330 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class UpdateServiceUpdateServiceRequest {
+    @SpeakeasyMetadata("form:name=ConsumptionReportInterval")
+    public Long consumptionReportInterval;
+    public UpdateServiceUpdateServiceRequest withConsumptionReportInterval(Long consumptionReportInterval) {
+        this.consumptionReportInterval = consumptionReportInterval;
+        return this;
+    }
+    @SpeakeasyMetadata("form:name=DefaultChannelCreatorRoleSid")
+    public String defaultChannelCreatorRoleSid;
+    public UpdateServiceUpdateServiceRequest withDefaultChannelCreatorRoleSid(String defaultChannelCreatorRoleSid) {
+        this.defaultChannelCreatorRoleSid = defaultChannelCreatorRoleSid;
+        return this;
+    }
+    @SpeakeasyMetadata("form:name=DefaultChannelRoleSid")
+    public String defaultChannelRoleSid;
+    public UpdateServiceUpdateServiceRequest withDefaultChannelRoleSid(String defaultChannelRoleSid) {
+        this.defaultChannelRoleSid = defaultChannelRoleSid;
+        return this;
+    }
+    @SpeakeasyMetadata("form:name=DefaultServiceRoleSid")
+    public String defaultServiceRoleSid;
+    public UpdateServiceUpdateServiceRequest withDefaultServiceRoleSid(String defaultServiceRoleSid) {
+        this.defaultServiceRoleSid = defaultServiceRoleSid;
+        return this;
+    }
+    @SpeakeasyMetadata("form:name=FriendlyName")
+    public String friendlyName;
+    public UpdateServiceUpdateServiceRequest withFriendlyName(String friendlyName) {
+        this.friendlyName = friendlyName;
+        return this;
+    }
+    @SpeakeasyMetadata("form:name=Limits.ChannelMembers")
+    public Long limitsChannelMembers;
+    public UpdateServiceUpdateServiceRequest withLimitsChannelMembers(Long limitsChannelMembers) {
+        this.limitsChannelMembers = limitsChannelMembers;
+        return this;
+    }
+    @SpeakeasyMetadata("form:name=Limits.UserChannels")
+    public Long limitsUserChannels;
+    public UpdateServiceUpdateServiceRequest withLimitsUserChannels(Long limitsUserChannels) {
+        this.limitsUserChannels = limitsUserChannels;
+        return this;
+    }
+    @SpeakeasyMetadata("form:name=Notifications.AddedToChannel.Enabled")
+    public Boolean notificationsAddedToChannelEnabled;
+    public UpdateServiceUpdateServiceRequest withNotificationsAddedToChannelEnabled(Boolean notificationsAddedToChannelEnabled) {
+        this.notificationsAddedToChannelEnabled = notificationsAddedToChannelEnabled;
+        return this;
+    }
+    @SpeakeasyMetadata("form:name=Notifications.AddedToChannel.Template")
+    public String notificationsAddedToChannelTemplate;
+    public UpdateServiceUpdateServiceRequest withNotificationsAddedToChannelTemplate(String notificationsAddedToChannelTemplate) {
+        this.notificationsAddedToChannelTemplate = notificationsAddedToChannelTemplate;
+        return this;
+    }
+    @SpeakeasyMetadata("form:name=Notifications.InvitedToChannel.Enabled")
+    public Boolean notificationsInvitedToChannelEnabled;
+    public UpdateServiceUpdateServiceRequest withNotificationsInvitedToChannelEnabled(Boolean notificationsInvitedToChannelEnabled) {
+        this.notificationsInvitedToChannelEnabled = notificationsInvitedToChannelEnabled;
+        return this;
+    }
+    @SpeakeasyMetadata("form:name=Notifications.InvitedToChannel.Template")
+    public String notificationsInvitedToChannelTemplate;
+    public UpdateServiceUpdateServiceRequest withNotificationsInvitedToChannelTemplate(String notificationsInvitedToChannelTemplate) {
+        this.notificationsInvitedToChannelTemplate = notificationsInvitedToChannelTemplate;
+        return this;
+    }
+    @SpeakeasyMetadata("form:name=Notifications.NewMessage.Enabled")
+    public Boolean notificationsNewMessageEnabled;
+    public UpdateServiceUpdateServiceRequest withNotificationsNewMessageEnabled(Boolean notificationsNewMessageEnabled) {
+        this.notificationsNewMessageEnabled = notificationsNewMessageEnabled;
+        return this;
+    }
+    @SpeakeasyMetadata("form:name=Notifications.NewMessage.Template")
+    public String notificationsNewMessageTemplate;
+    public UpdateServiceUpdateServiceRequest withNotificationsNewMessageTemplate(String notificationsNewMessageTemplate) {
+        this.notificationsNewMessageTemplate = notificationsNewMessageTemplate;
+        return this;
+    }
+    @SpeakeasyMetadata("form:name=Notifications.RemovedFromChannel.Enabled")
+    public Boolean notificationsRemovedFromChannelEnabled;
+    public UpdateServiceUpdateServiceRequest withNotificationsRemovedFromChannelEnabled(Boolean notificationsRemovedFromChannelEnabled) {
+        this.notificationsRemovedFromChannelEnabled = notificationsRemovedFromChannelEnabled;
+        return this;
+    }
+    @SpeakeasyMetadata("form:name=Notifications.RemovedFromChannel.Template")
+    public String notificationsRemovedFromChannelTemplate;
+    public UpdateServiceUpdateServiceRequest withNotificationsRemovedFromChannelTemplate(String notificationsRemovedFromChannelTemplate) {
+        this.notificationsRemovedFromChannelTemplate = notificationsRemovedFromChannelTemplate;
+        return this;
+    }
+    @SpeakeasyMetadata("form:name=PostWebhookUrl")
+    public String postWebhookUrl;
+    public UpdateServiceUpdateServiceRequest withPostWebhookUrl(String postWebhookUrl) {
+        this.postWebhookUrl = postWebhookUrl;
+        return this;
+    }
+    @SpeakeasyMetadata("form:name=PreWebhookUrl")
+    public String preWebhookUrl;
+    public UpdateServiceUpdateServiceRequest withPreWebhookUrl(String preWebhookUrl) {
+        this.preWebhookUrl = preWebhookUrl;
+        return this;
+    }
+    @SpeakeasyMetadata("form:name=ReachabilityEnabled")
+    public Boolean reachabilityEnabled;
+    public UpdateServiceUpdateServiceRequest withReachabilityEnabled(Boolean reachabilityEnabled) {
+        this.reachabilityEnabled = reachabilityEnabled;
+        return this;
+    }
+    @SpeakeasyMetadata("form:name=ReadStatusEnabled")
+    public Boolean readStatusEnabled;
+    public UpdateServiceUpdateServiceRequest withReadStatusEnabled(Boolean readStatusEnabled) {
+        this.readStatusEnabled = readStatusEnabled;
+        return this;
+    }
+    @SpeakeasyMetadata("form:name=TypingIndicatorTimeout")
+    public Long typingIndicatorTimeout;
+    public UpdateServiceUpdateServiceRequest withTypingIndicatorTimeout(Long typingIndicatorTimeout) {
+        this.typingIndicatorTimeout = typingIndicatorTimeout;
+        return this;
+    }
+    @SpeakeasyMetadata("form:name=WebhookFilters")
+    public String[] webhookFilters;
+    public UpdateServiceUpdateServiceRequest withWebhookFilters(String[] webhookFilters) {
+        this.webhookFilters = webhookFilters;
+        return this;
+    }
+    @SpeakeasyMetadata("form:name=WebhookMethod")
+    public UpdateServiceUpdateServiceRequestWebhookMethodEnum webhookMethod;
+    public UpdateServiceUpdateServiceRequest withWebhookMethod(UpdateServiceUpdateServiceRequestWebhookMethodEnum webhookMethod) {
+        this.webhookMethod = webhookMethod;
+        return this;
+    }
+    @SpeakeasyMetadata("form:name=Webhooks.OnChannelAdd.Method")
+    public UpdateServiceUpdateServiceRequestWebhooksOnChannelAddMethodEnum webhooksOnChannelAddMethod;
+    public UpdateServiceUpdateServiceRequest withWebhooksOnChannelAddMethod(UpdateServiceUpdateServiceRequestWebhooksOnChannelAddMethodEnum webhooksOnChannelAddMethod) {
+        this.webhooksOnChannelAddMethod = webhooksOnChannelAddMethod;
+        return this;
+    }
+    @SpeakeasyMetadata("form:name=Webhooks.OnChannelAdd.Url")
+    public String webhooksOnChannelAddUrl;
+    public UpdateServiceUpdateServiceRequest withWebhooksOnChannelAddUrl(String webhooksOnChannelAddUrl) {
+        this.webhooksOnChannelAddUrl = webhooksOnChannelAddUrl;
+        return this;
+    }
+    @SpeakeasyMetadata("form:name=Webhooks.OnChannelAdded.Method")
+    public UpdateServiceUpdateServiceRequestWebhooksOnChannelAddedMethodEnum webhooksOnChannelAddedMethod;
+    public UpdateServiceUpdateServiceRequest withWebhooksOnChannelAddedMethod(UpdateServiceUpdateServiceRequestWebhooksOnChannelAddedMethodEnum webhooksOnChannelAddedMethod) {
+        this.webhooksOnChannelAddedMethod = webhooksOnChannelAddedMethod;
+        return this;
+    }
+    @SpeakeasyMetadata("form:name=Webhooks.OnChannelAdded.Url")
+    public String webhooksOnChannelAddedUrl;
+    public UpdateServiceUpdateServiceRequest withWebhooksOnChannelAddedUrl(String webhooksOnChannelAddedUrl) {
+        this.webhooksOnChannelAddedUrl = webhooksOnChannelAddedUrl;
+        return this;
+    }
+    @SpeakeasyMetadata("form:name=Webhooks.OnChannelDestroy.Method")
+    public UpdateServiceUpdateServiceRequestWebhooksOnChannelDestroyMethodEnum webhooksOnChannelDestroyMethod;
+    public UpdateServiceUpdateServiceRequest withWebhooksOnChannelDestroyMethod(UpdateServiceUpdateServiceRequestWebhooksOnChannelDestroyMethodEnum webhooksOnChannelDestroyMethod) {
+        this.webhooksOnChannelDestroyMethod = webhooksOnChannelDestroyMethod;
+        return this;
+    }
+    @SpeakeasyMetadata("form:name=Webhooks.OnChannelDestroy.Url")
+    public String webhooksOnChannelDestroyUrl;
+    public UpdateServiceUpdateServiceRequest withWebhooksOnChannelDestroyUrl(String webhooksOnChannelDestroyUrl) {
+        this.webhooksOnChannelDestroyUrl = webhooksOnChannelDestroyUrl;
+        return this;
+    }
+    @SpeakeasyMetadata("form:name=Webhooks.OnChannelDestroyed.Method")
+    public UpdateServiceUpdateServiceRequestWebhooksOnChannelDestroyedMethodEnum webhooksOnChannelDestroyedMethod;
+    public UpdateServiceUpdateServiceRequest withWebhooksOnChannelDestroyedMethod(UpdateServiceUpdateServiceRequestWebhooksOnChannelDestroyedMethodEnum webhooksOnChannelDestroyedMethod) {
+        this.webhooksOnChannelDestroyedMethod = webhooksOnChannelDestroyedMethod;
+        return this;
+    }
+    @SpeakeasyMetadata("form:name=Webhooks.OnChannelDestroyed.Url")
+    public String webhooksOnChannelDestroyedUrl;
+    public UpdateServiceUpdateServiceRequest withWebhooksOnChannelDestroyedUrl(String webhooksOnChannelDestroyedUrl) {
+        this.webhooksOnChannelDestroyedUrl = webhooksOnChannelDestroyedUrl;
+        return this;
+    }
+    @SpeakeasyMetadata("form:name=Webhooks.OnChannelUpdate.Method")
+    public UpdateServiceUpdateServiceRequestWebhooksOnChannelUpdateMethodEnum webhooksOnChannelUpdateMethod;
+    public UpdateServiceUpdateServiceRequest withWebhooksOnChannelUpdateMethod(UpdateServiceUpdateServiceRequestWebhooksOnChannelUpdateMethodEnum webhooksOnChannelUpdateMethod) {
+        this.webhooksOnChannelUpdateMethod = webhooksOnChannelUpdateMethod;
+        return this;
+    }
+    @SpeakeasyMetadata("form:name=Webhooks.OnChannelUpdate.Url")
+    public String webhooksOnChannelUpdateUrl;
+    public UpdateServiceUpdateServiceRequest withWebhooksOnChannelUpdateUrl(String webhooksOnChannelUpdateUrl) {
+        this.webhooksOnChannelUpdateUrl = webhooksOnChannelUpdateUrl;
+        return this;
+    }
+    @SpeakeasyMetadata("form:name=Webhooks.OnChannelUpdated.Method")
+    public UpdateServiceUpdateServiceRequestWebhooksOnChannelUpdatedMethodEnum webhooksOnChannelUpdatedMethod;
+    public UpdateServiceUpdateServiceRequest withWebhooksOnChannelUpdatedMethod(UpdateServiceUpdateServiceRequestWebhooksOnChannelUpdatedMethodEnum webhooksOnChannelUpdatedMethod) {
+        this.webhooksOnChannelUpdatedMethod = webhooksOnChannelUpdatedMethod;
+        return this;
+    }
+    @SpeakeasyMetadata("form:name=Webhooks.OnChannelUpdated.Url")
+    public String webhooksOnChannelUpdatedUrl;
+    public UpdateServiceUpdateServiceRequest withWebhooksOnChannelUpdatedUrl(String webhooksOnChannelUpdatedUrl) {
+        this.webhooksOnChannelUpdatedUrl = webhooksOnChannelUpdatedUrl;
+        return this;
+    }
+    @SpeakeasyMetadata("form:name=Webhooks.OnMemberAdd.Method")
+    public UpdateServiceUpdateServiceRequestWebhooksOnMemberAddMethodEnum webhooksOnMemberAddMethod;
+    public UpdateServiceUpdateServiceRequest withWebhooksOnMemberAddMethod(UpdateServiceUpdateServiceRequestWebhooksOnMemberAddMethodEnum webhooksOnMemberAddMethod) {
+        this.webhooksOnMemberAddMethod = webhooksOnMemberAddMethod;
+        return this;
+    }
+    @SpeakeasyMetadata("form:name=Webhooks.OnMemberAdd.Url")
+    public String webhooksOnMemberAddUrl;
+    public UpdateServiceUpdateServiceRequest withWebhooksOnMemberAddUrl(String webhooksOnMemberAddUrl) {
+        this.webhooksOnMemberAddUrl = webhooksOnMemberAddUrl;
+        return this;
+    }
+    @SpeakeasyMetadata("form:name=Webhooks.OnMemberAdded.Method")
+    public UpdateServiceUpdateServiceRequestWebhooksOnMemberAddedMethodEnum webhooksOnMemberAddedMethod;
+    public UpdateServiceUpdateServiceRequest withWebhooksOnMemberAddedMethod(UpdateServiceUpdateServiceRequestWebhooksOnMemberAddedMethodEnum webhooksOnMemberAddedMethod) {
+        this.webhooksOnMemberAddedMethod = webhooksOnMemberAddedMethod;
+        return this;
+    }
+    @SpeakeasyMetadata("form:name=Webhooks.OnMemberAdded.Url")
+    public String webhooksOnMemberAddedUrl;
+    public UpdateServiceUpdateServiceRequest withWebhooksOnMemberAddedUrl(String webhooksOnMemberAddedUrl) {
+        this.webhooksOnMemberAddedUrl = webhooksOnMemberAddedUrl;
+        return this;
+    }
+    @SpeakeasyMetadata("form:name=Webhooks.OnMemberRemove.Method")
+    public UpdateServiceUpdateServiceRequestWebhooksOnMemberRemoveMethodEnum webhooksOnMemberRemoveMethod;
+    public UpdateServiceUpdateServiceRequest withWebhooksOnMemberRemoveMethod(UpdateServiceUpdateServiceRequestWebhooksOnMemberRemoveMethodEnum webhooksOnMemberRemoveMethod) {
+        this.webhooksOnMemberRemoveMethod = webhooksOnMemberRemoveMethod;
+        return this;
+    }
+    @SpeakeasyMetadata("form:name=Webhooks.OnMemberRemove.Url")
+    public String webhooksOnMemberRemoveUrl;
+    public UpdateServiceUpdateServiceRequest withWebhooksOnMemberRemoveUrl(String webhooksOnMemberRemoveUrl) {
+        this.webhooksOnMemberRemoveUrl = webhooksOnMemberRemoveUrl;
+        return this;
+    }
+    @SpeakeasyMetadata("form:name=Webhooks.OnMemberRemoved.Method")
+    public UpdateServiceUpdateServiceRequestWebhooksOnMemberRemovedMethodEnum webhooksOnMemberRemovedMethod;
+    public UpdateServiceUpdateServiceRequest withWebhooksOnMemberRemovedMethod(UpdateServiceUpdateServiceRequestWebhooksOnMemberRemovedMethodEnum webhooksOnMemberRemovedMethod) {
+        this.webhooksOnMemberRemovedMethod = webhooksOnMemberRemovedMethod;
+        return this;
+    }
+    @SpeakeasyMetadata("form:name=Webhooks.OnMemberRemoved.Url")
+    public String webhooksOnMemberRemovedUrl;
+    public UpdateServiceUpdateServiceRequest withWebhooksOnMemberRemovedUrl(String webhooksOnMemberRemovedUrl) {
+        this.webhooksOnMemberRemovedUrl = webhooksOnMemberRemovedUrl;
+        return this;
+    }
+    @SpeakeasyMetadata("form:name=Webhooks.OnMessageRemove.Method")
+    public UpdateServiceUpdateServiceRequestWebhooksOnMessageRemoveMethodEnum webhooksOnMessageRemoveMethod;
+    public UpdateServiceUpdateServiceRequest withWebhooksOnMessageRemoveMethod(UpdateServiceUpdateServiceRequestWebhooksOnMessageRemoveMethodEnum webhooksOnMessageRemoveMethod) {
+        this.webhooksOnMessageRemoveMethod = webhooksOnMessageRemoveMethod;
+        return this;
+    }
+    @SpeakeasyMetadata("form:name=Webhooks.OnMessageRemove.Url")
+    public String webhooksOnMessageRemoveUrl;
+    public UpdateServiceUpdateServiceRequest withWebhooksOnMessageRemoveUrl(String webhooksOnMessageRemoveUrl) {
+        this.webhooksOnMessageRemoveUrl = webhooksOnMessageRemoveUrl;
+        return this;
+    }
+    @SpeakeasyMetadata("form:name=Webhooks.OnMessageRemoved.Method")
+    public UpdateServiceUpdateServiceRequestWebhooksOnMessageRemovedMethodEnum webhooksOnMessageRemovedMethod;
+    public UpdateServiceUpdateServiceRequest withWebhooksOnMessageRemovedMethod(UpdateServiceUpdateServiceRequestWebhooksOnMessageRemovedMethodEnum webhooksOnMessageRemovedMethod) {
+        this.webhooksOnMessageRemovedMethod = webhooksOnMessageRemovedMethod;
+        return this;
+    }
+    @SpeakeasyMetadata("form:name=Webhooks.OnMessageRemoved.Url")
+    public String webhooksOnMessageRemovedUrl;
+    public UpdateServiceUpdateServiceRequest withWebhooksOnMessageRemovedUrl(String webhooksOnMessageRemovedUrl) {
+        this.webhooksOnMessageRemovedUrl = webhooksOnMessageRemovedUrl;
+        return this;
+    }
+    @SpeakeasyMetadata("form:name=Webhooks.OnMessageSend.Method")
+    public UpdateServiceUpdateServiceRequestWebhooksOnMessageSendMethodEnum webhooksOnMessageSendMethod;
+    public UpdateServiceUpdateServiceRequest withWebhooksOnMessageSendMethod(UpdateServiceUpdateServiceRequestWebhooksOnMessageSendMethodEnum webhooksOnMessageSendMethod) {
+        this.webhooksOnMessageSendMethod = webhooksOnMessageSendMethod;
+        return this;
+    }
+    @SpeakeasyMetadata("form:name=Webhooks.OnMessageSend.Url")
+    public String webhooksOnMessageSendUrl;
+    public UpdateServiceUpdateServiceRequest withWebhooksOnMessageSendUrl(String webhooksOnMessageSendUrl) {
+        this.webhooksOnMessageSendUrl = webhooksOnMessageSendUrl;
+        return this;
+    }
+    @SpeakeasyMetadata("form:name=Webhooks.OnMessageSent.Method")
+    public UpdateServiceUpdateServiceRequestWebhooksOnMessageSentMethodEnum webhooksOnMessageSentMethod;
+    public UpdateServiceUpdateServiceRequest withWebhooksOnMessageSentMethod(UpdateServiceUpdateServiceRequestWebhooksOnMessageSentMethodEnum webhooksOnMessageSentMethod) {
+        this.webhooksOnMessageSentMethod = webhooksOnMessageSentMethod;
+        return this;
+    }
+    @SpeakeasyMetadata("form:name=Webhooks.OnMessageSent.Url")
+    public String webhooksOnMessageSentUrl;
+    public UpdateServiceUpdateServiceRequest withWebhooksOnMessageSentUrl(String webhooksOnMessageSentUrl) {
+        this.webhooksOnMessageSentUrl = webhooksOnMessageSentUrl;
+        return this;
+    }
+    @SpeakeasyMetadata("form:name=Webhooks.OnMessageUpdate.Method")
+    public UpdateServiceUpdateServiceRequestWebhooksOnMessageUpdateMethodEnum webhooksOnMessageUpdateMethod;
+    public UpdateServiceUpdateServiceRequest withWebhooksOnMessageUpdateMethod(UpdateServiceUpdateServiceRequestWebhooksOnMessageUpdateMethodEnum webhooksOnMessageUpdateMethod) {
+        this.webhooksOnMessageUpdateMethod = webhooksOnMessageUpdateMethod;
+        return this;
+    }
+    @SpeakeasyMetadata("form:name=Webhooks.OnMessageUpdate.Url")
+    public String webhooksOnMessageUpdateUrl;
+    public UpdateServiceUpdateServiceRequest withWebhooksOnMessageUpdateUrl(String webhooksOnMessageUpdateUrl) {
+        this.webhooksOnMessageUpdateUrl = webhooksOnMessageUpdateUrl;
+        return this;
+    }
+    @SpeakeasyMetadata("form:name=Webhooks.OnMessageUpdated.Method")
+    public UpdateServiceUpdateServiceRequestWebhooksOnMessageUpdatedMethodEnum webhooksOnMessageUpdatedMethod;
+    public UpdateServiceUpdateServiceRequest withWebhooksOnMessageUpdatedMethod(UpdateServiceUpdateServiceRequestWebhooksOnMessageUpdatedMethodEnum webhooksOnMessageUpdatedMethod) {
+        this.webhooksOnMessageUpdatedMethod = webhooksOnMessageUpdatedMethod;
+        return this;
+    }
+    @SpeakeasyMetadata("form:name=Webhooks.OnMessageUpdated.Url")
+    public String webhooksOnMessageUpdatedUrl;
+    public UpdateServiceUpdateServiceRequest withWebhooksOnMessageUpdatedUrl(String webhooksOnMessageUpdatedUrl) {
+        this.webhooksOnMessageUpdatedUrl = webhooksOnMessageUpdatedUrl;
+        return this;
+    }
+}

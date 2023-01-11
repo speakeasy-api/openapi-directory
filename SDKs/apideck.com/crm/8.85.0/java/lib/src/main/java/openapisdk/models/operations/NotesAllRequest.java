@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class NotesAllRequest {
+    public NotesAllQueryParams queryParams;
+    public NotesAllRequest withQueryParams(NotesAllQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public NotesAllHeaders headers;
+    public NotesAllRequest withHeaders(NotesAllHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+    public NotesAllSecurity security;
+    public NotesAllRequest withSecurity(NotesAllSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

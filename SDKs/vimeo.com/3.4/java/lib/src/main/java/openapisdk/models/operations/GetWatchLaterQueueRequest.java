@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class GetWatchLaterQueueRequest {
+    public GetWatchLaterQueuePathParams pathParams;
+    public GetWatchLaterQueueRequest withPathParams(GetWatchLaterQueuePathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public GetWatchLaterQueueQueryParams queryParams;
+    public GetWatchLaterQueueRequest withQueryParams(GetWatchLaterQueueQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public GetWatchLaterQueueSecurity security;
+    public GetWatchLaterQueueRequest withSecurity(GetWatchLaterQueueSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

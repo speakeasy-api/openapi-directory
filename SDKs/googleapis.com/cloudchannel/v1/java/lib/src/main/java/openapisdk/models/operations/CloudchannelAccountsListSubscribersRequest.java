@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class CloudchannelAccountsListSubscribersRequest {
+    public CloudchannelAccountsListSubscribersPathParams pathParams;
+    public CloudchannelAccountsListSubscribersRequest withPathParams(CloudchannelAccountsListSubscribersPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public CloudchannelAccountsListSubscribersQueryParams queryParams;
+    public CloudchannelAccountsListSubscribersRequest withQueryParams(CloudchannelAccountsListSubscribersQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public CloudchannelAccountsListSubscribersSecurity security;
+    public CloudchannelAccountsListSubscribersRequest withSecurity(CloudchannelAccountsListSubscribersSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

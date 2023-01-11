@@ -1,0 +1,180 @@
+package openapisdk.models.shared;
+
+import java.time.OffsetDateTime;
+
+/**
+ * SnapshotList
+ * Describes a snapshot.
+**/
+public class SnapshotList {
+    public AccountsWithRestoreAccessList[] accountsWithRestoreAccess;
+    public SnapshotList withAccountsWithRestoreAccess(AccountsWithRestoreAccessList[] accountsWithRestoreAccess) {
+        this.accountsWithRestoreAccess = accountsWithRestoreAccess;
+        return this;
+    }
+    public Double actualIncrementalBackupSizeInMegaBytes;
+    public SnapshotList withActualIncrementalBackupSizeInMegaBytes(Double actualIncrementalBackupSizeInMegaBytes) {
+        this.actualIncrementalBackupSizeInMegaBytes = actualIncrementalBackupSizeInMegaBytes;
+        return this;
+    }
+    public String availabilityZone;
+    public SnapshotList withAvailabilityZone(String availabilityZone) {
+        this.availabilityZone = availabilityZone;
+        return this;
+    }
+    public Double backupProgressInMegaBytes;
+    public SnapshotList withBackupProgressInMegaBytes(Double backupProgressInMegaBytes) {
+        this.backupProgressInMegaBytes = backupProgressInMegaBytes;
+        return this;
+    }
+    public OffsetDateTime clusterCreateTime;
+    public SnapshotList withClusterCreateTime(OffsetDateTime clusterCreateTime) {
+        this.clusterCreateTime = clusterCreateTime;
+        return this;
+    }
+    public String clusterIdentifier;
+    public SnapshotList withClusterIdentifier(String clusterIdentifier) {
+        this.clusterIdentifier = clusterIdentifier;
+        return this;
+    }
+    public String clusterVersion;
+    public SnapshotList withClusterVersion(String clusterVersion) {
+        this.clusterVersion = clusterVersion;
+        return this;
+    }
+    public Double currentBackupRateInMegaBytesPerSecond;
+    public SnapshotList withCurrentBackupRateInMegaBytesPerSecond(Double currentBackupRateInMegaBytesPerSecond) {
+        this.currentBackupRateInMegaBytesPerSecond = currentBackupRateInMegaBytesPerSecond;
+        return this;
+    }
+    public String dbName;
+    public SnapshotList withDbName(String dbName) {
+        this.dbName = dbName;
+        return this;
+    }
+    public Long elapsedTimeInSeconds;
+    public SnapshotList withElapsedTimeInSeconds(Long elapsedTimeInSeconds) {
+        this.elapsedTimeInSeconds = elapsedTimeInSeconds;
+        return this;
+    }
+    public Boolean encrypted;
+    public SnapshotList withEncrypted(Boolean encrypted) {
+        this.encrypted = encrypted;
+        return this;
+    }
+    public Boolean encryptedWithHSM;
+    public SnapshotList withEncryptedWithHsm(Boolean encryptedWithHSM) {
+        this.encryptedWithHSM = encryptedWithHSM;
+        return this;
+    }
+    public String engineFullVersion;
+    public SnapshotList withEngineFullVersion(String engineFullVersion) {
+        this.engineFullVersion = engineFullVersion;
+        return this;
+    }
+    public Boolean enhancedVpcRouting;
+    public SnapshotList withEnhancedVpcRouting(Boolean enhancedVpcRouting) {
+        this.enhancedVpcRouting = enhancedVpcRouting;
+        return this;
+    }
+    public Long estimatedSecondsToCompletion;
+    public SnapshotList withEstimatedSecondsToCompletion(Long estimatedSecondsToCompletion) {
+        this.estimatedSecondsToCompletion = estimatedSecondsToCompletion;
+        return this;
+    }
+    public String kmsKeyId;
+    public SnapshotList withKmsKeyId(String kmsKeyId) {
+        this.kmsKeyId = kmsKeyId;
+        return this;
+    }
+    public String maintenanceTrackName;
+    public SnapshotList withMaintenanceTrackName(String maintenanceTrackName) {
+        this.maintenanceTrackName = maintenanceTrackName;
+        return this;
+    }
+    public Long manualSnapshotRemainingDays;
+    public SnapshotList withManualSnapshotRemainingDays(Long manualSnapshotRemainingDays) {
+        this.manualSnapshotRemainingDays = manualSnapshotRemainingDays;
+        return this;
+    }
+    public Long manualSnapshotRetentionPeriod;
+    public SnapshotList withManualSnapshotRetentionPeriod(Long manualSnapshotRetentionPeriod) {
+        this.manualSnapshotRetentionPeriod = manualSnapshotRetentionPeriod;
+        return this;
+    }
+    public String masterUsername;
+    public SnapshotList withMasterUsername(String masterUsername) {
+        this.masterUsername = masterUsername;
+        return this;
+    }
+    public String nodeType;
+    public SnapshotList withNodeType(String nodeType) {
+        this.nodeType = nodeType;
+        return this;
+    }
+    public Long numberOfNodes;
+    public SnapshotList withNumberOfNodes(Long numberOfNodes) {
+        this.numberOfNodes = numberOfNodes;
+        return this;
+    }
+    public String ownerAccount;
+    public SnapshotList withOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public Long port;
+    public SnapshotList withPort(Long port) {
+        this.port = port;
+        return this;
+    }
+    public java.util.Map<String, Object>[] restorableNodeTypes;
+    public SnapshotList withRestorableNodeTypes(java.util.Map<String, Object>[] restorableNodeTypes) {
+        this.restorableNodeTypes = restorableNodeTypes;
+        return this;
+    }
+    public OffsetDateTime snapshotCreateTime;
+    public SnapshotList withSnapshotCreateTime(OffsetDateTime snapshotCreateTime) {
+        this.snapshotCreateTime = snapshotCreateTime;
+        return this;
+    }
+    public String snapshotIdentifier;
+    public SnapshotList withSnapshotIdentifier(String snapshotIdentifier) {
+        this.snapshotIdentifier = snapshotIdentifier;
+        return this;
+    }
+    public OffsetDateTime snapshotRetentionStartTime;
+    public SnapshotList withSnapshotRetentionStartTime(OffsetDateTime snapshotRetentionStartTime) {
+        this.snapshotRetentionStartTime = snapshotRetentionStartTime;
+        return this;
+    }
+    public String snapshotType;
+    public SnapshotList withSnapshotType(String snapshotType) {
+        this.snapshotType = snapshotType;
+        return this;
+    }
+    public String sourceRegion;
+    public SnapshotList withSourceRegion(String sourceRegion) {
+        this.sourceRegion = sourceRegion;
+        return this;
+    }
+    public String status;
+    public SnapshotList withStatus(String status) {
+        this.status = status;
+        return this;
+    }
+    public TagList[] tags;
+    public SnapshotList withTags(TagList[] tags) {
+        this.tags = tags;
+        return this;
+    }
+    public Double totalBackupSizeInMegaBytes;
+    public SnapshotList withTotalBackupSizeInMegaBytes(Double totalBackupSizeInMegaBytes) {
+        this.totalBackupSizeInMegaBytes = totalBackupSizeInMegaBytes;
+        return this;
+    }
+    public String vpcId;
+    public SnapshotList withVpcId(String vpcId) {
+        this.vpcId = vpcId;
+        return this;
+    }
+}

@@ -1,0 +1,18 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+public class CreatePublicVirtualInterfaceRequest {
+    @JsonProperty("connectionId")
+    public String connectionId;
+    public CreatePublicVirtualInterfaceRequest withConnectionId(String connectionId) {
+        this.connectionId = connectionId;
+        return this;
+    }
+    @JsonProperty("newPublicVirtualInterface")
+    public NewPublicVirtualInterface newPublicVirtualInterface;
+    public CreatePublicVirtualInterfaceRequest withNewPublicVirtualInterface(NewPublicVirtualInterface newPublicVirtualInterface) {
+        this.newPublicVirtualInterface = newPublicVirtualInterface;
+        return this;
+    }
+}

@@ -1,0 +1,24 @@
+package openapisdk.models.operations;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+public class GetBusinessCurrentAccounts400ErrorObject {
+    @JsonProperty("description")
+    public GetBusinessCurrentAccounts400ErrorObjectDescriptionEnum description;
+    public GetBusinessCurrentAccounts400ErrorObject withDescription(GetBusinessCurrentAccounts400ErrorObjectDescriptionEnum description) {
+        this.description = description;
+        return this;
+    }
+    @JsonProperty("status")
+    public GetBusinessCurrentAccounts400ErrorObjectStatusEnum status;
+    public GetBusinessCurrentAccounts400ErrorObject withStatus(GetBusinessCurrentAccounts400ErrorObjectStatusEnum status) {
+        this.status = status;
+        return this;
+    }
+    @JsonProperty("title")
+    public GetBusinessCurrentAccounts400ErrorObjectTitleEnum title;
+    public GetBusinessCurrentAccounts400ErrorObject withTitle(GetBusinessCurrentAccounts400ErrorObjectTitleEnum title) {
+        this.title = title;
+        return this;
+    }
+}

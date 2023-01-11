@@ -1,0 +1,18 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class SqlBackupRunsGetSecurity {
+    @SpeakeasyMetadata("security:option=true")
+    public SqlBackupRunsGetSecurityOption1 option1;
+    public SqlBackupRunsGetSecurity withOption1(SqlBackupRunsGetSecurityOption1 option1) {
+        this.option1 = option1;
+        return this;
+    }
+    @SpeakeasyMetadata("security:option=true")
+    public SqlBackupRunsGetSecurityOption2 option2;
+    public SqlBackupRunsGetSecurity withOption2(SqlBackupRunsGetSecurityOption2 option2) {
+        this.option2 = option2;
+        return this;
+    }
+}

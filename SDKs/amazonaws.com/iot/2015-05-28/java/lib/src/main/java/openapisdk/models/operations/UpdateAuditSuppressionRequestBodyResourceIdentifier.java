@@ -1,0 +1,68 @@
+package openapisdk.models.operations;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * UpdateAuditSuppressionRequestBodyResourceIdentifier
+ * Information that identifies the noncompliant resource.
+**/
+public class UpdateAuditSuppressionRequestBodyResourceIdentifier {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("account")
+    public String account;
+    public UpdateAuditSuppressionRequestBodyResourceIdentifier withAccount(String account) {
+        this.account = account;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("caCertificateId")
+    public String caCertificateId;
+    public UpdateAuditSuppressionRequestBodyResourceIdentifier withCaCertificateId(String caCertificateId) {
+        this.caCertificateId = caCertificateId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("clientId")
+    public String clientId;
+    public UpdateAuditSuppressionRequestBodyResourceIdentifier withClientId(String clientId) {
+        this.clientId = clientId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("cognitoIdentityPoolId")
+    public String cognitoIdentityPoolId;
+    public UpdateAuditSuppressionRequestBodyResourceIdentifier withCognitoIdentityPoolId(String cognitoIdentityPoolId) {
+        this.cognitoIdentityPoolId = cognitoIdentityPoolId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("deviceCertificateId")
+    public String deviceCertificateId;
+    public UpdateAuditSuppressionRequestBodyResourceIdentifier withDeviceCertificateId(String deviceCertificateId) {
+        this.deviceCertificateId = deviceCertificateId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("iamRoleArn")
+    public String iamRoleArn;
+    public UpdateAuditSuppressionRequestBodyResourceIdentifier withIamRoleArn(String iamRoleArn) {
+        this.iamRoleArn = iamRoleArn;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("policyVersionIdentifier")
+    public openapisdk.models.shared.PolicyVersionIdentifier policyVersionIdentifier;
+    public UpdateAuditSuppressionRequestBodyResourceIdentifier withPolicyVersionIdentifier(openapisdk.models.shared.PolicyVersionIdentifier policyVersionIdentifier) {
+        this.policyVersionIdentifier = policyVersionIdentifier;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("roleAliasArn")
+    public String roleAliasArn;
+    public UpdateAuditSuppressionRequestBodyResourceIdentifier withRoleAliasArn(String roleAliasArn) {
+        this.roleAliasArn = roleAliasArn;
+        return this;
+    }
+}

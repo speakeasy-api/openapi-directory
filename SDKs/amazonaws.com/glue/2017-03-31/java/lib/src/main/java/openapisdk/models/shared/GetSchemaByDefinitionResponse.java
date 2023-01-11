@@ -1,0 +1,43 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class GetSchemaByDefinitionResponse {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("CreatedTime")
+    public String createdTime;
+    public GetSchemaByDefinitionResponse withCreatedTime(String createdTime) {
+        this.createdTime = createdTime;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("DataFormat")
+    public DataFormatEnum dataFormat;
+    public GetSchemaByDefinitionResponse withDataFormat(DataFormatEnum dataFormat) {
+        this.dataFormat = dataFormat;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("SchemaArn")
+    public String schemaArn;
+    public GetSchemaByDefinitionResponse withSchemaArn(String schemaArn) {
+        this.schemaArn = schemaArn;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("SchemaVersionId")
+    public String schemaVersionId;
+    public GetSchemaByDefinitionResponse withSchemaVersionId(String schemaVersionId) {
+        this.schemaVersionId = schemaVersionId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Status")
+    public SchemaVersionStatusEnum status;
+    public GetSchemaByDefinitionResponse withStatus(SchemaVersionStatusEnum status) {
+        this.status = status;
+        return this;
+    }
+}

@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class DeleteConnectionRequest {
+    public DeleteConnectionPathParams pathParams;
+    public DeleteConnectionRequest withPathParams(DeleteConnectionPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public DeleteConnectionSecurity security;
+    public DeleteConnectionRequest withSecurity(DeleteConnectionSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

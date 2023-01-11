@@ -1,0 +1,50 @@
+package openapisdk.models.shared;
+
+
+
+/**
+ * Action
+ * <p>Information about an action.</p> <p>Each rule must include exactly one of the following types of actions: <code>forward</code>, <code>fixed-response</code>, or <code>redirect</code>, and it must be the last action to be performed.</p>
+**/
+public class Action {
+    public AuthenticateCognitoActionConfig authenticateCognitoConfig;
+    public Action withAuthenticateCognitoConfig(AuthenticateCognitoActionConfig authenticateCognitoConfig) {
+        this.authenticateCognitoConfig = authenticateCognitoConfig;
+        return this;
+    }
+    public AuthenticateOidcActionConfig authenticateOidcConfig;
+    public Action withAuthenticateOidcConfig(AuthenticateOidcActionConfig authenticateOidcConfig) {
+        this.authenticateOidcConfig = authenticateOidcConfig;
+        return this;
+    }
+    public FixedResponseActionConfig fixedResponseConfig;
+    public Action withFixedResponseConfig(FixedResponseActionConfig fixedResponseConfig) {
+        this.fixedResponseConfig = fixedResponseConfig;
+        return this;
+    }
+    public ForwardActionConfig forwardConfig;
+    public Action withForwardConfig(ForwardActionConfig forwardConfig) {
+        this.forwardConfig = forwardConfig;
+        return this;
+    }
+    public Long order;
+    public Action withOrder(Long order) {
+        this.order = order;
+        return this;
+    }
+    public RedirectActionConfig redirectConfig;
+    public Action withRedirectConfig(RedirectActionConfig redirectConfig) {
+        this.redirectConfig = redirectConfig;
+        return this;
+    }
+    public String targetGroupArn;
+    public Action withTargetGroupArn(String targetGroupArn) {
+        this.targetGroupArn = targetGroupArn;
+        return this;
+    }
+    public ActionTypeEnumEnum type;
+    public Action withType(ActionTypeEnumEnum type) {
+        this.type = type;
+        return this;
+    }
+}

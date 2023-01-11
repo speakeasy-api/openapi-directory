@@ -1,0 +1,25 @@
+package openapisdk.models.shared;
+
+
+public enum GoogleCloudAssuredworkloadsV1WorkloadComplianceRegimeEnum {
+    COMPLIANCE_REGIME_UNSPECIFIED("COMPLIANCE_REGIME_UNSPECIFIED"),
+    IL4("IL4"),
+    CJIS("CJIS"),
+    FEDRAMP_HIGH("FEDRAMP_HIGH"),
+    FEDRAMP_MODERATE("FEDRAMP_MODERATE"),
+    US_REGIONAL_ACCESS("US_REGIONAL_ACCESS"),
+    HIPAA("HIPAA"),
+    HITRUST("HITRUST"),
+    EU_REGIONS_AND_SUPPORT("EU_REGIONS_AND_SUPPORT"),
+    CA_REGIONS_AND_SUPPORT("CA_REGIONS_AND_SUPPORT"),
+    ITAR("ITAR"),
+    AU_REGIONS_AND_US_SUPPORT("AU_REGIONS_AND_US_SUPPORT"),
+    ASSURED_WORKLOADS_FOR_PARTNERS("ASSURED_WORKLOADS_FOR_PARTNERS"),
+    ISR_REGIONS("ISR_REGIONS");
+
+    public final String value;
+
+    private GoogleCloudAssuredworkloadsV1WorkloadComplianceRegimeEnum(String value) {
+        this.value = value;
+    }
+}

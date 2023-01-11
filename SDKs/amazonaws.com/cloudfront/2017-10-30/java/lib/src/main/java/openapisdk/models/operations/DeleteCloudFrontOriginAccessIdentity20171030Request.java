@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class DeleteCloudFrontOriginAccessIdentity20171030Request {
+    public DeleteCloudFrontOriginAccessIdentity20171030PathParams pathParams;
+    public DeleteCloudFrontOriginAccessIdentity20171030Request withPathParams(DeleteCloudFrontOriginAccessIdentity20171030PathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public DeleteCloudFrontOriginAccessIdentity20171030Headers headers;
+    public DeleteCloudFrontOriginAccessIdentity20171030Request withHeaders(DeleteCloudFrontOriginAccessIdentity20171030Headers headers) {
+        this.headers = headers;
+        return this;
+    }
+}

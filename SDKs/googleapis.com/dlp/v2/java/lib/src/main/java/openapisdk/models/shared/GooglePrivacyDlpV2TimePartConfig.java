@@ -1,0 +1,19 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * GooglePrivacyDlpV2TimePartConfig
+ * For use with `Date`, `Timestamp`, and `TimeOfDay`, extract or preserve a portion of the value.
+**/
+public class GooglePrivacyDlpV2TimePartConfig {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("partToExtract")
+    public GooglePrivacyDlpV2TimePartConfigPartToExtractEnum partToExtract;
+    public GooglePrivacyDlpV2TimePartConfig withPartToExtract(GooglePrivacyDlpV2TimePartConfigPartToExtractEnum partToExtract) {
+        this.partToExtract = partToExtract;
+        return this;
+    }
+}

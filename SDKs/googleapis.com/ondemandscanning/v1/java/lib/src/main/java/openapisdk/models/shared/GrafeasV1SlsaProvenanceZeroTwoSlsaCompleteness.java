@@ -1,0 +1,33 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * GrafeasV1SlsaProvenanceZeroTwoSlsaCompleteness
+ * Indicates that the builder claims certain fields in this message to be complete.
+**/
+public class GrafeasV1SlsaProvenanceZeroTwoSlsaCompleteness {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("environment")
+    public Boolean environment;
+    public GrafeasV1SlsaProvenanceZeroTwoSlsaCompleteness withEnvironment(Boolean environment) {
+        this.environment = environment;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("materials")
+    public Boolean materials;
+    public GrafeasV1SlsaProvenanceZeroTwoSlsaCompleteness withMaterials(Boolean materials) {
+        this.materials = materials;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("parameters")
+    public Boolean parameters;
+    public GrafeasV1SlsaProvenanceZeroTwoSlsaCompleteness withParameters(Boolean parameters) {
+        this.parameters = parameters;
+        return this;
+    }
+}

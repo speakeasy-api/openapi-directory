@@ -1,0 +1,22 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class UpdateGraphqlApiRequest {
+    public UpdateGraphqlApiPathParams pathParams;
+    public UpdateGraphqlApiRequest withPathParams(UpdateGraphqlApiPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public UpdateGraphqlApiHeaders headers;
+    public UpdateGraphqlApiRequest withHeaders(UpdateGraphqlApiHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public UpdateGraphqlApiRequestBody request;
+    public UpdateGraphqlApiRequest withRequest(UpdateGraphqlApiRequestBody request) {
+        this.request = request;
+        return this;
+    }
+}

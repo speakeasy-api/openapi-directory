@@ -1,0 +1,22 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class ListPlaybackKeyPairsRequest {
+    public ListPlaybackKeyPairsQueryParams queryParams;
+    public ListPlaybackKeyPairsRequest withQueryParams(ListPlaybackKeyPairsQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public ListPlaybackKeyPairsHeaders headers;
+    public ListPlaybackKeyPairsRequest withHeaders(ListPlaybackKeyPairsHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public ListPlaybackKeyPairsRequestBody request;
+    public ListPlaybackKeyPairsRequest withRequest(ListPlaybackKeyPairsRequestBody request) {
+        this.request = request;
+        return this;
+    }
+}

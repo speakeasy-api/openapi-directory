@@ -1,0 +1,26 @@
+package openapisdk.models.shared;
+
+
+
+public class PagespeedApiImageV4PageRect {
+    public Integer height;
+    public PagespeedApiImageV4PageRect withHeight(Integer height) {
+        this.height = height;
+        return this;
+    }
+    public Integer left;
+    public PagespeedApiImageV4PageRect withLeft(Integer left) {
+        this.left = left;
+        return this;
+    }
+    public Integer top;
+    public PagespeedApiImageV4PageRect withTop(Integer top) {
+        this.top = top;
+        return this;
+    }
+    public Integer width;
+    public PagespeedApiImageV4PageRect withWidth(Integer width) {
+        this.width = width;
+        return this;
+    }
+}

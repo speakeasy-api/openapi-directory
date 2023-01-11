@@ -1,0 +1,22 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+/**
+ * AdminDeleteUserRequest
+ * Represents the request to delete a user as an administrator.
+**/
+public class AdminDeleteUserRequest {
+    @JsonProperty("UserPoolId")
+    public String userPoolId;
+    public AdminDeleteUserRequest withUserPoolId(String userPoolId) {
+        this.userPoolId = userPoolId;
+        return this;
+    }
+    @JsonProperty("Username")
+    public String username;
+    public AdminDeleteUserRequest withUsername(String username) {
+        this.username = username;
+        return this;
+    }
+}

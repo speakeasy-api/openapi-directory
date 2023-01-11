@@ -1,0 +1,22 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+/**
+ * OnDemandVideoMetadata
+ * Metadata information about this video.
+**/
+public class OnDemandVideoMetadata {
+    @JsonProperty("connections")
+    public OnDemandVideoMetadataConnections connections;
+    public OnDemandVideoMetadata withConnections(OnDemandVideoMetadataConnections connections) {
+        this.connections = connections;
+        return this;
+    }
+    @JsonProperty("interactions")
+    public OnDemandVideoMetadataInteractions interactions;
+    public OnDemandVideoMetadata withInteractions(OnDemandVideoMetadataInteractions interactions) {
+        this.interactions = interactions;
+        return this;
+    }
+}

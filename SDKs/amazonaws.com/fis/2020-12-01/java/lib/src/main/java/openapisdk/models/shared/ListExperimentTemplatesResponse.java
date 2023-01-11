@@ -1,0 +1,22 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class ListExperimentTemplatesResponse {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("experimentTemplates")
+    public ExperimentTemplateSummary[] experimentTemplates;
+    public ListExperimentTemplatesResponse withExperimentTemplates(ExperimentTemplateSummary[] experimentTemplates) {
+        this.experimentTemplates = experimentTemplates;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("nextToken")
+    public String nextToken;
+    public ListExperimentTemplatesResponse withNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+}

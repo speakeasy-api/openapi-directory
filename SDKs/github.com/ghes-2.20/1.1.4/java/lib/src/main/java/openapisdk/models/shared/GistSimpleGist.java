@@ -1,0 +1,145 @@
+package openapisdk.models.shared;
+
+import java.time.OffsetDateTime;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import openapisdk.utils.DateTimeSerializer;
+import openapisdk.utils.DateTimeDeserializer;
+
+/**
+ * GistSimpleGist
+ * Gist
+**/
+public class GistSimpleGist {
+    @JsonProperty("comments")
+    public Long comments;
+    public GistSimpleGist withComments(Long comments) {
+        this.comments = comments;
+        return this;
+    }
+    @JsonProperty("comments_url")
+    public String commentsUrl;
+    public GistSimpleGist withCommentsUrl(String commentsUrl) {
+        this.commentsUrl = commentsUrl;
+        return this;
+    }
+    @JsonProperty("commits_url")
+    public String commitsUrl;
+    public GistSimpleGist withCommitsUrl(String commitsUrl) {
+        this.commitsUrl = commitsUrl;
+        return this;
+    }
+    @JsonSerialize(using = DateTimeSerializer.class)
+    @JsonDeserialize(using = DateTimeDeserializer.class)
+    @JsonProperty("created_at")
+    public OffsetDateTime createdAt;
+    public GistSimpleGist withCreatedAt(OffsetDateTime createdAt) {
+        this.createdAt = createdAt;
+        return this;
+    }
+    @JsonProperty("description")
+    public String description;
+    public GistSimpleGist withDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    @JsonProperty("files")
+    public java.util.Map<String, GistSimpleGistFiles> files;
+    public GistSimpleGist withFiles(java.util.Map<String, GistSimpleGistFiles> files) {
+        this.files = files;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("forks")
+    public Object[] forks;
+    public GistSimpleGist withForks(Object[] forks) {
+        this.forks = forks;
+        return this;
+    }
+    @JsonProperty("forks_url")
+    public String forksUrl;
+    public GistSimpleGist withForksUrl(String forksUrl) {
+        this.forksUrl = forksUrl;
+        return this;
+    }
+    @JsonProperty("git_pull_url")
+    public String gitPullUrl;
+    public GistSimpleGist withGitPullUrl(String gitPullUrl) {
+        this.gitPullUrl = gitPullUrl;
+        return this;
+    }
+    @JsonProperty("git_push_url")
+    public String gitPushUrl;
+    public GistSimpleGist withGitPushUrl(String gitPushUrl) {
+        this.gitPushUrl = gitPushUrl;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("history")
+    public Object[] history;
+    public GistSimpleGist withHistory(Object[] history) {
+        this.history = history;
+        return this;
+    }
+    @JsonProperty("html_url")
+    public String htmlUrl;
+    public GistSimpleGist withHtmlUrl(String htmlUrl) {
+        this.htmlUrl = htmlUrl;
+        return this;
+    }
+    @JsonProperty("id")
+    public String id;
+    public GistSimpleGist withId(String id) {
+        this.id = id;
+        return this;
+    }
+    @JsonProperty("node_id")
+    public String nodeId;
+    public GistSimpleGist withNodeId(String nodeId) {
+        this.nodeId = nodeId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("owner")
+    public GistSimpleGistSimpleUser owner;
+    public GistSimpleGist withOwner(GistSimpleGistSimpleUser owner) {
+        this.owner = owner;
+        return this;
+    }
+    @JsonProperty("public")
+    public Boolean public_;
+    public GistSimpleGist withPublic(Boolean public_) {
+        this.public_ = public_;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("truncated")
+    public Boolean truncated;
+    public GistSimpleGist withTruncated(Boolean truncated) {
+        this.truncated = truncated;
+        return this;
+    }
+    @JsonSerialize(using = DateTimeSerializer.class)
+    @JsonDeserialize(using = DateTimeDeserializer.class)
+    @JsonProperty("updated_at")
+    public OffsetDateTime updatedAt;
+    public GistSimpleGist withUpdatedAt(OffsetDateTime updatedAt) {
+        this.updatedAt = updatedAt;
+        return this;
+    }
+    @JsonProperty("url")
+    public String url;
+    public GistSimpleGist withUrl(String url) {
+        this.url = url;
+        return this;
+    }
+    @JsonProperty("user")
+    public GistSimpleGistSimpleUser user;
+    public GistSimpleGist withUser(GistSimpleGistSimpleUser user) {
+        this.user = user;
+        return this;
+    }
+}

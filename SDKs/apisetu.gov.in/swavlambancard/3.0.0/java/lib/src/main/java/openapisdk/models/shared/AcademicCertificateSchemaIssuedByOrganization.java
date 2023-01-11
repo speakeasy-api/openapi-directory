@@ -1,0 +1,36 @@
+package openapisdk.models.shared;
+
+
+
+public class AcademicCertificateSchemaIssuedByOrganization {
+    public AcademicCertificateSchemaIssuedByOrganizationAddress address;
+    public AcademicCertificateSchemaIssuedByOrganization withAddress(AcademicCertificateSchemaIssuedByOrganizationAddress address) {
+        this.address = address;
+        return this;
+    }
+    public String code;
+    public AcademicCertificateSchemaIssuedByOrganization withCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String name;
+    public AcademicCertificateSchemaIssuedByOrganization withName(String name) {
+        this.name = name;
+        return this;
+    }
+    public String tin;
+    public AcademicCertificateSchemaIssuedByOrganization withTin(String tin) {
+        this.tin = tin;
+        return this;
+    }
+    public String type;
+    public AcademicCertificateSchemaIssuedByOrganization withType(String type) {
+        this.type = type;
+        return this;
+    }
+    public String uid;
+    public AcademicCertificateSchemaIssuedByOrganization withUid(String uid) {
+        this.uid = uid;
+        return this;
+    }
+}

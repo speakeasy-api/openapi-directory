@@ -1,0 +1,47 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * Image
+ * An object representing an Amazon ECR image.
+**/
+public class Image {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("imageId")
+    public ImageIdentifier imageId;
+    public Image withImageId(ImageIdentifier imageId) {
+        this.imageId = imageId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("imageManifest")
+    public String imageManifest;
+    public Image withImageManifest(String imageManifest) {
+        this.imageManifest = imageManifest;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("imageManifestMediaType")
+    public String imageManifestMediaType;
+    public Image withImageManifestMediaType(String imageManifestMediaType) {
+        this.imageManifestMediaType = imageManifestMediaType;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("registryId")
+    public String registryId;
+    public Image withRegistryId(String registryId) {
+        this.registryId = registryId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("repositoryName")
+    public String repositoryName;
+    public Image withRepositoryName(String repositoryName) {
+        this.repositoryName = repositoryName;
+        return this;
+    }
+}

@@ -1,0 +1,29 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class ErrorDetail {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("code")
+    public Integer code;
+    public ErrorDetail withCode(Integer code) {
+        this.code = code;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("message")
+    public String message;
+    public ErrorDetail withMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("target")
+    public String[] target;
+    public ErrorDetail withTarget(String[] target) {
+        this.target = target;
+        return this;
+    }
+}

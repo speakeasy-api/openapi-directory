@@ -1,0 +1,61 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * ResourceChange
+ * Information about a resource change that will occur when a plan is executed.
+**/
+public class ResourceChange {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Action")
+    public ChangeActionEnum action;
+    public ResourceChange withAction(ChangeActionEnum action) {
+        this.action = action;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Details")
+    public ResourceChangeDetail[] details;
+    public ResourceChange withDetails(ResourceChangeDetail[] details) {
+        this.details = details;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("LogicalResourceId")
+    public String logicalResourceId;
+    public ResourceChange withLogicalResourceId(String logicalResourceId) {
+        this.logicalResourceId = logicalResourceId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("PhysicalResourceId")
+    public String physicalResourceId;
+    public ResourceChange withPhysicalResourceId(String physicalResourceId) {
+        this.physicalResourceId = physicalResourceId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Replacement")
+    public ReplacementEnum replacement;
+    public ResourceChange withReplacement(ReplacementEnum replacement) {
+        this.replacement = replacement;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ResourceType")
+    public String resourceType;
+    public ResourceChange withResourceType(String resourceType) {
+        this.resourceType = resourceType;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Scope")
+    public ResourceAttributeEnum[] scope;
+    public ResourceChange withScope(ResourceAttributeEnum[] scope) {
+        this.scope = scope;
+        return this;
+    }
+}

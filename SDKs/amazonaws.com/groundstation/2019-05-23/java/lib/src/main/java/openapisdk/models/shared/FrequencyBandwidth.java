@@ -1,0 +1,22 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+/**
+ * FrequencyBandwidth
+ * Object that describes the frequency bandwidth. 
+**/
+public class FrequencyBandwidth {
+    @JsonProperty("units")
+    public BandwidthUnitsEnum units;
+    public FrequencyBandwidth withUnits(BandwidthUnitsEnum units) {
+        this.units = units;
+        return this;
+    }
+    @JsonProperty("value")
+    public Double value;
+    public FrequencyBandwidth withValue(Double value) {
+        this.value = value;
+        return this;
+    }
+}

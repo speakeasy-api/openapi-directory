@@ -1,0 +1,50 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class Location {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("address")
+    public String address;
+    public Location withAddress(String address) {
+        this.address = address;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("city")
+    public String city;
+    public Location withCity(String city) {
+        this.city = city;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("lat")
+    public String lat;
+    public Location withLat(String lat) {
+        this.lat = lat;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("lon")
+    public String lon;
+    public Location withLon(String lon) {
+        this.lon = lon;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("state")
+    public String state;
+    public Location withState(String state) {
+        this.state = state;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("zip")
+    public String zip;
+    public Location withZip(String zip) {
+        this.zip = zip;
+        return this;
+    }
+}

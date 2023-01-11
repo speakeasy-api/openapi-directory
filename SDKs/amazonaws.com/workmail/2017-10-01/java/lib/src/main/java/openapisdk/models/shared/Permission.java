@@ -1,0 +1,28 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+/**
+ * Permission
+ * Permission granted to a user, group, or resource to access a certain aspect of another user, group, or resource mailbox.
+**/
+public class Permission {
+    @JsonProperty("GranteeId")
+    public String granteeId;
+    public Permission withGranteeId(String granteeId) {
+        this.granteeId = granteeId;
+        return this;
+    }
+    @JsonProperty("GranteeType")
+    public MemberTypeEnum granteeType;
+    public Permission withGranteeType(MemberTypeEnum granteeType) {
+        this.granteeType = granteeType;
+        return this;
+    }
+    @JsonProperty("PermissionValues")
+    public PermissionTypeEnum[] permissionValues;
+    public Permission withPermissionValues(PermissionTypeEnum[] permissionValues) {
+        this.permissionValues = permissionValues;
+        return this;
+    }
+}

@@ -1,0 +1,124 @@
+package openapisdk.models.shared;
+
+import java.time.OffsetDateTime;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import openapisdk.utils.DateTimeSerializer;
+import openapisdk.utils.DateTimeDeserializer;
+
+/**
+ * Cluster
+ * Contains information about an AWS CloudHSM cluster.
+**/
+public class Cluster {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("BackupPolicy")
+    public BackupPolicyEnum backupPolicy;
+    public Cluster withBackupPolicy(BackupPolicyEnum backupPolicy) {
+        this.backupPolicy = backupPolicy;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("BackupRetentionPolicy")
+    public BackupRetentionPolicy backupRetentionPolicy;
+    public Cluster withBackupRetentionPolicy(BackupRetentionPolicy backupRetentionPolicy) {
+        this.backupRetentionPolicy = backupRetentionPolicy;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Certificates")
+    public Certificates certificates;
+    public Cluster withCertificates(Certificates certificates) {
+        this.certificates = certificates;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ClusterId")
+    public String clusterId;
+    public Cluster withClusterId(String clusterId) {
+        this.clusterId = clusterId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonSerialize(contentUsing = DateTimeSerializer.class)
+    @JsonDeserialize(contentUsing = DateTimeDeserializer.class)
+    @JsonProperty("CreateTimestamp")
+    public OffsetDateTime createTimestamp;
+    public Cluster withCreateTimestamp(OffsetDateTime createTimestamp) {
+        this.createTimestamp = createTimestamp;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("HsmType")
+    public String hsmType;
+    public Cluster withHsmType(String hsmType) {
+        this.hsmType = hsmType;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Hsms")
+    public Hsm[] hsms;
+    public Cluster withHsms(Hsm[] hsms) {
+        this.hsms = hsms;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("PreCoPassword")
+    public String preCoPassword;
+    public Cluster withPreCoPassword(String preCoPassword) {
+        this.preCoPassword = preCoPassword;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("SecurityGroup")
+    public String securityGroup;
+    public Cluster withSecurityGroup(String securityGroup) {
+        this.securityGroup = securityGroup;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("SourceBackupId")
+    public String sourceBackupId;
+    public Cluster withSourceBackupId(String sourceBackupId) {
+        this.sourceBackupId = sourceBackupId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("State")
+    public ClusterStateEnum state;
+    public Cluster withState(ClusterStateEnum state) {
+        this.state = state;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("StateMessage")
+    public String stateMessage;
+    public Cluster withStateMessage(String stateMessage) {
+        this.stateMessage = stateMessage;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("SubnetMapping")
+    public java.util.Map<String, String> subnetMapping;
+    public Cluster withSubnetMapping(java.util.Map<String, String> subnetMapping) {
+        this.subnetMapping = subnetMapping;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("TagList")
+    public Tag[] tagList;
+    public Cluster withTagList(Tag[] tagList) {
+        this.tagList = tagList;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("VpcId")
+    public String vpcId;
+    public Cluster withVpcId(String vpcId) {
+        this.vpcId = vpcId;
+        return this;
+    }
+}

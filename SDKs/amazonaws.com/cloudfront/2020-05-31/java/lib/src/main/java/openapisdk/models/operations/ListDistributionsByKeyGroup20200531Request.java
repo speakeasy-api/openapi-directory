@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class ListDistributionsByKeyGroup20200531Request {
+    public ListDistributionsByKeyGroup20200531PathParams pathParams;
+    public ListDistributionsByKeyGroup20200531Request withPathParams(ListDistributionsByKeyGroup20200531PathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public ListDistributionsByKeyGroup20200531QueryParams queryParams;
+    public ListDistributionsByKeyGroup20200531Request withQueryParams(ListDistributionsByKeyGroup20200531QueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public ListDistributionsByKeyGroup20200531Headers headers;
+    public ListDistributionsByKeyGroup20200531Request withHeaders(ListDistributionsByKeyGroup20200531Headers headers) {
+        this.headers = headers;
+        return this;
+    }
+}

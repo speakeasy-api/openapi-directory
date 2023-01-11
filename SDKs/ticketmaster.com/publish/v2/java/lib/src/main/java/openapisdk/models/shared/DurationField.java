@@ -1,0 +1,43 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class DurationField {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("name")
+    public String name;
+    public DurationField withName(String name) {
+        this.name = name;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("precise")
+    public Boolean precise;
+    public DurationField withPrecise(Boolean precise) {
+        this.precise = precise;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("supported")
+    public Boolean supported;
+    public DurationField withSupported(Boolean supported) {
+        this.supported = supported;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("type")
+    public DurationFieldType type;
+    public DurationField withType(DurationFieldType type) {
+        this.type = type;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("unitMillis")
+    public Long unitMillis;
+    public DurationField withUnitMillis(Long unitMillis) {
+        this.unitMillis = unitMillis;
+        return this;
+    }
+}

@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class GetFunctionConfigurationRequest {
+    public GetFunctionConfigurationPathParams pathParams;
+    public GetFunctionConfigurationRequest withPathParams(GetFunctionConfigurationPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public GetFunctionConfigurationHeaders headers;
+    public GetFunctionConfigurationRequest withHeaders(GetFunctionConfigurationHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+}

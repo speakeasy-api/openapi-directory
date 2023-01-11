@@ -1,0 +1,33 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * ListUserAssetsResponse
+ * A response message from a request to list.
+**/
+public class ListUserAssetsResponse {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("nextPageToken")
+    public String nextPageToken;
+    public ListUserAssetsResponse withNextPageToken(String nextPageToken) {
+        this.nextPageToken = nextPageToken;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("totalSize")
+    public Integer totalSize;
+    public ListUserAssetsResponse withTotalSize(Integer totalSize) {
+        this.totalSize = totalSize;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("userAssets")
+    public UserAsset[] userAssets;
+    public ListUserAssetsResponse withUserAssets(UserAsset[] userAssets) {
+        this.userAssets = userAssets;
+        return this;
+    }
+}

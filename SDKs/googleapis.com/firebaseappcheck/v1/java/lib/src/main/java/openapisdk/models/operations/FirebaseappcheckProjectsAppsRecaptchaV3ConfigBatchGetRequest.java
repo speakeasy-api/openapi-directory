@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class FirebaseappcheckProjectsAppsRecaptchaV3ConfigBatchGetRequest {
+    public FirebaseappcheckProjectsAppsRecaptchaV3ConfigBatchGetPathParams pathParams;
+    public FirebaseappcheckProjectsAppsRecaptchaV3ConfigBatchGetRequest withPathParams(FirebaseappcheckProjectsAppsRecaptchaV3ConfigBatchGetPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public FirebaseappcheckProjectsAppsRecaptchaV3ConfigBatchGetQueryParams queryParams;
+    public FirebaseappcheckProjectsAppsRecaptchaV3ConfigBatchGetRequest withQueryParams(FirebaseappcheckProjectsAppsRecaptchaV3ConfigBatchGetQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public FirebaseappcheckProjectsAppsRecaptchaV3ConfigBatchGetSecurity security;
+    public FirebaseappcheckProjectsAppsRecaptchaV3ConfigBatchGetRequest withSecurity(FirebaseappcheckProjectsAppsRecaptchaV3ConfigBatchGetSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

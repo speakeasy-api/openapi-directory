@@ -1,0 +1,63 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class PutRuleRequest {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Description")
+    public String description;
+    public PutRuleRequest withDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("EventBusName")
+    public String eventBusName;
+    public PutRuleRequest withEventBusName(String eventBusName) {
+        this.eventBusName = eventBusName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("EventPattern")
+    public String eventPattern;
+    public PutRuleRequest withEventPattern(String eventPattern) {
+        this.eventPattern = eventPattern;
+        return this;
+    }
+    @JsonProperty("Name")
+    public String name;
+    public PutRuleRequest withName(String name) {
+        this.name = name;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("RoleArn")
+    public String roleArn;
+    public PutRuleRequest withRoleArn(String roleArn) {
+        this.roleArn = roleArn;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ScheduleExpression")
+    public String scheduleExpression;
+    public PutRuleRequest withScheduleExpression(String scheduleExpression) {
+        this.scheduleExpression = scheduleExpression;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("State")
+    public RuleStateEnum state;
+    public PutRuleRequest withState(RuleStateEnum state) {
+        this.state = state;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Tags")
+    public Tag[] tags;
+    public PutRuleRequest withTags(Tag[] tags) {
+        this.tags = tags;
+        return this;
+    }
+}

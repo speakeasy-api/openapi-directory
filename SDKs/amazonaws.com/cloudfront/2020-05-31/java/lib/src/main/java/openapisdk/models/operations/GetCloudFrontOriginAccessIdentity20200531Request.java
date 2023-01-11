@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class GetCloudFrontOriginAccessIdentity20200531Request {
+    public GetCloudFrontOriginAccessIdentity20200531PathParams pathParams;
+    public GetCloudFrontOriginAccessIdentity20200531Request withPathParams(GetCloudFrontOriginAccessIdentity20200531PathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public GetCloudFrontOriginAccessIdentity20200531Headers headers;
+    public GetCloudFrontOriginAccessIdentity20200531Request withHeaders(GetCloudFrontOriginAccessIdentity20200531Headers headers) {
+        this.headers = headers;
+        return this;
+    }
+}

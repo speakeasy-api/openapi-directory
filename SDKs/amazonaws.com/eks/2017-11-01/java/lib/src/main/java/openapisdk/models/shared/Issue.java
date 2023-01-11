@@ -1,0 +1,33 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * Issue
+ * An object representing an issue with an Amazon EKS resource.
+**/
+public class Issue {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("code")
+    public NodegroupIssueCodeEnum code;
+    public Issue withCode(NodegroupIssueCodeEnum code) {
+        this.code = code;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("message")
+    public String message;
+    public Issue withMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("resourceIds")
+    public String[] resourceIds;
+    public Issue withResourceIds(String[] resourceIds) {
+        this.resourceIds = resourceIds;
+        return this;
+    }
+}

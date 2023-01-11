@@ -1,0 +1,18 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+public class PutPermissionPolicyRequest {
+    @JsonProperty("Policy")
+    public String policy;
+    public PutPermissionPolicyRequest withPolicy(String policy) {
+        this.policy = policy;
+        return this;
+    }
+    @JsonProperty("ResourceArn")
+    public String resourceArn;
+    public PutPermissionPolicyRequest withResourceArn(String resourceArn) {
+        this.resourceArn = resourceArn;
+        return this;
+    }
+}

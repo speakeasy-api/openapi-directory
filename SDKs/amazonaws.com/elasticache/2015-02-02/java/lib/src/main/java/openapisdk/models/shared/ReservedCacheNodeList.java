@@ -1,0 +1,75 @@
+package openapisdk.models.shared;
+
+import java.time.OffsetDateTime;
+
+/**
+ * ReservedCacheNodeList
+ * Represents the output of a <code>PurchaseReservedCacheNodesOffering</code> operation.
+**/
+public class ReservedCacheNodeList {
+    public Long cacheNodeCount;
+    public ReservedCacheNodeList withCacheNodeCount(Long cacheNodeCount) {
+        this.cacheNodeCount = cacheNodeCount;
+        return this;
+    }
+    public String cacheNodeType;
+    public ReservedCacheNodeList withCacheNodeType(String cacheNodeType) {
+        this.cacheNodeType = cacheNodeType;
+        return this;
+    }
+    public Long duration;
+    public ReservedCacheNodeList withDuration(Long duration) {
+        this.duration = duration;
+        return this;
+    }
+    public Double fixedPrice;
+    public ReservedCacheNodeList withFixedPrice(Double fixedPrice) {
+        this.fixedPrice = fixedPrice;
+        return this;
+    }
+    public String offeringType;
+    public ReservedCacheNodeList withOfferingType(String offeringType) {
+        this.offeringType = offeringType;
+        return this;
+    }
+    public String productDescription;
+    public ReservedCacheNodeList withProductDescription(String productDescription) {
+        this.productDescription = productDescription;
+        return this;
+    }
+    public RecurringChargeList[] recurringCharges;
+    public ReservedCacheNodeList withRecurringCharges(RecurringChargeList[] recurringCharges) {
+        this.recurringCharges = recurringCharges;
+        return this;
+    }
+    public String reservationARN;
+    public ReservedCacheNodeList withReservationArn(String reservationARN) {
+        this.reservationARN = reservationARN;
+        return this;
+    }
+    public String reservedCacheNodeId;
+    public ReservedCacheNodeList withReservedCacheNodeId(String reservedCacheNodeId) {
+        this.reservedCacheNodeId = reservedCacheNodeId;
+        return this;
+    }
+    public String reservedCacheNodesOfferingId;
+    public ReservedCacheNodeList withReservedCacheNodesOfferingId(String reservedCacheNodesOfferingId) {
+        this.reservedCacheNodesOfferingId = reservedCacheNodesOfferingId;
+        return this;
+    }
+    public OffsetDateTime startTime;
+    public ReservedCacheNodeList withStartTime(OffsetDateTime startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public String state;
+    public ReservedCacheNodeList withState(String state) {
+        this.state = state;
+        return this;
+    }
+    public Double usagePrice;
+    public ReservedCacheNodeList withUsagePrice(Double usagePrice) {
+        this.usagePrice = usagePrice;
+        return this;
+    }
+}

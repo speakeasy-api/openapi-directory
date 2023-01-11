@@ -1,0 +1,96 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class CreateMobileDeviceAccessRuleRequest {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ClientToken")
+    public String clientToken;
+    public CreateMobileDeviceAccessRuleRequest withClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Description")
+    public String description;
+    public CreateMobileDeviceAccessRuleRequest withDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("DeviceModels")
+    public String[] deviceModels;
+    public CreateMobileDeviceAccessRuleRequest withDeviceModels(String[] deviceModels) {
+        this.deviceModels = deviceModels;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("DeviceOperatingSystems")
+    public String[] deviceOperatingSystems;
+    public CreateMobileDeviceAccessRuleRequest withDeviceOperatingSystems(String[] deviceOperatingSystems) {
+        this.deviceOperatingSystems = deviceOperatingSystems;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("DeviceTypes")
+    public String[] deviceTypes;
+    public CreateMobileDeviceAccessRuleRequest withDeviceTypes(String[] deviceTypes) {
+        this.deviceTypes = deviceTypes;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("DeviceUserAgents")
+    public String[] deviceUserAgents;
+    public CreateMobileDeviceAccessRuleRequest withDeviceUserAgents(String[] deviceUserAgents) {
+        this.deviceUserAgents = deviceUserAgents;
+        return this;
+    }
+    @JsonProperty("Effect")
+    public MobileDeviceAccessRuleEffectEnum effect;
+    public CreateMobileDeviceAccessRuleRequest withEffect(MobileDeviceAccessRuleEffectEnum effect) {
+        this.effect = effect;
+        return this;
+    }
+    @JsonProperty("Name")
+    public String name;
+    public CreateMobileDeviceAccessRuleRequest withName(String name) {
+        this.name = name;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("NotDeviceModels")
+    public String[] notDeviceModels;
+    public CreateMobileDeviceAccessRuleRequest withNotDeviceModels(String[] notDeviceModels) {
+        this.notDeviceModels = notDeviceModels;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("NotDeviceOperatingSystems")
+    public String[] notDeviceOperatingSystems;
+    public CreateMobileDeviceAccessRuleRequest withNotDeviceOperatingSystems(String[] notDeviceOperatingSystems) {
+        this.notDeviceOperatingSystems = notDeviceOperatingSystems;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("NotDeviceTypes")
+    public String[] notDeviceTypes;
+    public CreateMobileDeviceAccessRuleRequest withNotDeviceTypes(String[] notDeviceTypes) {
+        this.notDeviceTypes = notDeviceTypes;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("NotDeviceUserAgents")
+    public String[] notDeviceUserAgents;
+    public CreateMobileDeviceAccessRuleRequest withNotDeviceUserAgents(String[] notDeviceUserAgents) {
+        this.notDeviceUserAgents = notDeviceUserAgents;
+        return this;
+    }
+    @JsonProperty("OrganizationId")
+    public String organizationId;
+    public CreateMobileDeviceAccessRuleRequest withOrganizationId(String organizationId) {
+        this.organizationId = organizationId;
+        return this;
+    }
+}

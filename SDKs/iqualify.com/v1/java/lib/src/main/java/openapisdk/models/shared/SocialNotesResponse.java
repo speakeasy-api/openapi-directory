@@ -1,0 +1,64 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class SocialNotesResponse {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("email")
+    public String email;
+    public SocialNotesResponse withEmail(String email) {
+        this.email = email;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("firstName")
+    public String firstName;
+    public SocialNotesResponse withFirstName(String firstName) {
+        this.firstName = firstName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("lastName")
+    public String lastName;
+    public SocialNotesResponse withLastName(String lastName) {
+        this.lastName = lastName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("pageId")
+    public String pageId;
+    public SocialNotesResponse withPageId(String pageId) {
+        this.pageId = pageId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("personId")
+    public String personId;
+    public SocialNotesResponse withPersonId(String personId) {
+        this.personId = personId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("social-note-content")
+    public String socialNoteContent;
+    public SocialNotesResponse withSocialNoteContent(String socialNoteContent) {
+        this.socialNoteContent = socialNoteContent;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("social-note-paragraphId")
+    public String socialNoteParagraphId;
+    public SocialNotesResponse withSocialNoteParagraphId(String socialNoteParagraphId) {
+        this.socialNoteParagraphId = socialNoteParagraphId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("userId")
+    public String userId;
+    public SocialNotesResponse withUserId(String userId) {
+        this.userId = userId;
+        return this;
+    }
+}

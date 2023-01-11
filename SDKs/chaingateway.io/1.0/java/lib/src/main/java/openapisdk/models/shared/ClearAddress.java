@@ -1,0 +1,48 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+public class ClearAddress {
+    @JsonProperty("amount")
+    public Double amount;
+    public ClearAddress withAmount(Double amount) {
+        this.amount = amount;
+        return this;
+    }
+    @JsonProperty("ethereumaddress")
+    public String ethereumaddress;
+    public ClearAddress withEthereumaddress(String ethereumaddress) {
+        this.ethereumaddress = ethereumaddress;
+        return this;
+    }
+    @JsonProperty("gas")
+    public Double gas;
+    public ClearAddress withGas(Double gas) {
+        this.gas = gas;
+        return this;
+    }
+    @JsonProperty("newaddress")
+    public String newaddress;
+    public ClearAddress withNewaddress(String newaddress) {
+        this.newaddress = newaddress;
+        return this;
+    }
+    @JsonProperty("ok")
+    public Boolean ok;
+    public ClearAddress withOk(Boolean ok) {
+        this.ok = ok;
+        return this;
+    }
+    @JsonProperty("total")
+    public String total;
+    public ClearAddress withTotal(String total) {
+        this.total = total;
+        return this;
+    }
+    @JsonProperty("txid")
+    public String txid;
+    public ClearAddress withTxid(String txid) {
+        this.txid = txid;
+        return this;
+    }
+}

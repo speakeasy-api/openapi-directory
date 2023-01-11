@@ -1,0 +1,57 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class OpenBadgeClass {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("criteria")
+    public OpenBadgeClassCriteria criteria;
+    public OpenBadgeClass withCriteria(OpenBadgeClassCriteria criteria) {
+        this.criteria = criteria;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("description")
+    public String description;
+    public OpenBadgeClass withDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("id")
+    public String id;
+    public OpenBadgeClass withId(String id) {
+        this.id = id;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("image")
+    public String image;
+    public OpenBadgeClass withImage(String image) {
+        this.image = image;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("issuer")
+    public String issuer;
+    public OpenBadgeClass withIssuer(String issuer) {
+        this.issuer = issuer;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("name")
+    public String name;
+    public OpenBadgeClass withName(String name) {
+        this.name = name;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("type")
+    public String type;
+    public OpenBadgeClass withType(String type) {
+        this.type = type;
+        return this;
+    }
+}

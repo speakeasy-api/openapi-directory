@@ -1,0 +1,42 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class ListPullRequestsInput {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("authorArn")
+    public String authorArn;
+    public ListPullRequestsInput withAuthorArn(String authorArn) {
+        this.authorArn = authorArn;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("maxResults")
+    public Long maxResults;
+    public ListPullRequestsInput withMaxResults(Long maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("nextToken")
+    public String nextToken;
+    public ListPullRequestsInput withNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("pullRequestStatus")
+    public PullRequestStatusEnumEnum pullRequestStatus;
+    public ListPullRequestsInput withPullRequestStatus(PullRequestStatusEnumEnum pullRequestStatus) {
+        this.pullRequestStatus = pullRequestStatus;
+        return this;
+    }
+    @JsonProperty("repositoryName")
+    public String repositoryName;
+    public ListPullRequestsInput withRepositoryName(String repositoryName) {
+        this.repositoryName = repositoryName;
+        return this;
+    }
+}

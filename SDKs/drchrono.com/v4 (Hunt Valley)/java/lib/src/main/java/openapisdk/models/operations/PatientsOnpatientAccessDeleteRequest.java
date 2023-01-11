@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class PatientsOnpatientAccessDeleteRequest {
+    public PatientsOnpatientAccessDeletePathParams pathParams;
+    public PatientsOnpatientAccessDeleteRequest withPathParams(PatientsOnpatientAccessDeletePathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public PatientsOnpatientAccessDeleteQueryParams queryParams;
+    public PatientsOnpatientAccessDeleteRequest withQueryParams(PatientsOnpatientAccessDeleteQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public PatientsOnpatientAccessDeleteSecurity security;
+    public PatientsOnpatientAccessDeleteRequest withSecurity(PatientsOnpatientAccessDeleteSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

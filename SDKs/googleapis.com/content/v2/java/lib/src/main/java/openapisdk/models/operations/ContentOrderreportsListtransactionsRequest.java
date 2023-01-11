@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class ContentOrderreportsListtransactionsRequest {
+    public ContentOrderreportsListtransactionsPathParams pathParams;
+    public ContentOrderreportsListtransactionsRequest withPathParams(ContentOrderreportsListtransactionsPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public ContentOrderreportsListtransactionsQueryParams queryParams;
+    public ContentOrderreportsListtransactionsRequest withQueryParams(ContentOrderreportsListtransactionsQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public ContentOrderreportsListtransactionsSecurity security;
+    public ContentOrderreportsListtransactionsRequest withSecurity(ContentOrderreportsListtransactionsSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

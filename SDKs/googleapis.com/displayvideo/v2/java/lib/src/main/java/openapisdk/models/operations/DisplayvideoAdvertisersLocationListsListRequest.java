@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class DisplayvideoAdvertisersLocationListsListRequest {
+    public DisplayvideoAdvertisersLocationListsListPathParams pathParams;
+    public DisplayvideoAdvertisersLocationListsListRequest withPathParams(DisplayvideoAdvertisersLocationListsListPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public DisplayvideoAdvertisersLocationListsListQueryParams queryParams;
+    public DisplayvideoAdvertisersLocationListsListRequest withQueryParams(DisplayvideoAdvertisersLocationListsListQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public DisplayvideoAdvertisersLocationListsListSecurity security;
+    public DisplayvideoAdvertisersLocationListsListRequest withSecurity(DisplayvideoAdvertisersLocationListsListSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

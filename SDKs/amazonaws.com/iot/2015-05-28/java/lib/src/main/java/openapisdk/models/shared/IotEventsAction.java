@@ -1,0 +1,38 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * IotEventsAction
+ * Sends an input to an IoT Events detector.
+**/
+public class IotEventsAction {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("batchMode")
+    public Boolean batchMode;
+    public IotEventsAction withBatchMode(Boolean batchMode) {
+        this.batchMode = batchMode;
+        return this;
+    }
+    @JsonProperty("inputName")
+    public String inputName;
+    public IotEventsAction withInputName(String inputName) {
+        this.inputName = inputName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("messageId")
+    public String messageId;
+    public IotEventsAction withMessageId(String messageId) {
+        this.messageId = messageId;
+        return this;
+    }
+    @JsonProperty("roleArn")
+    public String roleArn;
+    public IotEventsAction withRoleArn(String roleArn) {
+        this.roleArn = roleArn;
+        return this;
+    }
+}

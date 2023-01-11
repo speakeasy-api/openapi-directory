@@ -1,0 +1,19 @@
+package openapisdk.models.operations;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * CreateConfigurationSetRequestBodyTrackingOptions
+ * <p>An object that defines the tracking options for a configuration set. When you use the Amazon SES API v2 to send an email, it contains an invisible image that's used to track when recipients open your email. If your email contains links, those links are changed slightly in order to track when recipients click them.</p> <p>These images and links include references to a domain operated by AWS. You can optionally configure the Amazon SES to use a domain that you operate for these images and links.</p>
+**/
+public class CreateConfigurationSetRequestBodyTrackingOptions {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("CustomRedirectDomain")
+    public String customRedirectDomain;
+    public CreateConfigurationSetRequestBodyTrackingOptions withCustomRedirectDomain(String customRedirectDomain) {
+        this.customRedirectDomain = customRedirectDomain;
+        return this;
+    }
+}

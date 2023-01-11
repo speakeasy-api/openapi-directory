@@ -1,0 +1,26 @@
+package openapisdk.models.operations;
+
+
+
+public class ContactsOneRequest {
+    public ContactsOnePathParams pathParams;
+    public ContactsOneRequest withPathParams(ContactsOnePathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public ContactsOneQueryParams queryParams;
+    public ContactsOneRequest withQueryParams(ContactsOneQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public ContactsOneHeaders headers;
+    public ContactsOneRequest withHeaders(ContactsOneHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+    public ContactsOneSecurity security;
+    public ContactsOneRequest withSecurity(ContactsOneSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

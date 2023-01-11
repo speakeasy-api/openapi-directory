@@ -1,0 +1,28 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+/**
+ * ImportSshPublicKeyResponse
+ * Identifies the user, the server they belong to, and the identifier of the SSH public key associated with that user. A user can have more than one key on each server that they are associated with.
+**/
+public class ImportSshPublicKeyResponse {
+    @JsonProperty("ServerId")
+    public String serverId;
+    public ImportSshPublicKeyResponse withServerId(String serverId) {
+        this.serverId = serverId;
+        return this;
+    }
+    @JsonProperty("SshPublicKeyId")
+    public String sshPublicKeyId;
+    public ImportSshPublicKeyResponse withSshPublicKeyId(String sshPublicKeyId) {
+        this.sshPublicKeyId = sshPublicKeyId;
+        return this;
+    }
+    @JsonProperty("UserName")
+    public String userName;
+    public ImportSshPublicKeyResponse withUserName(String userName) {
+        this.userName = userName;
+        return this;
+    }
+}

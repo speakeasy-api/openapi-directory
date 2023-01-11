@@ -1,0 +1,33 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * FindMatchesTaskRunProperties
+ * Specifies configuration properties for a Find Matches task run.
+**/
+public class FindMatchesTaskRunProperties {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("JobId")
+    public String jobId;
+    public FindMatchesTaskRunProperties withJobId(String jobId) {
+        this.jobId = jobId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("JobName")
+    public String jobName;
+    public FindMatchesTaskRunProperties withJobName(String jobName) {
+        this.jobName = jobName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("JobRunId")
+    public String jobRunId;
+    public FindMatchesTaskRunProperties withJobRunId(String jobRunId) {
+        this.jobRunId = jobRunId;
+        return this;
+    }
+}

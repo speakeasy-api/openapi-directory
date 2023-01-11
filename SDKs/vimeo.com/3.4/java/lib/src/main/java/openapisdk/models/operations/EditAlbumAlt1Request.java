@@ -1,0 +1,22 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class EditAlbumAlt1Request {
+    public EditAlbumAlt1PathParams pathParams;
+    public EditAlbumAlt1Request withPathParams(EditAlbumAlt1PathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    @SpeakeasyMetadata("request:mediaType=application/vnd.vimeo.album+json")
+    public EditAlbumAlt1RequestBody request;
+    public EditAlbumAlt1Request withRequest(EditAlbumAlt1RequestBody request) {
+        this.request = request;
+        return this;
+    }
+    public EditAlbumAlt1Security security;
+    public EditAlbumAlt1Request withSecurity(EditAlbumAlt1Security security) {
+        this.security = security;
+        return this;
+    }
+}

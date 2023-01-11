@@ -1,0 +1,26 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * SsmControls
+ * Amazon Web Services Systems Manager (SSM) specific remediation controls.
+**/
+public class SsmControls {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ConcurrentExecutionRatePercentage")
+    public Long concurrentExecutionRatePercentage;
+    public SsmControls withConcurrentExecutionRatePercentage(Long concurrentExecutionRatePercentage) {
+        this.concurrentExecutionRatePercentage = concurrentExecutionRatePercentage;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ErrorPercentage")
+    public Long errorPercentage;
+    public SsmControls withErrorPercentage(Long errorPercentage) {
+        this.errorPercentage = errorPercentage;
+        return this;
+    }
+}

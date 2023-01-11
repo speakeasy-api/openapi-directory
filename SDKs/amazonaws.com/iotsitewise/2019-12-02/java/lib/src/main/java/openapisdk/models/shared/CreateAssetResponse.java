@@ -1,0 +1,24 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+public class CreateAssetResponse {
+    @JsonProperty("assetArn")
+    public String assetArn;
+    public CreateAssetResponse withAssetArn(String assetArn) {
+        this.assetArn = assetArn;
+        return this;
+    }
+    @JsonProperty("assetId")
+    public String assetId;
+    public CreateAssetResponse withAssetId(String assetId) {
+        this.assetId = assetId;
+        return this;
+    }
+    @JsonProperty("assetStatus")
+    public AssetStatus assetStatus;
+    public CreateAssetResponse withAssetStatus(AssetStatus assetStatus) {
+        this.assetStatus = assetStatus;
+        return this;
+    }
+}

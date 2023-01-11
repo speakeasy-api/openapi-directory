@@ -1,0 +1,27 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class PostCommentReplyInput {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("clientRequestToken")
+    public String clientRequestToken;
+    public PostCommentReplyInput withClientRequestToken(String clientRequestToken) {
+        this.clientRequestToken = clientRequestToken;
+        return this;
+    }
+    @JsonProperty("content")
+    public String content;
+    public PostCommentReplyInput withContent(String content) {
+        this.content = content;
+        return this;
+    }
+    @JsonProperty("inReplyTo")
+    public String inReplyTo;
+    public PostCommentReplyInput withInReplyTo(String inReplyTo) {
+        this.inReplyTo = inReplyTo;
+        return this;
+    }
+}

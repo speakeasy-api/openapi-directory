@@ -1,0 +1,41 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class CreateTokenRequest {
+    @JsonProperty("ClientToken")
+    public String clientToken;
+    public CreateTokenRequest withClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ExpirationInDays")
+    public Long expirationInDays;
+    public CreateTokenRequest withExpirationInDays(Long expirationInDays) {
+        this.expirationInDays = expirationInDays;
+        return this;
+    }
+    @JsonProperty("LicenseArn")
+    public String licenseArn;
+    public CreateTokenRequest withLicenseArn(String licenseArn) {
+        this.licenseArn = licenseArn;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("RoleArns")
+    public String[] roleArns;
+    public CreateTokenRequest withRoleArns(String[] roleArns) {
+        this.roleArns = roleArns;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("TokenProperties")
+    public String[] tokenProperties;
+    public CreateTokenRequest withTokenProperties(String[] tokenProperties) {
+        this.tokenProperties = tokenProperties;
+        return this;
+    }
+}

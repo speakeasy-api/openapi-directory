@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class GetNotificationConfigurationRequest {
+    public GetNotificationConfigurationPathParams pathParams;
+    public GetNotificationConfigurationRequest withPathParams(GetNotificationConfigurationPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public GetNotificationConfigurationHeaders headers;
+    public GetNotificationConfigurationRequest withHeaders(GetNotificationConfigurationHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+}

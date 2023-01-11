@@ -1,0 +1,27 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class Adexchangebuyer2AccountsProposalsResumeRequest {
+    public Adexchangebuyer2AccountsProposalsResumePathParams pathParams;
+    public Adexchangebuyer2AccountsProposalsResumeRequest withPathParams(Adexchangebuyer2AccountsProposalsResumePathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public Adexchangebuyer2AccountsProposalsResumeQueryParams queryParams;
+    public Adexchangebuyer2AccountsProposalsResumeRequest withQueryParams(Adexchangebuyer2AccountsProposalsResumeQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public java.util.Map<String, Object> request;
+    public Adexchangebuyer2AccountsProposalsResumeRequest withRequest(java.util.Map<String, Object> request) {
+        this.request = request;
+        return this;
+    }
+    public Adexchangebuyer2AccountsProposalsResumeSecurity security;
+    public Adexchangebuyer2AccountsProposalsResumeRequest withSecurity(Adexchangebuyer2AccountsProposalsResumeSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

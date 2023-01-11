@@ -1,0 +1,33 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * NetworkInterface
+ * Network interface.
+**/
+public class NetworkInterface {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ips")
+    public String[] ips;
+    public NetworkInterface withIps(String[] ips) {
+        this.ips = ips;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("isPrimary")
+    public Boolean isPrimary;
+    public NetworkInterface withIsPrimary(Boolean isPrimary) {
+        this.isPrimary = isPrimary;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("macAddress")
+    public String macAddress;
+    public NetworkInterface withMacAddress(String macAddress) {
+        this.macAddress = macAddress;
+        return this;
+    }
+}

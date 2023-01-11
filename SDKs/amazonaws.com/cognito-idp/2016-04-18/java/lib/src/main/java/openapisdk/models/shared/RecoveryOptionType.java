@@ -1,0 +1,22 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+/**
+ * RecoveryOptionType
+ * A map containing a priority as a key, and recovery method name as a value.
+**/
+public class RecoveryOptionType {
+    @JsonProperty("Name")
+    public RecoveryOptionNameTypeEnum name;
+    public RecoveryOptionType withName(RecoveryOptionNameTypeEnum name) {
+        this.name = name;
+        return this;
+    }
+    @JsonProperty("Priority")
+    public Long priority;
+    public RecoveryOptionType withPriority(Long priority) {
+        this.priority = priority;
+        return this;
+    }
+}

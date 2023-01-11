@@ -1,0 +1,17 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class CreateDedicatedIpPoolRequest {
+    public CreateDedicatedIpPoolHeaders headers;
+    public CreateDedicatedIpPoolRequest withHeaders(CreateDedicatedIpPoolHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public CreateDedicatedIpPoolRequestBody request;
+    public CreateDedicatedIpPoolRequest withRequest(CreateDedicatedIpPoolRequestBody request) {
+        this.request = request;
+        return this;
+    }
+}

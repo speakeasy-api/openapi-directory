@@ -1,0 +1,70 @@
+package openapisdk.models.shared;
+
+import java.time.OffsetDateTime;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import openapisdk.utils.DateTimeSerializer;
+import openapisdk.utils.DateTimeDeserializer;
+
+public class UpdateDomainResponse {
+    @JsonSerialize(using = DateTimeSerializer.class)
+    @JsonDeserialize(using = DateTimeDeserializer.class)
+    @JsonProperty("CreatedAt")
+    public OffsetDateTime createdAt;
+    public UpdateDomainResponse withCreatedAt(OffsetDateTime createdAt) {
+        this.createdAt = createdAt;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("DeadLetterQueueUrl")
+    public String deadLetterQueueUrl;
+    public UpdateDomainResponse withDeadLetterQueueUrl(String deadLetterQueueUrl) {
+        this.deadLetterQueueUrl = deadLetterQueueUrl;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("DefaultEncryptionKey")
+    public String defaultEncryptionKey;
+    public UpdateDomainResponse withDefaultEncryptionKey(String defaultEncryptionKey) {
+        this.defaultEncryptionKey = defaultEncryptionKey;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("DefaultExpirationDays")
+    public Long defaultExpirationDays;
+    public UpdateDomainResponse withDefaultExpirationDays(Long defaultExpirationDays) {
+        this.defaultExpirationDays = defaultExpirationDays;
+        return this;
+    }
+    @JsonProperty("DomainName")
+    public String domainName;
+    public UpdateDomainResponse withDomainName(String domainName) {
+        this.domainName = domainName;
+        return this;
+    }
+    @JsonSerialize(using = DateTimeSerializer.class)
+    @JsonDeserialize(using = DateTimeDeserializer.class)
+    @JsonProperty("LastUpdatedAt")
+    public OffsetDateTime lastUpdatedAt;
+    public UpdateDomainResponse withLastUpdatedAt(OffsetDateTime lastUpdatedAt) {
+        this.lastUpdatedAt = lastUpdatedAt;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Matching")
+    public MatchingResponse matching;
+    public UpdateDomainResponse withMatching(MatchingResponse matching) {
+        this.matching = matching;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Tags")
+    public java.util.Map<String, String> tags;
+    public UpdateDomainResponse withTags(java.util.Map<String, String> tags) {
+        this.tags = tags;
+        return this;
+    }
+}

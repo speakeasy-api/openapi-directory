@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class RemotebuildexecutionProjectsInstancesWorkerpoolsDeleteRequest {
+    public RemotebuildexecutionProjectsInstancesWorkerpoolsDeletePathParams pathParams;
+    public RemotebuildexecutionProjectsInstancesWorkerpoolsDeleteRequest withPathParams(RemotebuildexecutionProjectsInstancesWorkerpoolsDeletePathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public RemotebuildexecutionProjectsInstancesWorkerpoolsDeleteQueryParams queryParams;
+    public RemotebuildexecutionProjectsInstancesWorkerpoolsDeleteRequest withQueryParams(RemotebuildexecutionProjectsInstancesWorkerpoolsDeleteQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public RemotebuildexecutionProjectsInstancesWorkerpoolsDeleteSecurity security;
+    public RemotebuildexecutionProjectsInstancesWorkerpoolsDeleteRequest withSecurity(RemotebuildexecutionProjectsInstancesWorkerpoolsDeleteSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

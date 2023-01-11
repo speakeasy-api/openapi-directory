@@ -1,0 +1,31 @@
+package openapisdk.models.shared;
+
+
+
+public class Events {
+    public Long creationDate;
+    public Events withCreationDate(Long creationDate) {
+        this.creationDate = creationDate;
+        return this;
+    }
+    public String eventType;
+    public Events withEventType(String eventType) {
+        this.eventType = eventType;
+        return this;
+    }
+    public String excerpt;
+    public Events withExcerpt(String excerpt) {
+        this.excerpt = excerpt;
+        return this;
+    }
+    public String link;
+    public Events withLink(String link) {
+        this.link = link;
+        return this;
+    }
+    public Long theIdOfTheObjectAnswerCommentQuestionOrUserTheEventDescribes;
+    public Events withTheIdOfTheObjectAnswerCommentQuestionOrUserTheEventDescribes(Long theIdOfTheObjectAnswerCommentQuestionOrUserTheEventDescribes) {
+        this.theIdOfTheObjectAnswerCommentQuestionOrUserTheEventDescribes = theIdOfTheObjectAnswerCommentQuestionOrUserTheEventDescribes;
+        return this;
+    }
+}

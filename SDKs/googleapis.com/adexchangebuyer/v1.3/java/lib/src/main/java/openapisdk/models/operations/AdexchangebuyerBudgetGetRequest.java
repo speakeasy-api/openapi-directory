@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class AdexchangebuyerBudgetGetRequest {
+    public AdexchangebuyerBudgetGetPathParams pathParams;
+    public AdexchangebuyerBudgetGetRequest withPathParams(AdexchangebuyerBudgetGetPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public AdexchangebuyerBudgetGetQueryParams queryParams;
+    public AdexchangebuyerBudgetGetRequest withQueryParams(AdexchangebuyerBudgetGetQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public AdexchangebuyerBudgetGetSecurity security;
+    public AdexchangebuyerBudgetGetRequest withSecurity(AdexchangebuyerBudgetGetSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

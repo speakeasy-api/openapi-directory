@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class BigqueryconnectionProjectsLocationsConnectionsListRequest {
+    public BigqueryconnectionProjectsLocationsConnectionsListPathParams pathParams;
+    public BigqueryconnectionProjectsLocationsConnectionsListRequest withPathParams(BigqueryconnectionProjectsLocationsConnectionsListPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public BigqueryconnectionProjectsLocationsConnectionsListQueryParams queryParams;
+    public BigqueryconnectionProjectsLocationsConnectionsListRequest withQueryParams(BigqueryconnectionProjectsLocationsConnectionsListQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public BigqueryconnectionProjectsLocationsConnectionsListSecurity security;
+    public BigqueryconnectionProjectsLocationsConnectionsListRequest withSecurity(BigqueryconnectionProjectsLocationsConnectionsListSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

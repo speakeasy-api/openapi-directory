@@ -1,0 +1,25 @@
+package openapisdk.models.shared;
+
+
+
+/**
+ * ScalingParameters
+ * The desired instance type and desired number of replicas of each index partition.
+**/
+public class ScalingParameters {
+    public PartitionInstanceTypeEnum desiredInstanceType;
+    public ScalingParameters withDesiredInstanceType(PartitionInstanceTypeEnum desiredInstanceType) {
+        this.desiredInstanceType = desiredInstanceType;
+        return this;
+    }
+    public Long desiredPartitionCount;
+    public ScalingParameters withDesiredPartitionCount(Long desiredPartitionCount) {
+        this.desiredPartitionCount = desiredPartitionCount;
+        return this;
+    }
+    public Long desiredReplicationCount;
+    public ScalingParameters withDesiredReplicationCount(Long desiredReplicationCount) {
+        this.desiredReplicationCount = desiredReplicationCount;
+        return this;
+    }
+}

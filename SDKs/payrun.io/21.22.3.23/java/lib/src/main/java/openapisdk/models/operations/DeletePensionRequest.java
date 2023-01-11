@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class DeletePensionRequest {
+    public DeletePensionPathParams pathParams;
+    public DeletePensionRequest withPathParams(DeletePensionPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public DeletePensionHeaders headers;
+    public DeletePensionRequest withHeaders(DeletePensionHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+}

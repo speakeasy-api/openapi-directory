@@ -1,0 +1,16 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+/**
+ * UserIdentity
+ * Contains information for a user identity in an access policy.
+**/
+public class UserIdentity {
+    @JsonProperty("id")
+    public String id;
+    public UserIdentity withId(String id) {
+        this.id = id;
+        return this;
+    }
+}

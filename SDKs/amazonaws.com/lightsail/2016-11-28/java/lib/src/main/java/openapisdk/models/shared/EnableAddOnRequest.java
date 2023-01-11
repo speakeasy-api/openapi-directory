@@ -1,0 +1,18 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+public class EnableAddOnRequest {
+    @JsonProperty("addOnRequest")
+    public AddOnRequest addOnRequest;
+    public EnableAddOnRequest withAddOnRequest(AddOnRequest addOnRequest) {
+        this.addOnRequest = addOnRequest;
+        return this;
+    }
+    @JsonProperty("resourceName")
+    public String resourceName;
+    public EnableAddOnRequest withResourceName(String resourceName) {
+        this.resourceName = resourceName;
+        return this;
+    }
+}

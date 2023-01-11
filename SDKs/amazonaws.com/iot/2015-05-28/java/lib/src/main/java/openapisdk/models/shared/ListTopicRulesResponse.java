@@ -1,0 +1,26 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * ListTopicRulesResponse
+ * The output from the ListTopicRules operation.
+**/
+public class ListTopicRulesResponse {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("nextToken")
+    public String nextToken;
+    public ListTopicRulesResponse withNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("rules")
+    public TopicRuleListItem[] rules;
+    public ListTopicRulesResponse withRules(TopicRuleListItem[] rules) {
+        this.rules = rules;
+        return this;
+    }
+}

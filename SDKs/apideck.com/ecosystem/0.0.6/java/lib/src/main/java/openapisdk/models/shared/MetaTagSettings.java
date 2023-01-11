@@ -1,0 +1,57 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class MetaTagSettings {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("description")
+    public String description;
+    public MetaTagSettings withDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("description_category_page")
+    public String descriptionCategoryPage;
+    public MetaTagSettings withDescriptionCategoryPage(String descriptionCategoryPage) {
+        this.descriptionCategoryPage = descriptionCategoryPage;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("description_collection_page")
+    public String descriptionCollectionPage;
+    public MetaTagSettings withDescriptionCollectionPage(String descriptionCollectionPage) {
+        this.descriptionCollectionPage = descriptionCollectionPage;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("description_listing_page")
+    public String descriptionListingPage;
+    public MetaTagSettings withDescriptionListingPage(String descriptionListingPage) {
+        this.descriptionListingPage = descriptionListingPage;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("keywords")
+    public String keywords;
+    public MetaTagSettings withKeywords(String keywords) {
+        this.keywords = keywords;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("title")
+    public String title;
+    public MetaTagSettings withTitle(String title) {
+        this.title = title;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("title_postfix")
+    public String titlePostfix;
+    public MetaTagSettings withTitlePostfix(String titlePostfix) {
+        this.titlePostfix = titlePostfix;
+        return this;
+    }
+}

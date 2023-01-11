@@ -1,0 +1,30 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class DnsChangesListSecurity {
+    @SpeakeasyMetadata("security:option=true")
+    public DnsChangesListSecurityOption1 option1;
+    public DnsChangesListSecurity withOption1(DnsChangesListSecurityOption1 option1) {
+        this.option1 = option1;
+        return this;
+    }
+    @SpeakeasyMetadata("security:option=true")
+    public DnsChangesListSecurityOption2 option2;
+    public DnsChangesListSecurity withOption2(DnsChangesListSecurityOption2 option2) {
+        this.option2 = option2;
+        return this;
+    }
+    @SpeakeasyMetadata("security:option=true")
+    public DnsChangesListSecurityOption3 option3;
+    public DnsChangesListSecurity withOption3(DnsChangesListSecurityOption3 option3) {
+        this.option3 = option3;
+        return this;
+    }
+    @SpeakeasyMetadata("security:option=true")
+    public DnsChangesListSecurityOption4 option4;
+    public DnsChangesListSecurity withOption4(DnsChangesListSecurityOption4 option4) {
+        this.option4 = option4;
+        return this;
+    }
+}

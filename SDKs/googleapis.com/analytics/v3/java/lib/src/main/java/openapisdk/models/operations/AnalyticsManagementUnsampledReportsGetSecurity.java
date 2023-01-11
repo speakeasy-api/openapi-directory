@@ -1,0 +1,24 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class AnalyticsManagementUnsampledReportsGetSecurity {
+    @SpeakeasyMetadata("security:option=true")
+    public AnalyticsManagementUnsampledReportsGetSecurityOption1 option1;
+    public AnalyticsManagementUnsampledReportsGetSecurity withOption1(AnalyticsManagementUnsampledReportsGetSecurityOption1 option1) {
+        this.option1 = option1;
+        return this;
+    }
+    @SpeakeasyMetadata("security:option=true")
+    public AnalyticsManagementUnsampledReportsGetSecurityOption2 option2;
+    public AnalyticsManagementUnsampledReportsGetSecurity withOption2(AnalyticsManagementUnsampledReportsGetSecurityOption2 option2) {
+        this.option2 = option2;
+        return this;
+    }
+    @SpeakeasyMetadata("security:option=true")
+    public AnalyticsManagementUnsampledReportsGetSecurityOption3 option3;
+    public AnalyticsManagementUnsampledReportsGetSecurity withOption3(AnalyticsManagementUnsampledReportsGetSecurityOption3 option3) {
+        this.option3 = option3;
+        return this;
+    }
+}

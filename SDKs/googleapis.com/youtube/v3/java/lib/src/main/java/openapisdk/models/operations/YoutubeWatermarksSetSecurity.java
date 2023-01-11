@@ -1,0 +1,30 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class YoutubeWatermarksSetSecurity {
+    @SpeakeasyMetadata("security:option=true")
+    public YoutubeWatermarksSetSecurityOption1 option1;
+    public YoutubeWatermarksSetSecurity withOption1(YoutubeWatermarksSetSecurityOption1 option1) {
+        this.option1 = option1;
+        return this;
+    }
+    @SpeakeasyMetadata("security:option=true")
+    public YoutubeWatermarksSetSecurityOption2 option2;
+    public YoutubeWatermarksSetSecurity withOption2(YoutubeWatermarksSetSecurityOption2 option2) {
+        this.option2 = option2;
+        return this;
+    }
+    @SpeakeasyMetadata("security:option=true")
+    public YoutubeWatermarksSetSecurityOption3 option3;
+    public YoutubeWatermarksSetSecurity withOption3(YoutubeWatermarksSetSecurityOption3 option3) {
+        this.option3 = option3;
+        return this;
+    }
+    @SpeakeasyMetadata("security:option=true")
+    public YoutubeWatermarksSetSecurityOption4 option4;
+    public YoutubeWatermarksSetSecurity withOption4(YoutubeWatermarksSetSecurityOption4 option4) {
+        this.option4 = option4;
+        return this;
+    }
+}

@@ -1,0 +1,84 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class LinksLogoutLink {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("allOptionalParamsProvided")
+    public Boolean allOptionalParamsProvided;
+    public LinksLogoutLink withAllOptionalParamsProvided(Boolean allOptionalParamsProvided) {
+        this.allOptionalParamsProvided = allOptionalParamsProvided;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("allRequiredParamsProvided")
+    public Boolean allRequiredParamsProvided;
+    public LinksLogoutLink withAllRequiredParamsProvided(Boolean allRequiredParamsProvided) {
+        this.allRequiredParamsProvided = allRequiredParamsProvided;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("description")
+    public String description;
+    public LinksLogoutLink withDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("docUrl")
+    public String docUrl;
+    public LinksLogoutLink withDocUrl(String docUrl) {
+        this.docUrl = docUrl;
+        return this;
+    }
+    @JsonProperty("href")
+    public String href;
+    public LinksLogoutLink withHref(String href) {
+        this.href = href;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("info")
+    public BeezUpCommonInfoSummaries info;
+    public LinksLogoutLink withInfo(BeezUpCommonInfoSummaries info) {
+        this.info = info;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("label")
+    public String label;
+    public LinksLogoutLink withLabel(String label) {
+        this.label = label;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("method")
+    public BeezUpCommonHttpMethodEnum method;
+    public LinksLogoutLink withMethod(BeezUpCommonHttpMethodEnum method) {
+        this.method = method;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("operationId")
+    public String operationId;
+    public LinksLogoutLink withOperationId(String operationId) {
+        this.operationId = operationId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("parameters")
+    public java.util.Map<String, BeezUpCommonLinkParameter3> parameters;
+    public LinksLogoutLink withParameters(java.util.Map<String, BeezUpCommonLinkParameter3> parameters) {
+        this.parameters = parameters;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("urlTemplated")
+    public Boolean urlTemplated;
+    public LinksLogoutLink withUrlTemplated(Boolean urlTemplated) {
+        this.urlTemplated = urlTemplated;
+        return this;
+    }
+}

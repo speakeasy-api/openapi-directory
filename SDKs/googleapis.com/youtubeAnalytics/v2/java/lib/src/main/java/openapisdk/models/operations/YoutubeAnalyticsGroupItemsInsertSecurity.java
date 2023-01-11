@@ -1,0 +1,36 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class YoutubeAnalyticsGroupItemsInsertSecurity {
+    @SpeakeasyMetadata("security:option=true")
+    public YoutubeAnalyticsGroupItemsInsertSecurityOption1 option1;
+    public YoutubeAnalyticsGroupItemsInsertSecurity withOption1(YoutubeAnalyticsGroupItemsInsertSecurityOption1 option1) {
+        this.option1 = option1;
+        return this;
+    }
+    @SpeakeasyMetadata("security:option=true")
+    public YoutubeAnalyticsGroupItemsInsertSecurityOption2 option2;
+    public YoutubeAnalyticsGroupItemsInsertSecurity withOption2(YoutubeAnalyticsGroupItemsInsertSecurityOption2 option2) {
+        this.option2 = option2;
+        return this;
+    }
+    @SpeakeasyMetadata("security:option=true")
+    public YoutubeAnalyticsGroupItemsInsertSecurityOption3 option3;
+    public YoutubeAnalyticsGroupItemsInsertSecurity withOption3(YoutubeAnalyticsGroupItemsInsertSecurityOption3 option3) {
+        this.option3 = option3;
+        return this;
+    }
+    @SpeakeasyMetadata("security:option=true")
+    public YoutubeAnalyticsGroupItemsInsertSecurityOption4 option4;
+    public YoutubeAnalyticsGroupItemsInsertSecurity withOption4(YoutubeAnalyticsGroupItemsInsertSecurityOption4 option4) {
+        this.option4 = option4;
+        return this;
+    }
+    @SpeakeasyMetadata("security:option=true")
+    public YoutubeAnalyticsGroupItemsInsertSecurityOption5 option5;
+    public YoutubeAnalyticsGroupItemsInsertSecurity withOption5(YoutubeAnalyticsGroupItemsInsertSecurityOption5 option5) {
+        this.option5 = option5;
+        return this;
+    }
+}

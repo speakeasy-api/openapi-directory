@@ -1,0 +1,22 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class UserList {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("meta")
+    public PagingMeta meta;
+    public UserList withMeta(PagingMeta meta) {
+        this.meta = meta;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("users")
+    public User[] users;
+    public UserList withUsers(User[] users) {
+        this.users = users;
+        return this;
+    }
+}

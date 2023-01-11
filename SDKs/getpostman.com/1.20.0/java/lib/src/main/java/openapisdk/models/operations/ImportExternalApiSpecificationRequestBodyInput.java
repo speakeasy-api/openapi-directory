@@ -1,0 +1,36 @@
+package openapisdk.models.operations;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class ImportExternalApiSpecificationRequestBodyInput {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("info")
+    public ImportExternalApiSpecificationRequestBodyInputInfo info;
+    public ImportExternalApiSpecificationRequestBodyInput withInfo(ImportExternalApiSpecificationRequestBodyInputInfo info) {
+        this.info = info;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("openapi")
+    public String openapi;
+    public ImportExternalApiSpecificationRequestBodyInput withOpenapi(String openapi) {
+        this.openapi = openapi;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("paths")
+    public ImportExternalApiSpecificationRequestBodyInputPaths paths;
+    public ImportExternalApiSpecificationRequestBodyInput withPaths(ImportExternalApiSpecificationRequestBodyInputPaths paths) {
+        this.paths = paths;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("servers")
+    public ImportExternalApiSpecificationRequestBodyInputServers[] servers;
+    public ImportExternalApiSpecificationRequestBodyInput withServers(ImportExternalApiSpecificationRequestBodyInputServers[] servers) {
+        this.servers = servers;
+        return this;
+    }
+}

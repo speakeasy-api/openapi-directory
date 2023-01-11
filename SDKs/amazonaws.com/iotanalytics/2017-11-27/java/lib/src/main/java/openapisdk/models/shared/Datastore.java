@@ -1,0 +1,93 @@
+package openapisdk.models.shared;
+
+import java.time.OffsetDateTime;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import openapisdk.utils.DateTimeSerializer;
+import openapisdk.utils.DateTimeDeserializer;
+
+/**
+ * Datastore
+ * Information about a data store.
+**/
+public class Datastore {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("arn")
+    public String arn;
+    public Datastore withArn(String arn) {
+        this.arn = arn;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonSerialize(contentUsing = DateTimeSerializer.class)
+    @JsonDeserialize(contentUsing = DateTimeDeserializer.class)
+    @JsonProperty("creationTime")
+    public OffsetDateTime creationTime;
+    public Datastore withCreationTime(OffsetDateTime creationTime) {
+        this.creationTime = creationTime;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("datastorePartitions")
+    public DatastorePartitions datastorePartitions;
+    public Datastore withDatastorePartitions(DatastorePartitions datastorePartitions) {
+        this.datastorePartitions = datastorePartitions;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("fileFormatConfiguration")
+    public FileFormatConfiguration fileFormatConfiguration;
+    public Datastore withFileFormatConfiguration(FileFormatConfiguration fileFormatConfiguration) {
+        this.fileFormatConfiguration = fileFormatConfiguration;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonSerialize(contentUsing = DateTimeSerializer.class)
+    @JsonDeserialize(contentUsing = DateTimeDeserializer.class)
+    @JsonProperty("lastMessageArrivalTime")
+    public OffsetDateTime lastMessageArrivalTime;
+    public Datastore withLastMessageArrivalTime(OffsetDateTime lastMessageArrivalTime) {
+        this.lastMessageArrivalTime = lastMessageArrivalTime;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonSerialize(contentUsing = DateTimeSerializer.class)
+    @JsonDeserialize(contentUsing = DateTimeDeserializer.class)
+    @JsonProperty("lastUpdateTime")
+    public OffsetDateTime lastUpdateTime;
+    public Datastore withLastUpdateTime(OffsetDateTime lastUpdateTime) {
+        this.lastUpdateTime = lastUpdateTime;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("name")
+    public String name;
+    public Datastore withName(String name) {
+        this.name = name;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("retentionPeriod")
+    public RetentionPeriod retentionPeriod;
+    public Datastore withRetentionPeriod(RetentionPeriod retentionPeriod) {
+        this.retentionPeriod = retentionPeriod;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("status")
+    public DatastoreStatusEnum status;
+    public Datastore withStatus(DatastoreStatusEnum status) {
+        this.status = status;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("storage")
+    public DatastoreStorage storage;
+    public Datastore withStorage(DatastoreStorage storage) {
+        this.storage = storage;
+        return this;
+    }
+}

@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class GetLayerVersionByArnRequest {
+    public GetLayerVersionByArnQueryParams queryParams;
+    public GetLayerVersionByArnRequest withQueryParams(GetLayerVersionByArnQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public GetLayerVersionByArnHeaders headers;
+    public GetLayerVersionByArnRequest withHeaders(GetLayerVersionByArnHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+}

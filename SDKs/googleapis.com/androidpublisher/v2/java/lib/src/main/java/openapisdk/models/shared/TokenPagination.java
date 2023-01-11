@@ -1,0 +1,16 @@
+package openapisdk.models.shared;
+
+
+
+public class TokenPagination {
+    public String nextPageToken;
+    public TokenPagination withNextPageToken(String nextPageToken) {
+        this.nextPageToken = nextPageToken;
+        return this;
+    }
+    public String previousPageToken;
+    public TokenPagination withPreviousPageToken(String previousPageToken) {
+        this.previousPageToken = previousPageToken;
+        return this;
+    }
+}

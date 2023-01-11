@@ -1,0 +1,164 @@
+package openapisdk.models.shared;
+
+import java.time.OffsetDateTime;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import openapisdk.utils.DateTimeSerializer;
+import openapisdk.utils.DateTimeDeserializer;
+
+public class IpMessagingV1Service {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("account_sid")
+    public String accountSid;
+    public IpMessagingV1Service withAccountSid(String accountSid) {
+        this.accountSid = accountSid;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("consumption_report_interval")
+    public Long consumptionReportInterval;
+    public IpMessagingV1Service withConsumptionReportInterval(Long consumptionReportInterval) {
+        this.consumptionReportInterval = consumptionReportInterval;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonSerialize(contentUsing = DateTimeSerializer.class)
+    @JsonDeserialize(contentUsing = DateTimeDeserializer.class)
+    @JsonProperty("date_created")
+    public OffsetDateTime dateCreated;
+    public IpMessagingV1Service withDateCreated(OffsetDateTime dateCreated) {
+        this.dateCreated = dateCreated;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonSerialize(contentUsing = DateTimeSerializer.class)
+    @JsonDeserialize(contentUsing = DateTimeDeserializer.class)
+    @JsonProperty("date_updated")
+    public OffsetDateTime dateUpdated;
+    public IpMessagingV1Service withDateUpdated(OffsetDateTime dateUpdated) {
+        this.dateUpdated = dateUpdated;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("default_channel_creator_role_sid")
+    public String defaultChannelCreatorRoleSid;
+    public IpMessagingV1Service withDefaultChannelCreatorRoleSid(String defaultChannelCreatorRoleSid) {
+        this.defaultChannelCreatorRoleSid = defaultChannelCreatorRoleSid;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("default_channel_role_sid")
+    public String defaultChannelRoleSid;
+    public IpMessagingV1Service withDefaultChannelRoleSid(String defaultChannelRoleSid) {
+        this.defaultChannelRoleSid = defaultChannelRoleSid;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("default_service_role_sid")
+    public String defaultServiceRoleSid;
+    public IpMessagingV1Service withDefaultServiceRoleSid(String defaultServiceRoleSid) {
+        this.defaultServiceRoleSid = defaultServiceRoleSid;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("friendly_name")
+    public String friendlyName;
+    public IpMessagingV1Service withFriendlyName(String friendlyName) {
+        this.friendlyName = friendlyName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("limits")
+    public Object limits;
+    public IpMessagingV1Service withLimits(Object limits) {
+        this.limits = limits;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("links")
+    public java.util.Map<String, Object> links;
+    public IpMessagingV1Service withLinks(java.util.Map<String, Object> links) {
+        this.links = links;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("notifications")
+    public Object notifications;
+    public IpMessagingV1Service withNotifications(Object notifications) {
+        this.notifications = notifications;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("post_webhook_url")
+    public String postWebhookUrl;
+    public IpMessagingV1Service withPostWebhookUrl(String postWebhookUrl) {
+        this.postWebhookUrl = postWebhookUrl;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("pre_webhook_url")
+    public String preWebhookUrl;
+    public IpMessagingV1Service withPreWebhookUrl(String preWebhookUrl) {
+        this.preWebhookUrl = preWebhookUrl;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("reachability_enabled")
+    public Boolean reachabilityEnabled;
+    public IpMessagingV1Service withReachabilityEnabled(Boolean reachabilityEnabled) {
+        this.reachabilityEnabled = reachabilityEnabled;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("read_status_enabled")
+    public Boolean readStatusEnabled;
+    public IpMessagingV1Service withReadStatusEnabled(Boolean readStatusEnabled) {
+        this.readStatusEnabled = readStatusEnabled;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("sid")
+    public String sid;
+    public IpMessagingV1Service withSid(String sid) {
+        this.sid = sid;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("typing_indicator_timeout")
+    public Long typingIndicatorTimeout;
+    public IpMessagingV1Service withTypingIndicatorTimeout(Long typingIndicatorTimeout) {
+        this.typingIndicatorTimeout = typingIndicatorTimeout;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("url")
+    public String url;
+    public IpMessagingV1Service withUrl(String url) {
+        this.url = url;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("webhook_filters")
+    public String[] webhookFilters;
+    public IpMessagingV1Service withWebhookFilters(String[] webhookFilters) {
+        this.webhookFilters = webhookFilters;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("webhook_method")
+    public String webhookMethod;
+    public IpMessagingV1Service withWebhookMethod(String webhookMethod) {
+        this.webhookMethod = webhookMethod;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("webhooks")
+    public Object webhooks;
+    public IpMessagingV1Service withWebhooks(Object webhooks) {
+        this.webhooks = webhooks;
+        return this;
+    }
+}

@@ -1,0 +1,18 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+public class Weight {
+    @JsonProperty("unit")
+    public WeightUnitEnum unit;
+    public Weight withUnit(WeightUnitEnum unit) {
+        this.unit = unit;
+        return this;
+    }
+    @JsonProperty("weight")
+    public Double weight;
+    public Weight withWeight(Double weight) {
+        this.weight = weight;
+        return this;
+    }
+}

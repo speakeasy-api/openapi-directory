@@ -1,0 +1,49 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class ValidationErrorErrors {
+    @JsonProperty("code")
+    public String code;
+    public ValidationErrorErrors withCode(String code) {
+        this.code = code;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("field")
+    public String field;
+    public ValidationErrorErrors withField(String field) {
+        this.field = field;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("index")
+    public Long index;
+    public ValidationErrorErrors withIndex(Long index) {
+        this.index = index;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("message")
+    public String message;
+    public ValidationErrorErrors withMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("resource")
+    public String resource;
+    public ValidationErrorErrors withResource(String resource) {
+        this.resource = resource;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("value")
+    public Object value;
+    public ValidationErrorErrors withValue(Object value) {
+        this.value = value;
+        return this;
+    }
+}

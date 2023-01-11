@@ -1,0 +1,17 @@
+package openapisdk.models.shared;
+
+
+public enum ActiveViewVideoViewabilityMetricConfigMinimumQuartileEnum {
+    VIDEO_DURATION_QUARTILE_UNSPECIFIED("VIDEO_DURATION_QUARTILE_UNSPECIFIED"),
+    VIDEO_DURATION_QUARTILE_NONE("VIDEO_DURATION_QUARTILE_NONE"),
+    VIDEO_DURATION_QUARTILE_FIRST("VIDEO_DURATION_QUARTILE_FIRST"),
+    VIDEO_DURATION_QUARTILE_SECOND("VIDEO_DURATION_QUARTILE_SECOND"),
+    VIDEO_DURATION_QUARTILE_THIRD("VIDEO_DURATION_QUARTILE_THIRD"),
+    VIDEO_DURATION_QUARTILE_FOURTH("VIDEO_DURATION_QUARTILE_FOURTH");
+
+    public final String value;
+
+    private ActiveViewVideoViewabilityMetricConfigMinimumQuartileEnum(String value) {
+        this.value = value;
+    }
+}

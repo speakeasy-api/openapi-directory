@@ -1,0 +1,126 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class RunTaskRequest {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("capacityProviderStrategy")
+    public CapacityProviderStrategyItem[] capacityProviderStrategy;
+    public RunTaskRequest withCapacityProviderStrategy(CapacityProviderStrategyItem[] capacityProviderStrategy) {
+        this.capacityProviderStrategy = capacityProviderStrategy;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("cluster")
+    public String cluster;
+    public RunTaskRequest withCluster(String cluster) {
+        this.cluster = cluster;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("count")
+    public Long count;
+    public RunTaskRequest withCount(Long count) {
+        this.count = count;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("enableECSManagedTags")
+    public Boolean enableECSManagedTags;
+    public RunTaskRequest withEnableEcsManagedTags(Boolean enableECSManagedTags) {
+        this.enableECSManagedTags = enableECSManagedTags;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("enableExecuteCommand")
+    public Boolean enableExecuteCommand;
+    public RunTaskRequest withEnableExecuteCommand(Boolean enableExecuteCommand) {
+        this.enableExecuteCommand = enableExecuteCommand;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("group")
+    public String group;
+    public RunTaskRequest withGroup(String group) {
+        this.group = group;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("launchType")
+    public LaunchTypeEnum launchType;
+    public RunTaskRequest withLaunchType(LaunchTypeEnum launchType) {
+        this.launchType = launchType;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("networkConfiguration")
+    public NetworkConfiguration networkConfiguration;
+    public RunTaskRequest withNetworkConfiguration(NetworkConfiguration networkConfiguration) {
+        this.networkConfiguration = networkConfiguration;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("overrides")
+    public TaskOverride overrides;
+    public RunTaskRequest withOverrides(TaskOverride overrides) {
+        this.overrides = overrides;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("placementConstraints")
+    public PlacementConstraint[] placementConstraints;
+    public RunTaskRequest withPlacementConstraints(PlacementConstraint[] placementConstraints) {
+        this.placementConstraints = placementConstraints;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("placementStrategy")
+    public PlacementStrategy[] placementStrategy;
+    public RunTaskRequest withPlacementStrategy(PlacementStrategy[] placementStrategy) {
+        this.placementStrategy = placementStrategy;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("platformVersion")
+    public String platformVersion;
+    public RunTaskRequest withPlatformVersion(String platformVersion) {
+        this.platformVersion = platformVersion;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("propagateTags")
+    public PropagateTagsEnum propagateTags;
+    public RunTaskRequest withPropagateTags(PropagateTagsEnum propagateTags) {
+        this.propagateTags = propagateTags;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("referenceId")
+    public String referenceId;
+    public RunTaskRequest withReferenceId(String referenceId) {
+        this.referenceId = referenceId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("startedBy")
+    public String startedBy;
+    public RunTaskRequest withStartedBy(String startedBy) {
+        this.startedBy = startedBy;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("tags")
+    public Tag[] tags;
+    public RunTaskRequest withTags(Tag[] tags) {
+        this.tags = tags;
+        return this;
+    }
+    @JsonProperty("taskDefinition")
+    public String taskDefinition;
+    public RunTaskRequest withTaskDefinition(String taskDefinition) {
+        this.taskDefinition = taskDefinition;
+        return this;
+    }
+}

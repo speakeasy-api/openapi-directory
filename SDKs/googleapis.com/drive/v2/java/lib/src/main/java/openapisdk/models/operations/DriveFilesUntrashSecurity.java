@@ -1,0 +1,30 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class DriveFilesUntrashSecurity {
+    @SpeakeasyMetadata("security:option=true")
+    public DriveFilesUntrashSecurityOption1 option1;
+    public DriveFilesUntrashSecurity withOption1(DriveFilesUntrashSecurityOption1 option1) {
+        this.option1 = option1;
+        return this;
+    }
+    @SpeakeasyMetadata("security:option=true")
+    public DriveFilesUntrashSecurityOption2 option2;
+    public DriveFilesUntrashSecurity withOption2(DriveFilesUntrashSecurityOption2 option2) {
+        this.option2 = option2;
+        return this;
+    }
+    @SpeakeasyMetadata("security:option=true")
+    public DriveFilesUntrashSecurityOption3 option3;
+    public DriveFilesUntrashSecurity withOption3(DriveFilesUntrashSecurityOption3 option3) {
+        this.option3 = option3;
+        return this;
+    }
+    @SpeakeasyMetadata("security:option=true")
+    public DriveFilesUntrashSecurityOption4 option4;
+    public DriveFilesUntrashSecurity withOption4(DriveFilesUntrashSecurityOption4 option4) {
+        this.option4 = option4;
+        return this;
+    }
+}

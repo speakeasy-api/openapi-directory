@@ -1,0 +1,282 @@
+package openapisdk.models.shared;
+
+import java.time.LocalDate;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class User {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("billing")
+    public BillingAddress billing;
+    public User withBilling(BillingAddress billing) {
+        this.billing = billing;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("birthday")
+    public LocalDate birthday;
+    public User withBirthday(LocalDate birthday) {
+        this.birthday = birthday;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("can_work_manual_files")
+    public Boolean canWorkManualFiles;
+    public User withCanWorkManualFiles(Boolean canWorkManualFiles) {
+        this.canWorkManualFiles = canWorkManualFiles;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("city")
+    public String city;
+    public User withCity(String city) {
+        this.city = city;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("client")
+    public UserClient client;
+    public User withClient(UserClient client) {
+        this.client = client;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("corporate_id")
+    public Long corporateId;
+    public User withCorporateId(Long corporateId) {
+        this.corporateId = corporateId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("country")
+    public String country;
+    public User withCountry(String country) {
+        this.country = country;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("created_at")
+    public Long createdAt;
+    public User withCreatedAt(Long createdAt) {
+        this.createdAt = createdAt;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("do_not_contact")
+    public Boolean doNotContact;
+    public User withDoNotContact(Boolean doNotContact) {
+        this.doNotContact = doNotContact;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("email")
+    public String email;
+    public User withEmail(String email) {
+        this.email = email;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("first_name")
+    public String firstName;
+    public User withFirstName(String firstName) {
+        this.firstName = firstName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("has_pwd")
+    public Boolean hasPwd;
+    public User withHasPwd(Boolean hasPwd) {
+        this.hasPwd = hasPwd;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("id")
+    public Long id;
+    public User withId(Long id) {
+        this.id = id;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("is_client")
+    public Boolean isClient;
+    public User withIsClient(Boolean isClient) {
+        this.isClient = isClient;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("is_developer")
+    public Boolean isDeveloper;
+    public User withIsDeveloper(Boolean isDeveloper) {
+        this.isDeveloper = isDeveloper;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("is_proofreader")
+    public Boolean isProofreader;
+    public User withIsProofreader(Boolean isProofreader) {
+        this.isProofreader = isProofreader;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("is_prospect")
+    public Boolean isProspect;
+    public User withIsProspect(Boolean isProspect) {
+        this.isProspect = isProspect;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("is_sales_person")
+    public Boolean isSalesPerson;
+    public User withIsSalesPerson(Boolean isSalesPerson) {
+        this.isSalesPerson = isSalesPerson;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("is_vendor")
+    public Boolean isVendor;
+    public User withIsVendor(Boolean isVendor) {
+        this.isVendor = isVendor;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("language_pairs")
+    public LanguagePair[] languagePairs;
+    public User withLanguagePairs(LanguagePair[] languagePairs) {
+        this.languagePairs = languagePairs;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("last_name")
+    public String lastName;
+    public User withLastName(String lastName) {
+        this.lastName = lastName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("last_seen_online_at")
+    public Long lastSeenOnlineAt;
+    public User withLastSeenOnlineAt(Long lastSeenOnlineAt) {
+        this.lastSeenOnlineAt = lastSeenOnlineAt;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("links")
+    public UserLinks links;
+    public User withLinks(UserLinks links) {
+        this.links = links;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("locale")
+    public String locale;
+    public User withLocale(String locale) {
+        this.locale = locale;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("mailing")
+    public Address mailing;
+    public User withMailing(Address mailing) {
+        this.mailing = mailing;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("name")
+    public String name;
+    public User withName(String name) {
+        this.name = name;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("native_language")
+    public String nativeLanguage;
+    public User withNativeLanguage(String nativeLanguage) {
+        this.nativeLanguage = nativeLanguage;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("nps")
+    public Float nps;
+    public User withNps(Float nps) {
+        this.nps = nps;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("phone_number")
+    public String phoneNumber;
+    public User withPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("profile_picture_path")
+    public String profilePicturePath;
+    public User withProfilePicturePath(String profilePicturePath) {
+        this.profilePicturePath = profilePicturePath;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("social_media")
+    public SocialMedia socialMedia;
+    public User withSocialMedia(SocialMedia socialMedia) {
+        this.socialMedia = socialMedia;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("state")
+    public String state;
+    public User withState(String state) {
+        this.state = state;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("status")
+    public String status;
+    public User withStatus(String status) {
+        this.status = status;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("street")
+    public String street;
+    public User withStreet(String street) {
+        this.street = street;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("timezone")
+    public String timezone;
+    public User withTimezone(String timezone) {
+        this.timezone = timezone;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("tms_user_name")
+    public String tmsUserName;
+    public User withTmsUserName(String tmsUserName) {
+        this.tmsUserName = tmsUserName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("user_groups")
+    public UserGroup[] userGroups;
+    public User withUserGroups(UserGroup[] userGroups) {
+        this.userGroups = userGroups;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("vendor")
+    public UserVendor vendor;
+    public User withVendor(UserVendor vendor) {
+        this.vendor = vendor;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("zip_code")
+    public String zipCode;
+    public User withZipCode(String zipCode) {
+        this.zipCode = zipCode;
+        return this;
+    }
+}

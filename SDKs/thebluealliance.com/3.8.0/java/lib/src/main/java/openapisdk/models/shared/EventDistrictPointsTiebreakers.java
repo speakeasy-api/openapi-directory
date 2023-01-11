@@ -1,0 +1,22 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class EventDistrictPointsTiebreakers {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("highest_qual_scores")
+    public Long[] highestQualScores;
+    public EventDistrictPointsTiebreakers withHighestQualScores(Long[] highestQualScores) {
+        this.highestQualScores = highestQualScores;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("qual_wins")
+    public Long qualWins;
+    public EventDistrictPointsTiebreakers withQualWins(Long qualWins) {
+        this.qualWins = qualWins;
+        return this;
+    }
+}

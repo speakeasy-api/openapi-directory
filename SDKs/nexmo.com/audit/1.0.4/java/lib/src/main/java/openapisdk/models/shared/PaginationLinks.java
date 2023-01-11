@@ -1,0 +1,33 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * PaginationLinks
+ * Container containing self, next and last page links.
+**/
+public class PaginationLinks {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("last")
+    public PaginationLinksLast last;
+    public PaginationLinks withLast(PaginationLinksLast last) {
+        this.last = last;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("next")
+    public PaginationLinksNext next;
+    public PaginationLinks withNext(PaginationLinksNext next) {
+        this.next = next;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("self")
+    public PaginationLinksSelf self;
+    public PaginationLinks withSelf(PaginationLinksSelf self) {
+        this.self = self;
+        return this;
+    }
+}

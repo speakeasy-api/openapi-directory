@@ -1,0 +1,17 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class DeleteIncidentRecordRequest {
+    public DeleteIncidentRecordHeaders headers;
+    public DeleteIncidentRecordRequest withHeaders(DeleteIncidentRecordHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public DeleteIncidentRecordRequestBody request;
+    public DeleteIncidentRecordRequest withRequest(DeleteIncidentRecordRequestBody request) {
+        this.request = request;
+        return this;
+    }
+}

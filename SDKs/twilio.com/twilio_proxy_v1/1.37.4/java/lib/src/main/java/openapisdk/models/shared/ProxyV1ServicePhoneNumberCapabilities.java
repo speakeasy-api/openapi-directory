@@ -1,0 +1,40 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * ProxyV1ServicePhoneNumberCapabilities
+ * The capabilities of the phone number
+**/
+public class ProxyV1ServicePhoneNumberCapabilities {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("fax")
+    public Boolean fax;
+    public ProxyV1ServicePhoneNumberCapabilities withFax(Boolean fax) {
+        this.fax = fax;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("mms")
+    public Boolean mms;
+    public ProxyV1ServicePhoneNumberCapabilities withMms(Boolean mms) {
+        this.mms = mms;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("sms")
+    public Boolean sms;
+    public ProxyV1ServicePhoneNumberCapabilities withSms(Boolean sms) {
+        this.sms = sms;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("voice")
+    public Boolean voice;
+    public ProxyV1ServicePhoneNumberCapabilities withVoice(Boolean voice) {
+        this.voice = voice;
+        return this;
+    }
+}

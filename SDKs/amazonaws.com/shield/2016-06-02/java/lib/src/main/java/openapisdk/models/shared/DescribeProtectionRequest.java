@@ -1,0 +1,22 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class DescribeProtectionRequest {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ProtectionId")
+    public String protectionId;
+    public DescribeProtectionRequest withProtectionId(String protectionId) {
+        this.protectionId = protectionId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ResourceArn")
+    public String resourceArn;
+    public DescribeProtectionRequest withResourceArn(String resourceArn) {
+        this.resourceArn = resourceArn;
+        return this;
+    }
+}

@@ -1,0 +1,36 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class StorageProjectsServiceAccountGetSecurity {
+    @SpeakeasyMetadata("security:option=true")
+    public StorageProjectsServiceAccountGetSecurityOption1 option1;
+    public StorageProjectsServiceAccountGetSecurity withOption1(StorageProjectsServiceAccountGetSecurityOption1 option1) {
+        this.option1 = option1;
+        return this;
+    }
+    @SpeakeasyMetadata("security:option=true")
+    public StorageProjectsServiceAccountGetSecurityOption2 option2;
+    public StorageProjectsServiceAccountGetSecurity withOption2(StorageProjectsServiceAccountGetSecurityOption2 option2) {
+        this.option2 = option2;
+        return this;
+    }
+    @SpeakeasyMetadata("security:option=true")
+    public StorageProjectsServiceAccountGetSecurityOption3 option3;
+    public StorageProjectsServiceAccountGetSecurity withOption3(StorageProjectsServiceAccountGetSecurityOption3 option3) {
+        this.option3 = option3;
+        return this;
+    }
+    @SpeakeasyMetadata("security:option=true")
+    public StorageProjectsServiceAccountGetSecurityOption4 option4;
+    public StorageProjectsServiceAccountGetSecurity withOption4(StorageProjectsServiceAccountGetSecurityOption4 option4) {
+        this.option4 = option4;
+        return this;
+    }
+    @SpeakeasyMetadata("security:option=true")
+    public StorageProjectsServiceAccountGetSecurityOption5 option5;
+    public StorageProjectsServiceAccountGetSecurity withOption5(StorageProjectsServiceAccountGetSecurityOption5 option5) {
+        this.option5 = option5;
+        return this;
+    }
+}

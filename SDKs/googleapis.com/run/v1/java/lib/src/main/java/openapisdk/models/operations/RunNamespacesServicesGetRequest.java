@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class RunNamespacesServicesGetRequest {
+    public RunNamespacesServicesGetPathParams pathParams;
+    public RunNamespacesServicesGetRequest withPathParams(RunNamespacesServicesGetPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public RunNamespacesServicesGetQueryParams queryParams;
+    public RunNamespacesServicesGetRequest withQueryParams(RunNamespacesServicesGetQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public RunNamespacesServicesGetSecurity security;
+    public RunNamespacesServicesGetRequest withSecurity(RunNamespacesServicesGetSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

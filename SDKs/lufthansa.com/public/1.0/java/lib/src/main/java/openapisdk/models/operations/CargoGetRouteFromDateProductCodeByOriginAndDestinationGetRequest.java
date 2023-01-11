@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class CargoGetRouteFromDateProductCodeByOriginAndDestinationGetRequest {
+    public CargoGetRouteFromDateProductCodeByOriginAndDestinationGetPathParams pathParams;
+    public CargoGetRouteFromDateProductCodeByOriginAndDestinationGetRequest withPathParams(CargoGetRouteFromDateProductCodeByOriginAndDestinationGetPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public CargoGetRouteFromDateProductCodeByOriginAndDestinationGetHeaders headers;
+    public CargoGetRouteFromDateProductCodeByOriginAndDestinationGetRequest withHeaders(CargoGetRouteFromDateProductCodeByOriginAndDestinationGetHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+    public CargoGetRouteFromDateProductCodeByOriginAndDestinationGetSecurity security;
+    public CargoGetRouteFromDateProductCodeByOriginAndDestinationGetRequest withSecurity(CargoGetRouteFromDateProductCodeByOriginAndDestinationGetSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

@@ -1,0 +1,42 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+public class GetToken {
+    @JsonProperty("contractaddress")
+    public String contractaddress;
+    public GetToken withContractaddress(String contractaddress) {
+        this.contractaddress = contractaddress;
+        return this;
+    }
+    @JsonProperty("decimals")
+    public Integer decimals;
+    public GetToken withDecimals(Integer decimals) {
+        this.decimals = decimals;
+        return this;
+    }
+    @JsonProperty("name")
+    public String name;
+    public GetToken withName(String name) {
+        this.name = name;
+        return this;
+    }
+    @JsonProperty("ok")
+    public Boolean ok;
+    public GetToken withOk(Boolean ok) {
+        this.ok = ok;
+        return this;
+    }
+    @JsonProperty("supply")
+    public Long supply;
+    public GetToken withSupply(Long supply) {
+        this.supply = supply;
+        return this;
+    }
+    @JsonProperty("symbol")
+    public String symbol;
+    public GetToken withSymbol(String symbol) {
+        this.symbol = symbol;
+        return this;
+    }
+}

@@ -1,0 +1,57 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class PlaylistsResponse {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("has_next")
+    public Boolean hasNext;
+    public PlaylistsResponse withHasNext(Boolean hasNext) {
+        this.hasNext = hasNext;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("has_previous")
+    public Boolean hasPrevious;
+    public PlaylistsResponse withHasPrevious(Boolean hasPrevious) {
+        this.hasPrevious = hasPrevious;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("next_page_number")
+    public Long nextPageNumber;
+    public PlaylistsResponse withNextPageNumber(Long nextPageNumber) {
+        this.nextPageNumber = nextPageNumber;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("page_number")
+    public Long pageNumber;
+    public PlaylistsResponse withPageNumber(Long pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("playlists")
+    public PlaylistsResponsePlaylists[] playlists;
+    public PlaylistsResponse withPlaylists(PlaylistsResponsePlaylists[] playlists) {
+        this.playlists = playlists;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("previous_page_number")
+    public Long previousPageNumber;
+    public PlaylistsResponse withPreviousPageNumber(Long previousPageNumber) {
+        this.previousPageNumber = previousPageNumber;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("total")
+    public Long total;
+    public PlaylistsResponse withTotal(Long total) {
+        this.total = total;
+        return this;
+    }
+}

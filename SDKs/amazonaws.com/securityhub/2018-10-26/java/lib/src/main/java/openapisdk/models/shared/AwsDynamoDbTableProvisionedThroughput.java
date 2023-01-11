@@ -1,0 +1,47 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * AwsDynamoDbTableProvisionedThroughput
+ * Information about the provisioned throughput for the table or for a global secondary index.
+**/
+public class AwsDynamoDbTableProvisionedThroughput {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("LastDecreaseDateTime")
+    public String lastDecreaseDateTime;
+    public AwsDynamoDbTableProvisionedThroughput withLastDecreaseDateTime(String lastDecreaseDateTime) {
+        this.lastDecreaseDateTime = lastDecreaseDateTime;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("LastIncreaseDateTime")
+    public String lastIncreaseDateTime;
+    public AwsDynamoDbTableProvisionedThroughput withLastIncreaseDateTime(String lastIncreaseDateTime) {
+        this.lastIncreaseDateTime = lastIncreaseDateTime;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("NumberOfDecreasesToday")
+    public Long numberOfDecreasesToday;
+    public AwsDynamoDbTableProvisionedThroughput withNumberOfDecreasesToday(Long numberOfDecreasesToday) {
+        this.numberOfDecreasesToday = numberOfDecreasesToday;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ReadCapacityUnits")
+    public Long readCapacityUnits;
+    public AwsDynamoDbTableProvisionedThroughput withReadCapacityUnits(Long readCapacityUnits) {
+        this.readCapacityUnits = readCapacityUnits;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("WriteCapacityUnits")
+    public Long writeCapacityUnits;
+    public AwsDynamoDbTableProvisionedThroughput withWriteCapacityUnits(Long writeCapacityUnits) {
+        this.writeCapacityUnits = writeCapacityUnits;
+        return this;
+    }
+}

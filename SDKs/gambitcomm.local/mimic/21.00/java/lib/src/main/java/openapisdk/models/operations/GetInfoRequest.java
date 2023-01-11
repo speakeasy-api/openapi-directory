@@ -1,0 +1,11 @@
+package openapisdk.models.operations;
+
+
+
+public class GetInfoRequest {
+    public GetInfoPathParams pathParams;
+    public GetInfoRequest withPathParams(GetInfoPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+}

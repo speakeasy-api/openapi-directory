@@ -1,0 +1,49 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class SitemapsReportSitemap {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("error")
+    public SitemapsReportSitemapError error;
+    public SitemapsReportSitemap withError(SitemapsReportSitemapError error) {
+        this.error = error;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("file_type")
+    public String fileType;
+    public SitemapsReportSitemap withFileType(String fileType) {
+        this.fileType = fileType;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("invalid_urls")
+    public Long invalidUrls;
+    public SitemapsReportSitemap withInvalidUrls(Long invalidUrls) {
+        this.invalidUrls = invalidUrls;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("sitemap_indexes")
+    public String[] sitemapIndexes;
+    public SitemapsReportSitemap withSitemapIndexes(String[] sitemapIndexes) {
+        this.sitemapIndexes = sitemapIndexes;
+        return this;
+    }
+    @JsonProperty("url")
+    public String url;
+    public SitemapsReportSitemap withUrl(String url) {
+        this.url = url;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("valid_urls")
+    public Long validUrls;
+    public SitemapsReportSitemap withValidUrls(Long validUrls) {
+        this.validUrls = validUrls;
+        return this;
+    }
+}

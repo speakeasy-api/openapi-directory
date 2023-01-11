@@ -1,0 +1,29 @@
+package openapisdk.models.operations;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class GetReturnsReturnsArrayV2ReturnV2Order {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("id")
+    public Long id;
+    public GetReturnsReturnsArrayV2ReturnV2Order withId(Long id) {
+        this.id = id;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("merchantId")
+    public Long merchantId;
+    public GetReturnsReturnsArrayV2ReturnV2Order withMerchantId(Long merchantId) {
+        this.merchantId = merchantId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("merchantOrderId")
+    public String merchantOrderId;
+    public GetReturnsReturnsArrayV2ReturnV2Order withMerchantOrderId(String merchantOrderId) {
+        this.merchantOrderId = merchantOrderId;
+        return this;
+    }
+}

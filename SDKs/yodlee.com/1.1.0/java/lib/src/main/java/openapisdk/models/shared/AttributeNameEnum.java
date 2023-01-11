@@ -1,0 +1,26 @@
+package openapisdk.models.shared;
+
+
+public enum AttributeNameEnum {
+    BASIC_ACCOUNT_INFO("BASIC_ACCOUNT_INFO"),
+    TRANSACTIONS("TRANSACTIONS"),
+    STATEMENTS("STATEMENTS"),
+    HOLDINGS("HOLDINGS"),
+    ACCOUNT_DETAILS("ACCOUNT_DETAILS"),
+    TAX("TAX"),
+    EBILLS("EBILLS"),
+    FULL_ACCT_NUMBER("FULL_ACCT_NUMBER"),
+    BANK_TRANSFER_CODE("BANK_TRANSFER_CODE"),
+    HOLDER_NAME("HOLDER_NAME"),
+    HOLDER_DETAILS("HOLDER_DETAILS"),
+    PAYMENT_PROFILE("PAYMENT_PROFILE"),
+    PAYMENT_DETAILS("PAYMENT_DETAILS"),
+    INTEREST_DETAILS("INTEREST_DETAILS"),
+    COVERAGE("COVERAGE");
+
+    public final String value;
+
+    private AttributeNameEnum(String value) {
+        this.value = value;
+    }
+}

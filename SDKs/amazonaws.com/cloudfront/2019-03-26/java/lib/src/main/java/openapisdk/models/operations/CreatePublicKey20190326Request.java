@@ -1,0 +1,17 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class CreatePublicKey20190326Request {
+    public CreatePublicKey20190326Headers headers;
+    public CreatePublicKey20190326Request withHeaders(CreatePublicKey20190326Headers headers) {
+        this.headers = headers;
+        return this;
+    }
+    @SpeakeasyMetadata("request:mediaType=text/xml")
+    public byte[] request;
+    public CreatePublicKey20190326Request withRequest(byte[] request) {
+        this.request = request;
+        return this;
+    }
+}

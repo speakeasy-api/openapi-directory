@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class CommLogsReadRequest {
+    public CommLogsReadPathParams pathParams;
+    public CommLogsReadRequest withPathParams(CommLogsReadPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public CommLogsReadQueryParams queryParams;
+    public CommLogsReadRequest withQueryParams(CommLogsReadQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public CommLogsReadSecurity security;
+    public CommLogsReadRequest withSecurity(CommLogsReadSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

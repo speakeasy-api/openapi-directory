@@ -1,0 +1,40 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * ShareShareRelationships
+ * Message, owner, resource, and notification relationships of the share. 
+**/
+public class ShareShareRelationships {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("messages")
+    public ShareShareRelationshipsShareRelationshipsMessage[] messages;
+    public ShareShareRelationships withMessages(ShareShareRelationshipsShareRelationshipsMessage[] messages) {
+        this.messages = messages;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("notifications")
+    public ShareShareRelationshipsShareRelationshipsNotification[] notifications;
+    public ShareShareRelationships withNotifications(ShareShareRelationshipsShareRelationshipsNotification[] notifications) {
+        this.notifications = notifications;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("owner")
+    public ShareShareRelationshipsShareRelationshipsOwner owner;
+    public ShareShareRelationships withOwner(ShareShareRelationshipsShareRelationshipsOwner owner) {
+        this.owner = owner;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("resources")
+    public ShareShareRelationshipsShareRelationshipsResource[] resources;
+    public ShareShareRelationships withResources(ShareShareRelationshipsShareRelationshipsResource[] resources) {
+        this.resources = resources;
+        return this;
+    }
+}

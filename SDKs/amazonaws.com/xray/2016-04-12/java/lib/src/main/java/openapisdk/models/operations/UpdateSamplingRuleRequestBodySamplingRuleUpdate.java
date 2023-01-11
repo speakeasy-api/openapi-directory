@@ -1,0 +1,96 @@
+package openapisdk.models.operations;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * UpdateSamplingRuleRequestBodySamplingRuleUpdate
+ * A document specifying changes to a sampling rule's configuration.
+**/
+public class UpdateSamplingRuleRequestBodySamplingRuleUpdate {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Attributes")
+    public java.util.Map<String, String> attributes;
+    public UpdateSamplingRuleRequestBodySamplingRuleUpdate withAttributes(java.util.Map<String, String> attributes) {
+        this.attributes = attributes;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("FixedRate")
+    public Double fixedRate;
+    public UpdateSamplingRuleRequestBodySamplingRuleUpdate withFixedRate(Double fixedRate) {
+        this.fixedRate = fixedRate;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("HTTPMethod")
+    public String httpMethod;
+    public UpdateSamplingRuleRequestBodySamplingRuleUpdate withHttpMethod(String httpMethod) {
+        this.httpMethod = httpMethod;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Host")
+    public String host;
+    public UpdateSamplingRuleRequestBodySamplingRuleUpdate withHost(String host) {
+        this.host = host;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Priority")
+    public Long priority;
+    public UpdateSamplingRuleRequestBodySamplingRuleUpdate withPriority(Long priority) {
+        this.priority = priority;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ReservoirSize")
+    public Long reservoirSize;
+    public UpdateSamplingRuleRequestBodySamplingRuleUpdate withReservoirSize(Long reservoirSize) {
+        this.reservoirSize = reservoirSize;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ResourceARN")
+    public String resourceARN;
+    public UpdateSamplingRuleRequestBodySamplingRuleUpdate withResourceArn(String resourceARN) {
+        this.resourceARN = resourceARN;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("RuleARN")
+    public String ruleARN;
+    public UpdateSamplingRuleRequestBodySamplingRuleUpdate withRuleArn(String ruleARN) {
+        this.ruleARN = ruleARN;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("RuleName")
+    public String ruleName;
+    public UpdateSamplingRuleRequestBodySamplingRuleUpdate withRuleName(String ruleName) {
+        this.ruleName = ruleName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ServiceName")
+    public String serviceName;
+    public UpdateSamplingRuleRequestBodySamplingRuleUpdate withServiceName(String serviceName) {
+        this.serviceName = serviceName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ServiceType")
+    public String serviceType;
+    public UpdateSamplingRuleRequestBodySamplingRuleUpdate withServiceType(String serviceType) {
+        this.serviceType = serviceType;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("URLPath")
+    public String urlPath;
+    public UpdateSamplingRuleRequestBodySamplingRuleUpdate withUrlPath(String urlPath) {
+        this.urlPath = urlPath;
+        return this;
+    }
+}

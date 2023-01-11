@@ -1,0 +1,20 @@
+package openapisdk.models.shared;
+
+
+
+/**
+ * LocationsListResponse
+ * A list of Locations. This is the response from the server to GET requests on the locations collection.
+**/
+public class LocationsListResponse {
+    public Location[] items;
+    public LocationsListResponse withItems(Location[] items) {
+        this.items = items;
+        return this;
+    }
+    public String kind;
+    public LocationsListResponse withKind(String kind) {
+        this.kind = kind;
+        return this;
+    }
+}

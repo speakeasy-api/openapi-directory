@@ -1,0 +1,34 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class CompareFacesRequest {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("QualityFilter")
+    public QualityFilterEnum qualityFilter;
+    public CompareFacesRequest withQualityFilter(QualityFilterEnum qualityFilter) {
+        this.qualityFilter = qualityFilter;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("SimilarityThreshold")
+    public Float similarityThreshold;
+    public CompareFacesRequest withSimilarityThreshold(Float similarityThreshold) {
+        this.similarityThreshold = similarityThreshold;
+        return this;
+    }
+    @JsonProperty("SourceImage")
+    public Image sourceImage;
+    public CompareFacesRequest withSourceImage(Image sourceImage) {
+        this.sourceImage = sourceImage;
+        return this;
+    }
+    @JsonProperty("TargetImage")
+    public Image targetImage;
+    public CompareFacesRequest withTargetImage(Image targetImage) {
+        this.targetImage = targetImage;
+        return this;
+    }
+}

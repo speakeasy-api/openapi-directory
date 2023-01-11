@@ -1,0 +1,186 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class PostSamlConfigurationQueryParams {
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$location")
+    public String dollarLocation;
+    public PostSamlConfigurationQueryParams withDollarLocation(String dollarLocation) {
+        this.dollarLocation = dollarLocation;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=action")
+    public String action;
+    public PostSamlConfigurationQueryParams withAction(String action) {
+        this.action = action;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=addGroupMemberships")
+    public Boolean addGroupMemberships;
+    public PostSamlConfigurationQueryParams withAddGroupMemberships(Boolean addGroupMemberships) {
+        this.addGroupMemberships = addGroupMemberships;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=apply")
+    public Boolean apply;
+    public PostSamlConfigurationQueryParams withApply(Boolean apply) {
+        this.apply = apply;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=assertionConsumerServiceURL")
+    public String assertionConsumerServiceURL;
+    public PostSamlConfigurationQueryParams withAssertionConsumerServiceUrl(String assertionConsumerServiceURL) {
+        this.assertionConsumerServiceURL = assertionConsumerServiceURL;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=clockTolerance")
+    public Long clockTolerance;
+    public PostSamlConfigurationQueryParams withClockTolerance(Long clockTolerance) {
+        this.clockTolerance = clockTolerance;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createUser")
+    public Boolean createUser;
+    public PostSamlConfigurationQueryParams withCreateUser(Boolean createUser) {
+        this.createUser = createUser;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=defaultGroups")
+    public String[] defaultGroups;
+    public PostSamlConfigurationQueryParams withDefaultGroups(String[] defaultGroups) {
+        this.defaultGroups = defaultGroups;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=defaultRedirectUrl")
+    public String defaultRedirectUrl;
+    public PostSamlConfigurationQueryParams withDefaultRedirectUrl(String defaultRedirectUrl) {
+        this.defaultRedirectUrl = defaultRedirectUrl;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=delete")
+    public Boolean delete;
+    public PostSamlConfigurationQueryParams withDelete(Boolean delete) {
+        this.delete = delete;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=digestMethod")
+    public String digestMethod;
+    public PostSamlConfigurationQueryParams withDigestMethod(String digestMethod) {
+        this.digestMethod = digestMethod;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=groupMembershipAttribute")
+    public String groupMembershipAttribute;
+    public PostSamlConfigurationQueryParams withGroupMembershipAttribute(String groupMembershipAttribute) {
+        this.groupMembershipAttribute = groupMembershipAttribute;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=handleLogout")
+    public Boolean handleLogout;
+    public PostSamlConfigurationQueryParams withHandleLogout(Boolean handleLogout) {
+        this.handleLogout = handleLogout;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=idpCertAlias")
+    public String idpCertAlias;
+    public PostSamlConfigurationQueryParams withIdpCertAlias(String idpCertAlias) {
+        this.idpCertAlias = idpCertAlias;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=idpHttpRedirect")
+    public Boolean idpHttpRedirect;
+    public PostSamlConfigurationQueryParams withIdpHttpRedirect(Boolean idpHttpRedirect) {
+        this.idpHttpRedirect = idpHttpRedirect;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=idpUrl")
+    public String idpUrl;
+    public PostSamlConfigurationQueryParams withIdpUrl(String idpUrl) {
+        this.idpUrl = idpUrl;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=keyStorePassword")
+    public String keyStorePassword;
+    public PostSamlConfigurationQueryParams withKeyStorePassword(String keyStorePassword) {
+        this.keyStorePassword = keyStorePassword;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=logoutUrl")
+    public String logoutUrl;
+    public PostSamlConfigurationQueryParams withLogoutUrl(String logoutUrl) {
+        this.logoutUrl = logoutUrl;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=nameIdFormat")
+    public String nameIdFormat;
+    public PostSamlConfigurationQueryParams withNameIdFormat(String nameIdFormat) {
+        this.nameIdFormat = nameIdFormat;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=path")
+    public String[] path;
+    public PostSamlConfigurationQueryParams withPath(String[] path) {
+        this.path = path;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=post")
+    public Boolean post;
+    public PostSamlConfigurationQueryParams withPost(Boolean post) {
+        this.post = post;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=propertylist")
+    public String[] propertylist;
+    public PostSamlConfigurationQueryParams withPropertylist(String[] propertylist) {
+        this.propertylist = propertylist;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=service.ranking")
+    public Long serviceRanking;
+    public PostSamlConfigurationQueryParams withServiceRanking(Long serviceRanking) {
+        this.serviceRanking = serviceRanking;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=serviceProviderEntityId")
+    public String serviceProviderEntityId;
+    public PostSamlConfigurationQueryParams withServiceProviderEntityId(String serviceProviderEntityId) {
+        this.serviceProviderEntityId = serviceProviderEntityId;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=signatureMethod")
+    public String signatureMethod;
+    public PostSamlConfigurationQueryParams withSignatureMethod(String signatureMethod) {
+        this.signatureMethod = signatureMethod;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=spPrivateKeyAlias")
+    public String spPrivateKeyAlias;
+    public PostSamlConfigurationQueryParams withSpPrivateKeyAlias(String spPrivateKeyAlias) {
+        this.spPrivateKeyAlias = spPrivateKeyAlias;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=synchronizeAttributes")
+    public String[] synchronizeAttributes;
+    public PostSamlConfigurationQueryParams withSynchronizeAttributes(String[] synchronizeAttributes) {
+        this.synchronizeAttributes = synchronizeAttributes;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=useEncryption")
+    public Boolean useEncryption;
+    public PostSamlConfigurationQueryParams withUseEncryption(Boolean useEncryption) {
+        this.useEncryption = useEncryption;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIDAttribute")
+    public String userIDAttribute;
+    public PostSamlConfigurationQueryParams withUserIdAttribute(String userIDAttribute) {
+        this.userIDAttribute = userIDAttribute;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIntermediatePath")
+    public String userIntermediatePath;
+    public PostSamlConfigurationQueryParams withUserIntermediatePath(String userIntermediatePath) {
+        this.userIntermediatePath = userIntermediatePath;
+        return this;
+    }
+}

@@ -1,0 +1,29 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class BoxScoreTeamsFieldPosition {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("averageStart")
+    public Double averageStart;
+    public BoxScoreTeamsFieldPosition withAverageStart(Double averageStart) {
+        this.averageStart = averageStart;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("averageStartingPredictedPoints")
+    public Double averageStartingPredictedPoints;
+    public BoxScoreTeamsFieldPosition withAverageStartingPredictedPoints(Double averageStartingPredictedPoints) {
+        this.averageStartingPredictedPoints = averageStartingPredictedPoints;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("team")
+    public String team;
+    public BoxScoreTeamsFieldPosition withTeam(String team) {
+        this.team = team;
+        return this;
+    }
+}

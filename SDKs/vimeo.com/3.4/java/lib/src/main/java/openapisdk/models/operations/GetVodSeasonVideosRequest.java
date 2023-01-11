@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class GetVodSeasonVideosRequest {
+    public GetVodSeasonVideosPathParams pathParams;
+    public GetVodSeasonVideosRequest withPathParams(GetVodSeasonVideosPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public GetVodSeasonVideosQueryParams queryParams;
+    public GetVodSeasonVideosRequest withQueryParams(GetVodSeasonVideosQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+}

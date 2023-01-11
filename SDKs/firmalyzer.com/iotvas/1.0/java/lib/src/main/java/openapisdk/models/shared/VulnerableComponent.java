@@ -1,0 +1,43 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class VulnerableComponent {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("category")
+    public String category;
+    public VulnerableComponent withCategory(String category) {
+        this.category = category;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("cvss_max")
+    public Double cvssMax;
+    public VulnerableComponent withCvssMax(Double cvssMax) {
+        this.cvssMax = cvssMax;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("name")
+    public String name;
+    public VulnerableComponent withName(String name) {
+        this.name = name;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("version")
+    public String version;
+    public VulnerableComponent withVersion(String version) {
+        this.version = version;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("vulnerabilities")
+    public Vulnerability[] vulnerabilities;
+    public VulnerableComponent withVulnerabilities(Vulnerability[] vulnerabilities) {
+        this.vulnerabilities = vulnerabilities;
+        return this;
+    }
+}

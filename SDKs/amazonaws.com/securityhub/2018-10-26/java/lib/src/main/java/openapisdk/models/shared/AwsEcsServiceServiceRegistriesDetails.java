@@ -1,0 +1,40 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * AwsEcsServiceServiceRegistriesDetails
+ * Information about a service discovery registry to assign to the service.
+**/
+public class AwsEcsServiceServiceRegistriesDetails {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ContainerName")
+    public String containerName;
+    public AwsEcsServiceServiceRegistriesDetails withContainerName(String containerName) {
+        this.containerName = containerName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ContainerPort")
+    public Long containerPort;
+    public AwsEcsServiceServiceRegistriesDetails withContainerPort(Long containerPort) {
+        this.containerPort = containerPort;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Port")
+    public Long port;
+    public AwsEcsServiceServiceRegistriesDetails withPort(Long port) {
+        this.port = port;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("RegistryArn")
+    public String registryArn;
+    public AwsEcsServiceServiceRegistriesDetails withRegistryArn(String registryArn) {
+        this.registryArn = registryArn;
+        return this;
+    }
+}

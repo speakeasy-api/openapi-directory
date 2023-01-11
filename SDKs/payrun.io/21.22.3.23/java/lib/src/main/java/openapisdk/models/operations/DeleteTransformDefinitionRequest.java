@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class DeleteTransformDefinitionRequest {
+    public DeleteTransformDefinitionPathParams pathParams;
+    public DeleteTransformDefinitionRequest withPathParams(DeleteTransformDefinitionPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public DeleteTransformDefinitionHeaders headers;
+    public DeleteTransformDefinitionRequest withHeaders(DeleteTransformDefinitionHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+}

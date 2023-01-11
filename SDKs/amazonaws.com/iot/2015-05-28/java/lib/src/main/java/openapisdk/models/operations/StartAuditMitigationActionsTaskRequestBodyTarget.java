@@ -1,0 +1,33 @@
+package openapisdk.models.operations;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * StartAuditMitigationActionsTaskRequestBodyTarget
+ * Used in MitigationActionParams, this information identifies the target findings to which the mitigation actions are applied. Only one entry appears.
+**/
+public class StartAuditMitigationActionsTaskRequestBodyTarget {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("auditCheckToReasonCodeFilter")
+    public java.util.Map<String, String[]> auditCheckToReasonCodeFilter;
+    public StartAuditMitigationActionsTaskRequestBodyTarget withAuditCheckToReasonCodeFilter(java.util.Map<String, String[]> auditCheckToReasonCodeFilter) {
+        this.auditCheckToReasonCodeFilter = auditCheckToReasonCodeFilter;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("auditTaskId")
+    public String auditTaskId;
+    public StartAuditMitigationActionsTaskRequestBodyTarget withAuditTaskId(String auditTaskId) {
+        this.auditTaskId = auditTaskId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("findingIds")
+    public String[] findingIds;
+    public StartAuditMitigationActionsTaskRequestBodyTarget withFindingIds(String[] findingIds) {
+        this.findingIds = findingIds;
+        return this;
+    }
+}

@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class ListScheduleRequest {
+    public ListScheduleQueryParams queryParams;
+    public ListScheduleRequest withQueryParams(ListScheduleQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public ListScheduleSecurity security;
+    public ListScheduleRequest withSecurity(ListScheduleSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

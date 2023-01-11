@@ -1,0 +1,24 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class StorageObjectsListSecurity {
+    @SpeakeasyMetadata("security:option=true")
+    public StorageObjectsListSecurityOption1 option1;
+    public StorageObjectsListSecurity withOption1(StorageObjectsListSecurityOption1 option1) {
+        this.option1 = option1;
+        return this;
+    }
+    @SpeakeasyMetadata("security:option=true")
+    public StorageObjectsListSecurityOption2 option2;
+    public StorageObjectsListSecurity withOption2(StorageObjectsListSecurityOption2 option2) {
+        this.option2 = option2;
+        return this;
+    }
+    @SpeakeasyMetadata("security:option=true")
+    public StorageObjectsListSecurityOption3 option3;
+    public StorageObjectsListSecurity withOption3(StorageObjectsListSecurityOption3 option3) {
+        this.option3 = option3;
+        return this;
+    }
+}

@@ -1,0 +1,26 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * DictlayerdataDictSource
+ * The source, url and attribution for this dictionary data.
+**/
+public class DictlayerdataDictSource {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("attribution")
+    public String attribution;
+    public DictlayerdataDictSource withAttribution(String attribution) {
+        this.attribution = attribution;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("url")
+    public String url;
+    public DictlayerdataDictSource withUrl(String url) {
+        this.url = url;
+        return this;
+    }
+}

@@ -1,0 +1,35 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class DeleteHsmRequest {
+    @JsonProperty("ClusterId")
+    public String clusterId;
+    public DeleteHsmRequest withClusterId(String clusterId) {
+        this.clusterId = clusterId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("EniId")
+    public String eniId;
+    public DeleteHsmRequest withEniId(String eniId) {
+        this.eniId = eniId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("EniIp")
+    public String eniIp;
+    public DeleteHsmRequest withEniIp(String eniIp) {
+        this.eniIp = eniIp;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("HsmId")
+    public String hsmId;
+    public DeleteHsmRequest withHsmId(String hsmId) {
+        this.hsmId = hsmId;
+        return this;
+    }
+}

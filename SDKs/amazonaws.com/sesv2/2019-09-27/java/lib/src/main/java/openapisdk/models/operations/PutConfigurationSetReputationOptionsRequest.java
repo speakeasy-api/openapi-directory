@@ -1,0 +1,22 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class PutConfigurationSetReputationOptionsRequest {
+    public PutConfigurationSetReputationOptionsPathParams pathParams;
+    public PutConfigurationSetReputationOptionsRequest withPathParams(PutConfigurationSetReputationOptionsPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public PutConfigurationSetReputationOptionsHeaders headers;
+    public PutConfigurationSetReputationOptionsRequest withHeaders(PutConfigurationSetReputationOptionsHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public PutConfigurationSetReputationOptionsRequestBody request;
+    public PutConfigurationSetReputationOptionsRequest withRequest(PutConfigurationSetReputationOptionsRequestBody request) {
+        this.request = request;
+        return this;
+    }
+}

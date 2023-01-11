@@ -1,0 +1,24 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class GetMobilegentileV2LocationsTilesMobileGeneralizedZXYPbfGetPathParams {
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=x")
+    public Long x;
+    public GetMobilegentileV2LocationsTilesMobileGeneralizedZXYPbfGetPathParams withX(Long x) {
+        this.x = x;
+        return this;
+    }
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=y")
+    public Long y;
+    public GetMobilegentileV2LocationsTilesMobileGeneralizedZXYPbfGetPathParams withY(Long y) {
+        this.y = y;
+        return this;
+    }
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=z")
+    public Long z;
+    public GetMobilegentileV2LocationsTilesMobileGeneralizedZXYPbfGetPathParams withZ(Long z) {
+        this.z = z;
+        return this;
+    }
+}

@@ -1,0 +1,222 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * RedshiftSettings
+ * Provides information that defines an Amazon Redshift endpoint.
+**/
+public class RedshiftSettings {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("AcceptAnyDate")
+    public Boolean acceptAnyDate;
+    public RedshiftSettings withAcceptAnyDate(Boolean acceptAnyDate) {
+        this.acceptAnyDate = acceptAnyDate;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("AfterConnectScript")
+    public String afterConnectScript;
+    public RedshiftSettings withAfterConnectScript(String afterConnectScript) {
+        this.afterConnectScript = afterConnectScript;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("BucketFolder")
+    public String bucketFolder;
+    public RedshiftSettings withBucketFolder(String bucketFolder) {
+        this.bucketFolder = bucketFolder;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("BucketName")
+    public String bucketName;
+    public RedshiftSettings withBucketName(String bucketName) {
+        this.bucketName = bucketName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("CaseSensitiveNames")
+    public Boolean caseSensitiveNames;
+    public RedshiftSettings withCaseSensitiveNames(Boolean caseSensitiveNames) {
+        this.caseSensitiveNames = caseSensitiveNames;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("CompUpdate")
+    public Boolean compUpdate;
+    public RedshiftSettings withCompUpdate(Boolean compUpdate) {
+        this.compUpdate = compUpdate;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ConnectionTimeout")
+    public Long connectionTimeout;
+    public RedshiftSettings withConnectionTimeout(Long connectionTimeout) {
+        this.connectionTimeout = connectionTimeout;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("DatabaseName")
+    public String databaseName;
+    public RedshiftSettings withDatabaseName(String databaseName) {
+        this.databaseName = databaseName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("DateFormat")
+    public String dateFormat;
+    public RedshiftSettings withDateFormat(String dateFormat) {
+        this.dateFormat = dateFormat;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("EmptyAsNull")
+    public Boolean emptyAsNull;
+    public RedshiftSettings withEmptyAsNull(Boolean emptyAsNull) {
+        this.emptyAsNull = emptyAsNull;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("EncryptionMode")
+    public EncryptionModeValueEnum encryptionMode;
+    public RedshiftSettings withEncryptionMode(EncryptionModeValueEnum encryptionMode) {
+        this.encryptionMode = encryptionMode;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ExplicitIds")
+    public Boolean explicitIds;
+    public RedshiftSettings withExplicitIds(Boolean explicitIds) {
+        this.explicitIds = explicitIds;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("FileTransferUploadStreams")
+    public Long fileTransferUploadStreams;
+    public RedshiftSettings withFileTransferUploadStreams(Long fileTransferUploadStreams) {
+        this.fileTransferUploadStreams = fileTransferUploadStreams;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("LoadTimeout")
+    public Long loadTimeout;
+    public RedshiftSettings withLoadTimeout(Long loadTimeout) {
+        this.loadTimeout = loadTimeout;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("MaxFileSize")
+    public Long maxFileSize;
+    public RedshiftSettings withMaxFileSize(Long maxFileSize) {
+        this.maxFileSize = maxFileSize;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Password")
+    public String password;
+    public RedshiftSettings withPassword(String password) {
+        this.password = password;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Port")
+    public Long port;
+    public RedshiftSettings withPort(Long port) {
+        this.port = port;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("RemoveQuotes")
+    public Boolean removeQuotes;
+    public RedshiftSettings withRemoveQuotes(Boolean removeQuotes) {
+        this.removeQuotes = removeQuotes;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ReplaceChars")
+    public String replaceChars;
+    public RedshiftSettings withReplaceChars(String replaceChars) {
+        this.replaceChars = replaceChars;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ReplaceInvalidChars")
+    public String replaceInvalidChars;
+    public RedshiftSettings withReplaceInvalidChars(String replaceInvalidChars) {
+        this.replaceInvalidChars = replaceInvalidChars;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("SecretsManagerAccessRoleArn")
+    public String secretsManagerAccessRoleArn;
+    public RedshiftSettings withSecretsManagerAccessRoleArn(String secretsManagerAccessRoleArn) {
+        this.secretsManagerAccessRoleArn = secretsManagerAccessRoleArn;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("SecretsManagerSecretId")
+    public String secretsManagerSecretId;
+    public RedshiftSettings withSecretsManagerSecretId(String secretsManagerSecretId) {
+        this.secretsManagerSecretId = secretsManagerSecretId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ServerName")
+    public String serverName;
+    public RedshiftSettings withServerName(String serverName) {
+        this.serverName = serverName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ServerSideEncryptionKmsKeyId")
+    public String serverSideEncryptionKmsKeyId;
+    public RedshiftSettings withServerSideEncryptionKmsKeyId(String serverSideEncryptionKmsKeyId) {
+        this.serverSideEncryptionKmsKeyId = serverSideEncryptionKmsKeyId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ServiceAccessRoleArn")
+    public String serviceAccessRoleArn;
+    public RedshiftSettings withServiceAccessRoleArn(String serviceAccessRoleArn) {
+        this.serviceAccessRoleArn = serviceAccessRoleArn;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("TimeFormat")
+    public String timeFormat;
+    public RedshiftSettings withTimeFormat(String timeFormat) {
+        this.timeFormat = timeFormat;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("TrimBlanks")
+    public Boolean trimBlanks;
+    public RedshiftSettings withTrimBlanks(Boolean trimBlanks) {
+        this.trimBlanks = trimBlanks;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("TruncateColumns")
+    public Boolean truncateColumns;
+    public RedshiftSettings withTruncateColumns(Boolean truncateColumns) {
+        this.truncateColumns = truncateColumns;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Username")
+    public String username;
+    public RedshiftSettings withUsername(String username) {
+        this.username = username;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("WriteBufferSize")
+    public Long writeBufferSize;
+    public RedshiftSettings withWriteBufferSize(Long writeBufferSize) {
+        this.writeBufferSize = writeBufferSize;
+        return this;
+    }
+}

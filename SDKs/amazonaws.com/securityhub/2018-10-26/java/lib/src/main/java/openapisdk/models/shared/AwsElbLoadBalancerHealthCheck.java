@@ -1,0 +1,47 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * AwsElbLoadBalancerHealthCheck
+ * Contains information about the health checks that are conducted on the load balancer.
+**/
+public class AwsElbLoadBalancerHealthCheck {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("HealthyThreshold")
+    public Long healthyThreshold;
+    public AwsElbLoadBalancerHealthCheck withHealthyThreshold(Long healthyThreshold) {
+        this.healthyThreshold = healthyThreshold;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Interval")
+    public Long interval;
+    public AwsElbLoadBalancerHealthCheck withInterval(Long interval) {
+        this.interval = interval;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Target")
+    public String target;
+    public AwsElbLoadBalancerHealthCheck withTarget(String target) {
+        this.target = target;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Timeout")
+    public Long timeout;
+    public AwsElbLoadBalancerHealthCheck withTimeout(Long timeout) {
+        this.timeout = timeout;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("UnhealthyThreshold")
+    public Long unhealthyThreshold;
+    public AwsElbLoadBalancerHealthCheck withUnhealthyThreshold(Long unhealthyThreshold) {
+        this.unhealthyThreshold = unhealthyThreshold;
+        return this;
+    }
+}

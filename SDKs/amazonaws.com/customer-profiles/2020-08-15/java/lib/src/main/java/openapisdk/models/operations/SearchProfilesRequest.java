@@ -1,0 +1,27 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class SearchProfilesRequest {
+    public SearchProfilesPathParams pathParams;
+    public SearchProfilesRequest withPathParams(SearchProfilesPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public SearchProfilesQueryParams queryParams;
+    public SearchProfilesRequest withQueryParams(SearchProfilesQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public SearchProfilesHeaders headers;
+    public SearchProfilesRequest withHeaders(SearchProfilesHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public SearchProfilesRequestBody request;
+    public SearchProfilesRequest withRequest(SearchProfilesRequestBody request) {
+        this.request = request;
+        return this;
+    }
+}

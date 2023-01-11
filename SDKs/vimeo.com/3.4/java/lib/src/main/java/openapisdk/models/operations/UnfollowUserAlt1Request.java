@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class UnfollowUserAlt1Request {
+    public UnfollowUserAlt1PathParams pathParams;
+    public UnfollowUserAlt1Request withPathParams(UnfollowUserAlt1PathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public UnfollowUserAlt1Security security;
+    public UnfollowUserAlt1Request withSecurity(UnfollowUserAlt1Security security) {
+        this.security = security;
+        return this;
+    }
+}

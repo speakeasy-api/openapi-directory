@@ -1,0 +1,30 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+public class GetSampledRequestsRequest {
+    @JsonProperty("MaxItems")
+    public Long maxItems;
+    public GetSampledRequestsRequest withMaxItems(Long maxItems) {
+        this.maxItems = maxItems;
+        return this;
+    }
+    @JsonProperty("RuleId")
+    public String ruleId;
+    public GetSampledRequestsRequest withRuleId(String ruleId) {
+        this.ruleId = ruleId;
+        return this;
+    }
+    @JsonProperty("TimeWindow")
+    public TimeWindow timeWindow;
+    public GetSampledRequestsRequest withTimeWindow(TimeWindow timeWindow) {
+        this.timeWindow = timeWindow;
+        return this;
+    }
+    @JsonProperty("WebAclId")
+    public String webAclId;
+    public GetSampledRequestsRequest withWebAclId(String webAclId) {
+        this.webAclId = webAclId;
+        return this;
+    }
+}

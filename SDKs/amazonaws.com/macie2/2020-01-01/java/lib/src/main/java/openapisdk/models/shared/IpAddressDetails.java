@@ -1,0 +1,47 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * IpAddressDetails
+ * Provides information about the IP address of the device that an entity used to perform an action on an affected resource.
+**/
+public class IpAddressDetails {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ipAddressV4")
+    public String ipAddressV4;
+    public IpAddressDetails withIpAddressV4(String ipAddressV4) {
+        this.ipAddressV4 = ipAddressV4;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ipCity")
+    public IpCity ipCity;
+    public IpAddressDetails withIpCity(IpCity ipCity) {
+        this.ipCity = ipCity;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ipCountry")
+    public IpCountry ipCountry;
+    public IpAddressDetails withIpCountry(IpCountry ipCountry) {
+        this.ipCountry = ipCountry;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ipGeoLocation")
+    public IpGeoLocation ipGeoLocation;
+    public IpAddressDetails withIpGeoLocation(IpGeoLocation ipGeoLocation) {
+        this.ipGeoLocation = ipGeoLocation;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ipOwner")
+    public IpOwner ipOwner;
+    public IpAddressDetails withIpOwner(IpOwner ipOwner) {
+        this.ipOwner = ipOwner;
+        return this;
+    }
+}

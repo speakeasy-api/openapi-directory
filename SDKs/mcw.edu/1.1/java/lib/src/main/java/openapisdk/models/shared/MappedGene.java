@@ -1,0 +1,36 @@
+package openapisdk.models.shared;
+
+
+
+public class MappedGene {
+    public String chromosome;
+    public MappedGene withChromosome(String chromosome) {
+        this.chromosome = chromosome;
+        return this;
+    }
+    public Gene gene;
+    public MappedGene withGene(Gene gene) {
+        this.gene = gene;
+        return this;
+    }
+    public Integer mapKey;
+    public MappedGene withMapKey(Integer mapKey) {
+        this.mapKey = mapKey;
+        return this;
+    }
+    public Long start;
+    public MappedGene withStart(Long start) {
+        this.start = start;
+        return this;
+    }
+    public Long stop;
+    public MappedGene withStop(Long stop) {
+        this.stop = stop;
+        return this;
+    }
+    public String strand;
+    public MappedGene withStrand(String strand) {
+        this.strand = strand;
+        return this;
+    }
+}

@@ -1,0 +1,180 @@
+package openapisdk.models.shared;
+
+import java.time.OffsetDateTime;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import openapisdk.utils.DateTimeSerializer;
+import openapisdk.utils.DateTimeDeserializer;
+
+public class InsightsV1CallSummary {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("account_sid")
+    public String accountSid;
+    public InsightsV1CallSummary withAccountSid(String accountSid) {
+        this.accountSid = accountSid;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("annotation")
+    public Object annotation;
+    public InsightsV1CallSummary withAnnotation(Object annotation) {
+        this.annotation = annotation;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("answered_by")
+    public SummaryEnumAnsweredByEnum answeredBy;
+    public InsightsV1CallSummary withAnsweredBy(SummaryEnumAnsweredByEnum answeredBy) {
+        this.answeredBy = answeredBy;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("attributes")
+    public Object attributes;
+    public InsightsV1CallSummary withAttributes(Object attributes) {
+        this.attributes = attributes;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("call_sid")
+    public String callSid;
+    public InsightsV1CallSummary withCallSid(String callSid) {
+        this.callSid = callSid;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("call_state")
+    public SummaryEnumCallStateEnum callState;
+    public InsightsV1CallSummary withCallState(SummaryEnumCallStateEnum callState) {
+        this.callState = callState;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("call_type")
+    public SummaryEnumCallTypeEnum callType;
+    public InsightsV1CallSummary withCallType(SummaryEnumCallTypeEnum callType) {
+        this.callType = callType;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("carrier_edge")
+    public Object carrierEdge;
+    public InsightsV1CallSummary withCarrierEdge(Object carrierEdge) {
+        this.carrierEdge = carrierEdge;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("client_edge")
+    public Object clientEdge;
+    public InsightsV1CallSummary withClientEdge(Object clientEdge) {
+        this.clientEdge = clientEdge;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("connect_duration")
+    public Long connectDuration;
+    public InsightsV1CallSummary withConnectDuration(Long connectDuration) {
+        this.connectDuration = connectDuration;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonSerialize(contentUsing = DateTimeSerializer.class)
+    @JsonDeserialize(contentUsing = DateTimeDeserializer.class)
+    @JsonProperty("created_time")
+    public OffsetDateTime createdTime;
+    public InsightsV1CallSummary withCreatedTime(OffsetDateTime createdTime) {
+        this.createdTime = createdTime;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("duration")
+    public Long duration;
+    public InsightsV1CallSummary withDuration(Long duration) {
+        this.duration = duration;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonSerialize(contentUsing = DateTimeSerializer.class)
+    @JsonDeserialize(contentUsing = DateTimeDeserializer.class)
+    @JsonProperty("end_time")
+    public OffsetDateTime endTime;
+    public InsightsV1CallSummary withEndTime(OffsetDateTime endTime) {
+        this.endTime = endTime;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("from")
+    public Object from;
+    public InsightsV1CallSummary withFrom(Object from) {
+        this.from = from;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("processing_state")
+    public SummaryEnumProcessingStateEnum processingState;
+    public InsightsV1CallSummary withProcessingState(SummaryEnumProcessingStateEnum processingState) {
+        this.processingState = processingState;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("properties")
+    public Object properties;
+    public InsightsV1CallSummary withProperties(Object properties) {
+        this.properties = properties;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("sdk_edge")
+    public Object sdkEdge;
+    public InsightsV1CallSummary withSDKEdge(Object sdkEdge) {
+        this.sdkEdge = sdkEdge;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("sip_edge")
+    public Object sipEdge;
+    public InsightsV1CallSummary withSipEdge(Object sipEdge) {
+        this.sipEdge = sipEdge;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonSerialize(contentUsing = DateTimeSerializer.class)
+    @JsonDeserialize(contentUsing = DateTimeDeserializer.class)
+    @JsonProperty("start_time")
+    public OffsetDateTime startTime;
+    public InsightsV1CallSummary withStartTime(OffsetDateTime startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("tags")
+    public String[] tags;
+    public InsightsV1CallSummary withTags(String[] tags) {
+        this.tags = tags;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("to")
+    public Object to;
+    public InsightsV1CallSummary withTo(Object to) {
+        this.to = to;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("trust")
+    public Object trust;
+    public InsightsV1CallSummary withTrust(Object trust) {
+        this.trust = trust;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("url")
+    public String url;
+    public InsightsV1CallSummary withUrl(String url) {
+        this.url = url;
+        return this;
+    }
+}

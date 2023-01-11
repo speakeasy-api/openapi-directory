@@ -1,0 +1,124 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * AwsElasticBeanstalkEnvironmentDetails
+ * Contains details about an Elastic Beanstalk environment.
+**/
+public class AwsElasticBeanstalkEnvironmentDetails {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ApplicationName")
+    public String applicationName;
+    public AwsElasticBeanstalkEnvironmentDetails withApplicationName(String applicationName) {
+        this.applicationName = applicationName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Cname")
+    public String cname;
+    public AwsElasticBeanstalkEnvironmentDetails withCname(String cname) {
+        this.cname = cname;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("DateCreated")
+    public String dateCreated;
+    public AwsElasticBeanstalkEnvironmentDetails withDateCreated(String dateCreated) {
+        this.dateCreated = dateCreated;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("DateUpdated")
+    public String dateUpdated;
+    public AwsElasticBeanstalkEnvironmentDetails withDateUpdated(String dateUpdated) {
+        this.dateUpdated = dateUpdated;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Description")
+    public String description;
+    public AwsElasticBeanstalkEnvironmentDetails withDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("EndpointUrl")
+    public String endpointUrl;
+    public AwsElasticBeanstalkEnvironmentDetails withEndpointUrl(String endpointUrl) {
+        this.endpointUrl = endpointUrl;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("EnvironmentArn")
+    public String environmentArn;
+    public AwsElasticBeanstalkEnvironmentDetails withEnvironmentArn(String environmentArn) {
+        this.environmentArn = environmentArn;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("EnvironmentId")
+    public String environmentId;
+    public AwsElasticBeanstalkEnvironmentDetails withEnvironmentId(String environmentId) {
+        this.environmentId = environmentId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("EnvironmentLinks")
+    public AwsElasticBeanstalkEnvironmentEnvironmentLink[] environmentLinks;
+    public AwsElasticBeanstalkEnvironmentDetails withEnvironmentLinks(AwsElasticBeanstalkEnvironmentEnvironmentLink[] environmentLinks) {
+        this.environmentLinks = environmentLinks;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("EnvironmentName")
+    public String environmentName;
+    public AwsElasticBeanstalkEnvironmentDetails withEnvironmentName(String environmentName) {
+        this.environmentName = environmentName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("OptionSettings")
+    public AwsElasticBeanstalkEnvironmentOptionSetting[] optionSettings;
+    public AwsElasticBeanstalkEnvironmentDetails withOptionSettings(AwsElasticBeanstalkEnvironmentOptionSetting[] optionSettings) {
+        this.optionSettings = optionSettings;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("PlatformArn")
+    public String platformArn;
+    public AwsElasticBeanstalkEnvironmentDetails withPlatformArn(String platformArn) {
+        this.platformArn = platformArn;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("SolutionStackName")
+    public String solutionStackName;
+    public AwsElasticBeanstalkEnvironmentDetails withSolutionStackName(String solutionStackName) {
+        this.solutionStackName = solutionStackName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Status")
+    public String status;
+    public AwsElasticBeanstalkEnvironmentDetails withStatus(String status) {
+        this.status = status;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Tier")
+    public AwsElasticBeanstalkEnvironmentTier tier;
+    public AwsElasticBeanstalkEnvironmentDetails withTier(AwsElasticBeanstalkEnvironmentTier tier) {
+        this.tier = tier;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("VersionLabel")
+    public String versionLabel;
+    public AwsElasticBeanstalkEnvironmentDetails withVersionLabel(String versionLabel) {
+        this.versionLabel = versionLabel;
+        return this;
+    }
+}

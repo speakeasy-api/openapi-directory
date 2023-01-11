@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class EssentialcontactsProjectsContactsComputeRequest {
+    public EssentialcontactsProjectsContactsComputePathParams pathParams;
+    public EssentialcontactsProjectsContactsComputeRequest withPathParams(EssentialcontactsProjectsContactsComputePathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public EssentialcontactsProjectsContactsComputeQueryParams queryParams;
+    public EssentialcontactsProjectsContactsComputeRequest withQueryParams(EssentialcontactsProjectsContactsComputeQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public EssentialcontactsProjectsContactsComputeSecurity security;
+    public EssentialcontactsProjectsContactsComputeRequest withSecurity(EssentialcontactsProjectsContactsComputeSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

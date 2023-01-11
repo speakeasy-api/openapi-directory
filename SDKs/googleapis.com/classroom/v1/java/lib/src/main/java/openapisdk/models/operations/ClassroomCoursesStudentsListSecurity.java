@@ -1,0 +1,30 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class ClassroomCoursesStudentsListSecurity {
+    @SpeakeasyMetadata("security:option=true")
+    public ClassroomCoursesStudentsListSecurityOption1 option1;
+    public ClassroomCoursesStudentsListSecurity withOption1(ClassroomCoursesStudentsListSecurityOption1 option1) {
+        this.option1 = option1;
+        return this;
+    }
+    @SpeakeasyMetadata("security:option=true")
+    public ClassroomCoursesStudentsListSecurityOption2 option2;
+    public ClassroomCoursesStudentsListSecurity withOption2(ClassroomCoursesStudentsListSecurityOption2 option2) {
+        this.option2 = option2;
+        return this;
+    }
+    @SpeakeasyMetadata("security:option=true")
+    public ClassroomCoursesStudentsListSecurityOption3 option3;
+    public ClassroomCoursesStudentsListSecurity withOption3(ClassroomCoursesStudentsListSecurityOption3 option3) {
+        this.option3 = option3;
+        return this;
+    }
+    @SpeakeasyMetadata("security:option=true")
+    public ClassroomCoursesStudentsListSecurityOption4 option4;
+    public ClassroomCoursesStudentsListSecurity withOption4(ClassroomCoursesStudentsListSecurityOption4 option4) {
+        this.option4 = option4;
+        return this;
+    }
+}

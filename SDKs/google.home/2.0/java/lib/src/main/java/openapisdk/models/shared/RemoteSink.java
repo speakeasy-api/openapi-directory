@@ -1,0 +1,54 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+public class RemoteSink {
+    @JsonProperty("bond_date")
+    public Double bondDate;
+    public RemoteSink withBondDate(Double bondDate) {
+        this.bondDate = bondDate;
+        return this;
+    }
+    @JsonProperty("device_class")
+    public Integer deviceClass;
+    public RemoteSink withDeviceClass(Integer deviceClass) {
+        this.deviceClass = deviceClass;
+        return this;
+    }
+    @JsonProperty("device_type")
+    public Integer deviceType;
+    public RemoteSink withDeviceType(Integer deviceType) {
+        this.deviceType = deviceType;
+        return this;
+    }
+    @JsonProperty("last_connect_date")
+    public Integer lastConnectDate;
+    public RemoteSink withLastConnectDate(Integer lastConnectDate) {
+        this.lastConnectDate = lastConnectDate;
+        return this;
+    }
+    @JsonProperty("mac_address")
+    public String macAddress;
+    public RemoteSink withMacAddress(String macAddress) {
+        this.macAddress = macAddress;
+        return this;
+    }
+    @JsonProperty("name")
+    public String name;
+    public RemoteSink withName(String name) {
+        this.name = name;
+        return this;
+    }
+    @JsonProperty("rssi")
+    public Integer rssi;
+    public RemoteSink withRssi(Integer rssi) {
+        this.rssi = rssi;
+        return this;
+    }
+    @JsonProperty("service_uuids")
+    public String[] serviceUuids;
+    public RemoteSink withServiceUuids(String[] serviceUuids) {
+        this.serviceUuids = serviceUuids;
+        return this;
+    }
+}

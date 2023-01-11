@@ -1,0 +1,33 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * BatchGetApplicationRevisionsOutput
+ * Represents the output of a <code>BatchGetApplicationRevisions</code> operation.
+**/
+public class BatchGetApplicationRevisionsOutput {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("applicationName")
+    public String applicationName;
+    public BatchGetApplicationRevisionsOutput withApplicationName(String applicationName) {
+        this.applicationName = applicationName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("errorMessage")
+    public String errorMessage;
+    public BatchGetApplicationRevisionsOutput withErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("revisions")
+    public RevisionInfo[] revisions;
+    public BatchGetApplicationRevisionsOutput withRevisions(RevisionInfo[] revisions) {
+        this.revisions = revisions;
+        return this;
+    }
+}

@@ -1,0 +1,54 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * RegistryListItem
+ * A structure containing the details for a registry.
+**/
+public class RegistryListItem {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("CreatedTime")
+    public String createdTime;
+    public RegistryListItem withCreatedTime(String createdTime) {
+        this.createdTime = createdTime;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Description")
+    public String description;
+    public RegistryListItem withDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("RegistryArn")
+    public String registryArn;
+    public RegistryListItem withRegistryArn(String registryArn) {
+        this.registryArn = registryArn;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("RegistryName")
+    public String registryName;
+    public RegistryListItem withRegistryName(String registryName) {
+        this.registryName = registryName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Status")
+    public RegistryStatusEnum status;
+    public RegistryListItem withStatus(RegistryStatusEnum status) {
+        this.status = status;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("UpdatedTime")
+    public String updatedTime;
+    public RegistryListItem withUpdatedTime(String updatedTime) {
+        this.updatedTime = updatedTime;
+        return this;
+    }
+}

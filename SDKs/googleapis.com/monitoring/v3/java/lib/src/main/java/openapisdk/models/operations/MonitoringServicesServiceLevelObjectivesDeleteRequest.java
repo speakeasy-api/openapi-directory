@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class MonitoringServicesServiceLevelObjectivesDeleteRequest {
+    public MonitoringServicesServiceLevelObjectivesDeletePathParams pathParams;
+    public MonitoringServicesServiceLevelObjectivesDeleteRequest withPathParams(MonitoringServicesServiceLevelObjectivesDeletePathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public MonitoringServicesServiceLevelObjectivesDeleteQueryParams queryParams;
+    public MonitoringServicesServiceLevelObjectivesDeleteRequest withQueryParams(MonitoringServicesServiceLevelObjectivesDeleteQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public MonitoringServicesServiceLevelObjectivesDeleteSecurity security;
+    public MonitoringServicesServiceLevelObjectivesDeleteRequest withSecurity(MonitoringServicesServiceLevelObjectivesDeleteSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class GetV4LayersAsAppliedRequest {
+    public GetV4LayersAsAppliedQueryParams queryParams;
+    public GetV4LayersAsAppliedRequest withQueryParams(GetV4LayersAsAppliedQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public GetV4LayersAsAppliedHeaders headers;
+    public GetV4LayersAsAppliedRequest withHeaders(GetV4LayersAsAppliedHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+    public GetV4LayersAsAppliedSecurity security;
+    public GetV4LayersAsAppliedRequest withSecurity(GetV4LayersAsAppliedSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

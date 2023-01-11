@@ -1,0 +1,60 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class GetMobiletileV2LocationsTilesMobileZXYPbfGetQueryParams {
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=dateFrom")
+    public Object dateFrom;
+    public GetMobiletileV2LocationsTilesMobileZXYPbfGetQueryParams withDateFrom(Object dateFrom) {
+        this.dateFrom = dateFrom;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=dateTo")
+    public Object dateTo;
+    public GetMobiletileV2LocationsTilesMobileZXYPbfGetQueryParams withDateTo(Object dateTo) {
+        this.dateTo = dateTo;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=isAnalysis")
+    public Boolean isAnalysis;
+    public GetMobiletileV2LocationsTilesMobileZXYPbfGetQueryParams withIsAnalysis(Boolean isAnalysis) {
+        this.isAnalysis = isAnalysis;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=isMobile")
+    public Boolean isMobile;
+    public GetMobiletileV2LocationsTilesMobileZXYPbfGetQueryParams withIsMobile(Boolean isMobile) {
+        this.isMobile = isMobile;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lastUpdatedFrom")
+    public Object lastUpdatedFrom;
+    public GetMobiletileV2LocationsTilesMobileZXYPbfGetQueryParams withLastUpdatedFrom(Object lastUpdatedFrom) {
+        this.lastUpdatedFrom = lastUpdatedFrom;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lastUpdatedTo")
+    public Object lastUpdatedTo;
+    public GetMobiletileV2LocationsTilesMobileZXYPbfGetQueryParams withLastUpdatedTo(Object lastUpdatedTo) {
+        this.lastUpdatedTo = lastUpdatedTo;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=location")
+    public Long[] location;
+    public GetMobiletileV2LocationsTilesMobileZXYPbfGetQueryParams withLocation(Long[] location) {
+        this.location = location;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=parameter")
+    public Object parameter;
+    public GetMobiletileV2LocationsTilesMobileZXYPbfGetQueryParams withParameter(Object parameter) {
+        this.parameter = parameter;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=project")
+    public Long project;
+    public GetMobiletileV2LocationsTilesMobileZXYPbfGetQueryParams withProject(Long project) {
+        this.project = project;
+        return this;
+    }
+}

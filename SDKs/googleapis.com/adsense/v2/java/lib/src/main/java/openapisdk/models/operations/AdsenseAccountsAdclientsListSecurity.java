@@ -1,0 +1,18 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class AdsenseAccountsAdclientsListSecurity {
+    @SpeakeasyMetadata("security:option=true")
+    public AdsenseAccountsAdclientsListSecurityOption1 option1;
+    public AdsenseAccountsAdclientsListSecurity withOption1(AdsenseAccountsAdclientsListSecurityOption1 option1) {
+        this.option1 = option1;
+        return this;
+    }
+    @SpeakeasyMetadata("security:option=true")
+    public AdsenseAccountsAdclientsListSecurityOption2 option2;
+    public AdsenseAccountsAdclientsListSecurity withOption2(AdsenseAccountsAdclientsListSecurityOption2 option2) {
+        this.option2 = option2;
+        return this;
+    }
+}

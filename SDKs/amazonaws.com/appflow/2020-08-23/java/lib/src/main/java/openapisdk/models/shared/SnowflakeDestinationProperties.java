@@ -1,0 +1,38 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * SnowflakeDestinationProperties
+ *  The properties that are applied when Snowflake is being used as a destination. 
+**/
+public class SnowflakeDestinationProperties {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("bucketPrefix")
+    public String bucketPrefix;
+    public SnowflakeDestinationProperties withBucketPrefix(String bucketPrefix) {
+        this.bucketPrefix = bucketPrefix;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("errorHandlingConfig")
+    public ErrorHandlingConfig errorHandlingConfig;
+    public SnowflakeDestinationProperties withErrorHandlingConfig(ErrorHandlingConfig errorHandlingConfig) {
+        this.errorHandlingConfig = errorHandlingConfig;
+        return this;
+    }
+    @JsonProperty("intermediateBucketName")
+    public String intermediateBucketName;
+    public SnowflakeDestinationProperties withIntermediateBucketName(String intermediateBucketName) {
+        this.intermediateBucketName = intermediateBucketName;
+        return this;
+    }
+    @JsonProperty("object")
+    public String object;
+    public SnowflakeDestinationProperties withObject(String object) {
+        this.object = object;
+        return this;
+    }
+}

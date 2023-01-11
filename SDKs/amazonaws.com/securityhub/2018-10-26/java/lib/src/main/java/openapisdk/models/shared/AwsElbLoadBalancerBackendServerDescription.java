@@ -1,0 +1,26 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * AwsElbLoadBalancerBackendServerDescription
+ * Provides information about the configuration of an EC2 instance for the load balancer.
+**/
+public class AwsElbLoadBalancerBackendServerDescription {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("InstancePort")
+    public Long instancePort;
+    public AwsElbLoadBalancerBackendServerDescription withInstancePort(Long instancePort) {
+        this.instancePort = instancePort;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("PolicyNames")
+    public String[] policyNames;
+    public AwsElbLoadBalancerBackendServerDescription withPolicyNames(String[] policyNames) {
+        this.policyNames = policyNames;
+        return this;
+    }
+}

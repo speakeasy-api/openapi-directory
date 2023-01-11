@@ -1,0 +1,27 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class UpdateVirtualRouterRequest {
+    public UpdateVirtualRouterPathParams pathParams;
+    public UpdateVirtualRouterRequest withPathParams(UpdateVirtualRouterPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public UpdateVirtualRouterQueryParams queryParams;
+    public UpdateVirtualRouterRequest withQueryParams(UpdateVirtualRouterQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public UpdateVirtualRouterHeaders headers;
+    public UpdateVirtualRouterRequest withHeaders(UpdateVirtualRouterHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public UpdateVirtualRouterRequestBody request;
+    public UpdateVirtualRouterRequest withRequest(UpdateVirtualRouterRequestBody request) {
+        this.request = request;
+        return this;
+    }
+}

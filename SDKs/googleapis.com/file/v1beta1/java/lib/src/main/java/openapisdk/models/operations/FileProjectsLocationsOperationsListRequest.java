@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class FileProjectsLocationsOperationsListRequest {
+    public FileProjectsLocationsOperationsListPathParams pathParams;
+    public FileProjectsLocationsOperationsListRequest withPathParams(FileProjectsLocationsOperationsListPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public FileProjectsLocationsOperationsListQueryParams queryParams;
+    public FileProjectsLocationsOperationsListRequest withQueryParams(FileProjectsLocationsOperationsListQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public FileProjectsLocationsOperationsListSecurity security;
+    public FileProjectsLocationsOperationsListRequest withSecurity(FileProjectsLocationsOperationsListSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

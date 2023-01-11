@@ -1,0 +1,16 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+/**
+ * StartSessionRequest
+ * Specifies a request to start a new session.
+**/
+public class StartSessionRequest {
+    @JsonProperty("LedgerName")
+    public String ledgerName;
+    public StartSessionRequest withLedgerName(String ledgerName) {
+        this.ledgerName = ledgerName;
+        return this;
+    }
+}

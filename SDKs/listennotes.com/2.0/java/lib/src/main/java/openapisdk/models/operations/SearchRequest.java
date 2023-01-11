@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class SearchRequest {
+    public SearchQueryParams queryParams;
+    public SearchRequest withQueryParams(SearchQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public SearchHeaders headers;
+    public SearchRequest withHeaders(SearchHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+}

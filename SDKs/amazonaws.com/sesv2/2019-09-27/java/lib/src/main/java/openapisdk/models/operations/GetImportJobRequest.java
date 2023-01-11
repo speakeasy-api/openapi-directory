@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class GetImportJobRequest {
+    public GetImportJobPathParams pathParams;
+    public GetImportJobRequest withPathParams(GetImportJobPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public GetImportJobHeaders headers;
+    public GetImportJobRequest withHeaders(GetImportJobHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+}

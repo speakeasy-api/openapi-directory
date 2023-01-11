@@ -1,0 +1,22 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class ShareFileResponse {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("data")
+    public ShareFileResponseData data;
+    public ShareFileResponse withData(ShareFileResponseData data) {
+        this.data = data;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("success")
+    public Boolean success;
+    public ShareFileResponse withSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+}

@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class AnalyticsadminPropertiesConversionEventsListRequest {
+    public AnalyticsadminPropertiesConversionEventsListPathParams pathParams;
+    public AnalyticsadminPropertiesConversionEventsListRequest withPathParams(AnalyticsadminPropertiesConversionEventsListPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public AnalyticsadminPropertiesConversionEventsListQueryParams queryParams;
+    public AnalyticsadminPropertiesConversionEventsListRequest withQueryParams(AnalyticsadminPropertiesConversionEventsListQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public AnalyticsadminPropertiesConversionEventsListSecurity security;
+    public AnalyticsadminPropertiesConversionEventsListRequest withSecurity(AnalyticsadminPropertiesConversionEventsListSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

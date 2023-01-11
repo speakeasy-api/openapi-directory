@@ -1,0 +1,22 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class CreateAddonRequest {
+    public CreateAddonPathParams pathParams;
+    public CreateAddonRequest withPathParams(CreateAddonPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public CreateAddonHeaders headers;
+    public CreateAddonRequest withHeaders(CreateAddonHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public CreateAddonRequestBody request;
+    public CreateAddonRequest withRequest(CreateAddonRequestBody request) {
+        this.request = request;
+        return this;
+    }
+}

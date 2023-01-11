@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class DescribeDetectorRequest {
+    public DescribeDetectorPathParams pathParams;
+    public DescribeDetectorRequest withPathParams(DescribeDetectorPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public DescribeDetectorQueryParams queryParams;
+    public DescribeDetectorRequest withQueryParams(DescribeDetectorQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public DescribeDetectorHeaders headers;
+    public DescribeDetectorRequest withHeaders(DescribeDetectorHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+}

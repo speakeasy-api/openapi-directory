@@ -1,0 +1,24 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+public class OrderListFullWithLinks {
+    @JsonProperty("links")
+    public OrderListFullLinks links;
+    public OrderListFullWithLinks withLinks(OrderListFullLinks links) {
+        this.links = links;
+        return this;
+    }
+    @JsonProperty("orders")
+    public OrderWithLinks[] orders;
+    public OrderListFullWithLinks withOrders(OrderWithLinks[] orders) {
+        this.orders = orders;
+        return this;
+    }
+    @JsonProperty("paginationResult")
+    public PaginationResult paginationResult;
+    public OrderListFullWithLinks withPaginationResult(PaginationResult paginationResult) {
+        this.paginationResult = paginationResult;
+        return this;
+    }
+}

@@ -1,0 +1,43 @@
+package openapisdk.models.operations;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class UpdateCollectionRequestBodyCollectionItemItemRequest {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("body")
+    public UpdateCollectionRequestBodyCollectionItemItemRequestBody body;
+    public UpdateCollectionRequestBodyCollectionItemItemRequest withBody(UpdateCollectionRequestBodyCollectionItemItemRequestBody body) {
+        this.body = body;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("description")
+    public String description;
+    public UpdateCollectionRequestBodyCollectionItemItemRequest withDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("header")
+    public UpdateCollectionRequestBodyCollectionItemItemRequestHeader[] header;
+    public UpdateCollectionRequestBodyCollectionItemItemRequest withHeader(UpdateCollectionRequestBodyCollectionItemItemRequestHeader[] header) {
+        this.header = header;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("method")
+    public String method;
+    public UpdateCollectionRequestBodyCollectionItemItemRequest withMethod(String method) {
+        this.method = method;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("url")
+    public String url;
+    public UpdateCollectionRequestBodyCollectionItemItemRequest withUrl(String url) {
+        this.url = url;
+        return this;
+    }
+}

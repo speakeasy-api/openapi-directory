@@ -1,0 +1,87 @@
+# openapisdk
+
+<!-- Start SDK Installation -->
+## SDK Installation
+
+### Gradle
+
+```groovy
+implementation 'openapisdk:openapisdk:0.0.1'
+```
+<!-- End SDK Installation -->
+
+## SDK Example Usage
+<!-- Start SDK Example Usage -->
+```java
+package hello.world;
+
+import openapisdk.SDK;
+import openapisdk.models.shared.Security;
+
+public class Application {
+    public static void main(String[] args) {
+        try {
+            SDK.Builder builder = SDK.builder();
+
+            SDK sdk = builder.build();
+
+            AssuredworkloadsOrganizationsLocationsOperationsListRequest req = new AssuredworkloadsOrganizationsLocationsOperationsListRequest() {{
+                security = new AssuredworkloadsOrganizationsLocationsOperationsListSecurity() {{
+                    oauth2 = new SchemeOauth2() {{
+                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
+                    }};
+                    oauth2c = new SchemeOauth2c() {{
+                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
+                    }};
+                }};
+                pathParams = new AssuredworkloadsOrganizationsLocationsOperationsListPathParams() {{
+                    name = "in";
+                }};
+                queryParams = new AssuredworkloadsOrganizationsLocationsOperationsListQueryParams() {{
+                    dollarXgafv = "1";
+                    accessToken = "ipsa";
+                    alt = "proto";
+                    callback = "reiciendis";
+                    fields = "quae";
+                    filter = "odit";
+                    key = "expedita";
+                    oauthToken = "ut";
+                    pageSize = 5698203024118744712;
+                    pageToken = "voluptate";
+                    prettyPrint = false;
+                    quotaUser = "harum";
+                    uploadType = "nulla";
+                    uploadProtocol = "commodi";
+                }};
+            }};
+
+            AssuredworkloadsOrganizationsLocationsOperationsListResponse res = sdk.organizations.assuredworkloadsOrganizationsLocationsOperationsList(req);
+
+            if (res.googleLongrunningListOperationsResponse.isPresent()) {
+                // handle response
+            }
+        } catch (Exception e) {
+            // handle exception
+        }
+```
+<!-- End SDK Example Usage -->
+
+<!-- Start SDK Available Operations -->
+## SDK Available Operations
+
+### organizations
+
+* `assuredworkloadsOrganizationsLocationsOperationsList` - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`. NOTE: the `name` binding allows API services to override the binding to use different resource name schemes, such as `users/*/operations`. To override the binding, API services can add a binding such as `"/v1/{name=users/*}/operations"` to their service configuration. For backwards compatibility, the default name includes the operations collection id, however overriding users must ensure the name binding is the parent resource, without the operations collection id.
+* `assuredworkloadsOrganizationsLocationsWorkloadsCreate` - Creates Assured Workload.
+* `assuredworkloadsOrganizationsLocationsWorkloadsDelete` - Deletes the workload. Make sure that workload's direct children are already in a deleted state, otherwise the request will fail with a FAILED_PRECONDITION error.
+* `assuredworkloadsOrganizationsLocationsWorkloadsList` - Lists Assured Workloads under a CRM Node.
+* `assuredworkloadsOrganizationsLocationsWorkloadsMutatePartnerPermissions` - Update the permissions settings for an existing partner workload. For force updates don't set etag field in the Workload. Only one update operation per workload can be in progress.
+* `assuredworkloadsOrganizationsLocationsWorkloadsPatch` - Updates an existing workload. Currently allows updating of workload display_name and labels. For force updates don't set etag field in the Workload. Only one update operation per workload can be in progress.
+* `assuredworkloadsOrganizationsLocationsWorkloadsRestrictAllowedResources` - Restrict the list of resources allowed in the Workload environment. The current list of allowed products can be found at https://cloud.google.com/assured-workloads/docs/supported-products In addition to assuredworkloads.workload.update permission, the user should also have orgpolicy.policy.set permission on the folder resource to use this functionality.
+* `assuredworkloadsOrganizationsLocationsWorkloadsViolationsAcknowledge` - Acknowledges an existing violation. By acknowledging a violation, users acknowledge the existence of a compliance violation in their workload and decide to ignore it due to a valid business justification. Acknowledgement is a permanent operation and it cannot be reverted.
+* `assuredworkloadsOrganizationsLocationsWorkloadsViolationsGet` - Retrieves Assured Workload Violation based on ID.
+* `assuredworkloadsOrganizationsLocationsWorkloadsViolationsList` - Lists the Violations in the AssuredWorkload Environment. Callers may also choose to read across multiple Workloads as per [AIP-159](https://google.aip.dev/159) by using '-' (the hyphen or dash character) as a wildcard character instead of workload-id in the parent. Format `organizations/{org_id}/locations/{location}/workloads/-`
+
+<!-- End SDK Available Operations -->
+
+### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

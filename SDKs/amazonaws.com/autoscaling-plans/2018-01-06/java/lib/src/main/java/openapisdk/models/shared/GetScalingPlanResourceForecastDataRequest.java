@@ -1,0 +1,63 @@
+package openapisdk.models.shared;
+
+import java.time.OffsetDateTime;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import openapisdk.utils.DateTimeSerializer;
+import openapisdk.utils.DateTimeDeserializer;
+
+public class GetScalingPlanResourceForecastDataRequest {
+    @JsonSerialize(using = DateTimeSerializer.class)
+    @JsonDeserialize(using = DateTimeDeserializer.class)
+    @JsonProperty("EndTime")
+    public OffsetDateTime endTime;
+    public GetScalingPlanResourceForecastDataRequest withEndTime(OffsetDateTime endTime) {
+        this.endTime = endTime;
+        return this;
+    }
+    @JsonProperty("ForecastDataType")
+    public ForecastDataTypeEnum forecastDataType;
+    public GetScalingPlanResourceForecastDataRequest withForecastDataType(ForecastDataTypeEnum forecastDataType) {
+        this.forecastDataType = forecastDataType;
+        return this;
+    }
+    @JsonProperty("ResourceId")
+    public String resourceId;
+    public GetScalingPlanResourceForecastDataRequest withResourceId(String resourceId) {
+        this.resourceId = resourceId;
+        return this;
+    }
+    @JsonProperty("ScalableDimension")
+    public ScalableDimensionEnum scalableDimension;
+    public GetScalingPlanResourceForecastDataRequest withScalableDimension(ScalableDimensionEnum scalableDimension) {
+        this.scalableDimension = scalableDimension;
+        return this;
+    }
+    @JsonProperty("ScalingPlanName")
+    public String scalingPlanName;
+    public GetScalingPlanResourceForecastDataRequest withScalingPlanName(String scalingPlanName) {
+        this.scalingPlanName = scalingPlanName;
+        return this;
+    }
+    @JsonProperty("ScalingPlanVersion")
+    public Long scalingPlanVersion;
+    public GetScalingPlanResourceForecastDataRequest withScalingPlanVersion(Long scalingPlanVersion) {
+        this.scalingPlanVersion = scalingPlanVersion;
+        return this;
+    }
+    @JsonProperty("ServiceNamespace")
+    public ServiceNamespaceEnum serviceNamespace;
+    public GetScalingPlanResourceForecastDataRequest withServiceNamespace(ServiceNamespaceEnum serviceNamespace) {
+        this.serviceNamespace = serviceNamespace;
+        return this;
+    }
+    @JsonSerialize(using = DateTimeSerializer.class)
+    @JsonDeserialize(using = DateTimeDeserializer.class)
+    @JsonProperty("StartTime")
+    public OffsetDateTime startTime;
+    public GetScalingPlanResourceForecastDataRequest withStartTime(OffsetDateTime startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+}

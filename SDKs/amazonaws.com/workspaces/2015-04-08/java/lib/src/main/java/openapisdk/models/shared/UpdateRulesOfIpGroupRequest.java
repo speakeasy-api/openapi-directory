@@ -1,0 +1,18 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+public class UpdateRulesOfIpGroupRequest {
+    @JsonProperty("GroupId")
+    public String groupId;
+    public UpdateRulesOfIpGroupRequest withGroupId(String groupId) {
+        this.groupId = groupId;
+        return this;
+    }
+    @JsonProperty("UserRules")
+    public IpRuleItem[] userRules;
+    public UpdateRulesOfIpGroupRequest withUserRules(IpRuleItem[] userRules) {
+        this.userRules = userRules;
+        return this;
+    }
+}

@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class DeletePayCodeRequest {
+    public DeletePayCodePathParams pathParams;
+    public DeletePayCodeRequest withPathParams(DeletePayCodePathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public DeletePayCodeHeaders headers;
+    public DeletePayCodeRequest withHeaders(DeletePayCodeHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+}

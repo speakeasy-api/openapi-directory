@@ -1,0 +1,26 @@
+package openapisdk.models.operations;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * SendEmailRequestBodyListManagementOptions
+ * An object used to specify a list or topic to which an email belongs, which will be used when a contact chooses to unsubscribe.
+**/
+public class SendEmailRequestBodyListManagementOptions {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ContactListName")
+    public String contactListName;
+    public SendEmailRequestBodyListManagementOptions withContactListName(String contactListName) {
+        this.contactListName = contactListName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("TopicName")
+    public String topicName;
+    public SendEmailRequestBodyListManagementOptions withTopicName(String topicName) {
+        this.topicName = topicName;
+        return this;
+    }
+}

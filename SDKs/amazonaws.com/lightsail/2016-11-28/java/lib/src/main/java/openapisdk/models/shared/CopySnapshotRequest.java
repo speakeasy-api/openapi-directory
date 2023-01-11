@@ -1,0 +1,48 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class CopySnapshotRequest {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("restoreDate")
+    public String restoreDate;
+    public CopySnapshotRequest withRestoreDate(String restoreDate) {
+        this.restoreDate = restoreDate;
+        return this;
+    }
+    @JsonProperty("sourceRegion")
+    public RegionNameEnum sourceRegion;
+    public CopySnapshotRequest withSourceRegion(RegionNameEnum sourceRegion) {
+        this.sourceRegion = sourceRegion;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("sourceResourceName")
+    public String sourceResourceName;
+    public CopySnapshotRequest withSourceResourceName(String sourceResourceName) {
+        this.sourceResourceName = sourceResourceName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("sourceSnapshotName")
+    public String sourceSnapshotName;
+    public CopySnapshotRequest withSourceSnapshotName(String sourceSnapshotName) {
+        this.sourceSnapshotName = sourceSnapshotName;
+        return this;
+    }
+    @JsonProperty("targetSnapshotName")
+    public String targetSnapshotName;
+    public CopySnapshotRequest withTargetSnapshotName(String targetSnapshotName) {
+        this.targetSnapshotName = targetSnapshotName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("useLatestRestorableAutoSnapshot")
+    public Boolean useLatestRestorableAutoSnapshot;
+    public CopySnapshotRequest withUseLatestRestorableAutoSnapshot(Boolean useLatestRestorableAutoSnapshot) {
+        this.useLatestRestorableAutoSnapshot = useLatestRestorableAutoSnapshot;
+        return this;
+    }
+}

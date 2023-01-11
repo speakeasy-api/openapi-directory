@@ -1,0 +1,40 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * AwsApiGatewayCanarySettings
+ * Contains information about settings for canary deployment in the stage.
+**/
+public class AwsApiGatewayCanarySettings {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("DeploymentId")
+    public String deploymentId;
+    public AwsApiGatewayCanarySettings withDeploymentId(String deploymentId) {
+        this.deploymentId = deploymentId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("PercentTraffic")
+    public Double percentTraffic;
+    public AwsApiGatewayCanarySettings withPercentTraffic(Double percentTraffic) {
+        this.percentTraffic = percentTraffic;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("StageVariableOverrides")
+    public java.util.Map<String, String> stageVariableOverrides;
+    public AwsApiGatewayCanarySettings withStageVariableOverrides(java.util.Map<String, String> stageVariableOverrides) {
+        this.stageVariableOverrides = stageVariableOverrides;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("UseStageCache")
+    public Boolean useStageCache;
+    public AwsApiGatewayCanarySettings withUseStageCache(Boolean useStageCache) {
+        this.useStageCache = useStageCache;
+        return this;
+    }
+}

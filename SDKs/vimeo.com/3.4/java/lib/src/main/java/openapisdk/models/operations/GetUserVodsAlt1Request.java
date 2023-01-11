@@ -1,0 +1,11 @@
+package openapisdk.models.operations;
+
+
+
+public class GetUserVodsAlt1Request {
+    public GetUserVodsAlt1QueryParams queryParams;
+    public GetUserVodsAlt1Request withQueryParams(GetUserVodsAlt1QueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+}

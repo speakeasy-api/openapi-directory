@@ -1,0 +1,128 @@
+package openapisdk.models.shared;
+
+import java.time.OffsetDateTime;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import openapisdk.utils.DateTimeSerializer;
+import openapisdk.utils.DateTimeDeserializer;
+
+/**
+ * Job
+ * Represents a device.
+**/
+public class Job {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("arn")
+    public String arn;
+    public Job withArn(String arn) {
+        this.arn = arn;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("counters")
+    public Counters counters;
+    public Job withCounters(Counters counters) {
+        this.counters = counters;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonSerialize(contentUsing = DateTimeSerializer.class)
+    @JsonDeserialize(contentUsing = DateTimeDeserializer.class)
+    @JsonProperty("created")
+    public OffsetDateTime created;
+    public Job withCreated(OffsetDateTime created) {
+        this.created = created;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("device")
+    public Device device;
+    public Job withDevice(Device device) {
+        this.device = device;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("deviceMinutes")
+    public DeviceMinutes deviceMinutes;
+    public Job withDeviceMinutes(DeviceMinutes deviceMinutes) {
+        this.deviceMinutes = deviceMinutes;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("instanceArn")
+    public String instanceArn;
+    public Job withInstanceArn(String instanceArn) {
+        this.instanceArn = instanceArn;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("message")
+    public String message;
+    public Job withMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("name")
+    public String name;
+    public Job withName(String name) {
+        this.name = name;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("result")
+    public ExecutionResultEnum result;
+    public Job withResult(ExecutionResultEnum result) {
+        this.result = result;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonSerialize(contentUsing = DateTimeSerializer.class)
+    @JsonDeserialize(contentUsing = DateTimeDeserializer.class)
+    @JsonProperty("started")
+    public OffsetDateTime started;
+    public Job withStarted(OffsetDateTime started) {
+        this.started = started;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("status")
+    public ExecutionStatusEnum status;
+    public Job withStatus(ExecutionStatusEnum status) {
+        this.status = status;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonSerialize(contentUsing = DateTimeSerializer.class)
+    @JsonDeserialize(contentUsing = DateTimeDeserializer.class)
+    @JsonProperty("stopped")
+    public OffsetDateTime stopped;
+    public Job withStopped(OffsetDateTime stopped) {
+        this.stopped = stopped;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("type")
+    public TestTypeEnum type;
+    public Job withType(TestTypeEnum type) {
+        this.type = type;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("videoCapture")
+    public Boolean videoCapture;
+    public Job withVideoCapture(Boolean videoCapture) {
+        this.videoCapture = videoCapture;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("videoEndpoint")
+    public String videoEndpoint;
+    public Job withVideoEndpoint(String videoEndpoint) {
+        this.videoEndpoint = videoEndpoint;
+        return this;
+    }
+}

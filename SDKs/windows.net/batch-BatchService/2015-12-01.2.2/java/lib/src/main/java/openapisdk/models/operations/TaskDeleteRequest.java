@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class TaskDeleteRequest {
+    public TaskDeletePathParams pathParams;
+    public TaskDeleteRequest withPathParams(TaskDeletePathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public TaskDeleteQueryParams queryParams;
+    public TaskDeleteRequest withQueryParams(TaskDeleteQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public TaskDeleteHeaders headers;
+    public TaskDeleteRequest withHeaders(TaskDeleteHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+}

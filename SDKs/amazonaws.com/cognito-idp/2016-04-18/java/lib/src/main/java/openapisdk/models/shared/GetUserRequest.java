@@ -1,0 +1,16 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+/**
+ * GetUserRequest
+ * Represents the request to get information about the user.
+**/
+public class GetUserRequest {
+    @JsonProperty("AccessToken")
+    public String accessToken;
+    public GetUserRequest withAccessToken(String accessToken) {
+        this.accessToken = accessToken;
+        return this;
+    }
+}

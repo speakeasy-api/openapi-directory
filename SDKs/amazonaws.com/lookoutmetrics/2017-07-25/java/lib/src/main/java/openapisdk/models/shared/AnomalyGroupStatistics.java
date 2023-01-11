@@ -1,0 +1,33 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * AnomalyGroupStatistics
+ * Aggregated statistics for a group of anomalous metrics.
+**/
+public class AnomalyGroupStatistics {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("EvaluationStartDate")
+    public String evaluationStartDate;
+    public AnomalyGroupStatistics withEvaluationStartDate(String evaluationStartDate) {
+        this.evaluationStartDate = evaluationStartDate;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ItemizedMetricStatsList")
+    public ItemizedMetricStats[] itemizedMetricStatsList;
+    public AnomalyGroupStatistics withItemizedMetricStatsList(ItemizedMetricStats[] itemizedMetricStatsList) {
+        this.itemizedMetricStatsList = itemizedMetricStatsList;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("TotalCount")
+    public Long totalCount;
+    public AnomalyGroupStatistics withTotalCount(Long totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+}

@@ -1,0 +1,41 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class CreateGroupRequest {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Description")
+    public String description;
+    public CreateGroupRequest withDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    @JsonProperty("GroupName")
+    public String groupName;
+    public CreateGroupRequest withGroupName(String groupName) {
+        this.groupName = groupName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Precedence")
+    public Long precedence;
+    public CreateGroupRequest withPrecedence(Long precedence) {
+        this.precedence = precedence;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("RoleArn")
+    public String roleArn;
+    public CreateGroupRequest withRoleArn(String roleArn) {
+        this.roleArn = roleArn;
+        return this;
+    }
+    @JsonProperty("UserPoolId")
+    public String userPoolId;
+    public CreateGroupRequest withUserPoolId(String userPoolId) {
+        this.userPoolId = userPoolId;
+        return this;
+    }
+}

@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class MonitoringProjectsGroupsMembersListRequest {
+    public MonitoringProjectsGroupsMembersListPathParams pathParams;
+    public MonitoringProjectsGroupsMembersListRequest withPathParams(MonitoringProjectsGroupsMembersListPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public MonitoringProjectsGroupsMembersListQueryParams queryParams;
+    public MonitoringProjectsGroupsMembersListRequest withQueryParams(MonitoringProjectsGroupsMembersListQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public MonitoringProjectsGroupsMembersListSecurity security;
+    public MonitoringProjectsGroupsMembersListRequest withSecurity(MonitoringProjectsGroupsMembersListSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

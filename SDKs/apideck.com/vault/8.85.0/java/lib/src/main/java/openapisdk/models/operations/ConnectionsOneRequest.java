@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class ConnectionsOneRequest {
+    public ConnectionsOnePathParams pathParams;
+    public ConnectionsOneRequest withPathParams(ConnectionsOnePathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public ConnectionsOneHeaders headers;
+    public ConnectionsOneRequest withHeaders(ConnectionsOneHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+    public ConnectionsOneSecurity security;
+    public ConnectionsOneRequest withSecurity(ConnectionsOneSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

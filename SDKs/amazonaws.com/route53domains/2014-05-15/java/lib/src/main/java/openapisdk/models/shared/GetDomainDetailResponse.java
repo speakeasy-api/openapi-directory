@@ -1,0 +1,165 @@
+package openapisdk.models.shared;
+
+import java.time.OffsetDateTime;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import openapisdk.utils.DateTimeSerializer;
+import openapisdk.utils.DateTimeDeserializer;
+
+/**
+ * GetDomainDetailResponse
+ * The GetDomainDetail response includes the following elements.
+**/
+public class GetDomainDetailResponse {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("AbuseContactEmail")
+    public String abuseContactEmail;
+    public GetDomainDetailResponse withAbuseContactEmail(String abuseContactEmail) {
+        this.abuseContactEmail = abuseContactEmail;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("AbuseContactPhone")
+    public String abuseContactPhone;
+    public GetDomainDetailResponse withAbuseContactPhone(String abuseContactPhone) {
+        this.abuseContactPhone = abuseContactPhone;
+        return this;
+    }
+    @JsonProperty("AdminContact")
+    public ContactDetail adminContact;
+    public GetDomainDetailResponse withAdminContact(ContactDetail adminContact) {
+        this.adminContact = adminContact;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("AdminPrivacy")
+    public Boolean adminPrivacy;
+    public GetDomainDetailResponse withAdminPrivacy(Boolean adminPrivacy) {
+        this.adminPrivacy = adminPrivacy;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("AutoRenew")
+    public Boolean autoRenew;
+    public GetDomainDetailResponse withAutoRenew(Boolean autoRenew) {
+        this.autoRenew = autoRenew;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonSerialize(contentUsing = DateTimeSerializer.class)
+    @JsonDeserialize(contentUsing = DateTimeDeserializer.class)
+    @JsonProperty("CreationDate")
+    public OffsetDateTime creationDate;
+    public GetDomainDetailResponse withCreationDate(OffsetDateTime creationDate) {
+        this.creationDate = creationDate;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("DnsSec")
+    public String dnsSec;
+    public GetDomainDetailResponse withDnsSec(String dnsSec) {
+        this.dnsSec = dnsSec;
+        return this;
+    }
+    @JsonProperty("DomainName")
+    public String domainName;
+    public GetDomainDetailResponse withDomainName(String domainName) {
+        this.domainName = domainName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonSerialize(contentUsing = DateTimeSerializer.class)
+    @JsonDeserialize(contentUsing = DateTimeDeserializer.class)
+    @JsonProperty("ExpirationDate")
+    public OffsetDateTime expirationDate;
+    public GetDomainDetailResponse withExpirationDate(OffsetDateTime expirationDate) {
+        this.expirationDate = expirationDate;
+        return this;
+    }
+    @JsonProperty("Nameservers")
+    public Nameserver[] nameservers;
+    public GetDomainDetailResponse withNameservers(Nameserver[] nameservers) {
+        this.nameservers = nameservers;
+        return this;
+    }
+    @JsonProperty("RegistrantContact")
+    public ContactDetail registrantContact;
+    public GetDomainDetailResponse withRegistrantContact(ContactDetail registrantContact) {
+        this.registrantContact = registrantContact;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("RegistrantPrivacy")
+    public Boolean registrantPrivacy;
+    public GetDomainDetailResponse withRegistrantPrivacy(Boolean registrantPrivacy) {
+        this.registrantPrivacy = registrantPrivacy;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("RegistrarName")
+    public String registrarName;
+    public GetDomainDetailResponse withRegistrarName(String registrarName) {
+        this.registrarName = registrarName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("RegistrarUrl")
+    public String registrarUrl;
+    public GetDomainDetailResponse withRegistrarUrl(String registrarUrl) {
+        this.registrarUrl = registrarUrl;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("RegistryDomainId")
+    public String registryDomainId;
+    public GetDomainDetailResponse withRegistryDomainId(String registryDomainId) {
+        this.registryDomainId = registryDomainId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Reseller")
+    public String reseller;
+    public GetDomainDetailResponse withReseller(String reseller) {
+        this.reseller = reseller;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("StatusList")
+    public String[] statusList;
+    public GetDomainDetailResponse withStatusList(String[] statusList) {
+        this.statusList = statusList;
+        return this;
+    }
+    @JsonProperty("TechContact")
+    public ContactDetail techContact;
+    public GetDomainDetailResponse withTechContact(ContactDetail techContact) {
+        this.techContact = techContact;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("TechPrivacy")
+    public Boolean techPrivacy;
+    public GetDomainDetailResponse withTechPrivacy(Boolean techPrivacy) {
+        this.techPrivacy = techPrivacy;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonSerialize(contentUsing = DateTimeSerializer.class)
+    @JsonDeserialize(contentUsing = DateTimeDeserializer.class)
+    @JsonProperty("UpdatedDate")
+    public OffsetDateTime updatedDate;
+    public GetDomainDetailResponse withUpdatedDate(OffsetDateTime updatedDate) {
+        this.updatedDate = updatedDate;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("WhoIsServer")
+    public String whoIsServer;
+    public GetDomainDetailResponse withWhoIsServer(String whoIsServer) {
+        this.whoIsServer = whoIsServer;
+        return this;
+    }
+}

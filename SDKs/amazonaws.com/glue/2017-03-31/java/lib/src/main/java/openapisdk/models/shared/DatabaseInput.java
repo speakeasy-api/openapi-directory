@@ -1,0 +1,53 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * DatabaseInput
+ * The structure used to create or update a database.
+**/
+public class DatabaseInput {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("CreateTableDefaultPermissions")
+    public PrincipalPermissions[] createTableDefaultPermissions;
+    public DatabaseInput withCreateTableDefaultPermissions(PrincipalPermissions[] createTableDefaultPermissions) {
+        this.createTableDefaultPermissions = createTableDefaultPermissions;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Description")
+    public String description;
+    public DatabaseInput withDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("LocationUri")
+    public String locationUri;
+    public DatabaseInput withLocationUri(String locationUri) {
+        this.locationUri = locationUri;
+        return this;
+    }
+    @JsonProperty("Name")
+    public String name;
+    public DatabaseInput withName(String name) {
+        this.name = name;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Parameters")
+    public java.util.Map<String, String> parameters;
+    public DatabaseInput withParameters(java.util.Map<String, String> parameters) {
+        this.parameters = parameters;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("TargetDatabase")
+    public DatabaseIdentifier targetDatabase;
+    public DatabaseInput withTargetDatabase(DatabaseIdentifier targetDatabase) {
+        this.targetDatabase = targetDatabase;
+        return this;
+    }
+}

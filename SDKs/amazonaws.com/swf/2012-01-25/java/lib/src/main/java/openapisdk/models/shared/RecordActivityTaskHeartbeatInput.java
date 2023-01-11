@@ -1,0 +1,21 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class RecordActivityTaskHeartbeatInput {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("details")
+    public String details;
+    public RecordActivityTaskHeartbeatInput withDetails(String details) {
+        this.details = details;
+        return this;
+    }
+    @JsonProperty("taskToken")
+    public String taskToken;
+    public RecordActivityTaskHeartbeatInput withTaskToken(String taskToken) {
+        this.taskToken = taskToken;
+        return this;
+    }
+}

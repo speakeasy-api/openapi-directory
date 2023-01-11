@@ -1,0 +1,30 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class Area120tablesTablesRowsPatchSecurity {
+    @SpeakeasyMetadata("security:option=true")
+    public Area120tablesTablesRowsPatchSecurityOption1 option1;
+    public Area120tablesTablesRowsPatchSecurity withOption1(Area120tablesTablesRowsPatchSecurityOption1 option1) {
+        this.option1 = option1;
+        return this;
+    }
+    @SpeakeasyMetadata("security:option=true")
+    public Area120tablesTablesRowsPatchSecurityOption2 option2;
+    public Area120tablesTablesRowsPatchSecurity withOption2(Area120tablesTablesRowsPatchSecurityOption2 option2) {
+        this.option2 = option2;
+        return this;
+    }
+    @SpeakeasyMetadata("security:option=true")
+    public Area120tablesTablesRowsPatchSecurityOption3 option3;
+    public Area120tablesTablesRowsPatchSecurity withOption3(Area120tablesTablesRowsPatchSecurityOption3 option3) {
+        this.option3 = option3;
+        return this;
+    }
+    @SpeakeasyMetadata("security:option=true")
+    public Area120tablesTablesRowsPatchSecurityOption4 option4;
+    public Area120tablesTablesRowsPatchSecurity withOption4(Area120tablesTablesRowsPatchSecurityOption4 option4) {
+        this.option4 = option4;
+        return this;
+    }
+}

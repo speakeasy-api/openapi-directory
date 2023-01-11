@@ -1,0 +1,29 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class ListAliasesResponse {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Aliases")
+    public AliasListEntry[] aliases;
+    public ListAliasesResponse withAliases(AliasListEntry[] aliases) {
+        this.aliases = aliases;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("NextMarker")
+    public String nextMarker;
+    public ListAliasesResponse withNextMarker(String nextMarker) {
+        this.nextMarker = nextMarker;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Truncated")
+    public Boolean truncated;
+    public ListAliasesResponse withTruncated(Boolean truncated) {
+        this.truncated = truncated;
+        return this;
+    }
+}

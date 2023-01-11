@@ -1,0 +1,29 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class FormFieldOptionGroup {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("id")
+    public String id;
+    public FormFieldOptionGroup withId(String id) {
+        this.id = id;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("label")
+    public String label;
+    public FormFieldOptionGroup withLabel(String label) {
+        this.label = label;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("options")
+    public SimpleFormFieldOption[] options;
+    public FormFieldOptionGroup withOptions(SimpleFormFieldOption[] options) {
+        this.options = options;
+        return this;
+    }
+}

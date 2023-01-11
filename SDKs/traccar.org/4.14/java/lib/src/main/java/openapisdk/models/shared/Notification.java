@@ -1,0 +1,64 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class Notification {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("always")
+    public Boolean always;
+    public Notification withAlways(Boolean always) {
+        this.always = always;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("attributes")
+    public java.util.Map<String, Object> attributes;
+    public Notification withAttributes(java.util.Map<String, Object> attributes) {
+        this.attributes = attributes;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("calendarId")
+    public Long calendarId;
+    public Notification withCalendarId(Long calendarId) {
+        this.calendarId = calendarId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("id")
+    public Long id;
+    public Notification withId(Long id) {
+        this.id = id;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("mail")
+    public Boolean mail;
+    public Notification withMail(Boolean mail) {
+        this.mail = mail;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("sms")
+    public Boolean sms;
+    public Notification withSms(Boolean sms) {
+        this.sms = sms;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("type")
+    public String type;
+    public Notification withType(String type) {
+        this.type = type;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("web")
+    public Boolean web;
+    public Notification withWeb(Boolean web) {
+        this.web = web;
+        return this;
+    }
+}

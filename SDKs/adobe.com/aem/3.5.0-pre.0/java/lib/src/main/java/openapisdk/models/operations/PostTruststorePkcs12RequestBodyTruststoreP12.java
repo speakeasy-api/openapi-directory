@@ -1,0 +1,18 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class PostTruststorePkcs12RequestBodyTruststoreP12 {
+    @SpeakeasyMetadata("multipartForm:content")
+    public byte[] content;
+    public PostTruststorePkcs12RequestBodyTruststoreP12 withContent(byte[] content) {
+        this.content = content;
+        return this;
+    }
+    @SpeakeasyMetadata("multipartForm:name=truststore.p12")
+    public String truststoreP12;
+    public PostTruststorePkcs12RequestBodyTruststoreP12 withTruststoreP12(String truststoreP12) {
+        this.truststoreP12 = truststoreP12;
+        return this;
+    }
+}

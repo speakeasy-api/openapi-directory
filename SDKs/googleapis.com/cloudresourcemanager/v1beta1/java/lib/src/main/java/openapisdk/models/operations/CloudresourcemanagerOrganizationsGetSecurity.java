@@ -1,0 +1,18 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class CloudresourcemanagerOrganizationsGetSecurity {
+    @SpeakeasyMetadata("security:option=true")
+    public CloudresourcemanagerOrganizationsGetSecurityOption1 option1;
+    public CloudresourcemanagerOrganizationsGetSecurity withOption1(CloudresourcemanagerOrganizationsGetSecurityOption1 option1) {
+        this.option1 = option1;
+        return this;
+    }
+    @SpeakeasyMetadata("security:option=true")
+    public CloudresourcemanagerOrganizationsGetSecurityOption2 option2;
+    public CloudresourcemanagerOrganizationsGetSecurity withOption2(CloudresourcemanagerOrganizationsGetSecurityOption2 option2) {
+        this.option2 = option2;
+        return this;
+    }
+}

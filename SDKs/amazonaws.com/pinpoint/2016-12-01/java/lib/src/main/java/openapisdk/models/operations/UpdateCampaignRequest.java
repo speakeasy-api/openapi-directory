@@ -1,0 +1,22 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class UpdateCampaignRequest {
+    public UpdateCampaignPathParams pathParams;
+    public UpdateCampaignRequest withPathParams(UpdateCampaignPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public UpdateCampaignHeaders headers;
+    public UpdateCampaignRequest withHeaders(UpdateCampaignHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public UpdateCampaignRequestBody request;
+    public UpdateCampaignRequest withRequest(UpdateCampaignRequestBody request) {
+        this.request = request;
+        return this;
+    }
+}

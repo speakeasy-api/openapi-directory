@@ -1,0 +1,36 @@
+package openapisdk.models.operations;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class UpdateOrganizationAdaptivePolicyAclRequestBody {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("description")
+    public String description;
+    public UpdateOrganizationAdaptivePolicyAclRequestBody withDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ipVersion")
+    public UpdateOrganizationAdaptivePolicyAclRequestBodyIpVersionEnum ipVersion;
+    public UpdateOrganizationAdaptivePolicyAclRequestBody withIpVersion(UpdateOrganizationAdaptivePolicyAclRequestBodyIpVersionEnum ipVersion) {
+        this.ipVersion = ipVersion;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("name")
+    public String name;
+    public UpdateOrganizationAdaptivePolicyAclRequestBody withName(String name) {
+        this.name = name;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("rules")
+    public UpdateOrganizationAdaptivePolicyAclRequestBodyRules[] rules;
+    public UpdateOrganizationAdaptivePolicyAclRequestBody withRules(UpdateOrganizationAdaptivePolicyAclRequestBodyRules[] rules) {
+        this.rules = rules;
+        return this;
+    }
+}

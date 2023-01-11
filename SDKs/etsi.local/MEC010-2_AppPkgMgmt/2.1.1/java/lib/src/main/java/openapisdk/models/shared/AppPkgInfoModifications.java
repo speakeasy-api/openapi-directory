@@ -1,0 +1,16 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+/**
+ * AppPkgInfoModifications
+ * 'The data type represents the operational state for an application package resource'
+**/
+public class AppPkgInfoModifications {
+    @JsonProperty("operationState")
+    public AppPkgInfoModificationsOperationStateEnum operationState;
+    public AppPkgInfoModifications withOperationState(AppPkgInfoModificationsOperationStateEnum operationState) {
+        this.operationState = operationState;
+        return this;
+    }
+}

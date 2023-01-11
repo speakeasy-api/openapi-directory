@@ -1,0 +1,39 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * DelimitedTextImportOptions
+ *  An object that contains the options relating to parsing delimited text as part of an import request. 
+**/
+public class DelimitedTextImportOptions {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("dataCharacterEncoding")
+    public ImportDataCharacterEncodingEnum dataCharacterEncoding;
+    public DelimitedTextImportOptions withDataCharacterEncoding(ImportDataCharacterEncodingEnum dataCharacterEncoding) {
+        this.dataCharacterEncoding = dataCharacterEncoding;
+        return this;
+    }
+    @JsonProperty("delimiter")
+    public String delimiter;
+    public DelimitedTextImportOptions withDelimiter(String delimiter) {
+        this.delimiter = delimiter;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("hasHeaderRow")
+    public Boolean hasHeaderRow;
+    public DelimitedTextImportOptions withHasHeaderRow(Boolean hasHeaderRow) {
+        this.hasHeaderRow = hasHeaderRow;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ignoreEmptyRows")
+    public Boolean ignoreEmptyRows;
+    public DelimitedTextImportOptions withIgnoreEmptyRows(Boolean ignoreEmptyRows) {
+        this.ignoreEmptyRows = ignoreEmptyRows;
+        return this;
+    }
+}

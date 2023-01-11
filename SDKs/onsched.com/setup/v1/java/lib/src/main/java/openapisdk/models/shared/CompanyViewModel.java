@@ -1,0 +1,197 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class CompanyViewModel {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("addressLine1")
+    public String addressLine1;
+    public CompanyViewModel withAddressLine1(String addressLine1) {
+        this.addressLine1 = addressLine1;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("addressLine2")
+    public String addressLine2;
+    public CompanyViewModel withAddressLine2(String addressLine2) {
+        this.addressLine2 = addressLine2;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("bookingWebhookUrl")
+    public String bookingWebhookUrl;
+    public CompanyViewModel withBookingWebhookUrl(String bookingWebhookUrl) {
+        this.bookingWebhookUrl = bookingWebhookUrl;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("city")
+    public String city;
+    public CompanyViewModel withCity(String city) {
+        this.city = city;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("clientId")
+    public String clientId;
+    public CompanyViewModel withClientId(String clientId) {
+        this.clientId = clientId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("clientSecret")
+    public String clientSecret;
+    public CompanyViewModel withClientSecret(String clientSecret) {
+        this.clientSecret = clientSecret;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("country")
+    public String country;
+    public CompanyViewModel withCountry(String country) {
+        this.country = country;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("customerWebhookUrl")
+    public String customerWebhookUrl;
+    public CompanyViewModel withCustomerWebhookUrl(String customerWebhookUrl) {
+        this.customerWebhookUrl = customerWebhookUrl;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("deletedStatus")
+    public Boolean deletedStatus;
+    public CompanyViewModel withDeletedStatus(Boolean deletedStatus) {
+        this.deletedStatus = deletedStatus;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("deletedTime")
+    public String deletedTime;
+    public CompanyViewModel withDeletedTime(String deletedTime) {
+        this.deletedTime = deletedTime;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("disableEmailAndSmsNotifications")
+    public Boolean disableEmailAndSmsNotifications;
+    public CompanyViewModel withDisableEmailAndSmsNotifications(Boolean disableEmailAndSmsNotifications) {
+        this.disableEmailAndSmsNotifications = disableEmailAndSmsNotifications;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("email")
+    public String email;
+    public CompanyViewModel withEmail(String email) {
+        this.email = email;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("fax")
+    public String fax;
+    public CompanyViewModel withFax(String fax) {
+        this.fax = fax;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("id")
+    public String id;
+    public CompanyViewModel withId(String id) {
+        this.id = id;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("name")
+    public String name;
+    public CompanyViewModel withName(String name) {
+        this.name = name;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("notificationFromEmailAddress")
+    public String notificationFromEmailAddress;
+    public CompanyViewModel withNotificationFromEmailAddress(String notificationFromEmailAddress) {
+        this.notificationFromEmailAddress = notificationFromEmailAddress;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("notificationFromName")
+    public String notificationFromName;
+    public CompanyViewModel withNotificationFromName(String notificationFromName) {
+        this.notificationFromName = notificationFromName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("objectName")
+    public String objectName;
+    public CompanyViewModel withObjectName(String objectName) {
+        this.objectName = objectName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("phone")
+    public String phone;
+    public CompanyViewModel withPhone(String phone) {
+        this.phone = phone;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("postalCode")
+    public String postalCode;
+    public CompanyViewModel withPostalCode(String postalCode) {
+        this.postalCode = postalCode;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("registrationDate")
+    public String registrationDate;
+    public CompanyViewModel withRegistrationDate(String registrationDate) {
+        this.registrationDate = registrationDate;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("registrationEmail")
+    public String registrationEmail;
+    public CompanyViewModel withRegistrationEmail(String registrationEmail) {
+        this.registrationEmail = registrationEmail;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("reminderWebhookUrl")
+    public String reminderWebhookUrl;
+    public CompanyViewModel withReminderWebhookUrl(String reminderWebhookUrl) {
+        this.reminderWebhookUrl = reminderWebhookUrl;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("resourceWebhookUrl")
+    public String resourceWebhookUrl;
+    public CompanyViewModel withResourceWebhookUrl(String resourceWebhookUrl) {
+        this.resourceWebhookUrl = resourceWebhookUrl;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("state")
+    public String state;
+    public CompanyViewModel withState(String state) {
+        this.state = state;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("timezoneId")
+    public String timezoneId;
+    public CompanyViewModel withTimezoneId(String timezoneId) {
+        this.timezoneId = timezoneId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("website")
+    public String website;
+    public CompanyViewModel withWebsite(String website) {
+        this.website = website;
+        return this;
+    }
+}

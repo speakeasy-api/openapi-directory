@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class DeletePortalRequest {
+    public DeletePortalPathParams pathParams;
+    public DeletePortalRequest withPathParams(DeletePortalPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public DeletePortalQueryParams queryParams;
+    public DeletePortalRequest withQueryParams(DeletePortalQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public DeletePortalHeaders headers;
+    public DeletePortalRequest withHeaders(DeletePortalHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+}

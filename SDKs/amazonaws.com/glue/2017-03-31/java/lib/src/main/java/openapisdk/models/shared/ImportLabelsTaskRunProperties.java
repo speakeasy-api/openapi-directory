@@ -1,0 +1,26 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * ImportLabelsTaskRunProperties
+ * Specifies configuration properties for an importing labels task run.
+**/
+public class ImportLabelsTaskRunProperties {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("InputS3Path")
+    public String inputS3Path;
+    public ImportLabelsTaskRunProperties withInputS3Path(String inputS3Path) {
+        this.inputS3Path = inputS3Path;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Replace")
+    public Boolean replace;
+    public ImportLabelsTaskRunProperties withReplace(Boolean replace) {
+        this.replace = replace;
+        return this;
+    }
+}

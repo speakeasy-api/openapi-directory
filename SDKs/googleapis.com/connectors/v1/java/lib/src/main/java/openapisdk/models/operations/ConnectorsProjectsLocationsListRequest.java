@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class ConnectorsProjectsLocationsListRequest {
+    public ConnectorsProjectsLocationsListPathParams pathParams;
+    public ConnectorsProjectsLocationsListRequest withPathParams(ConnectorsProjectsLocationsListPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public ConnectorsProjectsLocationsListQueryParams queryParams;
+    public ConnectorsProjectsLocationsListRequest withQueryParams(ConnectorsProjectsLocationsListQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public ConnectorsProjectsLocationsListSecurity security;
+    public ConnectorsProjectsLocationsListRequest withSecurity(ConnectorsProjectsLocationsListSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

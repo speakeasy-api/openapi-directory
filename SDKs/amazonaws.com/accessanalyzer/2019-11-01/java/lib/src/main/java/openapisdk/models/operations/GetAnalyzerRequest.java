@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class GetAnalyzerRequest {
+    public GetAnalyzerPathParams pathParams;
+    public GetAnalyzerRequest withPathParams(GetAnalyzerPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public GetAnalyzerHeaders headers;
+    public GetAnalyzerRequest withHeaders(GetAnalyzerHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+}

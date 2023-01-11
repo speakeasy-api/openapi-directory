@@ -1,0 +1,105 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class UpdateClusterRequest {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ACLName")
+    public String aclName;
+    public UpdateClusterRequest withAclName(String aclName) {
+        this.aclName = aclName;
+        return this;
+    }
+    @JsonProperty("ClusterName")
+    public String clusterName;
+    public UpdateClusterRequest withClusterName(String clusterName) {
+        this.clusterName = clusterName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Description")
+    public String description;
+    public UpdateClusterRequest withDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("EngineVersion")
+    public String engineVersion;
+    public UpdateClusterRequest withEngineVersion(String engineVersion) {
+        this.engineVersion = engineVersion;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("MaintenanceWindow")
+    public String maintenanceWindow;
+    public UpdateClusterRequest withMaintenanceWindow(String maintenanceWindow) {
+        this.maintenanceWindow = maintenanceWindow;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("NodeType")
+    public String nodeType;
+    public UpdateClusterRequest withNodeType(String nodeType) {
+        this.nodeType = nodeType;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ParameterGroupName")
+    public String parameterGroupName;
+    public UpdateClusterRequest withParameterGroupName(String parameterGroupName) {
+        this.parameterGroupName = parameterGroupName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ReplicaConfiguration")
+    public ReplicaConfigurationRequest replicaConfiguration;
+    public UpdateClusterRequest withReplicaConfiguration(ReplicaConfigurationRequest replicaConfiguration) {
+        this.replicaConfiguration = replicaConfiguration;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("SecurityGroupIds")
+    public String[] securityGroupIds;
+    public UpdateClusterRequest withSecurityGroupIds(String[] securityGroupIds) {
+        this.securityGroupIds = securityGroupIds;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ShardConfiguration")
+    public ShardConfigurationRequest shardConfiguration;
+    public UpdateClusterRequest withShardConfiguration(ShardConfigurationRequest shardConfiguration) {
+        this.shardConfiguration = shardConfiguration;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("SnapshotRetentionLimit")
+    public Long snapshotRetentionLimit;
+    public UpdateClusterRequest withSnapshotRetentionLimit(Long snapshotRetentionLimit) {
+        this.snapshotRetentionLimit = snapshotRetentionLimit;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("SnapshotWindow")
+    public String snapshotWindow;
+    public UpdateClusterRequest withSnapshotWindow(String snapshotWindow) {
+        this.snapshotWindow = snapshotWindow;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("SnsTopicArn")
+    public String snsTopicArn;
+    public UpdateClusterRequest withSnsTopicArn(String snsTopicArn) {
+        this.snsTopicArn = snsTopicArn;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("SnsTopicStatus")
+    public String snsTopicStatus;
+    public UpdateClusterRequest withSnsTopicStatus(String snsTopicStatus) {
+        this.snsTopicStatus = snsTopicStatus;
+        return this;
+    }
+}

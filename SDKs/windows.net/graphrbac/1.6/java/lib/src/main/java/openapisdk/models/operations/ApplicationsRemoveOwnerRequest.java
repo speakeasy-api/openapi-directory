@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class ApplicationsRemoveOwnerRequest {
+    public ApplicationsRemoveOwnerPathParams pathParams;
+    public ApplicationsRemoveOwnerRequest withPathParams(ApplicationsRemoveOwnerPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public ApplicationsRemoveOwnerQueryParams queryParams;
+    public ApplicationsRemoveOwnerRequest withQueryParams(ApplicationsRemoveOwnerQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+}

@@ -1,0 +1,96 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * UpsSettingsResponseBody
+ * UPS account settings
+**/
+public class UpsSettingsResponseBody {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("account_postal_code")
+    public String accountPostalCode;
+    public UpsSettingsResponseBody withAccountPostalCode(String accountPostalCode) {
+        this.accountPostalCode = accountPostalCode;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("invoice")
+    public UpsInvoice invoice;
+    public UpsSettingsResponseBody withInvoice(UpsInvoice invoice) {
+        this.invoice = invoice;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("is_primary_account")
+    public Boolean isPrimaryAccount;
+    public UpsSettingsResponseBody withIsPrimaryAccount(Boolean isPrimaryAccount) {
+        this.isPrimaryAccount = isPrimaryAccount;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("mail_innovations_cost_center")
+    public String mailInnovationsCostCenter;
+    public UpsSettingsResponseBody withMailInnovationsCostCenter(String mailInnovationsCostCenter) {
+        this.mailInnovationsCostCenter = mailInnovationsCostCenter;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("mail_innovations_endorsement")
+    public AncillaryServiceEndorsementEnum mailInnovationsEndorsement;
+    public UpsSettingsResponseBody withMailInnovationsEndorsement(AncillaryServiceEndorsementEnum mailInnovationsEndorsement) {
+        this.mailInnovationsEndorsement = mailInnovationsEndorsement;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("nickname")
+    public String nickname;
+    public UpsSettingsResponseBody withNickname(String nickname) {
+        this.nickname = nickname;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("pickup_type")
+    public UpsPickupTypeEnum pickupType;
+    public UpsSettingsResponseBody withPickupType(UpsPickupTypeEnum pickupType) {
+        this.pickupType = pickupType;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("use_carbon_neutral_shipping_program")
+    public Boolean useCarbonNeutralShippingProgram;
+    public UpsSettingsResponseBody withUseCarbonNeutralShippingProgram(Boolean useCarbonNeutralShippingProgram) {
+        this.useCarbonNeutralShippingProgram = useCarbonNeutralShippingProgram;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("use_consolidation_services")
+    public Boolean useConsolidationServices;
+    public UpsSettingsResponseBody withUseConsolidationServices(Boolean useConsolidationServices) {
+        this.useConsolidationServices = useConsolidationServices;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("use_ground_freight_pricing")
+    public Boolean useGroundFreightPricing;
+    public UpsSettingsResponseBody withUseGroundFreightPricing(Boolean useGroundFreightPricing) {
+        this.useGroundFreightPricing = useGroundFreightPricing;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("use_negotiated_rates")
+    public Boolean useNegotiatedRates;
+    public UpsSettingsResponseBody withUseNegotiatedRates(Boolean useNegotiatedRates) {
+        this.useNegotiatedRates = useNegotiatedRates;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("use_order_number_on_mail_innovations_labels")
+    public Boolean useOrderNumberOnMailInnovationsLabels;
+    public UpsSettingsResponseBody withUseOrderNumberOnMailInnovationsLabels(Boolean useOrderNumberOnMailInnovationsLabels) {
+        this.useOrderNumberOnMailInnovationsLabels = useOrderNumberOnMailInnovationsLabels;
+        return this;
+    }
+}

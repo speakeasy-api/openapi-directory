@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class GetPublicationVariantAssociationsRequest {
+    public GetPublicationVariantAssociationsPathParams pathParams;
+    public GetPublicationVariantAssociationsRequest withPathParams(GetPublicationVariantAssociationsPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public GetPublicationVariantAssociationsQueryParams queryParams;
+    public GetPublicationVariantAssociationsRequest withQueryParams(GetPublicationVariantAssociationsQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+}

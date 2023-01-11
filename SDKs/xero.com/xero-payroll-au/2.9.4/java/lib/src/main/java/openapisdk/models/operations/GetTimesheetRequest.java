@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class GetTimesheetRequest {
+    public GetTimesheetPathParams pathParams;
+    public GetTimesheetRequest withPathParams(GetTimesheetPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public GetTimesheetHeaders headers;
+    public GetTimesheetRequest withHeaders(GetTimesheetHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+    public GetTimesheetSecurity security;
+    public GetTimesheetRequest withSecurity(GetTimesheetSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

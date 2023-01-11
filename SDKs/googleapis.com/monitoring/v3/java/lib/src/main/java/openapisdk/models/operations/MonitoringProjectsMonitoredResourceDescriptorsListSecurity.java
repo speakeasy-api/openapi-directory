@@ -1,0 +1,30 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class MonitoringProjectsMonitoredResourceDescriptorsListSecurity {
+    @SpeakeasyMetadata("security:option=true")
+    public MonitoringProjectsMonitoredResourceDescriptorsListSecurityOption1 option1;
+    public MonitoringProjectsMonitoredResourceDescriptorsListSecurity withOption1(MonitoringProjectsMonitoredResourceDescriptorsListSecurityOption1 option1) {
+        this.option1 = option1;
+        return this;
+    }
+    @SpeakeasyMetadata("security:option=true")
+    public MonitoringProjectsMonitoredResourceDescriptorsListSecurityOption2 option2;
+    public MonitoringProjectsMonitoredResourceDescriptorsListSecurity withOption2(MonitoringProjectsMonitoredResourceDescriptorsListSecurityOption2 option2) {
+        this.option2 = option2;
+        return this;
+    }
+    @SpeakeasyMetadata("security:option=true")
+    public MonitoringProjectsMonitoredResourceDescriptorsListSecurityOption3 option3;
+    public MonitoringProjectsMonitoredResourceDescriptorsListSecurity withOption3(MonitoringProjectsMonitoredResourceDescriptorsListSecurityOption3 option3) {
+        this.option3 = option3;
+        return this;
+    }
+    @SpeakeasyMetadata("security:option=true")
+    public MonitoringProjectsMonitoredResourceDescriptorsListSecurityOption4 option4;
+    public MonitoringProjectsMonitoredResourceDescriptorsListSecurity withOption4(MonitoringProjectsMonitoredResourceDescriptorsListSecurityOption4 option4) {
+        this.option4 = option4;
+        return this;
+    }
+}

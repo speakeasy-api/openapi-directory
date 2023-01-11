@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class PutRtiTransactionTagRequest {
+    public PutRtiTransactionTagPathParams pathParams;
+    public PutRtiTransactionTagRequest withPathParams(PutRtiTransactionTagPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public PutRtiTransactionTagHeaders headers;
+    public PutRtiTransactionTagRequest withHeaders(PutRtiTransactionTagHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+}

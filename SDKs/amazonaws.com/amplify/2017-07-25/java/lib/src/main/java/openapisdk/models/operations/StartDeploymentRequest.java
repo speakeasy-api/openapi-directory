@@ -1,0 +1,22 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class StartDeploymentRequest {
+    public StartDeploymentPathParams pathParams;
+    public StartDeploymentRequest withPathParams(StartDeploymentPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public StartDeploymentHeaders headers;
+    public StartDeploymentRequest withHeaders(StartDeploymentHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public StartDeploymentRequestBody request;
+    public StartDeploymentRequest withRequest(StartDeploymentRequestBody request) {
+        this.request = request;
+        return this;
+    }
+}

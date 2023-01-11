@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class DescribeExecutionRequest {
+    public DescribeExecutionPathParams pathParams;
+    public DescribeExecutionRequest withPathParams(DescribeExecutionPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public DescribeExecutionHeaders headers;
+    public DescribeExecutionRequest withHeaders(DescribeExecutionHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+}

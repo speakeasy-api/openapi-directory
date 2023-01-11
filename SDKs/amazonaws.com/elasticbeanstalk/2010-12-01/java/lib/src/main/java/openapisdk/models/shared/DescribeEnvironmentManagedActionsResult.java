@@ -1,0 +1,15 @@
+package openapisdk.models.shared;
+
+
+
+/**
+ * DescribeEnvironmentManagedActionsResult
+ * The result message containing a list of managed actions.
+**/
+public class DescribeEnvironmentManagedActionsResult {
+    public ManagedAction[] managedActions;
+    public DescribeEnvironmentManagedActionsResult withManagedActions(ManagedAction[] managedActions) {
+        this.managedActions = managedActions;
+        return this;
+    }
+}

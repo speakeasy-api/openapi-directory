@@ -1,0 +1,18 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+public class UpdateBatchPredictionInput {
+    @JsonProperty("BatchPredictionId")
+    public String batchPredictionId;
+    public UpdateBatchPredictionInput withBatchPredictionId(String batchPredictionId) {
+        this.batchPredictionId = batchPredictionId;
+        return this;
+    }
+    @JsonProperty("BatchPredictionName")
+    public String batchPredictionName;
+    public UpdateBatchPredictionInput withBatchPredictionName(String batchPredictionName) {
+        this.batchPredictionName = batchPredictionName;
+        return this;
+    }
+}

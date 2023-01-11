@@ -1,0 +1,27 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class UpdateGatewayRouteRequest {
+    public UpdateGatewayRoutePathParams pathParams;
+    public UpdateGatewayRouteRequest withPathParams(UpdateGatewayRoutePathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public UpdateGatewayRouteQueryParams queryParams;
+    public UpdateGatewayRouteRequest withQueryParams(UpdateGatewayRouteQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public UpdateGatewayRouteHeaders headers;
+    public UpdateGatewayRouteRequest withHeaders(UpdateGatewayRouteHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public UpdateGatewayRouteRequestBody request;
+    public UpdateGatewayRouteRequest withRequest(UpdateGatewayRouteRequestBody request) {
+        this.request = request;
+        return this;
+    }
+}

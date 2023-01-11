@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class GetInvalidation20200531Request {
+    public GetInvalidation20200531PathParams pathParams;
+    public GetInvalidation20200531Request withPathParams(GetInvalidation20200531PathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public GetInvalidation20200531Headers headers;
+    public GetInvalidation20200531Request withHeaders(GetInvalidation20200531Headers headers) {
+        this.headers = headers;
+        return this;
+    }
+}

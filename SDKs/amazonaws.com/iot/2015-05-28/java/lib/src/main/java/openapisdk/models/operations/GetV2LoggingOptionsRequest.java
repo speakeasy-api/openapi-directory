@@ -1,0 +1,11 @@
+package openapisdk.models.operations;
+
+
+
+public class GetV2LoggingOptionsRequest {
+    public GetV2LoggingOptionsHeaders headers;
+    public GetV2LoggingOptionsRequest withHeaders(GetV2LoggingOptionsHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+}

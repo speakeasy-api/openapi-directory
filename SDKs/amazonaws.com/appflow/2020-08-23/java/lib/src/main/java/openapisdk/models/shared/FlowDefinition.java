@@ -1,0 +1,112 @@
+package openapisdk.models.shared;
+
+import java.time.OffsetDateTime;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import openapisdk.utils.DateTimeSerializer;
+import openapisdk.utils.DateTimeDeserializer;
+
+/**
+ * FlowDefinition
+ *  The properties of the flow, such as its source, destination, trigger type, and so on. 
+**/
+public class FlowDefinition {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonSerialize(contentUsing = DateTimeSerializer.class)
+    @JsonDeserialize(contentUsing = DateTimeDeserializer.class)
+    @JsonProperty("createdAt")
+    public OffsetDateTime createdAt;
+    public FlowDefinition withCreatedAt(OffsetDateTime createdAt) {
+        this.createdAt = createdAt;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("createdBy")
+    public String createdBy;
+    public FlowDefinition withCreatedBy(String createdBy) {
+        this.createdBy = createdBy;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("description")
+    public String description;
+    public FlowDefinition withDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("destinationConnectorType")
+    public ConnectorTypeEnum destinationConnectorType;
+    public FlowDefinition withDestinationConnectorType(ConnectorTypeEnum destinationConnectorType) {
+        this.destinationConnectorType = destinationConnectorType;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("flowArn")
+    public String flowArn;
+    public FlowDefinition withFlowArn(String flowArn) {
+        this.flowArn = flowArn;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("flowName")
+    public String flowName;
+    public FlowDefinition withFlowName(String flowName) {
+        this.flowName = flowName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("flowStatus")
+    public FlowStatusEnum flowStatus;
+    public FlowDefinition withFlowStatus(FlowStatusEnum flowStatus) {
+        this.flowStatus = flowStatus;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("lastRunExecutionDetails")
+    public ExecutionDetails lastRunExecutionDetails;
+    public FlowDefinition withLastRunExecutionDetails(ExecutionDetails lastRunExecutionDetails) {
+        this.lastRunExecutionDetails = lastRunExecutionDetails;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonSerialize(contentUsing = DateTimeSerializer.class)
+    @JsonDeserialize(contentUsing = DateTimeDeserializer.class)
+    @JsonProperty("lastUpdatedAt")
+    public OffsetDateTime lastUpdatedAt;
+    public FlowDefinition withLastUpdatedAt(OffsetDateTime lastUpdatedAt) {
+        this.lastUpdatedAt = lastUpdatedAt;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("lastUpdatedBy")
+    public String lastUpdatedBy;
+    public FlowDefinition withLastUpdatedBy(String lastUpdatedBy) {
+        this.lastUpdatedBy = lastUpdatedBy;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("sourceConnectorType")
+    public ConnectorTypeEnum sourceConnectorType;
+    public FlowDefinition withSourceConnectorType(ConnectorTypeEnum sourceConnectorType) {
+        this.sourceConnectorType = sourceConnectorType;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("tags")
+    public java.util.Map<String, String> tags;
+    public FlowDefinition withTags(java.util.Map<String, String> tags) {
+        this.tags = tags;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("triggerType")
+    public TriggerTypeEnum triggerType;
+    public FlowDefinition withTriggerType(TriggerTypeEnum triggerType) {
+        this.triggerType = triggerType;
+        return this;
+    }
+}

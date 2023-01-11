@@ -1,0 +1,40 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * RequestMetadata
+ * Metadata that is associated with a code review. This applies to both pull request and repository analysis code reviews.
+**/
+public class RequestMetadata {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("EventInfo")
+    public EventInfo eventInfo;
+    public RequestMetadata withEventInfo(EventInfo eventInfo) {
+        this.eventInfo = eventInfo;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("RequestId")
+    public String requestId;
+    public RequestMetadata withRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Requester")
+    public String requester;
+    public RequestMetadata withRequester(String requester) {
+        this.requester = requester;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("VendorName")
+    public VendorNameEnum vendorName;
+    public RequestMetadata withVendorName(VendorNameEnum vendorName) {
+        this.vendorName = vendorName;
+        return this;
+    }
+}

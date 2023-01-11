@@ -1,0 +1,28 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+/**
+ * CreateConditionalForwarderRequest
+ * Initiates the creation of a conditional forwarder for your Directory Service for Microsoft Active Directory. Conditional forwarders are required in order to set up a trust relationship with another domain.
+**/
+public class CreateConditionalForwarderRequest {
+    @JsonProperty("DirectoryId")
+    public String directoryId;
+    public CreateConditionalForwarderRequest withDirectoryId(String directoryId) {
+        this.directoryId = directoryId;
+        return this;
+    }
+    @JsonProperty("DnsIpAddrs")
+    public String[] dnsIpAddrs;
+    public CreateConditionalForwarderRequest withDnsIpAddrs(String[] dnsIpAddrs) {
+        this.dnsIpAddrs = dnsIpAddrs;
+        return this;
+    }
+    @JsonProperty("RemoteDomainName")
+    public String remoteDomainName;
+    public CreateConditionalForwarderRequest withRemoteDomainName(String remoteDomainName) {
+        this.remoteDomainName = remoteDomainName;
+        return this;
+    }
+}

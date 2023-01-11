@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class CustomVitalsReadRequest {
+    public CustomVitalsReadPathParams pathParams;
+    public CustomVitalsReadRequest withPathParams(CustomVitalsReadPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public CustomVitalsReadQueryParams queryParams;
+    public CustomVitalsReadRequest withQueryParams(CustomVitalsReadQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public CustomVitalsReadSecurity security;
+    public CustomVitalsReadRequest withSecurity(CustomVitalsReadSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

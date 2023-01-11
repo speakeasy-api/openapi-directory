@@ -1,0 +1,57 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class Vmknic {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("entity_id")
+    public String entityId;
+    public Vmknic withEntityId(String entityId) {
+        this.entityId = entityId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("entity_type")
+    public EntityTypeEnum entityType;
+    public Vmknic withEntityType(EntityTypeEnum entityType) {
+        this.entityType = entityType;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("host")
+    public Reference host;
+    public Vmknic withHost(Reference host) {
+        this.host = host;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ip_addresses")
+    public IpV4Address[] ipAddresses;
+    public Vmknic withIpAddresses(IpV4Address[] ipAddresses) {
+        this.ipAddresses = ipAddresses;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("layer2_network")
+    public Reference layer2Network;
+    public Vmknic withLayer2Network(Reference layer2Network) {
+        this.layer2Network = layer2Network;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("name")
+    public String name;
+    public Vmknic withName(String name) {
+        this.name = name;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("vlan")
+    public Vlan vlan;
+    public Vmknic withVlan(Vlan vlan) {
+        this.vlan = vlan;
+        return this;
+    }
+}

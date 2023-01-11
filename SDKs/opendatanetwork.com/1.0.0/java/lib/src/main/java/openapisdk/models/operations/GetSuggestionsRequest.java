@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class GetSuggestionsRequest {
+    public GetSuggestionsPathParams pathParams;
+    public GetSuggestionsRequest withPathParams(GetSuggestionsPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public GetSuggestionsQueryParams queryParams;
+    public GetSuggestionsRequest withQueryParams(GetSuggestionsQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public GetSuggestionsHeaders headers;
+    public GetSuggestionsRequest withHeaders(GetSuggestionsHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+}

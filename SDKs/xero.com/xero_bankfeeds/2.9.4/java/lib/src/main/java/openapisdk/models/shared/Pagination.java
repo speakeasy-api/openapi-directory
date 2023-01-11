@@ -1,0 +1,36 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class Pagination {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("itemCount")
+    public Long itemCount;
+    public Pagination withItemCount(Long itemCount) {
+        this.itemCount = itemCount;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("page")
+    public Long page;
+    public Pagination withPage(Long page) {
+        this.page = page;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("pageCount")
+    public Long pageCount;
+    public Pagination withPageCount(Long pageCount) {
+        this.pageCount = pageCount;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("pageSize")
+    public Long pageSize;
+    public Pagination withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+}

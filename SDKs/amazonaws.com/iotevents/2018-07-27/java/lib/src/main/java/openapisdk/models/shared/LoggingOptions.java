@@ -1,0 +1,37 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * LoggingOptions
+ * The values of the AWS IoT Events logging options.
+**/
+public class LoggingOptions {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("detectorDebugOptions")
+    public DetectorDebugOption[] detectorDebugOptions;
+    public LoggingOptions withDetectorDebugOptions(DetectorDebugOption[] detectorDebugOptions) {
+        this.detectorDebugOptions = detectorDebugOptions;
+        return this;
+    }
+    @JsonProperty("enabled")
+    public Boolean enabled;
+    public LoggingOptions withEnabled(Boolean enabled) {
+        this.enabled = enabled;
+        return this;
+    }
+    @JsonProperty("level")
+    public LoggingLevelEnum level;
+    public LoggingOptions withLevel(LoggingLevelEnum level) {
+        this.level = level;
+        return this;
+    }
+    @JsonProperty("roleArn")
+    public String roleArn;
+    public LoggingOptions withRoleArn(String roleArn) {
+        this.roleArn = roleArn;
+        return this;
+    }
+}

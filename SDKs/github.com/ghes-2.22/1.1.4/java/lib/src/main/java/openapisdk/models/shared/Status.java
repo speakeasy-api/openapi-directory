@@ -1,0 +1,76 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+/**
+ * Status
+ * The status of a commit.
+**/
+public class Status {
+    @JsonProperty("avatar_url")
+    public String avatarUrl;
+    public Status withAvatarUrl(String avatarUrl) {
+        this.avatarUrl = avatarUrl;
+        return this;
+    }
+    @JsonProperty("context")
+    public String context;
+    public Status withContext(String context) {
+        this.context = context;
+        return this;
+    }
+    @JsonProperty("created_at")
+    public String createdAt;
+    public Status withCreatedAt(String createdAt) {
+        this.createdAt = createdAt;
+        return this;
+    }
+    @JsonProperty("creator")
+    public SimpleUser creator;
+    public Status withCreator(SimpleUser creator) {
+        this.creator = creator;
+        return this;
+    }
+    @JsonProperty("description")
+    public String description;
+    public Status withDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    @JsonProperty("id")
+    public Long id;
+    public Status withId(Long id) {
+        this.id = id;
+        return this;
+    }
+    @JsonProperty("node_id")
+    public String nodeId;
+    public Status withNodeId(String nodeId) {
+        this.nodeId = nodeId;
+        return this;
+    }
+    @JsonProperty("state")
+    public String state;
+    public Status withState(String state) {
+        this.state = state;
+        return this;
+    }
+    @JsonProperty("target_url")
+    public String targetUrl;
+    public Status withTargetUrl(String targetUrl) {
+        this.targetUrl = targetUrl;
+        return this;
+    }
+    @JsonProperty("updated_at")
+    public String updatedAt;
+    public Status withUpdatedAt(String updatedAt) {
+        this.updatedAt = updatedAt;
+        return this;
+    }
+    @JsonProperty("url")
+    public String url;
+    public Status withUrl(String url) {
+        this.url = url;
+        return this;
+    }
+}

@@ -1,0 +1,64 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class FieldStats {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("count")
+    public Long count;
+    public FieldStats withCount(Long count) {
+        this.count = count;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("max")
+    public String max;
+    public FieldStats withMax(String max) {
+        this.max = max;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("mean")
+    public String mean;
+    public FieldStats withMean(String mean) {
+        this.mean = mean;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("min")
+    public String min;
+    public FieldStats withMin(String min) {
+        this.min = min;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("missing")
+    public Long missing;
+    public FieldStats withMissing(Long missing) {
+        this.missing = missing;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("stddev")
+    public Double stddev;
+    public FieldStats withStddev(Double stddev) {
+        this.stddev = stddev;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("sum")
+    public Double sum;
+    public FieldStats withSum(Double sum) {
+        this.sum = sum;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("sumOfSquares")
+    public Double sumOfSquares;
+    public FieldStats withSumOfSquares(Double sumOfSquares) {
+        this.sumOfSquares = sumOfSquares;
+        return this;
+    }
+}

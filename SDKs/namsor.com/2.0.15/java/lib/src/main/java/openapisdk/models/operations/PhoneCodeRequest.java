@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class PhoneCodeRequest {
+    public PhoneCodePathParams pathParams;
+    public PhoneCodeRequest withPathParams(PhoneCodePathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public PhoneCodeSecurity security;
+    public PhoneCodeRequest withSecurity(PhoneCodeSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

@@ -1,0 +1,40 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+/**
+ * SenderInput
+ * An sender of reports to the data hub
+**/
+public class SenderInput {
+    @JsonProperty("description")
+    public String description;
+    public SenderInput withDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    @JsonProperty("format")
+    public SenderFormatEnum format;
+    public SenderInput withFormat(SenderFormatEnum format) {
+        this.format = format;
+        return this;
+    }
+    @JsonProperty("name")
+    public String name;
+    public SenderInput withName(String name) {
+        this.name = name;
+        return this;
+    }
+    @JsonProperty("schema")
+    public String schema;
+    public SenderInput withSchema(String schema) {
+        this.schema = schema;
+        return this;
+    }
+    @JsonProperty("topic")
+    public String topic;
+    public SenderInput withTopic(String topic) {
+        this.topic = topic;
+        return this;
+    }
+}

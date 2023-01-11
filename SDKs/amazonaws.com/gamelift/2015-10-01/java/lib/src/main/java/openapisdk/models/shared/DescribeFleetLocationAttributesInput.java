@@ -1,0 +1,39 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * DescribeFleetLocationAttributesInput
+ * Represents the input for a request operation.
+**/
+public class DescribeFleetLocationAttributesInput {
+    @JsonProperty("FleetId")
+    public String fleetId;
+    public DescribeFleetLocationAttributesInput withFleetId(String fleetId) {
+        this.fleetId = fleetId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Limit")
+    public Long limit;
+    public DescribeFleetLocationAttributesInput withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Locations")
+    public String[] locations;
+    public DescribeFleetLocationAttributesInput withLocations(String[] locations) {
+        this.locations = locations;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("NextToken")
+    public String nextToken;
+    public DescribeFleetLocationAttributesInput withNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+}

@@ -1,0 +1,82 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * IncreasedFoodSafety
+ * Increased food safety measures implemented by the hotel during COVID-19.
+**/
+public class IncreasedFoodSafety {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("diningAreasAdditionalSanitation")
+    public Boolean diningAreasAdditionalSanitation;
+    public IncreasedFoodSafety withDiningAreasAdditionalSanitation(Boolean diningAreasAdditionalSanitation) {
+        this.diningAreasAdditionalSanitation = diningAreasAdditionalSanitation;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("diningAreasAdditionalSanitationException")
+    public IncreasedFoodSafetyDiningAreasAdditionalSanitationExceptionEnum diningAreasAdditionalSanitationException;
+    public IncreasedFoodSafety withDiningAreasAdditionalSanitationException(IncreasedFoodSafetyDiningAreasAdditionalSanitationExceptionEnum diningAreasAdditionalSanitationException) {
+        this.diningAreasAdditionalSanitationException = diningAreasAdditionalSanitationException;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("disposableFlatware")
+    public Boolean disposableFlatware;
+    public IncreasedFoodSafety withDisposableFlatware(Boolean disposableFlatware) {
+        this.disposableFlatware = disposableFlatware;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("disposableFlatwareException")
+    public IncreasedFoodSafetyDisposableFlatwareExceptionEnum disposableFlatwareException;
+    public IncreasedFoodSafety withDisposableFlatwareException(IncreasedFoodSafetyDisposableFlatwareExceptionEnum disposableFlatwareException) {
+        this.disposableFlatwareException = disposableFlatwareException;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("foodPreparationAndServingAdditionalSafety")
+    public Boolean foodPreparationAndServingAdditionalSafety;
+    public IncreasedFoodSafety withFoodPreparationAndServingAdditionalSafety(Boolean foodPreparationAndServingAdditionalSafety) {
+        this.foodPreparationAndServingAdditionalSafety = foodPreparationAndServingAdditionalSafety;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("foodPreparationAndServingAdditionalSafetyException")
+    public IncreasedFoodSafetyFoodPreparationAndServingAdditionalSafetyExceptionEnum foodPreparationAndServingAdditionalSafetyException;
+    public IncreasedFoodSafety withFoodPreparationAndServingAdditionalSafetyException(IncreasedFoodSafetyFoodPreparationAndServingAdditionalSafetyExceptionEnum foodPreparationAndServingAdditionalSafetyException) {
+        this.foodPreparationAndServingAdditionalSafetyException = foodPreparationAndServingAdditionalSafetyException;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("individualPackagedMeals")
+    public Boolean individualPackagedMeals;
+    public IncreasedFoodSafety withIndividualPackagedMeals(Boolean individualPackagedMeals) {
+        this.individualPackagedMeals = individualPackagedMeals;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("individualPackagedMealsException")
+    public IncreasedFoodSafetyIndividualPackagedMealsExceptionEnum individualPackagedMealsException;
+    public IncreasedFoodSafety withIndividualPackagedMealsException(IncreasedFoodSafetyIndividualPackagedMealsExceptionEnum individualPackagedMealsException) {
+        this.individualPackagedMealsException = individualPackagedMealsException;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("singleUseFoodMenus")
+    public Boolean singleUseFoodMenus;
+    public IncreasedFoodSafety withSingleUseFoodMenus(Boolean singleUseFoodMenus) {
+        this.singleUseFoodMenus = singleUseFoodMenus;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("singleUseFoodMenusException")
+    public IncreasedFoodSafetySingleUseFoodMenusExceptionEnum singleUseFoodMenusException;
+    public IncreasedFoodSafety withSingleUseFoodMenusException(IncreasedFoodSafetySingleUseFoodMenusExceptionEnum singleUseFoodMenusException) {
+        this.singleUseFoodMenusException = singleUseFoodMenusException;
+        return this;
+    }
+}

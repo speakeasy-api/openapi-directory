@@ -1,0 +1,11 @@
+package openapisdk.models.operations;
+
+
+
+public class GetGasPriceRequest {
+    public GetGasPriceHeaders headers;
+    public GetGasPriceRequest withHeaders(GetGasPriceHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+}

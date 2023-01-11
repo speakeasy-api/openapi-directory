@@ -1,0 +1,22 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+/**
+ * ConformancePackInputParameter
+ * Input parameters in the form of key-value pairs for the conformance pack, both of which you define. Keys can have a maximum character length of 255 characters, and values can have a maximum length of 4096 characters.
+**/
+public class ConformancePackInputParameter {
+    @JsonProperty("ParameterName")
+    public String parameterName;
+    public ConformancePackInputParameter withParameterName(String parameterName) {
+        this.parameterName = parameterName;
+        return this;
+    }
+    @JsonProperty("ParameterValue")
+    public String parameterValue;
+    public ConformancePackInputParameter withParameterValue(String parameterValue) {
+        this.parameterValue = parameterValue;
+        return this;
+    }
+}

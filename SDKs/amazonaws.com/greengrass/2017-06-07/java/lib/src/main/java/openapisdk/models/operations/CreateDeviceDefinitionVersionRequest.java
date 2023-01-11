@@ -1,0 +1,22 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class CreateDeviceDefinitionVersionRequest {
+    public CreateDeviceDefinitionVersionPathParams pathParams;
+    public CreateDeviceDefinitionVersionRequest withPathParams(CreateDeviceDefinitionVersionPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public CreateDeviceDefinitionVersionHeaders headers;
+    public CreateDeviceDefinitionVersionRequest withHeaders(CreateDeviceDefinitionVersionHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public CreateDeviceDefinitionVersionRequestBody request;
+    public CreateDeviceDefinitionVersionRequest withRequest(CreateDeviceDefinitionVersionRequestBody request) {
+        this.request = request;
+        return this;
+    }
+}

@@ -1,0 +1,28 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+/**
+ * SecurityDetails
+ * Information about endpoints.
+**/
+public class SecurityDetails {
+    @JsonProperty("roleArn")
+    public String roleArn;
+    public SecurityDetails withRoleArn(String roleArn) {
+        this.roleArn = roleArn;
+        return this;
+    }
+    @JsonProperty("securityGroupIds")
+    public String[] securityGroupIds;
+    public SecurityDetails withSecurityGroupIds(String[] securityGroupIds) {
+        this.securityGroupIds = securityGroupIds;
+        return this;
+    }
+    @JsonProperty("subnetIds")
+    public String[] subnetIds;
+    public SecurityDetails withSubnetIds(String[] subnetIds) {
+        this.subnetIds = subnetIds;
+        return this;
+    }
+}

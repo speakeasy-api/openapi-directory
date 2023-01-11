@@ -1,0 +1,15 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class DescribeAccountAttributesResponse {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Attributes")
+    public AccountAttribute[] attributes;
+    public DescribeAccountAttributesResponse withAttributes(AccountAttribute[] attributes) {
+        this.attributes = attributes;
+        return this;
+    }
+}

@@ -1,0 +1,27 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class ListSlotTypesRequest {
+    public ListSlotTypesPathParams pathParams;
+    public ListSlotTypesRequest withPathParams(ListSlotTypesPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public ListSlotTypesQueryParams queryParams;
+    public ListSlotTypesRequest withQueryParams(ListSlotTypesQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public ListSlotTypesHeaders headers;
+    public ListSlotTypesRequest withHeaders(ListSlotTypesHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public ListSlotTypesRequestBody request;
+    public ListSlotTypesRequest withRequest(ListSlotTypesRequestBody request) {
+        this.request = request;
+        return this;
+    }
+}

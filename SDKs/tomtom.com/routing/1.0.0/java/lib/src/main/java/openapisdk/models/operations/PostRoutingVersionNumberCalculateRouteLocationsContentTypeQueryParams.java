@@ -1,0 +1,240 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class PostRoutingVersionNumberCalculateRouteLocationsContentTypeQueryParams {
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=accelerationEfficiency")
+    public Float accelerationEfficiency;
+    public PostRoutingVersionNumberCalculateRouteLocationsContentTypeQueryParams withAccelerationEfficiency(Float accelerationEfficiency) {
+        this.accelerationEfficiency = accelerationEfficiency;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alternativeType")
+    public openapisdk.models.shared.AlternativeTypeEnum alternativeType;
+    public PostRoutingVersionNumberCalculateRouteLocationsContentTypeQueryParams withAlternativeType(openapisdk.models.shared.AlternativeTypeEnum alternativeType) {
+        this.alternativeType = alternativeType;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=arriveAt")
+    public String arriveAt;
+    public PostRoutingVersionNumberCalculateRouteLocationsContentTypeQueryParams withArriveAt(String arriveAt) {
+        this.arriveAt = arriveAt;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=auxiliaryPowerInLitersPerHour")
+    public Float auxiliaryPowerInLitersPerHour;
+    public PostRoutingVersionNumberCalculateRouteLocationsContentTypeQueryParams withAuxiliaryPowerInLitersPerHour(Float auxiliaryPowerInLitersPerHour) {
+        this.auxiliaryPowerInLitersPerHour = auxiliaryPowerInLitersPerHour;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=avoid")
+    public String avoid;
+    public PostRoutingVersionNumberCalculateRouteLocationsContentTypeQueryParams withAvoid(String avoid) {
+        this.avoid = avoid;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
+    public String callback;
+    public PostRoutingVersionNumberCalculateRouteLocationsContentTypeQueryParams withCallback(String callback) {
+        this.callback = callback;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=computeBestOrder")
+    public Boolean computeBestOrder;
+    public PostRoutingVersionNumberCalculateRouteLocationsContentTypeQueryParams withComputeBestOrder(Boolean computeBestOrder) {
+        this.computeBestOrder = computeBestOrder;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=computeTravelTimeFor")
+    public openapisdk.models.shared.ComputeTravelTimeForEnum computeTravelTimeFor;
+    public PostRoutingVersionNumberCalculateRouteLocationsContentTypeQueryParams withComputeTravelTimeFor(openapisdk.models.shared.ComputeTravelTimeForEnum computeTravelTimeFor) {
+        this.computeTravelTimeFor = computeTravelTimeFor;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=constantSpeedConsumptionInLitersPerHundredkm")
+    public String constantSpeedConsumptionInLitersPerHundredkm;
+    public PostRoutingVersionNumberCalculateRouteLocationsContentTypeQueryParams withConstantSpeedConsumptionInLitersPerHundredkm(String constantSpeedConsumptionInLitersPerHundredkm) {
+        this.constantSpeedConsumptionInLitersPerHundredkm = constantSpeedConsumptionInLitersPerHundredkm;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=constantSpeedConsumptionInkWhPerHundredkm")
+    public String constantSpeedConsumptionInkWhPerHundredkm;
+    public PostRoutingVersionNumberCalculateRouteLocationsContentTypeQueryParams withConstantSpeedConsumptionInkWhPerHundredkm(String constantSpeedConsumptionInkWhPerHundredkm) {
+        this.constantSpeedConsumptionInkWhPerHundredkm = constantSpeedConsumptionInkWhPerHundredkm;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=currentFuelInLiters")
+    public Float currentFuelInLiters;
+    public PostRoutingVersionNumberCalculateRouteLocationsContentTypeQueryParams withCurrentFuelInLiters(Float currentFuelInLiters) {
+        this.currentFuelInLiters = currentFuelInLiters;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=decelerationEfficiency")
+    public Float decelerationEfficiency;
+    public PostRoutingVersionNumberCalculateRouteLocationsContentTypeQueryParams withDecelerationEfficiency(Float decelerationEfficiency) {
+        this.decelerationEfficiency = decelerationEfficiency;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=departAt")
+    public String departAt;
+    public PostRoutingVersionNumberCalculateRouteLocationsContentTypeQueryParams withDepartAt(String departAt) {
+        this.departAt = departAt;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=downhillEfficiency")
+    public Float downhillEfficiency;
+    public PostRoutingVersionNumberCalculateRouteLocationsContentTypeQueryParams withDownhillEfficiency(Float downhillEfficiency) {
+        this.downhillEfficiency = downhillEfficiency;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fuelEnergyDensityInMJoulesPerLiter")
+    public Float fuelEnergyDensityInMJoulesPerLiter;
+    public PostRoutingVersionNumberCalculateRouteLocationsContentTypeQueryParams withFuelEnergyDensityInMJoulesPerLiter(Float fuelEnergyDensityInMJoulesPerLiter) {
+        this.fuelEnergyDensityInMJoulesPerLiter = fuelEnergyDensityInMJoulesPerLiter;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=hilliness")
+    public openapisdk.models.shared.HillinessEnum hilliness;
+    public PostRoutingVersionNumberCalculateRouteLocationsContentTypeQueryParams withHilliness(openapisdk.models.shared.HillinessEnum hilliness) {
+        this.hilliness = hilliness;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=instructionsType")
+    public openapisdk.models.shared.InstructionsTypeEnum instructionsType;
+    public PostRoutingVersionNumberCalculateRouteLocationsContentTypeQueryParams withInstructionsType(openapisdk.models.shared.InstructionsTypeEnum instructionsType) {
+        this.instructionsType = instructionsType;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=language")
+    public String language;
+    public PostRoutingVersionNumberCalculateRouteLocationsContentTypeQueryParams withLanguage(String language) {
+        this.language = language;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxAlternatives")
+    public Long maxAlternatives;
+    public PostRoutingVersionNumberCalculateRouteLocationsContentTypeQueryParams withMaxAlternatives(Long maxAlternatives) {
+        this.maxAlternatives = maxAlternatives;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=minDeviationDistance")
+    public Long minDeviationDistance;
+    public PostRoutingVersionNumberCalculateRouteLocationsContentTypeQueryParams withMinDeviationDistance(Long minDeviationDistance) {
+        this.minDeviationDistance = minDeviationDistance;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=minDeviationTime")
+    public Long minDeviationTime;
+    public PostRoutingVersionNumberCalculateRouteLocationsContentTypeQueryParams withMinDeviationTime(Long minDeviationTime) {
+        this.minDeviationTime = minDeviationTime;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=report")
+    public openapisdk.models.shared.ReportEnum report;
+    public PostRoutingVersionNumberCalculateRouteLocationsContentTypeQueryParams withReport(openapisdk.models.shared.ReportEnum report) {
+        this.report = report;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=routeRepresentation")
+    public openapisdk.models.shared.RouteRepresentationEnum routeRepresentation;
+    public PostRoutingVersionNumberCalculateRouteLocationsContentTypeQueryParams withRouteRepresentation(openapisdk.models.shared.RouteRepresentationEnum routeRepresentation) {
+        this.routeRepresentation = routeRepresentation;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=routeType")
+    public openapisdk.models.shared.RouteTypeEnum routeType;
+    public PostRoutingVersionNumberCalculateRouteLocationsContentTypeQueryParams withRouteType(openapisdk.models.shared.RouteTypeEnum routeType) {
+        this.routeType = routeType;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sectionType")
+    public String sectionType;
+    public PostRoutingVersionNumberCalculateRouteLocationsContentTypeQueryParams withSectionType(String sectionType) {
+        this.sectionType = sectionType;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=traffic")
+    public Boolean traffic;
+    public PostRoutingVersionNumberCalculateRouteLocationsContentTypeQueryParams withTraffic(Boolean traffic) {
+        this.traffic = traffic;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=travelMode")
+    public openapisdk.models.shared.TravelModeEnum travelMode;
+    public PostRoutingVersionNumberCalculateRouteLocationsContentTypeQueryParams withTravelMode(openapisdk.models.shared.TravelModeEnum travelMode) {
+        this.travelMode = travelMode;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uphillEfficiency")
+    public Float uphillEfficiency;
+    public PostRoutingVersionNumberCalculateRouteLocationsContentTypeQueryParams withUphillEfficiency(Float uphillEfficiency) {
+        this.uphillEfficiency = uphillEfficiency;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=vehicleAxleWeight")
+    public Long vehicleAxleWeight;
+    public PostRoutingVersionNumberCalculateRouteLocationsContentTypeQueryParams withVehicleAxleWeight(Long vehicleAxleWeight) {
+        this.vehicleAxleWeight = vehicleAxleWeight;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=vehicleCommercial")
+    public Boolean vehicleCommercial;
+    public PostRoutingVersionNumberCalculateRouteLocationsContentTypeQueryParams withVehicleCommercial(Boolean vehicleCommercial) {
+        this.vehicleCommercial = vehicleCommercial;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=vehicleEngineType")
+    public openapisdk.models.shared.VehicleEngineTypeEnum vehicleEngineType;
+    public PostRoutingVersionNumberCalculateRouteLocationsContentTypeQueryParams withVehicleEngineType(openapisdk.models.shared.VehicleEngineTypeEnum vehicleEngineType) {
+        this.vehicleEngineType = vehicleEngineType;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=vehicleHeading")
+    public Long vehicleHeading;
+    public PostRoutingVersionNumberCalculateRouteLocationsContentTypeQueryParams withVehicleHeading(Long vehicleHeading) {
+        this.vehicleHeading = vehicleHeading;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=vehicleHeight")
+    public Float vehicleHeight;
+    public PostRoutingVersionNumberCalculateRouteLocationsContentTypeQueryParams withVehicleHeight(Float vehicleHeight) {
+        this.vehicleHeight = vehicleHeight;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=vehicleLength")
+    public Float vehicleLength;
+    public PostRoutingVersionNumberCalculateRouteLocationsContentTypeQueryParams withVehicleLength(Float vehicleLength) {
+        this.vehicleLength = vehicleLength;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=vehicleLoadType")
+    public String vehicleLoadType;
+    public PostRoutingVersionNumberCalculateRouteLocationsContentTypeQueryParams withVehicleLoadType(String vehicleLoadType) {
+        this.vehicleLoadType = vehicleLoadType;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=vehicleMaxSpeed")
+    public Long vehicleMaxSpeed;
+    public PostRoutingVersionNumberCalculateRouteLocationsContentTypeQueryParams withVehicleMaxSpeed(Long vehicleMaxSpeed) {
+        this.vehicleMaxSpeed = vehicleMaxSpeed;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=vehicleWeight")
+    public Long vehicleWeight;
+    public PostRoutingVersionNumberCalculateRouteLocationsContentTypeQueryParams withVehicleWeight(Long vehicleWeight) {
+        this.vehicleWeight = vehicleWeight;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=vehicleWidth")
+    public Float vehicleWidth;
+    public PostRoutingVersionNumberCalculateRouteLocationsContentTypeQueryParams withVehicleWidth(Float vehicleWidth) {
+        this.vehicleWidth = vehicleWidth;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=windingness")
+    public openapisdk.models.shared.WindingnessEnum windingness;
+    public PostRoutingVersionNumberCalculateRouteLocationsContentTypeQueryParams withWindingness(openapisdk.models.shared.WindingnessEnum windingness) {
+        this.windingness = windingness;
+        return this;
+    }
+}

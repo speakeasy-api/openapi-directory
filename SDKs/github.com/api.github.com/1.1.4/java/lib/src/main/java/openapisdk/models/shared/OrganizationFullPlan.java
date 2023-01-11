@@ -1,0 +1,40 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class OrganizationFullPlan {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("filled_seats")
+    public Long filledSeats;
+    public OrganizationFullPlan withFilledSeats(Long filledSeats) {
+        this.filledSeats = filledSeats;
+        return this;
+    }
+    @JsonProperty("name")
+    public String name;
+    public OrganizationFullPlan withName(String name) {
+        this.name = name;
+        return this;
+    }
+    @JsonProperty("private_repos")
+    public Long privateRepos;
+    public OrganizationFullPlan withPrivateRepos(Long privateRepos) {
+        this.privateRepos = privateRepos;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("seats")
+    public Long seats;
+    public OrganizationFullPlan withSeats(Long seats) {
+        this.seats = seats;
+        return this;
+    }
+    @JsonProperty("space")
+    public Long space;
+    public OrganizationFullPlan withSpace(Long space) {
+        this.space = space;
+        return this;
+    }
+}

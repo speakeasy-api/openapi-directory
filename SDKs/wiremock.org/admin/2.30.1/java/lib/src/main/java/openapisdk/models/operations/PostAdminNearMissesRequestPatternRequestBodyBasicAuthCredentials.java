@@ -1,0 +1,22 @@
+package openapisdk.models.operations;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+/**
+ * PostAdminNearMissesRequestPatternRequestBodyBasicAuthCredentials
+ * Pre-emptive basic auth credentials to match against
+**/
+public class PostAdminNearMissesRequestPatternRequestBodyBasicAuthCredentials {
+    @JsonProperty("password")
+    public String password;
+    public PostAdminNearMissesRequestPatternRequestBodyBasicAuthCredentials withPassword(String password) {
+        this.password = password;
+        return this;
+    }
+    @JsonProperty("username")
+    public String username;
+    public PostAdminNearMissesRequestPatternRequestBodyBasicAuthCredentials withUsername(String username) {
+        this.username = username;
+        return this;
+    }
+}

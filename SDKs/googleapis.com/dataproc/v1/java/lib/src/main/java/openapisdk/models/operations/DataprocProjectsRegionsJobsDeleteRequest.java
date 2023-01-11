@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class DataprocProjectsRegionsJobsDeleteRequest {
+    public DataprocProjectsRegionsJobsDeletePathParams pathParams;
+    public DataprocProjectsRegionsJobsDeleteRequest withPathParams(DataprocProjectsRegionsJobsDeletePathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public DataprocProjectsRegionsJobsDeleteQueryParams queryParams;
+    public DataprocProjectsRegionsJobsDeleteRequest withQueryParams(DataprocProjectsRegionsJobsDeleteQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public DataprocProjectsRegionsJobsDeleteSecurity security;
+    public DataprocProjectsRegionsJobsDeleteRequest withSecurity(DataprocProjectsRegionsJobsDeleteSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

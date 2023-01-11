@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class SecuritycenterProjectsNotificationConfigsDeleteRequest {
+    public SecuritycenterProjectsNotificationConfigsDeletePathParams pathParams;
+    public SecuritycenterProjectsNotificationConfigsDeleteRequest withPathParams(SecuritycenterProjectsNotificationConfigsDeletePathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public SecuritycenterProjectsNotificationConfigsDeleteQueryParams queryParams;
+    public SecuritycenterProjectsNotificationConfigsDeleteRequest withQueryParams(SecuritycenterProjectsNotificationConfigsDeleteQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public SecuritycenterProjectsNotificationConfigsDeleteSecurity security;
+    public SecuritycenterProjectsNotificationConfigsDeleteRequest withSecurity(SecuritycenterProjectsNotificationConfigsDeleteSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

@@ -1,0 +1,17 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class GetBucketStatisticsRequest {
+    public GetBucketStatisticsHeaders headers;
+    public GetBucketStatisticsRequest withHeaders(GetBucketStatisticsHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public GetBucketStatisticsRequestBody request;
+    public GetBucketStatisticsRequest withRequest(GetBucketStatisticsRequestBody request) {
+        this.request = request;
+        return this;
+    }
+}

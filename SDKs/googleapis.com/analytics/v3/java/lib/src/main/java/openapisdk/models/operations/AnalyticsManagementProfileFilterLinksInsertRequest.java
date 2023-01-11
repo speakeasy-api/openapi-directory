@@ -1,0 +1,27 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class AnalyticsManagementProfileFilterLinksInsertRequest {
+    public AnalyticsManagementProfileFilterLinksInsertPathParams pathParams;
+    public AnalyticsManagementProfileFilterLinksInsertRequest withPathParams(AnalyticsManagementProfileFilterLinksInsertPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public AnalyticsManagementProfileFilterLinksInsertQueryParams queryParams;
+    public AnalyticsManagementProfileFilterLinksInsertRequest withQueryParams(AnalyticsManagementProfileFilterLinksInsertQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public openapisdk.models.shared.ProfileFilterLinkInput request;
+    public AnalyticsManagementProfileFilterLinksInsertRequest withRequest(openapisdk.models.shared.ProfileFilterLinkInput request) {
+        this.request = request;
+        return this;
+    }
+    public AnalyticsManagementProfileFilterLinksInsertSecurity security;
+    public AnalyticsManagementProfileFilterLinksInsertRequest withSecurity(AnalyticsManagementProfileFilterLinksInsertSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

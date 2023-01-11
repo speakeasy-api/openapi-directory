@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class GetRepositoriesWorkspaceRepoSlugPatchSpecRequest {
+    public GetRepositoriesWorkspaceRepoSlugPatchSpecPathParams pathParams;
+    public GetRepositoriesWorkspaceRepoSlugPatchSpecRequest withPathParams(GetRepositoriesWorkspaceRepoSlugPatchSpecPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public GetRepositoriesWorkspaceRepoSlugPatchSpecSecurity security;
+    public GetRepositoriesWorkspaceRepoSlugPatchSpecRequest withSecurity(GetRepositoriesWorkspaceRepoSlugPatchSpecSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

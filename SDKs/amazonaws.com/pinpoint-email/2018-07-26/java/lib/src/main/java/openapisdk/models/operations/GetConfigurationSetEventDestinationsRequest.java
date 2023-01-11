@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class GetConfigurationSetEventDestinationsRequest {
+    public GetConfigurationSetEventDestinationsPathParams pathParams;
+    public GetConfigurationSetEventDestinationsRequest withPathParams(GetConfigurationSetEventDestinationsPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public GetConfigurationSetEventDestinationsHeaders headers;
+    public GetConfigurationSetEventDestinationsRequest withHeaders(GetConfigurationSetEventDestinationsHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+}

@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class DfareportingSitesListRequest {
+    public DfareportingSitesListPathParams pathParams;
+    public DfareportingSitesListRequest withPathParams(DfareportingSitesListPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public DfareportingSitesListQueryParams queryParams;
+    public DfareportingSitesListRequest withQueryParams(DfareportingSitesListQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public DfareportingSitesListSecurity security;
+    public DfareportingSitesListRequest withSecurity(DfareportingSitesListSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

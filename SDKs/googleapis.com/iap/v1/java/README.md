@@ -1,0 +1,96 @@
+# openapisdk
+
+<!-- Start SDK Installation -->
+## SDK Installation
+
+### Gradle
+
+```groovy
+implementation 'openapisdk:openapisdk:0.0.1'
+```
+<!-- End SDK Installation -->
+
+## SDK Example Usage
+<!-- Start SDK Example Usage -->
+```java
+package hello.world;
+
+import openapisdk.SDK;
+import openapisdk.models.shared.Security;
+
+public class Application {
+    public static void main(String[] args) {
+        try {
+            SDK.Builder builder = SDK.builder();
+
+            SDK sdk = builder.build();
+
+            IapProjectsBrandsCreateRequest req = new IapProjectsBrandsCreateRequest() {{
+                security = new IapProjectsBrandsCreateSecurity() {{
+                    oauth2 = new SchemeOauth2() {{
+                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
+                    }};
+                    oauth2c = new SchemeOauth2c() {{
+                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
+                    }};
+                }};
+                pathParams = new IapProjectsBrandsCreatePathParams() {{
+                    parent = "voluptatem";
+                }};
+                queryParams = new IapProjectsBrandsCreateQueryParams() {{
+                    dollarXgafv = "2";
+                    accessToken = "ut";
+                    alt = "media";
+                    callback = "ut";
+                    fields = "debitis";
+                    key = "laudantium";
+                    oauthToken = "eaque";
+                    prettyPrint = false;
+                    quotaUser = "ipsam";
+                    uploadType = "in";
+                    uploadProtocol = "ab";
+                }};
+                request = new BrandInput() {{
+                    applicationTitle = "eum";
+                    supportEmail = "magnam";
+                }};
+            }};
+
+            IapProjectsBrandsCreateResponse res = sdk.projects.iapProjectsBrandsCreate(req);
+
+            if (res.brand.isPresent()) {
+                // handle response
+            }
+        } catch (Exception e) {
+            // handle exception
+        }
+```
+<!-- End SDK Example Usage -->
+
+<!-- Start SDK Available Operations -->
+## SDK Available Operations
+
+### projects
+
+* `iapProjectsBrandsCreate` - Constructs a new OAuth brand for the project if one does not exist. The created brand is "internal only", meaning that OAuth clients created under it only accept requests from users who belong to the same Google Workspace organization as the project. The brand is created in an un-reviewed status. NOTE: The "internal only" status can be manually changed in the Google Cloud Console. Requires that a brand does not already exist for the project, and that the specified support email is owned by the caller.
+* `iapProjectsBrandsIdentityAwareProxyClientsCreate` - Creates an Identity Aware Proxy (IAP) OAuth client. The client is owned by IAP. Requires that the brand for the project exists and that it is set for internal-only use.
+* `iapProjectsBrandsIdentityAwareProxyClientsList` - Lists the existing clients for the brand.
+* `iapProjectsBrandsIdentityAwareProxyClientsResetSecret` - Resets an Identity Aware Proxy (IAP) OAuth client secret. Useful if the secret was compromised. Requires that the client is owned by IAP.
+* `iapProjectsBrandsList` - Lists the existing brands for the project.
+* `iapProjectsIapTunnelLocationsDestGroupsCreate` - Creates a new TunnelDestGroup.
+* `iapProjectsIapTunnelLocationsDestGroupsDelete` - Deletes a TunnelDestGroup.
+* `iapProjectsIapTunnelLocationsDestGroupsGet` - Retrieves an existing TunnelDestGroup.
+* `iapProjectsIapTunnelLocationsDestGroupsList` - Lists the existing TunnelDestGroups. To group across all locations, use a `-` as the location ID. For example: `/v1/projects/123/iap_tunnel/locations/-/destGroups`
+* `iapProjectsIapTunnelLocationsDestGroupsPatch` - Updates a TunnelDestGroup.
+
+### v1
+
+* `iapGetIamPolicy` - Gets the access control policy for an Identity-Aware Proxy protected resource. More information about managing access via IAP can be found at: https://cloud.google.com/iap/docs/managing-access#managing_access_via_the_api
+* `iapGetIapSettings` - Gets the IAP settings on a particular IAP protected resource.
+* `iapSetIamPolicy` - Sets the access control policy for an Identity-Aware Proxy protected resource. Replaces any existing policy. More information about managing access via IAP can be found at: https://cloud.google.com/iap/docs/managing-access#managing_access_via_the_api
+* `iapTestIamPermissions` - Returns permissions that a caller has on the Identity-Aware Proxy protected resource. More information about managing access via IAP can be found at: https://cloud.google.com/iap/docs/managing-access#managing_access_via_the_api
+* `iapUpdateIapSettings` - Updates the IAP settings on a particular IAP protected resource. It replaces all fields unless the `update_mask` is set.
+
+<!-- End SDK Available Operations -->
+
+### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

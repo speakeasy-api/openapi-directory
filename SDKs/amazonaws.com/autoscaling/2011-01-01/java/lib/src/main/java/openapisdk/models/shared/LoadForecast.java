@@ -1,0 +1,25 @@
+package openapisdk.models.shared;
+
+import java.time.OffsetDateTime;
+
+/**
+ * LoadForecast
+ * A <code>GetPredictiveScalingForecast</code> call returns the load forecast for a predictive scaling policy. This structure includes the data points for that load forecast, along with the timestamps of those data points and the metric specification. 
+**/
+public class LoadForecast {
+    public PredictiveScalingMetricSpecification metricSpecification;
+    public LoadForecast withMetricSpecification(PredictiveScalingMetricSpecification metricSpecification) {
+        this.metricSpecification = metricSpecification;
+        return this;
+    }
+    public OffsetDateTime[] timestamps;
+    public LoadForecast withTimestamps(OffsetDateTime[] timestamps) {
+        this.timestamps = timestamps;
+        return this;
+    }
+    public Double[] values;
+    public LoadForecast withValues(Double[] values) {
+        this.values = values;
+        return this;
+    }
+}

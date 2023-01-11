@@ -1,0 +1,22 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class UpdateDomainConfigurationResponse {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("domainConfigurationArn")
+    public String domainConfigurationArn;
+    public UpdateDomainConfigurationResponse withDomainConfigurationArn(String domainConfigurationArn) {
+        this.domainConfigurationArn = domainConfigurationArn;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("domainConfigurationName")
+    public String domainConfigurationName;
+    public UpdateDomainConfigurationResponse withDomainConfigurationName(String domainConfigurationName) {
+        this.domainConfigurationName = domainConfigurationName;
+        return this;
+    }
+}

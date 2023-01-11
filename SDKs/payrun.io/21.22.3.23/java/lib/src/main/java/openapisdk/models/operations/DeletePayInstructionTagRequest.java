@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class DeletePayInstructionTagRequest {
+    public DeletePayInstructionTagPathParams pathParams;
+    public DeletePayInstructionTagRequest withPathParams(DeletePayInstructionTagPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public DeletePayInstructionTagHeaders headers;
+    public DeletePayInstructionTagRequest withHeaders(DeletePayInstructionTagHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+}

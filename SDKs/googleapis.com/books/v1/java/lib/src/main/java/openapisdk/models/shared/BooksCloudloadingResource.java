@@ -1,0 +1,36 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class BooksCloudloadingResource {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("author")
+    public String author;
+    public BooksCloudloadingResource withAuthor(String author) {
+        this.author = author;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("processingState")
+    public String processingState;
+    public BooksCloudloadingResource withProcessingState(String processingState) {
+        this.processingState = processingState;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("title")
+    public String title;
+    public BooksCloudloadingResource withTitle(String title) {
+        this.title = title;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("volumeId")
+    public String volumeId;
+    public BooksCloudloadingResource withVolumeId(String volumeId) {
+        this.volumeId = volumeId;
+        return this;
+    }
+}

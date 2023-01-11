@@ -1,0 +1,52 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+/**
+ * CustomerConnectorInfo
+ * Inventory data for installed discovery connectors.
+**/
+public class CustomerConnectorInfo {
+    @JsonProperty("activeConnectors")
+    public Long activeConnectors;
+    public CustomerConnectorInfo withActiveConnectors(Long activeConnectors) {
+        this.activeConnectors = activeConnectors;
+        return this;
+    }
+    @JsonProperty("blackListedConnectors")
+    public Long blackListedConnectors;
+    public CustomerConnectorInfo withBlackListedConnectors(Long blackListedConnectors) {
+        this.blackListedConnectors = blackListedConnectors;
+        return this;
+    }
+    @JsonProperty("healthyConnectors")
+    public Long healthyConnectors;
+    public CustomerConnectorInfo withHealthyConnectors(Long healthyConnectors) {
+        this.healthyConnectors = healthyConnectors;
+        return this;
+    }
+    @JsonProperty("shutdownConnectors")
+    public Long shutdownConnectors;
+    public CustomerConnectorInfo withShutdownConnectors(Long shutdownConnectors) {
+        this.shutdownConnectors = shutdownConnectors;
+        return this;
+    }
+    @JsonProperty("totalConnectors")
+    public Long totalConnectors;
+    public CustomerConnectorInfo withTotalConnectors(Long totalConnectors) {
+        this.totalConnectors = totalConnectors;
+        return this;
+    }
+    @JsonProperty("unhealthyConnectors")
+    public Long unhealthyConnectors;
+    public CustomerConnectorInfo withUnhealthyConnectors(Long unhealthyConnectors) {
+        this.unhealthyConnectors = unhealthyConnectors;
+        return this;
+    }
+    @JsonProperty("unknownConnectors")
+    public Long unknownConnectors;
+    public CustomerConnectorInfo withUnknownConnectors(Long unknownConnectors) {
+        this.unknownConnectors = unknownConnectors;
+        return this;
+    }
+}

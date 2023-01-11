@@ -1,0 +1,22 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class DeleteBackendAuthRequest {
+    public DeleteBackendAuthPathParams pathParams;
+    public DeleteBackendAuthRequest withPathParams(DeleteBackendAuthPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public DeleteBackendAuthHeaders headers;
+    public DeleteBackendAuthRequest withHeaders(DeleteBackendAuthHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public DeleteBackendAuthRequestBody request;
+    public DeleteBackendAuthRequest withRequest(DeleteBackendAuthRequestBody request) {
+        this.request = request;
+        return this;
+    }
+}

@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class GetInternationalPaymentsInternationalPaymentIdPaymentDetailsRequest {
+    public GetInternationalPaymentsInternationalPaymentIdPaymentDetailsPathParams pathParams;
+    public GetInternationalPaymentsInternationalPaymentIdPaymentDetailsRequest withPathParams(GetInternationalPaymentsInternationalPaymentIdPaymentDetailsPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public GetInternationalPaymentsInternationalPaymentIdPaymentDetailsHeaders headers;
+    public GetInternationalPaymentsInternationalPaymentIdPaymentDetailsRequest withHeaders(GetInternationalPaymentsInternationalPaymentIdPaymentDetailsHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+    public GetInternationalPaymentsInternationalPaymentIdPaymentDetailsSecurity security;
+    public GetInternationalPaymentsInternationalPaymentIdPaymentDetailsRequest withSecurity(GetInternationalPaymentsInternationalPaymentIdPaymentDetailsSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

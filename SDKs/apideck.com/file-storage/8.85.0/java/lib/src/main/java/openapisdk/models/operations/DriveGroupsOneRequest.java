@@ -1,0 +1,26 @@
+package openapisdk.models.operations;
+
+
+
+public class DriveGroupsOneRequest {
+    public DriveGroupsOnePathParams pathParams;
+    public DriveGroupsOneRequest withPathParams(DriveGroupsOnePathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public DriveGroupsOneQueryParams queryParams;
+    public DriveGroupsOneRequest withQueryParams(DriveGroupsOneQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public DriveGroupsOneHeaders headers;
+    public DriveGroupsOneRequest withHeaders(DriveGroupsOneHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+    public DriveGroupsOneSecurity security;
+    public DriveGroupsOneRequest withSecurity(DriveGroupsOneSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

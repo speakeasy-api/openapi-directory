@@ -1,0 +1,22 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class ReplaceAlbumLogoRequest {
+    public ReplaceAlbumLogoPathParams pathParams;
+    public ReplaceAlbumLogoRequest withPathParams(ReplaceAlbumLogoPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    @SpeakeasyMetadata("request:mediaType=application/vnd.vimeo.picture+json")
+    public ReplaceAlbumLogoRequestBody request;
+    public ReplaceAlbumLogoRequest withRequest(ReplaceAlbumLogoRequestBody request) {
+        this.request = request;
+        return this;
+    }
+    public ReplaceAlbumLogoSecurity security;
+    public ReplaceAlbumLogoRequest withSecurity(ReplaceAlbumLogoSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

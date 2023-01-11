@@ -1,0 +1,33 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * TargetGroupPairInfo
+ *  Information about two target groups and how traffic is routed during an Amazon ECS deployment. An optional test traffic route can be specified. 
+**/
+public class TargetGroupPairInfo {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("prodTrafficRoute")
+    public TrafficRoute prodTrafficRoute;
+    public TargetGroupPairInfo withProdTrafficRoute(TrafficRoute prodTrafficRoute) {
+        this.prodTrafficRoute = prodTrafficRoute;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("targetGroups")
+    public TargetGroupInfo[] targetGroups;
+    public TargetGroupPairInfo withTargetGroups(TargetGroupInfo[] targetGroups) {
+        this.targetGroups = targetGroups;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("testTrafficRoute")
+    public TrafficRoute testTrafficRoute;
+    public TargetGroupPairInfo withTestTrafficRoute(TrafficRoute testTrafficRoute) {
+        this.testTrafficRoute = testTrafficRoute;
+        return this;
+    }
+}

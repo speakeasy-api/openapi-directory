@@ -1,0 +1,30 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+public class GetSchemaVersionsDiffInput {
+    @JsonProperty("FirstSchemaVersionNumber")
+    public SchemaVersionNumber firstSchemaVersionNumber;
+    public GetSchemaVersionsDiffInput withFirstSchemaVersionNumber(SchemaVersionNumber firstSchemaVersionNumber) {
+        this.firstSchemaVersionNumber = firstSchemaVersionNumber;
+        return this;
+    }
+    @JsonProperty("SchemaDiffType")
+    public SchemaDiffTypeEnum schemaDiffType;
+    public GetSchemaVersionsDiffInput withSchemaDiffType(SchemaDiffTypeEnum schemaDiffType) {
+        this.schemaDiffType = schemaDiffType;
+        return this;
+    }
+    @JsonProperty("SchemaId")
+    public SchemaId schemaId;
+    public GetSchemaVersionsDiffInput withSchemaId(SchemaId schemaId) {
+        this.schemaId = schemaId;
+        return this;
+    }
+    @JsonProperty("SecondSchemaVersionNumber")
+    public SchemaVersionNumber secondSchemaVersionNumber;
+    public GetSchemaVersionsDiffInput withSecondSchemaVersionNumber(SchemaVersionNumber secondSchemaVersionNumber) {
+        this.secondSchemaVersionNumber = secondSchemaVersionNumber;
+        return this;
+    }
+}

@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class OsconfigProjectsPatchJobsInstanceDetailsListRequest {
+    public OsconfigProjectsPatchJobsInstanceDetailsListPathParams pathParams;
+    public OsconfigProjectsPatchJobsInstanceDetailsListRequest withPathParams(OsconfigProjectsPatchJobsInstanceDetailsListPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public OsconfigProjectsPatchJobsInstanceDetailsListQueryParams queryParams;
+    public OsconfigProjectsPatchJobsInstanceDetailsListRequest withQueryParams(OsconfigProjectsPatchJobsInstanceDetailsListQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public OsconfigProjectsPatchJobsInstanceDetailsListSecurity security;
+    public OsconfigProjectsPatchJobsInstanceDetailsListRequest withSecurity(OsconfigProjectsPatchJobsInstanceDetailsListSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

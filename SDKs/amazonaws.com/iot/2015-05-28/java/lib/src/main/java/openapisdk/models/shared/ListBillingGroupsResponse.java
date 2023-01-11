@@ -1,0 +1,22 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class ListBillingGroupsResponse {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("billingGroups")
+    public GroupNameAndArn[] billingGroups;
+    public ListBillingGroupsResponse withBillingGroups(GroupNameAndArn[] billingGroups) {
+        this.billingGroups = billingGroups;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("nextToken")
+    public String nextToken;
+    public ListBillingGroupsResponse withNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+}

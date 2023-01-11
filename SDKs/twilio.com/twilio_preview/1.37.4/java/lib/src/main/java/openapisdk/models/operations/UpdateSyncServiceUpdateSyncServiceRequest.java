@@ -1,0 +1,30 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class UpdateSyncServiceUpdateSyncServiceRequest {
+    @SpeakeasyMetadata("form:name=AclEnabled")
+    public Boolean aclEnabled;
+    public UpdateSyncServiceUpdateSyncServiceRequest withAclEnabled(Boolean aclEnabled) {
+        this.aclEnabled = aclEnabled;
+        return this;
+    }
+    @SpeakeasyMetadata("form:name=FriendlyName")
+    public String friendlyName;
+    public UpdateSyncServiceUpdateSyncServiceRequest withFriendlyName(String friendlyName) {
+        this.friendlyName = friendlyName;
+        return this;
+    }
+    @SpeakeasyMetadata("form:name=ReachabilityWebhooksEnabled")
+    public Boolean reachabilityWebhooksEnabled;
+    public UpdateSyncServiceUpdateSyncServiceRequest withReachabilityWebhooksEnabled(Boolean reachabilityWebhooksEnabled) {
+        this.reachabilityWebhooksEnabled = reachabilityWebhooksEnabled;
+        return this;
+    }
+    @SpeakeasyMetadata("form:name=WebhookUrl")
+    public String webhookUrl;
+    public UpdateSyncServiceUpdateSyncServiceRequest withWebhookUrl(String webhookUrl) {
+        this.webhookUrl = webhookUrl;
+        return this;
+    }
+}

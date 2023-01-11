@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class GetTopExampleRequest {
+    public GetTopExamplePathParams pathParams;
+    public GetTopExampleRequest withPathParams(GetTopExamplePathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public GetTopExampleQueryParams queryParams;
+    public GetTopExampleRequest withQueryParams(GetTopExampleQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+}

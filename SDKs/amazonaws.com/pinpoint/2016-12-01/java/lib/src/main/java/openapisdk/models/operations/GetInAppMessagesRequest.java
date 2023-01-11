@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class GetInAppMessagesRequest {
+    public GetInAppMessagesPathParams pathParams;
+    public GetInAppMessagesRequest withPathParams(GetInAppMessagesPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public GetInAppMessagesHeaders headers;
+    public GetInAppMessagesRequest withHeaders(GetInAppMessagesHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+}

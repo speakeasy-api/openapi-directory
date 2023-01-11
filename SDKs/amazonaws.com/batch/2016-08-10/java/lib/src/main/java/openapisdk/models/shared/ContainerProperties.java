@@ -1,0 +1,152 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * ContainerProperties
+ * Container properties are used in job definitions to describe the container that's launched as part of a job.
+**/
+public class ContainerProperties {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("command")
+    public String[] command;
+    public ContainerProperties withCommand(String[] command) {
+        this.command = command;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("environment")
+    public KeyValuePair[] environment;
+    public ContainerProperties withEnvironment(KeyValuePair[] environment) {
+        this.environment = environment;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("executionRoleArn")
+    public String executionRoleArn;
+    public ContainerProperties withExecutionRoleArn(String executionRoleArn) {
+        this.executionRoleArn = executionRoleArn;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("fargatePlatformConfiguration")
+    public FargatePlatformConfiguration fargatePlatformConfiguration;
+    public ContainerProperties withFargatePlatformConfiguration(FargatePlatformConfiguration fargatePlatformConfiguration) {
+        this.fargatePlatformConfiguration = fargatePlatformConfiguration;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("image")
+    public String image;
+    public ContainerProperties withImage(String image) {
+        this.image = image;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("instanceType")
+    public String instanceType;
+    public ContainerProperties withInstanceType(String instanceType) {
+        this.instanceType = instanceType;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("jobRoleArn")
+    public String jobRoleArn;
+    public ContainerProperties withJobRoleArn(String jobRoleArn) {
+        this.jobRoleArn = jobRoleArn;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("linuxParameters")
+    public LinuxParameters linuxParameters;
+    public ContainerProperties withLinuxParameters(LinuxParameters linuxParameters) {
+        this.linuxParameters = linuxParameters;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("logConfiguration")
+    public LogConfiguration logConfiguration;
+    public ContainerProperties withLogConfiguration(LogConfiguration logConfiguration) {
+        this.logConfiguration = logConfiguration;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("memory")
+    public java.util.Map<String, Object> memory;
+    public ContainerProperties withMemory(java.util.Map<String, Object> memory) {
+        this.memory = memory;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("mountPoints")
+    public MountPoint[] mountPoints;
+    public ContainerProperties withMountPoints(MountPoint[] mountPoints) {
+        this.mountPoints = mountPoints;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("networkConfiguration")
+    public NetworkConfiguration networkConfiguration;
+    public ContainerProperties withNetworkConfiguration(NetworkConfiguration networkConfiguration) {
+        this.networkConfiguration = networkConfiguration;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("privileged")
+    public Boolean privileged;
+    public ContainerProperties withPrivileged(Boolean privileged) {
+        this.privileged = privileged;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("readonlyRootFilesystem")
+    public Boolean readonlyRootFilesystem;
+    public ContainerProperties withReadonlyRootFilesystem(Boolean readonlyRootFilesystem) {
+        this.readonlyRootFilesystem = readonlyRootFilesystem;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("resourceRequirements")
+    public ResourceRequirement[] resourceRequirements;
+    public ContainerProperties withResourceRequirements(ResourceRequirement[] resourceRequirements) {
+        this.resourceRequirements = resourceRequirements;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("secrets")
+    public Secret[] secrets;
+    public ContainerProperties withSecrets(Secret[] secrets) {
+        this.secrets = secrets;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ulimits")
+    public Ulimit[] ulimits;
+    public ContainerProperties withUlimits(Ulimit[] ulimits) {
+        this.ulimits = ulimits;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("user")
+    public String user;
+    public ContainerProperties withUser(String user) {
+        this.user = user;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("vcpus")
+    public java.util.Map<String, Object> vcpus;
+    public ContainerProperties withVcpus(java.util.Map<String, Object> vcpus) {
+        this.vcpus = vcpus;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("volumes")
+    public Volume[] volumes;
+    public ContainerProperties withVolumes(Volume[] volumes) {
+        this.volumes = volumes;
+        return this;
+    }
+}

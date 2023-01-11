@@ -1,0 +1,36 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+public class IconList {
+    @JsonProperty("depth")
+    public Integer depth;
+    public IconList withDepth(Integer depth) {
+        this.depth = depth;
+        return this;
+    }
+    @JsonProperty("height")
+    public Integer height;
+    public IconList withHeight(Integer height) {
+        this.height = height;
+        return this;
+    }
+    @JsonProperty("mimetype")
+    public String mimetype;
+    public IconList withMimetype(String mimetype) {
+        this.mimetype = mimetype;
+        return this;
+    }
+    @JsonProperty("url")
+    public String url;
+    public IconList withUrl(String url) {
+        this.url = url;
+        return this;
+    }
+    @JsonProperty("width")
+    public Integer width;
+    public IconList withWidth(Integer width) {
+        this.width = width;
+        return this;
+    }
+}

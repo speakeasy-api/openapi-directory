@@ -1,0 +1,16 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+/**
+ * ToolchainSource
+ * The Amazon S3 location where the toolchain template file provided with the project request is stored. AWS CodeStar retrieves the file during project creation.
+**/
+public class ToolchainSource {
+    @JsonProperty("s3")
+    public S3Location s3;
+    public ToolchainSource withS3(S3Location s3) {
+        this.s3 = s3;
+        return this;
+    }
+}

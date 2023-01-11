@@ -1,0 +1,47 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * EventContextDataType
+ * Specifies the user context data captured at the time of an event request.
+**/
+public class EventContextDataType {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("City")
+    public String city;
+    public EventContextDataType withCity(String city) {
+        this.city = city;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Country")
+    public String country;
+    public EventContextDataType withCountry(String country) {
+        this.country = country;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("DeviceName")
+    public String deviceName;
+    public EventContextDataType withDeviceName(String deviceName) {
+        this.deviceName = deviceName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("IpAddress")
+    public String ipAddress;
+    public EventContextDataType withIpAddress(String ipAddress) {
+        this.ipAddress = ipAddress;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Timezone")
+    public String timezone;
+    public EventContextDataType withTimezone(String timezone) {
+        this.timezone = timezone;
+        return this;
+    }
+}

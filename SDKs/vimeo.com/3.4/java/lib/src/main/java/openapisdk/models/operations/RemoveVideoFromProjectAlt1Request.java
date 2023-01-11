@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class RemoveVideoFromProjectAlt1Request {
+    public RemoveVideoFromProjectAlt1PathParams pathParams;
+    public RemoveVideoFromProjectAlt1Request withPathParams(RemoveVideoFromProjectAlt1PathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public RemoveVideoFromProjectAlt1Security security;
+    public RemoveVideoFromProjectAlt1Request withSecurity(RemoveVideoFromProjectAlt1Security security) {
+        this.security = security;
+        return this;
+    }
+}

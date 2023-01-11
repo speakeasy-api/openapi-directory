@@ -1,0 +1,47 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * DetailedServiceLocation
+ * Details for a location offering a service.
+**/
+public class DetailedServiceLocation {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("additional_hours_info")
+    public String additionalHoursInfo;
+    public DetailedServiceLocation withAdditionalHoursInfo(String additionalHoursInfo) {
+        this.additionalHoursInfo = additionalHoursInfo;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("appointment_phones")
+    public AppointmentPhoneNumber[] appointmentPhones;
+    public DetailedServiceLocation withAppointmentPhones(AppointmentPhoneNumber[] appointmentPhones) {
+        this.appointmentPhones = appointmentPhones;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("email_contacts")
+    public DetailedServiceEmailContact[] emailContacts;
+    public DetailedServiceLocation withEmailContacts(DetailedServiceEmailContact[] emailContacts) {
+        this.emailContacts = emailContacts;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("facility_service_hours")
+    public DetailedServiceHours facilityServiceHours;
+    public DetailedServiceLocation withFacilityServiceHours(DetailedServiceHours facilityServiceHours) {
+        this.facilityServiceHours = facilityServiceHours;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("service_location_address")
+    public DetailedServiceAddress serviceLocationAddress;
+    public DetailedServiceLocation withServiceLocationAddress(DetailedServiceAddress serviceLocationAddress) {
+        this.serviceLocationAddress = serviceLocationAddress;
+        return this;
+    }
+}

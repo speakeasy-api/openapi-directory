@@ -1,0 +1,27 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class FirestoreProjectsDatabasesCollectionGroupsIndexesCreateRequest {
+    public FirestoreProjectsDatabasesCollectionGroupsIndexesCreatePathParams pathParams;
+    public FirestoreProjectsDatabasesCollectionGroupsIndexesCreateRequest withPathParams(FirestoreProjectsDatabasesCollectionGroupsIndexesCreatePathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public FirestoreProjectsDatabasesCollectionGroupsIndexesCreateQueryParams queryParams;
+    public FirestoreProjectsDatabasesCollectionGroupsIndexesCreateRequest withQueryParams(FirestoreProjectsDatabasesCollectionGroupsIndexesCreateQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public openapisdk.models.shared.GoogleFirestoreAdminV1beta2Index request;
+    public FirestoreProjectsDatabasesCollectionGroupsIndexesCreateRequest withRequest(openapisdk.models.shared.GoogleFirestoreAdminV1beta2Index request) {
+        this.request = request;
+        return this;
+    }
+    public FirestoreProjectsDatabasesCollectionGroupsIndexesCreateSecurity security;
+    public FirestoreProjectsDatabasesCollectionGroupsIndexesCreateRequest withSecurity(FirestoreProjectsDatabasesCollectionGroupsIndexesCreateSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

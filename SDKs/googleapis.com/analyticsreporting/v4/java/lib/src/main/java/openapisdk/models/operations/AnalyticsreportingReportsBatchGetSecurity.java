@@ -1,0 +1,18 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class AnalyticsreportingReportsBatchGetSecurity {
+    @SpeakeasyMetadata("security:option=true")
+    public AnalyticsreportingReportsBatchGetSecurityOption1 option1;
+    public AnalyticsreportingReportsBatchGetSecurity withOption1(AnalyticsreportingReportsBatchGetSecurityOption1 option1) {
+        this.option1 = option1;
+        return this;
+    }
+    @SpeakeasyMetadata("security:option=true")
+    public AnalyticsreportingReportsBatchGetSecurityOption2 option2;
+    public AnalyticsreportingReportsBatchGetSecurity withOption2(AnalyticsreportingReportsBatchGetSecurityOption2 option2) {
+        this.option2 = option2;
+        return this;
+    }
+}

@@ -1,0 +1,55 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class CopyProductInput {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("AcceptLanguage")
+    public String acceptLanguage;
+    public CopyProductInput withAcceptLanguage(String acceptLanguage) {
+        this.acceptLanguage = acceptLanguage;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("CopyOptions")
+    public CopyOptionEnum[] copyOptions;
+    public CopyProductInput withCopyOptions(CopyOptionEnum[] copyOptions) {
+        this.copyOptions = copyOptions;
+        return this;
+    }
+    @JsonProperty("IdempotencyToken")
+    public String idempotencyToken;
+    public CopyProductInput withIdempotencyToken(String idempotencyToken) {
+        this.idempotencyToken = idempotencyToken;
+        return this;
+    }
+    @JsonProperty("SourceProductArn")
+    public String sourceProductArn;
+    public CopyProductInput withSourceProductArn(String sourceProductArn) {
+        this.sourceProductArn = sourceProductArn;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("SourceProvisioningArtifactIdentifiers")
+    public java.util.Map<String, String>[] sourceProvisioningArtifactIdentifiers;
+    public CopyProductInput withSourceProvisioningArtifactIdentifiers(java.util.Map<String, String>[] sourceProvisioningArtifactIdentifiers) {
+        this.sourceProvisioningArtifactIdentifiers = sourceProvisioningArtifactIdentifiers;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("TargetProductId")
+    public String targetProductId;
+    public CopyProductInput withTargetProductId(String targetProductId) {
+        this.targetProductId = targetProductId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("TargetProductName")
+    public String targetProductName;
+    public CopyProductInput withTargetProductName(String targetProductName) {
+        this.targetProductName = targetProductName;
+        return this;
+    }
+}

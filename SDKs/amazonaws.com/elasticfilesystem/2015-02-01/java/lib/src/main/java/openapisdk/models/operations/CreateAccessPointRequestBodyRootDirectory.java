@@ -1,0 +1,26 @@
+package openapisdk.models.operations;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * CreateAccessPointRequestBodyRootDirectory
+ * Specifies the directory on the Amazon EFS file system that the access point provides access to. The access point exposes the specified file system path as the root directory of your file system to applications using the access point. NFS clients using the access point can only access data in the access point's <code>RootDirectory</code> and it's subdirectories.
+**/
+public class CreateAccessPointRequestBodyRootDirectory {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("CreationInfo")
+    public openapisdk.models.shared.CreationInfo creationInfo;
+    public CreateAccessPointRequestBodyRootDirectory withCreationInfo(openapisdk.models.shared.CreationInfo creationInfo) {
+        this.creationInfo = creationInfo;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Path")
+    public String path;
+    public CreateAccessPointRequestBodyRootDirectory withPath(String path) {
+        this.path = path;
+        return this;
+    }
+}

@@ -1,0 +1,110 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * License
+ * Software license that is managed in AWS License Manager.
+**/
+public class License {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Beneficiary")
+    public String beneficiary;
+    public License withBeneficiary(String beneficiary) {
+        this.beneficiary = beneficiary;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ConsumptionConfiguration")
+    public ConsumptionConfiguration consumptionConfiguration;
+    public License withConsumptionConfiguration(ConsumptionConfiguration consumptionConfiguration) {
+        this.consumptionConfiguration = consumptionConfiguration;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("CreateTime")
+    public String createTime;
+    public License withCreateTime(String createTime) {
+        this.createTime = createTime;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Entitlements")
+    public Entitlement[] entitlements;
+    public License withEntitlements(Entitlement[] entitlements) {
+        this.entitlements = entitlements;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("HomeRegion")
+    public String homeRegion;
+    public License withHomeRegion(String homeRegion) {
+        this.homeRegion = homeRegion;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Issuer")
+    public IssuerDetails issuer;
+    public License withIssuer(IssuerDetails issuer) {
+        this.issuer = issuer;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("LicenseArn")
+    public String licenseArn;
+    public License withLicenseArn(String licenseArn) {
+        this.licenseArn = licenseArn;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("LicenseMetadata")
+    public Metadata[] licenseMetadata;
+    public License withLicenseMetadata(Metadata[] licenseMetadata) {
+        this.licenseMetadata = licenseMetadata;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("LicenseName")
+    public String licenseName;
+    public License withLicenseName(String licenseName) {
+        this.licenseName = licenseName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ProductName")
+    public String productName;
+    public License withProductName(String productName) {
+        this.productName = productName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ProductSKU")
+    public String productSKU;
+    public License withProductSku(String productSKU) {
+        this.productSKU = productSKU;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Status")
+    public LicenseStatusEnum status;
+    public License withStatus(LicenseStatusEnum status) {
+        this.status = status;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Validity")
+    public DatetimeRange validity;
+    public License withValidity(DatetimeRange validity) {
+        this.validity = validity;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Version")
+    public String version;
+    public License withVersion(String version) {
+        this.version = version;
+        return this;
+    }
+}

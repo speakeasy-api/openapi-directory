@@ -1,0 +1,27 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class VaultMattersCloseRequest {
+    public VaultMattersClosePathParams pathParams;
+    public VaultMattersCloseRequest withPathParams(VaultMattersClosePathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public VaultMattersCloseQueryParams queryParams;
+    public VaultMattersCloseRequest withQueryParams(VaultMattersCloseQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public java.util.Map<String, Object> request;
+    public VaultMattersCloseRequest withRequest(java.util.Map<String, Object> request) {
+        this.request = request;
+        return this;
+    }
+    public VaultMattersCloseSecurity security;
+    public VaultMattersCloseRequest withSecurity(VaultMattersCloseSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

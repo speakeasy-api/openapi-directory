@@ -1,0 +1,17 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class SuspendUserRequest {
+    public SuspendUserPathParams pathParams;
+    public SuspendUserRequest withPathParams(SuspendUserPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    @SpeakeasyMetadata("request:mediaType=text/plain")
+    public byte[] request;
+    public SuspendUserRequest withRequest(byte[] request) {
+        this.request = request;
+        return this;
+    }
+}

@@ -1,0 +1,36 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class AddMediaIntentHandlingHeaders {
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept-Language")
+    public String acceptLanguage;
+    public AddMediaIntentHandlingHeaders withAcceptLanguage(String acceptLanguage) {
+        this.acceptLanguage = acceptLanguage;
+        return this;
+    }
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Request-Timeout")
+    public Double requestTimeout;
+    public AddMediaIntentHandlingHeaders withRequestTimeout(Double requestTimeout) {
+        this.requestTimeout = requestTimeout;
+        return this;
+    }
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=User-Agent")
+    public String userAgent;
+    public AddMediaIntentHandlingHeaders withUserAgent(String userAgent) {
+        this.userAgent = userAgent;
+        return this;
+    }
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-applecloudextension-retry-count")
+    public Double xApplecloudextensionRetryCount;
+    public AddMediaIntentHandlingHeaders withXApplecloudextensionRetryCount(Double xApplecloudextensionRetryCount) {
+        this.xApplecloudextensionRetryCount = xApplecloudextensionRetryCount;
+        return this;
+    }
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-applecloudextension-session-id")
+    public String xApplecloudextensionSessionId;
+    public AddMediaIntentHandlingHeaders withXApplecloudextensionSessionId(String xApplecloudextensionSessionId) {
+        this.xApplecloudextensionSessionId = xApplecloudextensionSessionId;
+        return this;
+    }
+}

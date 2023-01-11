@@ -1,0 +1,41 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class GetTableVersionsRequest {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("CatalogId")
+    public String catalogId;
+    public GetTableVersionsRequest withCatalogId(String catalogId) {
+        this.catalogId = catalogId;
+        return this;
+    }
+    @JsonProperty("DatabaseName")
+    public String databaseName;
+    public GetTableVersionsRequest withDatabaseName(String databaseName) {
+        this.databaseName = databaseName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("MaxResults")
+    public Long maxResults;
+    public GetTableVersionsRequest withMaxResults(Long maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("NextToken")
+    public String nextToken;
+    public GetTableVersionsRequest withNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    @JsonProperty("TableName")
+    public String tableName;
+    public GetTableVersionsRequest withTableName(String tableName) {
+        this.tableName = tableName;
+        return this;
+    }
+}

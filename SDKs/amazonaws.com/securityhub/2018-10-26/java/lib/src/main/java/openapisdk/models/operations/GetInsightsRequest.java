@@ -1,0 +1,22 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class GetInsightsRequest {
+    public GetInsightsQueryParams queryParams;
+    public GetInsightsRequest withQueryParams(GetInsightsQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public GetInsightsHeaders headers;
+    public GetInsightsRequest withHeaders(GetInsightsHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public GetInsightsRequestBody request;
+    public GetInsightsRequest withRequest(GetInsightsRequestBody request) {
+        this.request = request;
+        return this;
+    }
+}

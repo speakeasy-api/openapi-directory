@@ -1,0 +1,30 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+public class CreateUserRequest {
+    @JsonProperty("DisplayName")
+    public String displayName;
+    public CreateUserRequest withDisplayName(String displayName) {
+        this.displayName = displayName;
+        return this;
+    }
+    @JsonProperty("Name")
+    public String name;
+    public CreateUserRequest withName(String name) {
+        this.name = name;
+        return this;
+    }
+    @JsonProperty("OrganizationId")
+    public String organizationId;
+    public CreateUserRequest withOrganizationId(String organizationId) {
+        this.organizationId = organizationId;
+        return this;
+    }
+    @JsonProperty("Password")
+    public String password;
+    public CreateUserRequest withPassword(String password) {
+        this.password = password;
+        return this;
+    }
+}

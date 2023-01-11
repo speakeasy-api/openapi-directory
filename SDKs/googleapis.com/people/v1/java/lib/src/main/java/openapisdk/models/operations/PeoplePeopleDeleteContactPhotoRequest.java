@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class PeoplePeopleDeleteContactPhotoRequest {
+    public PeoplePeopleDeleteContactPhotoPathParams pathParams;
+    public PeoplePeopleDeleteContactPhotoRequest withPathParams(PeoplePeopleDeleteContactPhotoPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public PeoplePeopleDeleteContactPhotoQueryParams queryParams;
+    public PeoplePeopleDeleteContactPhotoRequest withQueryParams(PeoplePeopleDeleteContactPhotoQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public PeoplePeopleDeleteContactPhotoSecurity security;
+    public PeoplePeopleDeleteContactPhotoRequest withSecurity(PeoplePeopleDeleteContactPhotoSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

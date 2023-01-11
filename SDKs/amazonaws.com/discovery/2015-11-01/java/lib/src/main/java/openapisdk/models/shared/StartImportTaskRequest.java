@@ -1,0 +1,27 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class StartImportTaskRequest {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("clientRequestToken")
+    public String clientRequestToken;
+    public StartImportTaskRequest withClientRequestToken(String clientRequestToken) {
+        this.clientRequestToken = clientRequestToken;
+        return this;
+    }
+    @JsonProperty("importUrl")
+    public String importUrl;
+    public StartImportTaskRequest withImportUrl(String importUrl) {
+        this.importUrl = importUrl;
+        return this;
+    }
+    @JsonProperty("name")
+    public String name;
+    public StartImportTaskRequest withName(String name) {
+        this.name = name;
+        return this;
+    }
+}

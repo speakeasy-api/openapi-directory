@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class DriveDrivesGetRequest {
+    public DriveDrivesGetPathParams pathParams;
+    public DriveDrivesGetRequest withPathParams(DriveDrivesGetPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public DriveDrivesGetQueryParams queryParams;
+    public DriveDrivesGetRequest withQueryParams(DriveDrivesGetQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public DriveDrivesGetSecurity security;
+    public DriveDrivesGetRequest withSecurity(DriveDrivesGetSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

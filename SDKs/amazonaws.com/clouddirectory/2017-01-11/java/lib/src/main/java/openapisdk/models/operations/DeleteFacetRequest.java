@@ -1,0 +1,17 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class DeleteFacetRequest {
+    public DeleteFacetHeaders headers;
+    public DeleteFacetRequest withHeaders(DeleteFacetHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public DeleteFacetRequestBody request;
+    public DeleteFacetRequest withRequest(DeleteFacetRequestBody request) {
+        this.request = request;
+        return this;
+    }
+}

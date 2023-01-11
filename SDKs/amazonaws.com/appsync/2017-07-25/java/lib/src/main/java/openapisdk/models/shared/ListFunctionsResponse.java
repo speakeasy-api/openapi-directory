@@ -1,0 +1,22 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class ListFunctionsResponse {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("functions")
+    public FunctionConfiguration[] functions;
+    public ListFunctionsResponse withFunctions(FunctionConfiguration[] functions) {
+        this.functions = functions;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("nextToken")
+    public String nextToken;
+    public ListFunctionsResponse withNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+}

@@ -1,0 +1,18 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class DisplayvideoAdvertisersCampaignsGetSecurity {
+    @SpeakeasyMetadata("security:option=true")
+    public DisplayvideoAdvertisersCampaignsGetSecurityOption1 option1;
+    public DisplayvideoAdvertisersCampaignsGetSecurity withOption1(DisplayvideoAdvertisersCampaignsGetSecurityOption1 option1) {
+        this.option1 = option1;
+        return this;
+    }
+    @SpeakeasyMetadata("security:option=true")
+    public DisplayvideoAdvertisersCampaignsGetSecurityOption2 option2;
+    public DisplayvideoAdvertisersCampaignsGetSecurity withOption2(DisplayvideoAdvertisersCampaignsGetSecurityOption2 option2) {
+        this.option2 = option2;
+        return this;
+    }
+}

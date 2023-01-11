@@ -1,0 +1,319 @@
+package openapisdk.models.shared;
+
+import java.time.OffsetDateTime;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import openapisdk.utils.DateTimeSerializer;
+import openapisdk.utils.DateTimeDeserializer;
+
+/**
+ * PullRequest
+ * Pull requests let you tell others about changes you've pushed to a repository on GitHub. Once a pull request is sent, interested parties can review the set of changes, discuss potential modifications, and even push follow-up commits if necessary.
+**/
+public class PullRequest {
+    @JsonProperty("_links")
+    public PullRequestLinks links;
+    public PullRequest withLinks(PullRequestLinks links) {
+        this.links = links;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("active_lock_reason")
+    public String activeLockReason;
+    public PullRequest withActiveLockReason(String activeLockReason) {
+        this.activeLockReason = activeLockReason;
+        return this;
+    }
+    @JsonProperty("additions")
+    public Long additions;
+    public PullRequest withAdditions(Long additions) {
+        this.additions = additions;
+        return this;
+    }
+    @JsonProperty("assignee")
+    public PullRequestSimpleUser assignee;
+    public PullRequest withAssignee(PullRequestSimpleUser assignee) {
+        this.assignee = assignee;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("assignees")
+    public SimpleUser[] assignees;
+    public PullRequest withAssignees(SimpleUser[] assignees) {
+        this.assignees = assignees;
+        return this;
+    }
+    @JsonProperty("author_association")
+    public AuthorAssociationEnum authorAssociation;
+    public PullRequest withAuthorAssociation(AuthorAssociationEnum authorAssociation) {
+        this.authorAssociation = authorAssociation;
+        return this;
+    }
+    @JsonProperty("auto_merge")
+    public AutoMerge autoMerge;
+    public PullRequest withAutoMerge(AutoMerge autoMerge) {
+        this.autoMerge = autoMerge;
+        return this;
+    }
+    @JsonProperty("base")
+    public PullRequestBase base;
+    public PullRequest withBase(PullRequestBase base) {
+        this.base = base;
+        return this;
+    }
+    @JsonProperty("body")
+    public String body;
+    public PullRequest withBody(String body) {
+        this.body = body;
+        return this;
+    }
+    @JsonProperty("changed_files")
+    public Long changedFiles;
+    public PullRequest withChangedFiles(Long changedFiles) {
+        this.changedFiles = changedFiles;
+        return this;
+    }
+    @JsonSerialize(using = DateTimeSerializer.class)
+    @JsonDeserialize(using = DateTimeDeserializer.class)
+    @JsonProperty("closed_at")
+    public OffsetDateTime closedAt;
+    public PullRequest withClosedAt(OffsetDateTime closedAt) {
+        this.closedAt = closedAt;
+        return this;
+    }
+    @JsonProperty("comments")
+    public Long comments;
+    public PullRequest withComments(Long comments) {
+        this.comments = comments;
+        return this;
+    }
+    @JsonProperty("comments_url")
+    public String commentsUrl;
+    public PullRequest withCommentsUrl(String commentsUrl) {
+        this.commentsUrl = commentsUrl;
+        return this;
+    }
+    @JsonProperty("commits")
+    public Long commits;
+    public PullRequest withCommits(Long commits) {
+        this.commits = commits;
+        return this;
+    }
+    @JsonProperty("commits_url")
+    public String commitsUrl;
+    public PullRequest withCommitsUrl(String commitsUrl) {
+        this.commitsUrl = commitsUrl;
+        return this;
+    }
+    @JsonSerialize(using = DateTimeSerializer.class)
+    @JsonDeserialize(using = DateTimeDeserializer.class)
+    @JsonProperty("created_at")
+    public OffsetDateTime createdAt;
+    public PullRequest withCreatedAt(OffsetDateTime createdAt) {
+        this.createdAt = createdAt;
+        return this;
+    }
+    @JsonProperty("deletions")
+    public Long deletions;
+    public PullRequest withDeletions(Long deletions) {
+        this.deletions = deletions;
+        return this;
+    }
+    @JsonProperty("diff_url")
+    public String diffUrl;
+    public PullRequest withDiffUrl(String diffUrl) {
+        this.diffUrl = diffUrl;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("draft")
+    public Boolean draft;
+    public PullRequest withDraft(Boolean draft) {
+        this.draft = draft;
+        return this;
+    }
+    @JsonProperty("head")
+    public PullRequestHead head;
+    public PullRequest withHead(PullRequestHead head) {
+        this.head = head;
+        return this;
+    }
+    @JsonProperty("html_url")
+    public String htmlUrl;
+    public PullRequest withHtmlUrl(String htmlUrl) {
+        this.htmlUrl = htmlUrl;
+        return this;
+    }
+    @JsonProperty("id")
+    public Long id;
+    public PullRequest withId(Long id) {
+        this.id = id;
+        return this;
+    }
+    @JsonProperty("issue_url")
+    public String issueUrl;
+    public PullRequest withIssueUrl(String issueUrl) {
+        this.issueUrl = issueUrl;
+        return this;
+    }
+    @JsonProperty("labels")
+    public PullRequestLabels[] labels;
+    public PullRequest withLabels(PullRequestLabels[] labels) {
+        this.labels = labels;
+        return this;
+    }
+    @JsonProperty("locked")
+    public Boolean locked;
+    public PullRequest withLocked(Boolean locked) {
+        this.locked = locked;
+        return this;
+    }
+    @JsonProperty("maintainer_can_modify")
+    public Boolean maintainerCanModify;
+    public PullRequest withMaintainerCanModify(Boolean maintainerCanModify) {
+        this.maintainerCanModify = maintainerCanModify;
+        return this;
+    }
+    @JsonProperty("merge_commit_sha")
+    public String mergeCommitSha;
+    public PullRequest withMergeCommitSha(String mergeCommitSha) {
+        this.mergeCommitSha = mergeCommitSha;
+        return this;
+    }
+    @JsonProperty("mergeable")
+    public Boolean mergeable;
+    public PullRequest withMergeable(Boolean mergeable) {
+        this.mergeable = mergeable;
+        return this;
+    }
+    @JsonProperty("mergeable_state")
+    public String mergeableState;
+    public PullRequest withMergeableState(String mergeableState) {
+        this.mergeableState = mergeableState;
+        return this;
+    }
+    @JsonProperty("merged")
+    public Boolean merged;
+    public PullRequest withMerged(Boolean merged) {
+        this.merged = merged;
+        return this;
+    }
+    @JsonSerialize(using = DateTimeSerializer.class)
+    @JsonDeserialize(using = DateTimeDeserializer.class)
+    @JsonProperty("merged_at")
+    public OffsetDateTime mergedAt;
+    public PullRequest withMergedAt(OffsetDateTime mergedAt) {
+        this.mergedAt = mergedAt;
+        return this;
+    }
+    @JsonProperty("merged_by")
+    public PullRequestSimpleUser mergedBy;
+    public PullRequest withMergedBy(PullRequestSimpleUser mergedBy) {
+        this.mergedBy = mergedBy;
+        return this;
+    }
+    @JsonProperty("milestone")
+    public PullRequestMilestone milestone;
+    public PullRequest withMilestone(PullRequestMilestone milestone) {
+        this.milestone = milestone;
+        return this;
+    }
+    @JsonProperty("node_id")
+    public String nodeId;
+    public PullRequest withNodeId(String nodeId) {
+        this.nodeId = nodeId;
+        return this;
+    }
+    @JsonProperty("number")
+    public Long number;
+    public PullRequest withNumber(Long number) {
+        this.number = number;
+        return this;
+    }
+    @JsonProperty("patch_url")
+    public String patchUrl;
+    public PullRequest withPatchUrl(String patchUrl) {
+        this.patchUrl = patchUrl;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("rebaseable")
+    public Boolean rebaseable;
+    public PullRequest withRebaseable(Boolean rebaseable) {
+        this.rebaseable = rebaseable;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("requested_reviewers")
+    public SimpleUser[] requestedReviewers;
+    public PullRequest withRequestedReviewers(SimpleUser[] requestedReviewers) {
+        this.requestedReviewers = requestedReviewers;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("requested_teams")
+    public TeamSimple[] requestedTeams;
+    public PullRequest withRequestedTeams(TeamSimple[] requestedTeams) {
+        this.requestedTeams = requestedTeams;
+        return this;
+    }
+    @JsonProperty("review_comment_url")
+    public String reviewCommentUrl;
+    public PullRequest withReviewCommentUrl(String reviewCommentUrl) {
+        this.reviewCommentUrl = reviewCommentUrl;
+        return this;
+    }
+    @JsonProperty("review_comments")
+    public Long reviewComments;
+    public PullRequest withReviewComments(Long reviewComments) {
+        this.reviewComments = reviewComments;
+        return this;
+    }
+    @JsonProperty("review_comments_url")
+    public String reviewCommentsUrl;
+    public PullRequest withReviewCommentsUrl(String reviewCommentsUrl) {
+        this.reviewCommentsUrl = reviewCommentsUrl;
+        return this;
+    }
+    @JsonProperty("state")
+    public PullRequestStateEnum state;
+    public PullRequest withState(PullRequestStateEnum state) {
+        this.state = state;
+        return this;
+    }
+    @JsonProperty("statuses_url")
+    public String statusesUrl;
+    public PullRequest withStatusesUrl(String statusesUrl) {
+        this.statusesUrl = statusesUrl;
+        return this;
+    }
+    @JsonProperty("title")
+    public String title;
+    public PullRequest withTitle(String title) {
+        this.title = title;
+        return this;
+    }
+    @JsonSerialize(using = DateTimeSerializer.class)
+    @JsonDeserialize(using = DateTimeDeserializer.class)
+    @JsonProperty("updated_at")
+    public OffsetDateTime updatedAt;
+    public PullRequest withUpdatedAt(OffsetDateTime updatedAt) {
+        this.updatedAt = updatedAt;
+        return this;
+    }
+    @JsonProperty("url")
+    public String url;
+    public PullRequest withUrl(String url) {
+        this.url = url;
+        return this;
+    }
+    @JsonProperty("user")
+    public PullRequestSimpleUser user;
+    public PullRequest withUser(PullRequestSimpleUser user) {
+        this.user = user;
+        return this;
+    }
+}

@@ -1,0 +1,18 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+public class ErrorCategory {
+    @JsonProperty("httpStatus")
+    public ErrorCategoryHttpStatusEnum httpStatus;
+    public ErrorCategory withHttpStatus(ErrorCategoryHttpStatusEnum httpStatus) {
+        this.httpStatus = httpStatus;
+        return this;
+    }
+    @JsonProperty("name")
+    public String name;
+    public ErrorCategory withName(String name) {
+        this.name = name;
+        return this;
+    }
+}

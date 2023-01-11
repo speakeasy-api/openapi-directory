@@ -1,0 +1,43 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class DescribeNamespaceResponse {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("namespaceArn")
+    public String namespaceArn;
+    public DescribeNamespaceResponse withNamespaceArn(String namespaceArn) {
+        this.namespaceArn = namespaceArn;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("namespaceName")
+    public String namespaceName;
+    public DescribeNamespaceResponse withNamespaceName(String namespaceName) {
+        this.namespaceName = namespaceName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("namespaceVersion")
+    public Long namespaceVersion;
+    public DescribeNamespaceResponse withNamespaceVersion(Long namespaceVersion) {
+        this.namespaceVersion = namespaceVersion;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("trackingNamespaceName")
+    public String trackingNamespaceName;
+    public DescribeNamespaceResponse withTrackingNamespaceName(String trackingNamespaceName) {
+        this.trackingNamespaceName = trackingNamespaceName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("trackingNamespaceVersion")
+    public Long trackingNamespaceVersion;
+    public DescribeNamespaceResponse withTrackingNamespaceVersion(Long trackingNamespaceVersion) {
+        this.trackingNamespaceVersion = trackingNamespaceVersion;
+        return this;
+    }
+}

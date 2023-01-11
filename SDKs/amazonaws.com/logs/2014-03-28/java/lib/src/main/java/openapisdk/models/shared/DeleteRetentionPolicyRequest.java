@@ -1,0 +1,12 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+public class DeleteRetentionPolicyRequest {
+    @JsonProperty("logGroupName")
+    public String logGroupName;
+    public DeleteRetentionPolicyRequest withLogGroupName(String logGroupName) {
+        this.logGroupName = logGroupName;
+        return this;
+    }
+}

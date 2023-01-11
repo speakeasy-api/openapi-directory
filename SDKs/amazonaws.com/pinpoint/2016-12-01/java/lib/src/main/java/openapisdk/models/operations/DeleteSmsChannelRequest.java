@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class DeleteSmsChannelRequest {
+    public DeleteSmsChannelPathParams pathParams;
+    public DeleteSmsChannelRequest withPathParams(DeleteSmsChannelPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public DeleteSmsChannelHeaders headers;
+    public DeleteSmsChannelRequest withHeaders(DeleteSmsChannelHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+}

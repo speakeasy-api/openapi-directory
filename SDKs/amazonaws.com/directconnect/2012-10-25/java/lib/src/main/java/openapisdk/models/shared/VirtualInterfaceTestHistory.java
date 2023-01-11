@@ -1,0 +1,77 @@
+package openapisdk.models.shared;
+
+import java.time.OffsetDateTime;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import openapisdk.utils.DateTimeSerializer;
+import openapisdk.utils.DateTimeDeserializer;
+
+/**
+ * VirtualInterfaceTestHistory
+ * Information about the virtual interface failover test.
+**/
+public class VirtualInterfaceTestHistory {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("bgpPeers")
+    public String[] bgpPeers;
+    public VirtualInterfaceTestHistory withBgpPeers(String[] bgpPeers) {
+        this.bgpPeers = bgpPeers;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonSerialize(contentUsing = DateTimeSerializer.class)
+    @JsonDeserialize(contentUsing = DateTimeDeserializer.class)
+    @JsonProperty("endTime")
+    public OffsetDateTime endTime;
+    public VirtualInterfaceTestHistory withEndTime(OffsetDateTime endTime) {
+        this.endTime = endTime;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ownerAccount")
+    public String ownerAccount;
+    public VirtualInterfaceTestHistory withOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonSerialize(contentUsing = DateTimeSerializer.class)
+    @JsonDeserialize(contentUsing = DateTimeDeserializer.class)
+    @JsonProperty("startTime")
+    public OffsetDateTime startTime;
+    public VirtualInterfaceTestHistory withStartTime(OffsetDateTime startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("status")
+    public String status;
+    public VirtualInterfaceTestHistory withStatus(String status) {
+        this.status = status;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("testDurationInMinutes")
+    public Long testDurationInMinutes;
+    public VirtualInterfaceTestHistory withTestDurationInMinutes(Long testDurationInMinutes) {
+        this.testDurationInMinutes = testDurationInMinutes;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("testId")
+    public String testId;
+    public VirtualInterfaceTestHistory withTestId(String testId) {
+        this.testId = testId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("virtualInterfaceId")
+    public String virtualInterfaceId;
+    public VirtualInterfaceTestHistory withVirtualInterfaceId(String virtualInterfaceId) {
+        this.virtualInterfaceId = virtualInterfaceId;
+        return this;
+    }
+}

@@ -1,0 +1,43 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class DescribePortfolioShareStatusOutput {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("OrganizationNodeValue")
+    public String organizationNodeValue;
+    public DescribePortfolioShareStatusOutput withOrganizationNodeValue(String organizationNodeValue) {
+        this.organizationNodeValue = organizationNodeValue;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("PortfolioId")
+    public String portfolioId;
+    public DescribePortfolioShareStatusOutput withPortfolioId(String portfolioId) {
+        this.portfolioId = portfolioId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("PortfolioShareToken")
+    public String portfolioShareToken;
+    public DescribePortfolioShareStatusOutput withPortfolioShareToken(String portfolioShareToken) {
+        this.portfolioShareToken = portfolioShareToken;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ShareDetails")
+    public ShareDetails shareDetails;
+    public DescribePortfolioShareStatusOutput withShareDetails(ShareDetails shareDetails) {
+        this.shareDetails = shareDetails;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Status")
+    public ShareStatusEnum status;
+    public DescribePortfolioShareStatusOutput withStatus(ShareStatusEnum status) {
+        this.status = status;
+        return this;
+    }
+}

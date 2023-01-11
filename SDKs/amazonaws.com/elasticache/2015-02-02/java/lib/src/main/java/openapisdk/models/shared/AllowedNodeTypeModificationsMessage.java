@@ -1,0 +1,20 @@
+package openapisdk.models.shared;
+
+
+
+/**
+ * AllowedNodeTypeModificationsMessage
+ * Represents the allowed node types you can use to modify your cluster or replication group.
+**/
+public class AllowedNodeTypeModificationsMessage {
+    public String[] scaleDownModifications;
+    public AllowedNodeTypeModificationsMessage withScaleDownModifications(String[] scaleDownModifications) {
+        this.scaleDownModifications = scaleDownModifications;
+        return this;
+    }
+    public String[] scaleUpModifications;
+    public AllowedNodeTypeModificationsMessage withScaleUpModifications(String[] scaleUpModifications) {
+        this.scaleUpModifications = scaleUpModifications;
+        return this;
+    }
+}

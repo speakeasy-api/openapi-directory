@@ -1,0 +1,64 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class PlayerUsageUsage {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("firstDown")
+    public Double firstDown;
+    public PlayerUsageUsage withFirstDown(Double firstDown) {
+        this.firstDown = firstDown;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("overall")
+    public Double overall;
+    public PlayerUsageUsage withOverall(Double overall) {
+        this.overall = overall;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("pass")
+    public Double pass;
+    public PlayerUsageUsage withPass(Double pass) {
+        this.pass = pass;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("passingDowns")
+    public Double passingDowns;
+    public PlayerUsageUsage withPassingDowns(Double passingDowns) {
+        this.passingDowns = passingDowns;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("rush")
+    public Double rush;
+    public PlayerUsageUsage withRush(Double rush) {
+        this.rush = rush;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("secondDown")
+    public Double secondDown;
+    public PlayerUsageUsage withSecondDown(Double secondDown) {
+        this.secondDown = secondDown;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("standardDowns")
+    public Double standardDowns;
+    public PlayerUsageUsage withStandardDowns(Double standardDowns) {
+        this.standardDowns = standardDowns;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("thirdDown")
+    public Double thirdDown;
+    public PlayerUsageUsage withThirdDown(Double thirdDown) {
+        this.thirdDown = thirdDown;
+        return this;
+    }
+}

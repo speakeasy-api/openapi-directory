@@ -1,0 +1,22 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+/**
+ * EventFilter
+ * Specifies the settings for an event that causes a campaign to be sent or a journey activity to be performed.
+**/
+public class EventFilter {
+    @JsonProperty("Dimensions")
+    public EventDimensions dimensions;
+    public EventFilter withDimensions(EventDimensions dimensions) {
+        this.dimensions = dimensions;
+        return this;
+    }
+    @JsonProperty("FilterType")
+    public FilterTypeEnum filterType;
+    public EventFilter withFilterType(FilterTypeEnum filterType) {
+        this.filterType = filterType;
+        return this;
+    }
+}

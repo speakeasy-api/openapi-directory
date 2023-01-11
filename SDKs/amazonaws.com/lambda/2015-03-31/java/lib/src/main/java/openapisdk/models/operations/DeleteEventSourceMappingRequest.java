@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class DeleteEventSourceMappingRequest {
+    public DeleteEventSourceMappingPathParams pathParams;
+    public DeleteEventSourceMappingRequest withPathParams(DeleteEventSourceMappingPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public DeleteEventSourceMappingHeaders headers;
+    public DeleteEventSourceMappingRequest withHeaders(DeleteEventSourceMappingHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+}

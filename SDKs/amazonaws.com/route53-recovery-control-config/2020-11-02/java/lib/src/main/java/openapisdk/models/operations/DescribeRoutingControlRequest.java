@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class DescribeRoutingControlRequest {
+    public DescribeRoutingControlPathParams pathParams;
+    public DescribeRoutingControlRequest withPathParams(DescribeRoutingControlPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public DescribeRoutingControlHeaders headers;
+    public DescribeRoutingControlRequest withHeaders(DescribeRoutingControlHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+}

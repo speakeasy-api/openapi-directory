@@ -1,0 +1,24 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class UpdateAccountSettingsUpdateAccountSettingsRequest {
+    @SpeakeasyMetadata("form:name=AdvancedFeatures")
+    public Boolean advancedFeatures;
+    public UpdateAccountSettingsUpdateAccountSettingsRequest withAdvancedFeatures(Boolean advancedFeatures) {
+        this.advancedFeatures = advancedFeatures;
+        return this;
+    }
+    @SpeakeasyMetadata("form:name=SubaccountSid")
+    public String subaccountSid;
+    public UpdateAccountSettingsUpdateAccountSettingsRequest withSubaccountSid(String subaccountSid) {
+        this.subaccountSid = subaccountSid;
+        return this;
+    }
+    @SpeakeasyMetadata("form:name=VoiceTrace")
+    public Boolean voiceTrace;
+    public UpdateAccountSettingsUpdateAccountSettingsRequest withVoiceTrace(Boolean voiceTrace) {
+        this.voiceTrace = voiceTrace;
+        return this;
+    }
+}

@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class GetAssociationsToRequest {
+    public GetAssociationsToPathParams pathParams;
+    public GetAssociationsToRequest withPathParams(GetAssociationsToPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public GetAssociationsToQueryParams queryParams;
+    public GetAssociationsToRequest withQueryParams(GetAssociationsToQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+}

@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class GetCachePolicy20200531Request {
+    public GetCachePolicy20200531PathParams pathParams;
+    public GetCachePolicy20200531Request withPathParams(GetCachePolicy20200531PathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public GetCachePolicy20200531Headers headers;
+    public GetCachePolicy20200531Request withHeaders(GetCachePolicy20200531Headers headers) {
+        this.headers = headers;
+        return this;
+    }
+}

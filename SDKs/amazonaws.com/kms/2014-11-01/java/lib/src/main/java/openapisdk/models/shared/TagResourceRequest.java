@@ -1,0 +1,18 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+public class TagResourceRequest {
+    @JsonProperty("KeyId")
+    public String keyId;
+    public TagResourceRequest withKeyId(String keyId) {
+        this.keyId = keyId;
+        return this;
+    }
+    @JsonProperty("Tags")
+    public Tag[] tags;
+    public TagResourceRequest withTags(Tag[] tags) {
+        this.tags = tags;
+        return this;
+    }
+}

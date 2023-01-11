@@ -1,0 +1,33 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * AwsCodeBuildProjectVpcConfig
+ * Information about the VPC configuration that CodeBuild accesses.
+**/
+public class AwsCodeBuildProjectVpcConfig {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("SecurityGroupIds")
+    public String[] securityGroupIds;
+    public AwsCodeBuildProjectVpcConfig withSecurityGroupIds(String[] securityGroupIds) {
+        this.securityGroupIds = securityGroupIds;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Subnets")
+    public String[] subnets;
+    public AwsCodeBuildProjectVpcConfig withSubnets(String[] subnets) {
+        this.subnets = subnets;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("VpcId")
+    public String vpcId;
+    public AwsCodeBuildProjectVpcConfig withVpcId(String vpcId) {
+        this.vpcId = vpcId;
+        return this;
+    }
+}

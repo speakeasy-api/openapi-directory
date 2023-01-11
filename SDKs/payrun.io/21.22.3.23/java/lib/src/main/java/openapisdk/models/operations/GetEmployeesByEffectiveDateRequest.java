@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class GetEmployeesByEffectiveDateRequest {
+    public GetEmployeesByEffectiveDatePathParams pathParams;
+    public GetEmployeesByEffectiveDateRequest withPathParams(GetEmployeesByEffectiveDatePathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public GetEmployeesByEffectiveDateHeaders headers;
+    public GetEmployeesByEffectiveDateRequest withHeaders(GetEmployeesByEffectiveDateHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+}

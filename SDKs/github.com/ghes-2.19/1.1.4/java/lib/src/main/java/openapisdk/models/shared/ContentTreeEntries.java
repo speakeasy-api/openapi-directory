@@ -1,0 +1,61 @@
+package openapisdk.models.shared;
+
+
+
+public class ContentTreeEntries {
+    public ContentTreeEntriesLinks links;
+    public ContentTreeEntries withLinks(ContentTreeEntriesLinks links) {
+        this.links = links;
+        return this;
+    }
+    public String content;
+    public ContentTreeEntries withContent(String content) {
+        this.content = content;
+        return this;
+    }
+    public String downloadUrl;
+    public ContentTreeEntries withDownloadUrl(String downloadUrl) {
+        this.downloadUrl = downloadUrl;
+        return this;
+    }
+    public String gitUrl;
+    public ContentTreeEntries withGitUrl(String gitUrl) {
+        this.gitUrl = gitUrl;
+        return this;
+    }
+    public String htmlUrl;
+    public ContentTreeEntries withHtmlUrl(String htmlUrl) {
+        this.htmlUrl = htmlUrl;
+        return this;
+    }
+    public String name;
+    public ContentTreeEntries withName(String name) {
+        this.name = name;
+        return this;
+    }
+    public String path;
+    public ContentTreeEntries withPath(String path) {
+        this.path = path;
+        return this;
+    }
+    public String sha;
+    public ContentTreeEntries withSha(String sha) {
+        this.sha = sha;
+        return this;
+    }
+    public Long size;
+    public ContentTreeEntries withSize(Long size) {
+        this.size = size;
+        return this;
+    }
+    public String type;
+    public ContentTreeEntries withType(String type) {
+        this.type = type;
+        return this;
+    }
+    public String url;
+    public ContentTreeEntries withUrl(String url) {
+        this.url = url;
+        return this;
+    }
+}

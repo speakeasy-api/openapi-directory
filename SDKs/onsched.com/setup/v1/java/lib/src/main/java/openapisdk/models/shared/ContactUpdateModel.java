@@ -1,0 +1,57 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class ContactUpdateModel {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("businessPhone")
+    public String businessPhone;
+    public ContactUpdateModel withBusinessPhone(String businessPhone) {
+        this.businessPhone = businessPhone;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("businessPhoneExt")
+    public String businessPhoneExt;
+    public ContactUpdateModel withBusinessPhoneExt(String businessPhoneExt) {
+        this.businessPhoneExt = businessPhoneExt;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("conferenceInfo")
+    public String conferenceInfo;
+    public ContactUpdateModel withConferenceInfo(String conferenceInfo) {
+        this.conferenceInfo = conferenceInfo;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("homePhone")
+    public String homePhone;
+    public ContactUpdateModel withHomePhone(String homePhone) {
+        this.homePhone = homePhone;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("mobilePhone")
+    public String mobilePhone;
+    public ContactUpdateModel withMobilePhone(String mobilePhone) {
+        this.mobilePhone = mobilePhone;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("preferredPhoneType")
+    public String preferredPhoneType;
+    public ContactUpdateModel withPreferredPhoneType(String preferredPhoneType) {
+        this.preferredPhoneType = preferredPhoneType;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("skypeUsername")
+    public String skypeUsername;
+    public ContactUpdateModel withSkypeUsername(String skypeUsername) {
+        this.skypeUsername = skypeUsername;
+        return this;
+    }
+}

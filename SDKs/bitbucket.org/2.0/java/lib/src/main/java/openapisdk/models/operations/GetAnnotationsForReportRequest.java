@@ -1,0 +1,11 @@
+package openapisdk.models.operations;
+
+
+
+public class GetAnnotationsForReportRequest {
+    public GetAnnotationsForReportPathParams pathParams;
+    public GetAnnotationsForReportRequest withPathParams(GetAnnotationsForReportPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+}

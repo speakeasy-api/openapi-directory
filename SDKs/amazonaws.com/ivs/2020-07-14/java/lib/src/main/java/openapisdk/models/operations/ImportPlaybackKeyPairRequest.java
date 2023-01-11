@@ -1,0 +1,17 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class ImportPlaybackKeyPairRequest {
+    public ImportPlaybackKeyPairHeaders headers;
+    public ImportPlaybackKeyPairRequest withHeaders(ImportPlaybackKeyPairHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public ImportPlaybackKeyPairRequestBody request;
+    public ImportPlaybackKeyPairRequest withRequest(ImportPlaybackKeyPairRequestBody request) {
+        this.request = request;
+        return this;
+    }
+}

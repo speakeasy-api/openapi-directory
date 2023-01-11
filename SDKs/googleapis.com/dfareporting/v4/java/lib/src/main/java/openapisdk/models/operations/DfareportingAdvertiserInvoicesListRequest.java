@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class DfareportingAdvertiserInvoicesListRequest {
+    public DfareportingAdvertiserInvoicesListPathParams pathParams;
+    public DfareportingAdvertiserInvoicesListRequest withPathParams(DfareportingAdvertiserInvoicesListPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public DfareportingAdvertiserInvoicesListQueryParams queryParams;
+    public DfareportingAdvertiserInvoicesListRequest withQueryParams(DfareportingAdvertiserInvoicesListQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public DfareportingAdvertiserInvoicesListSecurity security;
+    public DfareportingAdvertiserInvoicesListRequest withSecurity(DfareportingAdvertiserInvoicesListSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

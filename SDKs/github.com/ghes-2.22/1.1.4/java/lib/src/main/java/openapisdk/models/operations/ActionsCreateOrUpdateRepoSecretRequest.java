@@ -1,0 +1,17 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class ActionsCreateOrUpdateRepoSecretRequest {
+    public ActionsCreateOrUpdateRepoSecretPathParams pathParams;
+    public ActionsCreateOrUpdateRepoSecretRequest withPathParams(ActionsCreateOrUpdateRepoSecretPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public ActionsCreateOrUpdateRepoSecretRequestBody request;
+    public ActionsCreateOrUpdateRepoSecretRequest withRequest(ActionsCreateOrUpdateRepoSecretRequestBody request) {
+        this.request = request;
+        return this;
+    }
+}

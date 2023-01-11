@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class GetDealItemsRequest {
+    public GetDealItemsQueryParams queryParams;
+    public GetDealItemsRequest withQueryParams(GetDealItemsQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public GetDealItemsHeaders headers;
+    public GetDealItemsRequest withHeaders(GetDealItemsHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+    public GetDealItemsSecurity security;
+    public GetDealItemsRequest withSecurity(GetDealItemsSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

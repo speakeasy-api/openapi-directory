@@ -1,0 +1,27 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class CreateRelationalDatabaseSnapshotRequest {
+    @JsonProperty("relationalDatabaseName")
+    public String relationalDatabaseName;
+    public CreateRelationalDatabaseSnapshotRequest withRelationalDatabaseName(String relationalDatabaseName) {
+        this.relationalDatabaseName = relationalDatabaseName;
+        return this;
+    }
+    @JsonProperty("relationalDatabaseSnapshotName")
+    public String relationalDatabaseSnapshotName;
+    public CreateRelationalDatabaseSnapshotRequest withRelationalDatabaseSnapshotName(String relationalDatabaseSnapshotName) {
+        this.relationalDatabaseSnapshotName = relationalDatabaseSnapshotName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("tags")
+    public Tag[] tags;
+    public CreateRelationalDatabaseSnapshotRequest withTags(Tag[] tags) {
+        this.tags = tags;
+        return this;
+    }
+}

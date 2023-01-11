@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class DfareportingRemarketingListsListRequest {
+    public DfareportingRemarketingListsListPathParams pathParams;
+    public DfareportingRemarketingListsListRequest withPathParams(DfareportingRemarketingListsListPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public DfareportingRemarketingListsListQueryParams queryParams;
+    public DfareportingRemarketingListsListRequest withQueryParams(DfareportingRemarketingListsListQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public DfareportingRemarketingListsListSecurity security;
+    public DfareportingRemarketingListsListRequest withSecurity(DfareportingRemarketingListsListSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

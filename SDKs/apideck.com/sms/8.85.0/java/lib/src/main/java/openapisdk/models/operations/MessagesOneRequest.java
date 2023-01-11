@@ -1,0 +1,26 @@
+package openapisdk.models.operations;
+
+
+
+public class MessagesOneRequest {
+    public MessagesOnePathParams pathParams;
+    public MessagesOneRequest withPathParams(MessagesOnePathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public MessagesOneQueryParams queryParams;
+    public MessagesOneRequest withQueryParams(MessagesOneQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public MessagesOneHeaders headers;
+    public MessagesOneRequest withHeaders(MessagesOneHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+    public MessagesOneSecurity security;
+    public MessagesOneRequest withSecurity(MessagesOneSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

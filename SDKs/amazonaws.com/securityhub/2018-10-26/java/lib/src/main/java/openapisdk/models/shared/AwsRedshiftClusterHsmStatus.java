@@ -1,0 +1,33 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * AwsRedshiftClusterHsmStatus
+ * Information about whether an Amazon Redshift cluster finished applying any hardware changes to security module (HSM) settings that were specified in a modify cluster command.
+**/
+public class AwsRedshiftClusterHsmStatus {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("HsmClientCertificateIdentifier")
+    public String hsmClientCertificateIdentifier;
+    public AwsRedshiftClusterHsmStatus withHsmClientCertificateIdentifier(String hsmClientCertificateIdentifier) {
+        this.hsmClientCertificateIdentifier = hsmClientCertificateIdentifier;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("HsmConfigurationIdentifier")
+    public String hsmConfigurationIdentifier;
+    public AwsRedshiftClusterHsmStatus withHsmConfigurationIdentifier(String hsmConfigurationIdentifier) {
+        this.hsmConfigurationIdentifier = hsmConfigurationIdentifier;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Status")
+    public String status;
+    public AwsRedshiftClusterHsmStatus withStatus(String status) {
+        this.status = status;
+        return this;
+    }
+}

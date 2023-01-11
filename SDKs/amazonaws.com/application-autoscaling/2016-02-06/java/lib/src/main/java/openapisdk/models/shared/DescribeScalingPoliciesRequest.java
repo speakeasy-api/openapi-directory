@@ -1,0 +1,49 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class DescribeScalingPoliciesRequest {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("MaxResults")
+    public Long maxResults;
+    public DescribeScalingPoliciesRequest withMaxResults(Long maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("NextToken")
+    public String nextToken;
+    public DescribeScalingPoliciesRequest withNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("PolicyNames")
+    public String[] policyNames;
+    public DescribeScalingPoliciesRequest withPolicyNames(String[] policyNames) {
+        this.policyNames = policyNames;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ResourceId")
+    public String resourceId;
+    public DescribeScalingPoliciesRequest withResourceId(String resourceId) {
+        this.resourceId = resourceId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ScalableDimension")
+    public ScalableDimensionEnum scalableDimension;
+    public DescribeScalingPoliciesRequest withScalableDimension(ScalableDimensionEnum scalableDimension) {
+        this.scalableDimension = scalableDimension;
+        return this;
+    }
+    @JsonProperty("ServiceNamespace")
+    public ServiceNamespaceEnum serviceNamespace;
+    public DescribeScalingPoliciesRequest withServiceNamespace(ServiceNamespaceEnum serviceNamespace) {
+        this.serviceNamespace = serviceNamespace;
+        return this;
+    }
+}

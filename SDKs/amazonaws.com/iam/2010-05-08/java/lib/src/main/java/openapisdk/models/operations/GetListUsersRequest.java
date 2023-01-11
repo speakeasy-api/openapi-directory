@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class GetListUsersRequest {
+    public GetListUsersQueryParams queryParams;
+    public GetListUsersRequest withQueryParams(GetListUsersQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public GetListUsersHeaders headers;
+    public GetListUsersRequest withHeaders(GetListUsersHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+}

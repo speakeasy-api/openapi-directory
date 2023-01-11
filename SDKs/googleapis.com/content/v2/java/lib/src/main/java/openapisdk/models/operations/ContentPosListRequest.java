@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class ContentPosListRequest {
+    public ContentPosListPathParams pathParams;
+    public ContentPosListRequest withPathParams(ContentPosListPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public ContentPosListQueryParams queryParams;
+    public ContentPosListRequest withQueryParams(ContentPosListQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public ContentPosListSecurity security;
+    public ContentPosListRequest withSecurity(ContentPosListSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

@@ -1,0 +1,40 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * CustomDetection
+ * Provides information about a custom data identifier that produced a sensitive data finding, and the sensitive data that it detected for the finding.
+**/
+public class CustomDetection {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("arn")
+    public String arn;
+    public CustomDetection withArn(String arn) {
+        this.arn = arn;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("count")
+    public Long count;
+    public CustomDetection withCount(Long count) {
+        this.count = count;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("name")
+    public String name;
+    public CustomDetection withName(String name) {
+        this.name = name;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("occurrences")
+    public Occurrences occurrences;
+    public CustomDetection withOccurrences(Occurrences occurrences) {
+        this.occurrences = occurrences;
+        return this;
+    }
+}

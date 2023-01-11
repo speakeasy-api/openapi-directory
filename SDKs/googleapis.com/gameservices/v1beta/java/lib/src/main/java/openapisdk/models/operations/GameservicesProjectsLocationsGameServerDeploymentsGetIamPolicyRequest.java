@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class GameservicesProjectsLocationsGameServerDeploymentsGetIamPolicyRequest {
+    public GameservicesProjectsLocationsGameServerDeploymentsGetIamPolicyPathParams pathParams;
+    public GameservicesProjectsLocationsGameServerDeploymentsGetIamPolicyRequest withPathParams(GameservicesProjectsLocationsGameServerDeploymentsGetIamPolicyPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public GameservicesProjectsLocationsGameServerDeploymentsGetIamPolicyQueryParams queryParams;
+    public GameservicesProjectsLocationsGameServerDeploymentsGetIamPolicyRequest withQueryParams(GameservicesProjectsLocationsGameServerDeploymentsGetIamPolicyQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public GameservicesProjectsLocationsGameServerDeploymentsGetIamPolicySecurity security;
+    public GameservicesProjectsLocationsGameServerDeploymentsGetIamPolicyRequest withSecurity(GameservicesProjectsLocationsGameServerDeploymentsGetIamPolicySecurity security) {
+        this.security = security;
+        return this;
+    }
+}

@@ -1,0 +1,64 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class BrandingSettings {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("companyName")
+    public String companyName;
+    public BrandingSettings withCompanyName(String companyName) {
+        this.companyName = companyName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("customEmail")
+    public String customEmail;
+    public BrandingSettings withCustomEmail(String customEmail) {
+        this.customEmail = customEmail;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("logo")
+    public String logo;
+    public BrandingSettings withLogo(String logo) {
+        this.logo = logo;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("logoExt")
+    public String logoExt;
+    public BrandingSettings withLogoExt(String logoExt) {
+        this.logoExt = logoExt;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("theme")
+    public String theme;
+    public BrandingSettings withTheme(String theme) {
+        this.theme = theme;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("verifiedDomain")
+    public String verifiedDomain;
+    public BrandingSettings withVerifiedDomain(String verifiedDomain) {
+        this.verifiedDomain = verifiedDomain;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("verifiedDomainId")
+    public String verifiedDomainId;
+    public BrandingSettings withVerifiedDomainId(String verifiedDomainId) {
+        this.verifiedDomainId = verifiedDomainId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("verifiedDomainValid")
+    public Boolean verifiedDomainValid;
+    public BrandingSettings withVerifiedDomainValid(Boolean verifiedDomainValid) {
+        this.verifiedDomainValid = verifiedDomainValid;
+        return this;
+    }
+}

@@ -1,0 +1,18 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class TasksTasklistsListSecurity {
+    @SpeakeasyMetadata("security:option=true")
+    public TasksTasklistsListSecurityOption1 option1;
+    public TasksTasklistsListSecurity withOption1(TasksTasklistsListSecurityOption1 option1) {
+        this.option1 = option1;
+        return this;
+    }
+    @SpeakeasyMetadata("security:option=true")
+    public TasksTasklistsListSecurityOption2 option2;
+    public TasksTasklistsListSecurity withOption2(TasksTasklistsListSecurityOption2 option2) {
+        this.option2 = option2;
+        return this;
+    }
+}

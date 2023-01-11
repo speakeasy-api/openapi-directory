@@ -1,0 +1,24 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+public class SingleFieldDependency {
+    @JsonProperty("controllingFieldName")
+    public String controllingFieldName;
+    public SingleFieldDependency withControllingFieldName(String controllingFieldName) {
+        this.controllingFieldName = controllingFieldName;
+        return this;
+    }
+    @JsonProperty("dependencyType")
+    public SingleFieldDependencyDependencyTypeEnum dependencyType;
+    public SingleFieldDependency withDependencyType(SingleFieldDependencyDependencyTypeEnum dependencyType) {
+        this.dependencyType = dependencyType;
+        return this;
+    }
+    @JsonProperty("dependentFieldNames")
+    public String[] dependentFieldNames;
+    public SingleFieldDependency withDependentFieldNames(String[] dependentFieldNames) {
+        this.dependentFieldNames = dependentFieldNames;
+        return this;
+    }
+}

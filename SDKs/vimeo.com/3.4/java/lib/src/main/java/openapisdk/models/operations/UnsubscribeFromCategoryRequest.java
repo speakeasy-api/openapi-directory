@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class UnsubscribeFromCategoryRequest {
+    public UnsubscribeFromCategoryPathParams pathParams;
+    public UnsubscribeFromCategoryRequest withPathParams(UnsubscribeFromCategoryPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public UnsubscribeFromCategorySecurity security;
+    public UnsubscribeFromCategoryRequest withSecurity(UnsubscribeFromCategorySecurity security) {
+        this.security = security;
+        return this;
+    }
+}

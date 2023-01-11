@@ -1,0 +1,20 @@
+package openapisdk.models.shared;
+
+
+
+/**
+ * OriginRequestPolicyQueryStringsConfig
+ * An object that determines whether any URL query strings in viewer requests (and if so, which query strings) are included in requests that CloudFront sends to the origin.
+**/
+public class OriginRequestPolicyQueryStringsConfig {
+    public OriginRequestPolicyQueryStringBehaviorEnum queryStringBehavior;
+    public OriginRequestPolicyQueryStringsConfig withQueryStringBehavior(OriginRequestPolicyQueryStringBehaviorEnum queryStringBehavior) {
+        this.queryStringBehavior = queryStringBehavior;
+        return this;
+    }
+    public QueryStringNames queryStrings;
+    public OriginRequestPolicyQueryStringsConfig withQueryStrings(QueryStringNames queryStrings) {
+        this.queryStrings = queryStrings;
+        return this;
+    }
+}

@@ -1,0 +1,66 @@
+package openapisdk.models.shared;
+
+import java.time.OffsetDateTime;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import openapisdk.utils.DateTimeSerializer;
+import openapisdk.utils.DateTimeDeserializer;
+
+public class Profile {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("commerce")
+    public ProfileCommerce commerce;
+    public Profile withCommerce(ProfileCommerce commerce) {
+        this.commerce = commerce;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("company")
+    public ProfileCompany company;
+    public Profile withCompany(ProfileCompany company) {
+        this.company = company;
+        return this;
+    }
+    @JsonSerialize(using = DateTimeSerializer.class)
+    @JsonDeserialize(using = DateTimeDeserializer.class)
+    @JsonProperty("created")
+    public OffsetDateTime created;
+    public Profile withCreated(OffsetDateTime created) {
+        this.created = created;
+        return this;
+    }
+    @JsonProperty("credits")
+    public ProfileCredits credits;
+    public Profile withCredits(ProfileCredits credits) {
+        this.credits = credits;
+        return this;
+    }
+    @JsonProperty("id")
+    public String id;
+    public Profile withId(String id) {
+        this.id = id;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("originAddresses")
+    public ProfileOriginAddresses originAddresses;
+    public Profile withOriginAddresses(ProfileOriginAddresses originAddresses) {
+        this.originAddresses = originAddresses;
+        return this;
+    }
+    @JsonProperty("quota")
+    public ProfileQuota quota;
+    public Profile withQuota(ProfileQuota quota) {
+        this.quota = quota;
+        return this;
+    }
+    @JsonProperty("username")
+    public String username;
+    public Profile withUsername(String username) {
+        this.username = username;
+        return this;
+    }
+}

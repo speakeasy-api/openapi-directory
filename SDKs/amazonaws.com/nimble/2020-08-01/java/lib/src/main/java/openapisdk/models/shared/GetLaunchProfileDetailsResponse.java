@@ -1,0 +1,29 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class GetLaunchProfileDetailsResponse {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("launchProfile")
+    public LaunchProfile launchProfile;
+    public GetLaunchProfileDetailsResponse withLaunchProfile(LaunchProfile launchProfile) {
+        this.launchProfile = launchProfile;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("streamingImages")
+    public StreamingImage[] streamingImages;
+    public GetLaunchProfileDetailsResponse withStreamingImages(StreamingImage[] streamingImages) {
+        this.streamingImages = streamingImages;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("studioComponentSummaries")
+    public StudioComponentSummary[] studioComponentSummaries;
+    public GetLaunchProfileDetailsResponse withStudioComponentSummaries(StudioComponentSummary[] studioComponentSummaries) {
+        this.studioComponentSummaries = studioComponentSummaries;
+        return this;
+    }
+}

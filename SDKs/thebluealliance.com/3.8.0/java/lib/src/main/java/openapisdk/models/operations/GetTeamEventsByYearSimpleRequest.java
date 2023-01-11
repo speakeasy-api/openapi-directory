@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class GetTeamEventsByYearSimpleRequest {
+    public GetTeamEventsByYearSimplePathParams pathParams;
+    public GetTeamEventsByYearSimpleRequest withPathParams(GetTeamEventsByYearSimplePathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public GetTeamEventsByYearSimpleHeaders headers;
+    public GetTeamEventsByYearSimpleRequest withHeaders(GetTeamEventsByYearSimpleHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+    public GetTeamEventsByYearSimpleSecurity security;
+    public GetTeamEventsByYearSimpleRequest withSecurity(GetTeamEventsByYearSimpleSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

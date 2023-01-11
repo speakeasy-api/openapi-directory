@@ -1,0 +1,27 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class NotebooksProjectsLocationsOperationsCancelRequest {
+    public NotebooksProjectsLocationsOperationsCancelPathParams pathParams;
+    public NotebooksProjectsLocationsOperationsCancelRequest withPathParams(NotebooksProjectsLocationsOperationsCancelPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public NotebooksProjectsLocationsOperationsCancelQueryParams queryParams;
+    public NotebooksProjectsLocationsOperationsCancelRequest withQueryParams(NotebooksProjectsLocationsOperationsCancelQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public java.util.Map<String, Object> request;
+    public NotebooksProjectsLocationsOperationsCancelRequest withRequest(java.util.Map<String, Object> request) {
+        this.request = request;
+        return this;
+    }
+    public NotebooksProjectsLocationsOperationsCancelSecurity security;
+    public NotebooksProjectsLocationsOperationsCancelRequest withSecurity(NotebooksProjectsLocationsOperationsCancelSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

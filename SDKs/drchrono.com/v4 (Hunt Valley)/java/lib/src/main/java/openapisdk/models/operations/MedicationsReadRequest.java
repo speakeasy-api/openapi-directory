@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class MedicationsReadRequest {
+    public MedicationsReadPathParams pathParams;
+    public MedicationsReadRequest withPathParams(MedicationsReadPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public MedicationsReadQueryParams queryParams;
+    public MedicationsReadRequest withQueryParams(MedicationsReadQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public MedicationsReadSecurity security;
+    public MedicationsReadRequest withSecurity(MedicationsReadSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

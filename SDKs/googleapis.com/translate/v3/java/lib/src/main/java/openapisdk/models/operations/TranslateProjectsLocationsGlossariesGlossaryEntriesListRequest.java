@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class TranslateProjectsLocationsGlossariesGlossaryEntriesListRequest {
+    public TranslateProjectsLocationsGlossariesGlossaryEntriesListPathParams pathParams;
+    public TranslateProjectsLocationsGlossariesGlossaryEntriesListRequest withPathParams(TranslateProjectsLocationsGlossariesGlossaryEntriesListPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public TranslateProjectsLocationsGlossariesGlossaryEntriesListQueryParams queryParams;
+    public TranslateProjectsLocationsGlossariesGlossaryEntriesListRequest withQueryParams(TranslateProjectsLocationsGlossariesGlossaryEntriesListQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public TranslateProjectsLocationsGlossariesGlossaryEntriesListSecurity security;
+    public TranslateProjectsLocationsGlossariesGlossaryEntriesListRequest withSecurity(TranslateProjectsLocationsGlossariesGlossaryEntriesListSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

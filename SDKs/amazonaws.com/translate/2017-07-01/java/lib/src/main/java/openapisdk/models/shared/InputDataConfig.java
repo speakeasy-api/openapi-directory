@@ -1,0 +1,22 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+/**
+ * InputDataConfig
+ * The input configuration properties for requesting a batch translation job.
+**/
+public class InputDataConfig {
+    @JsonProperty("ContentType")
+    public String contentType;
+    public InputDataConfig withContentType(String contentType) {
+        this.contentType = contentType;
+        return this;
+    }
+    @JsonProperty("S3Uri")
+    public String s3Uri;
+    public InputDataConfig withS3Uri(String s3Uri) {
+        this.s3Uri = s3Uri;
+        return this;
+    }
+}

@@ -1,0 +1,18 @@
+package openapisdk.models.shared;
+
+
+public enum DoubleVerifyAvoidedAgeRatingsEnum {
+    AGE_RATING_UNSPECIFIED("AGE_RATING_UNSPECIFIED"),
+    APP_AGE_RATE_UNKNOWN("APP_AGE_RATE_UNKNOWN"),
+    APP_AGE_RATE4_PLUS("APP_AGE_RATE_4_PLUS"),
+    APP_AGE_RATE9_PLUS("APP_AGE_RATE_9_PLUS"),
+    APP_AGE_RATE12_PLUS("APP_AGE_RATE_12_PLUS"),
+    APP_AGE_RATE17_PLUS("APP_AGE_RATE_17_PLUS"),
+    APP_AGE_RATE18_PLUS("APP_AGE_RATE_18_PLUS");
+
+    public final String value;
+
+    private DoubleVerifyAvoidedAgeRatingsEnum(String value) {
+        this.value = value;
+    }
+}

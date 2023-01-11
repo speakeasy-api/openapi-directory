@@ -1,0 +1,33 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * PendingModifiedRelationalDatabaseValues
+ * Describes a pending database value modification.
+**/
+public class PendingModifiedRelationalDatabaseValues {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("backupRetentionEnabled")
+    public Boolean backupRetentionEnabled;
+    public PendingModifiedRelationalDatabaseValues withBackupRetentionEnabled(Boolean backupRetentionEnabled) {
+        this.backupRetentionEnabled = backupRetentionEnabled;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("engineVersion")
+    public String engineVersion;
+    public PendingModifiedRelationalDatabaseValues withEngineVersion(String engineVersion) {
+        this.engineVersion = engineVersion;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("masterUserPassword")
+    public String masterUserPassword;
+    public PendingModifiedRelationalDatabaseValues withMasterUserPassword(String masterUserPassword) {
+        this.masterUserPassword = masterUserPassword;
+        return this;
+    }
+}

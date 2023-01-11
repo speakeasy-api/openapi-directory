@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class DatalabelingProjectsDatasetsAnnotatedDatasetsExamplesListRequest {
+    public DatalabelingProjectsDatasetsAnnotatedDatasetsExamplesListPathParams pathParams;
+    public DatalabelingProjectsDatasetsAnnotatedDatasetsExamplesListRequest withPathParams(DatalabelingProjectsDatasetsAnnotatedDatasetsExamplesListPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public DatalabelingProjectsDatasetsAnnotatedDatasetsExamplesListQueryParams queryParams;
+    public DatalabelingProjectsDatasetsAnnotatedDatasetsExamplesListRequest withQueryParams(DatalabelingProjectsDatasetsAnnotatedDatasetsExamplesListQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public DatalabelingProjectsDatasetsAnnotatedDatasetsExamplesListSecurity security;
+    public DatalabelingProjectsDatasetsAnnotatedDatasetsExamplesListRequest withSecurity(DatalabelingProjectsDatasetsAnnotatedDatasetsExamplesListSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

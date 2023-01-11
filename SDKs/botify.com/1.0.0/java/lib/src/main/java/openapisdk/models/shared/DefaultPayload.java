@@ -1,0 +1,19 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * DefaultPayload
+ * default payload for object for all HTTP codes that are not covered individually
+**/
+public class DefaultPayload {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("error")
+    public DefaultPayloadError error;
+    public DefaultPayload withError(DefaultPayloadError error) {
+        this.error = error;
+        return this;
+    }
+}

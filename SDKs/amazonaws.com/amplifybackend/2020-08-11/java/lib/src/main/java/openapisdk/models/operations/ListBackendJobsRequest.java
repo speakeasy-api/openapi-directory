@@ -1,0 +1,27 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class ListBackendJobsRequest {
+    public ListBackendJobsPathParams pathParams;
+    public ListBackendJobsRequest withPathParams(ListBackendJobsPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public ListBackendJobsQueryParams queryParams;
+    public ListBackendJobsRequest withQueryParams(ListBackendJobsQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public ListBackendJobsHeaders headers;
+    public ListBackendJobsRequest withHeaders(ListBackendJobsHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public ListBackendJobsRequestBody request;
+    public ListBackendJobsRequest withRequest(ListBackendJobsRequestBody request) {
+        this.request = request;
+        return this;
+    }
+}

@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class DeleteEmployeeSecretRequest {
+    public DeleteEmployeeSecretPathParams pathParams;
+    public DeleteEmployeeSecretRequest withPathParams(DeleteEmployeeSecretPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public DeleteEmployeeSecretHeaders headers;
+    public DeleteEmployeeSecretRequest withHeaders(DeleteEmployeeSecretHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+}

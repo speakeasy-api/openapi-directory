@@ -1,0 +1,92 @@
+package openapisdk.models.shared;
+
+import java.time.OffsetDateTime;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import openapisdk.utils.DateTimeSerializer;
+import openapisdk.utils.DateTimeDeserializer;
+
+public class GetProfileObjectTypeResponse {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("AllowProfileCreation")
+    public Boolean allowProfileCreation;
+    public GetProfileObjectTypeResponse withAllowProfileCreation(Boolean allowProfileCreation) {
+        this.allowProfileCreation = allowProfileCreation;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonSerialize(contentUsing = DateTimeSerializer.class)
+    @JsonDeserialize(contentUsing = DateTimeDeserializer.class)
+    @JsonProperty("CreatedAt")
+    public OffsetDateTime createdAt;
+    public GetProfileObjectTypeResponse withCreatedAt(OffsetDateTime createdAt) {
+        this.createdAt = createdAt;
+        return this;
+    }
+    @JsonProperty("Description")
+    public String description;
+    public GetProfileObjectTypeResponse withDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("EncryptionKey")
+    public String encryptionKey;
+    public GetProfileObjectTypeResponse withEncryptionKey(String encryptionKey) {
+        this.encryptionKey = encryptionKey;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ExpirationDays")
+    public Long expirationDays;
+    public GetProfileObjectTypeResponse withExpirationDays(Long expirationDays) {
+        this.expirationDays = expirationDays;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Fields")
+    public java.util.Map<String, ObjectTypeField> fields;
+    public GetProfileObjectTypeResponse withFields(java.util.Map<String, ObjectTypeField> fields) {
+        this.fields = fields;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Keys")
+    public java.util.Map<String, ObjectTypeKey[]> keys;
+    public GetProfileObjectTypeResponse withKeys(java.util.Map<String, ObjectTypeKey[]> keys) {
+        this.keys = keys;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonSerialize(contentUsing = DateTimeSerializer.class)
+    @JsonDeserialize(contentUsing = DateTimeDeserializer.class)
+    @JsonProperty("LastUpdatedAt")
+    public OffsetDateTime lastUpdatedAt;
+    public GetProfileObjectTypeResponse withLastUpdatedAt(OffsetDateTime lastUpdatedAt) {
+        this.lastUpdatedAt = lastUpdatedAt;
+        return this;
+    }
+    @JsonProperty("ObjectTypeName")
+    public String objectTypeName;
+    public GetProfileObjectTypeResponse withObjectTypeName(String objectTypeName) {
+        this.objectTypeName = objectTypeName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Tags")
+    public java.util.Map<String, String> tags;
+    public GetProfileObjectTypeResponse withTags(java.util.Map<String, String> tags) {
+        this.tags = tags;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("TemplateId")
+    public String templateId;
+    public GetProfileObjectTypeResponse withTemplateId(String templateId) {
+        this.templateId = templateId;
+        return this;
+    }
+}

@@ -1,0 +1,58 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * ApplicationSummary
+ * <p>A summary of information about a AWS IoT Device Management web application.</p> <note> <p>Fleet Hub for AWS IoT Device Management is in public preview and is subject to change.</p> </note>
+**/
+public class ApplicationSummary {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("applicationCreationDate")
+    public Long applicationCreationDate;
+    public ApplicationSummary withApplicationCreationDate(Long applicationCreationDate) {
+        this.applicationCreationDate = applicationCreationDate;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("applicationDescription")
+    public String applicationDescription;
+    public ApplicationSummary withApplicationDescription(String applicationDescription) {
+        this.applicationDescription = applicationDescription;
+        return this;
+    }
+    @JsonProperty("applicationId")
+    public String applicationId;
+    public ApplicationSummary withApplicationId(String applicationId) {
+        this.applicationId = applicationId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("applicationLastUpdateDate")
+    public Long applicationLastUpdateDate;
+    public ApplicationSummary withApplicationLastUpdateDate(Long applicationLastUpdateDate) {
+        this.applicationLastUpdateDate = applicationLastUpdateDate;
+        return this;
+    }
+    @JsonProperty("applicationName")
+    public String applicationName;
+    public ApplicationSummary withApplicationName(String applicationName) {
+        this.applicationName = applicationName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("applicationState")
+    public ApplicationStateEnum applicationState;
+    public ApplicationSummary withApplicationState(ApplicationStateEnum applicationState) {
+        this.applicationState = applicationState;
+        return this;
+    }
+    @JsonProperty("applicationUrl")
+    public String applicationUrl;
+    public ApplicationSummary withApplicationUrl(String applicationUrl) {
+        this.applicationUrl = applicationUrl;
+        return this;
+    }
+}

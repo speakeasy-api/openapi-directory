@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class ListStreamingSessionsRequest {
+    public ListStreamingSessionsPathParams pathParams;
+    public ListStreamingSessionsRequest withPathParams(ListStreamingSessionsPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public ListStreamingSessionsQueryParams queryParams;
+    public ListStreamingSessionsRequest withQueryParams(ListStreamingSessionsQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public ListStreamingSessionsHeaders headers;
+    public ListStreamingSessionsRequest withHeaders(ListStreamingSessionsHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+}

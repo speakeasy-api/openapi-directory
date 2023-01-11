@@ -1,0 +1,357 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class Activity {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("account_id")
+    public String accountId;
+    public Activity withAccountId(String accountId) {
+        this.accountId = accountId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("activity_date")
+    public String activityDate;
+    public Activity withActivityDate(String activityDate) {
+        this.activityDate = activityDate;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("activity_datetime")
+    public String activityDatetime;
+    public Activity withActivityDatetime(String activityDatetime) {
+        this.activityDatetime = activityDatetime;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("all_day_event")
+    public Boolean allDayEvent;
+    public Activity withAllDayEvent(Boolean allDayEvent) {
+        this.allDayEvent = allDayEvent;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("archived")
+    public Boolean archived;
+    public Activity withArchived(Boolean archived) {
+        this.archived = archived;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("asset_id")
+    public String assetId;
+    public Activity withAssetId(String assetId) {
+        this.assetId = assetId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("attendees")
+    public ActivityAttendee[] attendees;
+    public Activity withAttendees(ActivityAttendee[] attendees) {
+        this.attendees = attendees;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("campaign_id")
+    public String campaignId;
+    public Activity withCampaignId(String campaignId) {
+        this.campaignId = campaignId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("case_id")
+    public String caseId;
+    public Activity withCaseId(String caseId) {
+        this.caseId = caseId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("child")
+    public Boolean child;
+    public Activity withChild(Boolean child) {
+        this.child = child;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("company_id")
+    public String companyId;
+    public Activity withCompanyId(String companyId) {
+        this.companyId = companyId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("contact_id")
+    public String contactId;
+    public Activity withContactId(String contactId) {
+        this.contactId = contactId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("contract_id")
+    public String contractId;
+    public Activity withContractId(String contractId) {
+        this.contractId = contractId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("created_at")
+    public String createdAt;
+    public Activity withCreatedAt(String createdAt) {
+        this.createdAt = createdAt;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("created_by")
+    public String createdBy;
+    public Activity withCreatedBy(String createdBy) {
+        this.createdBy = createdBy;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("custom_fields")
+    public CustomField[] customFields;
+    public Activity withCustomFields(CustomField[] customFields) {
+        this.customFields = customFields;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("custom_object_id")
+    public String customObjectId;
+    public Activity withCustomObjectId(String customObjectId) {
+        this.customObjectId = customObjectId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("deleted")
+    public Boolean deleted;
+    public Activity withDeleted(Boolean deleted) {
+        this.deleted = deleted;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("description")
+    public String description;
+    public Activity withDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("done")
+    public Boolean done;
+    public Activity withDone(Boolean done) {
+        this.done = done;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("downstream_id")
+    public String downstreamId;
+    public Activity withDownstreamId(String downstreamId) {
+        this.downstreamId = downstreamId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("duration_minutes")
+    public Long durationMinutes;
+    public Activity withDurationMinutes(Long durationMinutes) {
+        this.durationMinutes = durationMinutes;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("duration_seconds")
+    public Long durationSeconds;
+    public Activity withDurationSeconds(Long durationSeconds) {
+        this.durationSeconds = durationSeconds;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("end_date")
+    public String endDate;
+    public Activity withEndDate(String endDate) {
+        this.endDate = endDate;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("end_datetime")
+    public String endDatetime;
+    public Activity withEndDatetime(String endDatetime) {
+        this.endDatetime = endDatetime;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("event_sub_type")
+    public String eventSubType;
+    public Activity withEventSubType(String eventSubType) {
+        this.eventSubType = eventSubType;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("group_event")
+    public Boolean groupEvent;
+    public Activity withGroupEvent(Boolean groupEvent) {
+        this.groupEvent = groupEvent;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("group_event_type")
+    public String groupEventType;
+    public Activity withGroupEventType(String groupEventType) {
+        this.groupEventType = groupEventType;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("id")
+    public String id;
+    public Activity withId(String id) {
+        this.id = id;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("lead_id")
+    public String leadId;
+    public Activity withLeadId(String leadId) {
+        this.leadId = leadId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("location")
+    public String location;
+    public Activity withLocation(String location) {
+        this.location = location;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("location_address")
+    public Address locationAddress;
+    public Activity withLocationAddress(Address locationAddress) {
+        this.locationAddress = locationAddress;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("note")
+    public String note;
+    public Activity withNote(String note) {
+        this.note = note;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("opportunity_id")
+    public String opportunityId;
+    public Activity withOpportunityId(String opportunityId) {
+        this.opportunityId = opportunityId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("owner_id")
+    public String ownerId;
+    public Activity withOwnerId(String ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("private")
+    public Boolean private_;
+    public Activity withPrivate(Boolean private_) {
+        this.private_ = private_;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("product_id")
+    public String productId;
+    public Activity withProductId(String productId) {
+        this.productId = productId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("recurrent")
+    public Boolean recurrent;
+    public Activity withRecurrent(Boolean recurrent) {
+        this.recurrent = recurrent;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("reminder_datetime")
+    public String reminderDatetime;
+    public Activity withReminderDatetime(String reminderDatetime) {
+        this.reminderDatetime = reminderDatetime;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("reminder_set")
+    public Boolean reminderSet;
+    public Activity withReminderSet(Boolean reminderSet) {
+        this.reminderSet = reminderSet;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("show_as")
+    public ActivityShowAsEnum showAs;
+    public Activity withShowAs(ActivityShowAsEnum showAs) {
+        this.showAs = showAs;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("solution_id")
+    public String solutionId;
+    public Activity withSolutionId(String solutionId) {
+        this.solutionId = solutionId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("start_datetime")
+    public String startDatetime;
+    public Activity withStartDatetime(String startDatetime) {
+        this.startDatetime = startDatetime;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("title")
+    public String title;
+    public Activity withTitle(String title) {
+        this.title = title;
+        return this;
+    }
+    @JsonProperty("type")
+    public ActivityTypeEnum type;
+    public Activity withType(ActivityTypeEnum type) {
+        this.type = type;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("updated_at")
+    public String updatedAt;
+    public Activity withUpdatedAt(String updatedAt) {
+        this.updatedAt = updatedAt;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("updated_by")
+    public String updatedBy;
+    public Activity withUpdatedBy(String updatedBy) {
+        this.updatedBy = updatedBy;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("user_id")
+    public String userId;
+    public Activity withUserId(String userId) {
+        this.userId = userId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("video_conference_id")
+    public String videoConferenceId;
+    public Activity withVideoConferenceId(String videoConferenceId) {
+        this.videoConferenceId = videoConferenceId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("video_conference_url")
+    public String videoConferenceUrl;
+    public Activity withVideoConferenceUrl(String videoConferenceUrl) {
+        this.videoConferenceUrl = videoConferenceUrl;
+        return this;
+    }
+}

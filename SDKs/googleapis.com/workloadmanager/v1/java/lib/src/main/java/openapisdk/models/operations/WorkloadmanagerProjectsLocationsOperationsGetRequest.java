@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class WorkloadmanagerProjectsLocationsOperationsGetRequest {
+    public WorkloadmanagerProjectsLocationsOperationsGetPathParams pathParams;
+    public WorkloadmanagerProjectsLocationsOperationsGetRequest withPathParams(WorkloadmanagerProjectsLocationsOperationsGetPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public WorkloadmanagerProjectsLocationsOperationsGetQueryParams queryParams;
+    public WorkloadmanagerProjectsLocationsOperationsGetRequest withQueryParams(WorkloadmanagerProjectsLocationsOperationsGetQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public WorkloadmanagerProjectsLocationsOperationsGetSecurity security;
+    public WorkloadmanagerProjectsLocationsOperationsGetRequest withSecurity(WorkloadmanagerProjectsLocationsOperationsGetSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class LibraryagentShelvesBooksListRequest {
+    public LibraryagentShelvesBooksListPathParams pathParams;
+    public LibraryagentShelvesBooksListRequest withPathParams(LibraryagentShelvesBooksListPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public LibraryagentShelvesBooksListQueryParams queryParams;
+    public LibraryagentShelvesBooksListRequest withQueryParams(LibraryagentShelvesBooksListQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public LibraryagentShelvesBooksListSecurity security;
+    public LibraryagentShelvesBooksListRequest withSecurity(LibraryagentShelvesBooksListSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

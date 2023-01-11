@@ -1,0 +1,48 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class PowerPort {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("connection_status")
+    public Boolean connectionStatus;
+    public PowerPort withConnectionStatus(Boolean connectionStatus) {
+        this.connectionStatus = connectionStatus;
+        return this;
+    }
+    @JsonProperty("device")
+    public NestedDevice device;
+    public PowerPort withDevice(NestedDevice device) {
+        this.device = device;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("id")
+    public Long id;
+    public PowerPort withId(Long id) {
+        this.id = id;
+        return this;
+    }
+    @JsonProperty("name")
+    public String name;
+    public PowerPort withName(String name) {
+        this.name = name;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("power_outlet")
+    public NestedPowerOutlet powerOutlet;
+    public PowerPort withPowerOutlet(NestedPowerOutlet powerOutlet) {
+        this.powerOutlet = powerOutlet;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("tags")
+    public String[] tags;
+    public PowerPort withTags(String[] tags) {
+        this.tags = tags;
+        return this;
+    }
+}

@@ -1,0 +1,50 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class BlogPerUserInfo {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("blogId")
+    public String blogId;
+    public BlogPerUserInfo withBlogId(String blogId) {
+        this.blogId = blogId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("hasAdminAccess")
+    public Boolean hasAdminAccess;
+    public BlogPerUserInfo withHasAdminAccess(Boolean hasAdminAccess) {
+        this.hasAdminAccess = hasAdminAccess;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("kind")
+    public String kind;
+    public BlogPerUserInfo withKind(String kind) {
+        this.kind = kind;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("photosAlbumKey")
+    public String photosAlbumKey;
+    public BlogPerUserInfo withPhotosAlbumKey(String photosAlbumKey) {
+        this.photosAlbumKey = photosAlbumKey;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("role")
+    public BlogPerUserInfoRoleEnum role;
+    public BlogPerUserInfo withRole(BlogPerUserInfoRoleEnum role) {
+        this.role = role;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("userId")
+    public String userId;
+    public BlogPerUserInfo withUserId(String userId) {
+        this.userId = userId;
+        return this;
+    }
+}

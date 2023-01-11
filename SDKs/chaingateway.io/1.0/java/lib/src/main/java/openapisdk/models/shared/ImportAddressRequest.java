@@ -1,0 +1,24 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+public class ImportAddressRequest {
+    @JsonProperty("content")
+    public Content content;
+    public ImportAddressRequest withContent(Content content) {
+        this.content = content;
+        return this;
+    }
+    @JsonProperty("filename")
+    public String filename;
+    public ImportAddressRequest withFilename(String filename) {
+        this.filename = filename;
+        return this;
+    }
+    @JsonProperty("password")
+    public String password;
+    public ImportAddressRequest withPassword(String password) {
+        this.password = password;
+        return this;
+    }
+}

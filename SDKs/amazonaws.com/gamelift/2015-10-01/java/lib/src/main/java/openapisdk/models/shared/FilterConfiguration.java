@@ -1,0 +1,19 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * FilterConfiguration
+ * <p>A list of fleet locations where a game session queue can place new game sessions. You can use a filter to temporarily turn off placements for specific locations. For queues that have multi-location fleets, you can use a filter configuration allow placement with some, but not all of these locations.</p> <p>Filter configurations are part of a <a>GameSessionQueue</a>.</p>
+**/
+public class FilterConfiguration {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("AllowedLocations")
+    public String[] allowedLocations;
+    public FilterConfiguration withAllowedLocations(String[] allowedLocations) {
+        this.allowedLocations = allowedLocations;
+        return this;
+    }
+}

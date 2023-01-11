@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class GetFilePaymentsFilePaymentIdPaymentDetailsRequest {
+    public GetFilePaymentsFilePaymentIdPaymentDetailsPathParams pathParams;
+    public GetFilePaymentsFilePaymentIdPaymentDetailsRequest withPathParams(GetFilePaymentsFilePaymentIdPaymentDetailsPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public GetFilePaymentsFilePaymentIdPaymentDetailsHeaders headers;
+    public GetFilePaymentsFilePaymentIdPaymentDetailsRequest withHeaders(GetFilePaymentsFilePaymentIdPaymentDetailsHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+    public GetFilePaymentsFilePaymentIdPaymentDetailsSecurity security;
+    public GetFilePaymentsFilePaymentIdPaymentDetailsRequest withSecurity(GetFilePaymentsFilePaymentIdPaymentDetailsSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

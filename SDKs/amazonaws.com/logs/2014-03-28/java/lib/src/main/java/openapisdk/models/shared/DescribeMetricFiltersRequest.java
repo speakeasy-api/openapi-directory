@@ -1,0 +1,50 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class DescribeMetricFiltersRequest {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("filterNamePrefix")
+    public String filterNamePrefix;
+    public DescribeMetricFiltersRequest withFilterNamePrefix(String filterNamePrefix) {
+        this.filterNamePrefix = filterNamePrefix;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("limit")
+    public Long limit;
+    public DescribeMetricFiltersRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("logGroupName")
+    public String logGroupName;
+    public DescribeMetricFiltersRequest withLogGroupName(String logGroupName) {
+        this.logGroupName = logGroupName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("metricName")
+    public String metricName;
+    public DescribeMetricFiltersRequest withMetricName(String metricName) {
+        this.metricName = metricName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("metricNamespace")
+    public String metricNamespace;
+    public DescribeMetricFiltersRequest withMetricNamespace(String metricNamespace) {
+        this.metricNamespace = metricNamespace;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("nextToken")
+    public String nextToken;
+    public DescribeMetricFiltersRequest withNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+}

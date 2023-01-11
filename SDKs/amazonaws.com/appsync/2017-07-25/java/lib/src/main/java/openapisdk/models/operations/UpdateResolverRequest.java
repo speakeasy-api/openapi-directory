@@ -1,0 +1,22 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class UpdateResolverRequest {
+    public UpdateResolverPathParams pathParams;
+    public UpdateResolverRequest withPathParams(UpdateResolverPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public UpdateResolverHeaders headers;
+    public UpdateResolverRequest withHeaders(UpdateResolverHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public UpdateResolverRequestBody request;
+    public UpdateResolverRequest withRequest(UpdateResolverRequestBody request) {
+        this.request = request;
+        return this;
+    }
+}

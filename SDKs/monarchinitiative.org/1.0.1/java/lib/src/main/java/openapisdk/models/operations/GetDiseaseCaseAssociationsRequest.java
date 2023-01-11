@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class GetDiseaseCaseAssociationsRequest {
+    public GetDiseaseCaseAssociationsPathParams pathParams;
+    public GetDiseaseCaseAssociationsRequest withPathParams(GetDiseaseCaseAssociationsPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public GetDiseaseCaseAssociationsQueryParams queryParams;
+    public GetDiseaseCaseAssociationsRequest withQueryParams(GetDiseaseCaseAssociationsQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+}

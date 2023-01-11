@@ -1,0 +1,11 @@
+package openapisdk.models.operations;
+
+
+
+public class DeleteSetupV1LocationsIdServicesRequest {
+    public DeleteSetupV1LocationsIdServicesPathParams pathParams;
+    public DeleteSetupV1LocationsIdServicesRequest withPathParams(DeleteSetupV1LocationsIdServicesPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+}

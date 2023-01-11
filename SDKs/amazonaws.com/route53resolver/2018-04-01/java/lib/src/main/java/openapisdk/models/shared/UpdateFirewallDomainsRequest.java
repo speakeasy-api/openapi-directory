@@ -1,0 +1,24 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+public class UpdateFirewallDomainsRequest {
+    @JsonProperty("Domains")
+    public String[] domains;
+    public UpdateFirewallDomainsRequest withDomains(String[] domains) {
+        this.domains = domains;
+        return this;
+    }
+    @JsonProperty("FirewallDomainListId")
+    public String firewallDomainListId;
+    public UpdateFirewallDomainsRequest withFirewallDomainListId(String firewallDomainListId) {
+        this.firewallDomainListId = firewallDomainListId;
+        return this;
+    }
+    @JsonProperty("Operation")
+    public FirewallDomainUpdateOperationEnum operation;
+    public UpdateFirewallDomainsRequest withOperation(FirewallDomainUpdateOperationEnum operation) {
+        this.operation = operation;
+        return this;
+    }
+}

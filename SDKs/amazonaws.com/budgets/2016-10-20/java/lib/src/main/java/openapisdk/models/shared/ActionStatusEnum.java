@@ -1,0 +1,21 @@
+package openapisdk.models.shared;
+
+
+public enum ActionStatusEnum {
+    STANDBY("STANDBY"),
+    PENDING("PENDING"),
+    EXECUTION_IN_PROGRESS("EXECUTION_IN_PROGRESS"),
+    EXECUTION_SUCCESS("EXECUTION_SUCCESS"),
+    EXECUTION_FAILURE("EXECUTION_FAILURE"),
+    REVERSE_IN_PROGRESS("REVERSE_IN_PROGRESS"),
+    REVERSE_SUCCESS("REVERSE_SUCCESS"),
+    REVERSE_FAILURE("REVERSE_FAILURE"),
+    RESET_IN_PROGRESS("RESET_IN_PROGRESS"),
+    RESET_FAILURE("RESET_FAILURE");
+
+    public final String value;
+
+    private ActionStatusEnum(String value) {
+        this.value = value;
+    }
+}

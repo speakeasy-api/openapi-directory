@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class Area120tablesWorkspacesGetRequest {
+    public Area120tablesWorkspacesGetPathParams pathParams;
+    public Area120tablesWorkspacesGetRequest withPathParams(Area120tablesWorkspacesGetPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public Area120tablesWorkspacesGetQueryParams queryParams;
+    public Area120tablesWorkspacesGetRequest withQueryParams(Area120tablesWorkspacesGetQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public Area120tablesWorkspacesGetSecurity security;
+    public Area120tablesWorkspacesGetRequest withSecurity(Area120tablesWorkspacesGetSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

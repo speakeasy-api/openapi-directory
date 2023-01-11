@@ -1,0 +1,18 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+public class PutCommentReactionInput {
+    @JsonProperty("commentId")
+    public String commentId;
+    public PutCommentReactionInput withCommentId(String commentId) {
+        this.commentId = commentId;
+        return this;
+    }
+    @JsonProperty("reactionValue")
+    public String reactionValue;
+    public PutCommentReactionInput withReactionValue(String reactionValue) {
+        this.reactionValue = reactionValue;
+        return this;
+    }
+}

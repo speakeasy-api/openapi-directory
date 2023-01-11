@@ -1,0 +1,22 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class UpdateLensReviewRequest {
+    public UpdateLensReviewPathParams pathParams;
+    public UpdateLensReviewRequest withPathParams(UpdateLensReviewPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public UpdateLensReviewHeaders headers;
+    public UpdateLensReviewRequest withHeaders(UpdateLensReviewHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public UpdateLensReviewRequestBody request;
+    public UpdateLensReviewRequest withRequest(UpdateLensReviewRequestBody request) {
+        this.request = request;
+        return this;
+    }
+}

@@ -1,0 +1,26 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * Denied
+ * Contains information that denied the authorization.
+**/
+public class Denied {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("explicitDeny")
+    public ExplicitDeny explicitDeny;
+    public Denied withExplicitDeny(ExplicitDeny explicitDeny) {
+        this.explicitDeny = explicitDeny;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("implicitDeny")
+    public ImplicitDeny implicitDeny;
+    public Denied withImplicitDeny(ImplicitDeny implicitDeny) {
+        this.implicitDeny = implicitDeny;
+        return this;
+    }
+}

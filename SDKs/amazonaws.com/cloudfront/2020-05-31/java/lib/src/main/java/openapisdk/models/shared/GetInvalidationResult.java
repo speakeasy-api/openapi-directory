@@ -1,0 +1,15 @@
+package openapisdk.models.shared;
+
+
+
+/**
+ * GetInvalidationResult
+ * The returned result of the corresponding request.
+**/
+public class GetInvalidationResult {
+    public Invalidation invalidation;
+    public GetInvalidationResult withInvalidation(Invalidation invalidation) {
+        this.invalidation = invalidation;
+        return this;
+    }
+}

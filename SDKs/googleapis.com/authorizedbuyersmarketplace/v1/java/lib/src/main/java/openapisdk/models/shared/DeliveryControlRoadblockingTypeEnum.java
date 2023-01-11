@@ -1,0 +1,17 @@
+package openapisdk.models.shared;
+
+
+public enum DeliveryControlRoadblockingTypeEnum {
+    ROADBLOCKING_TYPE_UNSPECIFIED("ROADBLOCKING_TYPE_UNSPECIFIED"),
+    ONLY_ONE("ONLY_ONE"),
+    ONE_OR_MORE("ONE_OR_MORE"),
+    AS_MANY_AS_POSSIBLE("AS_MANY_AS_POSSIBLE"),
+    ALL_ROADBLOCK("ALL_ROADBLOCK"),
+    CREATIVE_SET("CREATIVE_SET");
+
+    public final String value;
+
+    private DeliveryControlRoadblockingTypeEnum(String value) {
+        this.value = value;
+    }
+}

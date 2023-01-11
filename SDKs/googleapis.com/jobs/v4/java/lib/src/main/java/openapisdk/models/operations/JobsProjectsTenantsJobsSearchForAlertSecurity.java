@@ -1,0 +1,18 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class JobsProjectsTenantsJobsSearchForAlertSecurity {
+    @SpeakeasyMetadata("security:option=true")
+    public JobsProjectsTenantsJobsSearchForAlertSecurityOption1 option1;
+    public JobsProjectsTenantsJobsSearchForAlertSecurity withOption1(JobsProjectsTenantsJobsSearchForAlertSecurityOption1 option1) {
+        this.option1 = option1;
+        return this;
+    }
+    @SpeakeasyMetadata("security:option=true")
+    public JobsProjectsTenantsJobsSearchForAlertSecurityOption2 option2;
+    public JobsProjectsTenantsJobsSearchForAlertSecurity withOption2(JobsProjectsTenantsJobsSearchForAlertSecurityOption2 option2) {
+        this.option2 = option2;
+        return this;
+    }
+}

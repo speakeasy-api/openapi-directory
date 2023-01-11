@@ -1,0 +1,29 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class PutSubscriptionPatchRequestTypeRatePlansCharges {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("chargeId")
+    public String chargeId;
+    public PutSubscriptionPatchRequestTypeRatePlansCharges withChargeId(String chargeId) {
+        this.chargeId = chargeId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("chargeNumber")
+    public String chargeNumber;
+    public PutSubscriptionPatchRequestTypeRatePlansCharges withChargeNumber(String chargeNumber) {
+        this.chargeNumber = chargeNumber;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("customFields")
+    public java.util.Map<String, Object> customFields;
+    public PutSubscriptionPatchRequestTypeRatePlansCharges withCustomFields(java.util.Map<String, Object> customFields) {
+        this.customFields = customFields;
+        return this;
+    }
+}

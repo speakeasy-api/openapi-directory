@@ -1,0 +1,17 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class EnterpriseAdminCreateGlobalWebhookRequest {
+    public EnterpriseAdminCreateGlobalWebhookHeaders headers;
+    public EnterpriseAdminCreateGlobalWebhookRequest withHeaders(EnterpriseAdminCreateGlobalWebhookHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public EnterpriseAdminCreateGlobalWebhookRequestBody request;
+    public EnterpriseAdminCreateGlobalWebhookRequest withRequest(EnterpriseAdminCreateGlobalWebhookRequestBody request) {
+        this.request = request;
+        return this;
+    }
+}

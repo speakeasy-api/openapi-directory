@@ -1,0 +1,86 @@
+package openapisdk.models.shared;
+
+import java.time.OffsetDateTime;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import openapisdk.utils.DateTimeSerializer;
+import openapisdk.utils.DateTimeDeserializer;
+
+/**
+ * ImportJobProperties
+ * Displays the properties of the import job, including the ID, Arn, Name, and the status of the Data Store.
+**/
+public class ImportJobProperties {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("DataAccessRoleArn")
+    public String dataAccessRoleArn;
+    public ImportJobProperties withDataAccessRoleArn(String dataAccessRoleArn) {
+        this.dataAccessRoleArn = dataAccessRoleArn;
+        return this;
+    }
+    @JsonProperty("DatastoreId")
+    public String datastoreId;
+    public ImportJobProperties withDatastoreId(String datastoreId) {
+        this.datastoreId = datastoreId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonSerialize(contentUsing = DateTimeSerializer.class)
+    @JsonDeserialize(contentUsing = DateTimeDeserializer.class)
+    @JsonProperty("EndTime")
+    public OffsetDateTime endTime;
+    public ImportJobProperties withEndTime(OffsetDateTime endTime) {
+        this.endTime = endTime;
+        return this;
+    }
+    @JsonProperty("InputDataConfig")
+    public InputDataConfig inputDataConfig;
+    public ImportJobProperties withInputDataConfig(InputDataConfig inputDataConfig) {
+        this.inputDataConfig = inputDataConfig;
+        return this;
+    }
+    @JsonProperty("JobId")
+    public String jobId;
+    public ImportJobProperties withJobId(String jobId) {
+        this.jobId = jobId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("JobName")
+    public String jobName;
+    public ImportJobProperties withJobName(String jobName) {
+        this.jobName = jobName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("JobOutputDataConfig")
+    public OutputDataConfig jobOutputDataConfig;
+    public ImportJobProperties withJobOutputDataConfig(OutputDataConfig jobOutputDataConfig) {
+        this.jobOutputDataConfig = jobOutputDataConfig;
+        return this;
+    }
+    @JsonProperty("JobStatus")
+    public JobStatusEnum jobStatus;
+    public ImportJobProperties withJobStatus(JobStatusEnum jobStatus) {
+        this.jobStatus = jobStatus;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Message")
+    public String message;
+    public ImportJobProperties withMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    @JsonSerialize(using = DateTimeSerializer.class)
+    @JsonDeserialize(using = DateTimeDeserializer.class)
+    @JsonProperty("SubmitTime")
+    public OffsetDateTime submitTime;
+    public ImportJobProperties withSubmitTime(OffsetDateTime submitTime) {
+        this.submitTime = submitTime;
+        return this;
+    }
+}

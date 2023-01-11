@@ -1,0 +1,33 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class AwsLambdaRulePostTarget {
+    @JsonProperty("authentication")
+    public Object authentication;
+    public AwsLambdaRulePostTarget withAuthentication(Object authentication) {
+        this.authentication = authentication;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("enveloped")
+    public Boolean enveloped;
+    public AwsLambdaRulePostTarget withEnveloped(Boolean enveloped) {
+        this.enveloped = enveloped;
+        return this;
+    }
+    @JsonProperty("functionName")
+    public String functionName;
+    public AwsLambdaRulePostTarget withFunctionName(String functionName) {
+        this.functionName = functionName;
+        return this;
+    }
+    @JsonProperty("region")
+    public String region;
+    public AwsLambdaRulePostTarget withRegion(String region) {
+        this.region = region;
+        return this;
+    }
+}

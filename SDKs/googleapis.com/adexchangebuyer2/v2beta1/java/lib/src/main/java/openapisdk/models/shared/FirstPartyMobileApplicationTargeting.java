@@ -1,0 +1,26 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * FirstPartyMobileApplicationTargeting
+ * Represents a list of targeted and excluded mobile application IDs that publishers own. Mobile application IDs are from App Store and Google Play Store. Android App ID, for example, com.google.android.apps.maps, can be found in Google Play Store URL. iOS App ID (which is a number) can be found at the end of iTunes store URL. First party mobile applications is either included or excluded.
+**/
+public class FirstPartyMobileApplicationTargeting {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("excludedAppIds")
+    public String[] excludedAppIds;
+    public FirstPartyMobileApplicationTargeting withExcludedAppIds(String[] excludedAppIds) {
+        this.excludedAppIds = excludedAppIds;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("targetedAppIds")
+    public String[] targetedAppIds;
+    public FirstPartyMobileApplicationTargeting withTargetedAppIds(String[] targetedAppIds) {
+        this.targetedAppIds = targetedAppIds;
+        return this;
+    }
+}

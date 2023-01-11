@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class GetComponentVersionArtifactRequest {
+    public GetComponentVersionArtifactPathParams pathParams;
+    public GetComponentVersionArtifactRequest withPathParams(GetComponentVersionArtifactPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public GetComponentVersionArtifactHeaders headers;
+    public GetComponentVersionArtifactRequest withHeaders(GetComponentVersionArtifactHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+}

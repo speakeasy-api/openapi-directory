@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class PutEmployerSecretRequest {
+    public PutEmployerSecretPathParams pathParams;
+    public PutEmployerSecretRequest withPathParams(PutEmployerSecretPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public PutEmployerSecretHeaders headers;
+    public PutEmployerSecretRequest withHeaders(PutEmployerSecretHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+}

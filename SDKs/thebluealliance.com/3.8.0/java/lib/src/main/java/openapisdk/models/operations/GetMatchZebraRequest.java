@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class GetMatchZebraRequest {
+    public GetMatchZebraPathParams pathParams;
+    public GetMatchZebraRequest withPathParams(GetMatchZebraPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public GetMatchZebraHeaders headers;
+    public GetMatchZebraRequest withHeaders(GetMatchZebraHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+    public GetMatchZebraSecurity security;
+    public GetMatchZebraRequest withSecurity(GetMatchZebraSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

@@ -1,0 +1,47 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * DistributionBundle
+ * Describes the specifications of a distribution bundle.
+**/
+public class DistributionBundle {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("bundleId")
+    public String bundleId;
+    public DistributionBundle withBundleId(String bundleId) {
+        this.bundleId = bundleId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("isActive")
+    public Boolean isActive;
+    public DistributionBundle withIsActive(Boolean isActive) {
+        this.isActive = isActive;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("name")
+    public String name;
+    public DistributionBundle withName(String name) {
+        this.name = name;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("price")
+    public Float price;
+    public DistributionBundle withPrice(Float price) {
+        this.price = price;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("transferPerMonthInGb")
+    public Long transferPerMonthInGb;
+    public DistributionBundle withTransferPerMonthInGb(Long transferPerMonthInGb) {
+        this.transferPerMonthInGb = transferPerMonthInGb;
+        return this;
+    }
+}

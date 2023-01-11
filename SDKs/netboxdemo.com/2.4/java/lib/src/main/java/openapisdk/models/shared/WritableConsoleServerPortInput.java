@@ -1,0 +1,27 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class WritableConsoleServerPortInput {
+    @JsonProperty("device")
+    public Long device;
+    public WritableConsoleServerPortInput withDevice(Long device) {
+        this.device = device;
+        return this;
+    }
+    @JsonProperty("name")
+    public String name;
+    public WritableConsoleServerPortInput withName(String name) {
+        this.name = name;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("tags")
+    public String[] tags;
+    public WritableConsoleServerPortInput withTags(String[] tags) {
+        this.tags = tags;
+        return this;
+    }
+}

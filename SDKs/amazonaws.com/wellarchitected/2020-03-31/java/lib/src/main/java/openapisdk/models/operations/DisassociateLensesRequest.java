@@ -1,0 +1,22 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class DisassociateLensesRequest {
+    public DisassociateLensesPathParams pathParams;
+    public DisassociateLensesRequest withPathParams(DisassociateLensesPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public DisassociateLensesHeaders headers;
+    public DisassociateLensesRequest withHeaders(DisassociateLensesHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public DisassociateLensesRequestBody request;
+    public DisassociateLensesRequest withRequest(DisassociateLensesRequestBody request) {
+        this.request = request;
+        return this;
+    }
+}

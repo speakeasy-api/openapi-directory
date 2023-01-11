@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class GetSetupV1ResourcesIdRequest {
+    public GetSetupV1ResourcesIdPathParams pathParams;
+    public GetSetupV1ResourcesIdRequest withPathParams(GetSetupV1ResourcesIdPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public GetSetupV1ResourcesIdQueryParams queryParams;
+    public GetSetupV1ResourcesIdRequest withQueryParams(GetSetupV1ResourcesIdQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+}

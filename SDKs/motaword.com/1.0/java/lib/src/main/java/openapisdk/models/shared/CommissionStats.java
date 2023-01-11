@@ -1,0 +1,36 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class CommissionStats {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("balance")
+    public Monetary balance;
+    public CommissionStats withBalance(Monetary balance) {
+        this.balance = balance;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("paid")
+    public Monetary paid;
+    public CommissionStats withPaid(Monetary paid) {
+        this.paid = paid;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("quote_total")
+    public Monetary quoteTotal;
+    public CommissionStats withQuoteTotal(Monetary quoteTotal) {
+        this.quoteTotal = quoteTotal;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("total")
+    public Monetary total;
+    public CommissionStats withTotal(Monetary total) {
+        this.total = total;
+        return this;
+    }
+}

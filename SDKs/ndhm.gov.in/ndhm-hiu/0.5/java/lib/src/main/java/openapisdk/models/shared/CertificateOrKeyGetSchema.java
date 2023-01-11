@@ -1,0 +1,71 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class CertificateOrKeyGetSchema {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("alg")
+    public String alg;
+    public CertificateOrKeyGetSchema withAlg(String alg) {
+        this.alg = alg;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("e")
+    public String e;
+    public CertificateOrKeyGetSchema withE(String e) {
+        this.e = e;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("kid")
+    public String kid;
+    public CertificateOrKeyGetSchema withKid(String kid) {
+        this.kid = kid;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("kty")
+    public String kty;
+    public CertificateOrKeyGetSchema withKty(String kty) {
+        this.kty = kty;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("n")
+    public String n;
+    public CertificateOrKeyGetSchema withN(String n) {
+        this.n = n;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("use")
+    public String use;
+    public CertificateOrKeyGetSchema withUse(String use) {
+        this.use = use;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("x5c")
+    public String[] x5c;
+    public CertificateOrKeyGetSchema withX5c(String[] x5c) {
+        this.x5c = x5c;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("x5t")
+    public String x5t;
+    public CertificateOrKeyGetSchema withX5t(String x5t) {
+        this.x5t = x5t;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("x5t#S256")
+    public String x5tNumberS256;
+    public CertificateOrKeyGetSchema withX5tNumberS256(String x5tNumberS256) {
+        this.x5tNumberS256 = x5tNumberS256;
+        return this;
+    }
+}

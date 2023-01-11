@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class DeleteRepositoriesWorkspaceRepoSlugBranchRestrictionsIdRequest {
+    public DeleteRepositoriesWorkspaceRepoSlugBranchRestrictionsIdPathParams pathParams;
+    public DeleteRepositoriesWorkspaceRepoSlugBranchRestrictionsIdRequest withPathParams(DeleteRepositoriesWorkspaceRepoSlugBranchRestrictionsIdPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public DeleteRepositoriesWorkspaceRepoSlugBranchRestrictionsIdSecurity security;
+    public DeleteRepositoriesWorkspaceRepoSlugBranchRestrictionsIdRequest withSecurity(DeleteRepositoriesWorkspaceRepoSlugBranchRestrictionsIdSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

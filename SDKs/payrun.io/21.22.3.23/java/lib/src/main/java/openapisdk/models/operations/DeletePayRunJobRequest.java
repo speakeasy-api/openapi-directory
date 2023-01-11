@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class DeletePayRunJobRequest {
+    public DeletePayRunJobPathParams pathParams;
+    public DeletePayRunJobRequest withPathParams(DeletePayRunJobPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public DeletePayRunJobHeaders headers;
+    public DeletePayRunJobRequest withHeaders(DeletePayRunJobHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+}

@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class GetCampaignsRequest {
+    public GetCampaignsPathParams pathParams;
+    public GetCampaignsRequest withPathParams(GetCampaignsPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public GetCampaignsQueryParams queryParams;
+    public GetCampaignsRequest withQueryParams(GetCampaignsQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public GetCampaignsHeaders headers;
+    public GetCampaignsRequest withHeaders(GetCampaignsHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+}

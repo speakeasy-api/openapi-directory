@@ -1,0 +1,17 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class PutImageRecipePolicyRequest {
+    public PutImageRecipePolicyHeaders headers;
+    public PutImageRecipePolicyRequest withHeaders(PutImageRecipePolicyHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public PutImageRecipePolicyRequestBody request;
+    public PutImageRecipePolicyRequest withRequest(PutImageRecipePolicyRequestBody request) {
+        this.request = request;
+        return this;
+    }
+}

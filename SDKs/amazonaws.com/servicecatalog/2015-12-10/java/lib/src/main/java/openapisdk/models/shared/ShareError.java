@@ -1,0 +1,33 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * ShareError
+ * Errors that occurred during the portfolio share operation.
+**/
+public class ShareError {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Accounts")
+    public String[] accounts;
+    public ShareError withAccounts(String[] accounts) {
+        this.accounts = accounts;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Error")
+    public String error;
+    public ShareError withError(String error) {
+        this.error = error;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Message")
+    public String message;
+    public ShareError withMessage(String message) {
+        this.message = message;
+        return this;
+    }
+}

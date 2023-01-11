@@ -1,0 +1,138 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * AwsRdsDbClusterSnapshotDetails
+ * Information about an Amazon RDS DB cluster snapshot.
+**/
+public class AwsRdsDbClusterSnapshotDetails {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("AllocatedStorage")
+    public Long allocatedStorage;
+    public AwsRdsDbClusterSnapshotDetails withAllocatedStorage(Long allocatedStorage) {
+        this.allocatedStorage = allocatedStorage;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("AvailabilityZones")
+    public String[] availabilityZones;
+    public AwsRdsDbClusterSnapshotDetails withAvailabilityZones(String[] availabilityZones) {
+        this.availabilityZones = availabilityZones;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ClusterCreateTime")
+    public String clusterCreateTime;
+    public AwsRdsDbClusterSnapshotDetails withClusterCreateTime(String clusterCreateTime) {
+        this.clusterCreateTime = clusterCreateTime;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("DbClusterIdentifier")
+    public String dbClusterIdentifier;
+    public AwsRdsDbClusterSnapshotDetails withDbClusterIdentifier(String dbClusterIdentifier) {
+        this.dbClusterIdentifier = dbClusterIdentifier;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("DbClusterSnapshotIdentifier")
+    public String dbClusterSnapshotIdentifier;
+    public AwsRdsDbClusterSnapshotDetails withDbClusterSnapshotIdentifier(String dbClusterSnapshotIdentifier) {
+        this.dbClusterSnapshotIdentifier = dbClusterSnapshotIdentifier;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Engine")
+    public String engine;
+    public AwsRdsDbClusterSnapshotDetails withEngine(String engine) {
+        this.engine = engine;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("EngineVersion")
+    public String engineVersion;
+    public AwsRdsDbClusterSnapshotDetails withEngineVersion(String engineVersion) {
+        this.engineVersion = engineVersion;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("IamDatabaseAuthenticationEnabled")
+    public Boolean iamDatabaseAuthenticationEnabled;
+    public AwsRdsDbClusterSnapshotDetails withIamDatabaseAuthenticationEnabled(Boolean iamDatabaseAuthenticationEnabled) {
+        this.iamDatabaseAuthenticationEnabled = iamDatabaseAuthenticationEnabled;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("KmsKeyId")
+    public String kmsKeyId;
+    public AwsRdsDbClusterSnapshotDetails withKmsKeyId(String kmsKeyId) {
+        this.kmsKeyId = kmsKeyId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("LicenseModel")
+    public String licenseModel;
+    public AwsRdsDbClusterSnapshotDetails withLicenseModel(String licenseModel) {
+        this.licenseModel = licenseModel;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("MasterUsername")
+    public String masterUsername;
+    public AwsRdsDbClusterSnapshotDetails withMasterUsername(String masterUsername) {
+        this.masterUsername = masterUsername;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("PercentProgress")
+    public Long percentProgress;
+    public AwsRdsDbClusterSnapshotDetails withPercentProgress(Long percentProgress) {
+        this.percentProgress = percentProgress;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Port")
+    public Long port;
+    public AwsRdsDbClusterSnapshotDetails withPort(Long port) {
+        this.port = port;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("SnapshotCreateTime")
+    public String snapshotCreateTime;
+    public AwsRdsDbClusterSnapshotDetails withSnapshotCreateTime(String snapshotCreateTime) {
+        this.snapshotCreateTime = snapshotCreateTime;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("SnapshotType")
+    public String snapshotType;
+    public AwsRdsDbClusterSnapshotDetails withSnapshotType(String snapshotType) {
+        this.snapshotType = snapshotType;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Status")
+    public String status;
+    public AwsRdsDbClusterSnapshotDetails withStatus(String status) {
+        this.status = status;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("StorageEncrypted")
+    public Boolean storageEncrypted;
+    public AwsRdsDbClusterSnapshotDetails withStorageEncrypted(Boolean storageEncrypted) {
+        this.storageEncrypted = storageEncrypted;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("VpcId")
+    public String vpcId;
+    public AwsRdsDbClusterSnapshotDetails withVpcId(String vpcId) {
+        this.vpcId = vpcId;
+        return this;
+    }
+}

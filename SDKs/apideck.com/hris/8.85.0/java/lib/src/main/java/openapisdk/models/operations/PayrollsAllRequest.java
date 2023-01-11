@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class PayrollsAllRequest {
+    public PayrollsAllQueryParams queryParams;
+    public PayrollsAllRequest withQueryParams(PayrollsAllQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public PayrollsAllHeaders headers;
+    public PayrollsAllRequest withHeaders(PayrollsAllHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+    public PayrollsAllSecurity security;
+    public PayrollsAllRequest withSecurity(PayrollsAllSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

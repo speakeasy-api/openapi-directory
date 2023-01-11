@@ -1,0 +1,26 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * ActionContext
+ * Represents the context of an action in the stage of a pipeline to a job worker.
+**/
+public class ActionContext {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("actionExecutionId")
+    public String actionExecutionId;
+    public ActionContext withActionExecutionId(String actionExecutionId) {
+        this.actionExecutionId = actionExecutionId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("name")
+    public String name;
+    public ActionContext withName(String name) {
+        this.name = name;
+        return this;
+    }
+}

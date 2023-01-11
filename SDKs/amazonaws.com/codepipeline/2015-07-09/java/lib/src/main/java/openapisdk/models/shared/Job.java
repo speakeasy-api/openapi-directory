@@ -1,0 +1,40 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * Job
+ * Represents information about a job.
+**/
+public class Job {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("accountId")
+    public String accountId;
+    public Job withAccountId(String accountId) {
+        this.accountId = accountId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("data")
+    public JobData data;
+    public Job withData(JobData data) {
+        this.data = data;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("id")
+    public String id;
+    public Job withId(String id) {
+        this.id = id;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("nonce")
+    public String nonce;
+    public Job withNonce(String nonce) {
+        this.nonce = nonce;
+        return this;
+    }
+}

@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class OpportunitiesAllRequest {
+    public OpportunitiesAllQueryParams queryParams;
+    public OpportunitiesAllRequest withQueryParams(OpportunitiesAllQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public OpportunitiesAllHeaders headers;
+    public OpportunitiesAllRequest withHeaders(OpportunitiesAllHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+    public OpportunitiesAllSecurity security;
+    public OpportunitiesAllRequest withSecurity(OpportunitiesAllSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

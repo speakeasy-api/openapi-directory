@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class GetDistributedVirtualSwitchRequest {
+    public GetDistributedVirtualSwitchPathParams pathParams;
+    public GetDistributedVirtualSwitchRequest withPathParams(GetDistributedVirtualSwitchPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public GetDistributedVirtualSwitchQueryParams queryParams;
+    public GetDistributedVirtualSwitchRequest withQueryParams(GetDistributedVirtualSwitchQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public GetDistributedVirtualSwitchSecurity security;
+    public GetDistributedVirtualSwitchRequest withSecurity(GetDistributedVirtualSwitchSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

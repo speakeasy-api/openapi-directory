@@ -1,0 +1,82 @@
+package openapisdk.models.shared;
+
+import java.time.OffsetDateTime;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import openapisdk.utils.DateTimeSerializer;
+import openapisdk.utils.DateTimeDeserializer;
+
+/**
+ * EventSourceConfiguration
+ * Describes mapping between an Amazon Kinesis stream and a Lambda function.
+**/
+public class EventSourceConfiguration {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("BatchSize")
+    public Long batchSize;
+    public EventSourceConfiguration withBatchSize(Long batchSize) {
+        this.batchSize = batchSize;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("EventSource")
+    public String eventSource;
+    public EventSourceConfiguration withEventSource(String eventSource) {
+        this.eventSource = eventSource;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("FunctionName")
+    public String functionName;
+    public EventSourceConfiguration withFunctionName(String functionName) {
+        this.functionName = functionName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("IsActive")
+    public Boolean isActive;
+    public EventSourceConfiguration withIsActive(Boolean isActive) {
+        this.isActive = isActive;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonSerialize(contentUsing = DateTimeSerializer.class)
+    @JsonDeserialize(contentUsing = DateTimeDeserializer.class)
+    @JsonProperty("LastModified")
+    public OffsetDateTime lastModified;
+    public EventSourceConfiguration withLastModified(OffsetDateTime lastModified) {
+        this.lastModified = lastModified;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Parameters")
+    public java.util.Map<String, String> parameters;
+    public EventSourceConfiguration withParameters(java.util.Map<String, String> parameters) {
+        this.parameters = parameters;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Role")
+    public String role;
+    public EventSourceConfiguration withRole(String role) {
+        this.role = role;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Status")
+    public String status;
+    public EventSourceConfiguration withStatus(String status) {
+        this.status = status;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("UUID")
+    public String uuid;
+    public EventSourceConfiguration withUuid(String uuid) {
+        this.uuid = uuid;
+        return this;
+    }
+}

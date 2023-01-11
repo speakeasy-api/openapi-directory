@@ -1,0 +1,28 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class UpdateContactRequest {
+    @JsonProperty("ContactId")
+    public String contactId;
+    public UpdateContactRequest withContactId(String contactId) {
+        this.contactId = contactId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("DisplayName")
+    public String displayName;
+    public UpdateContactRequest withDisplayName(String displayName) {
+        this.displayName = displayName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Plan")
+    public Plan plan;
+    public UpdateContactRequest withPlan(Plan plan) {
+        this.plan = plan;
+        return this;
+    }
+}

@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class GetNetworkWirelessConnectionStatsRequest {
+    public GetNetworkWirelessConnectionStatsPathParams pathParams;
+    public GetNetworkWirelessConnectionStatsRequest withPathParams(GetNetworkWirelessConnectionStatsPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public GetNetworkWirelessConnectionStatsQueryParams queryParams;
+    public GetNetworkWirelessConnectionStatsRequest withQueryParams(GetNetworkWirelessConnectionStatsQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+}

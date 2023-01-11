@@ -1,0 +1,40 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * IotAnalyticsAction
+ * Sends message data to an IoT Analytics channel.
+**/
+public class IotAnalyticsAction {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("batchMode")
+    public Boolean batchMode;
+    public IotAnalyticsAction withBatchMode(Boolean batchMode) {
+        this.batchMode = batchMode;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("channelArn")
+    public String channelArn;
+    public IotAnalyticsAction withChannelArn(String channelArn) {
+        this.channelArn = channelArn;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("channelName")
+    public String channelName;
+    public IotAnalyticsAction withChannelName(String channelName) {
+        this.channelName = channelName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("roleArn")
+    public String roleArn;
+    public IotAnalyticsAction withRoleArn(String roleArn) {
+        this.roleArn = roleArn;
+        return this;
+    }
+}

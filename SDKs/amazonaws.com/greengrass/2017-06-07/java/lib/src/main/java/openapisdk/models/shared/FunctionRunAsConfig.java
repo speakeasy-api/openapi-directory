@@ -1,0 +1,26 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * FunctionRunAsConfig
+ * Specifies the user and group whose permissions are used when running the Lambda function. You can specify one or both values to override the default values. We recommend that you avoid running as root unless absolutely necessary to minimize the risk of unintended changes or malicious attacks. To run as root, you must set ''IsolationMode'' to ''NoContainer'' and update config.json in ''greengrass-root/config'' to set ''allowFunctionsToRunAsRoot'' to ''yes''.
+**/
+public class FunctionRunAsConfig {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Gid")
+    public Long gid;
+    public FunctionRunAsConfig withGid(Long gid) {
+        this.gid = gid;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Uid")
+    public Long uid;
+    public FunctionRunAsConfig withUid(Long uid) {
+        this.uid = uid;
+        return this;
+    }
+}

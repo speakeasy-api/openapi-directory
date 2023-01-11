@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class GetWorkspacesWorkspacePermissionsRequest {
+    public GetWorkspacesWorkspacePermissionsPathParams pathParams;
+    public GetWorkspacesWorkspacePermissionsRequest withPathParams(GetWorkspacesWorkspacePermissionsPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public GetWorkspacesWorkspacePermissionsQueryParams queryParams;
+    public GetWorkspacesWorkspacePermissionsRequest withQueryParams(GetWorkspacesWorkspacePermissionsQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public GetWorkspacesWorkspacePermissionsSecurity security;
+    public GetWorkspacesWorkspacePermissionsRequest withSecurity(GetWorkspacesWorkspacePermissionsSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

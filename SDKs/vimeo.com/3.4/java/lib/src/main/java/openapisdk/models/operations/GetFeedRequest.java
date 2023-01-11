@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class GetFeedRequest {
+    public GetFeedPathParams pathParams;
+    public GetFeedRequest withPathParams(GetFeedPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public GetFeedQueryParams queryParams;
+    public GetFeedRequest withQueryParams(GetFeedQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public GetFeedSecurity security;
+    public GetFeedRequest withSecurity(GetFeedSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

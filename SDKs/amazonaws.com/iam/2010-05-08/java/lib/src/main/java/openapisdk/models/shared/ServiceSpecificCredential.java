@@ -1,0 +1,45 @@
+package openapisdk.models.shared;
+
+import java.time.OffsetDateTime;
+
+/**
+ * ServiceSpecificCredential
+ * Contains the details of a service-specific credential.
+**/
+public class ServiceSpecificCredential {
+    public OffsetDateTime createDate;
+    public ServiceSpecificCredential withCreateDate(OffsetDateTime createDate) {
+        this.createDate = createDate;
+        return this;
+    }
+    public String serviceName;
+    public ServiceSpecificCredential withServiceName(String serviceName) {
+        this.serviceName = serviceName;
+        return this;
+    }
+    public String servicePassword;
+    public ServiceSpecificCredential withServicePassword(String servicePassword) {
+        this.servicePassword = servicePassword;
+        return this;
+    }
+    public String serviceSpecificCredentialId;
+    public ServiceSpecificCredential withServiceSpecificCredentialId(String serviceSpecificCredentialId) {
+        this.serviceSpecificCredentialId = serviceSpecificCredentialId;
+        return this;
+    }
+    public String serviceUserName;
+    public ServiceSpecificCredential withServiceUserName(String serviceUserName) {
+        this.serviceUserName = serviceUserName;
+        return this;
+    }
+    public StatusTypeEnum status;
+    public ServiceSpecificCredential withStatus(StatusTypeEnum status) {
+        this.status = status;
+        return this;
+    }
+    public String userName;
+    public ServiceSpecificCredential withUserName(String userName) {
+        this.userName = userName;
+        return this;
+    }
+}

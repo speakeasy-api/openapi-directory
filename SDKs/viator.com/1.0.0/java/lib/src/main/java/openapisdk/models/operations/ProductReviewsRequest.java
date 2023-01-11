@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class ProductReviewsRequest {
+    public ProductReviewsQueryParams queryParams;
+    public ProductReviewsRequest withQueryParams(ProductReviewsQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public ProductReviewsHeaders headers;
+    public ProductReviewsRequest withHeaders(ProductReviewsHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+}

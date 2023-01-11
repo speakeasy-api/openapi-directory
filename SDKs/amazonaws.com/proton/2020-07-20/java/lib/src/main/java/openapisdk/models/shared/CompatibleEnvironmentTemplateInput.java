@@ -1,0 +1,22 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+/**
+ * CompatibleEnvironmentTemplateInput
+ * Compatible environment template data.
+**/
+public class CompatibleEnvironmentTemplateInput {
+    @JsonProperty("majorVersion")
+    public String majorVersion;
+    public CompatibleEnvironmentTemplateInput withMajorVersion(String majorVersion) {
+        this.majorVersion = majorVersion;
+        return this;
+    }
+    @JsonProperty("templateName")
+    public String templateName;
+    public CompatibleEnvironmentTemplateInput withTemplateName(String templateName) {
+        this.templateName = templateName;
+        return this;
+    }
+}

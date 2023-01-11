@@ -1,0 +1,22 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class ListImagePipelineImagesRequest {
+    public ListImagePipelineImagesQueryParams queryParams;
+    public ListImagePipelineImagesRequest withQueryParams(ListImagePipelineImagesQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public ListImagePipelineImagesHeaders headers;
+    public ListImagePipelineImagesRequest withHeaders(ListImagePipelineImagesHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public ListImagePipelineImagesRequestBody request;
+    public ListImagePipelineImagesRequest withRequest(ListImagePipelineImagesRequestBody request) {
+        this.request = request;
+        return this;
+    }
+}

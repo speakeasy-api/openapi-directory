@@ -1,0 +1,71 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class ProductStatusDataQualityIssue {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("destination")
+    public String destination;
+    public ProductStatusDataQualityIssue withDestination(String destination) {
+        this.destination = destination;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("detail")
+    public String detail;
+    public ProductStatusDataQualityIssue withDetail(String detail) {
+        this.detail = detail;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("fetchStatus")
+    public String fetchStatus;
+    public ProductStatusDataQualityIssue withFetchStatus(String fetchStatus) {
+        this.fetchStatus = fetchStatus;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("id")
+    public String id;
+    public ProductStatusDataQualityIssue withId(String id) {
+        this.id = id;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("location")
+    public String location;
+    public ProductStatusDataQualityIssue withLocation(String location) {
+        this.location = location;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("severity")
+    public String severity;
+    public ProductStatusDataQualityIssue withSeverity(String severity) {
+        this.severity = severity;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("timestamp")
+    public String timestamp;
+    public ProductStatusDataQualityIssue withTimestamp(String timestamp) {
+        this.timestamp = timestamp;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("valueOnLandingPage")
+    public String valueOnLandingPage;
+    public ProductStatusDataQualityIssue withValueOnLandingPage(String valueOnLandingPage) {
+        this.valueOnLandingPage = valueOnLandingPage;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("valueProvided")
+    public String valueProvided;
+    public ProductStatusDataQualityIssue withValueProvided(String valueProvided) {
+        this.valueProvided = valueProvided;
+        return this;
+    }
+}

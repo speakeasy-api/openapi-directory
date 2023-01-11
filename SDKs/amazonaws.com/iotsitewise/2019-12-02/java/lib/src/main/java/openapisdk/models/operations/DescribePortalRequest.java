@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class DescribePortalRequest {
+    public DescribePortalPathParams pathParams;
+    public DescribePortalRequest withPathParams(DescribePortalPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public DescribePortalHeaders headers;
+    public DescribePortalRequest withHeaders(DescribePortalHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+}

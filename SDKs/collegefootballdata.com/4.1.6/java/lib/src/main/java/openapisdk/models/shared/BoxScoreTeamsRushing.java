@@ -1,0 +1,71 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class BoxScoreTeamsRushing {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("lineYards")
+    public Double lineYards;
+    public BoxScoreTeamsRushing withLineYards(Double lineYards) {
+        this.lineYards = lineYards;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("lineYardsAverage")
+    public Double lineYardsAverage;
+    public BoxScoreTeamsRushing withLineYardsAverage(Double lineYardsAverage) {
+        this.lineYardsAverage = lineYardsAverage;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("openFieldYards")
+    public Long openFieldYards;
+    public BoxScoreTeamsRushing withOpenFieldYards(Long openFieldYards) {
+        this.openFieldYards = openFieldYards;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("openFieldYardsAverage")
+    public Double openFieldYardsAverage;
+    public BoxScoreTeamsRushing withOpenFieldYardsAverage(Double openFieldYardsAverage) {
+        this.openFieldYardsAverage = openFieldYardsAverage;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("powerSuccess")
+    public Double powerSuccess;
+    public BoxScoreTeamsRushing withPowerSuccess(Double powerSuccess) {
+        this.powerSuccess = powerSuccess;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("secondLevelYards")
+    public Long secondLevelYards;
+    public BoxScoreTeamsRushing withSecondLevelYards(Long secondLevelYards) {
+        this.secondLevelYards = secondLevelYards;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("secondLevelYardsAverage")
+    public Double secondLevelYardsAverage;
+    public BoxScoreTeamsRushing withSecondLevelYardsAverage(Double secondLevelYardsAverage) {
+        this.secondLevelYardsAverage = secondLevelYardsAverage;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("stuffRate")
+    public Double stuffRate;
+    public BoxScoreTeamsRushing withStuffRate(Double stuffRate) {
+        this.stuffRate = stuffRate;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("team")
+    public String team;
+    public BoxScoreTeamsRushing withTeam(String team) {
+        this.team = team;
+        return this;
+    }
+}

@@ -1,0 +1,16 @@
+package openapisdk.models.shared;
+
+
+public enum RateDetailsInventorySourceRateTypeEnum {
+    INVENTORY_SOURCE_RATE_TYPE_UNSPECIFIED("INVENTORY_SOURCE_RATE_TYPE_UNSPECIFIED"),
+    INVENTORY_SOURCE_RATE_TYPE_CPM_FIXED("INVENTORY_SOURCE_RATE_TYPE_CPM_FIXED"),
+    INVENTORY_SOURCE_RATE_TYPE_CPM_FLOOR("INVENTORY_SOURCE_RATE_TYPE_CPM_FLOOR"),
+    INVENTORY_SOURCE_RATE_TYPE_CPD("INVENTORY_SOURCE_RATE_TYPE_CPD"),
+    INVENTORY_SOURCE_RATE_TYPE_FLAT("INVENTORY_SOURCE_RATE_TYPE_FLAT");
+
+    public final String value;
+
+    private RateDetailsInventorySourceRateTypeEnum(String value) {
+        this.value = value;
+    }
+}

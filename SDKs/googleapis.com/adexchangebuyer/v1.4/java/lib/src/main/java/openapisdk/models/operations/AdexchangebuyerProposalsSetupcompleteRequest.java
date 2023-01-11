@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class AdexchangebuyerProposalsSetupcompleteRequest {
+    public AdexchangebuyerProposalsSetupcompletePathParams pathParams;
+    public AdexchangebuyerProposalsSetupcompleteRequest withPathParams(AdexchangebuyerProposalsSetupcompletePathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public AdexchangebuyerProposalsSetupcompleteQueryParams queryParams;
+    public AdexchangebuyerProposalsSetupcompleteRequest withQueryParams(AdexchangebuyerProposalsSetupcompleteQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public AdexchangebuyerProposalsSetupcompleteSecurity security;
+    public AdexchangebuyerProposalsSetupcompleteRequest withSecurity(AdexchangebuyerProposalsSetupcompleteSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

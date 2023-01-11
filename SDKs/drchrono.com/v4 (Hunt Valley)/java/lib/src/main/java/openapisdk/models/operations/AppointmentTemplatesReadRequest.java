@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class AppointmentTemplatesReadRequest {
+    public AppointmentTemplatesReadPathParams pathParams;
+    public AppointmentTemplatesReadRequest withPathParams(AppointmentTemplatesReadPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public AppointmentTemplatesReadQueryParams queryParams;
+    public AppointmentTemplatesReadRequest withQueryParams(AppointmentTemplatesReadQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public AppointmentTemplatesReadSecurity security;
+    public AppointmentTemplatesReadRequest withSecurity(AppointmentTemplatesReadSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

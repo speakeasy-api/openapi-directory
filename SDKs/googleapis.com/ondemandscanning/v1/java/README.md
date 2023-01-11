@@ -1,0 +1,81 @@
+# openapisdk
+
+<!-- Start SDK Installation -->
+## SDK Installation
+
+### Gradle
+
+```groovy
+implementation 'openapisdk:openapisdk:0.0.1'
+```
+<!-- End SDK Installation -->
+
+## SDK Example Usage
+<!-- Start SDK Example Usage -->
+```java
+package hello.world;
+
+import openapisdk.SDK;
+import openapisdk.models.shared.Security;
+
+public class Application {
+    public static void main(String[] args) {
+        try {
+            SDK.Builder builder = SDK.builder();
+
+            SDK sdk = builder.build();
+
+            OndemandscanningProjectsLocationsOperationsCancelRequest req = new OndemandscanningProjectsLocationsOperationsCancelRequest() {{
+                security = new OndemandscanningProjectsLocationsOperationsCancelSecurity() {{
+                    oauth2 = new SchemeOauth2() {{
+                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
+                    }};
+                    oauth2c = new SchemeOauth2c() {{
+                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
+                    }};
+                }};
+                pathParams = new OndemandscanningProjectsLocationsOperationsCancelPathParams() {{
+                    name = "distinctio";
+                }};
+                queryParams = new OndemandscanningProjectsLocationsOperationsCancelQueryParams() {{
+                    dollarXgafv = "2";
+                    accessToken = "ipsa";
+                    alt = "media";
+                    callback = "officiis";
+                    fields = "sed";
+                    key = "nisi";
+                    oauthToken = "quasi";
+                    prettyPrint = false;
+                    quotaUser = "sequi";
+                    uploadType = "dolore";
+                    uploadProtocol = "ut";
+                }};
+            }};
+
+            OndemandscanningProjectsLocationsOperationsCancelResponse res = sdk.projects.ondemandscanningProjectsLocationsOperationsCancel(req);
+
+            if (res.empty.isPresent()) {
+                // handle response
+            }
+        } catch (Exception e) {
+            // handle exception
+        }
+```
+<!-- End SDK Example Usage -->
+
+<!-- Start SDK Available Operations -->
+## SDK Available Operations
+
+### projects
+
+* `ondemandscanningProjectsLocationsOperationsCancel` - Starts asynchronous cancellation on a long-running operation. The server makes a best effort to cancel the operation, but success is not guaranteed. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other methods to check whether the cancellation succeeded or whether the operation completed despite cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to `Code.CANCELLED`.
+* `ondemandscanningProjectsLocationsOperationsDelete` - Deletes a long-running operation. This method indicates that the client is no longer interested in the operation result. It does not cancel the operation. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`.
+* `ondemandscanningProjectsLocationsOperationsGet` - Gets the latest state of a long-running operation. Clients can use this method to poll the operation result at intervals as recommended by the API service.
+* `ondemandscanningProjectsLocationsOperationsList` - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`. NOTE: the `name` binding allows API services to override the binding to use different resource name schemes, such as `users/*/operations`. To override the binding, API services can add a binding such as `"/v1/{name=users/*}/operations"` to their service configuration. For backwards compatibility, the default name includes the operations collection id, however overriding users must ensure the name binding is the parent resource, without the operations collection id.
+* `ondemandscanningProjectsLocationsOperationsWait` - Waits until the specified long-running operation is done or reaches at most a specified timeout, returning the latest state. If the operation is already done, the latest state is immediately returned. If the timeout specified is greater than the default HTTP/RPC timeout, the HTTP/RPC timeout is used. If the server does not support this method, it returns `google.rpc.Code.UNIMPLEMENTED`. Note that this method is on a best-effort basis. It may return the latest state before the specified timeout (including immediately), meaning even an immediate response is no guarantee that the operation is done.
+* `ondemandscanningProjectsLocationsScansAnalyzePackages` - Initiates an analysis of the provided packages.
+* `ondemandscanningProjectsLocationsScansVulnerabilitiesList` - Lists vulnerabilities resulting from a successfully completed scan.
+
+<!-- End SDK Available Operations -->
+
+### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

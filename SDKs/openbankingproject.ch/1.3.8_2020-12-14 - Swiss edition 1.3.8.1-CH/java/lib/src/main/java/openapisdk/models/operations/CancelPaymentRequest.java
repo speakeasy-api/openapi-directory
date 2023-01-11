@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class CancelPaymentRequest {
+    public CancelPaymentPathParams pathParams;
+    public CancelPaymentRequest withPathParams(CancelPaymentPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public CancelPaymentHeaders headers;
+    public CancelPaymentRequest withHeaders(CancelPaymentHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+    public CancelPaymentSecurity security;
+    public CancelPaymentRequest withSecurity(CancelPaymentSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

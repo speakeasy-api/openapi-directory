@@ -1,0 +1,98 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * ContentFile
+ * Content File
+**/
+public class ContentFile {
+    @JsonProperty("_links")
+    public ContentFileLinks links;
+    public ContentFile withLinks(ContentFileLinks links) {
+        this.links = links;
+        return this;
+    }
+    @JsonProperty("content")
+    public String content;
+    public ContentFile withContent(String content) {
+        this.content = content;
+        return this;
+    }
+    @JsonProperty("download_url")
+    public String downloadUrl;
+    public ContentFile withDownloadUrl(String downloadUrl) {
+        this.downloadUrl = downloadUrl;
+        return this;
+    }
+    @JsonProperty("encoding")
+    public String encoding;
+    public ContentFile withEncoding(String encoding) {
+        this.encoding = encoding;
+        return this;
+    }
+    @JsonProperty("git_url")
+    public String gitUrl;
+    public ContentFile withGitUrl(String gitUrl) {
+        this.gitUrl = gitUrl;
+        return this;
+    }
+    @JsonProperty("html_url")
+    public String htmlUrl;
+    public ContentFile withHtmlUrl(String htmlUrl) {
+        this.htmlUrl = htmlUrl;
+        return this;
+    }
+    @JsonProperty("name")
+    public String name;
+    public ContentFile withName(String name) {
+        this.name = name;
+        return this;
+    }
+    @JsonProperty("path")
+    public String path;
+    public ContentFile withPath(String path) {
+        this.path = path;
+        return this;
+    }
+    @JsonProperty("sha")
+    public String sha;
+    public ContentFile withSha(String sha) {
+        this.sha = sha;
+        return this;
+    }
+    @JsonProperty("size")
+    public Long size;
+    public ContentFile withSize(Long size) {
+        this.size = size;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("submodule_git_url")
+    public String submoduleGitUrl;
+    public ContentFile withSubmoduleGitUrl(String submoduleGitUrl) {
+        this.submoduleGitUrl = submoduleGitUrl;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("target")
+    public String target;
+    public ContentFile withTarget(String target) {
+        this.target = target;
+        return this;
+    }
+    @JsonProperty("type")
+    public String type;
+    public ContentFile withType(String type) {
+        this.type = type;
+        return this;
+    }
+    @JsonProperty("url")
+    public String url;
+    public ContentFile withUrl(String url) {
+        this.url = url;
+        return this;
+    }
+}

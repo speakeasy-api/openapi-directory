@@ -1,0 +1,26 @@
+package openapisdk.models.operations;
+
+
+
+public class OpportunitiesDeleteRequest {
+    public OpportunitiesDeletePathParams pathParams;
+    public OpportunitiesDeleteRequest withPathParams(OpportunitiesDeletePathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public OpportunitiesDeleteQueryParams queryParams;
+    public OpportunitiesDeleteRequest withQueryParams(OpportunitiesDeleteQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public OpportunitiesDeleteHeaders headers;
+    public OpportunitiesDeleteRequest withHeaders(OpportunitiesDeleteHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+    public OpportunitiesDeleteSecurity security;
+    public OpportunitiesDeleteRequest withSecurity(OpportunitiesDeleteSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

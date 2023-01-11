@@ -1,0 +1,28 @@
+package openapisdk.models.shared;
+
+
+public enum HistogramFacetsSimpleHistogramFacetsEnum {
+    SEARCH_TYPE_UNSPECIFIED("SEARCH_TYPE_UNSPECIFIED"),
+    COMPANY_ID("COMPANY_ID"),
+    EMPLOYMENT_TYPE("EMPLOYMENT_TYPE"),
+    COMPANY_SIZE("COMPANY_SIZE"),
+    DATE_PUBLISHED("DATE_PUBLISHED"),
+    EDUCATION_LEVEL("EDUCATION_LEVEL"),
+    EXPERIENCE_LEVEL("EXPERIENCE_LEVEL"),
+    ADMIN1("ADMIN_1"),
+    COUNTRY("COUNTRY"),
+    CITY("CITY"),
+    LOCALE("LOCALE"),
+    LANGUAGE("LANGUAGE"),
+    CATEGORY("CATEGORY"),
+    CITY_COORDINATE("CITY_COORDINATE"),
+    ADMIN1_COUNTRY("ADMIN_1_COUNTRY"),
+    COMPANY_DISPLAY_NAME("COMPANY_DISPLAY_NAME"),
+    BASE_COMPENSATION_UNIT("BASE_COMPENSATION_UNIT");
+
+    public final String value;
+
+    private HistogramFacetsSimpleHistogramFacetsEnum(String value) {
+        this.value = value;
+    }
+}

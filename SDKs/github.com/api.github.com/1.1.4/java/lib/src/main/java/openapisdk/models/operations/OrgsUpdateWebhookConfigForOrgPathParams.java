@@ -1,0 +1,18 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class OrgsUpdateWebhookConfigForOrgPathParams {
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=hook_id")
+    public Long hookId;
+    public OrgsUpdateWebhookConfigForOrgPathParams withHookId(Long hookId) {
+        this.hookId = hookId;
+        return this;
+    }
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org")
+    public String org;
+    public OrgsUpdateWebhookConfigForOrgPathParams withOrg(String org) {
+        this.org = org;
+        return this;
+    }
+}

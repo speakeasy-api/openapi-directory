@@ -1,0 +1,18 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class UserStatisticsAccumulatedValueV1StatisticsIndividualQueryParams {
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=endDate")
+    public String endDate;
+    public UserStatisticsAccumulatedValueV1StatisticsIndividualQueryParams withEndDate(String endDate) {
+        this.endDate = endDate;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=startDate")
+    public String startDate;
+    public UserStatisticsAccumulatedValueV1StatisticsIndividualQueryParams withStartDate(String startDate) {
+        this.startDate = startDate;
+        return this;
+    }
+}

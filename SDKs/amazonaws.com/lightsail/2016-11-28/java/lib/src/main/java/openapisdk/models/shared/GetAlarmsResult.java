@@ -1,0 +1,22 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class GetAlarmsResult {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("alarms")
+    public Alarm[] alarms;
+    public GetAlarmsResult withAlarms(Alarm[] alarms) {
+        this.alarms = alarms;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("nextPageToken")
+    public String nextPageToken;
+    public GetAlarmsResult withNextPageToken(String nextPageToken) {
+        this.nextPageToken = nextPageToken;
+        return this;
+    }
+}

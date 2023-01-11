@@ -1,0 +1,22 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class BatchDeleteTableRowsRequest {
+    public BatchDeleteTableRowsPathParams pathParams;
+    public BatchDeleteTableRowsRequest withPathParams(BatchDeleteTableRowsPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public BatchDeleteTableRowsHeaders headers;
+    public BatchDeleteTableRowsRequest withHeaders(BatchDeleteTableRowsHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public BatchDeleteTableRowsRequestBody request;
+    public BatchDeleteTableRowsRequest withRequest(BatchDeleteTableRowsRequestBody request) {
+        this.request = request;
+        return this;
+    }
+}

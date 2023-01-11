@@ -1,0 +1,29 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class SimResult {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("matches")
+    public SimMatch[] matches;
+    public SimResult withMatches(SimMatch[] matches) {
+        this.matches = matches;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("metadata")
+    public SimMetadata metadata;
+    public SimResult withMetadata(SimMetadata metadata) {
+        this.metadata = metadata;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("query")
+    public SimQuery query;
+    public SimResult withQuery(SimQuery query) {
+        this.query = query;
+        return this;
+    }
+}

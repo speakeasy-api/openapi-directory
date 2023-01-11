@@ -1,0 +1,27 @@
+package openapisdk.models.shared;
+
+
+public enum PatchJobInstanceDetailsStateEnum {
+    PATCH_STATE_UNSPECIFIED("PATCH_STATE_UNSPECIFIED"),
+    PENDING("PENDING"),
+    INACTIVE("INACTIVE"),
+    NOTIFIED("NOTIFIED"),
+    STARTED("STARTED"),
+    DOWNLOADING_PATCHES("DOWNLOADING_PATCHES"),
+    APPLYING_PATCHES("APPLYING_PATCHES"),
+    REBOOTING("REBOOTING"),
+    SUCCEEDED("SUCCEEDED"),
+    SUCCEEDED_REBOOT_REQUIRED("SUCCEEDED_REBOOT_REQUIRED"),
+    FAILED("FAILED"),
+    ACKED("ACKED"),
+    TIMED_OUT("TIMED_OUT"),
+    RUNNING_PRE_PATCH_STEP("RUNNING_PRE_PATCH_STEP"),
+    RUNNING_POST_PATCH_STEP("RUNNING_POST_PATCH_STEP"),
+    NO_AGENT_DETECTED("NO_AGENT_DETECTED");
+
+    public final String value;
+
+    private PatchJobInstanceDetailsStateEnum(String value) {
+        this.value = value;
+    }
+}

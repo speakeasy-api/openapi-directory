@@ -1,0 +1,302 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class PatientAutoAccidentInsurance {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("auto_accident_case_number")
+    public String autoAccidentCaseNumber;
+    public PatientAutoAccidentInsurance withAutoAccidentCaseNumber(String autoAccidentCaseNumber) {
+        this.autoAccidentCaseNumber = autoAccidentCaseNumber;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("auto_accident_claim_rep_address")
+    public String autoAccidentClaimRepAddress;
+    public PatientAutoAccidentInsurance withAutoAccidentClaimRepAddress(String autoAccidentClaimRepAddress) {
+        this.autoAccidentClaimRepAddress = autoAccidentClaimRepAddress;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("auto_accident_claim_rep_city")
+    public String autoAccidentClaimRepCity;
+    public PatientAutoAccidentInsurance withAutoAccidentClaimRepCity(String autoAccidentClaimRepCity) {
+        this.autoAccidentClaimRepCity = autoAccidentClaimRepCity;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("auto_accident_claim_rep_is_insurer")
+    public Boolean autoAccidentClaimRepIsInsurer;
+    public PatientAutoAccidentInsurance withAutoAccidentClaimRepIsInsurer(Boolean autoAccidentClaimRepIsInsurer) {
+        this.autoAccidentClaimRepIsInsurer = autoAccidentClaimRepIsInsurer;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("auto_accident_claim_rep_name")
+    public String autoAccidentClaimRepName;
+    public PatientAutoAccidentInsurance withAutoAccidentClaimRepName(String autoAccidentClaimRepName) {
+        this.autoAccidentClaimRepName = autoAccidentClaimRepName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("auto_accident_claim_rep_state")
+    public PatientAutoAccidentInsuranceAutoAccidentClaimRepStateEnum autoAccidentClaimRepState;
+    public PatientAutoAccidentInsurance withAutoAccidentClaimRepState(PatientAutoAccidentInsuranceAutoAccidentClaimRepStateEnum autoAccidentClaimRepState) {
+        this.autoAccidentClaimRepState = autoAccidentClaimRepState;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("auto_accident_claim_rep_zip")
+    public String autoAccidentClaimRepZip;
+    public PatientAutoAccidentInsurance withAutoAccidentClaimRepZip(String autoAccidentClaimRepZip) {
+        this.autoAccidentClaimRepZip = autoAccidentClaimRepZip;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("auto_accident_company")
+    public String autoAccidentCompany;
+    public PatientAutoAccidentInsurance withAutoAccidentCompany(String autoAccidentCompany) {
+        this.autoAccidentCompany = autoAccidentCompany;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("auto_accident_date_of_accident")
+    public String autoAccidentDateOfAccident;
+    public PatientAutoAccidentInsurance withAutoAccidentDateOfAccident(String autoAccidentDateOfAccident) {
+        this.autoAccidentDateOfAccident = autoAccidentDateOfAccident;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("auto_accident_disabled_from_date")
+    public String autoAccidentDisabledFromDate;
+    public PatientAutoAccidentInsurance withAutoAccidentDisabledFromDate(String autoAccidentDisabledFromDate) {
+        this.autoAccidentDisabledFromDate = autoAccidentDisabledFromDate;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("auto_accident_disabled_to_date")
+    public String autoAccidentDisabledToDate;
+    public PatientAutoAccidentInsurance withAutoAccidentDisabledToDate(String autoAccidentDisabledToDate) {
+        this.autoAccidentDisabledToDate = autoAccidentDisabledToDate;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("auto_accident_had_similar_condition")
+    public Boolean autoAccidentHadSimilarCondition;
+    public PatientAutoAccidentInsurance withAutoAccidentHadSimilarCondition(Boolean autoAccidentHadSimilarCondition) {
+        this.autoAccidentHadSimilarCondition = autoAccidentHadSimilarCondition;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("auto_accident_is_subscriber_the_patient")
+    public Boolean autoAccidentIsSubscriberThePatient;
+    public PatientAutoAccidentInsurance withAutoAccidentIsSubscriberThePatient(Boolean autoAccidentIsSubscriberThePatient) {
+        this.autoAccidentIsSubscriberThePatient = autoAccidentIsSubscriberThePatient;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("auto_accident_notes")
+    public String autoAccidentNotes;
+    public PatientAutoAccidentInsurance withAutoAccidentNotes(String autoAccidentNotes) {
+        this.autoAccidentNotes = autoAccidentNotes;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("auto_accident_patient_relationship_to_subscriber")
+    public PatientAutoAccidentInsuranceAutoAccidentPatientRelationshipToSubscriberEnum autoAccidentPatientRelationshipToSubscriber;
+    public PatientAutoAccidentInsurance withAutoAccidentPatientRelationshipToSubscriber(PatientAutoAccidentInsuranceAutoAccidentPatientRelationshipToSubscriberEnum autoAccidentPatientRelationshipToSubscriber) {
+        this.autoAccidentPatientRelationshipToSubscriber = autoAccidentPatientRelationshipToSubscriber;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("auto_accident_payer_address")
+    public String autoAccidentPayerAddress;
+    public PatientAutoAccidentInsurance withAutoAccidentPayerAddress(String autoAccidentPayerAddress) {
+        this.autoAccidentPayerAddress = autoAccidentPayerAddress;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("auto_accident_payer_city")
+    public String autoAccidentPayerCity;
+    public PatientAutoAccidentInsurance withAutoAccidentPayerCity(String autoAccidentPayerCity) {
+        this.autoAccidentPayerCity = autoAccidentPayerCity;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("auto_accident_payer_id")
+    public String autoAccidentPayerId;
+    public PatientAutoAccidentInsurance withAutoAccidentPayerId(String autoAccidentPayerId) {
+        this.autoAccidentPayerId = autoAccidentPayerId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("auto_accident_payer_state")
+    public PatientAutoAccidentInsuranceAutoAccidentPayerStateEnum autoAccidentPayerState;
+    public PatientAutoAccidentInsurance withAutoAccidentPayerState(PatientAutoAccidentInsuranceAutoAccidentPayerStateEnum autoAccidentPayerState) {
+        this.autoAccidentPayerState = autoAccidentPayerState;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("auto_accident_payer_zip")
+    public String autoAccidentPayerZip;
+    public PatientAutoAccidentInsurance withAutoAccidentPayerZip(String autoAccidentPayerZip) {
+        this.autoAccidentPayerZip = autoAccidentPayerZip;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("auto_accident_policy_number")
+    public String autoAccidentPolicyNumber;
+    public PatientAutoAccidentInsurance withAutoAccidentPolicyNumber(String autoAccidentPolicyNumber) {
+        this.autoAccidentPolicyNumber = autoAccidentPolicyNumber;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("auto_accident_return_to_work_date")
+    public String autoAccidentReturnToWorkDate;
+    public PatientAutoAccidentInsurance withAutoAccidentReturnToWorkDate(String autoAccidentReturnToWorkDate) {
+        this.autoAccidentReturnToWorkDate = autoAccidentReturnToWorkDate;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("auto_accident_significant_injury")
+    public PatientAutoAccidentInsuranceAutoAccidentSignificantInjuryEnum autoAccidentSignificantInjury;
+    public PatientAutoAccidentInsurance withAutoAccidentSignificantInjury(PatientAutoAccidentInsuranceAutoAccidentSignificantInjuryEnum autoAccidentSignificantInjury) {
+        this.autoAccidentSignificantInjury = autoAccidentSignificantInjury;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("auto_accident_significant_injury_notes")
+    public String autoAccidentSignificantInjuryNotes;
+    public PatientAutoAccidentInsurance withAutoAccidentSignificantInjuryNotes(String autoAccidentSignificantInjuryNotes) {
+        this.autoAccidentSignificantInjuryNotes = autoAccidentSignificantInjuryNotes;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("auto_accident_similar_condition_date")
+    public String autoAccidentSimilarConditionDate;
+    public PatientAutoAccidentInsurance withAutoAccidentSimilarConditionDate(String autoAccidentSimilarConditionDate) {
+        this.autoAccidentSimilarConditionDate = autoAccidentSimilarConditionDate;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("auto_accident_similar_condition_notes")
+    public String autoAccidentSimilarConditionNotes;
+    public PatientAutoAccidentInsurance withAutoAccidentSimilarConditionNotes(String autoAccidentSimilarConditionNotes) {
+        this.autoAccidentSimilarConditionNotes = autoAccidentSimilarConditionNotes;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("auto_accident_state_of_occurrence")
+    public PatientAutoAccidentInsuranceAutoAccidentStateOfOccurrenceEnum autoAccidentStateOfOccurrence;
+    public PatientAutoAccidentInsurance withAutoAccidentStateOfOccurrence(PatientAutoAccidentInsuranceAutoAccidentStateOfOccurrenceEnum autoAccidentStateOfOccurrence) {
+        this.autoAccidentStateOfOccurrence = autoAccidentStateOfOccurrence;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("auto_accident_still_under_care")
+    public Boolean autoAccidentStillUnderCare;
+    public PatientAutoAccidentInsurance withAutoAccidentStillUnderCare(Boolean autoAccidentStillUnderCare) {
+        this.autoAccidentStillUnderCare = autoAccidentStillUnderCare;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("auto_accident_subscriber_address")
+    public String autoAccidentSubscriberAddress;
+    public PatientAutoAccidentInsurance withAutoAccidentSubscriberAddress(String autoAccidentSubscriberAddress) {
+        this.autoAccidentSubscriberAddress = autoAccidentSubscriberAddress;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("auto_accident_subscriber_city")
+    public String autoAccidentSubscriberCity;
+    public PatientAutoAccidentInsurance withAutoAccidentSubscriberCity(String autoAccidentSubscriberCity) {
+        this.autoAccidentSubscriberCity = autoAccidentSubscriberCity;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("auto_accident_subscriber_date_of_birth")
+    public String autoAccidentSubscriberDateOfBirth;
+    public PatientAutoAccidentInsurance withAutoAccidentSubscriberDateOfBirth(String autoAccidentSubscriberDateOfBirth) {
+        this.autoAccidentSubscriberDateOfBirth = autoAccidentSubscriberDateOfBirth;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("auto_accident_subscriber_first_name")
+    public String autoAccidentSubscriberFirstName;
+    public PatientAutoAccidentInsurance withAutoAccidentSubscriberFirstName(String autoAccidentSubscriberFirstName) {
+        this.autoAccidentSubscriberFirstName = autoAccidentSubscriberFirstName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("auto_accident_subscriber_last_name")
+    public String autoAccidentSubscriberLastName;
+    public PatientAutoAccidentInsurance withAutoAccidentSubscriberLastName(String autoAccidentSubscriberLastName) {
+        this.autoAccidentSubscriberLastName = autoAccidentSubscriberLastName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("auto_accident_subscriber_middle_name")
+    public String autoAccidentSubscriberMiddleName;
+    public PatientAutoAccidentInsurance withAutoAccidentSubscriberMiddleName(String autoAccidentSubscriberMiddleName) {
+        this.autoAccidentSubscriberMiddleName = autoAccidentSubscriberMiddleName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("auto_accident_subscriber_phone_number")
+    public String autoAccidentSubscriberPhoneNumber;
+    public PatientAutoAccidentInsurance withAutoAccidentSubscriberPhoneNumber(String autoAccidentSubscriberPhoneNumber) {
+        this.autoAccidentSubscriberPhoneNumber = autoAccidentSubscriberPhoneNumber;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("auto_accident_subscriber_social_security")
+    public String autoAccidentSubscriberSocialSecurity;
+    public PatientAutoAccidentInsurance withAutoAccidentSubscriberSocialSecurity(String autoAccidentSubscriberSocialSecurity) {
+        this.autoAccidentSubscriberSocialSecurity = autoAccidentSubscriberSocialSecurity;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("auto_accident_subscriber_state")
+    public PatientAutoAccidentInsuranceAutoAccidentSubscriberStateEnum autoAccidentSubscriberState;
+    public PatientAutoAccidentInsurance withAutoAccidentSubscriberState(PatientAutoAccidentInsuranceAutoAccidentSubscriberStateEnum autoAccidentSubscriberState) {
+        this.autoAccidentSubscriberState = autoAccidentSubscriberState;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("auto_accident_subscriber_suffix")
+    public String autoAccidentSubscriberSuffix;
+    public PatientAutoAccidentInsurance withAutoAccidentSubscriberSuffix(String autoAccidentSubscriberSuffix) {
+        this.autoAccidentSubscriberSuffix = autoAccidentSubscriberSuffix;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("auto_accident_subscriber_zip_code")
+    public String autoAccidentSubscriberZipCode;
+    public PatientAutoAccidentInsurance withAutoAccidentSubscriberZipCode(String autoAccidentSubscriberZipCode) {
+        this.autoAccidentSubscriberZipCode = autoAccidentSubscriberZipCode;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("auto_accident_treatment_duration")
+    public String autoAccidentTreatmentDuration;
+    public PatientAutoAccidentInsurance withAutoAccidentTreatmentDuration(String autoAccidentTreatmentDuration) {
+        this.autoAccidentTreatmentDuration = autoAccidentTreatmentDuration;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("auto_accident_will_require_therapy")
+    public Boolean autoAccidentWillRequireTherapy;
+    public PatientAutoAccidentInsurance withAutoAccidentWillRequireTherapy(Boolean autoAccidentWillRequireTherapy) {
+        this.autoAccidentWillRequireTherapy = autoAccidentWillRequireTherapy;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("auto_accident_will_require_therapy_rec")
+    public String autoAccidentWillRequireTherapyRec;
+    public PatientAutoAccidentInsurance withAutoAccidentWillRequireTherapyRec(String autoAccidentWillRequireTherapyRec) {
+        this.autoAccidentWillRequireTherapyRec = autoAccidentWillRequireTherapyRec;
+        return this;
+    }
+}

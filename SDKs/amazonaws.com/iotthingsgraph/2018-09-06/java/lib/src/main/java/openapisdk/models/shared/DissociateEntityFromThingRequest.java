@@ -1,0 +1,18 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+public class DissociateEntityFromThingRequest {
+    @JsonProperty("entityType")
+    public EntityTypeEnum entityType;
+    public DissociateEntityFromThingRequest withEntityType(EntityTypeEnum entityType) {
+        this.entityType = entityType;
+        return this;
+    }
+    @JsonProperty("thingName")
+    public String thingName;
+    public DissociateEntityFromThingRequest withThingName(String thingName) {
+        this.thingName = thingName;
+        return this;
+    }
+}

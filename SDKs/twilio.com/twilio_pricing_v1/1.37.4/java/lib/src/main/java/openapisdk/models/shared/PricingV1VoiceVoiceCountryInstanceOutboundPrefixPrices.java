@@ -1,0 +1,36 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class PricingV1VoiceVoiceCountryInstanceOutboundPrefixPrices {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("base_price")
+    public Double basePrice;
+    public PricingV1VoiceVoiceCountryInstanceOutboundPrefixPrices withBasePrice(Double basePrice) {
+        this.basePrice = basePrice;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("current_price")
+    public Double currentPrice;
+    public PricingV1VoiceVoiceCountryInstanceOutboundPrefixPrices withCurrentPrice(Double currentPrice) {
+        this.currentPrice = currentPrice;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("friendly_name")
+    public String friendlyName;
+    public PricingV1VoiceVoiceCountryInstanceOutboundPrefixPrices withFriendlyName(String friendlyName) {
+        this.friendlyName = friendlyName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("prefixes")
+    public String[] prefixes;
+    public PricingV1VoiceVoiceCountryInstanceOutboundPrefixPrices withPrefixes(String[] prefixes) {
+        this.prefixes = prefixes;
+        return this;
+    }
+}

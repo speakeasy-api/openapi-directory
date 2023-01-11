@@ -1,0 +1,16 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+/**
+ * RulesConfigurationType
+ * A container for rules.
+**/
+public class RulesConfigurationType {
+    @JsonProperty("Rules")
+    public MappingRule[] rules;
+    public RulesConfigurationType withRules(MappingRule[] rules) {
+        this.rules = rules;
+        return this;
+    }
+}

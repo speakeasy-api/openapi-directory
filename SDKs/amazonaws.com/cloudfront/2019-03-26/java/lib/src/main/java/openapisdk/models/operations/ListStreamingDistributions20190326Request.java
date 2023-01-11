@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class ListStreamingDistributions20190326Request {
+    public ListStreamingDistributions20190326QueryParams queryParams;
+    public ListStreamingDistributions20190326Request withQueryParams(ListStreamingDistributions20190326QueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public ListStreamingDistributions20190326Headers headers;
+    public ListStreamingDistributions20190326Request withHeaders(ListStreamingDistributions20190326Headers headers) {
+        this.headers = headers;
+        return this;
+    }
+}

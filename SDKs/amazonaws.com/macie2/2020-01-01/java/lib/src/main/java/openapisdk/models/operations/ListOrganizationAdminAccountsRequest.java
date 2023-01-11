@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class ListOrganizationAdminAccountsRequest {
+    public ListOrganizationAdminAccountsQueryParams queryParams;
+    public ListOrganizationAdminAccountsRequest withQueryParams(ListOrganizationAdminAccountsQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public ListOrganizationAdminAccountsHeaders headers;
+    public ListOrganizationAdminAccountsRequest withHeaders(ListOrganizationAdminAccountsHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+}

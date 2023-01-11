@@ -1,0 +1,22 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class AssociateEncryptionConfigRequest {
+    public AssociateEncryptionConfigPathParams pathParams;
+    public AssociateEncryptionConfigRequest withPathParams(AssociateEncryptionConfigPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public AssociateEncryptionConfigHeaders headers;
+    public AssociateEncryptionConfigRequest withHeaders(AssociateEncryptionConfigHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public AssociateEncryptionConfigRequestBody request;
+    public AssociateEncryptionConfigRequest withRequest(AssociateEncryptionConfigRequestBody request) {
+        this.request = request;
+        return this;
+    }
+}

@@ -1,0 +1,17 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class UploadSwaggerRequest {
+    @SpeakeasyMetadata("request:mediaType=multipart/form-data")
+    public UploadSwaggerRequestBody request;
+    public UploadSwaggerRequest withRequest(UploadSwaggerRequestBody request) {
+        this.request = request;
+        return this;
+    }
+    public UploadSwaggerSecurity security;
+    public UploadSwaggerRequest withSecurity(UploadSwaggerSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

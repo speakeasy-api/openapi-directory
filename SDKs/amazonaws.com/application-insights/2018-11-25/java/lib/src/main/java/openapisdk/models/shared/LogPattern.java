@@ -1,0 +1,40 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * LogPattern
+ * An object that defines the log patterns that belongs to a <code>LogPatternSet</code>.
+**/
+public class LogPattern {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Pattern")
+    public String pattern;
+    public LogPattern withPattern(String pattern) {
+        this.pattern = pattern;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("PatternName")
+    public String patternName;
+    public LogPattern withPatternName(String patternName) {
+        this.patternName = patternName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("PatternSetName")
+    public String patternSetName;
+    public LogPattern withPatternSetName(String patternSetName) {
+        this.patternSetName = patternSetName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Rank")
+    public Long rank;
+    public LogPattern withRank(Long rank) {
+        this.rank = rank;
+        return this;
+    }
+}

@@ -1,0 +1,75 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * OrderableReplicationInstance
+ * In response to the <code>DescribeOrderableReplicationInstances</code> operation, this object describes an available replication instance. This description includes the replication instance's type, engine version, and allocated storage.
+**/
+public class OrderableReplicationInstance {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("AvailabilityZones")
+    public String[] availabilityZones;
+    public OrderableReplicationInstance withAvailabilityZones(String[] availabilityZones) {
+        this.availabilityZones = availabilityZones;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("DefaultAllocatedStorage")
+    public Long defaultAllocatedStorage;
+    public OrderableReplicationInstance withDefaultAllocatedStorage(Long defaultAllocatedStorage) {
+        this.defaultAllocatedStorage = defaultAllocatedStorage;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("EngineVersion")
+    public String engineVersion;
+    public OrderableReplicationInstance withEngineVersion(String engineVersion) {
+        this.engineVersion = engineVersion;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("IncludedAllocatedStorage")
+    public Long includedAllocatedStorage;
+    public OrderableReplicationInstance withIncludedAllocatedStorage(Long includedAllocatedStorage) {
+        this.includedAllocatedStorage = includedAllocatedStorage;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("MaxAllocatedStorage")
+    public Long maxAllocatedStorage;
+    public OrderableReplicationInstance withMaxAllocatedStorage(Long maxAllocatedStorage) {
+        this.maxAllocatedStorage = maxAllocatedStorage;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("MinAllocatedStorage")
+    public Long minAllocatedStorage;
+    public OrderableReplicationInstance withMinAllocatedStorage(Long minAllocatedStorage) {
+        this.minAllocatedStorage = minAllocatedStorage;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ReleaseStatus")
+    public ReleaseStatusValuesEnum releaseStatus;
+    public OrderableReplicationInstance withReleaseStatus(ReleaseStatusValuesEnum releaseStatus) {
+        this.releaseStatus = releaseStatus;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ReplicationInstanceClass")
+    public String replicationInstanceClass;
+    public OrderableReplicationInstance withReplicationInstanceClass(String replicationInstanceClass) {
+        this.replicationInstanceClass = replicationInstanceClass;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("StorageType")
+    public String storageType;
+    public OrderableReplicationInstance withStorageType(String storageType) {
+        this.storageType = storageType;
+        return this;
+    }
+}

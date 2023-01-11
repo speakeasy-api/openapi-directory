@@ -1,0 +1,140 @@
+package openapisdk;
+
+import openapisdk.utils.HTTPClient;
+import openapisdk.utils.HTTPRequest;
+import java.net.http.HttpResponse;
+import openapisdk.utils.SerializedBody;
+
+public class Comments {
+	private HTTPClient _defaultClient;
+	private HTTPClient _securityClient;
+	private String _serverUrl;
+	private String _language;
+	private String _sdkVersion;
+	private String _genVersion;
+
+	public Comments(HTTPClient defaultClient, HTTPClient securityClient, String serverUrl, String language, String sdkVersion, String genVersion) {
+		this._defaultClient = defaultClient;
+		this._securityClient = securityClient;
+		this._serverUrl = serverUrl;
+		this._language = language;
+		this._sdkVersion = sdkVersion;
+		this._genVersion = genVersion;
+	}
+	
+	
+    /**
+     * commentsDelete - Delete a comment
+     *
+     * Deletes a comment. This action can be undone by setting deleted to False in a comment update request.
+     * #### Returns
+     * If the request is successful, no content is returned.
+     * 
+     * If the request is unsuccessful, a JSON object with an `errors` key containing information about the failure will be returned. Refer to the [list of error codes](#tag/Errors-and-Error-Codes) to understand why this request may have failed.
+    **/
+    public openapisdk.models.operations.CommentsDeleteResponse commentsDelete(openapisdk.models.operations.CommentsDeleteRequest request) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = openapisdk.utils.Utils.generateURL(baseUrl, "/comments/{comment_id}/", request.pathParams);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("DELETE");
+        req.setURL(url);
+        
+        
+        HTTPClient client = this._defaultClient;
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().allValues("Content-Type").get(0);
+
+        openapisdk.models.operations.CommentsDeleteResponse res = new openapisdk.models.operations.CommentsDeleteResponse() {{
+        }};
+        res.statusCode = Long.valueOf(httpRes.statusCode());
+        res.contentType = contentType;
+        
+        if (httpRes.statusCode() == 204) {
+        }
+
+        return res;
+    }
+	
+	
+    /**
+     * commentsPut - Update a comment
+     *
+     * Updates the specified comment by setting the values of the parameters passed. Any parameters not provided will be left unchanged.
+     * #### Returns
+     * Returns JSON with a `data` key containing the new representation of the updated comment, if the request is successful.
+     * 
+     * If the request is unsuccessful, JSON with an `errors` key containing information about the failure will be returned. Refer to the [list of error codes](#tag/Errors-and-Error-Codes) to understand why this request may have failed.
+    **/
+    public openapisdk.models.operations.CommentsPutResponse commentsPut(openapisdk.models.operations.CommentsPutRequest request) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = openapisdk.utils.Utils.generateURL(baseUrl, "/comments/{comment_id}/", request.pathParams);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("PUT");
+        req.setURL(url);
+        SerializedBody serializedRequestBody = openapisdk.utils.Utils.serializeRequestBody(request);
+        if (serializedRequestBody == null) {
+            throw new Exception("Request body is required");
+        }
+        req.setBody(serializedRequestBody);
+        
+        
+        HTTPClient client = this._defaultClient;
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().allValues("Content-Type").get(0);
+
+        openapisdk.models.operations.CommentsPutResponse res = new openapisdk.models.operations.CommentsPutResponse() {{
+        }};
+        res.statusCode = Long.valueOf(httpRes.statusCode());
+        res.contentType = contentType;
+        
+        if (httpRes.statusCode() == 200) {
+        }
+
+        return res;
+    }
+	
+	
+    /**
+     * commentsRead - Retrieve a comment
+     *
+     * Retrieves the details of a comment
+     * #### Returns
+     * Returns a JSON object with a `data` key containing the representation of the requested comment, if the request was successful.
+     * 
+     * If the request is unsuccessful, an `errors` key containing information about the failure will be returned. Refer to the [list of error codes](#tag/Errors-and-Error-Codes) to understand why this request may have failed.
+    **/
+    public openapisdk.models.operations.CommentsReadResponse commentsRead(openapisdk.models.operations.CommentsReadRequest request) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = openapisdk.utils.Utils.generateURL(baseUrl, "/comments/{comment_id}/", request.pathParams);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("GET");
+        req.setURL(url);
+        
+        
+        HTTPClient client = this._defaultClient;
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().allValues("Content-Type").get(0);
+
+        openapisdk.models.operations.CommentsReadResponse res = new openapisdk.models.operations.CommentsReadResponse() {{
+            body = null;
+        }};
+        res.statusCode = Long.valueOf(httpRes.statusCode());
+        res.contentType = contentType;
+        
+        if (httpRes.statusCode() == 200) {
+            if (openapisdk.utils.Utils.matchContentType(contentType, "*/*")) {
+                byte[] out = httpRes.body();
+                res.body = out;
+            }
+        }
+
+        return res;
+    }
+	
+}

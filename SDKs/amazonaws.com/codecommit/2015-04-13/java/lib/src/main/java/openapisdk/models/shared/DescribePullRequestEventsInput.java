@@ -1,0 +1,42 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class DescribePullRequestEventsInput {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("actorArn")
+    public String actorArn;
+    public DescribePullRequestEventsInput withActorArn(String actorArn) {
+        this.actorArn = actorArn;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("maxResults")
+    public Long maxResults;
+    public DescribePullRequestEventsInput withMaxResults(Long maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("nextToken")
+    public String nextToken;
+    public DescribePullRequestEventsInput withNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("pullRequestEventType")
+    public PullRequestEventTypeEnum pullRequestEventType;
+    public DescribePullRequestEventsInput withPullRequestEventType(PullRequestEventTypeEnum pullRequestEventType) {
+        this.pullRequestEventType = pullRequestEventType;
+        return this;
+    }
+    @JsonProperty("pullRequestId")
+    public String pullRequestId;
+    public DescribePullRequestEventsInput withPullRequestId(String pullRequestId) {
+        this.pullRequestId = pullRequestId;
+        return this;
+    }
+}

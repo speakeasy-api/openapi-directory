@@ -1,0 +1,30 @@
+package openapisdk.models.shared;
+
+
+
+/**
+ * OriginRequestPolicyList
+ * A list of origin request policies.
+**/
+public class OriginRequestPolicyList {
+    public OriginRequestPolicySummaryList[] items;
+    public OriginRequestPolicyList withItems(OriginRequestPolicySummaryList[] items) {
+        this.items = items;
+        return this;
+    }
+    public Long maxItems;
+    public OriginRequestPolicyList withMaxItems(Long maxItems) {
+        this.maxItems = maxItems;
+        return this;
+    }
+    public String nextMarker;
+    public OriginRequestPolicyList withNextMarker(String nextMarker) {
+        this.nextMarker = nextMarker;
+        return this;
+    }
+    public Long quantity;
+    public OriginRequestPolicyList withQuantity(Long quantity) {
+        this.quantity = quantity;
+        return this;
+    }
+}

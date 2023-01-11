@@ -1,0 +1,73 @@
+package openapisdk.models.shared;
+
+import java.time.OffsetDateTime;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import openapisdk.utils.DateTimeSerializer;
+import openapisdk.utils.DateTimeDeserializer;
+
+public class DescribeExportResponse {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonSerialize(contentUsing = DateTimeSerializer.class)
+    @JsonDeserialize(contentUsing = DateTimeDeserializer.class)
+    @JsonProperty("creationDateTime")
+    public OffsetDateTime creationDateTime;
+    public DescribeExportResponse withCreationDateTime(OffsetDateTime creationDateTime) {
+        this.creationDateTime = creationDateTime;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("downloadUrl")
+    public String downloadUrl;
+    public DescribeExportResponse withDownloadUrl(String downloadUrl) {
+        this.downloadUrl = downloadUrl;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("exportId")
+    public String exportId;
+    public DescribeExportResponse withExportId(String exportId) {
+        this.exportId = exportId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("exportStatus")
+    public ExportStatusEnum exportStatus;
+    public DescribeExportResponse withExportStatus(ExportStatusEnum exportStatus) {
+        this.exportStatus = exportStatus;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("failureReasons")
+    public String[] failureReasons;
+    public DescribeExportResponse withFailureReasons(String[] failureReasons) {
+        this.failureReasons = failureReasons;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("fileFormat")
+    public ImportExportFileFormatEnum fileFormat;
+    public DescribeExportResponse withFileFormat(ImportExportFileFormatEnum fileFormat) {
+        this.fileFormat = fileFormat;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonSerialize(contentUsing = DateTimeSerializer.class)
+    @JsonDeserialize(contentUsing = DateTimeDeserializer.class)
+    @JsonProperty("lastUpdatedDateTime")
+    public OffsetDateTime lastUpdatedDateTime;
+    public DescribeExportResponse withLastUpdatedDateTime(OffsetDateTime lastUpdatedDateTime) {
+        this.lastUpdatedDateTime = lastUpdatedDateTime;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("resourceSpecification")
+    public ExportResourceSpecification resourceSpecification;
+    public DescribeExportResponse withResourceSpecification(ExportResourceSpecification resourceSpecification) {
+        this.resourceSpecification = resourceSpecification;
+        return this;
+    }
+}

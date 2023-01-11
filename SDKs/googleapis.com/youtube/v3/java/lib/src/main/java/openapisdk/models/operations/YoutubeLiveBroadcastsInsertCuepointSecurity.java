@@ -1,0 +1,24 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class YoutubeLiveBroadcastsInsertCuepointSecurity {
+    @SpeakeasyMetadata("security:option=true")
+    public YoutubeLiveBroadcastsInsertCuepointSecurityOption1 option1;
+    public YoutubeLiveBroadcastsInsertCuepointSecurity withOption1(YoutubeLiveBroadcastsInsertCuepointSecurityOption1 option1) {
+        this.option1 = option1;
+        return this;
+    }
+    @SpeakeasyMetadata("security:option=true")
+    public YoutubeLiveBroadcastsInsertCuepointSecurityOption2 option2;
+    public YoutubeLiveBroadcastsInsertCuepointSecurity withOption2(YoutubeLiveBroadcastsInsertCuepointSecurityOption2 option2) {
+        this.option2 = option2;
+        return this;
+    }
+    @SpeakeasyMetadata("security:option=true")
+    public YoutubeLiveBroadcastsInsertCuepointSecurityOption3 option3;
+    public YoutubeLiveBroadcastsInsertCuepointSecurity withOption3(YoutubeLiveBroadcastsInsertCuepointSecurityOption3 option3) {
+        this.option3 = option3;
+        return this;
+    }
+}

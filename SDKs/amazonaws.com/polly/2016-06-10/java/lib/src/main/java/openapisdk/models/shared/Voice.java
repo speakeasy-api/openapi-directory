@@ -1,0 +1,61 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * Voice
+ * Description of the voice.
+**/
+public class Voice {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("AdditionalLanguageCodes")
+    public LanguageCodeEnum[] additionalLanguageCodes;
+    public Voice withAdditionalLanguageCodes(LanguageCodeEnum[] additionalLanguageCodes) {
+        this.additionalLanguageCodes = additionalLanguageCodes;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Gender")
+    public GenderEnum gender;
+    public Voice withGender(GenderEnum gender) {
+        this.gender = gender;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Id")
+    public VoiceIdEnum id;
+    public Voice withId(VoiceIdEnum id) {
+        this.id = id;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("LanguageCode")
+    public LanguageCodeEnum languageCode;
+    public Voice withLanguageCode(LanguageCodeEnum languageCode) {
+        this.languageCode = languageCode;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("LanguageName")
+    public String languageName;
+    public Voice withLanguageName(String languageName) {
+        this.languageName = languageName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Name")
+    public String name;
+    public Voice withName(String name) {
+        this.name = name;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("SupportedEngines")
+    public EngineEnum[] supportedEngines;
+    public Voice withSupportedEngines(EngineEnum[] supportedEngines) {
+        this.supportedEngines = supportedEngines;
+        return this;
+    }
+}

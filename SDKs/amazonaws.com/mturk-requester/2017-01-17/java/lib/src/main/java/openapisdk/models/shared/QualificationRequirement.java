@@ -1,0 +1,52 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * QualificationRequirement
+ *  The QualificationRequirement data structure describes a Qualification that a Worker must have before the Worker is allowed to accept a HIT. A requirement may optionally state that a Worker must have the Qualification in order to preview the HIT, or see the HIT in search results. 
+**/
+public class QualificationRequirement {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ActionsGuarded")
+    public HitAccessActionsEnum actionsGuarded;
+    public QualificationRequirement withActionsGuarded(HitAccessActionsEnum actionsGuarded) {
+        this.actionsGuarded = actionsGuarded;
+        return this;
+    }
+    @JsonProperty("Comparator")
+    public ComparatorEnum comparator;
+    public QualificationRequirement withComparator(ComparatorEnum comparator) {
+        this.comparator = comparator;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("IntegerValues")
+    public Long[] integerValues;
+    public QualificationRequirement withIntegerValues(Long[] integerValues) {
+        this.integerValues = integerValues;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("LocaleValues")
+    public Locale[] localeValues;
+    public QualificationRequirement withLocaleValues(Locale[] localeValues) {
+        this.localeValues = localeValues;
+        return this;
+    }
+    @JsonProperty("QualificationTypeId")
+    public String qualificationTypeId;
+    public QualificationRequirement withQualificationTypeId(String qualificationTypeId) {
+        this.qualificationTypeId = qualificationTypeId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("RequiredToPreview")
+    public java.util.Map<String, Object> requiredToPreview;
+    public QualificationRequirement withRequiredToPreview(java.util.Map<String, Object> requiredToPreview) {
+        this.requiredToPreview = requiredToPreview;
+        return this;
+    }
+}

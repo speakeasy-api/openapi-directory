@@ -1,0 +1,31 @@
+package openapisdk.models.shared;
+
+
+public enum ItemCategoryEnum {
+    LOGIN("LOGIN"),
+    PASSWORD("PASSWORD"),
+    API_CREDENTIAL("API_CREDENTIAL"),
+    SERVER("SERVER"),
+    DATABASE("DATABASE"),
+    CREDIT_CARD("CREDIT_CARD"),
+    MEMBERSHIP("MEMBERSHIP"),
+    PASSPORT("PASSPORT"),
+    SOFTWARE_LICENSE("SOFTWARE_LICENSE"),
+    OUTDOOR_LICENSE("OUTDOOR_LICENSE"),
+    SECURE_NOTE("SECURE_NOTE"),
+    WIRELESS_ROUTER("WIRELESS_ROUTER"),
+    BANK_ACCOUNT("BANK_ACCOUNT"),
+    DRIVER_LICENSE("DRIVER_LICENSE"),
+    IDENTITY("IDENTITY"),
+    REWARD_PROGRAM("REWARD_PROGRAM"),
+    DOCUMENT("DOCUMENT"),
+    EMAIL_ACCOUNT("EMAIL_ACCOUNT"),
+    SOCIAL_SECURITY_NUMBER("SOCIAL_SECURITY_NUMBER"),
+    CUSTOM("CUSTOM");
+
+    public final String value;
+
+    private ItemCategoryEnum(String value) {
+        this.value = value;
+    }
+}

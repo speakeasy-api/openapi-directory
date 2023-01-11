@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class GetAccountsAccountIdStatementsStatementIdFileRequest {
+    public GetAccountsAccountIdStatementsStatementIdFilePathParams pathParams;
+    public GetAccountsAccountIdStatementsStatementIdFileRequest withPathParams(GetAccountsAccountIdStatementsStatementIdFilePathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public GetAccountsAccountIdStatementsStatementIdFileHeaders headers;
+    public GetAccountsAccountIdStatementsStatementIdFileRequest withHeaders(GetAccountsAccountIdStatementsStatementIdFileHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+    public GetAccountsAccountIdStatementsStatementIdFileSecurity security;
+    public GetAccountsAccountIdStatementsStatementIdFileRequest withSecurity(GetAccountsAccountIdStatementsStatementIdFileSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

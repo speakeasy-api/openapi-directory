@@ -1,0 +1,38 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * LambdaVolumeMount
+ * Contains information about a volume that Linux processes in a container can access. When you define a volume, the IoT Greengrass Core software mounts the source files to the destination inside the container.
+**/
+public class LambdaVolumeMount {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("addGroupOwner")
+    public Boolean addGroupOwner;
+    public LambdaVolumeMount withAddGroupOwner(Boolean addGroupOwner) {
+        this.addGroupOwner = addGroupOwner;
+        return this;
+    }
+    @JsonProperty("destinationPath")
+    public String destinationPath;
+    public LambdaVolumeMount withDestinationPath(String destinationPath) {
+        this.destinationPath = destinationPath;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("permission")
+    public LambdaFilesystemPermissionEnum permission;
+    public LambdaVolumeMount withPermission(LambdaFilesystemPermissionEnum permission) {
+        this.permission = permission;
+        return this;
+    }
+    @JsonProperty("sourcePath")
+    public String sourcePath;
+    public LambdaVolumeMount withSourcePath(String sourcePath) {
+        this.sourcePath = sourcePath;
+        return this;
+    }
+}

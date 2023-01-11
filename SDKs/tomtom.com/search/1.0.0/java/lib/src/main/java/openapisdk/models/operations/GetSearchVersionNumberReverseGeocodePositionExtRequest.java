@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class GetSearchVersionNumberReverseGeocodePositionExtRequest {
+    public GetSearchVersionNumberReverseGeocodePositionExtPathParams pathParams;
+    public GetSearchVersionNumberReverseGeocodePositionExtRequest withPathParams(GetSearchVersionNumberReverseGeocodePositionExtPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public GetSearchVersionNumberReverseGeocodePositionExtQueryParams queryParams;
+    public GetSearchVersionNumberReverseGeocodePositionExtRequest withQueryParams(GetSearchVersionNumberReverseGeocodePositionExtQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+}

@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class GetStagesRequest {
+    public GetStagesPathParams pathParams;
+    public GetStagesRequest withPathParams(GetStagesPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public GetStagesQueryParams queryParams;
+    public GetStagesRequest withQueryParams(GetStagesQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public GetStagesHeaders headers;
+    public GetStagesRequest withHeaders(GetStagesHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+}

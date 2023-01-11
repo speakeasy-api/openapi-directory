@@ -1,0 +1,27 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class RemoveTagsFromVaultRequest {
+    public RemoveTagsFromVaultPathParams pathParams;
+    public RemoveTagsFromVaultRequest withPathParams(RemoveTagsFromVaultPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public RemoveTagsFromVaultQueryParams queryParams;
+    public RemoveTagsFromVaultRequest withQueryParams(RemoveTagsFromVaultQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public RemoveTagsFromVaultHeaders headers;
+    public RemoveTagsFromVaultRequest withHeaders(RemoveTagsFromVaultHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public RemoveTagsFromVaultRequestBody request;
+    public RemoveTagsFromVaultRequest withRequest(RemoveTagsFromVaultRequestBody request) {
+        this.request = request;
+        return this;
+    }
+}

@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class DfareportingCountriesGetRequest {
+    public DfareportingCountriesGetPathParams pathParams;
+    public DfareportingCountriesGetRequest withPathParams(DfareportingCountriesGetPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public DfareportingCountriesGetQueryParams queryParams;
+    public DfareportingCountriesGetRequest withQueryParams(DfareportingCountriesGetQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public DfareportingCountriesGetSecurity security;
+    public DfareportingCountriesGetRequest withSecurity(DfareportingCountriesGetSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

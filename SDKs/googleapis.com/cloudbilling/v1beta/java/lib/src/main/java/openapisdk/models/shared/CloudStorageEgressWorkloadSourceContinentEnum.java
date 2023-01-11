@@ -1,0 +1,17 @@
+package openapisdk.models.shared;
+
+
+public enum CloudStorageEgressWorkloadSourceContinentEnum {
+    SOURCE_CONTINENT_UNSPECIFIED("SOURCE_CONTINENT_UNSPECIFIED"),
+    SOURCE_CONTINENT_ASIA_PACIFIC("SOURCE_CONTINENT_ASIA_PACIFIC"),
+    SOURCE_CONTINENT_AUSTRALIA("SOURCE_CONTINENT_AUSTRALIA"),
+    SOURCE_CONTINENT_EUROPE("SOURCE_CONTINENT_EUROPE"),
+    SOURCE_CONTINENT_NORTH_AMERICA("SOURCE_CONTINENT_NORTH_AMERICA"),
+    SOURCE_CONTINENT_SOUTH_AMERICA("SOURCE_CONTINENT_SOUTH_AMERICA");
+
+    public final String value;
+
+    private CloudStorageEgressWorkloadSourceContinentEnum(String value) {
+        this.value = value;
+    }
+}

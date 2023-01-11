@@ -1,0 +1,16 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+/**
+ * PartitionValueList
+ * Contains a list of values defining partitions.
+**/
+public class PartitionValueList {
+    @JsonProperty("Values")
+    public String[] values;
+    public PartitionValueList withValues(String[] values) {
+        this.values = values;
+        return this;
+    }
+}

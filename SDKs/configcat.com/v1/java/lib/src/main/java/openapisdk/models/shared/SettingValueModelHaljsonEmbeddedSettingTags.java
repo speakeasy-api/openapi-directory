@@ -1,0 +1,36 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class SettingValueModelHaljsonEmbeddedSettingTags {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("color")
+    public String color;
+    public SettingValueModelHaljsonEmbeddedSettingTags withColor(String color) {
+        this.color = color;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("name")
+    public String name;
+    public SettingValueModelHaljsonEmbeddedSettingTags withName(String name) {
+        this.name = name;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("settingTagId")
+    public Long settingTagId;
+    public SettingValueModelHaljsonEmbeddedSettingTags withSettingTagId(Long settingTagId) {
+        this.settingTagId = settingTagId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("tagId")
+    public Long tagId;
+    public SettingValueModelHaljsonEmbeddedSettingTags withTagId(Long tagId) {
+        this.tagId = tagId;
+        return this;
+    }
+}

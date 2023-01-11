@@ -1,0 +1,18 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class PdfOcrPdfToWordsWithLocationRequestBodyImageFile {
+    @SpeakeasyMetadata("multipartForm:content")
+    public byte[] content;
+    public PdfOcrPdfToWordsWithLocationRequestBodyImageFile withContent(byte[] content) {
+        this.content = content;
+        return this;
+    }
+    @SpeakeasyMetadata("multipartForm:name=imageFile")
+    public String imageFile;
+    public PdfOcrPdfToWordsWithLocationRequestBodyImageFile withImageFile(String imageFile) {
+        this.imageFile = imageFile;
+        return this;
+    }
+}

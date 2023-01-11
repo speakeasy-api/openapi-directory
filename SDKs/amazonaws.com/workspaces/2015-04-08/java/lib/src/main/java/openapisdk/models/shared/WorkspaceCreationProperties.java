@@ -1,0 +1,54 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * WorkspaceCreationProperties
+ * Describes the default properties that are used for creating WorkSpaces. For more information, see <a href="https://docs.aws.amazon.com/workspaces/latest/adminguide/update-directory-details.html">Update Directory Details for Your WorkSpaces</a>. 
+**/
+public class WorkspaceCreationProperties {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("CustomSecurityGroupId")
+    public String customSecurityGroupId;
+    public WorkspaceCreationProperties withCustomSecurityGroupId(String customSecurityGroupId) {
+        this.customSecurityGroupId = customSecurityGroupId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("DefaultOu")
+    public String defaultOu;
+    public WorkspaceCreationProperties withDefaultOu(String defaultOu) {
+        this.defaultOu = defaultOu;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("EnableInternetAccess")
+    public Boolean enableInternetAccess;
+    public WorkspaceCreationProperties withEnableInternetAccess(Boolean enableInternetAccess) {
+        this.enableInternetAccess = enableInternetAccess;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("EnableMaintenanceMode")
+    public Boolean enableMaintenanceMode;
+    public WorkspaceCreationProperties withEnableMaintenanceMode(Boolean enableMaintenanceMode) {
+        this.enableMaintenanceMode = enableMaintenanceMode;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("EnableWorkDocs")
+    public Boolean enableWorkDocs;
+    public WorkspaceCreationProperties withEnableWorkDocs(Boolean enableWorkDocs) {
+        this.enableWorkDocs = enableWorkDocs;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("UserEnabledAsLocalAdministrator")
+    public Boolean userEnabledAsLocalAdministrator;
+    public WorkspaceCreationProperties withUserEnabledAsLocalAdministrator(Boolean userEnabledAsLocalAdministrator) {
+        this.userEnabledAsLocalAdministrator = userEnabledAsLocalAdministrator;
+        return this;
+    }
+}

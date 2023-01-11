@@ -1,0 +1,17 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class UpdateOrganizationActionBatchRequest {
+    public UpdateOrganizationActionBatchPathParams pathParams;
+    public UpdateOrganizationActionBatchRequest withPathParams(UpdateOrganizationActionBatchPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public UpdateOrganizationActionBatchRequestBody request;
+    public UpdateOrganizationActionBatchRequest withRequest(UpdateOrganizationActionBatchRequestBody request) {
+        this.request = request;
+        return this;
+    }
+}

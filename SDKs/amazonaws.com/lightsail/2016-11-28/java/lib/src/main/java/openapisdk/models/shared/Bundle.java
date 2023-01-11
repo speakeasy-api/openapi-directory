@@ -1,0 +1,89 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * Bundle
+ * Describes a bundle, which is a set of specs describing your virtual private server (or <i>instance</i>).
+**/
+public class Bundle {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("bundleId")
+    public String bundleId;
+    public Bundle withBundleId(String bundleId) {
+        this.bundleId = bundleId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("cpuCount")
+    public Long cpuCount;
+    public Bundle withCpuCount(Long cpuCount) {
+        this.cpuCount = cpuCount;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("diskSizeInGb")
+    public Long diskSizeInGb;
+    public Bundle withDiskSizeInGb(Long diskSizeInGb) {
+        this.diskSizeInGb = diskSizeInGb;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("instanceType")
+    public String instanceType;
+    public Bundle withInstanceType(String instanceType) {
+        this.instanceType = instanceType;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("isActive")
+    public Boolean isActive;
+    public Bundle withIsActive(Boolean isActive) {
+        this.isActive = isActive;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("name")
+    public String name;
+    public Bundle withName(String name) {
+        this.name = name;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("power")
+    public Long power;
+    public Bundle withPower(Long power) {
+        this.power = power;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("price")
+    public Float price;
+    public Bundle withPrice(Float price) {
+        this.price = price;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ramSizeInGb")
+    public Float ramSizeInGb;
+    public Bundle withRamSizeInGb(Float ramSizeInGb) {
+        this.ramSizeInGb = ramSizeInGb;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("supportedPlatforms")
+    public InstancePlatformEnum[] supportedPlatforms;
+    public Bundle withSupportedPlatforms(InstancePlatformEnum[] supportedPlatforms) {
+        this.supportedPlatforms = supportedPlatforms;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("transferPerMonthInGb")
+    public Long transferPerMonthInGb;
+    public Bundle withTransferPerMonthInGb(Long transferPerMonthInGb) {
+        this.transferPerMonthInGb = transferPerMonthInGb;
+        return this;
+    }
+}

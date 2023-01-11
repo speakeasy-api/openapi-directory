@@ -1,0 +1,25 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * Locale
+ * The Locale data structure represents a geographical region or location.
+**/
+public class Locale {
+    @JsonProperty("Country")
+    public String country;
+    public Locale withCountry(String country) {
+        this.country = country;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Subdivision")
+    public String subdivision;
+    public Locale withSubdivision(String subdivision) {
+        this.subdivision = subdivision;
+        return this;
+    }
+}

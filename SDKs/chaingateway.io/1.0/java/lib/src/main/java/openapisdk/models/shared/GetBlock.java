@@ -1,0 +1,72 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+public class GetBlock {
+    @JsonProperty("block_number")
+    public String blockNumber;
+    public GetBlock withBlockNumber(String blockNumber) {
+        this.blockNumber = blockNumber;
+        return this;
+    }
+    @JsonProperty("difficulty")
+    public String difficulty;
+    public GetBlock withDifficulty(String difficulty) {
+        this.difficulty = difficulty;
+        return this;
+    }
+    @JsonProperty("gas_limit")
+    public String gasLimit;
+    public GetBlock withGasLimit(String gasLimit) {
+        this.gasLimit = gasLimit;
+        return this;
+    }
+    @JsonProperty("gas_used")
+    public String gasUsed;
+    public GetBlock withGasUsed(String gasUsed) {
+        this.gasUsed = gasUsed;
+        return this;
+    }
+    @JsonProperty("hash")
+    public String hash;
+    public GetBlock withHash(String hash) {
+        this.hash = hash;
+        return this;
+    }
+    @JsonProperty("miner")
+    public String miner;
+    public GetBlock withMiner(String miner) {
+        this.miner = miner;
+        return this;
+    }
+    @JsonProperty("ok")
+    public Boolean ok;
+    public GetBlock withOk(Boolean ok) {
+        this.ok = ok;
+        return this;
+    }
+    @JsonProperty("parent_hash")
+    public String parentHash;
+    public GetBlock withParentHash(String parentHash) {
+        this.parentHash = parentHash;
+        return this;
+    }
+    @JsonProperty("size_in_bytes")
+    public String sizeInBytes;
+    public GetBlock withSizeInBytes(String sizeInBytes) {
+        this.sizeInBytes = sizeInBytes;
+        return this;
+    }
+    @JsonProperty("time_stamp")
+    public String timeStamp;
+    public GetBlock withTimeStamp(String timeStamp) {
+        this.timeStamp = timeStamp;
+        return this;
+    }
+    @JsonProperty("transactions_count")
+    public String transactionsCount;
+    public GetBlock withTransactionsCount(String transactionsCount) {
+        this.transactionsCount = transactionsCount;
+        return this;
+    }
+}

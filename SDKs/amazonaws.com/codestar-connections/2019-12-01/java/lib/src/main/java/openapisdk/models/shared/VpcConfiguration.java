@@ -1,0 +1,37 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * VpcConfiguration
+ * The VPC configuration provisioned for the host.
+**/
+public class VpcConfiguration {
+    @JsonProperty("SecurityGroupIds")
+    public String[] securityGroupIds;
+    public VpcConfiguration withSecurityGroupIds(String[] securityGroupIds) {
+        this.securityGroupIds = securityGroupIds;
+        return this;
+    }
+    @JsonProperty("SubnetIds")
+    public String[] subnetIds;
+    public VpcConfiguration withSubnetIds(String[] subnetIds) {
+        this.subnetIds = subnetIds;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("TlsCertificate")
+    public String tlsCertificate;
+    public VpcConfiguration withTlsCertificate(String tlsCertificate) {
+        this.tlsCertificate = tlsCertificate;
+        return this;
+    }
+    @JsonProperty("VpcId")
+    public String vpcId;
+    public VpcConfiguration withVpcId(String vpcId) {
+        this.vpcId = vpcId;
+        return this;
+    }
+}

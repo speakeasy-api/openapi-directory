@@ -1,0 +1,75 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * DirectoryLimits
+ * Contains directory limit information for a Region.
+**/
+public class DirectoryLimits {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("CloudOnlyDirectoriesCurrentCount")
+    public Long cloudOnlyDirectoriesCurrentCount;
+    public DirectoryLimits withCloudOnlyDirectoriesCurrentCount(Long cloudOnlyDirectoriesCurrentCount) {
+        this.cloudOnlyDirectoriesCurrentCount = cloudOnlyDirectoriesCurrentCount;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("CloudOnlyDirectoriesLimit")
+    public Long cloudOnlyDirectoriesLimit;
+    public DirectoryLimits withCloudOnlyDirectoriesLimit(Long cloudOnlyDirectoriesLimit) {
+        this.cloudOnlyDirectoriesLimit = cloudOnlyDirectoriesLimit;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("CloudOnlyDirectoriesLimitReached")
+    public Boolean cloudOnlyDirectoriesLimitReached;
+    public DirectoryLimits withCloudOnlyDirectoriesLimitReached(Boolean cloudOnlyDirectoriesLimitReached) {
+        this.cloudOnlyDirectoriesLimitReached = cloudOnlyDirectoriesLimitReached;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("CloudOnlyMicrosoftADCurrentCount")
+    public Long cloudOnlyMicrosoftADCurrentCount;
+    public DirectoryLimits withCloudOnlyMicrosoftAdCurrentCount(Long cloudOnlyMicrosoftADCurrentCount) {
+        this.cloudOnlyMicrosoftADCurrentCount = cloudOnlyMicrosoftADCurrentCount;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("CloudOnlyMicrosoftADLimit")
+    public Long cloudOnlyMicrosoftADLimit;
+    public DirectoryLimits withCloudOnlyMicrosoftAdLimit(Long cloudOnlyMicrosoftADLimit) {
+        this.cloudOnlyMicrosoftADLimit = cloudOnlyMicrosoftADLimit;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("CloudOnlyMicrosoftADLimitReached")
+    public Boolean cloudOnlyMicrosoftADLimitReached;
+    public DirectoryLimits withCloudOnlyMicrosoftAdLimitReached(Boolean cloudOnlyMicrosoftADLimitReached) {
+        this.cloudOnlyMicrosoftADLimitReached = cloudOnlyMicrosoftADLimitReached;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ConnectedDirectoriesCurrentCount")
+    public Long connectedDirectoriesCurrentCount;
+    public DirectoryLimits withConnectedDirectoriesCurrentCount(Long connectedDirectoriesCurrentCount) {
+        this.connectedDirectoriesCurrentCount = connectedDirectoriesCurrentCount;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ConnectedDirectoriesLimit")
+    public Long connectedDirectoriesLimit;
+    public DirectoryLimits withConnectedDirectoriesLimit(Long connectedDirectoriesLimit) {
+        this.connectedDirectoriesLimit = connectedDirectoriesLimit;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ConnectedDirectoriesLimitReached")
+    public Boolean connectedDirectoriesLimitReached;
+    public DirectoryLimits withConnectedDirectoriesLimitReached(Boolean connectedDirectoriesLimitReached) {
+        this.connectedDirectoriesLimitReached = connectedDirectoriesLimitReached;
+        return this;
+    }
+}

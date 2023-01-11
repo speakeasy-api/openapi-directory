@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class GetWebhooksV3AppIdSettingsGetAllRequest {
+    public GetWebhooksV3AppIdSettingsGetAllPathParams pathParams;
+    public GetWebhooksV3AppIdSettingsGetAllRequest withPathParams(GetWebhooksV3AppIdSettingsGetAllPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public GetWebhooksV3AppIdSettingsGetAllSecurity security;
+    public GetWebhooksV3AppIdSettingsGetAllRequest withSecurity(GetWebhooksV3AppIdSettingsGetAllSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

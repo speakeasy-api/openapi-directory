@@ -1,0 +1,19 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * SchemaAlreadyExistsException
+ * Indicates that a schema could not be created due to a naming conflict. Please select a different name and then try again.
+**/
+public class SchemaAlreadyExistsException {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Message")
+    public String message;
+    public SchemaAlreadyExistsException withMessage(String message) {
+        this.message = message;
+        return this;
+    }
+}

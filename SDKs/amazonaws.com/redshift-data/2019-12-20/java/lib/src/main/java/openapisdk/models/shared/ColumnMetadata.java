@@ -1,0 +1,103 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * ColumnMetadata
+ * The properties (metadata) of a column. 
+**/
+public class ColumnMetadata {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("columnDefault")
+    public String columnDefault;
+    public ColumnMetadata withColumnDefault(String columnDefault) {
+        this.columnDefault = columnDefault;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("isCaseSensitive")
+    public Boolean isCaseSensitive;
+    public ColumnMetadata withIsCaseSensitive(Boolean isCaseSensitive) {
+        this.isCaseSensitive = isCaseSensitive;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("isCurrency")
+    public Boolean isCurrency;
+    public ColumnMetadata withIsCurrency(Boolean isCurrency) {
+        this.isCurrency = isCurrency;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("isSigned")
+    public Boolean isSigned;
+    public ColumnMetadata withIsSigned(Boolean isSigned) {
+        this.isSigned = isSigned;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("label")
+    public String label;
+    public ColumnMetadata withLabel(String label) {
+        this.label = label;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("length")
+    public Long length;
+    public ColumnMetadata withLength(Long length) {
+        this.length = length;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("name")
+    public String name;
+    public ColumnMetadata withName(String name) {
+        this.name = name;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("nullable")
+    public Long nullable;
+    public ColumnMetadata withNullable(Long nullable) {
+        this.nullable = nullable;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("precision")
+    public Long precision;
+    public ColumnMetadata withPrecision(Long precision) {
+        this.precision = precision;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("scale")
+    public Long scale;
+    public ColumnMetadata withScale(Long scale) {
+        this.scale = scale;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("schemaName")
+    public String schemaName;
+    public ColumnMetadata withSchemaName(String schemaName) {
+        this.schemaName = schemaName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("tableName")
+    public String tableName;
+    public ColumnMetadata withTableName(String tableName) {
+        this.tableName = tableName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("typeName")
+    public String typeName;
+    public ColumnMetadata withTypeName(String typeName) {
+        this.typeName = typeName;
+        return this;
+    }
+}

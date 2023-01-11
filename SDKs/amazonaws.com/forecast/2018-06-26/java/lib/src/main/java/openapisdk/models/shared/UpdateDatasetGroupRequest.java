@@ -1,0 +1,18 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+public class UpdateDatasetGroupRequest {
+    @JsonProperty("DatasetArns")
+    public String[] datasetArns;
+    public UpdateDatasetGroupRequest withDatasetArns(String[] datasetArns) {
+        this.datasetArns = datasetArns;
+        return this;
+    }
+    @JsonProperty("DatasetGroupArn")
+    public String datasetGroupArn;
+    public UpdateDatasetGroupRequest withDatasetGroupArn(String datasetGroupArn) {
+        this.datasetGroupArn = datasetGroupArn;
+        return this;
+    }
+}

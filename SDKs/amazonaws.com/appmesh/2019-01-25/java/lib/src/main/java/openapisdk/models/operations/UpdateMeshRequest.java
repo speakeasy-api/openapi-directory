@@ -1,0 +1,22 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class UpdateMeshRequest {
+    public UpdateMeshPathParams pathParams;
+    public UpdateMeshRequest withPathParams(UpdateMeshPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public UpdateMeshHeaders headers;
+    public UpdateMeshRequest withHeaders(UpdateMeshHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public UpdateMeshRequestBody request;
+    public UpdateMeshRequest withRequest(UpdateMeshRequestBody request) {
+        this.request = request;
+        return this;
+    }
+}

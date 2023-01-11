@@ -1,0 +1,17 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class BatchGetChannelRequest {
+    public BatchGetChannelHeaders headers;
+    public BatchGetChannelRequest withHeaders(BatchGetChannelHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public BatchGetChannelRequestBody request;
+    public BatchGetChannelRequest withRequest(BatchGetChannelRequestBody request) {
+        this.request = request;
+        return this;
+    }
+}

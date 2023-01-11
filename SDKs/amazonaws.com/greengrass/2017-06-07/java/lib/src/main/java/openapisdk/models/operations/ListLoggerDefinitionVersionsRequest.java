@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class ListLoggerDefinitionVersionsRequest {
+    public ListLoggerDefinitionVersionsPathParams pathParams;
+    public ListLoggerDefinitionVersionsRequest withPathParams(ListLoggerDefinitionVersionsPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public ListLoggerDefinitionVersionsQueryParams queryParams;
+    public ListLoggerDefinitionVersionsRequest withQueryParams(ListLoggerDefinitionVersionsQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public ListLoggerDefinitionVersionsHeaders headers;
+    public ListLoggerDefinitionVersionsRequest withHeaders(ListLoggerDefinitionVersionsHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+}

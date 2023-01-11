@@ -1,0 +1,46 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * ActivityScheduledEventDetails
+ * Contains details about an activity scheduled during an execution.
+**/
+public class ActivityScheduledEventDetails {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("heartbeatInSeconds")
+    public Long heartbeatInSeconds;
+    public ActivityScheduledEventDetails withHeartbeatInSeconds(Long heartbeatInSeconds) {
+        this.heartbeatInSeconds = heartbeatInSeconds;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("input")
+    public String input;
+    public ActivityScheduledEventDetails withInput(String input) {
+        this.input = input;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("inputDetails")
+    public HistoryEventExecutionDataDetails inputDetails;
+    public ActivityScheduledEventDetails withInputDetails(HistoryEventExecutionDataDetails inputDetails) {
+        this.inputDetails = inputDetails;
+        return this;
+    }
+    @JsonProperty("resource")
+    public String resource;
+    public ActivityScheduledEventDetails withResource(String resource) {
+        this.resource = resource;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("timeoutInSeconds")
+    public Long timeoutInSeconds;
+    public ActivityScheduledEventDetails withTimeoutInSeconds(Long timeoutInSeconds) {
+        this.timeoutInSeconds = timeoutInSeconds;
+        return this;
+    }
+}

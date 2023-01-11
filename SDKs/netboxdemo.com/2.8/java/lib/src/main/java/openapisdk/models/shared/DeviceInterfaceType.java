@@ -1,0 +1,18 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+public class DeviceInterfaceType {
+    @JsonProperty("label")
+    public DeviceInterfaceTypeLabelEnum label;
+    public DeviceInterfaceType withLabel(DeviceInterfaceTypeLabelEnum label) {
+        this.label = label;
+        return this;
+    }
+    @JsonProperty("value")
+    public DeviceInterfaceTypeValueEnum value;
+    public DeviceInterfaceType withValue(DeviceInterfaceTypeValueEnum value) {
+        this.value = value;
+        return this;
+    }
+}

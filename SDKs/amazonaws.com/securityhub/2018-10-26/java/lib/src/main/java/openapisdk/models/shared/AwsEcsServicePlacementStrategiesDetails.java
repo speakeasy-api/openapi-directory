@@ -1,0 +1,26 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * AwsEcsServicePlacementStrategiesDetails
+ * A placement strategy that determines how to place the tasks for the service.
+**/
+public class AwsEcsServicePlacementStrategiesDetails {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Field")
+    public String field;
+    public AwsEcsServicePlacementStrategiesDetails withField(String field) {
+        this.field = field;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Type")
+    public String type;
+    public AwsEcsServicePlacementStrategiesDetails withType(String type) {
+        this.type = type;
+        return this;
+    }
+}

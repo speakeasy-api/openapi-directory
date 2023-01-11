@@ -1,0 +1,20 @@
+package openapisdk.models.shared;
+
+
+
+/**
+ * AnomalyDetectorConfiguration
+ * The configuration specifies details about how the anomaly detection model is to be trained, including time ranges to exclude from use for training the model and the time zone to use for the metric.
+**/
+public class AnomalyDetectorConfiguration {
+    public Range[] excludedTimeRanges;
+    public AnomalyDetectorConfiguration withExcludedTimeRanges(Range[] excludedTimeRanges) {
+        this.excludedTimeRanges = excludedTimeRanges;
+        return this;
+    }
+    public String metricTimezone;
+    public AnomalyDetectorConfiguration withMetricTimezone(String metricTimezone) {
+        this.metricTimezone = metricTimezone;
+        return this;
+    }
+}

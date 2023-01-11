@@ -1,0 +1,61 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * FunctionConfiguration
+ * The configuration of the Lambda function.
+**/
+public class FunctionConfiguration {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("EncodingType")
+    public EncodingTypeEnum encodingType;
+    public FunctionConfiguration withEncodingType(EncodingTypeEnum encodingType) {
+        this.encodingType = encodingType;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Environment")
+    public FunctionConfigurationEnvironment environment;
+    public FunctionConfiguration withEnvironment(FunctionConfigurationEnvironment environment) {
+        this.environment = environment;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ExecArgs")
+    public String execArgs;
+    public FunctionConfiguration withExecArgs(String execArgs) {
+        this.execArgs = execArgs;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Executable")
+    public String executable;
+    public FunctionConfiguration withExecutable(String executable) {
+        this.executable = executable;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("MemorySize")
+    public Long memorySize;
+    public FunctionConfiguration withMemorySize(Long memorySize) {
+        this.memorySize = memorySize;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Pinned")
+    public Boolean pinned;
+    public FunctionConfiguration withPinned(Boolean pinned) {
+        this.pinned = pinned;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Timeout")
+    public Long timeout;
+    public FunctionConfiguration withTimeout(Long timeout) {
+        this.timeout = timeout;
+        return this;
+    }
+}

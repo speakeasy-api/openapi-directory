@@ -1,0 +1,54 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * InstanceProfile
+ * Represents the instance profile.
+**/
+public class InstanceProfile {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("arn")
+    public String arn;
+    public InstanceProfile withArn(String arn) {
+        this.arn = arn;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("description")
+    public String description;
+    public InstanceProfile withDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("excludeAppPackagesFromCleanup")
+    public String[] excludeAppPackagesFromCleanup;
+    public InstanceProfile withExcludeAppPackagesFromCleanup(String[] excludeAppPackagesFromCleanup) {
+        this.excludeAppPackagesFromCleanup = excludeAppPackagesFromCleanup;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("name")
+    public String name;
+    public InstanceProfile withName(String name) {
+        this.name = name;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("packageCleanup")
+    public Boolean packageCleanup;
+    public InstanceProfile withPackageCleanup(Boolean packageCleanup) {
+        this.packageCleanup = packageCleanup;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("rebootAfterUse")
+    public Boolean rebootAfterUse;
+    public InstanceProfile withRebootAfterUse(Boolean rebootAfterUse) {
+        this.rebootAfterUse = rebootAfterUse;
+        return this;
+    }
+}

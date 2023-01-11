@@ -1,0 +1,90 @@
+# openapisdk
+
+<!-- Start SDK Installation -->
+## SDK Installation
+
+### Gradle
+
+```groovy
+implementation 'openapisdk:openapisdk:0.0.1'
+```
+<!-- End SDK Installation -->
+
+## SDK Example Usage
+<!-- Start SDK Example Usage -->
+```java
+package hello.world;
+
+import openapisdk.SDK;
+import openapisdk.models.shared.Security;
+
+public class Application {
+    public static void main(String[] args) {
+        try {
+            SDK.Builder builder = SDK.builder();
+
+            SDK sdk = builder.build();
+
+            ConnectorsProjectsLocationsConnectionsActionsExecuteRequest req = new ConnectorsProjectsLocationsConnectionsActionsExecuteRequest() {{
+                security = new ConnectorsProjectsLocationsConnectionsActionsExecuteSecurity() {{
+                    oauth2 = new SchemeOauth2() {{
+                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
+                    }};
+                    oauth2c = new SchemeOauth2c() {{
+                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
+                    }};
+                }};
+                pathParams = new ConnectorsProjectsLocationsConnectionsActionsExecutePathParams() {{
+                    name = "totam";
+                }};
+                queryParams = new ConnectorsProjectsLocationsConnectionsActionsExecuteQueryParams() {{
+                    dollarXgafv = "1";
+                    accessToken = "quod";
+                    alt = "media";
+                    callback = "qui";
+                    fields = "maiores";
+                    key = "ipsam";
+                    oauthToken = "non";
+                    prettyPrint = true;
+                    quotaUser = "veritatis";
+                    uploadType = "aut";
+                    uploadProtocol = "eveniet";
+                }};
+                request = new ExecuteActionRequest() {{
+                    parameters = new java.util.HashMap<String, Object>() {{
+                        put("ipsa", "rem");
+                    }};
+                }};
+            }};
+
+            ConnectorsProjectsLocationsConnectionsActionsExecuteResponse res = sdk.projects.connectorsProjectsLocationsConnectionsActionsExecute(req);
+
+            if (res.executeActionResponse.isPresent()) {
+                // handle response
+            }
+        } catch (Exception e) {
+            // handle exception
+        }
+```
+<!-- End SDK Example Usage -->
+
+<!-- Start SDK Available Operations -->
+## SDK Available Operations
+
+### projects
+
+* `connectorsProjectsLocationsConnectionsActionsExecute` - Executes an action with the name specified in the request. The input parameters for executing the action are passed through the body of the ExecuteAction request.
+* `connectorsProjectsLocationsConnectionsActionsList` - Gets the schema of all the actions supported by the connector.
+* `connectorsProjectsLocationsConnectionsEntityTypesEntitiesCreate` - Creates a new entity row of the specified entity type in the external system. The field values for creating the row are contained in the body of the request. The response message contains a `Entity` message object returned as a response by the external system.
+* `connectorsProjectsLocationsConnectionsEntityTypesEntitiesDelete` - Deletes an existing entity row matching the entity type and entity id specified in the request.
+* `connectorsProjectsLocationsConnectionsEntityTypesEntitiesDeleteEntitiesWithConditions` - Deletes entities based on conditions specified in the request and not on entity id.
+* `connectorsProjectsLocationsConnectionsEntityTypesEntitiesGet` - Gets a single entity row matching the entity type and entity id specified in the request.
+* `connectorsProjectsLocationsConnectionsEntityTypesEntitiesList` - Lists entity rows of a particular entity type contained in the request. Note: 1. Currently, only max of one 'sort_by' column is supported. 2. If no 'sort_by' column is provided, the primary key of the table is used. If zero or more than one primary key is available, we default to the unpaginated list entities logic which only returns the first page. 3. The values of the 'sort_by' columns must uniquely identify an entity row, otherwise undefined behaviors may be observed during pagination. 4. Since transactions are not supported, any updates, inserts or deletes during pagination can lead to stale data being returned or other unexpected behaviors.
+* `connectorsProjectsLocationsConnectionsEntityTypesEntitiesPatch` - Updates an existing entity row matching the entity type and entity id specified in the request. The fields in the entity row that need to be modified are contained in the body of the request. All unspecified fields are left unchanged. The response message contains a `Entity` message object returned as a response by the external system.
+* `connectorsProjectsLocationsConnectionsEntityTypesEntitiesUpdateEntitiesWithConditions` - Updates entities based on conditions specified in the request and not on entity id.
+* `connectorsProjectsLocationsConnectionsEntityTypesList` - Lists metadata related to all entity types present in the external system.
+* `connectorsProjectsLocationsConnectionsExecuteSqlQuery` - Executes a SQL statement specified in the body of the request. An example of this SQL statement in the case of Salesforce connector would be 'select * from Account a, Order o where a.Id = o.AccountId'.
+
+<!-- End SDK Available Operations -->
+
+### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

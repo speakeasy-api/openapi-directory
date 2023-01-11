@@ -1,0 +1,18 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class VaultMattersHoldsListSecurity {
+    @SpeakeasyMetadata("security:option=true")
+    public VaultMattersHoldsListSecurityOption1 option1;
+    public VaultMattersHoldsListSecurity withOption1(VaultMattersHoldsListSecurityOption1 option1) {
+        this.option1 = option1;
+        return this;
+    }
+    @SpeakeasyMetadata("security:option=true")
+    public VaultMattersHoldsListSecurityOption2 option2;
+    public VaultMattersHoldsListSecurity withOption2(VaultMattersHoldsListSecurityOption2 option2) {
+        this.option2 = option2;
+        return this;
+    }
+}

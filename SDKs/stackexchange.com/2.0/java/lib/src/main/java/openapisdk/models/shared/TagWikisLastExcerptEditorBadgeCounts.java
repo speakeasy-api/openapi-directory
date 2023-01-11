@@ -1,0 +1,21 @@
+package openapisdk.models.shared;
+
+
+
+public class TagWikisLastExcerptEditorBadgeCounts {
+    public Long bronze;
+    public TagWikisLastExcerptEditorBadgeCounts withBronze(Long bronze) {
+        this.bronze = bronze;
+        return this;
+    }
+    public Long gold;
+    public TagWikisLastExcerptEditorBadgeCounts withGold(Long gold) {
+        this.gold = gold;
+        return this;
+    }
+    public Long silver;
+    public TagWikisLastExcerptEditorBadgeCounts withSilver(Long silver) {
+        this.silver = silver;
+        return this;
+    }
+}

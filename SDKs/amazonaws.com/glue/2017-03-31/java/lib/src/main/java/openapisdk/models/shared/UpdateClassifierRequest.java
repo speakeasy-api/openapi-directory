@@ -1,0 +1,36 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class UpdateClassifierRequest {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("CsvClassifier")
+    public UpdateCsvClassifierRequest csvClassifier;
+    public UpdateClassifierRequest withCsvClassifier(UpdateCsvClassifierRequest csvClassifier) {
+        this.csvClassifier = csvClassifier;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("GrokClassifier")
+    public UpdateGrokClassifierRequest grokClassifier;
+    public UpdateClassifierRequest withGrokClassifier(UpdateGrokClassifierRequest grokClassifier) {
+        this.grokClassifier = grokClassifier;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("JsonClassifier")
+    public UpdateJsonClassifierRequest jsonClassifier;
+    public UpdateClassifierRequest withJsonClassifier(UpdateJsonClassifierRequest jsonClassifier) {
+        this.jsonClassifier = jsonClassifier;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("XMLClassifier")
+    public UpdateXmlClassifierRequest xmlClassifier;
+    public UpdateClassifierRequest withXmlClassifier(UpdateXmlClassifierRequest xmlClassifier) {
+        this.xmlClassifier = xmlClassifier;
+        return this;
+    }
+}

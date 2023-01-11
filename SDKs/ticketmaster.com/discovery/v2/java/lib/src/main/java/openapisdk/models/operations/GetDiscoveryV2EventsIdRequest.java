@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class GetDiscoveryV2EventsIdRequest {
+    public GetDiscoveryV2EventsIdPathParams pathParams;
+    public GetDiscoveryV2EventsIdRequest withPathParams(GetDiscoveryV2EventsIdPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public GetDiscoveryV2EventsIdQueryParams queryParams;
+    public GetDiscoveryV2EventsIdRequest withQueryParams(GetDiscoveryV2EventsIdQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+}

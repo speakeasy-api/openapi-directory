@@ -1,0 +1,39 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * WorkflowExecutionSignaledEventAttributes
+ * Provides the details of the <code>WorkflowExecutionSignaled</code> event.
+**/
+public class WorkflowExecutionSignaledEventAttributes {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("externalInitiatedEventId")
+    public Long externalInitiatedEventId;
+    public WorkflowExecutionSignaledEventAttributes withExternalInitiatedEventId(Long externalInitiatedEventId) {
+        this.externalInitiatedEventId = externalInitiatedEventId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("externalWorkflowExecution")
+    public WorkflowExecution externalWorkflowExecution;
+    public WorkflowExecutionSignaledEventAttributes withExternalWorkflowExecution(WorkflowExecution externalWorkflowExecution) {
+        this.externalWorkflowExecution = externalWorkflowExecution;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("input")
+    public String input;
+    public WorkflowExecutionSignaledEventAttributes withInput(String input) {
+        this.input = input;
+        return this;
+    }
+    @JsonProperty("signalName")
+    public String signalName;
+    public WorkflowExecutionSignaledEventAttributes withSignalName(String signalName) {
+        this.signalName = signalName;
+        return this;
+    }
+}

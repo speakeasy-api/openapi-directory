@@ -1,0 +1,22 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+/**
+ * Account
+ * An AWS account that is the administrator account of or a member of a behavior graph.
+**/
+public class Account {
+    @JsonProperty("AccountId")
+    public String accountId;
+    public Account withAccountId(String accountId) {
+        this.accountId = accountId;
+        return this;
+    }
+    @JsonProperty("EmailAddress")
+    public String emailAddress;
+    public Account withEmailAddress(String emailAddress) {
+        this.emailAddress = emailAddress;
+        return this;
+    }
+}

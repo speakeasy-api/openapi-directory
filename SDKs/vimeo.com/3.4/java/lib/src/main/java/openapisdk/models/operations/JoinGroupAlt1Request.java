@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class JoinGroupAlt1Request {
+    public JoinGroupAlt1PathParams pathParams;
+    public JoinGroupAlt1Request withPathParams(JoinGroupAlt1PathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public JoinGroupAlt1Security security;
+    public JoinGroupAlt1Request withSecurity(JoinGroupAlt1Security security) {
+        this.security = security;
+        return this;
+    }
+}

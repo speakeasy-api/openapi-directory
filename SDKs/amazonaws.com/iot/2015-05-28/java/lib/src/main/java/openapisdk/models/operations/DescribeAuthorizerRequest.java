@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class DescribeAuthorizerRequest {
+    public DescribeAuthorizerPathParams pathParams;
+    public DescribeAuthorizerRequest withPathParams(DescribeAuthorizerPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public DescribeAuthorizerHeaders headers;
+    public DescribeAuthorizerRequest withHeaders(DescribeAuthorizerHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+}

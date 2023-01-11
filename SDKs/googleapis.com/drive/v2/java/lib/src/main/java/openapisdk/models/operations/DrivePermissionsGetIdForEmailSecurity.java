@@ -1,0 +1,54 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class DrivePermissionsGetIdForEmailSecurity {
+    @SpeakeasyMetadata("security:option=true")
+    public DrivePermissionsGetIdForEmailSecurityOption1 option1;
+    public DrivePermissionsGetIdForEmailSecurity withOption1(DrivePermissionsGetIdForEmailSecurityOption1 option1) {
+        this.option1 = option1;
+        return this;
+    }
+    @SpeakeasyMetadata("security:option=true")
+    public DrivePermissionsGetIdForEmailSecurityOption2 option2;
+    public DrivePermissionsGetIdForEmailSecurity withOption2(DrivePermissionsGetIdForEmailSecurityOption2 option2) {
+        this.option2 = option2;
+        return this;
+    }
+    @SpeakeasyMetadata("security:option=true")
+    public DrivePermissionsGetIdForEmailSecurityOption3 option3;
+    public DrivePermissionsGetIdForEmailSecurity withOption3(DrivePermissionsGetIdForEmailSecurityOption3 option3) {
+        this.option3 = option3;
+        return this;
+    }
+    @SpeakeasyMetadata("security:option=true")
+    public DrivePermissionsGetIdForEmailSecurityOption4 option4;
+    public DrivePermissionsGetIdForEmailSecurity withOption4(DrivePermissionsGetIdForEmailSecurityOption4 option4) {
+        this.option4 = option4;
+        return this;
+    }
+    @SpeakeasyMetadata("security:option=true")
+    public DrivePermissionsGetIdForEmailSecurityOption5 option5;
+    public DrivePermissionsGetIdForEmailSecurity withOption5(DrivePermissionsGetIdForEmailSecurityOption5 option5) {
+        this.option5 = option5;
+        return this;
+    }
+    @SpeakeasyMetadata("security:option=true")
+    public DrivePermissionsGetIdForEmailSecurityOption6 option6;
+    public DrivePermissionsGetIdForEmailSecurity withOption6(DrivePermissionsGetIdForEmailSecurityOption6 option6) {
+        this.option6 = option6;
+        return this;
+    }
+    @SpeakeasyMetadata("security:option=true")
+    public DrivePermissionsGetIdForEmailSecurityOption7 option7;
+    public DrivePermissionsGetIdForEmailSecurity withOption7(DrivePermissionsGetIdForEmailSecurityOption7 option7) {
+        this.option7 = option7;
+        return this;
+    }
+    @SpeakeasyMetadata("security:option=true")
+    public DrivePermissionsGetIdForEmailSecurityOption8 option8;
+    public DrivePermissionsGetIdForEmailSecurity withOption8(DrivePermissionsGetIdForEmailSecurityOption8 option8) {
+        this.option8 = option8;
+        return this;
+    }
+}

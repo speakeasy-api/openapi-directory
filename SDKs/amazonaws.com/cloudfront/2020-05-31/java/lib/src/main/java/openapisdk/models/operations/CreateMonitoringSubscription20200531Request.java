@@ -1,0 +1,22 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class CreateMonitoringSubscription20200531Request {
+    public CreateMonitoringSubscription20200531PathParams pathParams;
+    public CreateMonitoringSubscription20200531Request withPathParams(CreateMonitoringSubscription20200531PathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public CreateMonitoringSubscription20200531Headers headers;
+    public CreateMonitoringSubscription20200531Request withHeaders(CreateMonitoringSubscription20200531Headers headers) {
+        this.headers = headers;
+        return this;
+    }
+    @SpeakeasyMetadata("request:mediaType=text/xml")
+    public byte[] request;
+    public CreateMonitoringSubscription20200531Request withRequest(byte[] request) {
+        this.request = request;
+        return this;
+    }
+}

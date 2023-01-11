@@ -1,0 +1,24 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class MonitoringProjectsDashboardsCreateSecurity {
+    @SpeakeasyMetadata("security:option=true")
+    public MonitoringProjectsDashboardsCreateSecurityOption1 option1;
+    public MonitoringProjectsDashboardsCreateSecurity withOption1(MonitoringProjectsDashboardsCreateSecurityOption1 option1) {
+        this.option1 = option1;
+        return this;
+    }
+    @SpeakeasyMetadata("security:option=true")
+    public MonitoringProjectsDashboardsCreateSecurityOption2 option2;
+    public MonitoringProjectsDashboardsCreateSecurity withOption2(MonitoringProjectsDashboardsCreateSecurityOption2 option2) {
+        this.option2 = option2;
+        return this;
+    }
+    @SpeakeasyMetadata("security:option=true")
+    public MonitoringProjectsDashboardsCreateSecurityOption3 option3;
+    public MonitoringProjectsDashboardsCreateSecurity withOption3(MonitoringProjectsDashboardsCreateSecurityOption3 option3) {
+        this.option3 = option3;
+        return this;
+    }
+}

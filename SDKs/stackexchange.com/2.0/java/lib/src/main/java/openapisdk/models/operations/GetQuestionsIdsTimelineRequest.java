@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class GetQuestionsIdsTimelineRequest {
+    public GetQuestionsIdsTimelinePathParams pathParams;
+    public GetQuestionsIdsTimelineRequest withPathParams(GetQuestionsIdsTimelinePathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public GetQuestionsIdsTimelineQueryParams queryParams;
+    public GetQuestionsIdsTimelineRequest withQueryParams(GetQuestionsIdsTimelineQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+}

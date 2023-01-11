@@ -1,0 +1,26 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * AuthenticationMode
+ * Denotes the user's authentication properties, such as whether it requires a password to authenticate. Used in output responses.
+**/
+public class AuthenticationMode {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Passwords")
+    public String[] passwords;
+    public AuthenticationMode withPasswords(String[] passwords) {
+        this.passwords = passwords;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Type")
+    public InputAuthenticationTypeEnum type;
+    public AuthenticationMode withType(InputAuthenticationTypeEnum type) {
+        this.type = type;
+        return this;
+    }
+}

@@ -1,0 +1,30 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class GetCityQueryParams {
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=format")
+    public GetCityFormatEnum format;
+    public GetCityQueryParams withFormat(GetCityFormatEnum format) {
+        this.format = format;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public GetCityQueryParams withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lat")
+    public Double lat;
+    public GetCityQueryParams withLat(Double lat) {
+        this.lat = lat;
+        return this;
+    }
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lng")
+    public Double lng;
+    public GetCityQueryParams withLng(Double lng) {
+        this.lng = lng;
+        return this;
+    }
+}

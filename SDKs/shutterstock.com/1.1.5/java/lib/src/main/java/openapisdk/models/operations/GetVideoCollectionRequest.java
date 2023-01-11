@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class GetVideoCollectionRequest {
+    public GetVideoCollectionPathParams pathParams;
+    public GetVideoCollectionRequest withPathParams(GetVideoCollectionPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public GetVideoCollectionQueryParams queryParams;
+    public GetVideoCollectionRequest withQueryParams(GetVideoCollectionQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public GetVideoCollectionSecurity security;
+    public GetVideoCollectionRequest withSecurity(GetVideoCollectionSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

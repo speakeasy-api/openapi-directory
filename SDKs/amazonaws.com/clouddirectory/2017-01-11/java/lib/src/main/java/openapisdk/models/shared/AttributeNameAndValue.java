@@ -1,0 +1,22 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+/**
+ * AttributeNameAndValue
+ * Identifies the attribute name and value for a typed link.
+**/
+public class AttributeNameAndValue {
+    @JsonProperty("AttributeName")
+    public String attributeName;
+    public AttributeNameAndValue withAttributeName(String attributeName) {
+        this.attributeName = attributeName;
+        return this;
+    }
+    @JsonProperty("Value")
+    public TypedAttributeValue value;
+    public AttributeNameAndValue withValue(TypedAttributeValue value) {
+        this.value = value;
+        return this;
+    }
+}

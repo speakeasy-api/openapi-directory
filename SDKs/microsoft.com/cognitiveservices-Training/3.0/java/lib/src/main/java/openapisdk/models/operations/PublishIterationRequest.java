@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class PublishIterationRequest {
+    public PublishIterationPathParams pathParams;
+    public PublishIterationRequest withPathParams(PublishIterationPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public PublishIterationQueryParams queryParams;
+    public PublishIterationRequest withQueryParams(PublishIterationQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public PublishIterationHeaders headers;
+    public PublishIterationRequest withHeaders(PublishIterationHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+}

@@ -1,0 +1,338 @@
+package openapisdk.models.shared;
+
+import java.time.LocalDate;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class BaseF3PFiling {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("amended_by")
+    public Integer amendedBy;
+    public BaseF3PFiling withAmendedBy(Integer amendedBy) {
+        this.amendedBy = amendedBy;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("amendment")
+    public String amendment;
+    public BaseF3PFiling withAmendment(String amendment) {
+        this.amendment = amendment;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("amendment_chain")
+    public Integer[] amendmentChain;
+    public BaseF3PFiling withAmendmentChain(Integer[] amendmentChain) {
+        this.amendmentChain = amendmentChain;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("beginning_image_number")
+    public String beginningImageNumber;
+    public BaseF3PFiling withBeginningImageNumber(String beginningImageNumber) {
+        this.beginningImageNumber = beginningImageNumber;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("cash_on_hand_beginning_period")
+    public Float cashOnHandBeginningPeriod;
+    public BaseF3PFiling withCashOnHandBeginningPeriod(Float cashOnHandBeginningPeriod) {
+        this.cashOnHandBeginningPeriod = cashOnHandBeginningPeriod;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("cash_on_hand_end_period")
+    public Float cashOnHandEndPeriod;
+    public BaseF3PFiling withCashOnHandEndPeriod(Float cashOnHandEndPeriod) {
+        this.cashOnHandEndPeriod = cashOnHandEndPeriod;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("city")
+    public String city;
+    public BaseF3PFiling withCity(String city) {
+        this.city = city;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("committee_id")
+    public String committeeId;
+    public BaseF3PFiling withCommitteeId(String committeeId) {
+        this.committeeId = committeeId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("committee_name")
+    public String committeeName;
+    public BaseF3PFiling withCommitteeName(String committeeName) {
+        this.committeeName = committeeName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("coverage_end_date")
+    public LocalDate coverageEndDate;
+    public BaseF3PFiling withCoverageEndDate(LocalDate coverageEndDate) {
+        this.coverageEndDate = coverageEndDate;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("coverage_start_date")
+    public LocalDate coverageStartDate;
+    public BaseF3PFiling withCoverageStartDate(LocalDate coverageStartDate) {
+        this.coverageStartDate = coverageStartDate;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("csv_url")
+    public String csvUrl;
+    public BaseF3PFiling withCsvUrl(String csvUrl) {
+        this.csvUrl = csvUrl;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("debts_owed_by_committee")
+    public Float debtsOwedByCommittee;
+    public BaseF3PFiling withDebtsOwedByCommittee(Float debtsOwedByCommittee) {
+        this.debtsOwedByCommittee = debtsOwedByCommittee;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("debts_owed_to_committee")
+    public Float debtsOwedToCommittee;
+    public BaseF3PFiling withDebtsOwedToCommittee(Float debtsOwedToCommittee) {
+        this.debtsOwedToCommittee = debtsOwedToCommittee;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("document_description")
+    public String documentDescription;
+    public BaseF3PFiling withDocumentDescription(String documentDescription) {
+        this.documentDescription = documentDescription;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("election_date")
+    public LocalDate electionDate;
+    public BaseF3PFiling withElectionDate(LocalDate electionDate) {
+        this.electionDate = electionDate;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("election_state")
+    public String electionState;
+    public BaseF3PFiling withElectionState(String electionState) {
+        this.electionState = electionState;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("expenditure_subject_to_limits")
+    public Float expenditureSubjectToLimits;
+    public BaseF3PFiling withExpenditureSubjectToLimits(Float expenditureSubjectToLimits) {
+        this.expenditureSubjectToLimits = expenditureSubjectToLimits;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("fec_file_id")
+    public String fecFileId;
+    public BaseF3PFiling withFecFileId(String fecFileId) {
+        this.fecFileId = fecFileId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("fec_url")
+    public String fecUrl;
+    public BaseF3PFiling withFecUrl(String fecUrl) {
+        this.fecUrl = fecUrl;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("file_number")
+    public Integer fileNumber;
+    public BaseF3PFiling withFileNumber(Integer fileNumber) {
+        this.fileNumber = fileNumber;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("general_election")
+    public String generalElection;
+    public BaseF3PFiling withGeneralElection(String generalElection) {
+        this.generalElection = generalElection;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("is_amended")
+    public Boolean isAmended;
+    public BaseF3PFiling withIsAmended(Boolean isAmended) {
+        this.isAmended = isAmended;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("most_recent")
+    public Boolean mostRecent;
+    public BaseF3PFiling withMostRecent(Boolean mostRecent) {
+        this.mostRecent = mostRecent;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("most_recent_filing")
+    public Integer mostRecentFiling;
+    public BaseF3PFiling withMostRecentFiling(Integer mostRecentFiling) {
+        this.mostRecentFiling = mostRecentFiling;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("net_contributions_cycle_to_date")
+    public Float netContributionsCycleToDate;
+    public BaseF3PFiling withNetContributionsCycleToDate(Float netContributionsCycleToDate) {
+        this.netContributionsCycleToDate = netContributionsCycleToDate;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("net_operating_expenditures_cycle_to_date")
+    public Float netOperatingExpendituresCycleToDate;
+    public BaseF3PFiling withNetOperatingExpendituresCycleToDate(Float netOperatingExpendituresCycleToDate) {
+        this.netOperatingExpendituresCycleToDate = netOperatingExpendituresCycleToDate;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("pdf_url")
+    public String pdfUrl;
+    public BaseF3PFiling withPdfUrl(String pdfUrl) {
+        this.pdfUrl = pdfUrl;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("prefix")
+    public String prefix;
+    public BaseF3PFiling withPrefix(String prefix) {
+        this.prefix = prefix;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("primary_election")
+    public String primaryElection;
+    public BaseF3PFiling withPrimaryElection(String primaryElection) {
+        this.primaryElection = primaryElection;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("receipt_date")
+    public LocalDate receiptDate;
+    public BaseF3PFiling withReceiptDate(LocalDate receiptDate) {
+        this.receiptDate = receiptDate;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("report")
+    public String report;
+    public BaseF3PFiling withReport(String report) {
+        this.report = report;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("report_type")
+    public String reportType;
+    public BaseF3PFiling withReportType(String reportType) {
+        this.reportType = reportType;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("report_year")
+    public Integer reportYear;
+    public BaseF3PFiling withReportYear(Integer reportYear) {
+        this.reportYear = reportYear;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("rpt_pgi")
+    public String rptPgi;
+    public BaseF3PFiling withRptPgi(String rptPgi) {
+        this.rptPgi = rptPgi;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("sign_date")
+    public LocalDate signDate;
+    public BaseF3PFiling withSignDate(LocalDate signDate) {
+        this.signDate = signDate;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("state")
+    public String state;
+    public BaseF3PFiling withState(String state) {
+        this.state = state;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("street_1")
+    public String street1;
+    public BaseF3PFiling withStreet1(String street1) {
+        this.street1 = street1;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("street_2")
+    public String street2;
+    public BaseF3PFiling withStreet2(String street2) {
+        this.street2 = street2;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("subtotal_summary_period")
+    public String subtotalSummaryPeriod;
+    public BaseF3PFiling withSubtotalSummaryPeriod(String subtotalSummaryPeriod) {
+        this.subtotalSummaryPeriod = subtotalSummaryPeriod;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("suffix")
+    public String suffix;
+    public BaseF3PFiling withSuffix(String suffix) {
+        this.suffix = suffix;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("summary_lines")
+    public String summaryLines;
+    public BaseF3PFiling withSummaryLines(String summaryLines) {
+        this.summaryLines = summaryLines;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("treasurer_first_name")
+    public String treasurerFirstName;
+    public BaseF3PFiling withTreasurerFirstName(String treasurerFirstName) {
+        this.treasurerFirstName = treasurerFirstName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("treasurer_last_name")
+    public String treasurerLastName;
+    public BaseF3PFiling withTreasurerLastName(String treasurerLastName) {
+        this.treasurerLastName = treasurerLastName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("treasurer_middle_name")
+    public String treasurerMiddleName;
+    public BaseF3PFiling withTreasurerMiddleName(String treasurerMiddleName) {
+        this.treasurerMiddleName = treasurerMiddleName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("treasurer_name")
+    public String treasurerName;
+    public BaseF3PFiling withTreasurerName(String treasurerName) {
+        this.treasurerName = treasurerName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("zip")
+    public String zip;
+    public BaseF3PFiling withZip(String zip) {
+        this.zip = zip;
+        return this;
+    }
+}

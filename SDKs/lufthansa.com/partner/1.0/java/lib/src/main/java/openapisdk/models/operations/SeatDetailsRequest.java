@@ -1,0 +1,26 @@
+package openapisdk.models.operations;
+
+
+
+public class SeatDetailsRequest {
+    public SeatDetailsPathParams pathParams;
+    public SeatDetailsRequest withPathParams(SeatDetailsPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public SeatDetailsQueryParams queryParams;
+    public SeatDetailsRequest withQueryParams(SeatDetailsQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public SeatDetailsHeaders headers;
+    public SeatDetailsRequest withHeaders(SeatDetailsHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+    public SeatDetailsSecurity security;
+    public SeatDetailsRequest withSecurity(SeatDetailsSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

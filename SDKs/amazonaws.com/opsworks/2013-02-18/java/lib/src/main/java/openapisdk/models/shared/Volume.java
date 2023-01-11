@@ -1,0 +1,110 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * Volume
+ * Describes an instance's Amazon EBS volume.
+**/
+public class Volume {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("AvailabilityZone")
+    public String availabilityZone;
+    public Volume withAvailabilityZone(String availabilityZone) {
+        this.availabilityZone = availabilityZone;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Device")
+    public String device;
+    public Volume withDevice(String device) {
+        this.device = device;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Ec2VolumeId")
+    public String ec2VolumeId;
+    public Volume withEc2VolumeId(String ec2VolumeId) {
+        this.ec2VolumeId = ec2VolumeId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Encrypted")
+    public Boolean encrypted;
+    public Volume withEncrypted(Boolean encrypted) {
+        this.encrypted = encrypted;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("InstanceId")
+    public String instanceId;
+    public Volume withInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Iops")
+    public Long iops;
+    public Volume withIops(Long iops) {
+        this.iops = iops;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("MountPoint")
+    public String mountPoint;
+    public Volume withMountPoint(String mountPoint) {
+        this.mountPoint = mountPoint;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Name")
+    public String name;
+    public Volume withName(String name) {
+        this.name = name;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("RaidArrayId")
+    public String raidArrayId;
+    public Volume withRaidArrayId(String raidArrayId) {
+        this.raidArrayId = raidArrayId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Region")
+    public String region;
+    public Volume withRegion(String region) {
+        this.region = region;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Size")
+    public Long size;
+    public Volume withSize(Long size) {
+        this.size = size;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Status")
+    public String status;
+    public Volume withStatus(String status) {
+        this.status = status;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("VolumeId")
+    public String volumeId;
+    public Volume withVolumeId(String volumeId) {
+        this.volumeId = volumeId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("VolumeType")
+    public String volumeType;
+    public Volume withVolumeType(String volumeType) {
+        this.volumeType = volumeType;
+        return this;
+    }
+}

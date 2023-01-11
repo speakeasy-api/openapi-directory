@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class DeleteCrmV3ExtensionsCardsAppIdCardIdArchiveRequest {
+    public DeleteCrmV3ExtensionsCardsAppIdCardIdArchivePathParams pathParams;
+    public DeleteCrmV3ExtensionsCardsAppIdCardIdArchiveRequest withPathParams(DeleteCrmV3ExtensionsCardsAppIdCardIdArchivePathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public DeleteCrmV3ExtensionsCardsAppIdCardIdArchiveSecurity security;
+    public DeleteCrmV3ExtensionsCardsAppIdCardIdArchiveRequest withSecurity(DeleteCrmV3ExtensionsCardsAppIdCardIdArchiveSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

@@ -1,0 +1,11 @@
+package openapisdk.models.operations;
+
+
+
+public class DeleteOrganizationSamlRoleRequest {
+    public DeleteOrganizationSamlRolePathParams pathParams;
+    public DeleteOrganizationSamlRoleRequest withPathParams(DeleteOrganizationSamlRolePathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+}

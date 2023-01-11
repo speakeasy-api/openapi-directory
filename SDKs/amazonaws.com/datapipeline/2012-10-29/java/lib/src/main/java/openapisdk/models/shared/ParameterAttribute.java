@@ -1,0 +1,22 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+/**
+ * ParameterAttribute
+ * The attributes allowed or specified with a parameter object.
+**/
+public class ParameterAttribute {
+    @JsonProperty("key")
+    public String key;
+    public ParameterAttribute withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    @JsonProperty("stringValue")
+    public String stringValue;
+    public ParameterAttribute withStringValue(String stringValue) {
+        this.stringValue = stringValue;
+        return this;
+    }
+}

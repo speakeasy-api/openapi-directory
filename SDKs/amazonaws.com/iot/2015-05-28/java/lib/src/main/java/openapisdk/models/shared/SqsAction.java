@@ -1,0 +1,31 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * SqsAction
+ * Describes an action to publish data to an Amazon SQS queue.
+**/
+public class SqsAction {
+    @JsonProperty("queueUrl")
+    public String queueUrl;
+    public SqsAction withQueueUrl(String queueUrl) {
+        this.queueUrl = queueUrl;
+        return this;
+    }
+    @JsonProperty("roleArn")
+    public String roleArn;
+    public SqsAction withRoleArn(String roleArn) {
+        this.roleArn = roleArn;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("useBase64")
+    public Boolean useBase64;
+    public SqsAction withUseBase64(Boolean useBase64) {
+        this.useBase64 = useBase64;
+        return this;
+    }
+}

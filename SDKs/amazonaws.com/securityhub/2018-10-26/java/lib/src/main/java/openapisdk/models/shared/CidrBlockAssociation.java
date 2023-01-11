@@ -1,0 +1,33 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * CidrBlockAssociation
+ * An IPv4 CIDR block association.
+**/
+public class CidrBlockAssociation {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("AssociationId")
+    public String associationId;
+    public CidrBlockAssociation withAssociationId(String associationId) {
+        this.associationId = associationId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("CidrBlock")
+    public String cidrBlock;
+    public CidrBlockAssociation withCidrBlock(String cidrBlock) {
+        this.cidrBlock = cidrBlock;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("CidrBlockState")
+    public String cidrBlockState;
+    public CidrBlockAssociation withCidrBlockState(String cidrBlockState) {
+        this.cidrBlockState = cidrBlockState;
+        return this;
+    }
+}

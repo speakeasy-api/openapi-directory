@@ -1,0 +1,224 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class ContactInput {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("active")
+    public Boolean active;
+    public ContactInput withActive(Boolean active) {
+        this.active = active;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("addresses")
+    public Address[] addresses;
+    public ContactInput withAddresses(Address[] addresses) {
+        this.addresses = addresses;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("birthday")
+    public String birthday;
+    public ContactInput withBirthday(String birthday) {
+        this.birthday = birthday;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("company_id")
+    public String companyId;
+    public ContactInput withCompanyId(String companyId) {
+        this.companyId = companyId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("company_name")
+    public String companyName;
+    public ContactInput withCompanyName(String companyName) {
+        this.companyName = companyName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("current_balance")
+    public Double currentBalance;
+    public ContactInput withCurrentBalance(Double currentBalance) {
+        this.currentBalance = currentBalance;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("custom_fields")
+    public CustomField[] customFields;
+    public ContactInput withCustomFields(CustomField[] customFields) {
+        this.customFields = customFields;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("department")
+    public String department;
+    public ContactInput withDepartment(String department) {
+        this.department = department;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("description")
+    public String description;
+    public ContactInput withDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("emails")
+    public Email[] emails;
+    public ContactInput withEmails(Email[] emails) {
+        this.emails = emails;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("fax")
+    public String fax;
+    public ContactInput withFax(String fax) {
+        this.fax = fax;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("first_name")
+    public String firstName;
+    public ContactInput withFirstName(String firstName) {
+        this.firstName = firstName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("gender")
+    public ContactGenderEnum gender;
+    public ContactInput withGender(ContactGenderEnum gender) {
+        this.gender = gender;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("image")
+    public String image;
+    public ContactInput withImage(String image) {
+        this.image = image;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("language")
+    public String language;
+    public ContactInput withLanguage(String language) {
+        this.language = language;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("last_name")
+    public String lastName;
+    public ContactInput withLastName(String lastName) {
+        this.lastName = lastName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("lead_id")
+    public String leadId;
+    public ContactInput withLeadId(String leadId) {
+        this.leadId = leadId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("lead_source")
+    public String leadSource;
+    public ContactInput withLeadSource(String leadSource) {
+        this.leadSource = leadSource;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("middle_name")
+    public String middleName;
+    public ContactInput withMiddleName(String middleName) {
+        this.middleName = middleName;
+        return this;
+    }
+    @JsonProperty("name")
+    public String name;
+    public ContactInput withName(String name) {
+        this.name = name;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("owner_id")
+    public String ownerId;
+    public ContactInput withOwnerId(String ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("phone_numbers")
+    public PhoneNumber[] phoneNumbers;
+    public ContactInput withPhoneNumbers(PhoneNumber[] phoneNumbers) {
+        this.phoneNumbers = phoneNumbers;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("photo_url")
+    public String photoUrl;
+    public ContactInput withPhotoUrl(String photoUrl) {
+        this.photoUrl = photoUrl;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("prefix")
+    public String prefix;
+    public ContactInput withPrefix(String prefix) {
+        this.prefix = prefix;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("social_links")
+    public SocialLink[] socialLinks;
+    public ContactInput withSocialLinks(SocialLink[] socialLinks) {
+        this.socialLinks = socialLinks;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("status")
+    public String status;
+    public ContactInput withStatus(String status) {
+        this.status = status;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("suffix")
+    public String suffix;
+    public ContactInput withSuffix(String suffix) {
+        this.suffix = suffix;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("tags")
+    public String[] tags;
+    public ContactInput withTags(String[] tags) {
+        this.tags = tags;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("title")
+    public String title;
+    public ContactInput withTitle(String title) {
+        this.title = title;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("type")
+    public ContactTypeEnum type;
+    public ContactInput withType(ContactTypeEnum type) {
+        this.type = type;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("websites")
+    public Website[] websites;
+    public ContactInput withWebsites(Website[] websites) {
+        this.websites = websites;
+        return this;
+    }
+}

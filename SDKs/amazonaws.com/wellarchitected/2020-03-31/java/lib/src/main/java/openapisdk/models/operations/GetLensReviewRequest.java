@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class GetLensReviewRequest {
+    public GetLensReviewPathParams pathParams;
+    public GetLensReviewRequest withPathParams(GetLensReviewPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public GetLensReviewQueryParams queryParams;
+    public GetLensReviewRequest withQueryParams(GetLensReviewQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public GetLensReviewHeaders headers;
+    public GetLensReviewRequest withHeaders(GetLensReviewHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+}

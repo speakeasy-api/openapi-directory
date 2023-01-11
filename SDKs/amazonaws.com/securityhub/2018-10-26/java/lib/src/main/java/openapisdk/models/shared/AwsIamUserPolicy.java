@@ -1,0 +1,19 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * AwsIamUserPolicy
+ * Information about an inline policy that is embedded in the user.
+**/
+public class AwsIamUserPolicy {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("PolicyName")
+    public String policyName;
+    public AwsIamUserPolicy withPolicyName(String policyName) {
+        this.policyName = policyName;
+        return this;
+    }
+}

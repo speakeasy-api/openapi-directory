@@ -1,0 +1,36 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class SubaccountResponseEtatEtat {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("code")
+    public String code;
+    public SubaccountResponseEtatEtat withCode(String code) {
+        this.code = code;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("message")
+    public String message;
+    public SubaccountResponseEtatEtat withMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("subAccountId")
+    public String subAccountId;
+    public SubaccountResponseEtatEtat withSubAccountId(String subAccountId) {
+        this.subAccountId = subAccountId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("subAccountKeyid")
+    public String subAccountKeyid;
+    public SubaccountResponseEtatEtat withSubAccountKeyid(String subAccountKeyid) {
+        this.subAccountKeyid = subAccountKeyid;
+        return this;
+    }
+}

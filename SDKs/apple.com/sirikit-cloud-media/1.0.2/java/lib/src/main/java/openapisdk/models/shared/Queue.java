@@ -1,0 +1,82 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class Queue {
+    @JsonProperty("content")
+    public Content[] content;
+    public Queue withContent(Content[] content) {
+        this.content = content;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("contentItemsCount")
+    public Long contentItemsCount;
+    public Queue withContentItemsCount(Long contentItemsCount) {
+        this.contentItemsCount = contentItemsCount;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("controls")
+    public java.util.Map<String, PlayMediaControl> controls;
+    public Queue withControls(java.util.Map<String, PlayMediaControl> controls) {
+        this.controls = controls;
+        return this;
+    }
+    @JsonProperty("identifier")
+    public String identifier;
+    public Queue withIdentifier(String identifier) {
+        this.identifier = identifier;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("insertPointer")
+    public Object insertPointer;
+    public Queue withInsertPointer(Object insertPointer) {
+        this.insertPointer = insertPointer;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("nextContentUrl")
+    public String nextContentUrl;
+    public Queue withNextContentUrl(String nextContentUrl) {
+        this.nextContentUrl = nextContentUrl;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("playPointer")
+    public QueuePlayPointer playPointer;
+    public Queue withPlayPointer(QueuePlayPointer playPointer) {
+        this.playPointer = playPointer;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("prerollSeconds")
+    public Double prerollSeconds;
+    public Queue withPrerollSeconds(Double prerollSeconds) {
+        this.prerollSeconds = prerollSeconds;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("previousContentUrl")
+    public String previousContentUrl;
+    public Queue withPreviousContentUrl(String previousContentUrl) {
+        this.previousContentUrl = previousContentUrl;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("skipsRemaining")
+    public Long skipsRemaining;
+    public Queue withSkipsRemaining(Long skipsRemaining) {
+        this.skipsRemaining = skipsRemaining;
+        return this;
+    }
+    @JsonProperty("version")
+    public String version;
+    public Queue withVersion(String version) {
+        this.version = version;
+        return this;
+    }
+}

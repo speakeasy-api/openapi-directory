@@ -1,0 +1,47 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * ThingGroupDocument
+ * The thing group search index document.
+**/
+public class ThingGroupDocument {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("attributes")
+    public java.util.Map<String, String> attributes;
+    public ThingGroupDocument withAttributes(java.util.Map<String, String> attributes) {
+        this.attributes = attributes;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("parentGroupNames")
+    public String[] parentGroupNames;
+    public ThingGroupDocument withParentGroupNames(String[] parentGroupNames) {
+        this.parentGroupNames = parentGroupNames;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("thingGroupDescription")
+    public String thingGroupDescription;
+    public ThingGroupDocument withThingGroupDescription(String thingGroupDescription) {
+        this.thingGroupDescription = thingGroupDescription;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("thingGroupId")
+    public String thingGroupId;
+    public ThingGroupDocument withThingGroupId(String thingGroupId) {
+        this.thingGroupId = thingGroupId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("thingGroupName")
+    public String thingGroupName;
+    public ThingGroupDocument withThingGroupName(String thingGroupName) {
+        this.thingGroupName = thingGroupName;
+        return this;
+    }
+}

@@ -1,0 +1,49 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class UpdateApiDestinationRequest {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ConnectionArn")
+    public String connectionArn;
+    public UpdateApiDestinationRequest withConnectionArn(String connectionArn) {
+        this.connectionArn = connectionArn;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Description")
+    public String description;
+    public UpdateApiDestinationRequest withDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("HttpMethod")
+    public ApiDestinationHttpMethodEnum httpMethod;
+    public UpdateApiDestinationRequest withHttpMethod(ApiDestinationHttpMethodEnum httpMethod) {
+        this.httpMethod = httpMethod;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("InvocationEndpoint")
+    public String invocationEndpoint;
+    public UpdateApiDestinationRequest withInvocationEndpoint(String invocationEndpoint) {
+        this.invocationEndpoint = invocationEndpoint;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("InvocationRateLimitPerSecond")
+    public Long invocationRateLimitPerSecond;
+    public UpdateApiDestinationRequest withInvocationRateLimitPerSecond(Long invocationRateLimitPerSecond) {
+        this.invocationRateLimitPerSecond = invocationRateLimitPerSecond;
+        return this;
+    }
+    @JsonProperty("Name")
+    public String name;
+    public UpdateApiDestinationRequest withName(String name) {
+        this.name = name;
+        return this;
+    }
+}

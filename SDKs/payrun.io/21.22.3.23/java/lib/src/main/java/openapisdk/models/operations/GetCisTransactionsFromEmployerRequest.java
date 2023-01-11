@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class GetCisTransactionsFromEmployerRequest {
+    public GetCisTransactionsFromEmployerPathParams pathParams;
+    public GetCisTransactionsFromEmployerRequest withPathParams(GetCisTransactionsFromEmployerPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public GetCisTransactionsFromEmployerHeaders headers;
+    public GetCisTransactionsFromEmployerRequest withHeaders(GetCisTransactionsFromEmployerHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+}

@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class GetP60ReportOutputRequest {
+    public GetP60ReportOutputQueryParams queryParams;
+    public GetP60ReportOutputRequest withQueryParams(GetP60ReportOutputQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public GetP60ReportOutputHeaders headers;
+    public GetP60ReportOutputRequest withHeaders(GetP60ReportOutputHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+}

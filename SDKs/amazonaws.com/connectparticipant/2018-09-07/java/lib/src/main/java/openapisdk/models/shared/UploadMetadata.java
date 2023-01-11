@@ -1,0 +1,33 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * UploadMetadata
+ * Fields to be used while uploading the attachment.
+**/
+public class UploadMetadata {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("HeadersToInclude")
+    public java.util.Map<String, String> headersToInclude;
+    public UploadMetadata withHeadersToInclude(java.util.Map<String, String> headersToInclude) {
+        this.headersToInclude = headersToInclude;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Url")
+    public String url;
+    public UploadMetadata withUrl(String url) {
+        this.url = url;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("UrlExpiry")
+    public String urlExpiry;
+    public UploadMetadata withUrlExpiry(String urlExpiry) {
+        this.urlExpiry = urlExpiry;
+        return this;
+    }
+}

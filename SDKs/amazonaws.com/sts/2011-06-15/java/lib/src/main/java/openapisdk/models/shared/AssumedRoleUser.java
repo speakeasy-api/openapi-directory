@@ -1,0 +1,20 @@
+package openapisdk.models.shared;
+
+
+
+/**
+ * AssumedRoleUser
+ * The identifiers for the temporary security credentials that the operation returns.
+**/
+public class AssumedRoleUser {
+    public String arn;
+    public AssumedRoleUser withArn(String arn) {
+        this.arn = arn;
+        return this;
+    }
+    public String assumedRoleId;
+    public AssumedRoleUser withAssumedRoleId(String assumedRoleId) {
+        this.assumedRoleId = assumedRoleId;
+        return this;
+    }
+}

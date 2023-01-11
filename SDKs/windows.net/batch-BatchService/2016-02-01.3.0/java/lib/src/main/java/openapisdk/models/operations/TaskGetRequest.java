@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class TaskGetRequest {
+    public TaskGetPathParams pathParams;
+    public TaskGetRequest withPathParams(TaskGetPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public TaskGetQueryParams queryParams;
+    public TaskGetRequest withQueryParams(TaskGetQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public TaskGetHeaders headers;
+    public TaskGetRequest withHeaders(TaskGetHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+}

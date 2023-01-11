@@ -1,0 +1,53 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * ListedUser
+ * Returns properties of the user that you specify.
+**/
+public class ListedUser {
+    @JsonProperty("Arn")
+    public String arn;
+    public ListedUser withArn(String arn) {
+        this.arn = arn;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("HomeDirectory")
+    public String homeDirectory;
+    public ListedUser withHomeDirectory(String homeDirectory) {
+        this.homeDirectory = homeDirectory;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("HomeDirectoryType")
+    public HomeDirectoryTypeEnum homeDirectoryType;
+    public ListedUser withHomeDirectoryType(HomeDirectoryTypeEnum homeDirectoryType) {
+        this.homeDirectoryType = homeDirectoryType;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Role")
+    public String role;
+    public ListedUser withRole(String role) {
+        this.role = role;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("SshPublicKeyCount")
+    public Long sshPublicKeyCount;
+    public ListedUser withSshPublicKeyCount(Long sshPublicKeyCount) {
+        this.sshPublicKeyCount = sshPublicKeyCount;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("UserName")
+    public String userName;
+    public ListedUser withUserName(String userName) {
+        this.userName = userName;
+        return this;
+    }
+}

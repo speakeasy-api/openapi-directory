@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class ServiceRequest {
+    public ServicePathParams pathParams;
+    public ServiceRequest withPathParams(ServicePathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public ServiceSecurity security;
+    public ServiceRequest withSecurity(ServiceSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

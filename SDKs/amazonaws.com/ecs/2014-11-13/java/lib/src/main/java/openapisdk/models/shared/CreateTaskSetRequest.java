@@ -1,0 +1,96 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class CreateTaskSetRequest {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("capacityProviderStrategy")
+    public CapacityProviderStrategyItem[] capacityProviderStrategy;
+    public CreateTaskSetRequest withCapacityProviderStrategy(CapacityProviderStrategyItem[] capacityProviderStrategy) {
+        this.capacityProviderStrategy = capacityProviderStrategy;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("clientToken")
+    public String clientToken;
+    public CreateTaskSetRequest withClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    @JsonProperty("cluster")
+    public String cluster;
+    public CreateTaskSetRequest withCluster(String cluster) {
+        this.cluster = cluster;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("externalId")
+    public String externalId;
+    public CreateTaskSetRequest withExternalId(String externalId) {
+        this.externalId = externalId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("launchType")
+    public LaunchTypeEnum launchType;
+    public CreateTaskSetRequest withLaunchType(LaunchTypeEnum launchType) {
+        this.launchType = launchType;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("loadBalancers")
+    public LoadBalancer[] loadBalancers;
+    public CreateTaskSetRequest withLoadBalancers(LoadBalancer[] loadBalancers) {
+        this.loadBalancers = loadBalancers;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("networkConfiguration")
+    public NetworkConfiguration networkConfiguration;
+    public CreateTaskSetRequest withNetworkConfiguration(NetworkConfiguration networkConfiguration) {
+        this.networkConfiguration = networkConfiguration;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("platformVersion")
+    public String platformVersion;
+    public CreateTaskSetRequest withPlatformVersion(String platformVersion) {
+        this.platformVersion = platformVersion;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("scale")
+    public Scale scale;
+    public CreateTaskSetRequest withScale(Scale scale) {
+        this.scale = scale;
+        return this;
+    }
+    @JsonProperty("service")
+    public String service;
+    public CreateTaskSetRequest withService(String service) {
+        this.service = service;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("serviceRegistries")
+    public ServiceRegistry[] serviceRegistries;
+    public CreateTaskSetRequest withServiceRegistries(ServiceRegistry[] serviceRegistries) {
+        this.serviceRegistries = serviceRegistries;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("tags")
+    public Tag[] tags;
+    public CreateTaskSetRequest withTags(Tag[] tags) {
+        this.tags = tags;
+        return this;
+    }
+    @JsonProperty("taskDefinition")
+    public String taskDefinition;
+    public CreateTaskSetRequest withTaskDefinition(String taskDefinition) {
+        this.taskDefinition = taskDefinition;
+        return this;
+    }
+}

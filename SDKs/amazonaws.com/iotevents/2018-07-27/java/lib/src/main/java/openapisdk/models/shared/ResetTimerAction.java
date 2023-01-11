@@ -1,0 +1,16 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+/**
+ * ResetTimerAction
+ * Information required to reset the timer. The timer is reset to the previously evaluated result of the duration. The duration expression isn't reevaluated when you reset the timer.
+**/
+public class ResetTimerAction {
+    @JsonProperty("timerName")
+    public String timerName;
+    public ResetTimerAction withTimerName(String timerName) {
+        this.timerName = timerName;
+        return this;
+    }
+}

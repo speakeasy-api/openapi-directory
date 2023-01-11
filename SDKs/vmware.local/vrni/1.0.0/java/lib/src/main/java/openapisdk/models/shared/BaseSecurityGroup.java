@@ -1,0 +1,99 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class BaseSecurityGroup {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("direct_destination_rules")
+    public RuleSet[] directDestinationRules;
+    public BaseSecurityGroup withDirectDestinationRules(RuleSet[] directDestinationRules) {
+        this.directDestinationRules = directDestinationRules;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("direct_members")
+    public Reference[] directMembers;
+    public BaseSecurityGroup withDirectMembers(Reference[] directMembers) {
+        this.directMembers = directMembers;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("direct_source_rules")
+    public RuleSet[] directSourceRules;
+    public BaseSecurityGroup withDirectSourceRules(RuleSet[] directSourceRules) {
+        this.directSourceRules = directSourceRules;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("entity_id")
+    public String entityId;
+    public BaseSecurityGroup withEntityId(String entityId) {
+        this.entityId = entityId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("entity_type")
+    public EntityTypeEnum entityType;
+    public BaseSecurityGroup withEntityType(EntityTypeEnum entityType) {
+        this.entityType = entityType;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("excluded_members")
+    public Reference[] excludedMembers;
+    public BaseSecurityGroup withExcludedMembers(Reference[] excludedMembers) {
+        this.excludedMembers = excludedMembers;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("indirect_destination_rules")
+    public RuleSet[] indirectDestinationRules;
+    public BaseSecurityGroup withIndirectDestinationRules(RuleSet[] indirectDestinationRules) {
+        this.indirectDestinationRules = indirectDestinationRules;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("indirect_source_rules")
+    public RuleSet[] indirectSourceRules;
+    public BaseSecurityGroup withIndirectSourceRules(RuleSet[] indirectSourceRules) {
+        this.indirectSourceRules = indirectSourceRules;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("members")
+    public Reference[] members;
+    public BaseSecurityGroup withMembers(Reference[] members) {
+        this.members = members;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("name")
+    public String name;
+    public BaseSecurityGroup withName(String name) {
+        this.name = name;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("parents")
+    public Reference[] parents;
+    public BaseSecurityGroup withParents(Reference[] parents) {
+        this.parents = parents;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("translated_vm_count")
+    public Long translatedVmCount;
+    public BaseSecurityGroup withTranslatedVmCount(Long translatedVmCount) {
+        this.translatedVmCount = translatedVmCount;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("vendor_id")
+    public String vendorId;
+    public BaseSecurityGroup withVendorId(String vendorId) {
+        this.vendorId = vendorId;
+        return this;
+    }
+}

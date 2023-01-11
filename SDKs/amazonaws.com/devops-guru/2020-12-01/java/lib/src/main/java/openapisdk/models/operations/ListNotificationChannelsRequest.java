@@ -1,0 +1,22 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class ListNotificationChannelsRequest {
+    public ListNotificationChannelsQueryParams queryParams;
+    public ListNotificationChannelsRequest withQueryParams(ListNotificationChannelsQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public ListNotificationChannelsHeaders headers;
+    public ListNotificationChannelsRequest withHeaders(ListNotificationChannelsHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public ListNotificationChannelsRequestBody request;
+    public ListNotificationChannelsRequest withRequest(ListNotificationChannelsRequestBody request) {
+        this.request = request;
+        return this;
+    }
+}

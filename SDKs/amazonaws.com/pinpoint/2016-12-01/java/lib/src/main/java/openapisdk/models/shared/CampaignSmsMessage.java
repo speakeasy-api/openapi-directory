@@ -1,0 +1,54 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * CampaignSmsMessage
+ * Specifies the content and settings for an SMS message that's sent to recipients of a campaign.
+**/
+public class CampaignSmsMessage {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Body")
+    public String body;
+    public CampaignSmsMessage withBody(String body) {
+        this.body = body;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("EntityId")
+    public String entityId;
+    public CampaignSmsMessage withEntityId(String entityId) {
+        this.entityId = entityId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("MessageType")
+    public MessageTypeEnum messageType;
+    public CampaignSmsMessage withMessageType(MessageTypeEnum messageType) {
+        this.messageType = messageType;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("OriginationNumber")
+    public String originationNumber;
+    public CampaignSmsMessage withOriginationNumber(String originationNumber) {
+        this.originationNumber = originationNumber;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("SenderId")
+    public String senderId;
+    public CampaignSmsMessage withSenderId(String senderId) {
+        this.senderId = senderId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("TemplateId")
+    public String templateId;
+    public CampaignSmsMessage withTemplateId(String templateId) {
+        this.templateId = templateId;
+        return this;
+    }
+}

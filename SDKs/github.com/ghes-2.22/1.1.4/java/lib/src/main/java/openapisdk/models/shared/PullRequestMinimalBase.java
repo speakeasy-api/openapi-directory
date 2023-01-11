@@ -1,0 +1,24 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+public class PullRequestMinimalBase {
+    @JsonProperty("ref")
+    public String ref;
+    public PullRequestMinimalBase withRef(String ref) {
+        this.ref = ref;
+        return this;
+    }
+    @JsonProperty("repo")
+    public PullRequestMinimalBaseRepo repo;
+    public PullRequestMinimalBase withRepo(PullRequestMinimalBaseRepo repo) {
+        this.repo = repo;
+        return this;
+    }
+    @JsonProperty("sha")
+    public String sha;
+    public PullRequestMinimalBase withSha(String sha) {
+        this.sha = sha;
+        return this;
+    }
+}

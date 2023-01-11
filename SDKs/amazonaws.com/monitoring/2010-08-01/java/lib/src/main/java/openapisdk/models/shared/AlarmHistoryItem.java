@@ -1,0 +1,40 @@
+package openapisdk.models.shared;
+
+import java.time.OffsetDateTime;
+
+/**
+ * AlarmHistoryItem
+ * Represents the history of a specific alarm.
+**/
+public class AlarmHistoryItem {
+    public String alarmName;
+    public AlarmHistoryItem withAlarmName(String alarmName) {
+        this.alarmName = alarmName;
+        return this;
+    }
+    public AlarmTypeEnum alarmType;
+    public AlarmHistoryItem withAlarmType(AlarmTypeEnum alarmType) {
+        this.alarmType = alarmType;
+        return this;
+    }
+    public String historyData;
+    public AlarmHistoryItem withHistoryData(String historyData) {
+        this.historyData = historyData;
+        return this;
+    }
+    public HistoryItemTypeEnum historyItemType;
+    public AlarmHistoryItem withHistoryItemType(HistoryItemTypeEnum historyItemType) {
+        this.historyItemType = historyItemType;
+        return this;
+    }
+    public String historySummary;
+    public AlarmHistoryItem withHistorySummary(String historySummary) {
+        this.historySummary = historySummary;
+        return this;
+    }
+    public OffsetDateTime timestamp;
+    public AlarmHistoryItem withTimestamp(OffsetDateTime timestamp) {
+        this.timestamp = timestamp;
+        return this;
+    }
+}

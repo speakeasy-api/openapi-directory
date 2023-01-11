@@ -1,0 +1,40 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * EcsCluster
+ * Describes a registered Amazon ECS cluster.
+**/
+public class EcsCluster {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("EcsClusterArn")
+    public String ecsClusterArn;
+    public EcsCluster withEcsClusterArn(String ecsClusterArn) {
+        this.ecsClusterArn = ecsClusterArn;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("EcsClusterName")
+    public String ecsClusterName;
+    public EcsCluster withEcsClusterName(String ecsClusterName) {
+        this.ecsClusterName = ecsClusterName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("RegisteredAt")
+    public String registeredAt;
+    public EcsCluster withRegisteredAt(String registeredAt) {
+        this.registeredAt = registeredAt;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("StackId")
+    public String stackId;
+    public EcsCluster withStackId(String stackId) {
+        this.stackId = stackId;
+        return this;
+    }
+}

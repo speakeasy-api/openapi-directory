@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class GetGenePathwayAssociationsRequest {
+    public GetGenePathwayAssociationsPathParams pathParams;
+    public GetGenePathwayAssociationsRequest withPathParams(GetGenePathwayAssociationsPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public GetGenePathwayAssociationsQueryParams queryParams;
+    public GetGenePathwayAssociationsRequest withQueryParams(GetGenePathwayAssociationsQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+}

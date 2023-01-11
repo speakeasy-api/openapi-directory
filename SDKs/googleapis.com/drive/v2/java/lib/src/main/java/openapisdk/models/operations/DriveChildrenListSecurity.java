@@ -1,0 +1,48 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class DriveChildrenListSecurity {
+    @SpeakeasyMetadata("security:option=true")
+    public DriveChildrenListSecurityOption1 option1;
+    public DriveChildrenListSecurity withOption1(DriveChildrenListSecurityOption1 option1) {
+        this.option1 = option1;
+        return this;
+    }
+    @SpeakeasyMetadata("security:option=true")
+    public DriveChildrenListSecurityOption2 option2;
+    public DriveChildrenListSecurity withOption2(DriveChildrenListSecurityOption2 option2) {
+        this.option2 = option2;
+        return this;
+    }
+    @SpeakeasyMetadata("security:option=true")
+    public DriveChildrenListSecurityOption3 option3;
+    public DriveChildrenListSecurity withOption3(DriveChildrenListSecurityOption3 option3) {
+        this.option3 = option3;
+        return this;
+    }
+    @SpeakeasyMetadata("security:option=true")
+    public DriveChildrenListSecurityOption4 option4;
+    public DriveChildrenListSecurity withOption4(DriveChildrenListSecurityOption4 option4) {
+        this.option4 = option4;
+        return this;
+    }
+    @SpeakeasyMetadata("security:option=true")
+    public DriveChildrenListSecurityOption5 option5;
+    public DriveChildrenListSecurity withOption5(DriveChildrenListSecurityOption5 option5) {
+        this.option5 = option5;
+        return this;
+    }
+    @SpeakeasyMetadata("security:option=true")
+    public DriveChildrenListSecurityOption6 option6;
+    public DriveChildrenListSecurity withOption6(DriveChildrenListSecurityOption6 option6) {
+        this.option6 = option6;
+        return this;
+    }
+    @SpeakeasyMetadata("security:option=true")
+    public DriveChildrenListSecurityOption7 option7;
+    public DriveChildrenListSecurity withOption7(DriveChildrenListSecurityOption7 option7) {
+        this.option7 = option7;
+        return this;
+    }
+}

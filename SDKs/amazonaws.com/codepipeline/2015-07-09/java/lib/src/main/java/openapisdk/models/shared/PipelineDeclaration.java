@@ -1,0 +1,51 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * PipelineDeclaration
+ * Represents the structure of actions and stages to be performed in the pipeline.
+**/
+public class PipelineDeclaration {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("artifactStore")
+    public ArtifactStore artifactStore;
+    public PipelineDeclaration withArtifactStore(ArtifactStore artifactStore) {
+        this.artifactStore = artifactStore;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("artifactStores")
+    public java.util.Map<String, ArtifactStore> artifactStores;
+    public PipelineDeclaration withArtifactStores(java.util.Map<String, ArtifactStore> artifactStores) {
+        this.artifactStores = artifactStores;
+        return this;
+    }
+    @JsonProperty("name")
+    public String name;
+    public PipelineDeclaration withName(String name) {
+        this.name = name;
+        return this;
+    }
+    @JsonProperty("roleArn")
+    public String roleArn;
+    public PipelineDeclaration withRoleArn(String roleArn) {
+        this.roleArn = roleArn;
+        return this;
+    }
+    @JsonProperty("stages")
+    public StageDeclaration[] stages;
+    public PipelineDeclaration withStages(StageDeclaration[] stages) {
+        this.stages = stages;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("version")
+    public Long version;
+    public PipelineDeclaration withVersion(Long version) {
+        this.version = version;
+        return this;
+    }
+}

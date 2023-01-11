@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class GetNominalCodeFromEmployerRequest {
+    public GetNominalCodeFromEmployerPathParams pathParams;
+    public GetNominalCodeFromEmployerRequest withPathParams(GetNominalCodeFromEmployerPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public GetNominalCodeFromEmployerHeaders headers;
+    public GetNominalCodeFromEmployerRequest withHeaders(GetNominalCodeFromEmployerHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+}

@@ -1,0 +1,19 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * LifeCycleLastTestReverted
+ * Lifecycle last Test reverted.
+**/
+public class LifeCycleLastTestReverted {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("apiCallDateTime")
+    public String apiCallDateTime;
+    public LifeCycleLastTestReverted withApiCallDateTime(String apiCallDateTime) {
+        this.apiCallDateTime = apiCallDateTime;
+        return this;
+    }
+}

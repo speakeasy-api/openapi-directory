@@ -1,0 +1,17 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class StartHumanLoopRequest {
+    public StartHumanLoopHeaders headers;
+    public StartHumanLoopRequest withHeaders(StartHumanLoopHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public StartHumanLoopRequestBody request;
+    public StartHumanLoopRequest withRequest(StartHumanLoopRequestBody request) {
+        this.request = request;
+        return this;
+    }
+}

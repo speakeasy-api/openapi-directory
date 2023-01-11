@@ -1,0 +1,18 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class StorageBucketAccessControlsUpdateSecurity {
+    @SpeakeasyMetadata("security:option=true")
+    public StorageBucketAccessControlsUpdateSecurityOption1 option1;
+    public StorageBucketAccessControlsUpdateSecurity withOption1(StorageBucketAccessControlsUpdateSecurityOption1 option1) {
+        this.option1 = option1;
+        return this;
+    }
+    @SpeakeasyMetadata("security:option=true")
+    public StorageBucketAccessControlsUpdateSecurityOption2 option2;
+    public StorageBucketAccessControlsUpdateSecurity withOption2(StorageBucketAccessControlsUpdateSecurityOption2 option2) {
+        this.option2 = option2;
+        return this;
+    }
+}

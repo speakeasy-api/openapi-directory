@@ -1,0 +1,24 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class IssuesCheckUserCanBeAssignedPathParams {
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=assignee")
+    public String assignee;
+    public IssuesCheckUserCanBeAssignedPathParams withAssignee(String assignee) {
+        this.assignee = assignee;
+        return this;
+    }
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public IssuesCheckUserCanBeAssignedPathParams withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public IssuesCheckUserCanBeAssignedPathParams withRepo(String repo) {
+        this.repo = repo;
+        return this;
+    }
+}

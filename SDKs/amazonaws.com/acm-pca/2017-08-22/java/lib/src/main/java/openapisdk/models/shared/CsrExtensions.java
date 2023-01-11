@@ -1,0 +1,26 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * CsrExtensions
+ * Describes the certificate extensions to be added to the certificate signing request (CSR).
+**/
+public class CsrExtensions {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("KeyUsage")
+    public KeyUsage keyUsage;
+    public CsrExtensions withKeyUsage(KeyUsage keyUsage) {
+        this.keyUsage = keyUsage;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("SubjectInformationAccess")
+    public AccessDescription[] subjectInformationAccess;
+    public CsrExtensions withSubjectInformationAccess(AccessDescription[] subjectInformationAccess) {
+        this.subjectInformationAccess = subjectInformationAccess;
+        return this;
+    }
+}

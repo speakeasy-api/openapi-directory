@@ -1,0 +1,26 @@
+package openapisdk.models.operations;
+
+
+
+public class PayrollsOneRequest {
+    public PayrollsOnePathParams pathParams;
+    public PayrollsOneRequest withPathParams(PayrollsOnePathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public PayrollsOneQueryParams queryParams;
+    public PayrollsOneRequest withQueryParams(PayrollsOneQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public PayrollsOneHeaders headers;
+    public PayrollsOneRequest withHeaders(PayrollsOneHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+    public PayrollsOneSecurity security;
+    public PayrollsOneRequest withSecurity(PayrollsOneSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

@@ -1,0 +1,31 @@
+package openapisdk.models.shared;
+
+
+
+public class QuestionsClosedDetails {
+    public Object[] byUsers;
+    public QuestionsClosedDetails withByUsers(Object[] byUsers) {
+        this.byUsers = byUsers;
+        return this;
+    }
+    public String description;
+    public QuestionsClosedDetails withDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    public Boolean onHold;
+    public QuestionsClosedDetails withOnHold(Boolean onHold) {
+        this.onHold = onHold;
+        return this;
+    }
+    public Object[] originalQuestions;
+    public QuestionsClosedDetails withOriginalQuestions(Object[] originalQuestions) {
+        this.originalQuestions = originalQuestions;
+        return this;
+    }
+    public String reason;
+    public QuestionsClosedDetails withReason(String reason) {
+        this.reason = reason;
+        return this;
+    }
+}

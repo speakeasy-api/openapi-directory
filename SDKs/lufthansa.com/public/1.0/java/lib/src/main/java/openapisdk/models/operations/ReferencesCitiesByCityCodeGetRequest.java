@@ -1,0 +1,26 @@
+package openapisdk.models.operations;
+
+
+
+public class ReferencesCitiesByCityCodeGetRequest {
+    public ReferencesCitiesByCityCodeGetPathParams pathParams;
+    public ReferencesCitiesByCityCodeGetRequest withPathParams(ReferencesCitiesByCityCodeGetPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public ReferencesCitiesByCityCodeGetQueryParams queryParams;
+    public ReferencesCitiesByCityCodeGetRequest withQueryParams(ReferencesCitiesByCityCodeGetQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public ReferencesCitiesByCityCodeGetHeaders headers;
+    public ReferencesCitiesByCityCodeGetRequest withHeaders(ReferencesCitiesByCityCodeGetHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+    public ReferencesCitiesByCityCodeGetSecurity security;
+    public ReferencesCitiesByCityCodeGetRequest withSecurity(ReferencesCitiesByCityCodeGetSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

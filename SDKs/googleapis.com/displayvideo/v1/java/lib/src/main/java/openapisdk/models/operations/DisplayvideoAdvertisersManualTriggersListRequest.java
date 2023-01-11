@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class DisplayvideoAdvertisersManualTriggersListRequest {
+    public DisplayvideoAdvertisersManualTriggersListPathParams pathParams;
+    public DisplayvideoAdvertisersManualTriggersListRequest withPathParams(DisplayvideoAdvertisersManualTriggersListPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public DisplayvideoAdvertisersManualTriggersListQueryParams queryParams;
+    public DisplayvideoAdvertisersManualTriggersListRequest withQueryParams(DisplayvideoAdvertisersManualTriggersListQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public DisplayvideoAdvertisersManualTriggersListSecurity security;
+    public DisplayvideoAdvertisersManualTriggersListRequest withSecurity(DisplayvideoAdvertisersManualTriggersListSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

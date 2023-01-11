@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class PostContainersNameOrIdRenameRequest {
+    public PostContainersNameOrIdRenamePathParams pathParams;
+    public PostContainersNameOrIdRenameRequest withPathParams(PostContainersNameOrIdRenamePathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public PostContainersNameOrIdRenameQueryParams queryParams;
+    public PostContainersNameOrIdRenameRequest withQueryParams(PostContainersNameOrIdRenameQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public PostContainersNameOrIdRenameHeaders headers;
+    public PostContainersNameOrIdRenameRequest withHeaders(PostContainersNameOrIdRenameHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+}

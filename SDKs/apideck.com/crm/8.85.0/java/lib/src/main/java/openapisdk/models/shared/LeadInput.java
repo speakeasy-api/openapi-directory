@@ -1,0 +1,167 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class LeadInput {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("addresses")
+    public Address[] addresses;
+    public LeadInput withAddresses(Address[] addresses) {
+        this.addresses = addresses;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("company_id")
+    public String companyId;
+    public LeadInput withCompanyId(String companyId) {
+        this.companyId = companyId;
+        return this;
+    }
+    @JsonProperty("company_name")
+    public String companyName;
+    public LeadInput withCompanyName(String companyName) {
+        this.companyName = companyName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("contact_id")
+    public String contactId;
+    public LeadInput withContactId(String contactId) {
+        this.contactId = contactId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("currency")
+    public CurrencyEnum currency;
+    public LeadInput withCurrency(CurrencyEnum currency) {
+        this.currency = currency;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("custom_fields")
+    public CustomField[] customFields;
+    public LeadInput withCustomFields(CustomField[] customFields) {
+        this.customFields = customFields;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("description")
+    public String description;
+    public LeadInput withDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("emails")
+    public Email[] emails;
+    public LeadInput withEmails(Email[] emails) {
+        this.emails = emails;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("fax")
+    public String fax;
+    public LeadInput withFax(String fax) {
+        this.fax = fax;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("first_name")
+    public String firstName;
+    public LeadInput withFirstName(String firstName) {
+        this.firstName = firstName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("language")
+    public String language;
+    public LeadInput withLanguage(String language) {
+        this.language = language;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("last_name")
+    public String lastName;
+    public LeadInput withLastName(String lastName) {
+        this.lastName = lastName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("lead_source")
+    public String leadSource;
+    public LeadInput withLeadSource(String leadSource) {
+        this.leadSource = leadSource;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("monetary_amount")
+    public Double monetaryAmount;
+    public LeadInput withMonetaryAmount(Double monetaryAmount) {
+        this.monetaryAmount = monetaryAmount;
+        return this;
+    }
+    @JsonProperty("name")
+    public String name;
+    public LeadInput withName(String name) {
+        this.name = name;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("owner_id")
+    public String ownerId;
+    public LeadInput withOwnerId(String ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("phone_numbers")
+    public PhoneNumber[] phoneNumbers;
+    public LeadInput withPhoneNumbers(PhoneNumber[] phoneNumbers) {
+        this.phoneNumbers = phoneNumbers;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("prefix")
+    public String prefix;
+    public LeadInput withPrefix(String prefix) {
+        this.prefix = prefix;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("social_links")
+    public SocialLink[] socialLinks;
+    public LeadInput withSocialLinks(SocialLink[] socialLinks) {
+        this.socialLinks = socialLinks;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("status")
+    public String status;
+    public LeadInput withStatus(String status) {
+        this.status = status;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("tags")
+    public String[] tags;
+    public LeadInput withTags(String[] tags) {
+        this.tags = tags;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("title")
+    public String title;
+    public LeadInput withTitle(String title) {
+        this.title = title;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("websites")
+    public Website[] websites;
+    public LeadInput withWebsites(Website[] websites) {
+        this.websites = websites;
+        return this;
+    }
+}

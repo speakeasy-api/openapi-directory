@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class ListVersionsByFunctionRequest {
+    public ListVersionsByFunctionPathParams pathParams;
+    public ListVersionsByFunctionRequest withPathParams(ListVersionsByFunctionPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public ListVersionsByFunctionQueryParams queryParams;
+    public ListVersionsByFunctionRequest withQueryParams(ListVersionsByFunctionQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public ListVersionsByFunctionHeaders headers;
+    public ListVersionsByFunctionRequest withHeaders(ListVersionsByFunctionHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+}

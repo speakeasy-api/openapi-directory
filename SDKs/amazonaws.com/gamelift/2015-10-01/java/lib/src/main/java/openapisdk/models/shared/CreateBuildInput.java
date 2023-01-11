@@ -1,0 +1,47 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * CreateBuildInput
+ * Represents the input for a request operation.
+**/
+public class CreateBuildInput {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Name")
+    public String name;
+    public CreateBuildInput withName(String name) {
+        this.name = name;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("OperatingSystem")
+    public OperatingSystemEnum operatingSystem;
+    public CreateBuildInput withOperatingSystem(OperatingSystemEnum operatingSystem) {
+        this.operatingSystem = operatingSystem;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("StorageLocation")
+    public S3Location storageLocation;
+    public CreateBuildInput withStorageLocation(S3Location storageLocation) {
+        this.storageLocation = storageLocation;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Tags")
+    public Tag[] tags;
+    public CreateBuildInput withTags(Tag[] tags) {
+        this.tags = tags;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Version")
+    public String version;
+    public CreateBuildInput withVersion(String version) {
+        this.version = version;
+        return this;
+    }
+}

@@ -1,0 +1,113 @@
+package openapisdk.models.shared;
+
+import java.time.OffsetDateTime;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import openapisdk.utils.DateTimeSerializer;
+import openapisdk.utils.DateTimeDeserializer;
+
+/**
+ * FindingSummary
+ * Contains information about a finding.
+**/
+public class FindingSummary {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("action")
+    public String[] action;
+    public FindingSummary withAction(String[] action) {
+        this.action = action;
+        return this;
+    }
+    @JsonSerialize(using = DateTimeSerializer.class)
+    @JsonDeserialize(using = DateTimeDeserializer.class)
+    @JsonProperty("analyzedAt")
+    public OffsetDateTime analyzedAt;
+    public FindingSummary withAnalyzedAt(OffsetDateTime analyzedAt) {
+        this.analyzedAt = analyzedAt;
+        return this;
+    }
+    @JsonProperty("condition")
+    public java.util.Map<String, String> condition;
+    public FindingSummary withCondition(java.util.Map<String, String> condition) {
+        this.condition = condition;
+        return this;
+    }
+    @JsonSerialize(using = DateTimeSerializer.class)
+    @JsonDeserialize(using = DateTimeDeserializer.class)
+    @JsonProperty("createdAt")
+    public OffsetDateTime createdAt;
+    public FindingSummary withCreatedAt(OffsetDateTime createdAt) {
+        this.createdAt = createdAt;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("error")
+    public String error;
+    public FindingSummary withError(String error) {
+        this.error = error;
+        return this;
+    }
+    @JsonProperty("id")
+    public String id;
+    public FindingSummary withId(String id) {
+        this.id = id;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("isPublic")
+    public Boolean isPublic;
+    public FindingSummary withIsPublic(Boolean isPublic) {
+        this.isPublic = isPublic;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("principal")
+    public java.util.Map<String, String> principal;
+    public FindingSummary withPrincipal(java.util.Map<String, String> principal) {
+        this.principal = principal;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("resource")
+    public String resource;
+    public FindingSummary withResource(String resource) {
+        this.resource = resource;
+        return this;
+    }
+    @JsonProperty("resourceOwnerAccount")
+    public String resourceOwnerAccount;
+    public FindingSummary withResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    @JsonProperty("resourceType")
+    public ResourceTypeEnum resourceType;
+    public FindingSummary withResourceType(ResourceTypeEnum resourceType) {
+        this.resourceType = resourceType;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("sources")
+    public FindingSource[] sources;
+    public FindingSummary withSources(FindingSource[] sources) {
+        this.sources = sources;
+        return this;
+    }
+    @JsonProperty("status")
+    public FindingStatusEnum status;
+    public FindingSummary withStatus(FindingStatusEnum status) {
+        this.status = status;
+        return this;
+    }
+    @JsonSerialize(using = DateTimeSerializer.class)
+    @JsonDeserialize(using = DateTimeDeserializer.class)
+    @JsonProperty("updatedAt")
+    public OffsetDateTime updatedAt;
+    public FindingSummary withUpdatedAt(OffsetDateTime updatedAt) {
+        this.updatedAt = updatedAt;
+        return this;
+    }
+}

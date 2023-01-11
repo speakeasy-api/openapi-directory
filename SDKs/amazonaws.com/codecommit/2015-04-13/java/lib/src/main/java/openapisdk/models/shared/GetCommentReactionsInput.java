@@ -1,0 +1,35 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class GetCommentReactionsInput {
+    @JsonProperty("commentId")
+    public String commentId;
+    public GetCommentReactionsInput withCommentId(String commentId) {
+        this.commentId = commentId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("maxResults")
+    public Long maxResults;
+    public GetCommentReactionsInput withMaxResults(Long maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("nextToken")
+    public String nextToken;
+    public GetCommentReactionsInput withNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("reactionUserArn")
+    public String reactionUserArn;
+    public GetCommentReactionsInput withReactionUserArn(String reactionUserArn) {
+        this.reactionUserArn = reactionUserArn;
+        return this;
+    }
+}

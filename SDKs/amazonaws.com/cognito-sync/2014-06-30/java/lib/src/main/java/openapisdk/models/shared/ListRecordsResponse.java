@@ -1,0 +1,75 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * ListRecordsResponse
+ * Returned for a successful ListRecordsRequest.
+**/
+public class ListRecordsResponse {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Count")
+    public Long count;
+    public ListRecordsResponse withCount(Long count) {
+        this.count = count;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("DatasetDeletedAfterRequestedSyncCount")
+    public Boolean datasetDeletedAfterRequestedSyncCount;
+    public ListRecordsResponse withDatasetDeletedAfterRequestedSyncCount(Boolean datasetDeletedAfterRequestedSyncCount) {
+        this.datasetDeletedAfterRequestedSyncCount = datasetDeletedAfterRequestedSyncCount;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("DatasetExists")
+    public Boolean datasetExists;
+    public ListRecordsResponse withDatasetExists(Boolean datasetExists) {
+        this.datasetExists = datasetExists;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("DatasetSyncCount")
+    public Long datasetSyncCount;
+    public ListRecordsResponse withDatasetSyncCount(Long datasetSyncCount) {
+        this.datasetSyncCount = datasetSyncCount;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("LastModifiedBy")
+    public String lastModifiedBy;
+    public ListRecordsResponse withLastModifiedBy(String lastModifiedBy) {
+        this.lastModifiedBy = lastModifiedBy;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("MergedDatasetNames")
+    public String[] mergedDatasetNames;
+    public ListRecordsResponse withMergedDatasetNames(String[] mergedDatasetNames) {
+        this.mergedDatasetNames = mergedDatasetNames;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("NextToken")
+    public String nextToken;
+    public ListRecordsResponse withNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Records")
+    public Record[] records;
+    public ListRecordsResponse withRecords(Record[] records) {
+        this.records = records;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("SyncSessionToken")
+    public String syncSessionToken;
+    public ListRecordsResponse withSyncSessionToken(String syncSessionToken) {
+        this.syncSessionToken = syncSessionToken;
+        return this;
+    }
+}

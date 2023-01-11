@@ -1,0 +1,26 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * PushSync
+ * Configuration options to be applied to the identity pool.
+**/
+public class PushSync {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ApplicationArns")
+    public String[] applicationArns;
+    public PushSync withApplicationArns(String[] applicationArns) {
+        this.applicationArns = applicationArns;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("RoleArn")
+    public String roleArn;
+    public PushSync withRoleArn(String roleArn) {
+        this.roleArn = roleArn;
+        return this;
+    }
+}

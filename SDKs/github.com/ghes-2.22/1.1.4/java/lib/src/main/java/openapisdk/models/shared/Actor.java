@@ -1,0 +1,49 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * Actor
+ * Actor
+**/
+public class Actor {
+    @JsonProperty("avatar_url")
+    public String avatarUrl;
+    public Actor withAvatarUrl(String avatarUrl) {
+        this.avatarUrl = avatarUrl;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("display_login")
+    public String displayLogin;
+    public Actor withDisplayLogin(String displayLogin) {
+        this.displayLogin = displayLogin;
+        return this;
+    }
+    @JsonProperty("gravatar_id")
+    public String gravatarId;
+    public Actor withGravatarId(String gravatarId) {
+        this.gravatarId = gravatarId;
+        return this;
+    }
+    @JsonProperty("id")
+    public Long id;
+    public Actor withId(Long id) {
+        this.id = id;
+        return this;
+    }
+    @JsonProperty("login")
+    public String login;
+    public Actor withLogin(String login) {
+        this.login = login;
+        return this;
+    }
+    @JsonProperty("url")
+    public String url;
+    public Actor withUrl(String url) {
+        this.url = url;
+        return this;
+    }
+}

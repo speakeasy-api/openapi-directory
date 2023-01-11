@@ -1,0 +1,30 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+public class AutomaticTransition {
+    @JsonProperty("accountId")
+    public Integer accountId;
+    public AutomaticTransition withAccountId(Integer accountId) {
+        this.accountId = accountId;
+        return this;
+    }
+    @JsonProperty("enabled")
+    public Boolean enabled;
+    public AutomaticTransition withEnabled(Boolean enabled) {
+        this.enabled = enabled;
+        return this;
+    }
+    @JsonProperty("marketplaceTechnicalCode")
+    public String marketplaceTechnicalCode;
+    public AutomaticTransition withMarketplaceTechnicalCode(String marketplaceTechnicalCode) {
+        this.marketplaceTechnicalCode = marketplaceTechnicalCode;
+        return this;
+    }
+    @JsonProperty("orderStatusTransitionId")
+    public Integer orderStatusTransitionId;
+    public AutomaticTransition withOrderStatusTransitionId(Integer orderStatusTransitionId) {
+        this.orderStatusTransitionId = orderStatusTransitionId;
+        return this;
+    }
+}

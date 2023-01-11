@@ -1,0 +1,40 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * AwsS3BucketNotificationConfigurationDetail
+ * Details for an S3 bucket notification configuration.
+**/
+public class AwsS3BucketNotificationConfigurationDetail {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Destination")
+    public String destination;
+    public AwsS3BucketNotificationConfigurationDetail withDestination(String destination) {
+        this.destination = destination;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Events")
+    public String[] events;
+    public AwsS3BucketNotificationConfigurationDetail withEvents(String[] events) {
+        this.events = events;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Filter")
+    public AwsS3BucketNotificationConfigurationFilter filter;
+    public AwsS3BucketNotificationConfigurationDetail withFilter(AwsS3BucketNotificationConfigurationFilter filter) {
+        this.filter = filter;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Type")
+    public String type;
+    public AwsS3BucketNotificationConfigurationDetail withType(String type) {
+        this.type = type;
+        return this;
+    }
+}

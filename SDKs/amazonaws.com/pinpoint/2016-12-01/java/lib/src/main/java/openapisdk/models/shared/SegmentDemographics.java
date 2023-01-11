@@ -1,0 +1,54 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * SegmentDemographics
+ * Specifies demographic-based dimension settings for including or excluding endpoints from a segment. These settings derive from characteristics of endpoint devices, such as platform, make, and model.
+**/
+public class SegmentDemographics {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("AppVersion")
+    public SetDimension appVersion;
+    public SegmentDemographics withAppVersion(SetDimension appVersion) {
+        this.appVersion = appVersion;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Channel")
+    public SetDimension channel;
+    public SegmentDemographics withChannel(SetDimension channel) {
+        this.channel = channel;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("DeviceType")
+    public SetDimension deviceType;
+    public SegmentDemographics withDeviceType(SetDimension deviceType) {
+        this.deviceType = deviceType;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Make")
+    public SetDimension make;
+    public SegmentDemographics withMake(SetDimension make) {
+        this.make = make;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Model")
+    public SetDimension model;
+    public SegmentDemographics withModel(SetDimension model) {
+        this.model = model;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Platform")
+    public SetDimension platform;
+    public SegmentDemographics withPlatform(SetDimension platform) {
+        this.platform = platform;
+        return this;
+    }
+}

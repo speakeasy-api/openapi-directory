@@ -1,0 +1,33 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class CreateReportGroupInput {
+    @JsonProperty("exportConfig")
+    public ReportExportConfig exportConfig;
+    public CreateReportGroupInput withExportConfig(ReportExportConfig exportConfig) {
+        this.exportConfig = exportConfig;
+        return this;
+    }
+    @JsonProperty("name")
+    public String name;
+    public CreateReportGroupInput withName(String name) {
+        this.name = name;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("tags")
+    public Tag[] tags;
+    public CreateReportGroupInput withTags(Tag[] tags) {
+        this.tags = tags;
+        return this;
+    }
+    @JsonProperty("type")
+    public ReportTypeEnum type;
+    public CreateReportGroupInput withType(ReportTypeEnum type) {
+        this.type = type;
+        return this;
+    }
+}

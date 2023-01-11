@@ -1,0 +1,40 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * AppointmentPhoneNumber
+ * Phone number information for scheduling an appointment.
+**/
+public class AppointmentPhoneNumber {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("extension")
+    public String extension;
+    public AppointmentPhoneNumber withExtension(String extension) {
+        this.extension = extension;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("label")
+    public String label;
+    public AppointmentPhoneNumber withLabel(String label) {
+        this.label = label;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("number")
+    public String number;
+    public AppointmentPhoneNumber withNumber(String number) {
+        this.number = number;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("type")
+    public String type;
+    public AppointmentPhoneNumber withType(String type) {
+        this.type = type;
+        return this;
+    }
+}

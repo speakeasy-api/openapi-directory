@@ -1,0 +1,32 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * Instance
+ * A complex type that contains information about an instance that Cloud Map creates when you submit a <code>RegisterInstance</code> request.
+**/
+public class Instance {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Attributes")
+    public java.util.Map<String, String> attributes;
+    public Instance withAttributes(java.util.Map<String, String> attributes) {
+        this.attributes = attributes;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("CreatorRequestId")
+    public String creatorRequestId;
+    public Instance withCreatorRequestId(String creatorRequestId) {
+        this.creatorRequestId = creatorRequestId;
+        return this;
+    }
+    @JsonProperty("Id")
+    public String id;
+    public Instance withId(String id) {
+        this.id = id;
+        return this;
+    }
+}

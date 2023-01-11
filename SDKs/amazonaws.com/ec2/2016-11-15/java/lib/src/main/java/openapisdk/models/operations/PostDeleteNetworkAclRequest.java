@@ -1,0 +1,22 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class PostDeleteNetworkAclRequest {
+    public PostDeleteNetworkAclQueryParams queryParams;
+    public PostDeleteNetworkAclRequest withQueryParams(PostDeleteNetworkAclQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public PostDeleteNetworkAclHeaders headers;
+    public PostDeleteNetworkAclRequest withHeaders(PostDeleteNetworkAclHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+    @SpeakeasyMetadata("request:mediaType=text/xml")
+    public byte[] request;
+    public PostDeleteNetworkAclRequest withRequest(byte[] request) {
+        this.request = request;
+        return this;
+    }
+}

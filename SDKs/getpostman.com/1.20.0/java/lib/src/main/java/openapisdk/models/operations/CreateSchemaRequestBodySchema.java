@@ -1,0 +1,29 @@
+package openapisdk.models.operations;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class CreateSchemaRequestBodySchema {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("language")
+    public String language;
+    public CreateSchemaRequestBodySchema withLanguage(String language) {
+        this.language = language;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("schema")
+    public String schema;
+    public CreateSchemaRequestBodySchema withSchema(String schema) {
+        this.schema = schema;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("type")
+    public String type;
+    public CreateSchemaRequestBodySchema withType(String type) {
+        this.type = type;
+        return this;
+    }
+}

@@ -1,0 +1,36 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class ListAssessmentRunsRequest {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("assessmentTemplateArns")
+    public String[] assessmentTemplateArns;
+    public ListAssessmentRunsRequest withAssessmentTemplateArns(String[] assessmentTemplateArns) {
+        this.assessmentTemplateArns = assessmentTemplateArns;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("filter")
+    public AssessmentRunFilter filter;
+    public ListAssessmentRunsRequest withFilter(AssessmentRunFilter filter) {
+        this.filter = filter;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("maxResults")
+    public Long maxResults;
+    public ListAssessmentRunsRequest withMaxResults(Long maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("nextToken")
+    public String nextToken;
+    public ListAssessmentRunsRequest withNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+}

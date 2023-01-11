@@ -1,0 +1,64 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class FlexV1InteractionInteractionChannel {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("error_code")
+    public Long errorCode;
+    public FlexV1InteractionInteractionChannel withErrorCode(Long errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("error_message")
+    public String errorMessage;
+    public FlexV1InteractionInteractionChannel withErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("interaction_sid")
+    public String interactionSid;
+    public FlexV1InteractionInteractionChannel withInteractionSid(String interactionSid) {
+        this.interactionSid = interactionSid;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("links")
+    public java.util.Map<String, Object> links;
+    public FlexV1InteractionInteractionChannel withLinks(java.util.Map<String, Object> links) {
+        this.links = links;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("sid")
+    public String sid;
+    public FlexV1InteractionInteractionChannel withSid(String sid) {
+        this.sid = sid;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("status")
+    public InteractionChannelEnumChannelStatusEnum status;
+    public FlexV1InteractionInteractionChannel withStatus(InteractionChannelEnumChannelStatusEnum status) {
+        this.status = status;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("type")
+    public InteractionChannelEnumTypeEnum type;
+    public FlexV1InteractionInteractionChannel withType(InteractionChannelEnumTypeEnum type) {
+        this.type = type;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("url")
+    public String url;
+    public FlexV1InteractionInteractionChannel withUrl(String url) {
+        this.url = url;
+        return this;
+    }
+}

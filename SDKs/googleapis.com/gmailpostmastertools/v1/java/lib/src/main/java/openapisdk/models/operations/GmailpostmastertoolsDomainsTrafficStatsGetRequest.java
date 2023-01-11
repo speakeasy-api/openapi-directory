@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class GmailpostmastertoolsDomainsTrafficStatsGetRequest {
+    public GmailpostmastertoolsDomainsTrafficStatsGetPathParams pathParams;
+    public GmailpostmastertoolsDomainsTrafficStatsGetRequest withPathParams(GmailpostmastertoolsDomainsTrafficStatsGetPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public GmailpostmastertoolsDomainsTrafficStatsGetQueryParams queryParams;
+    public GmailpostmastertoolsDomainsTrafficStatsGetRequest withQueryParams(GmailpostmastertoolsDomainsTrafficStatsGetQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public GmailpostmastertoolsDomainsTrafficStatsGetSecurity security;
+    public GmailpostmastertoolsDomainsTrafficStatsGetRequest withSecurity(GmailpostmastertoolsDomainsTrafficStatsGetSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

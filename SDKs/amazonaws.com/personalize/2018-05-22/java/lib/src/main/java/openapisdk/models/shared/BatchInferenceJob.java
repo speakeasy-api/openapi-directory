@@ -1,0 +1,112 @@
+package openapisdk.models.shared;
+
+import java.time.OffsetDateTime;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import openapisdk.utils.DateTimeSerializer;
+import openapisdk.utils.DateTimeDeserializer;
+
+/**
+ * BatchInferenceJob
+ * Contains information on a batch inference job.
+**/
+public class BatchInferenceJob {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("batchInferenceJobArn")
+    public String batchInferenceJobArn;
+    public BatchInferenceJob withBatchInferenceJobArn(String batchInferenceJobArn) {
+        this.batchInferenceJobArn = batchInferenceJobArn;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("batchInferenceJobConfig")
+    public BatchInferenceJobConfig batchInferenceJobConfig;
+    public BatchInferenceJob withBatchInferenceJobConfig(BatchInferenceJobConfig batchInferenceJobConfig) {
+        this.batchInferenceJobConfig = batchInferenceJobConfig;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonSerialize(contentUsing = DateTimeSerializer.class)
+    @JsonDeserialize(contentUsing = DateTimeDeserializer.class)
+    @JsonProperty("creationDateTime")
+    public OffsetDateTime creationDateTime;
+    public BatchInferenceJob withCreationDateTime(OffsetDateTime creationDateTime) {
+        this.creationDateTime = creationDateTime;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("failureReason")
+    public String failureReason;
+    public BatchInferenceJob withFailureReason(String failureReason) {
+        this.failureReason = failureReason;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("filterArn")
+    public String filterArn;
+    public BatchInferenceJob withFilterArn(String filterArn) {
+        this.filterArn = filterArn;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("jobInput")
+    public BatchInferenceJobInput jobInput;
+    public BatchInferenceJob withJobInput(BatchInferenceJobInput jobInput) {
+        this.jobInput = jobInput;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("jobName")
+    public String jobName;
+    public BatchInferenceJob withJobName(String jobName) {
+        this.jobName = jobName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("jobOutput")
+    public BatchInferenceJobOutput jobOutput;
+    public BatchInferenceJob withJobOutput(BatchInferenceJobOutput jobOutput) {
+        this.jobOutput = jobOutput;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonSerialize(contentUsing = DateTimeSerializer.class)
+    @JsonDeserialize(contentUsing = DateTimeDeserializer.class)
+    @JsonProperty("lastUpdatedDateTime")
+    public OffsetDateTime lastUpdatedDateTime;
+    public BatchInferenceJob withLastUpdatedDateTime(OffsetDateTime lastUpdatedDateTime) {
+        this.lastUpdatedDateTime = lastUpdatedDateTime;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("numResults")
+    public Long numResults;
+    public BatchInferenceJob withNumResults(Long numResults) {
+        this.numResults = numResults;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("roleArn")
+    public String roleArn;
+    public BatchInferenceJob withRoleArn(String roleArn) {
+        this.roleArn = roleArn;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("solutionVersionArn")
+    public String solutionVersionArn;
+    public BatchInferenceJob withSolutionVersionArn(String solutionVersionArn) {
+        this.solutionVersionArn = solutionVersionArn;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("status")
+    public String status;
+    public BatchInferenceJob withStatus(String status) {
+        this.status = status;
+        return this;
+    }
+}

@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class CloudprivatecatalogOrganizationsProductsSearchRequest {
+    public CloudprivatecatalogOrganizationsProductsSearchPathParams pathParams;
+    public CloudprivatecatalogOrganizationsProductsSearchRequest withPathParams(CloudprivatecatalogOrganizationsProductsSearchPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public CloudprivatecatalogOrganizationsProductsSearchQueryParams queryParams;
+    public CloudprivatecatalogOrganizationsProductsSearchRequest withQueryParams(CloudprivatecatalogOrganizationsProductsSearchQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public CloudprivatecatalogOrganizationsProductsSearchSecurity security;
+    public CloudprivatecatalogOrganizationsProductsSearchRequest withSecurity(CloudprivatecatalogOrganizationsProductsSearchSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

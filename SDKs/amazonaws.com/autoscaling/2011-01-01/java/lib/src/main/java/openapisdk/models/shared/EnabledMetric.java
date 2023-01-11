@@ -1,0 +1,20 @@
+package openapisdk.models.shared;
+
+
+
+/**
+ * EnabledMetric
+ * Describes an enabled metric.
+**/
+public class EnabledMetric {
+    public String granularity;
+    public EnabledMetric withGranularity(String granularity) {
+        this.granularity = granularity;
+        return this;
+    }
+    public String metric;
+    public EnabledMetric withMetric(String metric) {
+        this.metric = metric;
+        return this;
+    }
+}

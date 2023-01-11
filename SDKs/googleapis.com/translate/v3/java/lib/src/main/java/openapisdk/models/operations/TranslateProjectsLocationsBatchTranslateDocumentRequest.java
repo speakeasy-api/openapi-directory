@@ -1,0 +1,27 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class TranslateProjectsLocationsBatchTranslateDocumentRequest {
+    public TranslateProjectsLocationsBatchTranslateDocumentPathParams pathParams;
+    public TranslateProjectsLocationsBatchTranslateDocumentRequest withPathParams(TranslateProjectsLocationsBatchTranslateDocumentPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public TranslateProjectsLocationsBatchTranslateDocumentQueryParams queryParams;
+    public TranslateProjectsLocationsBatchTranslateDocumentRequest withQueryParams(TranslateProjectsLocationsBatchTranslateDocumentQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public openapisdk.models.shared.BatchTranslateDocumentRequest request;
+    public TranslateProjectsLocationsBatchTranslateDocumentRequest withRequest(openapisdk.models.shared.BatchTranslateDocumentRequest request) {
+        this.request = request;
+        return this;
+    }
+    public TranslateProjectsLocationsBatchTranslateDocumentSecurity security;
+    public TranslateProjectsLocationsBatchTranslateDocumentRequest withSecurity(TranslateProjectsLocationsBatchTranslateDocumentSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

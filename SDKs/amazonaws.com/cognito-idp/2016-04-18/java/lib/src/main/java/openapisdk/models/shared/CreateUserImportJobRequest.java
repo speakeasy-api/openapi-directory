@@ -1,0 +1,28 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+/**
+ * CreateUserImportJobRequest
+ * Represents the request to create the user import job.
+**/
+public class CreateUserImportJobRequest {
+    @JsonProperty("CloudWatchLogsRoleArn")
+    public String cloudWatchLogsRoleArn;
+    public CreateUserImportJobRequest withCloudWatchLogsRoleArn(String cloudWatchLogsRoleArn) {
+        this.cloudWatchLogsRoleArn = cloudWatchLogsRoleArn;
+        return this;
+    }
+    @JsonProperty("JobName")
+    public String jobName;
+    public CreateUserImportJobRequest withJobName(String jobName) {
+        this.jobName = jobName;
+        return this;
+    }
+    @JsonProperty("UserPoolId")
+    public String userPoolId;
+    public CreateUserImportJobRequest withUserPoolId(String userPoolId) {
+        this.userPoolId = userPoolId;
+        return this;
+    }
+}

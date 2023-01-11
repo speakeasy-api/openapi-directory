@@ -1,0 +1,22 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class ValidateSecurityProfileBehaviorsResponse {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("valid")
+    public Boolean valid;
+    public ValidateSecurityProfileBehaviorsResponse withValid(Boolean valid) {
+        this.valid = valid;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("validationErrors")
+    public ValidationError[] validationErrors;
+    public ValidateSecurityProfileBehaviorsResponse withValidationErrors(ValidationError[] validationErrors) {
+        this.validationErrors = validationErrors;
+        return this;
+    }
+}

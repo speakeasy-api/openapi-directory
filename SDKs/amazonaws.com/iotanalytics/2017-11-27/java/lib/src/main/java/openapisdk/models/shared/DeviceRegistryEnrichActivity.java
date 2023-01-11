@@ -1,0 +1,43 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * DeviceRegistryEnrichActivity
+ * An activity that adds data from the IoT device registry to your message.
+**/
+public class DeviceRegistryEnrichActivity {
+    @JsonProperty("attribute")
+    public String attribute;
+    public DeviceRegistryEnrichActivity withAttribute(String attribute) {
+        this.attribute = attribute;
+        return this;
+    }
+    @JsonProperty("name")
+    public String name;
+    public DeviceRegistryEnrichActivity withName(String name) {
+        this.name = name;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("next")
+    public String next;
+    public DeviceRegistryEnrichActivity withNext(String next) {
+        this.next = next;
+        return this;
+    }
+    @JsonProperty("roleArn")
+    public String roleArn;
+    public DeviceRegistryEnrichActivity withRoleArn(String roleArn) {
+        this.roleArn = roleArn;
+        return this;
+    }
+    @JsonProperty("thingName")
+    public String thingName;
+    public DeviceRegistryEnrichActivity withThingName(String thingName) {
+        this.thingName = thingName;
+        return this;
+    }
+}

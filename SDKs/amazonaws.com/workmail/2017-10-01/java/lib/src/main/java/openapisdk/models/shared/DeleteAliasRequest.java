@@ -1,0 +1,24 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+public class DeleteAliasRequest {
+    @JsonProperty("Alias")
+    public String alias;
+    public DeleteAliasRequest withAlias(String alias) {
+        this.alias = alias;
+        return this;
+    }
+    @JsonProperty("EntityId")
+    public String entityId;
+    public DeleteAliasRequest withEntityId(String entityId) {
+        this.entityId = entityId;
+        return this;
+    }
+    @JsonProperty("OrganizationId")
+    public String organizationId;
+    public DeleteAliasRequest withOrganizationId(String organizationId) {
+        this.organizationId = organizationId;
+        return this;
+    }
+}

@@ -1,0 +1,35 @@
+package openapisdk.models.operations;
+
+
+public enum UpdateNetworkFirmwareUpgradesRequestBodyUpgradeWindowHourOfDayEnum {
+    ZERO00("0:00"),
+    ONE00("1:00"),
+    TWO00("2:00"),
+    THREE00("3:00"),
+    FOUR00("4:00"),
+    FIVE00("5:00"),
+    SIX00("6:00"),
+    SEVEN00("7:00"),
+    EIGHT00("8:00"),
+    NINE00("9:00"),
+    TEN00("10:00"),
+    ELEVEN00("11:00"),
+    TWELVE00("12:00"),
+    THIRTEEN00("13:00"),
+    FOURTEEN00("14:00"),
+    FIFTEEN00("15:00"),
+    SIXTEEN00("16:00"),
+    SEVENTEEN00("17:00"),
+    EIGHTEEN00("18:00"),
+    NINETEEN00("19:00"),
+    TWENTY00("20:00"),
+    TWENTY_ONE00("21:00"),
+    TWENTY_TWO00("22:00"),
+    TWENTY_THREE00("23:00");
+
+    public final String value;
+
+    private UpdateNetworkFirmwareUpgradesRequestBodyUpgradeWindowHourOfDayEnum(String value) {
+        this.value = value;
+    }
+}

@@ -1,0 +1,36 @@
+package openapisdk.models.operations;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class RemotestartRequestBody {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("chargestation")
+    public String chargestation;
+    public RemotestartRequestBody withChargestation(String chargestation) {
+        this.chargestation = chargestation;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("connector")
+    public String connector;
+    public RemotestartRequestBody withConnector(String connector) {
+        this.connector = connector;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("driver")
+    public String driver;
+    public RemotestartRequestBody withDriver(String driver) {
+        this.driver = driver;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("token")
+    public String token;
+    public RemotestartRequestBody withToken(String token) {
+        this.token = token;
+        return this;
+    }
+}

@@ -1,0 +1,27 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class RequestAccessTokenRequest {
+    public RequestAccessTokenPathParams pathParams;
+    public RequestAccessTokenRequest withPathParams(RequestAccessTokenPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public RequestAccessTokenQueryParams queryParams;
+    public RequestAccessTokenRequest withQueryParams(RequestAccessTokenQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public RequestAccessTokenHeaders headers;
+    public RequestAccessTokenRequest withHeaders(RequestAccessTokenHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public Object request;
+    public RequestAccessTokenRequest withRequest(Object request) {
+        this.request = request;
+        return this;
+    }
+}

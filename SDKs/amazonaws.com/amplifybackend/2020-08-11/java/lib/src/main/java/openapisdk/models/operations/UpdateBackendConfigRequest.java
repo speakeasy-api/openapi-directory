@@ -1,0 +1,22 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class UpdateBackendConfigRequest {
+    public UpdateBackendConfigPathParams pathParams;
+    public UpdateBackendConfigRequest withPathParams(UpdateBackendConfigPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public UpdateBackendConfigHeaders headers;
+    public UpdateBackendConfigRequest withHeaders(UpdateBackendConfigHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public UpdateBackendConfigRequestBody request;
+    public UpdateBackendConfigRequest withRequest(UpdateBackendConfigRequestBody request) {
+        this.request = request;
+        return this;
+    }
+}

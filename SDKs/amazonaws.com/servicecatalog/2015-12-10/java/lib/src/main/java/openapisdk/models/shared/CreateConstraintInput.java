@@ -1,0 +1,52 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class CreateConstraintInput {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("AcceptLanguage")
+    public String acceptLanguage;
+    public CreateConstraintInput withAcceptLanguage(String acceptLanguage) {
+        this.acceptLanguage = acceptLanguage;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Description")
+    public String description;
+    public CreateConstraintInput withDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    @JsonProperty("IdempotencyToken")
+    public String idempotencyToken;
+    public CreateConstraintInput withIdempotencyToken(String idempotencyToken) {
+        this.idempotencyToken = idempotencyToken;
+        return this;
+    }
+    @JsonProperty("Parameters")
+    public String parameters;
+    public CreateConstraintInput withParameters(String parameters) {
+        this.parameters = parameters;
+        return this;
+    }
+    @JsonProperty("PortfolioId")
+    public String portfolioId;
+    public CreateConstraintInput withPortfolioId(String portfolioId) {
+        this.portfolioId = portfolioId;
+        return this;
+    }
+    @JsonProperty("ProductId")
+    public String productId;
+    public CreateConstraintInput withProductId(String productId) {
+        this.productId = productId;
+        return this;
+    }
+    @JsonProperty("Type")
+    public String type;
+    public CreateConstraintInput withType(String type) {
+        this.type = type;
+        return this;
+    }
+}

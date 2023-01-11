@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class ContactcenterinsightsProjectsLocationsOperationsCancelRequest {
+    public ContactcenterinsightsProjectsLocationsOperationsCancelPathParams pathParams;
+    public ContactcenterinsightsProjectsLocationsOperationsCancelRequest withPathParams(ContactcenterinsightsProjectsLocationsOperationsCancelPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public ContactcenterinsightsProjectsLocationsOperationsCancelQueryParams queryParams;
+    public ContactcenterinsightsProjectsLocationsOperationsCancelRequest withQueryParams(ContactcenterinsightsProjectsLocationsOperationsCancelQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public ContactcenterinsightsProjectsLocationsOperationsCancelSecurity security;
+    public ContactcenterinsightsProjectsLocationsOperationsCancelRequest withSecurity(ContactcenterinsightsProjectsLocationsOperationsCancelSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

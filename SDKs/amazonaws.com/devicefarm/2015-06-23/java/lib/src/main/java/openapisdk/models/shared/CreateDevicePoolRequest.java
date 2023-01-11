@@ -1,0 +1,44 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * CreateDevicePoolRequest
+ * Represents a request to the create device pool operation.
+**/
+public class CreateDevicePoolRequest {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("description")
+    public String description;
+    public CreateDevicePoolRequest withDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("maxDevices")
+    public Long maxDevices;
+    public CreateDevicePoolRequest withMaxDevices(Long maxDevices) {
+        this.maxDevices = maxDevices;
+        return this;
+    }
+    @JsonProperty("name")
+    public String name;
+    public CreateDevicePoolRequest withName(String name) {
+        this.name = name;
+        return this;
+    }
+    @JsonProperty("projectArn")
+    public String projectArn;
+    public CreateDevicePoolRequest withProjectArn(String projectArn) {
+        this.projectArn = projectArn;
+        return this;
+    }
+    @JsonProperty("rules")
+    public Rule[] rules;
+    public CreateDevicePoolRequest withRules(Rule[] rules) {
+        this.rules = rules;
+        return this;
+    }
+}

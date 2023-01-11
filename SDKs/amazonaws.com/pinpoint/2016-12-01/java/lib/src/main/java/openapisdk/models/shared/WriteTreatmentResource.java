@@ -1,0 +1,60 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * WriteTreatmentResource
+ * Specifies the settings for a campaign treatment. A <i>treatment</i> is a variation of a campaign that's used for A/B testing of a campaign.
+**/
+public class WriteTreatmentResource {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("CustomDeliveryConfiguration")
+    public CustomDeliveryConfiguration customDeliveryConfiguration;
+    public WriteTreatmentResource withCustomDeliveryConfiguration(CustomDeliveryConfiguration customDeliveryConfiguration) {
+        this.customDeliveryConfiguration = customDeliveryConfiguration;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("MessageConfiguration")
+    public MessageConfiguration messageConfiguration;
+    public WriteTreatmentResource withMessageConfiguration(MessageConfiguration messageConfiguration) {
+        this.messageConfiguration = messageConfiguration;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Schedule")
+    public Schedule schedule;
+    public WriteTreatmentResource withSchedule(Schedule schedule) {
+        this.schedule = schedule;
+        return this;
+    }
+    @JsonProperty("SizePercent")
+    public Long sizePercent;
+    public WriteTreatmentResource withSizePercent(Long sizePercent) {
+        this.sizePercent = sizePercent;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("TemplateConfiguration")
+    public TemplateConfiguration templateConfiguration;
+    public WriteTreatmentResource withTemplateConfiguration(TemplateConfiguration templateConfiguration) {
+        this.templateConfiguration = templateConfiguration;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("TreatmentDescription")
+    public String treatmentDescription;
+    public WriteTreatmentResource withTreatmentDescription(String treatmentDescription) {
+        this.treatmentDescription = treatmentDescription;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("TreatmentName")
+    public String treatmentName;
+    public WriteTreatmentResource withTreatmentName(String treatmentName) {
+        this.treatmentName = treatmentName;
+        return this;
+    }
+}

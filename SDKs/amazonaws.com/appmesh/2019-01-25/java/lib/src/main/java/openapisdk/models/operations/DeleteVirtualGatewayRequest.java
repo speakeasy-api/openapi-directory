@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class DeleteVirtualGatewayRequest {
+    public DeleteVirtualGatewayPathParams pathParams;
+    public DeleteVirtualGatewayRequest withPathParams(DeleteVirtualGatewayPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public DeleteVirtualGatewayQueryParams queryParams;
+    public DeleteVirtualGatewayRequest withQueryParams(DeleteVirtualGatewayQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public DeleteVirtualGatewayHeaders headers;
+    public DeleteVirtualGatewayRequest withHeaders(DeleteVirtualGatewayHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+}

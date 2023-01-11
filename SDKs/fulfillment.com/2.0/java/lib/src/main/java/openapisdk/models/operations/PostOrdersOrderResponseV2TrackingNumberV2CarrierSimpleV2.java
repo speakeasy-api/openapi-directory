@@ -1,0 +1,12 @@
+package openapisdk.models.operations;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+public class PostOrdersOrderResponseV2TrackingNumberV2CarrierSimpleV2 {
+    @JsonProperty("id")
+    public Long id;
+    public PostOrdersOrderResponseV2TrackingNumberV2CarrierSimpleV2 withId(Long id) {
+        this.id = id;
+        return this;
+    }
+}

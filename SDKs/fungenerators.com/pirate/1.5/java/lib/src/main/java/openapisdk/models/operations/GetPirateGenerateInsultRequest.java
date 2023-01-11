@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class GetPirateGenerateInsultRequest {
+    public GetPirateGenerateInsultQueryParams queryParams;
+    public GetPirateGenerateInsultRequest withQueryParams(GetPirateGenerateInsultQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public GetPirateGenerateInsultSecurity security;
+    public GetPirateGenerateInsultRequest withSecurity(GetPirateGenerateInsultSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

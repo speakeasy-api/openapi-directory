@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class EobsCreateRequest {
+    public EobsCreateQueryParams queryParams;
+    public EobsCreateRequest withQueryParams(EobsCreateQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public EobsCreateSecurity security;
+    public EobsCreateRequest withSecurity(EobsCreateSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

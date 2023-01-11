@@ -1,0 +1,24 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class AppengineAppsFirewallIngressRulesListSecurity {
+    @SpeakeasyMetadata("security:option=true")
+    public AppengineAppsFirewallIngressRulesListSecurityOption1 option1;
+    public AppengineAppsFirewallIngressRulesListSecurity withOption1(AppengineAppsFirewallIngressRulesListSecurityOption1 option1) {
+        this.option1 = option1;
+        return this;
+    }
+    @SpeakeasyMetadata("security:option=true")
+    public AppengineAppsFirewallIngressRulesListSecurityOption2 option2;
+    public AppengineAppsFirewallIngressRulesListSecurity withOption2(AppengineAppsFirewallIngressRulesListSecurityOption2 option2) {
+        this.option2 = option2;
+        return this;
+    }
+    @SpeakeasyMetadata("security:option=true")
+    public AppengineAppsFirewallIngressRulesListSecurityOption3 option3;
+    public AppengineAppsFirewallIngressRulesListSecurity withOption3(AppengineAppsFirewallIngressRulesListSecurityOption3 option3) {
+        this.option3 = option3;
+        return this;
+    }
+}

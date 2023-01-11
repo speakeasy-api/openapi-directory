@@ -1,0 +1,66 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+public class ReactionRollup {
+    @JsonProperty("+1")
+    public Long plus1;
+    public ReactionRollup withPlus1(Long plus1) {
+        this.plus1 = plus1;
+        return this;
+    }
+    @JsonProperty("-1")
+    public Long minus1;
+    public ReactionRollup withMinus1(Long minus1) {
+        this.minus1 = minus1;
+        return this;
+    }
+    @JsonProperty("confused")
+    public Long confused;
+    public ReactionRollup withConfused(Long confused) {
+        this.confused = confused;
+        return this;
+    }
+    @JsonProperty("eyes")
+    public Long eyes;
+    public ReactionRollup withEyes(Long eyes) {
+        this.eyes = eyes;
+        return this;
+    }
+    @JsonProperty("heart")
+    public Long heart;
+    public ReactionRollup withHeart(Long heart) {
+        this.heart = heart;
+        return this;
+    }
+    @JsonProperty("hooray")
+    public Long hooray;
+    public ReactionRollup withHooray(Long hooray) {
+        this.hooray = hooray;
+        return this;
+    }
+    @JsonProperty("laugh")
+    public Long laugh;
+    public ReactionRollup withLaugh(Long laugh) {
+        this.laugh = laugh;
+        return this;
+    }
+    @JsonProperty("rocket")
+    public Long rocket;
+    public ReactionRollup withRocket(Long rocket) {
+        this.rocket = rocket;
+        return this;
+    }
+    @JsonProperty("total_count")
+    public Long totalCount;
+    public ReactionRollup withTotalCount(Long totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    @JsonProperty("url")
+    public String url;
+    public ReactionRollup withUrl(String url) {
+        this.url = url;
+        return this;
+    }
+}

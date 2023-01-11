@@ -1,0 +1,54 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class RackGroup {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("description")
+    public String description;
+    public RackGroup withDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("id")
+    public Long id;
+    public RackGroup withId(Long id) {
+        this.id = id;
+        return this;
+    }
+    @JsonProperty("name")
+    public String name;
+    public RackGroup withName(String name) {
+        this.name = name;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("parent")
+    public NestedRackGroup parent;
+    public RackGroup withParent(NestedRackGroup parent) {
+        this.parent = parent;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("rack_count")
+    public Long rackCount;
+    public RackGroup withRackCount(Long rackCount) {
+        this.rackCount = rackCount;
+        return this;
+    }
+    @JsonProperty("site")
+    public NestedSite site;
+    public RackGroup withSite(NestedSite site) {
+        this.site = site;
+        return this;
+    }
+    @JsonProperty("slug")
+    public String slug;
+    public RackGroup withSlug(String slug) {
+        this.slug = slug;
+        return this;
+    }
+}

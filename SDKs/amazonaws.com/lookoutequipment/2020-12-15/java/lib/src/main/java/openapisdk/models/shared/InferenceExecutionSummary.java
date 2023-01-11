@@ -1,0 +1,107 @@
+package openapisdk.models.shared;
+
+import java.time.OffsetDateTime;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import openapisdk.utils.DateTimeSerializer;
+import openapisdk.utils.DateTimeDeserializer;
+
+/**
+ * InferenceExecutionSummary
+ * Contains information about the specific inference execution, including input and output data configuration, inference scheduling information, status, and so on. 
+**/
+public class InferenceExecutionSummary {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("CustomerResultObject")
+    public S3Object customerResultObject;
+    public InferenceExecutionSummary withCustomerResultObject(S3Object customerResultObject) {
+        this.customerResultObject = customerResultObject;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonSerialize(contentUsing = DateTimeSerializer.class)
+    @JsonDeserialize(contentUsing = DateTimeDeserializer.class)
+    @JsonProperty("DataEndTime")
+    public OffsetDateTime dataEndTime;
+    public InferenceExecutionSummary withDataEndTime(OffsetDateTime dataEndTime) {
+        this.dataEndTime = dataEndTime;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("DataInputConfiguration")
+    public InferenceInputConfiguration dataInputConfiguration;
+    public InferenceExecutionSummary withDataInputConfiguration(InferenceInputConfiguration dataInputConfiguration) {
+        this.dataInputConfiguration = dataInputConfiguration;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("DataOutputConfiguration")
+    public InferenceOutputConfiguration dataOutputConfiguration;
+    public InferenceExecutionSummary withDataOutputConfiguration(InferenceOutputConfiguration dataOutputConfiguration) {
+        this.dataOutputConfiguration = dataOutputConfiguration;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonSerialize(contentUsing = DateTimeSerializer.class)
+    @JsonDeserialize(contentUsing = DateTimeDeserializer.class)
+    @JsonProperty("DataStartTime")
+    public OffsetDateTime dataStartTime;
+    public InferenceExecutionSummary withDataStartTime(OffsetDateTime dataStartTime) {
+        this.dataStartTime = dataStartTime;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("FailedReason")
+    public String failedReason;
+    public InferenceExecutionSummary withFailedReason(String failedReason) {
+        this.failedReason = failedReason;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("InferenceSchedulerArn")
+    public String inferenceSchedulerArn;
+    public InferenceExecutionSummary withInferenceSchedulerArn(String inferenceSchedulerArn) {
+        this.inferenceSchedulerArn = inferenceSchedulerArn;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("InferenceSchedulerName")
+    public String inferenceSchedulerName;
+    public InferenceExecutionSummary withInferenceSchedulerName(String inferenceSchedulerName) {
+        this.inferenceSchedulerName = inferenceSchedulerName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ModelArn")
+    public String modelArn;
+    public InferenceExecutionSummary withModelArn(String modelArn) {
+        this.modelArn = modelArn;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ModelName")
+    public String modelName;
+    public InferenceExecutionSummary withModelName(String modelName) {
+        this.modelName = modelName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonSerialize(contentUsing = DateTimeSerializer.class)
+    @JsonDeserialize(contentUsing = DateTimeDeserializer.class)
+    @JsonProperty("ScheduledStartTime")
+    public OffsetDateTime scheduledStartTime;
+    public InferenceExecutionSummary withScheduledStartTime(OffsetDateTime scheduledStartTime) {
+        this.scheduledStartTime = scheduledStartTime;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Status")
+    public InferenceExecutionStatusEnum status;
+    public InferenceExecutionSummary withStatus(InferenceExecutionStatusEnum status) {
+        this.status = status;
+        return this;
+    }
+}

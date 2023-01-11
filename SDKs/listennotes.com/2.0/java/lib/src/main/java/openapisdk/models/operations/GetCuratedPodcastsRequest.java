@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class GetCuratedPodcastsRequest {
+    public GetCuratedPodcastsQueryParams queryParams;
+    public GetCuratedPodcastsRequest withQueryParams(GetCuratedPodcastsQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public GetCuratedPodcastsHeaders headers;
+    public GetCuratedPodcastsRequest withHeaders(GetCuratedPodcastsHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+}

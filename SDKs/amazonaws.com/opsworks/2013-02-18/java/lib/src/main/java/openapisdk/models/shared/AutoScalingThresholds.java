@@ -1,0 +1,61 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * AutoScalingThresholds
+ * Describes a load-based auto scaling upscaling or downscaling threshold configuration, which specifies when AWS OpsWorks Stacks starts or stops load-based instances.
+**/
+public class AutoScalingThresholds {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Alarms")
+    public String[] alarms;
+    public AutoScalingThresholds withAlarms(String[] alarms) {
+        this.alarms = alarms;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("CpuThreshold")
+    public Double cpuThreshold;
+    public AutoScalingThresholds withCpuThreshold(Double cpuThreshold) {
+        this.cpuThreshold = cpuThreshold;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("IgnoreMetricsTime")
+    public Long ignoreMetricsTime;
+    public AutoScalingThresholds withIgnoreMetricsTime(Long ignoreMetricsTime) {
+        this.ignoreMetricsTime = ignoreMetricsTime;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("InstanceCount")
+    public Long instanceCount;
+    public AutoScalingThresholds withInstanceCount(Long instanceCount) {
+        this.instanceCount = instanceCount;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("LoadThreshold")
+    public Double loadThreshold;
+    public AutoScalingThresholds withLoadThreshold(Double loadThreshold) {
+        this.loadThreshold = loadThreshold;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("MemoryThreshold")
+    public Double memoryThreshold;
+    public AutoScalingThresholds withMemoryThreshold(Double memoryThreshold) {
+        this.memoryThreshold = memoryThreshold;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ThresholdsWaitTime")
+    public Long thresholdsWaitTime;
+    public AutoScalingThresholds withThresholdsWaitTime(Long thresholdsWaitTime) {
+        this.thresholdsWaitTime = thresholdsWaitTime;
+        return this;
+    }
+}

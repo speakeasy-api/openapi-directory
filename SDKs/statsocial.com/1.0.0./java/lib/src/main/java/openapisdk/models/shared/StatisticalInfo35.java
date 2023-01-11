@@ -1,0 +1,29 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class StatisticalInfo35 {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("error_range")
+    public Long errorRange;
+    public StatisticalInfo35 withErrorRange(Long errorRange) {
+        this.errorRange = errorRange;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("lower_bound")
+    public Long lowerBound;
+    public StatisticalInfo35 withLowerBound(Long lowerBound) {
+        this.lowerBound = lowerBound;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("upper_bound")
+    public Long upperBound;
+    public StatisticalInfo35 withUpperBound(Long upperBound) {
+        this.upperBound = upperBound;
+        return this;
+    }
+}

@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class AnalyticsManagementUnsampledReportsListRequest {
+    public AnalyticsManagementUnsampledReportsListPathParams pathParams;
+    public AnalyticsManagementUnsampledReportsListRequest withPathParams(AnalyticsManagementUnsampledReportsListPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public AnalyticsManagementUnsampledReportsListQueryParams queryParams;
+    public AnalyticsManagementUnsampledReportsListRequest withQueryParams(AnalyticsManagementUnsampledReportsListQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public AnalyticsManagementUnsampledReportsListSecurity security;
+    public AnalyticsManagementUnsampledReportsListRequest withSecurity(AnalyticsManagementUnsampledReportsListSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

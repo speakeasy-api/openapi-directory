@@ -1,0 +1,34 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+/**
+ * BoundingBox
+ * Bounding box that defines a region of an image.
+**/
+public class BoundingBox {
+    @JsonProperty("height")
+    public Float height;
+    public BoundingBox withHeight(Float height) {
+        this.height = height;
+        return this;
+    }
+    @JsonProperty("left")
+    public Float left;
+    public BoundingBox withLeft(Float left) {
+        this.left = left;
+        return this;
+    }
+    @JsonProperty("top")
+    public Float top;
+    public BoundingBox withTop(Float top) {
+        this.top = top;
+        return this;
+    }
+    @JsonProperty("width")
+    public Float width;
+    public BoundingBox withWidth(Float width) {
+        this.width = width;
+        return this;
+    }
+}

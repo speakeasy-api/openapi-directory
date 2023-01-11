@@ -1,0 +1,22 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class UpdatePublicKey20190326Request {
+    public UpdatePublicKey20190326PathParams pathParams;
+    public UpdatePublicKey20190326Request withPathParams(UpdatePublicKey20190326PathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public UpdatePublicKey20190326Headers headers;
+    public UpdatePublicKey20190326Request withHeaders(UpdatePublicKey20190326Headers headers) {
+        this.headers = headers;
+        return this;
+    }
+    @SpeakeasyMetadata("request:mediaType=text/xml")
+    public byte[] request;
+    public UpdatePublicKey20190326Request withRequest(byte[] request) {
+        this.request = request;
+        return this;
+    }
+}

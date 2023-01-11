@@ -1,0 +1,28 @@
+package openapisdk.models.shared;
+
+
+public enum ComponentClsEnum {
+    LABEL_COMPONENT("labelComponent"),
+    NUMBER_COMPONENT("numberComponent"),
+    TEXT_COMPONENT("textComponent"),
+    IMAGE_COMPONENT("imageComponent"),
+    DATE_COMPONENT("dateComponent"),
+    HLINE_COMPONENT("hlineComponent"),
+    VLINE_COMPONENT("vlineComponent"),
+    TABLE_COMPONENT("tableComponent"),
+    COMPOSITE_COMPONENT("compositeComponent"),
+    BARCODE_COMPONENT("barcodeComponent"),
+    QRCODE_COMPONENT("qrcodeComponent"),
+    CHART_COMPONENT("chartComponent"),
+    RECTANGLE_COMPONENT("rectangleComponent"),
+    HEADER_COMPONENT("headerComponent"),
+    FOOTER_COMPONENT("footerComponent"),
+    CHECKBOX_COMPONENT("checkboxComponent"),
+    RADIO_COMPONENT("radioComponent");
+
+    public final String value;
+
+    private ComponentClsEnum(String value) {
+        this.value = value;
+    }
+}

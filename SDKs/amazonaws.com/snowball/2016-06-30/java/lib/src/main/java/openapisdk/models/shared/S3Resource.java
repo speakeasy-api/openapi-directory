@@ -1,0 +1,33 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * S3Resource
+ * Each <code>S3Resource</code> object represents an Amazon S3 bucket that your transferred data will be exported from or imported into. For export jobs, this object can have an optional <code>KeyRange</code> value. The length of the range is defined at job creation, and has either an inclusive <code>BeginMarker</code>, an inclusive <code>EndMarker</code>, or both. Ranges are UTF-8 binary sorted.
+**/
+public class S3Resource {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("BucketArn")
+    public String bucketArn;
+    public S3Resource withBucketArn(String bucketArn) {
+        this.bucketArn = bucketArn;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("KeyRange")
+    public KeyRange keyRange;
+    public S3Resource withKeyRange(KeyRange keyRange) {
+        this.keyRange = keyRange;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("TargetOnDeviceServices")
+    public TargetOnDeviceService[] targetOnDeviceServices;
+    public S3Resource withTargetOnDeviceServices(TargetOnDeviceService[] targetOnDeviceServices) {
+        this.targetOnDeviceServices = targetOnDeviceServices;
+        return this;
+    }
+}

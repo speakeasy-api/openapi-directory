@@ -1,0 +1,20 @@
+package openapisdk.models.shared;
+
+
+
+/**
+ * ForwardActionConfig
+ * Information about a forward action.
+**/
+public class ForwardActionConfig {
+    public TargetGroupStickinessConfig targetGroupStickinessConfig;
+    public ForwardActionConfig withTargetGroupStickinessConfig(TargetGroupStickinessConfig targetGroupStickinessConfig) {
+        this.targetGroupStickinessConfig = targetGroupStickinessConfig;
+        return this;
+    }
+    public TargetGroupTuple[] targetGroups;
+    public ForwardActionConfig withTargetGroups(TargetGroupTuple[] targetGroups) {
+        this.targetGroups = targetGroups;
+        return this;
+    }
+}

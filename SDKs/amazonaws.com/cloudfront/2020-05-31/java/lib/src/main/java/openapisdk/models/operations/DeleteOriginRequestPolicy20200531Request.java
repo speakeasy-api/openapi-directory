@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class DeleteOriginRequestPolicy20200531Request {
+    public DeleteOriginRequestPolicy20200531PathParams pathParams;
+    public DeleteOriginRequestPolicy20200531Request withPathParams(DeleteOriginRequestPolicy20200531PathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public DeleteOriginRequestPolicy20200531Headers headers;
+    public DeleteOriginRequestPolicy20200531Request withHeaders(DeleteOriginRequestPolicy20200531Headers headers) {
+        this.headers = headers;
+        return this;
+    }
+}

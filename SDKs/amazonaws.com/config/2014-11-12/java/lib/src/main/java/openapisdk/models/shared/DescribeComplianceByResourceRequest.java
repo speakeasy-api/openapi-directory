@@ -1,0 +1,47 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * DescribeComplianceByResourceRequest
+ * <p/>
+**/
+public class DescribeComplianceByResourceRequest {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ComplianceTypes")
+    public ComplianceTypeEnum[] complianceTypes;
+    public DescribeComplianceByResourceRequest withComplianceTypes(ComplianceTypeEnum[] complianceTypes) {
+        this.complianceTypes = complianceTypes;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Limit")
+    public Long limit;
+    public DescribeComplianceByResourceRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("NextToken")
+    public String nextToken;
+    public DescribeComplianceByResourceRequest withNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ResourceId")
+    public String resourceId;
+    public DescribeComplianceByResourceRequest withResourceId(String resourceId) {
+        this.resourceId = resourceId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ResourceType")
+    public String resourceType;
+    public DescribeComplianceByResourceRequest withResourceType(String resourceType) {
+        this.resourceType = resourceType;
+        return this;
+    }
+}

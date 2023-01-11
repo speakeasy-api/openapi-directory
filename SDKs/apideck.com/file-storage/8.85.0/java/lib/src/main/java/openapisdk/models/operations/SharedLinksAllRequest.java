@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class SharedLinksAllRequest {
+    public SharedLinksAllQueryParams queryParams;
+    public SharedLinksAllRequest withQueryParams(SharedLinksAllQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public SharedLinksAllHeaders headers;
+    public SharedLinksAllRequest withHeaders(SharedLinksAllHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+    public SharedLinksAllSecurity security;
+    public SharedLinksAllRequest withSecurity(SharedLinksAllSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

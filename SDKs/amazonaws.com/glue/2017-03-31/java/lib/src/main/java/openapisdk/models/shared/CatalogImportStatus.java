@@ -1,0 +1,40 @@
+package openapisdk.models.shared;
+
+import java.time.OffsetDateTime;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import openapisdk.utils.DateTimeSerializer;
+import openapisdk.utils.DateTimeDeserializer;
+
+/**
+ * CatalogImportStatus
+ * A structure containing migration status information.
+**/
+public class CatalogImportStatus {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ImportCompleted")
+    public Boolean importCompleted;
+    public CatalogImportStatus withImportCompleted(Boolean importCompleted) {
+        this.importCompleted = importCompleted;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonSerialize(contentUsing = DateTimeSerializer.class)
+    @JsonDeserialize(contentUsing = DateTimeDeserializer.class)
+    @JsonProperty("ImportTime")
+    public OffsetDateTime importTime;
+    public CatalogImportStatus withImportTime(OffsetDateTime importTime) {
+        this.importTime = importTime;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ImportedBy")
+    public String importedBy;
+    public CatalogImportStatus withImportedBy(String importedBy) {
+        this.importedBy = importedBy;
+        return this;
+    }
+}

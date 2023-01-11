@@ -1,0 +1,28 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+/**
+ * BinaryColumnStatisticsData
+ * Defines column statistics supported for bit sequence data values.
+**/
+public class BinaryColumnStatisticsData {
+    @JsonProperty("AverageLength")
+    public Double averageLength;
+    public BinaryColumnStatisticsData withAverageLength(Double averageLength) {
+        this.averageLength = averageLength;
+        return this;
+    }
+    @JsonProperty("MaximumLength")
+    public Long maximumLength;
+    public BinaryColumnStatisticsData withMaximumLength(Long maximumLength) {
+        this.maximumLength = maximumLength;
+        return this;
+    }
+    @JsonProperty("NumberOfNulls")
+    public Long numberOfNulls;
+    public BinaryColumnStatisticsData withNumberOfNulls(Long numberOfNulls) {
+        this.numberOfNulls = numberOfNulls;
+        return this;
+    }
+}

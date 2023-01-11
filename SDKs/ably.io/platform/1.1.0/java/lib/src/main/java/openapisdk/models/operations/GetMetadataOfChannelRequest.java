@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class GetMetadataOfChannelRequest {
+    public GetMetadataOfChannelPathParams pathParams;
+    public GetMetadataOfChannelRequest withPathParams(GetMetadataOfChannelPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public GetMetadataOfChannelQueryParams queryParams;
+    public GetMetadataOfChannelRequest withQueryParams(GetMetadataOfChannelQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public GetMetadataOfChannelHeaders headers;
+    public GetMetadataOfChannelRequest withHeaders(GetMetadataOfChannelHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+}

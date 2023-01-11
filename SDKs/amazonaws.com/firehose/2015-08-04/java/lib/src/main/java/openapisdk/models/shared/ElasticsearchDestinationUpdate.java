@@ -1,0 +1,89 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * ElasticsearchDestinationUpdate
+ * Describes an update for a destination in Amazon ES.
+**/
+public class ElasticsearchDestinationUpdate {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("BufferingHints")
+    public ElasticsearchBufferingHints bufferingHints;
+    public ElasticsearchDestinationUpdate withBufferingHints(ElasticsearchBufferingHints bufferingHints) {
+        this.bufferingHints = bufferingHints;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("CloudWatchLoggingOptions")
+    public CloudWatchLoggingOptions cloudWatchLoggingOptions;
+    public ElasticsearchDestinationUpdate withCloudWatchLoggingOptions(CloudWatchLoggingOptions cloudWatchLoggingOptions) {
+        this.cloudWatchLoggingOptions = cloudWatchLoggingOptions;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ClusterEndpoint")
+    public String clusterEndpoint;
+    public ElasticsearchDestinationUpdate withClusterEndpoint(String clusterEndpoint) {
+        this.clusterEndpoint = clusterEndpoint;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("DomainARN")
+    public String domainARN;
+    public ElasticsearchDestinationUpdate withDomainArn(String domainARN) {
+        this.domainARN = domainARN;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("IndexName")
+    public String indexName;
+    public ElasticsearchDestinationUpdate withIndexName(String indexName) {
+        this.indexName = indexName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("IndexRotationPeriod")
+    public ElasticsearchIndexRotationPeriodEnum indexRotationPeriod;
+    public ElasticsearchDestinationUpdate withIndexRotationPeriod(ElasticsearchIndexRotationPeriodEnum indexRotationPeriod) {
+        this.indexRotationPeriod = indexRotationPeriod;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ProcessingConfiguration")
+    public ProcessingConfiguration processingConfiguration;
+    public ElasticsearchDestinationUpdate withProcessingConfiguration(ProcessingConfiguration processingConfiguration) {
+        this.processingConfiguration = processingConfiguration;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("RetryOptions")
+    public ElasticsearchRetryOptions retryOptions;
+    public ElasticsearchDestinationUpdate withRetryOptions(ElasticsearchRetryOptions retryOptions) {
+        this.retryOptions = retryOptions;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("RoleARN")
+    public String roleARN;
+    public ElasticsearchDestinationUpdate withRoleArn(String roleARN) {
+        this.roleARN = roleARN;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("S3Update")
+    public S3DestinationUpdate s3Update;
+    public ElasticsearchDestinationUpdate withS3Update(S3DestinationUpdate s3Update) {
+        this.s3Update = s3Update;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("TypeName")
+    public String typeName;
+    public ElasticsearchDestinationUpdate withTypeName(String typeName) {
+        this.typeName = typeName;
+        return this;
+    }
+}

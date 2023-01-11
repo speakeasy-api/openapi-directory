@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class CashinRequest {
+    public CashinPathParams pathParams;
+    public CashinRequest withPathParams(CashinPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public CashinQueryParams queryParams;
+    public CashinRequest withQueryParams(CashinQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public CashinHeaders headers;
+    public CashinRequest withHeaders(CashinHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+}

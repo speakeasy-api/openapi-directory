@@ -1,0 +1,25 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * CodeConfiguration
+ * Describes the configuration that AWS App Runner uses to build and run an App Runner service from a source code repository.
+**/
+public class CodeConfiguration {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("CodeConfigurationValues")
+    public CodeConfigurationValues codeConfigurationValues;
+    public CodeConfiguration withCodeConfigurationValues(CodeConfigurationValues codeConfigurationValues) {
+        this.codeConfigurationValues = codeConfigurationValues;
+        return this;
+    }
+    @JsonProperty("ConfigurationSource")
+    public ConfigurationSourceEnum configurationSource;
+    public CodeConfiguration withConfigurationSource(ConfigurationSourceEnum configurationSource) {
+        this.configurationSource = configurationSource;
+        return this;
+    }
+}

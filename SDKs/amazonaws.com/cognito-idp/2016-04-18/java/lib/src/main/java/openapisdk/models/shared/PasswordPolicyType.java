@@ -1,0 +1,54 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * PasswordPolicyType
+ * The password policy type.
+**/
+public class PasswordPolicyType {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("MinimumLength")
+    public Long minimumLength;
+    public PasswordPolicyType withMinimumLength(Long minimumLength) {
+        this.minimumLength = minimumLength;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("RequireLowercase")
+    public Boolean requireLowercase;
+    public PasswordPolicyType withRequireLowercase(Boolean requireLowercase) {
+        this.requireLowercase = requireLowercase;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("RequireNumbers")
+    public Boolean requireNumbers;
+    public PasswordPolicyType withRequireNumbers(Boolean requireNumbers) {
+        this.requireNumbers = requireNumbers;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("RequireSymbols")
+    public Boolean requireSymbols;
+    public PasswordPolicyType withRequireSymbols(Boolean requireSymbols) {
+        this.requireSymbols = requireSymbols;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("RequireUppercase")
+    public Boolean requireUppercase;
+    public PasswordPolicyType withRequireUppercase(Boolean requireUppercase) {
+        this.requireUppercase = requireUppercase;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("TemporaryPasswordValidityDays")
+    public Long temporaryPasswordValidityDays;
+    public PasswordPolicyType withTemporaryPasswordValidityDays(Long temporaryPasswordValidityDays) {
+        this.temporaryPasswordValidityDays = temporaryPasswordValidityDays;
+        return this;
+    }
+}

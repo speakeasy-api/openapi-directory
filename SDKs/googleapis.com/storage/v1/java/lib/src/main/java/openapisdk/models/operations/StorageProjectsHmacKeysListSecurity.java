@@ -1,0 +1,30 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class StorageProjectsHmacKeysListSecurity {
+    @SpeakeasyMetadata("security:option=true")
+    public StorageProjectsHmacKeysListSecurityOption1 option1;
+    public StorageProjectsHmacKeysListSecurity withOption1(StorageProjectsHmacKeysListSecurityOption1 option1) {
+        this.option1 = option1;
+        return this;
+    }
+    @SpeakeasyMetadata("security:option=true")
+    public StorageProjectsHmacKeysListSecurityOption2 option2;
+    public StorageProjectsHmacKeysListSecurity withOption2(StorageProjectsHmacKeysListSecurityOption2 option2) {
+        this.option2 = option2;
+        return this;
+    }
+    @SpeakeasyMetadata("security:option=true")
+    public StorageProjectsHmacKeysListSecurityOption3 option3;
+    public StorageProjectsHmacKeysListSecurity withOption3(StorageProjectsHmacKeysListSecurityOption3 option3) {
+        this.option3 = option3;
+        return this;
+    }
+    @SpeakeasyMetadata("security:option=true")
+    public StorageProjectsHmacKeysListSecurityOption4 option4;
+    public StorageProjectsHmacKeysListSecurity withOption4(StorageProjectsHmacKeysListSecurityOption4 option4) {
+        this.option4 = option4;
+        return this;
+    }
+}

@@ -1,0 +1,49 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class TerminateProvisionedProductInput {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("AcceptLanguage")
+    public String acceptLanguage;
+    public TerminateProvisionedProductInput withAcceptLanguage(String acceptLanguage) {
+        this.acceptLanguage = acceptLanguage;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("IgnoreErrors")
+    public Boolean ignoreErrors;
+    public TerminateProvisionedProductInput withIgnoreErrors(Boolean ignoreErrors) {
+        this.ignoreErrors = ignoreErrors;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ProvisionedProductId")
+    public String provisionedProductId;
+    public TerminateProvisionedProductInput withProvisionedProductId(String provisionedProductId) {
+        this.provisionedProductId = provisionedProductId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ProvisionedProductName")
+    public String provisionedProductName;
+    public TerminateProvisionedProductInput withProvisionedProductName(String provisionedProductName) {
+        this.provisionedProductName = provisionedProductName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("RetainPhysicalResources")
+    public Boolean retainPhysicalResources;
+    public TerminateProvisionedProductInput withRetainPhysicalResources(Boolean retainPhysicalResources) {
+        this.retainPhysicalResources = retainPhysicalResources;
+        return this;
+    }
+    @JsonProperty("TerminateToken")
+    public String terminateToken;
+    public TerminateProvisionedProductInput withTerminateToken(String terminateToken) {
+        this.terminateToken = terminateToken;
+        return this;
+    }
+}

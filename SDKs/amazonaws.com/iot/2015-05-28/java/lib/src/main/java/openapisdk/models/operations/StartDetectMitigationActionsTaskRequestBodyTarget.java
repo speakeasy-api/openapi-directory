@@ -1,0 +1,33 @@
+package openapisdk.models.operations;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * StartDetectMitigationActionsTaskRequestBodyTarget
+ *  The target of a mitigation action task. 
+**/
+public class StartDetectMitigationActionsTaskRequestBodyTarget {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("behaviorName")
+    public String behaviorName;
+    public StartDetectMitigationActionsTaskRequestBodyTarget withBehaviorName(String behaviorName) {
+        this.behaviorName = behaviorName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("securityProfileName")
+    public String securityProfileName;
+    public StartDetectMitigationActionsTaskRequestBodyTarget withSecurityProfileName(String securityProfileName) {
+        this.securityProfileName = securityProfileName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("violationIds")
+    public String[] violationIds;
+    public StartDetectMitigationActionsTaskRequestBodyTarget withViolationIds(String[] violationIds) {
+        this.violationIds = violationIds;
+        return this;
+    }
+}

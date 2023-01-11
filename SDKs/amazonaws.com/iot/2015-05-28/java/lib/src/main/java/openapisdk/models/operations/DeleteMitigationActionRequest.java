@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class DeleteMitigationActionRequest {
+    public DeleteMitigationActionPathParams pathParams;
+    public DeleteMitigationActionRequest withPathParams(DeleteMitigationActionPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public DeleteMitigationActionHeaders headers;
+    public DeleteMitigationActionRequest withHeaders(DeleteMitigationActionHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+}

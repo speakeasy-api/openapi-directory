@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class OfficesAddExamRoomRequest {
+    public OfficesAddExamRoomPathParams pathParams;
+    public OfficesAddExamRoomRequest withPathParams(OfficesAddExamRoomPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public OfficesAddExamRoomQueryParams queryParams;
+    public OfficesAddExamRoomRequest withQueryParams(OfficesAddExamRoomQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public OfficesAddExamRoomSecurity security;
+    public OfficesAddExamRoomRequest withSecurity(OfficesAddExamRoomSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

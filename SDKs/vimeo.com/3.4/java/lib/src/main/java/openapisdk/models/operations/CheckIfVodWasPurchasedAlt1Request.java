@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class CheckIfVodWasPurchasedAlt1Request {
+    public CheckIfVodWasPurchasedAlt1PathParams pathParams;
+    public CheckIfVodWasPurchasedAlt1Request withPathParams(CheckIfVodWasPurchasedAlt1PathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public CheckIfVodWasPurchasedAlt1Security security;
+    public CheckIfVodWasPurchasedAlt1Request withSecurity(CheckIfVodWasPurchasedAlt1Security security) {
+        this.security = security;
+        return this;
+    }
+}

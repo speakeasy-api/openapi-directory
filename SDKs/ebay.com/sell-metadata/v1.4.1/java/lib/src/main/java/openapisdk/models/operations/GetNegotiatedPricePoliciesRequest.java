@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class GetNegotiatedPricePoliciesRequest {
+    public GetNegotiatedPricePoliciesPathParams pathParams;
+    public GetNegotiatedPricePoliciesRequest withPathParams(GetNegotiatedPricePoliciesPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public GetNegotiatedPricePoliciesQueryParams queryParams;
+    public GetNegotiatedPricePoliciesRequest withQueryParams(GetNegotiatedPricePoliciesQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public GetNegotiatedPricePoliciesSecurity security;
+    public GetNegotiatedPricePoliciesRequest withSecurity(GetNegotiatedPricePoliciesSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

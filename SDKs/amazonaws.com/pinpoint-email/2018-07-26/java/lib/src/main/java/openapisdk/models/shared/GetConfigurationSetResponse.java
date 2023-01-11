@@ -1,0 +1,54 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * GetConfigurationSetResponse
+ * Information about a configuration set.
+**/
+public class GetConfigurationSetResponse {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ConfigurationSetName")
+    public String configurationSetName;
+    public GetConfigurationSetResponse withConfigurationSetName(String configurationSetName) {
+        this.configurationSetName = configurationSetName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("DeliveryOptions")
+    public DeliveryOptions deliveryOptions;
+    public GetConfigurationSetResponse withDeliveryOptions(DeliveryOptions deliveryOptions) {
+        this.deliveryOptions = deliveryOptions;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ReputationOptions")
+    public ReputationOptions reputationOptions;
+    public GetConfigurationSetResponse withReputationOptions(ReputationOptions reputationOptions) {
+        this.reputationOptions = reputationOptions;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("SendingOptions")
+    public SendingOptions sendingOptions;
+    public GetConfigurationSetResponse withSendingOptions(SendingOptions sendingOptions) {
+        this.sendingOptions = sendingOptions;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Tags")
+    public Tag[] tags;
+    public GetConfigurationSetResponse withTags(Tag[] tags) {
+        this.tags = tags;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("TrackingOptions")
+    public TrackingOptions trackingOptions;
+    public GetConfigurationSetResponse withTrackingOptions(TrackingOptions trackingOptions) {
+        this.trackingOptions = trackingOptions;
+        return this;
+    }
+}

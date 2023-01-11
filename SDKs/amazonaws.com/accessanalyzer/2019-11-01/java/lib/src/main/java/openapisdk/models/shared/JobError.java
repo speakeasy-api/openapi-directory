@@ -1,0 +1,22 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+/**
+ * JobError
+ * Contains the details about the policy generation error.
+**/
+public class JobError {
+    @JsonProperty("code")
+    public JobErrorCodeEnum code;
+    public JobError withCode(JobErrorCodeEnum code) {
+        this.code = code;
+        return this;
+    }
+    @JsonProperty("message")
+    public String message;
+    public JobError withMessage(String message) {
+        this.message = message;
+        return this;
+    }
+}

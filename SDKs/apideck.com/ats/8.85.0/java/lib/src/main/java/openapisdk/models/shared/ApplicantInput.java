@@ -1,0 +1,212 @@
+package openapisdk.models.shared;
+
+import java.time.LocalDate;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class ApplicantInput {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("addresses")
+    public Address[] addresses;
+    public ApplicantInput withAddresses(Address[] addresses) {
+        this.addresses = addresses;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("anonymized")
+    public Boolean anonymized;
+    public ApplicantInput withAnonymized(Boolean anonymized) {
+        this.anonymized = anonymized;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("applications")
+    public String[] applications;
+    public ApplicantInput withApplications(String[] applications) {
+        this.applications = applications;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("archived")
+    public Boolean archived;
+    public ApplicantInput withArchived(Boolean archived) {
+        this.archived = archived;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("birthday")
+    public LocalDate birthday;
+    public ApplicantInput withBirthday(LocalDate birthday) {
+        this.birthday = birthday;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("confidential")
+    public Boolean confidential;
+    public ApplicantInput withConfidential(Boolean confidential) {
+        this.confidential = confidential;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("coordinator_id")
+    public String coordinatorId;
+    public ApplicantInput withCoordinatorId(String coordinatorId) {
+        this.coordinatorId = coordinatorId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("cover_letter")
+    public String coverLetter;
+    public ApplicantInput withCoverLetter(String coverLetter) {
+        this.coverLetter = coverLetter;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("deleted")
+    public Boolean deleted;
+    public ApplicantInput withDeleted(Boolean deleted) {
+        this.deleted = deleted;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("emails")
+    public Email[] emails;
+    public ApplicantInput withEmails(Email[] emails) {
+        this.emails = emails;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("first_name")
+    public String firstName;
+    public ApplicantInput withFirstName(String firstName) {
+        this.firstName = firstName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("followers")
+    public String[] followers;
+    public ApplicantInput withFollowers(String[] followers) {
+        this.followers = followers;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("headline")
+    public String headline;
+    public ApplicantInput withHeadline(String headline) {
+        this.headline = headline;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("initials")
+    public String initials;
+    public ApplicantInput withInitials(String initials) {
+        this.initials = initials;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("last_name")
+    public String lastName;
+    public ApplicantInput withLastName(String lastName) {
+        this.lastName = lastName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("middle_name")
+    public String middleName;
+    public ApplicantInput withMiddleName(String middleName) {
+        this.middleName = middleName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("name")
+    public String name;
+    public ApplicantInput withName(String name) {
+        this.name = name;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("owner_id")
+    public String ownerId;
+    public ApplicantInput withOwnerId(String ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("phone_numbers")
+    public PhoneNumber[] phoneNumbers;
+    public ApplicantInput withPhoneNumbers(PhoneNumber[] phoneNumbers) {
+        this.phoneNumbers = phoneNumbers;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("photo_url")
+    public String photoUrl;
+    public ApplicantInput withPhotoUrl(String photoUrl) {
+        this.photoUrl = photoUrl;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("position_id")
+    public String positionId;
+    public ApplicantInput withPositionId(String positionId) {
+        this.positionId = positionId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("record_url")
+    public String recordUrl;
+    public ApplicantInput withRecordUrl(String recordUrl) {
+        this.recordUrl = recordUrl;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("recruiter_id")
+    public String recruiterId;
+    public ApplicantInput withRecruiterId(String recruiterId) {
+        this.recruiterId = recruiterId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("social_links")
+    public ApplicantSocialLinks[] socialLinks;
+    public ApplicantInput withSocialLinks(ApplicantSocialLinks[] socialLinks) {
+        this.socialLinks = socialLinks;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("sources")
+    public String[] sources;
+    public ApplicantInput withSources(String[] sources) {
+        this.sources = sources;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("stage_id")
+    public String stageId;
+    public ApplicantInput withStageId(String stageId) {
+        this.stageId = stageId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("tags")
+    public String[] tags;
+    public ApplicantInput withTags(String[] tags) {
+        this.tags = tags;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("title")
+    public String title;
+    public ApplicantInput withTitle(String title) {
+        this.title = title;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("websites")
+    public ApplicantWebsites[] websites;
+    public ApplicantInput withWebsites(ApplicantWebsites[] websites) {
+        this.websites = websites;
+        return this;
+    }
+}

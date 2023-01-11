@@ -1,0 +1,29 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class ShowLinks {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("personas")
+    public Link[] personas;
+    public ShowLinks withPersonas(Link[] personas) {
+        this.personas = personas;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("playlists")
+    public Link playlists;
+    public ShowLinks withPlaylists(Link playlists) {
+        this.playlists = playlists;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("self")
+    public Link self;
+    public ShowLinks withSelf(Link self) {
+        this.self = self;
+        return this;
+    }
+}

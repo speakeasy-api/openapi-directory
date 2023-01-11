@@ -1,0 +1,53 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class StartRxNormInferenceJobRequest {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ClientRequestToken")
+    public String clientRequestToken;
+    public StartRxNormInferenceJobRequest withClientRequestToken(String clientRequestToken) {
+        this.clientRequestToken = clientRequestToken;
+        return this;
+    }
+    @JsonProperty("DataAccessRoleArn")
+    public String dataAccessRoleArn;
+    public StartRxNormInferenceJobRequest withDataAccessRoleArn(String dataAccessRoleArn) {
+        this.dataAccessRoleArn = dataAccessRoleArn;
+        return this;
+    }
+    @JsonProperty("InputDataConfig")
+    public InputDataConfig inputDataConfig;
+    public StartRxNormInferenceJobRequest withInputDataConfig(InputDataConfig inputDataConfig) {
+        this.inputDataConfig = inputDataConfig;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("JobName")
+    public String jobName;
+    public StartRxNormInferenceJobRequest withJobName(String jobName) {
+        this.jobName = jobName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("KMSKey")
+    public String kmsKey;
+    public StartRxNormInferenceJobRequest withKmsKey(String kmsKey) {
+        this.kmsKey = kmsKey;
+        return this;
+    }
+    @JsonProperty("LanguageCode")
+    public LanguageCodeEnum languageCode;
+    public StartRxNormInferenceJobRequest withLanguageCode(LanguageCodeEnum languageCode) {
+        this.languageCode = languageCode;
+        return this;
+    }
+    @JsonProperty("OutputDataConfig")
+    public OutputDataConfig outputDataConfig;
+    public StartRxNormInferenceJobRequest withOutputDataConfig(OutputDataConfig outputDataConfig) {
+        this.outputDataConfig = outputDataConfig;
+        return this;
+    }
+}

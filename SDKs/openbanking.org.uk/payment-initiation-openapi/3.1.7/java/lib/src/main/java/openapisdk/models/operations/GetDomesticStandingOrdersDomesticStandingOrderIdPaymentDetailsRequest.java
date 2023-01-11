@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class GetDomesticStandingOrdersDomesticStandingOrderIdPaymentDetailsRequest {
+    public GetDomesticStandingOrdersDomesticStandingOrderIdPaymentDetailsPathParams pathParams;
+    public GetDomesticStandingOrdersDomesticStandingOrderIdPaymentDetailsRequest withPathParams(GetDomesticStandingOrdersDomesticStandingOrderIdPaymentDetailsPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public GetDomesticStandingOrdersDomesticStandingOrderIdPaymentDetailsHeaders headers;
+    public GetDomesticStandingOrdersDomesticStandingOrderIdPaymentDetailsRequest withHeaders(GetDomesticStandingOrdersDomesticStandingOrderIdPaymentDetailsHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+    public GetDomesticStandingOrdersDomesticStandingOrderIdPaymentDetailsSecurity security;
+    public GetDomesticStandingOrdersDomesticStandingOrderIdPaymentDetailsRequest withSecurity(GetDomesticStandingOrdersDomesticStandingOrderIdPaymentDetailsSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

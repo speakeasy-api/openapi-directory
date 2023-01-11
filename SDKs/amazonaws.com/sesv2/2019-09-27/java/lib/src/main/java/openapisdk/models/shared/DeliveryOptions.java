@@ -1,0 +1,26 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * DeliveryOptions
+ * Used to associate a configuration set with a dedicated IP pool.
+**/
+public class DeliveryOptions {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("SendingPoolName")
+    public String sendingPoolName;
+    public DeliveryOptions withSendingPoolName(String sendingPoolName) {
+        this.sendingPoolName = sendingPoolName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("TlsPolicy")
+    public TlsPolicyEnum tlsPolicy;
+    public DeliveryOptions withTlsPolicy(TlsPolicyEnum tlsPolicy) {
+        this.tlsPolicy = tlsPolicy;
+        return this;
+    }
+}

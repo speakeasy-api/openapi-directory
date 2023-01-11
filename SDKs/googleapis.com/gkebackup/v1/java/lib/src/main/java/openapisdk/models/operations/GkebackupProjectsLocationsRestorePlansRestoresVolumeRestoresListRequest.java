@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class GkebackupProjectsLocationsRestorePlansRestoresVolumeRestoresListRequest {
+    public GkebackupProjectsLocationsRestorePlansRestoresVolumeRestoresListPathParams pathParams;
+    public GkebackupProjectsLocationsRestorePlansRestoresVolumeRestoresListRequest withPathParams(GkebackupProjectsLocationsRestorePlansRestoresVolumeRestoresListPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public GkebackupProjectsLocationsRestorePlansRestoresVolumeRestoresListQueryParams queryParams;
+    public GkebackupProjectsLocationsRestorePlansRestoresVolumeRestoresListRequest withQueryParams(GkebackupProjectsLocationsRestorePlansRestoresVolumeRestoresListQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public GkebackupProjectsLocationsRestorePlansRestoresVolumeRestoresListSecurity security;
+    public GkebackupProjectsLocationsRestorePlansRestoresVolumeRestoresListRequest withSecurity(GkebackupProjectsLocationsRestorePlansRestoresVolumeRestoresListSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

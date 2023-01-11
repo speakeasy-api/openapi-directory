@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class GetOrderV3Request {
+    public GetOrderV3PathParams pathParams;
+    public GetOrderV3Request withPathParams(GetOrderV3PathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public GetOrderV3Headers headers;
+    public GetOrderV3Request withHeaders(GetOrderV3Headers headers) {
+        this.headers = headers;
+        return this;
+    }
+}

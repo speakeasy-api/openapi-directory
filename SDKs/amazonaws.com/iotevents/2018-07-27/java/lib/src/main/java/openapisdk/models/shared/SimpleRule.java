@@ -1,0 +1,28 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+/**
+ * SimpleRule
+ * A rule that compares an input property value to a threshold value with a comparison operator.
+**/
+public class SimpleRule {
+    @JsonProperty("comparisonOperator")
+    public ComparisonOperatorEnum comparisonOperator;
+    public SimpleRule withComparisonOperator(ComparisonOperatorEnum comparisonOperator) {
+        this.comparisonOperator = comparisonOperator;
+        return this;
+    }
+    @JsonProperty("inputProperty")
+    public String inputProperty;
+    public SimpleRule withInputProperty(String inputProperty) {
+        this.inputProperty = inputProperty;
+        return this;
+    }
+    @JsonProperty("threshold")
+    public String threshold;
+    public SimpleRule withThreshold(String threshold) {
+        this.threshold = threshold;
+        return this;
+    }
+}

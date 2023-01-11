@@ -1,0 +1,25 @@
+package openapisdk.models.shared;
+
+
+
+/**
+ * SubnetList
+ *  Detailed information about a subnet. 
+**/
+public class SubnetList {
+    public AvailabilityZone subnetAvailabilityZone;
+    public SubnetList withSubnetAvailabilityZone(AvailabilityZone subnetAvailabilityZone) {
+        this.subnetAvailabilityZone = subnetAvailabilityZone;
+        return this;
+    }
+    public String subnetIdentifier;
+    public SubnetList withSubnetIdentifier(String subnetIdentifier) {
+        this.subnetIdentifier = subnetIdentifier;
+        return this;
+    }
+    public String subnetStatus;
+    public SubnetList withSubnetStatus(String subnetStatus) {
+        this.subnetStatus = subnetStatus;
+        return this;
+    }
+}

@@ -1,0 +1,22 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class WebriskProjectsOperationsCancelRequest {
+    public WebriskProjectsOperationsCancelPathParams pathParams;
+    public WebriskProjectsOperationsCancelRequest withPathParams(WebriskProjectsOperationsCancelPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public WebriskProjectsOperationsCancelQueryParams queryParams;
+    public WebriskProjectsOperationsCancelRequest withQueryParams(WebriskProjectsOperationsCancelQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public java.util.Map<String, Object> request;
+    public WebriskProjectsOperationsCancelRequest withRequest(java.util.Map<String, Object> request) {
+        this.request = request;
+        return this;
+    }
+}

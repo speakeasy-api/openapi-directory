@@ -1,0 +1,23 @@
+package openapisdk.models.shared;
+
+
+public enum ParametersTypeEnum {
+    REPORT_TYPE_UNSPECIFIED("REPORT_TYPE_UNSPECIFIED"),
+    STANDARD("STANDARD"),
+    INVENTORY_AVAILABILITY("INVENTORY_AVAILABILITY"),
+    AUDIENCE_COMPOSITION("AUDIENCE_COMPOSITION"),
+    FLOODLIGHT("FLOODLIGHT"),
+    YOUTUBE("YOUTUBE"),
+    GRP("GRP"),
+    YOUTUBE_PROGRAMMATIC_GUARANTEED("YOUTUBE_PROGRAMMATIC_GUARANTEED"),
+    REACH("REACH"),
+    UNIQUE_REACH_AUDIENCE("UNIQUE_REACH_AUDIENCE"),
+    FULL_PATH("FULL_PATH"),
+    PATH_ATTRIBUTION("PATH_ATTRIBUTION");
+
+    public final String value;
+
+    private ParametersTypeEnum(String value) {
+        this.value = value;
+    }
+}

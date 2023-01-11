@@ -1,0 +1,22 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class CreateSlotRequest {
+    public CreateSlotPathParams pathParams;
+    public CreateSlotRequest withPathParams(CreateSlotPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public CreateSlotHeaders headers;
+    public CreateSlotRequest withHeaders(CreateSlotHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public CreateSlotRequestBody request;
+    public CreateSlotRequest withRequest(CreateSlotRequestBody request) {
+        this.request = request;
+        return this;
+    }
+}

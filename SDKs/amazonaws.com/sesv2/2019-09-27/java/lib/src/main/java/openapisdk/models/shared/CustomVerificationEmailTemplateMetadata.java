@@ -1,0 +1,47 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * CustomVerificationEmailTemplateMetadata
+ * Contains information about a custom verification email template.
+**/
+public class CustomVerificationEmailTemplateMetadata {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("FailureRedirectionURL")
+    public String failureRedirectionURL;
+    public CustomVerificationEmailTemplateMetadata withFailureRedirectionUrl(String failureRedirectionURL) {
+        this.failureRedirectionURL = failureRedirectionURL;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("FromEmailAddress")
+    public String fromEmailAddress;
+    public CustomVerificationEmailTemplateMetadata withFromEmailAddress(String fromEmailAddress) {
+        this.fromEmailAddress = fromEmailAddress;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("SuccessRedirectionURL")
+    public String successRedirectionURL;
+    public CustomVerificationEmailTemplateMetadata withSuccessRedirectionUrl(String successRedirectionURL) {
+        this.successRedirectionURL = successRedirectionURL;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("TemplateName")
+    public String templateName;
+    public CustomVerificationEmailTemplateMetadata withTemplateName(String templateName) {
+        this.templateName = templateName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("TemplateSubject")
+    public String templateSubject;
+    public CustomVerificationEmailTemplateMetadata withTemplateSubject(String templateSubject) {
+        this.templateSubject = templateSubject;
+        return this;
+    }
+}

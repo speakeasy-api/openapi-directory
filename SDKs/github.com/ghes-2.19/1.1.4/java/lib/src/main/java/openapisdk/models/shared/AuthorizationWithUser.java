@@ -1,0 +1,99 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class AuthorizationWithUser {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("app")
+    public AuthorizationWithUserApp app;
+    public AuthorizationWithUser withApp(AuthorizationWithUserApp app) {
+        this.app = app;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("created_at")
+    public String createdAt;
+    public AuthorizationWithUser withCreatedAt(String createdAt) {
+        this.createdAt = createdAt;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("fingerprint")
+    public String fingerprint;
+    public AuthorizationWithUser withFingerprint(String fingerprint) {
+        this.fingerprint = fingerprint;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("hashed_token")
+    public String hashedToken;
+    public AuthorizationWithUser withHashedToken(String hashedToken) {
+        this.hashedToken = hashedToken;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("id")
+    public Long id;
+    public AuthorizationWithUser withId(Long id) {
+        this.id = id;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("note")
+    public String note;
+    public AuthorizationWithUser withNote(String note) {
+        this.note = note;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("note_url")
+    public String noteUrl;
+    public AuthorizationWithUser withNoteUrl(String noteUrl) {
+        this.noteUrl = noteUrl;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("scopes")
+    public String[] scopes;
+    public AuthorizationWithUser withScopes(String[] scopes) {
+        this.scopes = scopes;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("token")
+    public String token;
+    public AuthorizationWithUser withToken(String token) {
+        this.token = token;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("token_last_eight")
+    public String tokenLastEight;
+    public AuthorizationWithUser withTokenLastEight(String tokenLastEight) {
+        this.tokenLastEight = tokenLastEight;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("updated_at")
+    public String updatedAt;
+    public AuthorizationWithUser withUpdatedAt(String updatedAt) {
+        this.updatedAt = updatedAt;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("url")
+    public String url;
+    public AuthorizationWithUser withUrl(String url) {
+        this.url = url;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("user")
+    public AuthorizationWithUserUser user;
+    public AuthorizationWithUser withUser(AuthorizationWithUserUser user) {
+        this.user = user;
+        return this;
+    }
+}

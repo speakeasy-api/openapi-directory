@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class GetCustomPageRequest {
+    public GetCustomPagePathParams pathParams;
+    public GetCustomPageRequest withPathParams(GetCustomPagePathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public GetCustomPageSecurity security;
+    public GetCustomPageRequest withSecurity(GetCustomPageSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class GamesAchievementsListRequest {
+    public GamesAchievementsListPathParams pathParams;
+    public GamesAchievementsListRequest withPathParams(GamesAchievementsListPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public GamesAchievementsListQueryParams queryParams;
+    public GamesAchievementsListRequest withQueryParams(GamesAchievementsListQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public GamesAchievementsListSecurity security;
+    public GamesAchievementsListRequest withSecurity(GamesAchievementsListSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

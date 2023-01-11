@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class ListScheduledAuditsRequest {
+    public ListScheduledAuditsQueryParams queryParams;
+    public ListScheduledAuditsRequest withQueryParams(ListScheduledAuditsQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public ListScheduledAuditsHeaders headers;
+    public ListScheduledAuditsRequest withHeaders(ListScheduledAuditsHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+}

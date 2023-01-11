@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class PatientRiskAssessmentsUpdateRequest {
+    public PatientRiskAssessmentsUpdatePathParams pathParams;
+    public PatientRiskAssessmentsUpdateRequest withPathParams(PatientRiskAssessmentsUpdatePathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public PatientRiskAssessmentsUpdateQueryParams queryParams;
+    public PatientRiskAssessmentsUpdateRequest withQueryParams(PatientRiskAssessmentsUpdateQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public PatientRiskAssessmentsUpdateSecurity security;
+    public PatientRiskAssessmentsUpdateRequest withSecurity(PatientRiskAssessmentsUpdateSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

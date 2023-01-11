@@ -1,0 +1,49 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class GetCommentsForPullRequestInput {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("afterCommitId")
+    public String afterCommitId;
+    public GetCommentsForPullRequestInput withAfterCommitId(String afterCommitId) {
+        this.afterCommitId = afterCommitId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("beforeCommitId")
+    public String beforeCommitId;
+    public GetCommentsForPullRequestInput withBeforeCommitId(String beforeCommitId) {
+        this.beforeCommitId = beforeCommitId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("maxResults")
+    public Long maxResults;
+    public GetCommentsForPullRequestInput withMaxResults(Long maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("nextToken")
+    public String nextToken;
+    public GetCommentsForPullRequestInput withNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    @JsonProperty("pullRequestId")
+    public String pullRequestId;
+    public GetCommentsForPullRequestInput withPullRequestId(String pullRequestId) {
+        this.pullRequestId = pullRequestId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("repositoryName")
+    public String repositoryName;
+    public GetCommentsForPullRequestInput withRepositoryName(String repositoryName) {
+        this.repositoryName = repositoryName;
+        return this;
+    }
+}

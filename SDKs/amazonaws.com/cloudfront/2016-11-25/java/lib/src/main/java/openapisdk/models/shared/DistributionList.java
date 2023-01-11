@@ -1,0 +1,40 @@
+package openapisdk.models.shared;
+
+
+
+/**
+ * DistributionList
+ * A distribution list.
+**/
+public class DistributionList {
+    public Boolean isTruncated;
+    public DistributionList withIsTruncated(Boolean isTruncated) {
+        this.isTruncated = isTruncated;
+        return this;
+    }
+    public DistributionSummaryList[] items;
+    public DistributionList withItems(DistributionSummaryList[] items) {
+        this.items = items;
+        return this;
+    }
+    public String marker;
+    public DistributionList withMarker(String marker) {
+        this.marker = marker;
+        return this;
+    }
+    public Long maxItems;
+    public DistributionList withMaxItems(Long maxItems) {
+        this.maxItems = maxItems;
+        return this;
+    }
+    public String nextMarker;
+    public DistributionList withNextMarker(String nextMarker) {
+        this.nextMarker = nextMarker;
+        return this;
+    }
+    public Long quantity;
+    public DistributionList withQuantity(Long quantity) {
+        this.quantity = quantity;
+        return this;
+    }
+}

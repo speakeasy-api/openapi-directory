@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class EmployeesAllRequest {
+    public EmployeesAllQueryParams queryParams;
+    public EmployeesAllRequest withQueryParams(EmployeesAllQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public EmployeesAllHeaders headers;
+    public EmployeesAllRequest withHeaders(EmployeesAllHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+    public EmployeesAllSecurity security;
+    public EmployeesAllRequest withSecurity(EmployeesAllSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class DescribeGatewayRouteRequest {
+    public DescribeGatewayRoutePathParams pathParams;
+    public DescribeGatewayRouteRequest withPathParams(DescribeGatewayRoutePathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public DescribeGatewayRouteQueryParams queryParams;
+    public DescribeGatewayRouteRequest withQueryParams(DescribeGatewayRouteQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public DescribeGatewayRouteHeaders headers;
+    public DescribeGatewayRouteRequest withHeaders(DescribeGatewayRouteHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+}

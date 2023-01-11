@@ -1,0 +1,19 @@
+package openapisdk.models.operations;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * UpdateBotAliasRequestBodySentimentAnalysisSettings
+ * Determines whether Amazon Lex will use Amazon Comprehend to detect the sentiment of user utterances.
+**/
+public class UpdateBotAliasRequestBodySentimentAnalysisSettings {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("detectSentiment")
+    public Boolean detectSentiment;
+    public UpdateBotAliasRequestBodySentimentAnalysisSettings withDetectSentiment(Boolean detectSentiment) {
+        this.detectSentiment = detectSentiment;
+        return this;
+    }
+}

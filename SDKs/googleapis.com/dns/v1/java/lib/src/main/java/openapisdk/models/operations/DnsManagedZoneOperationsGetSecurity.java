@@ -1,0 +1,30 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class DnsManagedZoneOperationsGetSecurity {
+    @SpeakeasyMetadata("security:option=true")
+    public DnsManagedZoneOperationsGetSecurityOption1 option1;
+    public DnsManagedZoneOperationsGetSecurity withOption1(DnsManagedZoneOperationsGetSecurityOption1 option1) {
+        this.option1 = option1;
+        return this;
+    }
+    @SpeakeasyMetadata("security:option=true")
+    public DnsManagedZoneOperationsGetSecurityOption2 option2;
+    public DnsManagedZoneOperationsGetSecurity withOption2(DnsManagedZoneOperationsGetSecurityOption2 option2) {
+        this.option2 = option2;
+        return this;
+    }
+    @SpeakeasyMetadata("security:option=true")
+    public DnsManagedZoneOperationsGetSecurityOption3 option3;
+    public DnsManagedZoneOperationsGetSecurity withOption3(DnsManagedZoneOperationsGetSecurityOption3 option3) {
+        this.option3 = option3;
+        return this;
+    }
+    @SpeakeasyMetadata("security:option=true")
+    public DnsManagedZoneOperationsGetSecurityOption4 option4;
+    public DnsManagedZoneOperationsGetSecurity withOption4(DnsManagedZoneOperationsGetSecurityOption4 option4) {
+        this.option4 = option4;
+        return this;
+    }
+}

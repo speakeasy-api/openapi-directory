@@ -1,0 +1,22 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class VerifiedaccessChallengeGenerateRequest {
+    public VerifiedaccessChallengeGenerateQueryParams queryParams;
+    public VerifiedaccessChallengeGenerateRequest withQueryParams(VerifiedaccessChallengeGenerateQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public java.util.Map<String, Object> request;
+    public VerifiedaccessChallengeGenerateRequest withRequest(java.util.Map<String, Object> request) {
+        this.request = request;
+        return this;
+    }
+    public VerifiedaccessChallengeGenerateSecurity security;
+    public VerifiedaccessChallengeGenerateRequest withSecurity(VerifiedaccessChallengeGenerateSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

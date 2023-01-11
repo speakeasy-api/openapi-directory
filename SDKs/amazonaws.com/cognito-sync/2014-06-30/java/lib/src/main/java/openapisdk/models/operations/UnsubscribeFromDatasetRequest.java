@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class UnsubscribeFromDatasetRequest {
+    public UnsubscribeFromDatasetPathParams pathParams;
+    public UnsubscribeFromDatasetRequest withPathParams(UnsubscribeFromDatasetPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public UnsubscribeFromDatasetHeaders headers;
+    public UnsubscribeFromDatasetRequest withHeaders(UnsubscribeFromDatasetHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+}

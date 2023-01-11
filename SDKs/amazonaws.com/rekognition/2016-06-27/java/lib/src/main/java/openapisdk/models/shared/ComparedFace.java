@@ -1,0 +1,61 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * ComparedFace
+ * Provides face metadata for target image faces that are analyzed by <code>CompareFaces</code> and <code>RecognizeCelebrities</code>.
+**/
+public class ComparedFace {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("BoundingBox")
+    public BoundingBox boundingBox;
+    public ComparedFace withBoundingBox(BoundingBox boundingBox) {
+        this.boundingBox = boundingBox;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Confidence")
+    public Float confidence;
+    public ComparedFace withConfidence(Float confidence) {
+        this.confidence = confidence;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Emotions")
+    public Emotion[] emotions;
+    public ComparedFace withEmotions(Emotion[] emotions) {
+        this.emotions = emotions;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Landmarks")
+    public Landmark[] landmarks;
+    public ComparedFace withLandmarks(Landmark[] landmarks) {
+        this.landmarks = landmarks;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Pose")
+    public Pose pose;
+    public ComparedFace withPose(Pose pose) {
+        this.pose = pose;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Quality")
+    public ImageQuality quality;
+    public ComparedFace withQuality(ImageQuality quality) {
+        this.quality = quality;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Smile")
+    public Smile smile;
+    public ComparedFace withSmile(Smile smile) {
+        this.smile = smile;
+        return this;
+    }
+}

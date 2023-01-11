@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class GetCisJobProgressRequest {
+    public GetCisJobProgressPathParams pathParams;
+    public GetCisJobProgressRequest withPathParams(GetCisJobProgressPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public GetCisJobProgressHeaders headers;
+    public GetCisJobProgressRequest withHeaders(GetCisJobProgressHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+}

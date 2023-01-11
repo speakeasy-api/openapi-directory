@@ -1,0 +1,17 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class DeleteConnectorProfileRequest {
+    public DeleteConnectorProfileHeaders headers;
+    public DeleteConnectorProfileRequest withHeaders(DeleteConnectorProfileHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public DeleteConnectorProfileRequestBody request;
+    public DeleteConnectorProfileRequest withRequest(DeleteConnectorProfileRequestBody request) {
+        this.request = request;
+        return this;
+    }
+}

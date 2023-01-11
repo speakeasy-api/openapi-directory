@@ -1,0 +1,22 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class ListTargetsRequest {
+    public ListTargetsQueryParams queryParams;
+    public ListTargetsRequest withQueryParams(ListTargetsQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public ListTargetsHeaders headers;
+    public ListTargetsRequest withHeaders(ListTargetsHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public ListTargetsRequestBody request;
+    public ListTargetsRequest withRequest(ListTargetsRequestBody request) {
+        this.request = request;
+        return this;
+    }
+}

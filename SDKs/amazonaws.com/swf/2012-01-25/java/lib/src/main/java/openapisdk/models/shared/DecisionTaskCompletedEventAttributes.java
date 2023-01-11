@@ -1,0 +1,31 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * DecisionTaskCompletedEventAttributes
+ * Provides the details of the <code>DecisionTaskCompleted</code> event.
+**/
+public class DecisionTaskCompletedEventAttributes {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("executionContext")
+    public String executionContext;
+    public DecisionTaskCompletedEventAttributes withExecutionContext(String executionContext) {
+        this.executionContext = executionContext;
+        return this;
+    }
+    @JsonProperty("scheduledEventId")
+    public Long scheduledEventId;
+    public DecisionTaskCompletedEventAttributes withScheduledEventId(Long scheduledEventId) {
+        this.scheduledEventId = scheduledEventId;
+        return this;
+    }
+    @JsonProperty("startedEventId")
+    public Long startedEventId;
+    public DecisionTaskCompletedEventAttributes withStartedEventId(Long startedEventId) {
+        this.startedEventId = startedEventId;
+        return this;
+    }
+}

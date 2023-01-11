@@ -1,0 +1,19 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * DpsJobInstructionDpsJobInstructionType
+ * The dps job instructions' message types
+**/
+public class DpsJobInstructionDpsJobInstructionType {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Type")
+    public Object[] type;
+    public DpsJobInstructionDpsJobInstructionType withType(Object[] type) {
+        this.type = type;
+        return this;
+    }
+}

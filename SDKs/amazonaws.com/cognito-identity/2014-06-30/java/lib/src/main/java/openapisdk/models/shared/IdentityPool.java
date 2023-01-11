@@ -1,0 +1,79 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * IdentityPool
+ * An object representing an Amazon Cognito identity pool.
+**/
+public class IdentityPool {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("AllowClassicFlow")
+    public Boolean allowClassicFlow;
+    public IdentityPool withAllowClassicFlow(Boolean allowClassicFlow) {
+        this.allowClassicFlow = allowClassicFlow;
+        return this;
+    }
+    @JsonProperty("AllowUnauthenticatedIdentities")
+    public Boolean allowUnauthenticatedIdentities;
+    public IdentityPool withAllowUnauthenticatedIdentities(Boolean allowUnauthenticatedIdentities) {
+        this.allowUnauthenticatedIdentities = allowUnauthenticatedIdentities;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("CognitoIdentityProviders")
+    public CognitoIdentityProvider[] cognitoIdentityProviders;
+    public IdentityPool withCognitoIdentityProviders(CognitoIdentityProvider[] cognitoIdentityProviders) {
+        this.cognitoIdentityProviders = cognitoIdentityProviders;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("DeveloperProviderName")
+    public String developerProviderName;
+    public IdentityPool withDeveloperProviderName(String developerProviderName) {
+        this.developerProviderName = developerProviderName;
+        return this;
+    }
+    @JsonProperty("IdentityPoolId")
+    public String identityPoolId;
+    public IdentityPool withIdentityPoolId(String identityPoolId) {
+        this.identityPoolId = identityPoolId;
+        return this;
+    }
+    @JsonProperty("IdentityPoolName")
+    public String identityPoolName;
+    public IdentityPool withIdentityPoolName(String identityPoolName) {
+        this.identityPoolName = identityPoolName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("IdentityPoolTags")
+    public java.util.Map<String, String> identityPoolTags;
+    public IdentityPool withIdentityPoolTags(java.util.Map<String, String> identityPoolTags) {
+        this.identityPoolTags = identityPoolTags;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("OpenIdConnectProviderARNs")
+    public String[] openIdConnectProviderARNs;
+    public IdentityPool withOpenIdConnectProviderArNs(String[] openIdConnectProviderARNs) {
+        this.openIdConnectProviderARNs = openIdConnectProviderARNs;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("SamlProviderARNs")
+    public String[] samlProviderARNs;
+    public IdentityPool withSamlProviderArNs(String[] samlProviderARNs) {
+        this.samlProviderARNs = samlProviderARNs;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("SupportedLoginProviders")
+    public java.util.Map<String, String> supportedLoginProviders;
+    public IdentityPool withSupportedLoginProviders(java.util.Map<String, String> supportedLoginProviders) {
+        this.supportedLoginProviders = supportedLoginProviders;
+        return this;
+    }
+}

@@ -1,0 +1,18 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+public class CreateByteMatchSetRequest {
+    @JsonProperty("ChangeToken")
+    public String changeToken;
+    public CreateByteMatchSetRequest withChangeToken(String changeToken) {
+        this.changeToken = changeToken;
+        return this;
+    }
+    @JsonProperty("Name")
+    public String name;
+    public CreateByteMatchSetRequest withName(String name) {
+        this.name = name;
+        return this;
+    }
+}

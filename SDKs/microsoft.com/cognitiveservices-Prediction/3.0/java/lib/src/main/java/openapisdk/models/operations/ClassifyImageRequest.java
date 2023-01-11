@@ -1,0 +1,22 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class ClassifyImageRequest {
+    public ClassifyImagePathParams pathParams;
+    public ClassifyImageRequest withPathParams(ClassifyImagePathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public ClassifyImageQueryParams queryParams;
+    public ClassifyImageRequest withQueryParams(ClassifyImageQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    @SpeakeasyMetadata("request:mediaType=multipart/form-data")
+    public ClassifyImageRequestBody request;
+    public ClassifyImageRequest withRequest(ClassifyImageRequestBody request) {
+        this.request = request;
+        return this;
+    }
+}

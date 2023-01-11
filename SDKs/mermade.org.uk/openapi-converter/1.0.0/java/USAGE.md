@@ -1,0 +1,32 @@
+<!-- Start SDK Example Usage -->
+```java
+package hello.world;
+
+import openapisdk.SDK;
+import openapisdk.models.shared.Security;
+
+public class Application {
+    public static void main(String[] args) {
+        try {
+            SDK.Builder builder = SDK.builder();
+
+            SDK sdk = builder.build();
+
+            ConvertRequest req = new ConvertRequest() {{
+                request = new ConvertRequestBody() {{
+                    filename = "adipisci";
+                    source = "rerum";
+                    validate = "on";
+                }};
+            }};
+
+            ConvertResponse res = sdk.conversion.convert(req);
+
+            if (res.convert200ApplicationJSONAny.isPresent()) {
+                // handle response
+            }
+        } catch (Exception e) {
+            // handle exception
+        }
+```
+<!-- End SDK Example Usage -->

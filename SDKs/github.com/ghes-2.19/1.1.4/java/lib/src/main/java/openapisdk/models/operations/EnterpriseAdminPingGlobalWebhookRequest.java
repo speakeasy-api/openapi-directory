@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class EnterpriseAdminPingGlobalWebhookRequest {
+    public EnterpriseAdminPingGlobalWebhookPathParams pathParams;
+    public EnterpriseAdminPingGlobalWebhookRequest withPathParams(EnterpriseAdminPingGlobalWebhookPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public EnterpriseAdminPingGlobalWebhookHeaders headers;
+    public EnterpriseAdminPingGlobalWebhookRequest withHeaders(EnterpriseAdminPingGlobalWebhookHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+}

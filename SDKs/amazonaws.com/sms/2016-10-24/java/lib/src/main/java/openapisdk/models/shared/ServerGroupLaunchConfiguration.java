@@ -1,0 +1,33 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * ServerGroupLaunchConfiguration
+ * Launch configuration for a server group.
+**/
+public class ServerGroupLaunchConfiguration {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("launchOrder")
+    public Long launchOrder;
+    public ServerGroupLaunchConfiguration withLaunchOrder(Long launchOrder) {
+        this.launchOrder = launchOrder;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("serverGroupId")
+    public String serverGroupId;
+    public ServerGroupLaunchConfiguration withServerGroupId(String serverGroupId) {
+        this.serverGroupId = serverGroupId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("serverLaunchConfigurations")
+    public ServerLaunchConfiguration[] serverLaunchConfigurations;
+    public ServerGroupLaunchConfiguration withServerLaunchConfigurations(ServerLaunchConfiguration[] serverLaunchConfigurations) {
+        this.serverLaunchConfigurations = serverLaunchConfigurations;
+        return this;
+    }
+}

@@ -1,0 +1,40 @@
+package openapisdk.models.shared;
+
+
+
+/**
+ * ReplicationGroupPendingModifiedValues
+ * The settings to be applied to the Redis replication group, either immediately or during the next maintenance window.
+**/
+public class ReplicationGroupPendingModifiedValues {
+    public AuthTokenUpdateStatusEnum authTokenStatus;
+    public ReplicationGroupPendingModifiedValues withAuthTokenStatus(AuthTokenUpdateStatusEnum authTokenStatus) {
+        this.authTokenStatus = authTokenStatus;
+        return this;
+    }
+    public PendingAutomaticFailoverStatusEnum automaticFailoverStatus;
+    public ReplicationGroupPendingModifiedValues withAutomaticFailoverStatus(PendingAutomaticFailoverStatusEnum automaticFailoverStatus) {
+        this.automaticFailoverStatus = automaticFailoverStatus;
+        return this;
+    }
+    public PendingLogDeliveryConfiguration[] logDeliveryConfigurations;
+    public ReplicationGroupPendingModifiedValues withLogDeliveryConfigurations(PendingLogDeliveryConfiguration[] logDeliveryConfigurations) {
+        this.logDeliveryConfigurations = logDeliveryConfigurations;
+        return this;
+    }
+    public String primaryClusterId;
+    public ReplicationGroupPendingModifiedValues withPrimaryClusterId(String primaryClusterId) {
+        this.primaryClusterId = primaryClusterId;
+        return this;
+    }
+    public ReshardingStatus resharding;
+    public ReplicationGroupPendingModifiedValues withResharding(ReshardingStatus resharding) {
+        this.resharding = resharding;
+        return this;
+    }
+    public UserGroupsUpdateStatus userGroups;
+    public ReplicationGroupPendingModifiedValues withUserGroups(UserGroupsUpdateStatus userGroups) {
+        this.userGroups = userGroups;
+        return this;
+    }
+}

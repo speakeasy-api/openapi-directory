@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class YoutubeCaptionsListRequest {
+    public YoutubeCaptionsListQueryParams queryParams;
+    public YoutubeCaptionsListRequest withQueryParams(YoutubeCaptionsListQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public YoutubeCaptionsListSecurity security;
+    public YoutubeCaptionsListRequest withSecurity(YoutubeCaptionsListSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

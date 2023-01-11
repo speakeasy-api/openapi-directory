@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class AccessapprovalProjectsDeleteAccessApprovalSettingsRequest {
+    public AccessapprovalProjectsDeleteAccessApprovalSettingsPathParams pathParams;
+    public AccessapprovalProjectsDeleteAccessApprovalSettingsRequest withPathParams(AccessapprovalProjectsDeleteAccessApprovalSettingsPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public AccessapprovalProjectsDeleteAccessApprovalSettingsQueryParams queryParams;
+    public AccessapprovalProjectsDeleteAccessApprovalSettingsRequest withQueryParams(AccessapprovalProjectsDeleteAccessApprovalSettingsQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public AccessapprovalProjectsDeleteAccessApprovalSettingsSecurity security;
+    public AccessapprovalProjectsDeleteAccessApprovalSettingsRequest withSecurity(AccessapprovalProjectsDeleteAccessApprovalSettingsSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class GetPlatformRequest {
+    public GetPlatformPathParams pathParams;
+    public GetPlatformRequest withPathParams(GetPlatformPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public GetPlatformSecurity security;
+    public GetPlatformRequest withSecurity(GetPlatformSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

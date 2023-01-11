@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class ConnectorsProjectsLocationsConnectionsRuntimeEntitySchemasListRequest {
+    public ConnectorsProjectsLocationsConnectionsRuntimeEntitySchemasListPathParams pathParams;
+    public ConnectorsProjectsLocationsConnectionsRuntimeEntitySchemasListRequest withPathParams(ConnectorsProjectsLocationsConnectionsRuntimeEntitySchemasListPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public ConnectorsProjectsLocationsConnectionsRuntimeEntitySchemasListQueryParams queryParams;
+    public ConnectorsProjectsLocationsConnectionsRuntimeEntitySchemasListRequest withQueryParams(ConnectorsProjectsLocationsConnectionsRuntimeEntitySchemasListQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public ConnectorsProjectsLocationsConnectionsRuntimeEntitySchemasListSecurity security;
+    public ConnectorsProjectsLocationsConnectionsRuntimeEntitySchemasListRequest withSecurity(ConnectorsProjectsLocationsConnectionsRuntimeEntitySchemasListSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

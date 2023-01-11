@@ -1,0 +1,41 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class CountOpenWorkflowExecutionsInput {
+    @JsonProperty("domain")
+    public String domain;
+    public CountOpenWorkflowExecutionsInput withDomain(String domain) {
+        this.domain = domain;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("executionFilter")
+    public WorkflowExecutionFilter executionFilter;
+    public CountOpenWorkflowExecutionsInput withExecutionFilter(WorkflowExecutionFilter executionFilter) {
+        this.executionFilter = executionFilter;
+        return this;
+    }
+    @JsonProperty("startTimeFilter")
+    public ExecutionTimeFilter startTimeFilter;
+    public CountOpenWorkflowExecutionsInput withStartTimeFilter(ExecutionTimeFilter startTimeFilter) {
+        this.startTimeFilter = startTimeFilter;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("tagFilter")
+    public TagFilter tagFilter;
+    public CountOpenWorkflowExecutionsInput withTagFilter(TagFilter tagFilter) {
+        this.tagFilter = tagFilter;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("typeFilter")
+    public WorkflowTypeFilter typeFilter;
+    public CountOpenWorkflowExecutionsInput withTypeFilter(WorkflowTypeFilter typeFilter) {
+        this.typeFilter = typeFilter;
+        return this;
+    }
+}

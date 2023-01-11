@@ -1,0 +1,16 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+/**
+ * StopRemoteAccessSessionRequest
+ * Represents the request to stop the remote access session.
+**/
+public class StopRemoteAccessSessionRequest {
+    @JsonProperty("arn")
+    public String arn;
+    public StopRemoteAccessSessionRequest withArn(String arn) {
+        this.arn = arn;
+        return this;
+    }
+}

@@ -1,0 +1,18 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+public class GetBlueprintRunRequest {
+    @JsonProperty("BlueprintName")
+    public String blueprintName;
+    public GetBlueprintRunRequest withBlueprintName(String blueprintName) {
+        this.blueprintName = blueprintName;
+        return this;
+    }
+    @JsonProperty("RunId")
+    public String runId;
+    public GetBlueprintRunRequest withRunId(String runId) {
+        this.runId = runId;
+        return this;
+    }
+}

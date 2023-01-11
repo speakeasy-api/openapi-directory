@@ -1,0 +1,22 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class CreateResourceDefinitionVersionRequest {
+    public CreateResourceDefinitionVersionPathParams pathParams;
+    public CreateResourceDefinitionVersionRequest withPathParams(CreateResourceDefinitionVersionPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public CreateResourceDefinitionVersionHeaders headers;
+    public CreateResourceDefinitionVersionRequest withHeaders(CreateResourceDefinitionVersionHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public CreateResourceDefinitionVersionRequestBody request;
+    public CreateResourceDefinitionVersionRequest withRequest(CreateResourceDefinitionVersionRequestBody request) {
+        this.request = request;
+        return this;
+    }
+}

@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class GetEmailChannelRequest {
+    public GetEmailChannelPathParams pathParams;
+    public GetEmailChannelRequest withPathParams(GetEmailChannelPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public GetEmailChannelHeaders headers;
+    public GetEmailChannelRequest withHeaders(GetEmailChannelHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+}

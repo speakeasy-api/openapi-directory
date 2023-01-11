@@ -1,0 +1,97 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class ProvisionProductInput {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("AcceptLanguage")
+    public String acceptLanguage;
+    public ProvisionProductInput withAcceptLanguage(String acceptLanguage) {
+        this.acceptLanguage = acceptLanguage;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("NotificationArns")
+    public String[] notificationArns;
+    public ProvisionProductInput withNotificationArns(String[] notificationArns) {
+        this.notificationArns = notificationArns;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("PathId")
+    public String pathId;
+    public ProvisionProductInput withPathId(String pathId) {
+        this.pathId = pathId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("PathName")
+    public String pathName;
+    public ProvisionProductInput withPathName(String pathName) {
+        this.pathName = pathName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ProductId")
+    public String productId;
+    public ProvisionProductInput withProductId(String productId) {
+        this.productId = productId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ProductName")
+    public String productName;
+    public ProvisionProductInput withProductName(String productName) {
+        this.productName = productName;
+        return this;
+    }
+    @JsonProperty("ProvisionToken")
+    public String provisionToken;
+    public ProvisionProductInput withProvisionToken(String provisionToken) {
+        this.provisionToken = provisionToken;
+        return this;
+    }
+    @JsonProperty("ProvisionedProductName")
+    public String provisionedProductName;
+    public ProvisionProductInput withProvisionedProductName(String provisionedProductName) {
+        this.provisionedProductName = provisionedProductName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ProvisioningArtifactId")
+    public String provisioningArtifactId;
+    public ProvisionProductInput withProvisioningArtifactId(String provisioningArtifactId) {
+        this.provisioningArtifactId = provisioningArtifactId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ProvisioningArtifactName")
+    public String provisioningArtifactName;
+    public ProvisionProductInput withProvisioningArtifactName(String provisioningArtifactName) {
+        this.provisioningArtifactName = provisioningArtifactName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ProvisioningParameters")
+    public ProvisioningParameter[] provisioningParameters;
+    public ProvisionProductInput withProvisioningParameters(ProvisioningParameter[] provisioningParameters) {
+        this.provisioningParameters = provisioningParameters;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ProvisioningPreferences")
+    public ProvisioningPreferences provisioningPreferences;
+    public ProvisionProductInput withProvisioningPreferences(ProvisioningPreferences provisioningPreferences) {
+        this.provisioningPreferences = provisioningPreferences;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Tags")
+    public Tag[] tags;
+    public ProvisionProductInput withTags(Tag[] tags) {
+        this.tags = tags;
+        return this;
+    }
+}

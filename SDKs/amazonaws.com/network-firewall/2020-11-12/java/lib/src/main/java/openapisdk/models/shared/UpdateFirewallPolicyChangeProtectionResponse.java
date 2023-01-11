@@ -1,0 +1,36 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class UpdateFirewallPolicyChangeProtectionResponse {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("FirewallArn")
+    public String firewallArn;
+    public UpdateFirewallPolicyChangeProtectionResponse withFirewallArn(String firewallArn) {
+        this.firewallArn = firewallArn;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("FirewallName")
+    public String firewallName;
+    public UpdateFirewallPolicyChangeProtectionResponse withFirewallName(String firewallName) {
+        this.firewallName = firewallName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("FirewallPolicyChangeProtection")
+    public Boolean firewallPolicyChangeProtection;
+    public UpdateFirewallPolicyChangeProtectionResponse withFirewallPolicyChangeProtection(Boolean firewallPolicyChangeProtection) {
+        this.firewallPolicyChangeProtection = firewallPolicyChangeProtection;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("UpdateToken")
+    public String updateToken;
+    public UpdateFirewallPolicyChangeProtectionResponse withUpdateToken(String updateToken) {
+        this.updateToken = updateToken;
+        return this;
+    }
+}

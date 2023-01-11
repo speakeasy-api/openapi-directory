@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class PoolGetRequest {
+    public PoolGetPathParams pathParams;
+    public PoolGetRequest withPathParams(PoolGetPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public PoolGetQueryParams queryParams;
+    public PoolGetRequest withQueryParams(PoolGetQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public PoolGetHeaders headers;
+    public PoolGetRequest withHeaders(PoolGetHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+}

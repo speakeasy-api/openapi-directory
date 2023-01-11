@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class ListSystemsRequest {
+    public ListSystemsQueryParams queryParams;
+    public ListSystemsRequest withQueryParams(ListSystemsQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public ListSystemsSecurity security;
+    public ListSystemsRequest withSecurity(ListSystemsSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

@@ -1,0 +1,21 @@
+package openapisdk.models.shared;
+
+
+
+public class QuestionsMigratedFromOtherSiteStyling {
+    public String linkColor;
+    public QuestionsMigratedFromOtherSiteStyling withLinkColor(String linkColor) {
+        this.linkColor = linkColor;
+        return this;
+    }
+    public String tagBackgroundColor;
+    public QuestionsMigratedFromOtherSiteStyling withTagBackgroundColor(String tagBackgroundColor) {
+        this.tagBackgroundColor = tagBackgroundColor;
+        return this;
+    }
+    public String tagForegroundColor;
+    public QuestionsMigratedFromOtherSiteStyling withTagForegroundColor(String tagForegroundColor) {
+        this.tagForegroundColor = tagForegroundColor;
+        return this;
+    }
+}

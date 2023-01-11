@@ -1,0 +1,29 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class GetQueryResultsOutput {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("NextToken")
+    public String nextToken;
+    public GetQueryResultsOutput withNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ResultSet")
+    public ResultSet resultSet;
+    public GetQueryResultsOutput withResultSet(ResultSet resultSet) {
+        this.resultSet = resultSet;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("UpdateCount")
+    public Long updateCount;
+    public GetQueryResultsOutput withUpdateCount(Long updateCount) {
+        this.updateCount = updateCount;
+        return this;
+    }
+}

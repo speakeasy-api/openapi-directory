@@ -1,0 +1,68 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class StartTopicsDetectionJobRequest {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ClientRequestToken")
+    public String clientRequestToken;
+    public StartTopicsDetectionJobRequest withClientRequestToken(String clientRequestToken) {
+        this.clientRequestToken = clientRequestToken;
+        return this;
+    }
+    @JsonProperty("DataAccessRoleArn")
+    public String dataAccessRoleArn;
+    public StartTopicsDetectionJobRequest withDataAccessRoleArn(String dataAccessRoleArn) {
+        this.dataAccessRoleArn = dataAccessRoleArn;
+        return this;
+    }
+    @JsonProperty("InputDataConfig")
+    public InputDataConfig inputDataConfig;
+    public StartTopicsDetectionJobRequest withInputDataConfig(InputDataConfig inputDataConfig) {
+        this.inputDataConfig = inputDataConfig;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("JobName")
+    public String jobName;
+    public StartTopicsDetectionJobRequest withJobName(String jobName) {
+        this.jobName = jobName;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("NumberOfTopics")
+    public Long numberOfTopics;
+    public StartTopicsDetectionJobRequest withNumberOfTopics(Long numberOfTopics) {
+        this.numberOfTopics = numberOfTopics;
+        return this;
+    }
+    @JsonProperty("OutputDataConfig")
+    public OutputDataConfig outputDataConfig;
+    public StartTopicsDetectionJobRequest withOutputDataConfig(OutputDataConfig outputDataConfig) {
+        this.outputDataConfig = outputDataConfig;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Tags")
+    public Tag[] tags;
+    public StartTopicsDetectionJobRequest withTags(Tag[] tags) {
+        this.tags = tags;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("VolumeKmsKeyId")
+    public String volumeKmsKeyId;
+    public StartTopicsDetectionJobRequest withVolumeKmsKeyId(String volumeKmsKeyId) {
+        this.volumeKmsKeyId = volumeKmsKeyId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("VpcConfig")
+    public VpcConfig vpcConfig;
+    public StartTopicsDetectionJobRequest withVpcConfig(VpcConfig vpcConfig) {
+        this.vpcConfig = vpcConfig;
+        return this;
+    }
+}

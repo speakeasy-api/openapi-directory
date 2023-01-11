@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class NetworkmanagementProjectsLocationsGlobalOperationsDeleteRequest {
+    public NetworkmanagementProjectsLocationsGlobalOperationsDeletePathParams pathParams;
+    public NetworkmanagementProjectsLocationsGlobalOperationsDeleteRequest withPathParams(NetworkmanagementProjectsLocationsGlobalOperationsDeletePathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public NetworkmanagementProjectsLocationsGlobalOperationsDeleteQueryParams queryParams;
+    public NetworkmanagementProjectsLocationsGlobalOperationsDeleteRequest withQueryParams(NetworkmanagementProjectsLocationsGlobalOperationsDeleteQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public NetworkmanagementProjectsLocationsGlobalOperationsDeleteSecurity security;
+    public NetworkmanagementProjectsLocationsGlobalOperationsDeleteRequest withSecurity(NetworkmanagementProjectsLocationsGlobalOperationsDeleteSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

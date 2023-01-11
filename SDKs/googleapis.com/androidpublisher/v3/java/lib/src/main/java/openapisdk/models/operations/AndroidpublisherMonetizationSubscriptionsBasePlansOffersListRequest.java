@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class AndroidpublisherMonetizationSubscriptionsBasePlansOffersListRequest {
+    public AndroidpublisherMonetizationSubscriptionsBasePlansOffersListPathParams pathParams;
+    public AndroidpublisherMonetizationSubscriptionsBasePlansOffersListRequest withPathParams(AndroidpublisherMonetizationSubscriptionsBasePlansOffersListPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public AndroidpublisherMonetizationSubscriptionsBasePlansOffersListQueryParams queryParams;
+    public AndroidpublisherMonetizationSubscriptionsBasePlansOffersListRequest withQueryParams(AndroidpublisherMonetizationSubscriptionsBasePlansOffersListQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public AndroidpublisherMonetizationSubscriptionsBasePlansOffersListSecurity security;
+    public AndroidpublisherMonetizationSubscriptionsBasePlansOffersListRequest withSecurity(AndroidpublisherMonetizationSubscriptionsBasePlansOffersListSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

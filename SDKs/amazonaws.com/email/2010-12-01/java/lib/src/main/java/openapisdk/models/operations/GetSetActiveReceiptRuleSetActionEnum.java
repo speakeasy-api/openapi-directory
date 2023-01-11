@@ -1,0 +1,12 @@
+package openapisdk.models.operations;
+
+
+public enum GetSetActiveReceiptRuleSetActionEnum {
+    SET_ACTIVE_RECEIPT_RULE_SET("SetActiveReceiptRuleSet");
+
+    public final String value;
+
+    private GetSetActiveReceiptRuleSetActionEnum(String value) {
+        this.value = value;
+    }
+}

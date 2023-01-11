@@ -1,0 +1,22 @@
+package openapisdk.models.operations;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+/**
+ * PostFloatingIps201ApplicationJsonActionError
+ * Error message for the Action if error occurred, otherwise null
+**/
+public class PostFloatingIps201ApplicationJsonActionError {
+    @JsonProperty("code")
+    public String code;
+    public PostFloatingIps201ApplicationJsonActionError withCode(String code) {
+        this.code = code;
+        return this;
+    }
+    @JsonProperty("message")
+    public String message;
+    public PostFloatingIps201ApplicationJsonActionError withMessage(String message) {
+        this.message = message;
+        return this;
+    }
+}

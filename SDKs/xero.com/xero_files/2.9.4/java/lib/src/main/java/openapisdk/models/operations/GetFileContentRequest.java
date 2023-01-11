@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class GetFileContentRequest {
+    public GetFileContentPathParams pathParams;
+    public GetFileContentRequest withPathParams(GetFileContentPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public GetFileContentHeaders headers;
+    public GetFileContentRequest withHeaders(GetFileContentHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+    public GetFileContentSecurity security;
+    public GetFileContentRequest withSecurity(GetFileContentSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

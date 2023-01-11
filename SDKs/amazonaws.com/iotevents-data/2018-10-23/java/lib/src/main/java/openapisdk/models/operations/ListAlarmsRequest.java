@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class ListAlarmsRequest {
+    public ListAlarmsPathParams pathParams;
+    public ListAlarmsRequest withPathParams(ListAlarmsPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public ListAlarmsQueryParams queryParams;
+    public ListAlarmsRequest withQueryParams(ListAlarmsQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public ListAlarmsHeaders headers;
+    public ListAlarmsRequest withHeaders(ListAlarmsHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+}

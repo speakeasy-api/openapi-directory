@@ -1,0 +1,19 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * ActivityEventsParametersMessageValue
+ * Nested parameter value pairs associated with this parameter. Complex value type for a parameter are returned as a list of parameter values. For example, the address parameter may have a value as `[{parameter: [{name: city, value: abc}]}]`
+**/
+public class ActivityEventsParametersMessageValue {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("parameter")
+    public NestedParameter[] parameter;
+    public ActivityEventsParametersMessageValue withParameter(NestedParameter[] parameter) {
+        this.parameter = parameter;
+        return this;
+    }
+}

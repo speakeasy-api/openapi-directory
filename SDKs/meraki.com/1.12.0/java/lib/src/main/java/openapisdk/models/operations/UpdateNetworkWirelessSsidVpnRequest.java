@@ -1,0 +1,17 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class UpdateNetworkWirelessSsidVpnRequest {
+    public UpdateNetworkWirelessSsidVpnPathParams pathParams;
+    public UpdateNetworkWirelessSsidVpnRequest withPathParams(UpdateNetworkWirelessSsidVpnPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public UpdateNetworkWirelessSsidVpnRequestBody request;
+    public UpdateNetworkWirelessSsidVpnRequest withRequest(UpdateNetworkWirelessSsidVpnRequestBody request) {
+        this.request = request;
+        return this;
+    }
+}

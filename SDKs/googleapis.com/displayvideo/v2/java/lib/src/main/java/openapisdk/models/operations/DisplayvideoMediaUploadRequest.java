@@ -1,0 +1,27 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class DisplayvideoMediaUploadRequest {
+    public DisplayvideoMediaUploadPathParams pathParams;
+    public DisplayvideoMediaUploadRequest withPathParams(DisplayvideoMediaUploadPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public DisplayvideoMediaUploadQueryParams queryParams;
+    public DisplayvideoMediaUploadRequest withQueryParams(DisplayvideoMediaUploadQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    @SpeakeasyMetadata("request:mediaType=application/octet-stream")
+    public byte[] request;
+    public DisplayvideoMediaUploadRequest withRequest(byte[] request) {
+        this.request = request;
+        return this;
+    }
+    public DisplayvideoMediaUploadSecurity security;
+    public DisplayvideoMediaUploadRequest withSecurity(DisplayvideoMediaUploadSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

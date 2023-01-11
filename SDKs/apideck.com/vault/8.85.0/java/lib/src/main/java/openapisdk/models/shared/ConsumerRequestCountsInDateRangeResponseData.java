@@ -1,0 +1,50 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class ConsumerRequestCountsInDateRangeResponseData {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("aggregated_request_count")
+    public Double aggregatedRequestCount;
+    public ConsumerRequestCountsInDateRangeResponseData withAggregatedRequestCount(Double aggregatedRequestCount) {
+        this.aggregatedRequestCount = aggregatedRequestCount;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("application_id")
+    public String applicationId;
+    public ConsumerRequestCountsInDateRangeResponseData withApplicationId(String applicationId) {
+        this.applicationId = applicationId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("consumer_id")
+    public String consumerId;
+    public ConsumerRequestCountsInDateRangeResponseData withConsumerId(String consumerId) {
+        this.consumerId = consumerId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("end_datetime")
+    public String endDatetime;
+    public ConsumerRequestCountsInDateRangeResponseData withEndDatetime(String endDatetime) {
+        this.endDatetime = endDatetime;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("request_counts")
+    public RequestCountAllocation requestCounts;
+    public ConsumerRequestCountsInDateRangeResponseData withRequestCounts(RequestCountAllocation requestCounts) {
+        this.requestCounts = requestCounts;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("start_datetime")
+    public String startDatetime;
+    public ConsumerRequestCountsInDateRangeResponseData withStartDatetime(String startDatetime) {
+        this.startDatetime = startDatetime;
+        return this;
+    }
+}

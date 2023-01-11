@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class JobScheduleEnableRequest {
+    public JobScheduleEnablePathParams pathParams;
+    public JobScheduleEnableRequest withPathParams(JobScheduleEnablePathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public JobScheduleEnableQueryParams queryParams;
+    public JobScheduleEnableRequest withQueryParams(JobScheduleEnableQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public JobScheduleEnableHeaders headers;
+    public JobScheduleEnableRequest withHeaders(JobScheduleEnableHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+}

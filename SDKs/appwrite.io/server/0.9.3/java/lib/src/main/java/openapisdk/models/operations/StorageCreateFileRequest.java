@@ -1,0 +1,17 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class StorageCreateFileRequest {
+    @SpeakeasyMetadata("request:mediaType=multipart/form-data")
+    public StorageCreateFileRequestBody request;
+    public StorageCreateFileRequest withRequest(StorageCreateFileRequestBody request) {
+        this.request = request;
+        return this;
+    }
+    public StorageCreateFileSecurity security;
+    public StorageCreateFileRequest withSecurity(StorageCreateFileSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

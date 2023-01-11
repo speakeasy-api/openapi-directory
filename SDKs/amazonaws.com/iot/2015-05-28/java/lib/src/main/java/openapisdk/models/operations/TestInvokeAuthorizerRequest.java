@@ -1,0 +1,22 @@
+package openapisdk.models.operations;
+
+import openapisdk.utils.SpeakeasyMetadata;
+
+public class TestInvokeAuthorizerRequest {
+    public TestInvokeAuthorizerPathParams pathParams;
+    public TestInvokeAuthorizerRequest withPathParams(TestInvokeAuthorizerPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public TestInvokeAuthorizerHeaders headers;
+    public TestInvokeAuthorizerRequest withHeaders(TestInvokeAuthorizerHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public TestInvokeAuthorizerRequestBody request;
+    public TestInvokeAuthorizerRequest withRequest(TestInvokeAuthorizerRequestBody request) {
+        this.request = request;
+        return this;
+    }
+}

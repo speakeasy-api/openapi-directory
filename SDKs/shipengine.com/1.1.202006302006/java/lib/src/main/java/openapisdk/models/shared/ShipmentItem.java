@@ -1,0 +1,75 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * ShipmentItem
+ * A shipment item
+**/
+public class ShipmentItem {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("asin")
+    public String asin;
+    public ShipmentItem withAsin(String asin) {
+        this.asin = asin;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("external_order_id")
+    public String externalOrderId;
+    public ShipmentItem withExternalOrderId(String externalOrderId) {
+        this.externalOrderId = externalOrderId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("external_order_item_id")
+    public String externalOrderItemId;
+    public ShipmentItem withExternalOrderItemId(String externalOrderItemId) {
+        this.externalOrderItemId = externalOrderItemId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("name")
+    public String name;
+    public ShipmentItem withName(String name) {
+        this.name = name;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("order_source_code")
+    public OrderSourceNameEnum orderSourceCode;
+    public ShipmentItem withOrderSourceCode(OrderSourceNameEnum orderSourceCode) {
+        this.orderSourceCode = orderSourceCode;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("quantity")
+    public Integer quantity;
+    public ShipmentItem withQuantity(Integer quantity) {
+        this.quantity = quantity;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("sales_order_id")
+    public String salesOrderId;
+    public ShipmentItem withSalesOrderId(String salesOrderId) {
+        this.salesOrderId = salesOrderId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("sales_order_item_id")
+    public String salesOrderItemId;
+    public ShipmentItem withSalesOrderItemId(String salesOrderItemId) {
+        this.salesOrderItemId = salesOrderItemId;
+        return this;
+    }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("sku")
+    public String sku;
+    public ShipmentItem withSku(String sku) {
+        this.sku = sku;
+        return this;
+    }
+}

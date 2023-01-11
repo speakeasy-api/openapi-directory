@@ -1,0 +1,16 @@
+package openapisdk.models.operations;
+
+
+
+public class ListAssessmentReportsRequest {
+    public ListAssessmentReportsQueryParams queryParams;
+    public ListAssessmentReportsRequest withQueryParams(ListAssessmentReportsQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public ListAssessmentReportsHeaders headers;
+    public ListAssessmentReportsRequest withHeaders(ListAssessmentReportsHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+}

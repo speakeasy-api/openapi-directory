@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class Adexchangebuyer2BiddersFilterSetsFilteredBidsDetailsListRequest {
+    public Adexchangebuyer2BiddersFilterSetsFilteredBidsDetailsListPathParams pathParams;
+    public Adexchangebuyer2BiddersFilterSetsFilteredBidsDetailsListRequest withPathParams(Adexchangebuyer2BiddersFilterSetsFilteredBidsDetailsListPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public Adexchangebuyer2BiddersFilterSetsFilteredBidsDetailsListQueryParams queryParams;
+    public Adexchangebuyer2BiddersFilterSetsFilteredBidsDetailsListRequest withQueryParams(Adexchangebuyer2BiddersFilterSetsFilteredBidsDetailsListQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public Adexchangebuyer2BiddersFilterSetsFilteredBidsDetailsListSecurity security;
+    public Adexchangebuyer2BiddersFilterSetsFilteredBidsDetailsListRequest withSecurity(Adexchangebuyer2BiddersFilterSetsFilteredBidsDetailsListSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

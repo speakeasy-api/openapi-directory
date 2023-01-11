@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class AssuredworkloadsOrganizationsLocationsWorkloadsViolationsListRequest {
+    public AssuredworkloadsOrganizationsLocationsWorkloadsViolationsListPathParams pathParams;
+    public AssuredworkloadsOrganizationsLocationsWorkloadsViolationsListRequest withPathParams(AssuredworkloadsOrganizationsLocationsWorkloadsViolationsListPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public AssuredworkloadsOrganizationsLocationsWorkloadsViolationsListQueryParams queryParams;
+    public AssuredworkloadsOrganizationsLocationsWorkloadsViolationsListRequest withQueryParams(AssuredworkloadsOrganizationsLocationsWorkloadsViolationsListQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public AssuredworkloadsOrganizationsLocationsWorkloadsViolationsListSecurity security;
+    public AssuredworkloadsOrganizationsLocationsWorkloadsViolationsListRequest withSecurity(AssuredworkloadsOrganizationsLocationsWorkloadsViolationsListSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

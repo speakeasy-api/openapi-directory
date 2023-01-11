@@ -1,0 +1,21 @@
+package openapisdk.models.operations;
+
+
+
+public class GetFlowRequest {
+    public GetFlowPathParams pathParams;
+    public GetFlowRequest withPathParams(GetFlowPathParams pathParams) {
+        this.pathParams = pathParams;
+        return this;
+    }
+    public GetFlowQueryParams queryParams;
+    public GetFlowRequest withQueryParams(GetFlowQueryParams queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+    public GetFlowSecurity security;
+    public GetFlowRequest withSecurity(GetFlowSecurity security) {
+        this.security = security;
+        return this;
+    }
+}

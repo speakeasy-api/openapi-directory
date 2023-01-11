@@ -1,0 +1,76 @@
+package openapisdk.models.shared;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+/**
+ * ContentSymlink
+ * An object describing a symlink
+**/
+public class ContentSymlink {
+    @JsonProperty("_links")
+    public ContentSymlinkLinks links;
+    public ContentSymlink withLinks(ContentSymlinkLinks links) {
+        this.links = links;
+        return this;
+    }
+    @JsonProperty("download_url")
+    public String downloadUrl;
+    public ContentSymlink withDownloadUrl(String downloadUrl) {
+        this.downloadUrl = downloadUrl;
+        return this;
+    }
+    @JsonProperty("git_url")
+    public String gitUrl;
+    public ContentSymlink withGitUrl(String gitUrl) {
+        this.gitUrl = gitUrl;
+        return this;
+    }
+    @JsonProperty("html_url")
+    public String htmlUrl;
+    public ContentSymlink withHtmlUrl(String htmlUrl) {
+        this.htmlUrl = htmlUrl;
+        return this;
+    }
+    @JsonProperty("name")
+    public String name;
+    public ContentSymlink withName(String name) {
+        this.name = name;
+        return this;
+    }
+    @JsonProperty("path")
+    public String path;
+    public ContentSymlink withPath(String path) {
+        this.path = path;
+        return this;
+    }
+    @JsonProperty("sha")
+    public String sha;
+    public ContentSymlink withSha(String sha) {
+        this.sha = sha;
+        return this;
+    }
+    @JsonProperty("size")
+    public Long size;
+    public ContentSymlink withSize(Long size) {
+        this.size = size;
+        return this;
+    }
+    @JsonProperty("target")
+    public String target;
+    public ContentSymlink withTarget(String target) {
+        this.target = target;
+        return this;
+    }
+    @JsonProperty("type")
+    public String type;
+    public ContentSymlink withType(String type) {
+        this.type = type;
+        return this;
+    }
+    @JsonProperty("url")
+    public String url;
+    public ContentSymlink withUrl(String url) {
+        this.url = url;
+        return this;
+    }
+}
